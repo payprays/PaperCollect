@@ -1,4 +1,6 @@
 import requests
+from requests.adapters import HTTPAdapter
+from urllib3.util.retry import Retry
 from src.core.models import Paper
 from src.core.interfaces import MetadataSource
 from src.core.exceptions import RateLimitException
@@ -9,15 +11,24 @@ class EuropePMCClient(MetadataSource):
     """
     BASE_URL = "https://www.ebi.ac.uk/europepmc/webservices/rest/search"
 
+    def __init__(self):
+        self.session = requests.Session()
+        retries = Retry(total=5, backoff_factor=1, status_forcelist=[500, 502, 503, 504])
+        self.session.mount('https://', HTTPAdapter(max_retries=retries))
+
     def enrich_paper(self, paper: Paper) -> Paper:
         params = {
             "query": f'TITLE:"{paper.title}"',
             "format": "json",
             "pageSize": 1
         }
+        
+        headers = {
+            "User-Agent": "PaperCollect/1.0 (mailto:papercollect@example.com)"
+        }
 
         try:
-            response = requests.get(self.BASE_URL, params=params, timeout=30)
+            response = self.session.get(self.BASE_URL, params=params, headers=headers, timeout=30)
             if response.status_code == 200:
                 data = response.json()
                 result_list = data.get("resultList", {}).get("result", [])

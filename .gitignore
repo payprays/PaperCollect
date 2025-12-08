@@ -18,3 +18,7 @@ data/
 .claude/
 *.swp
 *.swo
+
+# Logs
+*.log
+nohup.out

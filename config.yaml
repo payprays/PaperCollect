@@ -14,7 +14,7 @@ years:
   - 2025
 
 concurrency:
-  threads: 4
+  threads: 5
 
 limit_per_conference: 0
 # 改为输出目录
