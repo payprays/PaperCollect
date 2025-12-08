@@ -1,0 +1,21 @@
+conferences:
+  - ICSE
+  - FSE
+  - ASE
+  - NDSS
+  - "USENIX Security"
+  - "sp"
+  - ISSTA
+
+years:
+  - 2022
+  - 2023
+  - 2024
+  - 2025
+
+concurrency:
+  threads: 4
+
+limit_per_conference: 0
+# 改为输出目录
+output_dir: "data"
