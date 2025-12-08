@@ -1,11 +1,11 @@
 conferences:
+  - SP
+  - ISSTA
   - ICSE
   - FSE
   - ASE
   - NDSS
   - "USENIX Security"
-  - "sp"
-  - ISSTA
 
 years:
   - 2022
@@ -18,4 +18,9 @@ concurrency:
 
 limit_per_conference: 0
 # 改为输出目录
+
+openai_api_key: ""
+openai_model: "gpt-4o"
+embedding_model: "text-embedding-3-small"
+
 output_dir: "data"
