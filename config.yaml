@@ -1,17 +1,38 @@
 conferences:
+  # Security Top Tier (Big 4)
   - SP
+  - NDSS
+  - "USENIX Security"
+  - CCS
+
+  # Software Engineering & Testing Top Tier
   - ISSTA
   - ICSE
   - FSE
   - ASE
-  - NDSS
-  - "USENIX Security"
+
+  # Other High Quality Security Venues
+  - ESORICS
+  - RAID
+  - ACSAC
+  - ASIACCS
+  - EuroS&P
+  - DIMVA  # Detection of Intrusions and Malware
+  - DSN    # Dependable Systems and Networks (Reliability/Security)
+
+  # Systems & PL (Top tier venues often containing best Security/Testing papers)
+  - OSDI
+  - SOSP
+  - PLDI
+  - POPL
+  # - FM (Removed: Too theoretical)
 
 years:
   - 2022
   - 2023
   - 2024
   - 2025
+  - 2026
 
 concurrency:
   threads: 5

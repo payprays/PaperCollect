@@ -18,13 +18,39 @@ class DBLPClient(PaperSource):
         retries = Retry(total=5, backoff_factor=1, status_forcelist=[500, 502, 503, 504])
         self.session.mount('https://', HTTPAdapter(max_retries=retries))
 
+    # Whitelist of valid venue strings for each conference
+    # Keys should be lowercased conference names (or aliases)
+    VENUE_WHITELIST = {
+        "icse": ["ICSE"],
+        "ase": ["ASE"],
+        "fse": ["FSE", "ESEC/SIGSOFT FSE", "SIGSOFT FSE"],
+        "issta": ["ISSTA"],
+        "ndss": ["NDSS"],
+        "sp": ["SP", "IEEE Symposium on Security and Privacy", "S&P"],
+        "usenix security": ["USENIX Security Symposium", "USENIX Security"],
+        "ccs": ["CCS", "ACM Conference on Computer and Communications Security"],
+        "esorics": ["ESORICS"],
+        "dsn": ["DSN", "Dependable Systems and Networks"],
+        "dimva": ["DIMVA"],
+        "pldi": ["PLDI"],
+        "popl": ["POPL"],
+        "osdi": ["OSDI", "USENIX Symposium on Operating Systems Design and Implementation"],
+        "sosp": ["SOSP", "ACM Symposium on Operating Systems Principles"],
+        "fm": ["FM", "International Symposium on Formal Methods"],
+        "raid": ["RAID"],
+        "acsac": ["ACSAC"],
+        "asiaccs": ["ASIACCS", "ACM Asia Conference on Computer and Communications Security"],
+        "euro s&p": ["EuroS&P", "IEEE European Symposium on Security and Privacy"],
+        "euros&p": ["EuroS&P", "IEEE European Symposium on Security and Privacy"],
+    }
+
     def _is_valid_venue(self, paper_venue: str | List[str], target_conference: str) -> bool:
         """
         Validates if the paper venue matches the target conference main track,
-        filtering out workshops, companions, etc.
+        using a strict whitelist approach.
         """
         if not paper_venue:
-            return True # If no venue info, keep it (conservative)
+            return False # If no venue info, reject it (strict)
             
         if isinstance(paper_venue, str):
             venues = [paper_venue]
@@ -33,36 +59,21 @@ class DBLPClient(PaperSource):
             
         target = target_conference.lower()
         
-        # Keywords that usually indicate non-main-track papers
-        exclusion_keywords = [
-            "workshop", "companion", "adjunct", "doctoral", "demonstration", 
-            "poster", "tool", "demo", "tutorial", "panel", "keynote"
-        ]
+        # Get allowed venues for this target
+        allowed_venues = self.VENUE_WHITELIST.get(target)
         
-        # Specific exclusions for known conferences
-        if "ase" in target:
-            exclusion_keywords.extend(["asew", "rene", "nier"])
-        elif "icse" in target:
-            exclusion_keywords.extend(["seip", "seis", "nier", "icse-c", "icse-seip", "icse-seis"])
-        elif "fse" in target:
-            exclusion_keywords.extend(["fsen", "games", "nier", "ideas", "visions"])
-        elif "issta" in target:
-            exclusion_keywords.extend(["debt", "vortex", "ecoop"]) # ECOOP sometimes co-located
-        elif "usenix" in target:
-            exclusion_keywords.extend(["soups", "woot", "cset", "leet", "foci", "hotsec"])
+        if not allowed_venues:
+            # Fallback to old logic if not in whitelist (or just strict equality)
+            # For now, let's be strict but allow exact match of target
+            allowed_venues = [target_conference, target_conference.upper()]
             
+        # Check if ANY of the paper's venues match ANY of the allowed venues EXACTLY
         for v in venues:
-            v_lower = v.lower()
-            
-            # Check for exclusion keywords
-            if any(kw in v_lower for kw in exclusion_keywords):
-                return False
+            # Check exact match against whitelist
+            if v in allowed_venues:
+                return True
                 
-            # Check for "@" which often indicates a workshop (e.g., "A-TEST@FSE")
-            if "@" in v_lower:
-                return False
-                
-        return True
+        return False
 
     def fetch_papers(self, conference: str, year: int) -> List[Paper]:
         """
@@ -81,6 +92,34 @@ class DBLPClient(PaperSource):
              # DBLP venue code for S&P is "conf/sp"
              # The query syntax stream:conf/sp: matches the stream (series)
              query = f"stream:conf/sp: year:{year}"
+        elif conference.lower() == "ccs":
+             # ACM CCS
+             query = f"venue:CCS year:{year}"
+        elif conference.lower() == "esorics":
+             # ESORICS
+             query = f"venue:ESORICS year:{year}"
+        elif conference.lower() == "raid":
+             # RAID
+             query = f"venue:RAID year:{year}"
+        elif conference.lower() == "acsac":
+             # ACSAC
+             query = f"venue:ACSAC year:{year}"
+        elif conference.lower() == "asiaccs":
+             # ASIACCS
+             query = f"venue:ASIACCS year:{year}"
+        elif "euro" in conference.lower() and "s&p" in conference.lower():
+             # IEEE EuroS&P
+             query = f"venue:EuroS&P year:{year}"
+        elif conference.lower() == "dsn":
+             # DSN (Dependable Systems and Networks)
+             query = f"venue:DSN year:{year}"
+        elif conference.lower() == "dimva":
+             # DIMVA
+             query = f"venue:DIMVA year:{year}"
+        elif conference.lower() == "fm":
+             # Formal Methods (International Symposium on Formal Methods)
+             # Use stream to avoid ambiguity
+             query = f"stream:conf/fm: year:{year}"
         else:
              query = f"venue:{conference} year:{year}"
 

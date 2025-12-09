@@ -237,3 +237,53 @@ Please answer the question based on these papers.
         )
         
         return response.choices[0].message.content or "No response generated."
+
+    def translate_papers(self, papers: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
+        """
+        Translates titles and abstracts of the given papers to Chinese using the LLM.
+        """
+        if not papers:
+            return []
+            
+        print("Translating search results to Chinese...")
+        
+        # Prepare prompt content
+        prompt_content = []
+        for i, p in enumerate(papers):
+            prompt_content.append({
+                "id": i,
+                "title": p.get("title"),
+                "abstract": p.get("abstract")
+            })
+            
+        system_prompt = """You are a professional translator for Computer Science academic papers. 
+Translate the provided titles and abstracts into Simplified Chinese. 
+Return the result as a JSON object with a key "translations" containing a list. 
+Each item in the list must have "id", "title_zh", and "abstract_zh".
+Ensure the order matches the input and the IDs correspond correctly."""
+
+        try:
+            response = self.client.chat.completions.create(
+                model=self.model,
+                messages=[
+                    {"role": "system", "content": system_prompt},
+                    {"role": "user", "content": json.dumps(prompt_content)}
+                ],
+                response_format={"type": "json_object"},
+                temperature=0.3
+            )
+            content = response.choices[0].message.content
+            result = json.loads(content or "{}")
+            translations = result.get("translations", [])
+            
+            # Merge back
+            trans_map = {t['id']: t for t in translations}
+            for i, p in enumerate(papers):
+                if i in trans_map:
+                    p['title_zh'] = trans_map[i].get('title_zh', '')
+                    p['abstract_zh'] = trans_map[i].get('abstract_zh', '')
+                    
+        except Exception as e:
+            print(f"Translation failed: {e}")
+            
+        return papers

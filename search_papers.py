@@ -16,10 +16,22 @@ def main():
         
         if args.mode == "search":
             results = service.search(args.query, top_k=args.top_k, year=args.year, venue=args.venue)
+            
+            # Translate results
+            results = service.translate_papers(results)
+            
             print(f"\nTop {len(results)} results for '{args.query}':\n")
             for i, p in enumerate(results):
                 print(f"{i+1}. [{p['score']:.4f}] {p['title']} ({p['venue']} {p['year']})")
+                if p.get('title_zh'):
+                    print(f"    中文标题: {p.get('title_zh')}")
+                
                 # print(f"   Abstract: {p.get('abstract')[:200]}...")
+                if p.get('abstract_zh'):
+                    # Print abstract with some indentation
+                    abs_zh = p.get('abstract_zh')
+                    # Wrap text for better readability if needed, but simple print is fine for now
+                    print(f"    中文摘要: {abs_zh}")
                 print()
         else:
             answer = service.ask(args.query, top_k=args.top_k, year=args.year, venue=args.venue)
