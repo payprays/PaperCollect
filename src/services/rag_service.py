@@ -11,11 +11,12 @@ import pickle
 class RAGService:
     def __init__(self, config_path: str = "config.yaml"):
         with open(config_path, 'r') as f:
-            self.config = yaml.safe_load(f)
+            self.config = yaml.safe_load(f) or {}
         
-        self.api_key = self.config.get("openai_api_key")
+        # Prefer environment variable to keep secrets out of git history
+        self.api_key = os.getenv("OPENAI_API_KEY") or self.config.get("openai_api_key")
         if not self.api_key:
-            raise ValueError("openai_api_key not found in config.yaml")
+            raise ValueError("OPENAI_API_KEY not set and openai_api_key not found in config.yaml")
             
         self.client = OpenAI(api_key=self.api_key)
         self.model = self.config.get("openai_model", "gpt-4o")
