@@ -21,10 +21,10 @@ conferences:
   - DSN    # Dependable Systems and Networks (Reliability/Security)
 
   # Systems & PL (Top tier venues often containing best Security/Testing papers)
-  - OSDI
-  - SOSP
-  - PLDI
-  - POPL
+  # - OSDI
+  # - SOSP
+  # - PLDI
+  # - POPL
   # - FM (Removed: Too theoretical)
 
 years:

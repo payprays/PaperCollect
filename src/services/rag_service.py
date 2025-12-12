@@ -147,7 +147,7 @@ class RAGService:
 
     # Deprecated: _compute_embeddings removed in favor of incremental approach
 
-    def search(self, query: str, top_k: int = 10, year: int | None = None, venue: str | None = None) -> List[Dict[str, Any]]:
+    def search(self, query: str, top_k: int = 10, year: int | None = None, venue: str | None = None, exclude_venues: List[str] | None = None) -> List[Dict[str, Any]]:
         """
         Search for relevant papers with optional filtering.
         """
@@ -174,31 +174,47 @@ class RAGService:
         results = []
         for idx in sorted_indices:
             paper = self.papers[idx]
-            
-            # Apply filters
+
+            # Apply filters: year / venue inclusion
             if year and paper.get('year') != year:
                 continue
-            if venue and venue.lower() not in paper.get('venue', '').lower():
+            if venue and venue.lower() not in (paper.get('venue') or '').lower():
                 continue
-                
+
+            # Apply exclude filters (exclude_venues: list of strings)
+            if exclude_venues:
+                pv = (paper.get('venue') or '').lower()
+                skip = False
+                for ex in exclude_venues:
+                    if not ex:
+                        continue
+                    # case-insensitive substring match
+                    if ex.lower() in pv:
+                        skip = True
+                        break
+                if skip:
+                    continue
+
             paper['score'] = float(similarities[idx])
             results.append(paper)
-            
+
             if len(results) >= top_k:
                 break
             
         return results
 
-    def ask(self, query: str, top_k: int = 20, year: int | None = None, venue: str | None = None) -> str:
+    def ask(self, query: str, top_k: int = 20, year: int | None = None, venue: str | None = None, exclude_venues: List[str] | None = None) -> str:
         """Ask a question using RAG with optional filters."""
         filters = []
         if year: filters.append(f"Year: {year}")
         if venue: filters.append(f"Venue: {venue}")
+        if exclude_venues:
+            filters.append(f"Exclude: {', '.join(exclude_venues)}")
         filter_str = f" ({', '.join(filters)})" if filters else ""
         
         print(f"Searching for: {query}{filter_str}")
         
-        relevant_papers = self.search(query, top_k=top_k, year=year, venue=venue)
+        relevant_papers = self.search(query, top_k=top_k, year=year, venue=venue, exclude_venues=exclude_venues)
         
         if not relevant_papers:
             return "No relevant papers found matching your criteria."

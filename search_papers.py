@@ -8,6 +8,7 @@ def main():
     parser.add_argument("--mode", type=str, choices=["search", "ask"], default="ask", help="Mode: 'search' for raw results, 'ask' for LLM answer.")
     parser.add_argument("--year", type=int, help="Filter by year (e.g., 2024).")
     parser.add_argument("--venue", type=str, help="Filter by venue (e.g., 'ICSE').")
+    parser.add_argument("--exclude", type=str, nargs='*', help="One or more venue substrings to exclude (e.g., 'Poster' 'Workshop').")
     
     args = parser.parse_args()
     
@@ -15,7 +16,16 @@ def main():
         service = RAGService()
         
         if args.mode == "search":
-            results = service.search(args.query, top_k=args.top_k, year=args.year, venue=args.venue)
+            exclude_list = None
+            if args.exclude:
+                # allow comma separated in a single arg or multiple args
+                parts = []
+                for item in args.exclude:
+                    sub = [s.strip() for s in item.split(',') if s.strip()]
+                    parts.extend(sub)
+                exclude_list = parts if parts else None
+
+            results = service.search(args.query, top_k=args.top_k, year=args.year, venue=args.venue, exclude_venues=exclude_list)
             
             # Translate results
             results = service.translate_papers(results)
@@ -34,7 +44,15 @@ def main():
                     print(f"    中文摘要: {abs_zh}")
                 print()
         else:
-            answer = service.ask(args.query, top_k=args.top_k, year=args.year, venue=args.venue)
+            exclude_list = None
+            if args.exclude:
+                parts = []
+                for item in args.exclude:
+                    sub = [s.strip() for s in item.split(',') if s.strip()]
+                    parts.extend(sub)
+                exclude_list = parts if parts else None
+
+            answer = service.ask(args.query, top_k=args.top_k, year=args.year, venue=args.venue, exclude_venues=exclude_list)
             print("\n" + "="*50)
             print("Answer:")
             print("="*50)
