@@ -13,9 +13,8 @@ PaperCollect 是一个小型流程，负责：
 
 环境准备
 ```bash
-python -m venv .venv
+uv sync                                         # 基于 pyproject.toml / uv.lock 安装依赖
 source .venv/bin/activate
-pip install -e .
 ```
 
 配置
@@ -39,7 +38,7 @@ output_dir: "data"
 
 采集与补全论文
 ```bash
-python main.py --config config.yaml
+uv run python main.py --config config.yaml
 ```
 按会议/年份增量获取并补全论文，写入 `data/` 目录（每个会议-年份一个 JSON）。重复运行只补全缺失的元数据。
 
@@ -47,11 +46,11 @@ RAG 检索 / 问答
 - 先确保已有 `data/` 下的 JSON 数据，并设置密钥：`export OPENAI_API_KEY=<your-key>`。
 - 检索模式（返回排序结果，自动中译标题/摘要）：
 ```bash
-python search_papers.py "LLM-based fuzzing for systems software" --top_k 5 --mode search --year 2024 --exclude Workshop Poster
+uv run python search_papers.py "LLM-based fuzzing for systems software" --top_k 5 --mode search --year 2024 --exclude Workshop Poster
 ```
 - 问答模式（基于 top K 论文生成答案）：
 ```bash
-python search_papers.py "What defenses work against prompt injection?" --top_k 10 --mode ask --venue NDSS
+uv run python search_papers.py "What defenses work against prompt injection?" --top_k 10 --mode ask --venue NDSS
 ```
 
 提示
