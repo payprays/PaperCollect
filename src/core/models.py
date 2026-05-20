@@ -15,3 +15,5 @@ class Paper:
     citation_count: Optional[int] = None
     reference_count: Optional[int] = None
     paper_id: Optional[str] = None # ID from the metadata provider
+    source: Optional[str] = None
+    source_url: Optional[str] = None

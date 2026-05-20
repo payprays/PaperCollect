@@ -1,30 +1,44 @@
 import unittest
 from unittest.mock import MagicMock, patch
-from src.clients.dblp_client import DBLPClient
+
+import requests
+
+from src.clients.dblp_client import DBLPClient, DBLPFetchError
+
+
+def _mock_json_response(payload, status_code=200):
+    response = MagicMock()
+    response.status_code = status_code
+    response.json.return_value = payload
+    return response
+
+
+def _mock_text_response(payload: str, status_code=200):
+    response = MagicMock()
+    response.status_code = status_code
+    response.content = payload.encode("utf-8")
+    return response
+
 
 class TestDBLPClientSP(unittest.TestCase):
     def setUp(self):
         self.client = DBLPClient()
 
     @patch('src.clients.dblp_client.requests.Session.get')
-    def test_fetch_papers_sp_query_construction(self, mock_get):
+    def test_search_uses_stream_query_when_requested(self, mock_get):
         """
         测试当 conference='SP' 时，是否生成了正确的 DBLP 查询语句
         """
-        # Mock 一个空的响应，因为我们只关心请求参数
-        mock_response = MagicMock()
-        mock_response.status_code = 200
-        mock_response.json.return_value = {"result": {"hits": {"hit": []}}}
-        mock_get.return_value = mock_response
+        mock_get.return_value = _mock_json_response({"result": {"hits": {"hit": []}}})
 
-        self.client.fetch_papers("SP", 2022)
+        self.client._fetch_from_search("IEEE S&P", 2022, dblp_stream="conf/sp", venue_aliases=["SP"])
 
         # 验证调用参数
         args, kwargs = mock_get.call_args
         params = kwargs['params']
         
-        # 关键断言：查询语句必须包含全称，而不是简单的 venue:sp
-        expected_query = "venue:IEEE_Symposium_on_Security_and_Privacy year:2022"
+        # 关键断言：SP must use the DBLP stream to avoid venue-name ambiguity.
+        expected_query = "stream:conf/sp: year:2022"
         self.assertEqual(params['q'], expected_query, 
                          f"SP 的查询语句应该是全称，实际为: {params['q']}")
 
@@ -33,18 +47,60 @@ class TestDBLPClientSP(unittest.TestCase):
         """
         测试普通会议（如 ICSE）是否仍然使用简写
         """
-        mock_response = MagicMock()
-        mock_response.status_code = 200
-        mock_response.json.return_value = {"result": {"hits": {"hit": []}}}
-        mock_get.return_value = mock_response
+        mock_get.return_value = _mock_json_response({"result": {"hits": {"hit": []}}})
 
-        self.client.fetch_papers("ICSE", 2022)
+        self.client._fetch_from_search("ICSE", 2022, dblp_stream="conf/icse", venue_aliases=["ICSE"])
 
         args, kwargs = mock_get.call_args
         params = kwargs['params']
         
-        expected_query = "venue:ICSE year:2022"
+        expected_query = "stream:conf/icse: year:2022"
         self.assertEqual(params['q'], expected_query)
+
+    @patch('src.clients.dblp_client.requests.Session.get')
+    def test_fetch_papers_uses_toc_when_available(self, mock_get):
+        mock_get.return_value = _mock_text_response(
+            """
+            <bht>
+              <dblpcites>
+                <r style="ee">
+                  <inproceedings key="conf/ndss/example26">
+                    <author>Alice Example</author>
+                    <title>Cloud Native Security Testing.</title>
+                    <year>2026</year>
+                    <booktitle>NDSS</booktitle>
+                    <ee>https://example.com/paper</ee>
+                  </inproceedings>
+                </r>
+              </dblpcites>
+            </bht>
+            """
+        )
+
+        papers = self.client.fetch_papers("NDSS", 2026, dblp_stream="conf/ndss", venue_aliases=["NDSS"])
+
+        self.assertEqual(len(papers), 1)
+        self.assertEqual(papers[0].title, "Cloud Native Security Testing.")
+        self.assertEqual(papers[0].dblp_key, "conf/ndss/example26")
+        mock_get.assert_called_once()
+        self.assertEqual(mock_get.call_args.args[0], "https://dblp.org/db/conf/ndss/ndss2026.xml")
+
+    @patch('src.clients.dblp_client.requests.Session.get')
+    def test_fetch_papers_does_not_search_when_stream_toc_missing(self, mock_get):
+        mock_get.return_value = _mock_text_response("", status_code=404)
+
+        papers = self.client.fetch_papers("ESORICS", 2026, dblp_stream="conf/esorics", venue_aliases=["ESORICS"])
+
+        self.assertEqual(papers, [])
+        mock_get.assert_called_once()
+        self.assertEqual(mock_get.call_args.args[0], "https://dblp.org/db/conf/esorics/esorics2026.xml")
+
+    @patch('src.clients.dblp_client.requests.Session.get')
+    def test_fetch_papers_raises_when_search_request_fails(self, mock_get):
+        mock_get.side_effect = requests.Timeout("read timed out")
+
+        with self.assertRaisesRegex(DBLPFetchError, "Could not fetch DBLP search data"):
+            self.client.fetch_papers("NDSS", 2026)
 
 if __name__ == '__main__':
     unittest.main()

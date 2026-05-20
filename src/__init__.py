@@ -1,1 +1,3 @@
-# 这个文件允许将 src 作为一个包导入
+from dotenv import load_dotenv
+
+load_dotenv()

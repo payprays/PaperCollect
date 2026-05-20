@@ -5,8 +5,10 @@ import os
 import threading
 from typing import List, Dict
 from src.clients.dblp_client import DBLPClient
+from src.clients.official_source_client import OfficialSourceClient
 from src.services.metadata_manager import MetadataManager
 from src.core.models import Paper
+from src.core.conference_catalog import ConferenceEntry, normalize_conference, normalize_conferences
 
 def load_config(config_path: str):
     if not os.path.exists(config_path):
@@ -15,9 +17,11 @@ def load_config(config_path: str):
     with open(config_path, 'r') as f:
         return yaml.safe_load(f)
 
-def get_output_path(output_dir: str, conference: str, year: int) -> str:
+def get_output_path(output_dir: str, conference: str | ConferenceEntry, year: int) -> str:
     """Returns the file path for a specific conference and year."""
     # Ensure safe filename
+    if isinstance(conference, ConferenceEntry):
+        conference = conference.id
     safe_conf = "".join(c for c in conference if c.isalnum() or c in (' ', '_', '-')).strip().replace(' ', '_')
     return os.path.join(output_dir, f"{safe_conf}_{year}.json")
 
@@ -40,10 +44,12 @@ def load_existing_papers(output_path: str) -> Dict[str, Paper]:
                         abstract=item.get("abstract"),
                         citation_count=item.get("citation_count"),
                         reference_count=item.get("reference_count"),
-                        paper_id=item.get("source_id")
+                        paper_id=item.get("source_id"),
+                        source=item.get("source"),
+                        source_url=item.get("source_url"),
                     )
                     # Use title or DBLP key as unique identifier
-                    key = p.dblp_key if p.dblp_key else p.title
+                    key = paper_key(p)
                     existing_papers[key] = p
             # print(f"Loaded {len(existing_papers)} existing papers from {output_path}.")
         except json.JSONDecodeError:
@@ -63,7 +69,9 @@ def save_papers(papers_map: Dict[str, Paper], output_path: str):
             "reference_count": p.reference_count,
             "url": p.url,
             "dblp_key": p.dblp_key,
-            "source_id": p.paper_id
+            "source_id": p.paper_id,
+            "source": p.source,
+            "source_url": p.source_url,
         }
         for p in papers_map.values()
     ]
@@ -80,26 +88,56 @@ def save_papers(papers_map: Dict[str, Paper], output_path: str):
     # print(f"Saved {len(output_data)} papers to {output_path}")
 
 
-def process_conference_year(conf: str, year: int, dblp_client: DBLPClient, metadata_manager: MetadataManager, output_dir: str, limit: int):
+def paper_key(paper: Paper) -> str:
+    return paper.dblp_key or paper.paper_id or paper.title
+
+
+def fetch_papers_with_fallback(
+    conference: ConferenceEntry,
+    year: int,
+    dblp_client: DBLPClient,
+    official_source_client: OfficialSourceClient | None = None,
+) -> list[Paper]:
+    print(f"  Fetching from DBLP...")
+    papers = dblp_client.fetch_papers(
+        conference.display_name,
+        year,
+        dblp_stream=conference.dblp_stream,
+        dblp_query=conference.dblp_query,
+        venue_aliases=list(conference.aliases),
+    )
+    print(f"  Found {len(papers)} papers on DBLP.")
+
+    if papers or not conference.official_source:
+        return papers
+
+    official_source_client = official_source_client or OfficialSourceClient()
+    source_type = conference.official_source.get("type", "official")
+    print(f"  DBLP has no TOC entries; trying official {source_type} fallback...")
+    papers = official_source_client.fetch_papers(conference, year)
+    print(f"  Found {len(papers)} papers from official fallback.")
+    return papers
+
+
+def process_conference_year(conf: str | ConferenceEntry, year: int, dblp_client: DBLPClient, metadata_manager: MetadataManager, output_dir: str, limit: int):
     """Processes a single conference year: fetches, loads existing, enriches, and saves."""
-    output_path = get_output_path(output_dir, conf, year)
-    print(f"Processing {conf} {year} -> {output_path}")
+    conference = normalize_conference(conf)
+    output_path = get_output_path(output_dir, conference, year)
+    print(f"Processing {conference.display_name} {year} -> {output_path}")
 
     # 1. Load existing
     existing_papers_map = load_existing_papers(output_path)
     final_papers_map = existing_papers_map.copy()
 
-    # 2. Fetch from DBLP
-    print(f"  Fetching from DBLP...")
-    papers = dblp_client.fetch_papers(conf, year)
-    print(f"  Found {len(papers)} papers on DBLP.")
+    # 2. Fetch from DBLP, then from a whitelisted official source if configured.
+    papers = fetch_papers_with_fallback(conference, year, dblp_client)
 
     if limit > 0:
         papers = papers[:limit]
 
     papers_to_process = []
     for paper in papers:
-        key = paper.dblp_key if paper.dblp_key else paper.title
+        key = paper_key(paper)
 
         if key in final_papers_map:
             existing = final_papers_map[key]
@@ -110,6 +148,8 @@ def process_conference_year(conf: str, year: int, dblp_client: DBLPClient, metad
                 # Update basic info and re-queue for enrichment
                 existing.venue = paper.venue
                 existing.url = paper.url or existing.url
+                existing.source = paper.source or existing.source
+                existing.source_url = paper.source_url or existing.source_url
                 papers_to_process.append(existing)
         else:
             # New paper
@@ -117,7 +157,7 @@ def process_conference_year(conf: str, year: int, dblp_client: DBLPClient, metad
             papers_to_process.append(paper)
 
     if not papers_to_process:
-        print(f"  No new papers to enrich for {conf} {year}.")
+        print(f"  No new papers to enrich for {conference.display_name} {year}.")
         # Ensure we save even if no new processing (in case we just fetched DBLP data for the first time but limit was 0 or something)
         # But actually if papers_to_process is empty, it means we either have no papers or all are already enriched.
         # We should still save to ensure the file exists if it was empty.
@@ -134,13 +174,13 @@ def process_conference_year(conf: str, year: int, dblp_client: DBLPClient, metad
         enriched_chunk = metadata_manager.enrich_papers(chunk)
 
         for p in enriched_chunk:
-            key = p.dblp_key if p.dblp_key else p.title
+            key = paper_key(p)
             final_papers_map[key] = p
 
         save_papers(final_papers_map, output_path)
-        print(f"  Saved progress for {conf} {year} ({min(i + chunk_size, len(papers_to_process))}/{len(papers_to_process)})")
+        print(f"  Saved progress for {conference.display_name} {year} ({min(i + chunk_size, len(papers_to_process))}/{len(papers_to_process)})")
 
-    print(f"  Completed {conf} {year}.")
+    print(f"  Completed {conference.display_name} {year}.")
 
 
 def main():
@@ -153,7 +193,7 @@ def main():
     if not config:
         return
 
-    conferences = config.get("conferences", [])
+    conferences = normalize_conferences(config)
     years = config.get("years", [])
     threads = config.get("concurrency", {}).get("threads", 4)
     limit_per_conf = config.get("limit_per_conference", 0)

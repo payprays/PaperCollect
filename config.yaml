@@ -1,31 +1,218 @@
 conferences:
-  # Security Top Tier (Big 4)
-  - SP
-  - NDSS
-  - "USENIX Security"
-  - CCS
+  - id: neurips
+    display_name: NeurIPS
+    full_name: Conference on Neural Information Processing Systems
+    dblp_stream: conf/nips
+    aliases: [NIPS]
+    category: AI
+    enabled: true
+  - id: icml
+    display_name: ICML
+    full_name: International Conference on Machine Learning
+    dblp_stream: conf/icml
+    category: AI
+    enabled: true
+  - id: iclr
+    display_name: ICLR
+    full_name: International Conference on Learning Representations
+    dblp_stream: conf/iclr
+    category: AI
+    enabled: true
+  - id: aaai
+    display_name: AAAI
+    full_name: AAAI Conference on Artificial Intelligence
+    dblp_stream: conf/aaai
+    category: AI
+    enabled: true
+  - id: acl
+    display_name: ACL
+    full_name: Annual Meeting of the Association for Computational Linguistics
+    dblp_stream: conf/acl
+    category: AI
+    enabled: true
+  - id: emnlp
+    display_name: EMNLP
+    full_name: Conference on Empirical Methods in Natural Language Processing
+    dblp_stream: conf/emnlp
+    category: AI
+    enabled: true
+  - id: naacl
+    display_name: NAACL
+    full_name: Annual Conference of the North American Chapter of the ACL
+    dblp_stream: conf/naacl
+    category: AI
+    enabled: true
+  - id: colm
+    display_name: COLM
+    full_name: Conference on Language Modeling
+    dblp_stream: conf/colm
+    aliases: [CoLM]
+    category: AI
+    enabled: true
+  - id: sp
+    display_name: IEEE S&P
+    full_name: IEEE Symposium on Security and Privacy
+    dblp_stream: conf/sp
+    aliases: [SP, S&P]
+    category: SC
+    focus_tags: [security, cloud_security]
+    tier:
+      ccf: A
+    official_source:
+      type: ieee_sp_accepted
+      page_url: https://sp{year}.ieee-security.org/accepted-papers.html
+    enabled: true
+  - id: ndss
+    display_name: NDSS
+    full_name: Network and Distributed System Security Symposium
+    dblp_stream: conf/ndss
+    category: SC
+    focus_tags: [security, cloud_security]
+    tier:
+      ccf: A
+    enabled: true
+  - id: usenix-security
+    display_name: USENIX Security
+    full_name: USENIX Security Symposium
+    dblp_stream: conf/uss
+    aliases: [USENIX Security Symposium]
+    category: SC
+    focus_tags: [security, cloud_security]
+    tier:
+      ccf: A
+    enabled: true
+  - id: ccs
+    display_name: CCS
+    full_name: ACM Conference on Computer and Communications Security
+    dblp_stream: conf/ccs
+    aliases: [ACM CCS]
+    category: SC
+    focus_tags: [security, cloud_security]
+    tier:
+      ccf: A
+    enabled: true
+  - id: issta
+    display_name: ISSTA
+    full_name: International Symposium on Software Testing and Analysis
+    dblp_stream: conf/issta
+    category: SE
+    focus_tags: [software_engineering]
+    tier:
+      ccf: A
+    official_source:
+      type: researchr_accepted
+      page_url: https://conf.researchr.org/track/issta-{year}/issta-{year}-research-papers
+    enabled: true
+  - id: icse
+    display_name: ICSE
+    full_name: International Conference on Software Engineering
+    dblp_stream: conf/icse
+    category: SE
+    focus_tags: [software_engineering]
+    tier:
+      ccf: A
+    official_source:
+      type: researchr_accepted
+      page_url: https://conf.researchr.org/track/icse-{year}/icse-{year}-research-track
+    enabled: true
+  - id: fse
+    display_name: FSE
+    full_name: ACM International Conference on the Foundations of Software Engineering
+    dblp_stream: conf/sigsoft
+    aliases: [ESEC/FSE, ESEC/SIGSOFT FSE, SIGSOFT FSE]
+    category: SE
+    focus_tags: [software_engineering]
+    tier:
+      ccf: A
+    official_source:
+      type: researchr_accepted
+      page_url: https://conf.researchr.org/track/fse-{year}/fse-{year}-research-papers
+    enabled: true
+  - id: ase
+    display_name: ASE
+    full_name: IEEE/ACM International Conference on Automated Software Engineering
+    dblp_stream: conf/kbse
+    aliases: [KBSE]
+    category: SE
+    focus_tags: [software_engineering]
+    tier:
+      ccf: A
+    official_source:
+      type: researchr_accepted
+      page_url: https://conf.researchr.org/track/ase-{year}/ase-{year}-research-track
+    enabled: true
+  - id: esorics
+    display_name: ESORICS
+    full_name: European Symposium on Research in Computer Security
+    dblp_stream: conf/esorics
+    category: SC
+    focus_tags: [security, cloud_security]
+    enabled: true
+  - id: raid
+    display_name: RAID
+    full_name: International Symposium on Research in Attacks, Intrusions and Defenses
+    dblp_stream: conf/raid
+    category: SC
+    enabled: true
+  - id: acsac
+    display_name: ACSAC
+    full_name: Annual Computer Security Applications Conference
+    dblp_stream: conf/acsac
+    category: SC
+    enabled: true
+  - id: asiaccs
+    display_name: ASIACCS
+    full_name: ACM Asia Conference on Computer and Communications Security
+    dblp_stream: conf/asiaccs
+    aliases: [AsiaCCS]
+    category: SC
+    enabled: true
+  - id: eurosp
+    display_name: EuroS&P
+    full_name: IEEE European Symposium on Security and Privacy
+    dblp_stream: conf/eurosp
+    aliases: [Euro S&P]
+    category: SC
+    enabled: true
+  - id: dimva
+    display_name: DIMVA
+    full_name: Conference on Detection of Intrusions and Malware & Vulnerability Assessment
+    dblp_stream: conf/dimva
+    category: SC
+    enabled: true
+  - id: dsn
+    display_name: DSN
+    full_name: International Conference on Dependable Systems and Networks
+    dblp_stream: conf/dsn
+    category: SC
+    focus_tags: [security, cloud_security, distributed_systems]
+    enabled: true
+  - id: www
+    display_name: WWW
+    full_name: International World Wide Web Conferences
+    dblp_stream: conf/www
+    aliases: [TheWebConf, WebConf]
+    category: NW
+    category_name: Network System
+    category_name_zh: 计算机网络
+    focus_tags: [distributed_systems]
+    enabled: true
+  - id: mlsys
+    display_name: MLSys
+    full_name: Conference on Machine Learning and Systems
+    dblp_stream: conf/mlsys
+    aliases: [MLSYS]
+    category: MX
+    focus_tags: [distributed_systems, cloud_native]
+    official_source:
+      type: miniconf
+      page_url: https://mlsys.org/virtual/{year}/papers.html
+      papers_url: https://mlsys.org/static/virtual/data/mlsys-{year}-orals-posters.json
+      abstracts_url: https://mlsys.org/static/virtual/data/mlsys-{year}-abstracts.json
+      event_type: Poster
+    enabled: true
 
-  # Software Engineering & Testing Top Tier
-  - ISSTA
-  - ICSE
-  - FSE
-  - ASE
-
-  # Other High Quality Security Venues
-  - ESORICS
-  - RAID
-  - ACSAC
-  - ASIACCS
-  - EuroS&P
-  - DIMVA  # Detection of Intrusions and Malware
-  - DSN    # Dependable Systems and Networks (Reliability/Security)
-
-  # Systems & PL (Top tier venues often containing best Security/Testing papers)
-  # - OSDI
-  # - SOSP
-  # - PLDI
-  # - POPL
-  # - FM (Removed: Too theoretical)
+include_ccfddl_catalog: true
 
 years:
   - 2022
@@ -45,3 +232,6 @@ openai_model: "gpt-4o"
 embedding_model: "text-embedding-3-small"
 
 output_dir: "data"
+
+# Optional path prefix for reverse proxies, for example "/papercollect".
+url_base: ""

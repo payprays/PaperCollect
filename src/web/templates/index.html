@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>PaperCollect</title>
+    <link rel="stylesheet" href="{{ asset_url('styles.css') }}">
+  </head>
+  <body>
+    <main>
+      <header>
+        <div>
+          <h1>PaperCollect</h1>
+          <p class="subtitle">Collect papers by conference and year, then publish the saved result as RSS.</p>
+        </div>
+      </header>
+
+      <section class="layout">
+        <div class="workbench">
+          <div class="panel">
+            <form id="collect-form">
+              <div class="form-grid">
+              <label>
+                Category
+                <select id="collect-category" name="category"></select>
+              </label>
+              <label>
+                Focus
+                <select id="collect-focus" name="focus"></select>
+              </label>
+              <label>
+                Conference
+                <select id="conference" name="conference"></select>
+                </label>
+                <label>
+                  Year
+                  <input id="year" name="year" type="number" min="1900" max="2099" step="1" list="year-options">
+                  <datalist id="year-options"></datalist>
+                </label>
+                <label>
+                  Limit
+                  <input id="limit" name="limit" type="number" min="0" step="1">
+                </label>
+              </div>
+              <div class="actions">
+                <button type="submit">Collect</button>
+                <a id="rss-link" class="hidden" href="#" target="_blank" rel="noreferrer"></a>
+              </div>
+            </form>
+
+            <div id="status" data-status="idle">Ready.</div>
+            <pre id="logs" aria-live="polite"></pre>
+          </div>
+
+          <div class="panel">
+            <form id="search-form">
+              <div class="search-grid">
+                <label class="wide">
+                  Search papers
+                  <input id="search-query" name="q" type="search" placeholder="fuzzing, prompt injection, program repair">
+                </label>
+                <label>
+                  Mode
+                  <select id="search-mode" name="mode">
+                    <option value="concept" selected>Concept semantic</option>
+                    <option value="keyword">Keyword</option>
+                  </select>
+                </label>
+                <label>
+                Category
+                <select id="search-category" name="category"></select>
+              </label>
+              <label>
+                Focus
+                <select id="search-focus" name="focus"></select>
+              </label>
+              <label>
+                Conference
+                <select id="search-conference" name="conference"></select>
+                </label>
+                <label>
+                  Year
+                  <input id="search-year" name="year" type="number" min="1900" max="2099" step="1" list="year-options">
+                </label>
+              </div>
+              <div class="actions">
+                <button type="submit">Search</button>
+              </div>
+            </form>
+            <div id="search-status" data-status="idle">Search saved paper JSON files.</div>
+            <div id="search-results"></div>
+          </div>
+        </div>
+
+        <aside class="panel">
+          <h2>Saved RSS feeds</h2>
+          <ul id="feeds"></ul>
+        </aside>
+      </section>
+    </main>
+    <script>
+      window.PAPERCOLLECT_URL_BASE = {{ url_base|tojson }};
+    </script>
+    <script src="{{ asset_url('app.js') }}"></script>
+  </body>
+</html>
