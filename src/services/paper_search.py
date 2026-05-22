@@ -4,6 +4,7 @@ import os
 import re
 import threading
 from collections import Counter
+from difflib import SequenceMatcher
 from functools import lru_cache
 from glob import glob
 from typing import Any
@@ -267,7 +268,7 @@ def search_saved_papers(
     if query_years:
         query = _strip_query_years(query, query_years)
     tokens = _tokenize(query)
-    query_concepts = _extract_concepts(query) if mode == "concept" else {}
+    query_concepts = _extract_concepts(query, allow_fuzzy=True) if mode == "concept" else {}
     conference_filter = find_conference(config, conference) if conference else None
     conference_lookup = _conference_lookup(config)
     entry_concepts_cache: dict[str, dict[str, set[str]]] = {}
@@ -620,7 +621,7 @@ def _entry_concepts(entry: ConferenceEntry) -> dict[str, set[str]]:
     return _extract_concepts(text)
 
 
-def _extract_concepts(text: str) -> dict[str, set[str]]:
+def _extract_concepts(text: str, allow_fuzzy: bool = False) -> dict[str, set[str]]:
     normalized_text = text.lower()
     concepts: dict[str, set[str]] = {}
     for concept, definition in CONCEPT_LEXICON.items():
@@ -630,6 +631,8 @@ def _extract_concepts(text: str) -> dict[str, set[str]]:
             for alias in aliases
             if _contains_alias_in_lower(normalized_text, alias.lower())
         }
+        if allow_fuzzy and not matches:
+            matches = _fuzzy_alias_matches(normalized_text, aliases)
         if matches:
             concepts[concept] = matches
     return concepts
@@ -697,6 +700,34 @@ def _contains_alias_in_lower(normalized_text: str, normalized_alias: str) -> boo
         return False
 
     return _alias_pattern(normalized_alias).search(normalized_text) is not None
+
+
+def _fuzzy_alias_matches(normalized_text: str, aliases: list[str]) -> set[str]:
+    query_tokens = _tokenize(normalized_text)
+    if not query_tokens:
+        return set()
+
+    matches = set()
+    for alias in aliases:
+        alias_tokens = _tokenize(alias.lower())
+        if len(alias_tokens) != 1:
+            continue
+        alias_token = alias_tokens[0]
+        if any(_is_fuzzy_token_match(token, alias_token) for token in query_tokens):
+            matches.add(alias)
+    return matches
+
+
+def _is_fuzzy_token_match(token: str, alias_token: str) -> bool:
+    if token == alias_token:
+        return True
+    if len(alias_token) < 6 or len(token) < 6:
+        return False
+    if token[0] != alias_token[0]:
+        return False
+    if abs(len(token) - len(alias_token)) > 2:
+        return False
+    return SequenceMatcher(None, token, alias_token).ratio() >= 0.86
 
 
 @lru_cache(maxsize=None)

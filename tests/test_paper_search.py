@@ -196,6 +196,50 @@ def test_search_saved_papers_concept_mode_expands_scientific_concepts(tmp_path):
     assert "Vulnerability Detection" in results[0]["matched_concepts"]
 
 
+def test_search_saved_papers_concept_mode_tolerates_common_topic_typos(tmp_path):
+    data_dir = tmp_path / "data"
+    data_dir.mkdir()
+    (data_dir / "NDSS_2026.json").write_text(
+        json.dumps(
+            [
+                {
+                    "title": "Kubernetes Policy Enforcement for Cloud Workloads",
+                    "authors": ["A. Researcher"],
+                    "venue": "NDSS",
+                    "year": 2026,
+                    "abstract": "We study Kubernetes admission control and cluster security.",
+                }
+            ]
+        ),
+        encoding="utf-8",
+    )
+
+    config = {
+        "include_ccfddl_catalog": False,
+        "conferences": [
+            {
+                "id": "ndss",
+                "display_name": "NDSS",
+                "category": "SC",
+                "focus_tags": ["security", "cloud_native", "cloud_security"],
+                "dblp_stream": "conf/ndss",
+            }
+        ],
+    }
+
+    results = search_saved_papers(
+        config,
+        str(data_dir),
+        "kunernetes",
+        limit=10,
+        mode="concept",
+    )
+
+    assert len(results) == 1
+    assert results[0]["title"] == "Kubernetes Policy Enforcement for Cloud Workloads"
+    assert "Cloud Native" in results[0]["matched_concepts"]
+
+
 def test_search_saved_papers_keyword_mode_does_not_expand_concepts(tmp_path):
     data_dir = tmp_path / "data"
     data_dir.mkdir()
