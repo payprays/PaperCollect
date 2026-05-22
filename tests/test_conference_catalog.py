@@ -1,3 +1,7 @@
+from pathlib import Path
+
+import yaml
+
 from src.core.conference_catalog import (
     catalog_categories,
     find_conference,
@@ -105,3 +109,39 @@ def test_local_catalog_override_keeps_rank_while_refining_category_and_focus():
     assert "cloud_native" in by_id["mlsys"].focus_tags
     assert by_id["mlsys"].official_source["type"] == "miniconf"
     assert by_id["mlsys"].official_source["papers_url"] == "https://example.com/{year}.json"
+
+
+def test_project_config_curates_high_quality_systems_conferences():
+    config_path = Path(__file__).resolve().parents[1] / "config.yaml"
+    config = yaml.safe_load(config_path.read_text(encoding="utf-8"))
+    by_id = {entry.id: entry for entry in normalize_conferences(config)}
+    expected_years = (2023, 2024, 2025, 2026)
+
+    expected_streams = {
+        "sosp": "conf/sosp",
+        "osdi": "conf/osdi",
+        "nsdi": "conf/nsdi",
+        "eurosys": "conf/eurosys",
+        "usenix-atc": "conf/usenix",
+        "fast": "conf/fast",
+        "socc": "conf/cloud",
+        "asplos": "conf/asplos",
+        "middleware": "conf/middleware",
+        "hpdc": "conf/hpdc",
+        "icdcs": "conf/icdcs",
+    }
+
+    for conference_id, stream in expected_streams.items():
+        entry = by_id[conference_id]
+        assert entry.dblp_stream == stream
+        assert "distributed_systems" in entry.focus_tags
+        assert entry.tier["ccf"] in {"A", "B"}
+        assert entry.years == expected_years
+
+    assert config["years"] == list(expected_years)
+    assert by_id["mlsys"].years == expected_years
+    assert "cloud_native" in by_id["socc"].focus_tags
+    assert by_id["usenix-atc"].display_name == "USENIX ATC"
+    assert by_id["usenix-atc"].tier["ccf"] == "A"
+    assert find_conference(config, "ATC").id == "usenix-atc"
+    assert find_conference(config, "SIGOPS ATC").id == "usenix-atc"

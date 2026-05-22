@@ -1,0 +1,5240 @@
+source:
+  name: ccfddl/ccf-deadlines
+  url: https://github.com/ccfddl/ccf-deadlines
+  commit: e01e4c0ce187751cd1fb8dbd33a899ce5cc3e391
+categories:
+  DS:
+    name: 计算机体系结构/并行与分布计算/存储系统
+    name_en: Computer Architecture/Parallel Programming/Storage Technology
+  NW:
+    name: 计算机网络
+    name_en: Network System
+  SC:
+    name: 网络与信息安全
+    name_en: Network and System Security
+  SE:
+    name: 软件工程/系统软件/程序设计语言
+    name_en: Software Engineering/Operating System/Programming Language Design
+  DB:
+    name: 数据库/数据挖掘/内容检索
+    name_en: Database/Data Mining/Information Retrieval
+  CT:
+    name: 计算机科学理论
+    name_en: Computing Theory
+  CG:
+    name: 计算机图形学与多媒体
+    name_en: Graphics
+  AI:
+    name: 人工智能
+    name_en: Artificial Intelligence
+  HI:
+    name: 人机交互与普适计算
+    name_en: Computer-Human Interaction
+  MX:
+    name: 交叉/综合/新兴
+    name_en: Interdiscipline/Mixture/Emerging
+conferences:
+- id: aaai
+  display_name: AAAI
+  full_name: AAAI Conference on Artificial Intelligence
+  dblp_stream: conf/aaai
+  aliases:
+  - AAAI
+  - AAAI Conference on Artificial Intelligence
+  category: AI
+  category_name: Artificial Intelligence
+  category_name_zh: 人工智能
+  tier:
+    ccf: A
+    core: A*
+    thcpl: A
+  source: ccfddl/ccf-deadlines
+- id: aamas
+  display_name: AAMAS
+  full_name: International Conference on Autonomous Agents and Multiagent Systems
+  dblp_stream: conf/ifaamas
+  aliases:
+  - AAMAS
+  - International Conference on Autonomous Agents and Multiagent Systems
+  category: AI
+  category_name: Artificial Intelligence
+  category_name_zh: 人工智能
+  tier:
+    ccf: B
+    core: A*
+    thcpl: B
+  source: ccfddl/ccf-deadlines
+- id: accv
+  display_name: ACCV
+  full_name: Asian Conference on Computer Vision
+  dblp_stream: conf/accv
+  aliases:
+  - ACCV
+  - Asian Conference on Computer Vision
+  category: AI
+  category_name: Artificial Intelligence
+  category_name_zh: 人工智能
+  tier:
+    ccf: C
+    core: B
+    thcpl: N
+  source: ccfddl/ccf-deadlines
+- id: acl
+  display_name: ACL
+  full_name: Annual Meeting of the Association for Computational Linguistics
+  dblp_stream: conf/acl
+  aliases:
+  - ACL
+  - Annual Meeting of the Association for Computational Linguistics
+  category: AI
+  category_name: Artificial Intelligence
+  category_name_zh: 人工智能
+  tier:
+    ccf: A
+    core: A*
+    thcpl: A
+  source: ccfddl/ccf-deadlines
+- id: acml
+  display_name: ACML
+  full_name: Asian Conference on Machine Learning
+  dblp_stream: conf/acml
+  aliases:
+  - ACML
+  - Asian Conference on Machine Learning
+  category: AI
+  category_name: Artificial Intelligence
+  category_name_zh: 人工智能
+  tier:
+    ccf: C
+    core: N
+    thcpl: N
+  source: ccfddl/ccf-deadlines
+- id: aistats
+  display_name: AISTATS
+  full_name: International Conference on Artificial Intelligence and Statistics
+  dblp_stream: conf/aistats
+  aliases:
+  - AISTATS
+  - International Conference on Artificial Intelligence and Statistics
+  category: AI
+  category_name: Artificial Intelligence
+  category_name_zh: 人工智能
+  tier:
+    ccf: C
+    core: A
+    thcpl: B
+  source: ccfddl/ccf-deadlines
+- id: alt
+  display_name: ALT
+  full_name: International Conference on Algorithmic Learning Theory
+  dblp_stream: conf/alt
+  aliases:
+  - ALT
+  - International Conference on Algorithmic Learning Theory
+  category: AI
+  category_name: Artificial Intelligence
+  category_name_zh: 人工智能
+  tier:
+    ccf: C
+    core: B
+    thcpl: B
+  source: ccfddl/ccf-deadlines
+- id: bmvc
+  display_name: BMVC
+  full_name: British Machine Vision Conference
+  dblp_stream: conf/bmvc
+  aliases:
+  - BMVC
+  - British Machine Vision Conference
+  category: AI
+  category_name: Artificial Intelligence
+  category_name_zh: 人工智能
+  tier:
+    ccf: C
+    core: A
+    thcpl: B
+  source: ccfddl/ccf-deadlines
+- id: cec
+  display_name: IEEE CEC
+  full_name: IEEE Congress on Evolutionary Computation
+  dblp_stream: conf/cec
+  aliases:
+  - IEEE CEC
+  - IEEE Congress on Evolutionary Computation
+  category: AI
+  category_name: Artificial Intelligence
+  category_name_zh: 人工智能
+  tier:
+    ccf: C
+    core: B
+    thcpl: N
+  source: ccfddl/ccf-deadlines
+- id: cicai
+  display_name: CICAI
+  full_name: CAAI International Conference on Artificial Intelligence
+  dblp_stream: conf/cicai
+  aliases:
+  - CICAI
+  - CAAI International Conference on Artificial Intelligence
+  category: AI
+  category_name: Artificial Intelligence
+  category_name_zh: 人工智能
+  tier:
+    ccf: N
+    core: N
+    thcpl: N
+  source: ccfddl/ccf-deadlines
+- id: coling
+  display_name: COLING
+  full_name: INTERNATIONNAL CONFERENCE ON COMPUTATIONAL LINGUISTICS
+  dblp_stream: conf/coling
+  aliases:
+  - COLING
+  - INTERNATIONNAL CONFERENCE ON COMPUTATIONAL LINGUISTICS
+  category: AI
+  category_name: Artificial Intelligence
+  category_name_zh: 人工智能
+  tier:
+    ccf: B
+    core: B
+    thcpl: B
+  source: ccfddl/ccf-deadlines
+- id: colm
+  display_name: COLM
+  full_name: Conference on Language Modeling
+  dblp_stream: conf/colm
+  aliases:
+  - COLM
+  - Conference on Language Modeling
+  category: AI
+  category_name: Artificial Intelligence
+  category_name_zh: 人工智能
+  tier:
+    ccf: N
+    core: N
+    thcpl: N
+  source: ccfddl/ccf-deadlines
+- id: colt
+  display_name: COLT
+  full_name: Annual Conference on Learning Theory
+  dblp_stream: conf/colt
+  aliases:
+  - COLT
+  - Annual Conference on Learning Theory
+  category: AI
+  category_name: Artificial Intelligence
+  category_name_zh: 人工智能
+  tier:
+    ccf: B
+    core: A*
+    thcpl: A
+  source: ccfddl/ccf-deadlines
+- id: conll
+  display_name: CoNLL
+  full_name: Conference on Computational Natural Language Learning
+  dblp_stream: conf/conll
+  aliases:
+  - CoNLL
+  - Conference on Computational Natural Language Learning
+  category: AI
+  category_name: Artificial Intelligence
+  category_name_zh: 人工智能
+  tier:
+    ccf: C
+    core: B
+    thcpl: N
+  source: ccfddl/ccf-deadlines
+- id: corl
+  display_name: CoRL
+  full_name: The Conference on Robot Learning
+  dblp_stream: conf/corl
+  aliases:
+  - CoRL
+  - The Conference on Robot Learning
+  category: AI
+  category_name: Artificial Intelligence
+  category_name_zh: 人工智能
+  tier:
+    ccf: N
+    core: N
+    thcpl: N
+  source: ccfddl/ccf-deadlines
+- id: cpal
+  display_name: CPAL
+  full_name: The Conference on Parsimony and Learning
+  dblp_stream: conf/cpal
+  aliases:
+  - CPAL
+  - The Conference on Parsimony and Learning
+  category: AI
+  category_name: Artificial Intelligence
+  category_name_zh: 人工智能
+  tier:
+    ccf: N
+    core: N
+    thcpl: N
+  source: ccfddl/ccf-deadlines
+- id: cvpr
+  display_name: CVPR
+  full_name: IEEE/CVF Conference on Computer Vision and Pattern Recognition
+  dblp_stream: conf/cvpr
+  aliases:
+  - CVPR
+  - IEEE/CVF Conference on Computer Vision and Pattern Recognition
+  category: AI
+  category_name: Artificial Intelligence
+  category_name_zh: 人工智能
+  tier:
+    ccf: A
+    core: A*
+    thcpl: A
+  source: ccfddl/ccf-deadlines
+- id: dai
+  display_name: DAI
+  full_name: International Conference on Distributed Artificial Intelligence
+  dblp_stream: conf/dai2
+  aliases:
+  - DAI
+  - International Conference on Distributed Artificial Intelligence
+  category: AI
+  category_name: Artificial Intelligence
+  category_name_zh: 人工智能
+  tier:
+    ccf: C
+    core: N
+    thcpl: N
+  source: ccfddl/ccf-deadlines
+- id: eacl
+  display_name: EACL
+  full_name: The Annual Conference of the European Chapter of the Association for
+    Computational Linguistics
+  dblp_stream: conf/eacl
+  aliases:
+  - EACL
+  - The Annual Conference of the European Chapter of the Association for Computational
+    Linguistics
+  category: AI
+  category_name: Artificial Intelligence
+  category_name_zh: 人工智能
+  tier:
+    ccf: N
+    core: A
+    thcpl: N
+  source: ccfddl/ccf-deadlines
+- id: ecai
+  display_name: ECAI
+  full_name: European Conference on Artificial Intelligence
+  dblp_stream: conf/ecai
+  aliases:
+  - ECAI
+  - European Conference on Artificial Intelligence
+  category: AI
+  category_name: Artificial Intelligence
+  category_name_zh: 人工智能
+  tier:
+    ccf: B
+    core: A
+    thcpl: N
+  source: ccfddl/ccf-deadlines
+- id: eccv
+  display_name: ECCV
+  full_name: European Conference on Computer Vision
+  dblp_stream: conf/eccv
+  aliases:
+  - ECCV
+  - European Conference on Computer Vision
+  category: AI
+  category_name: Artificial Intelligence
+  category_name_zh: 人工智能
+  tier:
+    ccf: B
+    core: A*
+    thcpl: A
+  source: ccfddl/ccf-deadlines
+- id: emnlp
+  display_name: EMNLP
+  full_name: The annual Conference on Empirical Methods in Natural Language Processing
+  dblp_stream: conf/emnlp
+  aliases:
+  - EMNLP
+  - The annual Conference on Empirical Methods in Natural Language Processing
+  category: AI
+  category_name: Artificial Intelligence
+  category_name_zh: 人工智能
+  tier:
+    ccf: B
+    core: A*
+    thcpl: A
+  source: ccfddl/ccf-deadlines
+- id: esann
+  display_name: ESANN
+  full_name: European Symposium on Artificial Neural Networks, Computational Intelligence
+    and Machine Learning
+  dblp_stream: conf/esann
+  aliases:
+  - ESANN
+  - European Symposium on Artificial Neural Networks, Computational Intelligence and
+    Machine Learning
+  category: AI
+  category_name: Artificial Intelligence
+  category_name_zh: 人工智能
+  tier:
+    ccf: N
+    core: B
+    thcpl: N
+  source: ccfddl/ccf-deadlines
+- id: euvip
+  display_name: EUVIP
+  full_name: European Conference on Visual Information Processing
+  dblp_stream: conf/euvip
+  aliases:
+  - EUVIP
+  - European Conference on Visual Information Processing
+  category: AI
+  category_name: Artificial Intelligence
+  category_name_zh: 人工智能
+  tier:
+    ccf: N
+    core: N
+    thcpl: N
+  source: ccfddl/ccf-deadlines
+- id: fg
+  display_name: FG
+  full_name: International Conference on Automatic Face and Gesture Recognition
+  dblp_stream: conf/fg
+  aliases:
+  - FG
+  - International Conference on Automatic Face and Gesture Recognition
+  category: AI
+  category_name: Artificial Intelligence
+  category_name_zh: 人工智能
+  tier:
+    ccf: C
+    core: B
+    thcpl: B
+  source: ccfddl/ccf-deadlines
+- id: gecco
+  display_name: GECCO
+  full_name: Genetic and Evolutionary Computation Conference
+  dblp_stream: conf/gecco
+  aliases:
+  - GECCO
+  - Genetic and Evolutionary Computation Conference
+  category: AI
+  category_name: Artificial Intelligence
+  category_name_zh: 人工智能
+  tier:
+    ccf: C
+    core: A
+    thcpl: B
+  source: ccfddl/ccf-deadlines
+- id: icann
+  display_name: ICANN
+  full_name: International Conference on Artificial Neural Networks
+  dblp_stream: conf/icann
+  aliases:
+  - ICANN
+  - International Conference on Artificial Neural Networks
+  category: AI
+  category_name: Artificial Intelligence
+  category_name_zh: 人工智能
+  tier:
+    ccf: C
+    core: C
+    thcpl: N
+  source: ccfddl/ccf-deadlines
+- id: icaps
+  display_name: ICAPS
+  full_name: International Conference on Automated Planning and Scheduling
+  dblp_stream: conf/icaps
+  aliases:
+  - ICAPS
+  - International Conference on Automated Planning and Scheduling
+  category: AI
+  category_name: Artificial Intelligence
+  category_name_zh: 人工智能
+  tier:
+    ccf: B
+    core: A*
+    thcpl: B
+  source: ccfddl/ccf-deadlines
+- id: iccbr
+  display_name: ICCBR
+  full_name: International Conference on Case-Based Reasoning
+  dblp_stream: conf/iccbr
+  aliases:
+  - ICCBR
+  - International Conference on Case-Based Reasoning
+  category: AI
+  category_name: Artificial Intelligence
+  category_name_zh: 人工智能
+  tier:
+    ccf: B
+    core: C
+    thcpl: N
+  source: ccfddl/ccf-deadlines
+- id: iccv
+  display_name: ICCV
+  full_name: IEEE International Conference on Computer Vision
+  dblp_stream: conf/iccv
+  aliases:
+  - ICCV
+  - IEEE International Conference on Computer Vision
+  category: AI
+  category_name: Artificial Intelligence
+  category_name_zh: 人工智能
+  tier:
+    ccf: A
+    core: A*
+    thcpl: A
+  source: ccfddl/ccf-deadlines
+- id: icdar
+  display_name: ICDAR
+  full_name: International Conference on Document Analysis and Recognition
+  dblp_stream: conf/icdar
+  aliases:
+  - ICDAR
+  - International Conference on Document Analysis and Recognition
+  category: AI
+  category_name: Artificial Intelligence
+  category_name_zh: 人工智能
+  tier:
+    ccf: C
+    core: A
+    thcpl: B
+  source: ccfddl/ccf-deadlines
+- id: iclr
+  display_name: ICLR
+  full_name: International Conference on Learning Representations
+  dblp_stream: conf/iclr
+  aliases:
+  - ICLR
+  - International Conference on Learning Representations
+  category: AI
+  category_name: Artificial Intelligence
+  category_name_zh: 人工智能
+  tier:
+    ccf: A
+    core: A*
+    thcpl: A
+  source: ccfddl/ccf-deadlines
+- id: icml
+  display_name: ICML
+  full_name: International Conference on Machine Learning
+  dblp_stream: conf/icml
+  aliases:
+  - ICML
+  - International Conference on Machine Learning
+  category: AI
+  category_name: Artificial Intelligence
+  category_name_zh: 人工智能
+  tier:
+    ccf: A
+    core: A*
+    thcpl: A
+  source: ccfddl/ccf-deadlines
+- id: iconip
+  display_name: ICONIP
+  full_name: International Conference on Neural Information Processing
+  dblp_stream: conf/iconip
+  aliases:
+  - ICONIP
+  - International Conference on Neural Information Processing
+  category: AI
+  category_name: Artificial Intelligence
+  category_name_zh: 人工智能
+  tier:
+    ccf: C
+    core: B
+    thcpl: N
+  source: ccfddl/ccf-deadlines
+- id: icpr
+  display_name: ICPR
+  full_name: International Conference on Pattern Recognition
+  dblp_stream: conf/icpr
+  aliases:
+  - ICPR
+  - International Conference on Pattern Recognition
+  category: AI
+  category_name: Artificial Intelligence
+  category_name_zh: 人工智能
+  tier:
+    ccf: C
+    core: B
+    thcpl: B
+  source: ccfddl/ccf-deadlines
+- id: icra
+  display_name: ICRA
+  full_name: IEEE International Conference on Robotics and Automation
+  dblp_stream: conf/icra
+  aliases:
+  - ICRA
+  - IEEE International Conference on Robotics and Automation
+  category: AI
+  category_name: Artificial Intelligence
+  category_name_zh: 人工智能
+  tier:
+    ccf: B
+    core: A*
+    thcpl: A
+  source: ccfddl/ccf-deadlines
+- id: ictai
+  display_name: ICTAI
+  full_name: International Conference on Tools with Artificial Intellignce
+  dblp_stream: conf/ictai
+  aliases:
+  - ICTAI
+  - International Conference on Tools with Artificial Intellignce
+  category: AI
+  category_name: Artificial Intelligence
+  category_name_zh: 人工智能
+  tier:
+    ccf: C
+    core: B
+    thcpl: N
+  source: ccfddl/ccf-deadlines
+- id: ijcai
+  display_name: IJCAI
+  full_name: International Joint Conference on Artificial Intelligence
+  dblp_stream: conf/ijcai
+  aliases:
+  - IJCAI
+  - International Joint Conference on Artificial Intelligence
+  category: AI
+  category_name: Artificial Intelligence
+  category_name_zh: 人工智能
+  tier:
+    ccf: B
+    core: A*
+    thcpl: B
+  source: ccfddl/ccf-deadlines
+- id: ijcb
+  display_name: IJCB
+  full_name: International Joint Conference on Biometrics
+  dblp_stream: conf/icb
+  aliases:
+  - IJCB
+  - International Joint Conference on Biometrics
+  category: AI
+  category_name: Artificial Intelligence
+  category_name_zh: 人工智能
+  tier:
+    ccf: C
+    core: B
+    thcpl: N
+  source: ccfddl/ccf-deadlines
+- id: ijcnlp
+  display_name: IJCNLP
+  full_name: International Joint Conference on Natural Language Processing
+  dblp_stream: conf/ijcnlp
+  aliases:
+  - IJCNLP
+  - International Joint Conference on Natural Language Processing
+  category: AI
+  category_name: Artificial Intelligence
+  category_name_zh: 人工智能
+  tier:
+    ccf: N
+    core: B
+    thcpl: N
+  source: ccfddl/ccf-deadlines
+- id: ijcnn
+  display_name: IJCNN
+  full_name: International Joint Conference on Neural Networks
+  dblp_stream: conf/ijcnn
+  aliases:
+  - IJCNN
+  - International Joint Conference on Neural Networks
+  category: AI
+  category_name: Artificial Intelligence
+  category_name_zh: 人工智能
+  tier:
+    ccf: C
+    core: B
+    thcpl: B
+  source: ccfddl/ccf-deadlines
+- id: iros
+  display_name: IROS
+  full_name: IEEE/RSJ International Conference on Intelligent Robots and Systems
+  dblp_stream: conf/iros
+  aliases:
+  - IROS
+  - IEEE/RSJ International Conference on Intelligent Robots and Systems
+  category: AI
+  category_name: Artificial Intelligence
+  category_name_zh: 人工智能
+  tier:
+    ccf: C
+    core: A
+    thcpl: B
+  source: ccfddl/ccf-deadlines
+- id: kr
+  display_name: KR
+  full_name: International Conference on Principles of Knowledge Representation and
+    Reasoning
+  dblp_stream: conf/kr
+  aliases:
+  - KR
+  - International Conference on Principles of Knowledge Representation and Reasoning
+  category: AI
+  category_name: Artificial Intelligence
+  category_name_zh: 人工智能
+  tier:
+    ccf: B
+    core: A*
+    thcpl: N
+  source: ccfddl/ccf-deadlines
+- id: ksem
+  display_name: KSEM
+  full_name: International Conference on Knowledge Science, Engineering and Management
+  dblp_stream: conf/ksem
+  aliases:
+  - KSEM
+  - International Conference on Knowledge Science, Engineering and Management
+  category: AI
+  category_name: Artificial Intelligence
+  category_name_zh: 人工智能
+  tier:
+    ccf: C
+    core: C
+    thcpl: N
+  source: ccfddl/ccf-deadlines
+- id: log
+  display_name: LOG
+  full_name: Learning on Graphs Conference
+  dblp_stream: conf/log
+  aliases:
+  - LOG
+  - Learning on Graphs Conference
+  category: AI
+  category_name: Artificial Intelligence
+  category_name_zh: 人工智能
+  tier:
+    ccf: N
+    core: N
+    thcpl: N
+  source: ccfddl/ccf-deadlines
+- id: naacl
+  display_name: NAACL
+  full_name: The Annual Conference of the North American Chapter of the Association
+    for Computational Linguistics
+  dblp_stream: conf/naacl
+  aliases:
+  - NAACL
+  - The Annual Conference of the North American Chapter of the Association for Computational
+    Linguistics
+  category: AI
+  category_name: Artificial Intelligence
+  category_name_zh: 人工智能
+  tier:
+    ccf: B
+    core: A
+    thcpl: B
+  source: ccfddl/ccf-deadlines
+- id: nips
+  display_name: NeurIPS
+  full_name: Conference on Neural Information Processing Systems
+  dblp_stream: conf/nips
+  aliases:
+  - NeurIPS
+  - Conference on Neural Information Processing Systems
+  category: AI
+  category_name: Artificial Intelligence
+  category_name_zh: 人工智能
+  tier:
+    ccf: A
+    core: A*
+    thcpl: A
+  source: ccfddl/ccf-deadlines
+- id: nlpcc
+  display_name: NLPCC
+  full_name: CCF International Conference on Natural Language Processing and Chinese
+    Computing
+  dblp_stream: conf/nlpcc
+  aliases:
+  - NLPCC
+  - CCF International Conference on Natural Language Processing and Chinese Computing
+  category: AI
+  category_name: Artificial Intelligence
+  category_name_zh: 人工智能
+  tier:
+    ccf: C
+    core: N
+    thcpl: N
+  source: ccfddl/ccf-deadlines
+- id: ppsn
+  display_name: PPSN
+  full_name: International Conference on Parallel Problem Solving From Nature
+  dblp_stream: conf/ppsn
+  aliases:
+  - PPSN
+  - International Conference on Parallel Problem Solving From Nature
+  category: AI
+  category_name: Artificial Intelligence
+  category_name_zh: 人工智能
+  tier:
+    ccf: B
+    core: A
+    thcpl: N
+  source: ccfddl/ccf-deadlines
+- id: pricai
+  display_name: PRICAI
+  full_name: Pacific Rim International Conference on Artificial Intelligence
+  dblp_stream: conf/pricai
+  aliases:
+  - PRICAI
+  - Pacific Rim International Conference on Artificial Intelligence
+  category: AI
+  category_name: Artificial Intelligence
+  category_name_zh: 人工智能
+  tier:
+    ccf: C
+    core: B
+    thcpl: N
+  source: ccfddl/ccf-deadlines
+- id: probml
+  display_name: ProbML
+  full_name: Symposium on Probabilistic Machine Learning
+  dblp_stream: conf/probml
+  aliases:
+  - ProbML
+  - Symposium on Probabilistic Machine Learning
+  category: AI
+  category_name: Artificial Intelligence
+  category_name_zh: 人工智能
+  tier:
+    ccf: N
+    core: N
+    thcpl: N
+  source: ccfddl/ccf-deadlines
+- id: rss
+  display_name: RSS
+  full_name: Robotics Science and Systems
+  dblp_stream: conf/rss
+  aliases:
+  - RSS
+  - Robotics Science and Systems
+  category: AI
+  category_name: Artificial Intelligence
+  category_name_zh: 人工智能
+  tier:
+    ccf: N
+    core: A*
+    thcpl: A
+  source: ccfddl/ccf-deadlines
+- id: rulemlrr
+  display_name: RuleML+RR
+  full_name: International Joint Conference on Rules and Reasoning
+  dblp_stream: conf/rulemlrr
+  aliases:
+  - RuleML+RR
+  - International Joint Conference on Rules and Reasoning
+  category: AI
+  category_name: Artificial Intelligence
+  category_name_zh: 人工智能
+  tier:
+    ccf: N
+    core: B
+    thcpl: N
+  source: ccfddl/ccf-deadlines
+- id: uai
+  display_name: UAI
+  full_name: Conference on Uncertainty in Artificial Intelligence
+  dblp_stream: conf/uai
+  aliases:
+  - UAI
+  - Conference on Uncertainty in Artificial Intelligence
+  category: AI
+  category_name: Artificial Intelligence
+  category_name_zh: 人工智能
+  tier:
+    ccf: B
+    core: A
+    thcpl: B
+  source: ccfddl/ccf-deadlines
+- id: wacv
+  display_name: WACV
+  full_name: IEEE/CVF Winter Conference on Applications of Computer Vision
+  dblp_stream: conf/wacv
+  aliases:
+  - WACV
+  - IEEE/CVF Winter Conference on Applications of Computer Vision
+  category: AI
+  category_name: Artificial Intelligence
+  category_name_zh: 人工智能
+  tier:
+    ccf: N
+    core: A
+    thcpl: N
+  source: ccfddl/ccf-deadlines
+- id: 3dv
+  display_name: 3DV
+  full_name: International Conference on 3D Vision
+  dblp_stream: conf/3dim
+  aliases:
+  - 3DV
+  - International Conference on 3D Vision
+  category: CG
+  category_name: Graphics
+  category_name_zh: 计算机图形学与多媒体
+  tier:
+    ccf: C
+    core: N
+    thcpl: N
+  source: ccfddl/ccf-deadlines
+- id: pacificvis
+  display_name: PacificVis
+  full_name: IEEE Pacific Visualization Symposium
+  dblp_stream: conf/pacificvis
+  aliases:
+  - PacificVis
+  - IEEE Pacific Visualization Symposium
+  category: CG
+  category_name: Graphics
+  category_name_zh: 计算机图形学与多媒体
+  tier:
+    ccf: C
+    core: B
+    thcpl: B
+  source: ccfddl/ccf-deadlines
+- id: sgp
+  display_name: SGP
+  full_name: Eurographics Symposium on Geometry Processing
+  dblp_stream: conf/sgp
+  aliases:
+  - SGP
+  - Eurographics Symposium on Geometry Processing
+  category: CG
+  category_name: Graphics
+  category_name_zh: 计算机图形学与多媒体
+  tier:
+    ccf: B
+    core: B
+    thcpl: B
+  source: ccfddl/ccf-deadlines
+- id: casa
+  display_name: CASA
+  full_name: International Conference on Computer Animation and Social Agents
+  dblp_stream: conf/ca
+  aliases:
+  - CASA
+  - International Conference on Computer Animation and Social Agents
+  category: CG
+  category_name: Graphics
+  category_name_zh: 计算机图形学与多媒体
+  tier:
+    ccf: C
+    core: N
+    thcpl: N
+  source: ccfddl/ccf-deadlines
+- id: cccg
+  display_name: CCCG
+  full_name: Canadian Conference on Computational Geometry
+  dblp_stream: conf/cccg
+  aliases:
+  - CCCG
+  - Canadian Conference on Computational Geometry
+  category: CG
+  category_name: Graphics
+  category_name_zh: 计算机图形学与多媒体
+  tier:
+    ccf: N
+    core: N
+    thcpl: N
+  source: ccfddl/ccf-deadlines
+- id: cgi
+  display_name: CGI
+  full_name: Computer Graphics International
+  dblp_stream: conf/cgi
+  aliases:
+  - CGI
+  - Computer Graphics International
+  category: CG
+  category_name: Graphics
+  category_name_zh: 计算机图形学与多媒体
+  tier:
+    ccf: C
+    core: C
+    thcpl: N
+  source: ccfddl/ccf-deadlines
+- id: cvm
+  display_name: CVM
+  full_name: The international conference on Computational Visual Media
+  dblp_stream: conf/cvm
+  aliases:
+  - CVM
+  - The international conference on Computational Visual Media
+  category: CG
+  category_name: Graphics
+  category_name_zh: 计算机图形学与多媒体
+  tier:
+    ccf: C
+    core: N
+    thcpl: N
+  source: ccfddl/ccf-deadlines
+- id: eg
+  display_name: Eurographics
+  full_name: Eurographics
+  dblp_stream: conf/eurographics
+  aliases:
+  - Eurographics
+  category: CG
+  category_name: Graphics
+  category_name_zh: 计算机图形学与多媒体
+  tier:
+    ccf: B
+    core: B
+    thcpl: B
+  source: ccfddl/ccf-deadlines
+- id: egsr
+  display_name: EGSR
+  full_name: Eurographics Symposium on Rendering
+  dblp_stream: conf/rt
+  aliases:
+  - EGSR
+  - Eurographics Symposium on Rendering
+  category: CG
+  category_name: Graphics
+  category_name_zh: 计算机图形学与多媒体
+  tier:
+    ccf: B
+    core: N
+    thcpl: N
+  source: ccfddl/ccf-deadlines
+- id: eurovis
+  display_name: EuroVis
+  full_name: Eurographics Conference on Visualization
+  dblp_stream: conf/vissym
+  aliases:
+  - EuroVis
+  - Eurographics Conference on Visualization
+  category: CG
+  category_name: Graphics
+  category_name_zh: 计算机图形学与多媒体
+  tier:
+    ccf: B
+    core: B
+    thcpl: B
+  source: ccfddl/ccf-deadlines
+- id: gmp
+  display_name: GMP
+  full_name: International Conference on Geometric Modeling and Processing
+  dblp_stream: conf/gmp
+  aliases:
+  - GMP
+  - International Conference on Geometric Modeling and Processing
+  category: CG
+  category_name: Graphics
+  category_name_zh: 计算机图形学与多媒体
+  tier:
+    ccf: C
+    core: C
+    thcpl: N
+  source: ccfddl/ccf-deadlines
+- id: icassp
+  display_name: ICASSP
+  full_name: IEEE International Conference on Acoustics, Speech, and Signal Processing
+  dblp_stream: conf/icassp
+  aliases:
+  - ICASSP
+  - IEEE International Conference on Acoustics, Speech, and Signal Processing
+  category: CG
+  category_name: Graphics
+  category_name_zh: 计算机图形学与多媒体
+  tier:
+    ccf: B
+    core: B
+    thcpl: B
+  source: ccfddl/ccf-deadlines
+- id: icip
+  display_name: ICIP
+  full_name: The IEEE International Conference on Image Processing
+  dblp_stream: conf/icip
+  aliases:
+  - ICIP
+  - The IEEE International Conference on Image Processing
+  category: CG
+  category_name: Graphics
+  category_name_zh: 计算机图形学与多媒体
+  tier:
+    ccf: C
+    core: B
+    thcpl: B
+  source: ccfddl/ccf-deadlines
+- id: icme
+  display_name: ICME
+  full_name: The IEEE International Conference on Multimedia & Expo
+  dblp_stream: conf/icme
+  aliases:
+  - ICME
+  - The IEEE International Conference on Multimedia & Expo
+  category: CG
+  category_name: Graphics
+  category_name_zh: 计算机图形学与多媒体
+  tier:
+    ccf: B
+    core: A
+    thcpl: N
+  source: ccfddl/ccf-deadlines
+- id: icmr
+  display_name: ICMR
+  full_name: ACM SIGMM International Conference on Multimedia Retrieval
+  dblp_stream: conf/mir
+  aliases:
+  - ICMR
+  - ACM SIGMM International Conference on Multimedia Retrieval
+  category: CG
+  category_name: Graphics
+  category_name_zh: 计算机图形学与多媒体
+  tier:
+    ccf: B
+    core: B
+    thcpl: B
+  source: ccfddl/ccf-deadlines
+- id: icvrv
+  display_name: ICVRV
+  full_name: International Conference on Virtual Reality and Visualization
+  dblp_stream: conf/icvrv
+  aliases:
+  - ICVRV
+  - International Conference on Virtual Reality and Visualization
+  category: CG
+  category_name: Graphics
+  category_name_zh: 计算机图形学与多媒体
+  tier:
+    ccf: N
+    core: N
+    thcpl: N
+  source: ccfddl/ccf-deadlines
+- id: interspeech
+  display_name: InterSpeech
+  full_name: Conference of the International Speech Communication Association
+  dblp_stream: conf/interspeech
+  aliases:
+  - InterSpeech
+  - Conference of the International Speech Communication Association
+  category: CG
+  category_name: Graphics
+  category_name_zh: 计算机图形学与多媒体
+  tier:
+    ccf: B
+    core: A
+    thcpl: N
+  source: ccfddl/ccf-deadlines
+- id: ismar
+  display_name: ISMAR
+  full_name: International Symposium on Mixed and Augmented Reality
+  dblp_stream: conf/ismar
+  aliases:
+  - ISMAR
+  - International Symposium on Mixed and Augmented Reality
+  category: CG
+  category_name: Graphics
+  category_name_zh: 计算机图形学与多媒体
+  tier:
+    ccf: B
+    core: A*
+    thcpl: B
+  source: ccfddl/ccf-deadlines
+- id: mm
+  display_name: ACM MM
+  full_name: ACM International Conference on Multimedia
+  dblp_stream: conf/mm
+  aliases:
+  - ACM MM
+  - ACM International Conference on Multimedia
+  category: CG
+  category_name: Graphics
+  category_name_zh: 计算机图形学与多媒体
+  tier:
+    ccf: A
+    core: A*
+    thcpl: A
+  source: ccfddl/ccf-deadlines
+- id: mmasia
+  display_name: MMAsia
+  full_name: ACM Multimedia Asia
+  dblp_stream: conf/mmasia
+  aliases:
+  - MMAsia
+  - ACM Multimedia Asia
+  category: CG
+  category_name: Graphics
+  category_name_zh: 计算机图形学与多媒体
+  tier:
+    ccf: C
+    core: N
+    thcpl: N
+  source: ccfddl/ccf-deadlines
+- id: mmm
+  display_name: MMM
+  full_name: International Conference on Multimedia Modeling
+  dblp_stream: conf/mmm
+  aliases:
+  - MMM
+  - International Conference on Multimedia Modeling
+  category: CG
+  category_name: Graphics
+  category_name_zh: 计算机图形学与多媒体
+  tier:
+    ccf: C
+    core: B
+    thcpl: N
+  source: ccfddl/ccf-deadlines
+- id: ncmmsc
+  display_name: NCMMSC
+  full_name: National Conference on Man-Machine Speech Communication
+  dblp_stream: conf/ncmmsc
+  aliases:
+  - NCMMSC
+  - National Conference on Man-Machine Speech Communication
+  category: CG
+  category_name: Graphics
+  category_name_zh: 计算机图形学与多媒体
+  tier:
+    ccf: C
+    core: N
+    thcpl: N
+  source: ccfddl/ccf-deadlines
+- id: pg
+  display_name: PG
+  full_name: Pacific Graphics, The Pacific Conference on Computer Graphics and Applications
+  dblp_stream: conf/pg
+  aliases:
+  - PG
+  - Pacific Graphics, The Pacific Conference on Computer Graphics and Applications
+  category: CG
+  category_name: Graphics
+  category_name_zh: 计算机图形学与多媒体
+  tier:
+    ccf: B
+    core: N
+    thcpl: B
+  source: ccfddl/ccf-deadlines
+- id: prcv
+  display_name: PRCV
+  full_name: Chinese Conference on Pattern Recognition and Computer Vision
+  dblp_stream: conf/prcv
+  aliases:
+  - PRCV
+  - Chinese Conference on Pattern Recognition and Computer Vision
+  category: CG
+  category_name: Graphics
+  category_name_zh: 计算机图形学与多媒体
+  tier:
+    ccf: C
+    core: N
+    thcpl: N
+  source: ccfddl/ccf-deadlines
+- id: sca
+  display_name: SCA
+  full_name: ACM SIGGRAPH/Eurographics Symposium on Computer Animation
+  dblp_stream: conf/sca
+  aliases:
+  - SCA
+  - ACM SIGGRAPH/Eurographics Symposium on Computer Animation
+  category: CG
+  category_name: Graphics
+  category_name_zh: 计算机图形学与多媒体
+  tier:
+    ccf: B
+    core: B
+    thcpl: B
+  source: ccfddl/ccf-deadlines
+- id: sig
+  display_name: ACM SIGGRAPH
+  full_name: ACM SIGGRAPH Annual Conference
+  dblp_stream: conf/siggraph
+  aliases:
+  - ACM SIGGRAPH
+  - ACM SIGGRAPH Annual Conference
+  category: CG
+  category_name: Graphics
+  category_name_zh: 计算机图形学与多媒体
+  tier:
+    ccf: A
+    core: A*
+    thcpl: A
+  source: ccfddl/ccf-deadlines
+- id: siga
+  display_name: ACM SIGGRAPH ASIA
+  full_name: ACM SIGGRAPH Annual Conference in Asia
+  dblp_stream: conf/siggrapha
+  aliases:
+  - ACM SIGGRAPH ASIA
+  - ACM SIGGRAPH Annual Conference in Asia
+  category: CG
+  category_name: Graphics
+  category_name_zh: 计算机图形学与多媒体
+  tier:
+    ccf: N
+    core: N
+    thcpl: N
+  source: ccfddl/ccf-deadlines
+- id: slt
+  display_name: SLT
+  full_name: IEEE Spoken Language Technology (SLT) Workshop
+  dblp_stream: conf/slt
+  aliases:
+  - SLT
+  - IEEE Spoken Language Technology (SLT) Workshop
+  category: CG
+  category_name: Graphics
+  category_name_zh: 计算机图形学与多媒体
+  tier:
+    ccf: C
+    core: N
+    thcpl: N
+  source: ccfddl/ccf-deadlines
+- id: smi
+  display_name: SMI
+  full_name: Shape Modeling International
+  dblp_stream: conf/smi
+  aliases:
+  - SMI
+  - Shape Modeling International
+  category: CG
+  category_name: Graphics
+  category_name_zh: 计算机图形学与多媒体
+  tier:
+    ccf: C
+    core: N
+    thcpl: N
+  source: ccfddl/ccf-deadlines
+- id: spm
+  display_name: SPM
+  full_name: Symposium on Solid and Physical Modeling
+  dblp_stream: conf/sma
+  aliases:
+  - SPM
+  - Symposium on Solid and Physical Modeling
+  category: CG
+  category_name: Graphics
+  category_name_zh: 计算机图形学与多媒体
+  tier:
+    ccf: B
+    core: C
+    thcpl: B
+  source: ccfddl/ccf-deadlines
+- id: vinci
+  display_name: VINCI
+  full_name: International Symposium on Visual Information Communication and Interaction
+  dblp_stream: conf/vinci
+  aliases:
+  - VINCI
+  - International Symposium on Visual Information Communication and Interaction
+  category: CG
+  category_name: Graphics
+  category_name_zh: 计算机图形学与多媒体
+  tier:
+    ccf: N
+    core: C
+    thcpl: N
+  source: ccfddl/ccf-deadlines
+- id: vis
+  display_name: IEEE VIS
+  full_name: IEEE Visualization Conference
+  dblp_stream: conf/visualization
+  aliases:
+  - IEEE VIS
+  - IEEE Visualization Conference
+  category: CG
+  category_name: Graphics
+  category_name_zh: 计算机图形学与多媒体
+  tier:
+    ccf: A
+    core: A
+    thcpl: A
+  source: ccfddl/ccf-deadlines
+- id: vr
+  display_name: IEEE VR
+  full_name: IEEE Virtual Reality
+  dblp_stream: conf/vr
+  aliases:
+  - IEEE VR
+  - IEEE Virtual Reality
+  category: CG
+  category_name: Graphics
+  category_name_zh: 计算机图形学与多媒体
+  tier:
+    ccf: A
+    core: A*
+    thcpl: A
+  source: ccfddl/ccf-deadlines
+- id: cade
+  display_name: CADE
+  full_name: The Conference on Automated Deduction
+  dblp_stream: conf/cade
+  aliases:
+  - CADE
+  - The Conference on Automated Deduction
+  category: CT
+  category_name: Computing Theory
+  category_name_zh: 计算机科学理论
+  tier:
+    ccf: B
+    core: A
+    thcpl: B
+  source: ccfddl/ccf-deadlines
+- id: cav
+  display_name: CAV
+  full_name: International Conference on Computer-Aided Verification
+  dblp_stream: conf/cav
+  aliases:
+  - CAV
+  - International Conference on Computer-Aided Verification
+  category: CT
+  category_name: Computing Theory
+  category_name_zh: 计算机科学理论
+  tier:
+    ccf: A
+    core: A*
+    thcpl: A
+  source: ccfddl/ccf-deadlines
+- id: cocoon
+  display_name: COCOON
+  full_name: International Computing and Combinatorics Conference
+  dblp_stream: conf/cocoon
+  aliases:
+  - COCOON
+  - International Computing and Combinatorics Conference
+  category: CT
+  category_name: Computing Theory
+  category_name_zh: 计算机科学理论
+  tier:
+    ccf: B
+    core: N
+    thcpl: N
+  source: ccfddl/ccf-deadlines
+- id: concur
+  display_name: CONCUR
+  full_name: International Conference on Concurrency Theory
+  dblp_stream: conf/concur
+  aliases:
+  - CONCUR
+  - International Conference on Concurrency Theory
+  category: CT
+  category_name: Computing Theory
+  category_name_zh: 计算机科学理论
+  tier:
+    ccf: B
+    core: B
+    thcpl: B
+  source: ccfddl/ccf-deadlines
+- id: fmcad
+  display_name: FMCAD
+  full_name: Formal Methods in Computer-Aided Design
+  dblp_stream: conf/fmcad
+  aliases:
+  - FMCAD
+  - Formal Methods in Computer-Aided Design
+  category: CT
+  category_name: Computing Theory
+  category_name_zh: 计算机科学理论
+  tier:
+    ccf: B
+    core: B
+    thcpl: B
+  source: ccfddl/ccf-deadlines
+- id: focs
+  display_name: FOCS
+  full_name: IEEE Symposium on Foundations of Computer Science
+  dblp_stream: conf/focs
+  aliases:
+  - FOCS
+  - IEEE Symposium on Foundations of Computer Science
+  category: CT
+  category_name: Computing Theory
+  category_name_zh: 计算机科学理论
+  tier:
+    ccf: A
+    core: A*
+    thcpl: A
+  source: ccfddl/ccf-deadlines
+- id: hscc
+  display_name: HSCC
+  full_name: 'International Conference on Hybrid Systems: Computation and Control'
+  dblp_stream: conf/hybrid
+  aliases:
+  - HSCC
+  - 'International Conference on Hybrid Systems: Computation and Control'
+  category: CT
+  category_name: Computing Theory
+  category_name_zh: 计算机科学理论
+  tier:
+    ccf: B
+    core: N
+    thcpl: B
+  source: ccfddl/ccf-deadlines
+- id: icalp
+  display_name: ICALP
+  full_name: EATCS International Colloquium on Automata, Languages, and Programming
+  dblp_stream: conf/icalp
+  aliases:
+  - ICALP
+  - EATCS International Colloquium on Automata, Languages, and Programming
+  category: CT
+  category_name: Computing Theory
+  category_name_zh: 计算机科学理论
+  tier:
+    ccf: B
+    core: A*
+    thcpl: A
+  source: ccfddl/ccf-deadlines
+- id: ijcar
+  display_name: IJCAR
+  full_name: International Joint Conference on Automated Reasoning
+  dblp_stream: conf/ijcar
+  aliases:
+  - IJCAR
+  - International Joint Conference on Automated Reasoning
+  category: CT
+  category_name: Computing Theory
+  category_name_zh: 计算机科学理论
+  tier:
+    ccf: B
+    core: A
+    thcpl: B
+  source: ccfddl/ccf-deadlines
+- id: isaac
+  display_name: ISAAC
+  full_name: International Symposium on Algorithms and Computation
+  dblp_stream: conf/isaac
+  aliases:
+  - ISAAC
+  - International Symposium on Algorithms and Computation
+  category: CT
+  category_name: Computing Theory
+  category_name_zh: 计算机科学理论
+  tier:
+    ccf: C
+    core: B
+    thcpl: N
+  source: ccfddl/ccf-deadlines
+- id: isit
+  display_name: ISIT
+  full_name: IEEE International Symposium on Information Theory
+  dblp_stream: conf/isit
+  aliases:
+  - ISIT
+  - IEEE International Symposium on Information Theory
+  category: CT
+  category_name: Computing Theory
+  category_name_zh: 计算机科学理论
+  tier:
+    ccf: N
+    core: B
+    thcpl: B
+  source: ccfddl/ccf-deadlines
+- id: lics
+  display_name: LICS
+  full_name: IEEE Symposium on Logic in Computer Science
+  dblp_stream: conf/lics
+  aliases:
+  - LICS
+  - IEEE Symposium on Logic in Computer Science
+  category: CT
+  category_name: Computing Theory
+  category_name_zh: 计算机科学理论
+  tier:
+    ccf: A
+    core: A*
+    thcpl: A
+  source: ccfddl/ccf-deadlines
+- id: sat
+  display_name: SAT
+  full_name: International Conference on Theory and Applications of Satisfiability
+    Testing
+  dblp_stream: conf/sat
+  aliases:
+  - SAT
+  - International Conference on Theory and Applications of Satisfiability Testing
+  category: CT
+  category_name: Computing Theory
+  category_name_zh: 计算机科学理论
+  tier:
+    ccf: B
+    core: A
+    thcpl: B
+  source: ccfddl/ccf-deadlines
+- id: setta
+  display_name: SETTA
+  full_name: 'Symposium on Dependable Software Engineering: Theories, Tools and Applications'
+  dblp_stream: conf/setta
+  aliases:
+  - SETTA
+  - 'Symposium on Dependable Software Engineering: Theories, Tools and Applications'
+  category: CT
+  category_name: Computing Theory
+  category_name_zh: 计算机科学理论
+  tier:
+    ccf: C
+    core: N
+    thcpl: N
+  source: ccfddl/ccf-deadlines
+- id: socg
+  display_name: SOCG
+  full_name: International Symposium on Computational Geometry
+  dblp_stream: conf/compgeom
+  aliases:
+  - SOCG
+  - International Symposium on Computational Geometry
+  category: CT
+  category_name: Computing Theory
+  category_name_zh: 计算机科学理论
+  tier:
+    ccf: B
+    core: A
+    thcpl: B
+  source: ccfddl/ccf-deadlines
+- id: soda
+  display_name: SODA
+  full_name: ACM-SIAM Symposium on Discrete Algorithms
+  dblp_stream: conf/soda
+  aliases:
+  - SODA
+  - ACM-SIAM Symposium on Discrete Algorithms
+  category: CT
+  category_name: Computing Theory
+  category_name_zh: 计算机科学理论
+  tier:
+    ccf: A
+    core: A*
+    thcpl: A
+  source: ccfddl/ccf-deadlines
+- id: stoc
+  display_name: STOC
+  full_name: ACM Symposium on the Theory of Computing
+  dblp_stream: conf/stoc
+  aliases:
+  - STOC
+  - ACM Symposium on the Theory of Computing
+  category: CT
+  category_name: Computing Theory
+  category_name_zh: 计算机科学理论
+  tier:
+    ccf: A
+    core: A*
+    thcpl: A
+  source: ccfddl/ccf-deadlines
+- id: adma
+  display_name: ADMA
+  full_name: The International Conference on Advanced Data Mining and Applications
+  dblp_stream: conf/adma
+  aliases:
+  - ADMA
+  - The International Conference on Advanced Data Mining and Applications
+  category: DB
+  category_name: Database/Data Mining/Information Retrieval
+  category_name_zh: 数据库/数据挖掘/内容检索
+  tier:
+    ccf: C
+    core: C
+    thcpl: N
+  source: ccfddl/ccf-deadlines
+- id: apweb
+  display_name: APWeb-WAIM
+  full_name: APWeb-WAIM joint international conference on Web and Big Data
+  dblp_stream: conf/APWeb
+  aliases:
+  - APWeb-WAIM
+  - APWeb-WAIM joint international conference on Web and Big Data
+  category: DB
+  category_name: Database/Data Mining/Information Retrieval
+  category_name_zh: 数据库/数据挖掘/内容检索
+  tier:
+    ccf: C
+    core: C
+    thcpl: N
+  source: ccfddl/ccf-deadlines
+- id: cidr
+  display_name: CIDR
+  full_name: International Conference on Innovative Data Systems Research
+  dblp_stream: conf/cidr
+  aliases:
+  - CIDR
+  - International Conference on Innovative Data Systems Research
+  category: DB
+  category_name: Database/Data Mining/Information Retrieval
+  category_name_zh: 数据库/数据挖掘/内容检索
+  tier:
+    ccf: B
+    core: A
+    thcpl: N
+  source: ccfddl/ccf-deadlines
+- id: cikm
+  display_name: CIKM
+  full_name: ACM International Conference on Information and Knowledge Management
+  dblp_stream: conf/cikm
+  aliases:
+  - CIKM
+  - ACM International Conference on Information and Knowledge Management
+  category: DB
+  category_name: Database/Data Mining/Information Retrieval
+  category_name_zh: 数据库/数据挖掘/内容检索
+  tier:
+    ccf: B
+    core: A
+    thcpl: B
+  source: ccfddl/ccf-deadlines
+- id: dasfaa
+  display_name: DASFAA
+  full_name: Database Systems for Advanced Applications
+  dblp_stream: conf/dasfaa
+  aliases:
+  - DASFAA
+  - Database Systems for Advanced Applications
+  category: DB
+  category_name: Database/Data Mining/Information Retrieval
+  category_name_zh: 数据库/数据挖掘/内容检索
+  tier:
+    ccf: B
+    core: B
+    thcpl: B
+  source: ccfddl/ccf-deadlines
+- id: ecir
+  display_name: ECIR
+  full_name: European Conference on Information Retrieval
+  dblp_stream: conf/ecir
+  aliases:
+  - ECIR
+  - European Conference on Information Retrieval
+  category: DB
+  category_name: Database/Data Mining/Information Retrieval
+  category_name_zh: 数据库/数据挖掘/内容检索
+  tier:
+    ccf: C
+    core: A
+    thcpl: B
+  source: ccfddl/ccf-deadlines
+- id: edbt
+  display_name: EDBT
+  full_name: International Conference on Extending Database Technology
+  dblp_stream: conf/edbt
+  aliases:
+  - EDBT
+  - International Conference on Extending Database Technology
+  category: DB
+  category_name: Database/Data Mining/Information Retrieval
+  category_name_zh: 数据库/数据挖掘/内容检索
+  tier:
+    ccf: B
+    core: A
+    thcpl: B
+  source: ccfddl/ccf-deadlines
+- id: eusipco
+  display_name: EUSIPCO
+  full_name: European Signal Processing Conference
+  dblp_stream: conf/eusipcolyon
+  aliases:
+  - EUSIPCO
+  - European Signal Processing Conference
+  category: SE
+  category_name: Software Engineering/Operating System/Programming Language Design
+  category_name_zh: 软件工程/系统软件/程序设计语言
+  tier:
+    ccf: N
+    core: N
+    thcpl: N
+  source: ccfddl/ccf-deadlines
+- id: icde
+  display_name: ICDE
+  full_name: IEEE International Conference on Data Engineering
+  dblp_stream: conf/icde
+  aliases:
+  - ICDE
+  - IEEE International Conference on Data Engineering
+  category: DB
+  category_name: Database/Data Mining/Information Retrieval
+  category_name_zh: 数据库/数据挖掘/内容检索
+  tier:
+    ccf: A
+    core: A*
+    thcpl: A
+  source: ccfddl/ccf-deadlines
+- id: icdm
+  display_name: ICDM
+  full_name: IEEE International Conference on Data Mining
+  dblp_stream: conf/icdm
+  aliases:
+  - ICDM
+  - IEEE International Conference on Data Mining
+  category: DB
+  category_name: Database/Data Mining/Information Retrieval
+  category_name_zh: 数据库/数据挖掘/内容检索
+  tier:
+    ccf: B
+    core: A*
+    thcpl: B
+  source: ccfddl/ccf-deadlines
+- id: icdt
+  display_name: ICDT
+  full_name: International Conference on Database Theory
+  dblp_stream: conf/icdt
+  aliases:
+  - ICDT
+  - International Conference on Database Theory
+  category: DB
+  category_name: Database/Data Mining/Information Retrieval
+  category_name_zh: 数据库/数据挖掘/内容检索
+  tier:
+    ccf: B
+    core: A
+    thcpl: B
+  source: ccfddl/ccf-deadlines
+- id: iswc
+  display_name: ISWC
+  full_name: International Semantic Web Conference
+  dblp_stream: conf/semweb
+  aliases:
+  - ISWC
+  - International Semantic Web Conference
+  category: DB
+  category_name: Database/Data Mining/Information Retrieval
+  category_name_zh: 数据库/数据挖掘/内容检索
+  tier:
+    ccf: B
+    core: A
+    thcpl: B
+  source: ccfddl/ccf-deadlines
+- id: pakdd
+  display_name: PAKDD
+  full_name: Pacific-Asia Conference on Knowledge Discovery and Data Mining
+  dblp_stream: conf/pakdd
+  aliases:
+  - PAKDD
+  - Pacific-Asia Conference on Knowledge Discovery and Data Mining
+  category: DB
+  category_name: Database/Data Mining/Information Retrieval
+  category_name_zh: 数据库/数据挖掘/内容检索
+  tier:
+    ccf: C
+    core: B
+    thcpl: N
+  source: ccfddl/ccf-deadlines
+- id: pkdd
+  display_name: ECML-PKDD
+  full_name: European Conference on Machine Learning and 25th Principles and Practice
+    of Knowledge Discovery in Databases
+  dblp_stream: conf/pkdd
+  aliases:
+  - ECML-PKDD
+  - European Conference on Machine Learning and 25th Principles and Practice of Knowledge
+    Discovery in Databases
+  category: DB
+  category_name: Database/Data Mining/Information Retrieval
+  category_name_zh: 数据库/数据挖掘/内容检索
+  tier:
+    ccf: B
+    core: A
+    thcpl: N
+  source: ccfddl/ccf-deadlines
+- id: recsys
+  display_name: RecSys
+  full_name: ACM Conference on Recommender Systems
+  dblp_stream: conf/recsys
+  aliases:
+  - RecSys
+  - ACM Conference on Recommender Systems
+  category: DB
+  category_name: Database/Data Mining/Information Retrieval
+  category_name_zh: 数据库/数据挖掘/内容检索
+  tier:
+    ccf: B
+    core: A
+    thcpl: B
+  source: ccfddl/ccf-deadlines
+- id: sdm
+  display_name: SDM
+  full_name: SIAM International Conference on Data Mining
+  dblp_stream: conf/sdm
+  aliases:
+  - SDM
+  - SIAM International Conference on Data Mining
+  category: DB
+  category_name: Database/Data Mining/Information Retrieval
+  category_name_zh: 数据库/数据挖掘/内容检索
+  tier:
+    ccf: B
+    core: A
+    thcpl: B
+  source: ccfddl/ccf-deadlines
+- id: sigir
+  display_name: SIGIR
+  full_name: International Conference on Research on Development in Information Retrieval
+  dblp_stream: conf/sigir
+  aliases:
+  - SIGIR
+  - International Conference on Research on Development in Information Retrieval
+  category: DB
+  category_name: Database/Data Mining/Information Retrieval
+  category_name_zh: 数据库/数据挖掘/内容检索
+  tier:
+    ccf: A
+    core: A*
+    thcpl: A
+  source: ccfddl/ccf-deadlines
+- id: sigkdd
+  display_name: SIGKDD
+  full_name: ACM Knowledge Discovery and Data Mining
+  dblp_stream: conf/kdd
+  aliases:
+  - SIGKDD
+  - ACM Knowledge Discovery and Data Mining
+  category: DB
+  category_name: Database/Data Mining/Information Retrieval
+  category_name_zh: 数据库/数据挖掘/内容检索
+  tier:
+    ccf: A
+    core: A*
+    thcpl: A
+  source: ccfddl/ccf-deadlines
+- id: sigmod
+  display_name: SIGMOD
+  full_name: ACM Conference on Management of Data
+  dblp_stream: conf/sigmod
+  aliases:
+  - SIGMOD
+  - ACM Conference on Management of Data
+  category: DB
+  category_name: Database/Data Mining/Information Retrieval
+  category_name_zh: 数据库/数据挖掘/内容检索
+  tier:
+    ccf: A
+    core: A*
+    thcpl: A
+  source: ccfddl/ccf-deadlines
+- id: vldb
+  display_name: VLDB
+  full_name: International Conference on Very Large Data Bases
+  dblp_stream: conf/vldb
+  aliases:
+  - VLDB
+  - International Conference on Very Large Data Bases
+  category: DB
+  category_name: Database/Data Mining/Information Retrieval
+  category_name_zh: 数据库/数据挖掘/内容检索
+  tier:
+    ccf: A
+    core: A*
+    thcpl: A
+  source: ccfddl/ccf-deadlines
+- id: wisa
+  display_name: WISA
+  full_name: Web Information Systems and Applications
+  dblp_stream: conf/wisa
+  aliases:
+  - WISA
+  - Web Information Systems and Applications
+  category: DB
+  category_name: Database/Data Mining/Information Retrieval
+  category_name_zh: 数据库/数据挖掘/内容检索
+  tier:
+    ccf: C
+    core: N
+    thcpl: N
+  source: ccfddl/ccf-deadlines
+- id: wsdm
+  display_name: WSDM
+  full_name: International Conference on Web Search and Data Mining
+  dblp_stream: conf/wsdm
+  aliases:
+  - WSDM
+  - International Conference on Web Search and Data Mining
+  category: DB
+  category_name: Database/Data Mining/Information Retrieval
+  category_name_zh: 数据库/数据挖掘/内容检索
+  tier:
+    ccf: B
+    core: A
+    thcpl: A
+  source: ccfddl/ccf-deadlines
+- id: glsvlsi
+  display_name: GLSVLSI
+  full_name: Great Lakes Symposium on VLSI
+  dblp_stream: conf/glvlsi
+  aliases:
+  - GLSVLSI
+  - Great Lakes Symposium on VLSI
+  category: DS
+  category_name: Computer Architecture/Parallel Programming/Storage Technology
+  category_name_zh: 计算机体系结构/并行与分布计算/存储系统
+  tier:
+    ccf: C
+    core: N
+    thcpl: N
+  source: ccfddl/ccf-deadlines
+- id: appt
+  display_name: APPT
+  full_name: International Symposium on Advanced Parallel Programming Technologies
+  dblp_stream: conf/appt
+  aliases:
+  - APPT
+  - International Symposium on Advanced Parallel Programming Technologies
+  category: DS
+  category_name: Computer Architecture/Parallel Programming/Storage Technology
+  category_name_zh: 计算机体系结构/并行与分布计算/存储系统
+  tier:
+    ccf: C
+    core: N
+    thcpl: N
+  source: ccfddl/ccf-deadlines
+- id: apsys
+  display_name: APSys
+  full_name: ACM SIGOPS Asia-Pacific Workshop on Systems
+  dblp_stream: conf/apsys
+  aliases:
+  - APSys
+  - ACM SIGOPS Asia-Pacific Workshop on Systems
+  category: DS
+  category_name: Computer Architecture/Parallel Programming/Storage Technology
+  category_name_zh: 计算机体系结构/并行与分布计算/存储系统
+  tier:
+    ccf: N
+    core: N
+    thcpl: N
+  source: ccfddl/ccf-deadlines
+- id: asap
+  display_name: ASAP
+  full_name: IEEE International Conference on Application-Specific Systems, Architectures,
+    and Processors
+  dblp_stream: conf/asap
+  aliases:
+  - ASAP
+  - IEEE International Conference on Application-Specific Systems, Architectures,
+    and Processors
+  category: DS
+  category_name: Computer Architecture/Parallel Programming/Storage Technology
+  category_name_zh: 计算机体系结构/并行与分布计算/存储系统
+  tier:
+    ccf: C
+    core: N
+    thcpl: N
+  source: ccfddl/ccf-deadlines
+- id: aspdac
+  display_name: ASP-DAC
+  full_name: Asia and South Pacific Design Automation Conference
+  dblp_stream: conf/aspdac
+  aliases:
+  - ASP-DAC
+  - Asia and South Pacific Design Automation Conference
+  category: DS
+  category_name: Computer Architecture/Parallel Programming/Storage Technology
+  category_name_zh: 计算机体系结构/并行与分布计算/存储系统
+  tier:
+    ccf: C
+    core: C
+    thcpl: B
+  source: ccfddl/ccf-deadlines
+- id: asplos
+  display_name: ASPLOS
+  full_name: International Conference on Architectural Support for Programming Languages
+    and Operating Systems
+  dblp_stream: conf/asplos
+  aliases:
+  - ASPLOS
+  - International Conference on Architectural Support for Programming Languages and
+    Operating Systems
+  category: DS
+  category_name: Computer Architecture/Parallel Programming/Storage Technology
+  category_name_zh: 计算机体系结构/并行与分布计算/存储系统
+  tier:
+    ccf: A
+    core: A*
+    thcpl: A
+  source: ccfddl/ccf-deadlines
+- id: atc
+  display_name: SIGOPS ATC
+  full_name: ACM SIGOPS Annual Technical Conference
+  dblp_stream: conf/usenix
+  aliases:
+  - SIGOPS ATC
+  - ACM SIGOPS Annual Technical Conference
+  category: DS
+  category_name: Computer Architecture/Parallel Programming/Storage Technology
+  category_name_zh: 计算机体系结构/并行与分布计算/存储系统
+  tier:
+    ccf: A
+    core: A
+    thcpl: A
+  source: ccfddl/ccf-deadlines
+- id: ats
+  display_name: ATS
+  full_name: IEEE Asian Test Symposium
+  dblp_stream: conf/ats
+  aliases:
+  - ATS
+  - IEEE Asian Test Symposium
+  category: DS
+  category_name: Computer Architecture/Parallel Programming/Storage Technology
+  category_name_zh: 计算机体系结构/并行与分布计算/存储系统
+  tier:
+    ccf: C
+    core: N
+    thcpl: N
+  source: ccfddl/ccf-deadlines
+- id: ccgrid
+  display_name: CCGRID
+  full_name: IEEE International Symposium on Cluster, Cloud and Internet Computing
+  dblp_stream: conf/ccgrid
+  aliases:
+  - CCGRID
+  - IEEE International Symposium on Cluster, Cloud and Internet Computing
+  category: DS
+  category_name: Computer Architecture/Parallel Programming/Storage Technology
+  category_name_zh: 计算机体系结构/并行与分布计算/存储系统
+  tier:
+    ccf: C
+    core: B
+    thcpl: B
+  source: ccfddl/ccf-deadlines
+- id: cf
+  display_name: CF
+  full_name: ACM International Conference on Computing Frontiers
+  dblp_stream: conf/cf
+  aliases:
+  - CF
+  - ACM International Conference on Computing Frontiers
+  category: DS
+  category_name: Computer Architecture/Parallel Programming/Storage Technology
+  category_name_zh: 计算机体系结构/并行与分布计算/存储系统
+  tier:
+    ccf: C
+    core: N
+    thcpl: N
+  source: ccfddl/ccf-deadlines
+- id: cgo
+  display_name: IEEE/ACM CGO
+  full_name: The International Symposium on Code Generation and Optimization
+  dblp_stream: conf/cgo
+  aliases:
+  - IEEE/ACM CGO
+  - The International Symposium on Code Generation and Optimization
+  category: DS
+  category_name: Computer Architecture/Parallel Programming/Storage Technology
+  category_name_zh: 计算机体系结构/并行与分布计算/存储系统
+  tier:
+    ccf: B
+    core: A
+    thcpl: B
+  source: ccfddl/ccf-deadlines
+- id: cluster
+  display_name: CLUSTER
+  full_name: IEEE International Conference on Cluster Computing
+  dblp_stream: conf/cluster
+  aliases:
+  - CLUSTER
+  - IEEE International Conference on Cluster Computing
+  category: DS
+  category_name: Computer Architecture/Parallel Programming/Storage Technology
+  category_name_zh: 计算机体系结构/并行与分布计算/存储系统
+  tier:
+    ccf: B
+    core: C
+    thcpl: B
+  source: ccfddl/ccf-deadlines
+- id: dac
+  display_name: DAC
+  full_name: Design Automation Conference
+  dblp_stream: conf/dac
+  aliases:
+  - DAC
+  - Design Automation Conference
+  category: DS
+  category_name: Computer Architecture/Parallel Programming/Storage Technology
+  category_name_zh: 计算机体系结构/并行与分布计算/存储系统
+  tier:
+    ccf: A
+    core: A
+    thcpl: A
+  source: ccfddl/ccf-deadlines
+- id: date
+  display_name: DATE
+  full_name: Design, Automation & Test in Europe
+  dblp_stream: conf/date
+  aliases:
+  - DATE
+  - Design, Automation & Test in Europe
+  category: DS
+  category_name: Computer Architecture/Parallel Programming/Storage Technology
+  category_name_zh: 计算机体系结构/并行与分布计算/存储系统
+  tier:
+    ccf: B
+    core: B
+    thcpl: B
+  source: ccfddl/ccf-deadlines
+- id: dcc
+  display_name: DCC
+  full_name: Data Compression Conference
+  dblp_stream: conf/dcc
+  aliases:
+  - DCC
+  - Data Compression Conference
+  category: DS
+  category_name: Computer Architecture/Parallel Programming/Storage Technology
+  category_name_zh: 计算机体系结构/并行与分布计算/存储系统
+  tier:
+    ccf: B
+    core: A*
+    thcpl: B
+  source: ccfddl/ccf-deadlines
+- id: ets
+  display_name: ETS
+  full_name: IEEE European Test Symposium
+  dblp_stream: conf/ets
+  aliases:
+  - ETS
+  - IEEE European Test Symposium
+  category: DS
+  category_name: Computer Architecture/Parallel Programming/Storage Technology
+  category_name_zh: 计算机体系结构/并行与分布计算/存储系统
+  tier:
+    ccf: C
+    core: B
+    thcpl: N
+  source: ccfddl/ccf-deadlines
+- id: europar
+  display_name: Euro-Par
+  full_name: European Conference on Parallel and Distributed Computing
+  dblp_stream: conf/europar
+  aliases:
+  - Euro-Par
+  - European Conference on Parallel and Distributed Computing
+  category: DS
+  category_name: Computer Architecture/Parallel Programming/Storage Technology
+  category_name_zh: 计算机体系结构/并行与分布计算/存储系统
+  tier:
+    ccf: B
+    core: B
+    thcpl: N
+  source: ccfddl/ccf-deadlines
+- id: eurosys
+  display_name: EuroSys
+  full_name: European Conference on Computer Systems
+  dblp_stream: conf/eurosys
+  aliases:
+  - EuroSys
+  - European Conference on Computer Systems
+  category: DS
+  category_name: Computer Architecture/Parallel Programming/Storage Technology
+  category_name_zh: 计算机体系结构/并行与分布计算/存储系统
+  tier:
+    ccf: A
+    core: A
+    thcpl: A
+  source: ccfddl/ccf-deadlines
+- id: fast
+  display_name: FAST
+  full_name: USENIX Conference on File and Storage Technologies
+  dblp_stream: conf/fast
+  aliases:
+  - FAST
+  - USENIX Conference on File and Storage Technologies
+  category: DS
+  category_name: Computer Architecture/Parallel Programming/Storage Technology
+  category_name_zh: 计算机体系结构/并行与分布计算/存储系统
+  tier:
+    ccf: A
+    core: A
+    thcpl: A
+  source: ccfddl/ccf-deadlines
+- id: fccm
+  display_name: FCCM
+  full_name: IEEE Symposium on Field-Programmable Custom Computing Machines
+  dblp_stream: conf/fccm
+  aliases:
+  - FCCM
+  - IEEE Symposium on Field-Programmable Custom Computing Machines
+  category: DS
+  category_name: Computer Architecture/Parallel Programming/Storage Technology
+  category_name_zh: 计算机体系结构/并行与分布计算/存储系统
+  tier:
+    ccf: C
+    core: B
+    thcpl: N
+  source: ccfddl/ccf-deadlines
+- id: fpga
+  display_name: FPGA
+  full_name: ACM/SIGDA International Symposium on Field-Programmable Gate Arrays
+  dblp_stream: conf/fpga
+  aliases:
+  - FPGA
+  - ACM/SIGDA International Symposium on Field-Programmable Gate Arrays
+  category: DS
+  category_name: Computer Architecture/Parallel Programming/Storage Technology
+  category_name_zh: 计算机体系结构/并行与分布计算/存储系统
+  tier:
+    ccf: B
+    core: N
+    thcpl: A
+  source: ccfddl/ccf-deadlines
+- id: fpt
+  display_name: FPT
+  full_name: International Conference on Field Programmable Technology
+  dblp_stream: conf/fpt
+  aliases:
+  - FPT
+  - International Conference on Field Programmable Technology
+  category: DS
+  category_name: Computer Architecture/Parallel Programming/Storage Technology
+  category_name_zh: 计算机体系结构/并行与分布计算/存储系统
+  tier:
+    ccf: C
+    core: N
+    thcpl: N
+  source: ccfddl/ccf-deadlines
+- id: hotchips
+  display_name: Hot Chips
+  full_name: 'Hot Chips: A Symposium on High Performance Chips'
+  dblp_stream: conf/hotchips
+  aliases:
+  - Hot Chips
+  - 'Hot Chips: A Symposium on High Performance Chips'
+  category: DS
+  category_name: Computer Architecture/Parallel Programming/Storage Technology
+  category_name_zh: 计算机体系结构/并行与分布计算/存储系统
+  tier:
+    ccf: B
+    core: C
+    thcpl: B
+  source: ccfddl/ccf-deadlines
+- id: hotstorage
+  display_name: HotStorage
+  full_name: ACM Workshop on Hot Topics in Storage and File Systems
+  dblp_stream: conf/hotstorage
+  aliases:
+  - HotStorage
+  - ACM Workshop on Hot Topics in Storage and File Systems
+  category: DS
+  category_name: Computer Architecture/Parallel Programming/Storage Technology
+  category_name_zh: 计算机体系结构/并行与分布计算/存储系统
+  tier:
+    ccf: C
+    core: N
+    thcpl: N
+  source: ccfddl/ccf-deadlines
+- id: hpca
+  display_name: HPCA
+  full_name: IEEE International Symposium on High-Performance Computer Architecture
+  dblp_stream: conf/hpca
+  aliases:
+  - HPCA
+  - IEEE International Symposium on High-Performance Computer Architecture
+  category: DS
+  category_name: Computer Architecture/Parallel Programming/Storage Technology
+  category_name_zh: 计算机体系结构/并行与分布计算/存储系统
+  tier:
+    ccf: A
+    core: A*
+    thcpl: A
+  source: ccfddl/ccf-deadlines
+- id: hpcc
+  display_name: HPCC
+  full_name: IEEE International Conference on High Performance Computing and Communications
+  dblp_stream: conf/hpcc
+  aliases:
+  - HPCC
+  - IEEE International Conference on High Performance Computing and Communications
+  category: DS
+  category_name: Computer Architecture/Parallel Programming/Storage Technology
+  category_name_zh: 计算机体系结构/并行与分布计算/存储系统
+  tier:
+    ccf: C
+    core: C
+    thcpl: N
+  source: ccfddl/ccf-deadlines
+- id: hpdc
+  display_name: HPDC
+  full_name: ACM Symposium on High-Performance Parallel and Distributed Computing
+  dblp_stream: conf/hpdc
+  aliases:
+  - HPDC
+  - ACM Symposium on High-Performance Parallel and Distributed Computing
+  category: DS
+  category_name: Computer Architecture/Parallel Programming/Storage Technology
+  category_name_zh: 计算机体系结构/并行与分布计算/存储系统
+  tier:
+    ccf: A
+    core: A
+    thcpl: B
+  source: ccfddl/ccf-deadlines
+- id: ica3pp
+  display_name: ICA3PP
+  full_name: International Conference on Algorithms and Architectures for Parallel
+    Processing
+  dblp_stream: conf/ica3pp
+  aliases:
+  - ICA3PP
+  - International Conference on Algorithms and Architectures for Parallel Processing
+  category: DS
+  category_name: Computer Architecture/Parallel Programming/Storage Technology
+  category_name_zh: 计算机体系结构/并行与分布计算/存储系统
+  tier:
+    ccf: C
+    core: C
+    thcpl: N
+  source: ccfddl/ccf-deadlines
+- id: iccad
+  display_name: ICCAD
+  full_name: IEEE/ACM International Conference on Computer-Aided Design
+  dblp_stream: conf/iccad
+  aliases:
+  - ICCAD
+  - IEEE/ACM International Conference on Computer-Aided Design
+  category: DS
+  category_name: Computer Architecture/Parallel Programming/Storage Technology
+  category_name_zh: 计算机体系结构/并行与分布计算/存储系统
+  tier:
+    ccf: B
+    core: A
+    thcpl: B
+  source: ccfddl/ccf-deadlines
+- id: iccd
+  display_name: ICCD
+  full_name: International Conference on Computer Design
+  dblp_stream: conf/iccd
+  aliases:
+  - ICCD
+  - International Conference on Computer Design
+  category: DS
+  category_name: Computer Architecture/Parallel Programming/Storage Technology
+  category_name_zh: 计算机体系结构/并行与分布计算/存储系统
+  tier:
+    ccf: B
+    core: N
+    thcpl: B
+  source: ccfddl/ccf-deadlines
+- id: icdcs
+  display_name: ICDCS
+  full_name: IEEE International Conference on Distributed Computing Systems
+  dblp_stream: conf/icdcs
+  aliases:
+  - ICDCS
+  - IEEE International Conference on Distributed Computing Systems
+  category: DS
+  category_name: Computer Architecture/Parallel Programming/Storage Technology
+  category_name_zh: 计算机体系结构/并行与分布计算/存储系统
+  tier:
+    ccf: B
+    core: A
+    thcpl: B
+  source: ccfddl/ccf-deadlines
+- id: icpads
+  display_name: ICPADS
+  full_name: IEEE International Conference on Parallel and Distributed Systems
+  dblp_stream: conf/icpads
+  aliases:
+  - ICPADS
+  - IEEE International Conference on Parallel and Distributed Systems
+  category: DS
+  category_name: Computer Architecture/Parallel Programming/Storage Technology
+  category_name_zh: 计算机体系结构/并行与分布计算/存储系统
+  tier:
+    ccf: C
+    core: N
+    thcpl: N
+  source: ccfddl/ccf-deadlines
+- id: icpp
+  display_name: ICPP
+  full_name: International Conference on Parallel Processing
+  dblp_stream: conf/icpp
+  aliases:
+  - ICPP
+  - International Conference on Parallel Processing
+  category: DS
+  category_name: Computer Architecture/Parallel Programming/Storage Technology
+  category_name_zh: 计算机体系结构/并行与分布计算/存储系统
+  tier:
+    ccf: B
+    core: B
+    thcpl: B
+  source: ccfddl/ccf-deadlines
+- id: ics
+  display_name: ICS
+  full_name: ACM International Conference on Supercomputing
+  dblp_stream: conf/ics
+  aliases:
+  - ICS
+  - ACM International Conference on Supercomputing
+  category: DS
+  category_name: Computer Architecture/Parallel Programming/Storage Technology
+  category_name_zh: 计算机体系结构/并行与分布计算/存储系统
+  tier:
+    ccf: B
+    core: A
+    thcpl: B
+  source: ccfddl/ccf-deadlines
+- id: iiswc
+  display_name: IISWC
+  full_name: IEEE International Symposium on Workload Characterization
+  dblp_stream: conf/iiswc
+  aliases:
+  - IISWC
+  - IEEE International Symposium on Workload Characterization
+  category: DS
+  category_name: Computer Architecture/Parallel Programming/Storage Technology
+  category_name_zh: 计算机体系结构/并行与分布计算/存储系统
+  tier:
+    ccf: N
+    core: N
+    thcpl: N
+  source: ccfddl/ccf-deadlines
+- id: ipdps
+  display_name: IPDPS
+  full_name: IEEE International Parallel and Distributed Processing Symposium
+  dblp_stream: conf/ipps
+  aliases:
+  - IPDPS
+  - IEEE International Parallel and Distributed Processing Symposium
+  category: DS
+  category_name: Computer Architecture/Parallel Programming/Storage Technology
+  category_name_zh: 计算机体系结构/并行与分布计算/存储系统
+  tier:
+    ccf: B
+    core: A
+    thcpl: B
+  source: ccfddl/ccf-deadlines
+- id: isca
+  display_name: ISCA
+  full_name: International Symposium on Computer Architecture
+  dblp_stream: conf/isca
+  aliases:
+  - ISCA
+  - International Symposium on Computer Architecture
+  category: DS
+  category_name: Computer Architecture/Parallel Programming/Storage Technology
+  category_name_zh: 计算机体系结构/并行与分布计算/存储系统
+  tier:
+    ccf: A
+    core: A*
+    thcpl: A
+  source: ccfddl/ccf-deadlines
+- id: iscas
+  display_name: ISCAS
+  full_name: IEEE International Symposium on Circuits and Systems
+  dblp_stream: conf/iscas
+  aliases:
+  - ISCAS
+  - IEEE International Symposium on Circuits and Systems
+  category: DS
+  category_name: Computer Architecture/Parallel Programming/Storage Technology
+  category_name_zh: 计算机体系结构/并行与分布计算/存储系统
+  tier:
+    ccf: B
+    core: N
+    thcpl: B
+  source: ccfddl/ccf-deadlines
+- id: ispa
+  display_name: ISPA
+  full_name: IEEE International Symposium on Parallel and Distributed Processing with
+    Applications
+  dblp_stream: conf/ispa
+  aliases:
+  - ISPA
+  - IEEE International Symposium on Parallel and Distributed Processing with Applications
+  category: DS
+  category_name: Computer Architecture/Parallel Programming/Storage Technology
+  category_name_zh: 计算机体系结构/并行与分布计算/存储系统
+  tier:
+    ccf: C
+    core: C
+    thcpl: N
+  source: ccfddl/ccf-deadlines
+- id: itc-asia
+  display_name: ITC-Asia
+  full_name: IEEE International Test Conference in Asia
+  dblp_stream: conf/itc-asia
+  aliases:
+  - ITC-Asia
+  - IEEE International Test Conference in Asia
+  category: DS
+  category_name: Computer Architecture/Parallel Programming/Storage Technology
+  category_name_zh: 计算机体系结构/并行与分布计算/存储系统
+  tier:
+    ccf: C
+    core: N
+    thcpl: N
+  source: ccfddl/ccf-deadlines
+- id: itc
+  display_name: ITC
+  full_name: International Test Conference
+  dblp_stream: conf/itc
+  aliases:
+  - ITC
+  - International Test Conference
+  category: DS
+  category_name: Computer Architecture/Parallel Programming/Storage Technology
+  category_name_zh: 计算机体系结构/并行与分布计算/存储系统
+  tier:
+    ccf: B
+    core: A
+    thcpl: N
+  source: ccfddl/ccf-deadlines
+- id: jcc
+  display_name: JCC
+  full_name: International Conference on JointCloud Computing
+  dblp_stream: conf/N
+  aliases:
+  - JCC
+  - International Conference on JointCloud Computing
+  category: DS
+  category_name: Computer Architecture/Parallel Programming/Storage Technology
+  category_name_zh: 计算机体系结构/并行与分布计算/存储系统
+  tier:
+    ccf: C
+    core: N
+    thcpl: N
+  source: ccfddl/ccf-deadlines
+- id: micro
+  display_name: MICRO
+  full_name: IEEE/ACM International Symposium on Microarchitecture
+  dblp_stream: conf/micro
+  aliases:
+  - MICRO
+  - IEEE/ACM International Symposium on Microarchitecture
+  category: DS
+  category_name: Computer Architecture/Parallel Programming/Storage Technology
+  category_name_zh: 计算机体系结构/并行与分布计算/存储系统
+  tier:
+    ccf: A
+    core: A
+    thcpl: A
+  source: ccfddl/ccf-deadlines
+- id: msst
+  display_name: MSST
+  full_name: International Conference on Massive Storage Systems and Technology
+  dblp_stream: conf/mss
+  aliases:
+  - MSST
+  - International Conference on Massive Storage Systems and Technology
+  category: DS
+  category_name: Computer Architecture/Parallel Programming/Storage Technology
+  category_name_zh: 计算机体系结构/并行与分布计算/存储系统
+  tier:
+    ccf: B
+    core: N
+    thcpl: B
+  source: ccfddl/ccf-deadlines
+- id: netys
+  display_name: NETYS
+  full_name: The International Conference on Networked Systems
+  dblp_stream: conf/netys
+  aliases:
+  - NETYS
+  - The International Conference on Networked Systems
+  category: DS
+  category_name: Computer Architecture/Parallel Programming/Storage Technology
+  category_name_zh: 计算机体系结构/并行与分布计算/存储系统
+  tier:
+    ccf: N
+    core: N
+    thcpl: N
+  source: ccfddl/ccf-deadlines
+- id: pact
+  display_name: PACT
+  full_name: International Conference on Parallel Architectures and Compilation Techniques
+  dblp_stream: conf/pact
+  aliases:
+  - PACT
+  - International Conference on Parallel Architectures and Compilation Techniques
+  category: DS
+  category_name: Computer Architecture/Parallel Programming/Storage Technology
+  category_name_zh: 计算机体系结构/并行与分布计算/存储系统
+  tier:
+    ccf: B
+    core: B
+    thcpl: B
+  source: ccfddl/ccf-deadlines
+- id: pdcat
+  display_name: PDCAT
+  full_name: International Conference on Parallel and Distributed Computing, Applications
+    and Technologies
+  dblp_stream: conf/pdcat
+  aliases:
+  - PDCAT
+  - International Conference on Parallel and Distributed Computing, Applications and
+    Technologies
+  category: DS
+  category_name: Computer Architecture/Parallel Programming/Storage Technology
+  category_name_zh: 计算机体系结构/并行与分布计算/存储系统
+  tier:
+    ccf: N
+    core: C
+    thcpl: N
+  source: ccfddl/ccf-deadlines
+- id: podc
+  display_name: PODC
+  full_name: ACM Symposium on Principles of Distributed Computing
+  dblp_stream: conf/podc
+  aliases:
+  - PODC
+  - ACM Symposium on Principles of Distributed Computing
+  category: DS
+  category_name: Computer Architecture/Parallel Programming/Storage Technology
+  category_name_zh: 计算机体系结构/并行与分布计算/存储系统
+  tier:
+    ccf: B
+    core: A*
+    thcpl: B
+  source: ccfddl/ccf-deadlines
+- id: ppopp
+  display_name: PPoPP
+  full_name: ACM SIGPLAN Symposium on Principles & Practice of Parallel Programming
+  dblp_stream: conf/ppopp
+  aliases:
+  - PPoPP
+  - ACM SIGPLAN Symposium on Principles & Practice of Parallel Programming
+  category: DS
+  category_name: Computer Architecture/Parallel Programming/Storage Technology
+  category_name_zh: 计算机体系结构/并行与分布计算/存储系统
+  tier:
+    ccf: A
+    core: B
+    thcpl: A
+  source: ccfddl/ccf-deadlines
+- id: rtas
+  display_name: RTAS
+  full_name: IEEE Real-Time and Embedded Technology and Applications Symposium
+  dblp_stream: conf/rtas
+  aliases:
+  - RTAS
+  - IEEE Real-Time and Embedded Technology and Applications Symposium
+  category: DS
+  category_name: Computer Architecture/Parallel Programming/Storage Technology
+  category_name_zh: 计算机体系结构/并行与分布计算/存储系统
+  tier:
+    ccf: B
+    core: A
+    thcpl: B
+  source: ccfddl/ccf-deadlines
+- id: sc
+  display_name: SC
+  full_name: International Conference for High Performance Computing, Networking,
+    Storage, and Analysis
+  dblp_stream: conf/sc
+  aliases:
+  - SC
+  - International Conference for High Performance Computing, Networking, Storage,
+    and Analysis
+  category: DS
+  category_name: Computer Architecture/Parallel Programming/Storage Technology
+  category_name_zh: 计算机体系结构/并行与分布计算/存储系统
+  tier:
+    ccf: A
+    core: A
+    thcpl: A
+  source: ccfddl/ccf-deadlines
+- id: sec
+  display_name: SEC
+  full_name: ACM/IEEE Symposium on Edge Computing
+  dblp_stream: conf/ieeesec
+  aliases:
+  - SEC
+  - ACM/IEEE Symposium on Edge Computing
+  category: DS
+  category_name: Computer Architecture/Parallel Programming/Storage Technology
+  category_name_zh: 计算机体系结构/并行与分布计算/存储系统
+  tier:
+    ccf: C
+    core: N
+    thcpl: N
+  source: ccfddl/ccf-deadlines
+- id: sigmetrics
+  display_name: SIGMETRICS
+  full_name: ACM Special Interest Group on Measurement and Evaluation
+  dblp_stream: conf/sigmetrics
+  aliases:
+  - SIGMETRICS
+  - ACM Special Interest Group on Measurement and Evaluation
+  category: DS
+  category_name: Computer Architecture/Parallel Programming/Storage Technology
+  category_name_zh: 计算机体系结构/并行与分布计算/存储系统
+  tier:
+    ccf: B
+    core: A*
+    thcpl: A
+  source: ccfddl/ccf-deadlines
+- id: socc
+  display_name: SoCC
+  full_name: ACM Symposium on Cloud Computing
+  dblp_stream: conf/cloud
+  aliases:
+  - SoCC
+  - ACM Symposium on Cloud Computing
+  category: DS
+  category_name: Computer Architecture/Parallel Programming/Storage Technology
+  category_name_zh: 计算机体系结构/并行与分布计算/存储系统
+  tier:
+    ccf: B
+    core: N
+    thcpl: B
+  source: ccfddl/ccf-deadlines
+- id: spaa
+  display_name: SPAA
+  full_name: ACM Symposium on Parallelism in Algorithms and Architectures
+  dblp_stream: conf/spaa
+  aliases:
+  - SPAA
+  - ACM Symposium on Parallelism in Algorithms and Architectures
+  category: DS
+  category_name: Computer Architecture/Parallel Programming/Storage Technology
+  category_name_zh: 计算机体系结构/并行与分布计算/存储系统
+  tier:
+    ccf: B
+    core: B
+    thcpl: B
+  source: ccfddl/ccf-deadlines
+- id: systor
+  display_name: SYSTOR
+  full_name: The ACM International Systems and Storage Conference
+  dblp_stream: conf/systor
+  aliases:
+  - SYSTOR
+  - The ACM International Systems and Storage Conference
+  category: DS
+  category_name: Computer Architecture/Parallel Programming/Storage Technology
+  category_name_zh: 计算机体系结构/并行与分布计算/存储系统
+  tier:
+    ccf: C
+    core: N
+    thcpl: N
+  source: ccfddl/ccf-deadlines
+- id: vee
+  display_name: VEE
+  full_name: Virtual Execution Environments
+  dblp_stream: conf/vee
+  aliases:
+  - VEE
+  - Virtual Execution Environments
+  category: DS
+  category_name: Computer Architecture/Parallel Programming/Storage Technology
+  category_name_zh: 计算机体系结构/并行与分布计算/存储系统
+  tier:
+    ccf: B
+    core: B
+    thcpl: B
+  source: ccfddl/ccf-deadlines
+- id: assets
+  display_name: ASSETS
+  full_name: ACM SIGACCESS Conference on Computers and Accessibility
+  dblp_stream: conf/assets
+  aliases:
+  - ASSETS
+  - ACM SIGACCESS Conference on Computers and Accessibility
+  category: HI
+  category_name: Computer-Human Interaction
+  category_name_zh: 人机交互与普适计算
+  tier:
+    ccf: C
+    core: A
+    thcpl: B
+  source: ccfddl/ccf-deadlines
+- id: chi
+  display_name: CHI
+  full_name: ACM Conference on Human Factors in Computing Systems
+  dblp_stream: conf/chi
+  aliases:
+  - CHI
+  - ACM Conference on Human Factors in Computing Systems
+  category: HI
+  category_name: Computer-Human Interaction
+  category_name_zh: 人机交互与普适计算
+  tier:
+    ccf: A
+    core: A*
+    thcpl: A
+  source: ccfddl/ccf-deadlines
+- id: collaboratecom
+  display_name: CollaborateCom
+  full_name: 'International Conference on Collaborative Computing: Networking, Applications
+    and Worksharing'
+  dblp_stream: conf/colcom
+  aliases:
+  - CollaborateCom
+  - 'International Conference on Collaborative Computing: Networking, Applications
+    and Worksharing'
+  category: HI
+  category_name: Computer-Human Interaction
+  category_name_zh: 人机交互与普适计算
+  tier:
+    ccf: C
+    core: C
+    thcpl: N
+  source: ccfddl/ccf-deadlines
+- id: cscw
+  display_name: CSCW
+  full_name: ACM Conference on Computer Supported Cooperative Work and Social Computing
+  dblp_stream: conf/cscw
+  aliases:
+  - CSCW
+  - ACM Conference on Computer Supported Cooperative Work and Social Computing
+  category: HI
+  category_name: Computer-Human Interaction
+  category_name_zh: 人机交互与普适计算
+  tier:
+    ccf: A
+    core: A
+    thcpl: A
+  source: ccfddl/ccf-deadlines
+- id: cscwd
+  display_name: CSCWD
+  full_name: International Conference on Computer Supported Cooperative Work in Design
+  dblp_stream: conf/cscwd
+  aliases:
+  - CSCWD
+  - International Conference on Computer Supported Cooperative Work in Design
+  category: HI
+  category_name: Computer-Human Interaction
+  category_name_zh: 人机交互与普适计算
+  tier:
+    ccf: C
+    core: C
+    thcpl: N
+  source: ccfddl/ccf-deadlines
+- id: dis
+  display_name: DIS
+  full_name: ACM Conference on Designing Interactive Systems
+  dblp_stream: conf/ACMdis
+  aliases:
+  - DIS
+  - ACM Conference on Designing Interactive Systems
+  category: HI
+  category_name: Computer-Human Interaction
+  category_name_zh: 人机交互与普适计算
+  tier:
+    ccf: C
+    core: A
+    thcpl: B
+  source: ccfddl/ccf-deadlines
+- id: ecscw
+  display_name: ECSCW
+  full_name: European Conference on Computer Supported Cooperative Work
+  dblp_stream: conf/ecscw
+  aliases:
+  - ECSCW
+  - European Conference on Computer Supported Cooperative Work
+  category: HI
+  category_name: Computer-Human Interaction
+  category_name_zh: 人机交互与普适计算
+  tier:
+    ccf: B
+    core: B
+    thcpl: N
+  source: ccfddl/ccf-deadlines
+- id: group
+  display_name: GROUP
+  full_name: ACM International Conference on Supporting Group Work
+  dblp_stream: conf/group
+  aliases:
+  - GROUP
+  - ACM International Conference on Supporting Group Work
+  category: HI
+  category_name: Computer-Human Interaction
+  category_name_zh: 人机交互与普适计算
+  tier:
+    ccf: B
+    core: B
+    thcpl: N
+  source: ccfddl/ccf-deadlines
+- id: icmi
+  display_name: ICMI
+  full_name: ACM International Conference on Multimodal Interaction
+  dblp_stream: conf/icmi
+  aliases:
+  - ICMI
+  - ACM International Conference on Multimodal Interaction
+  category: HI
+  category_name: Computer-Human Interaction
+  category_name_zh: 人机交互与普适计算
+  tier:
+    ccf: C
+    core: B
+    thcpl: B
+  source: ccfddl/ccf-deadlines
+- id: icwsm
+  display_name: ICWSM
+  full_name: The International AAAI Conference on Web and Social Media
+  dblp_stream: conf/icwsm
+  aliases:
+  - ICWSM
+  - The International AAAI Conference on Web and Social Media
+  category: HI
+  category_name: Computer-Human Interaction
+  category_name_zh: 人机交互与普适计算
+  tier:
+    ccf: B
+    core: A
+    thcpl: N
+  source: ccfddl/ccf-deadlines
+- id: iss
+  display_name: ISS
+  full_name: ACM International Conference on Interactive Surfaces and Spaces
+  dblp_stream: conf/tabletop
+  aliases:
+  - ISS
+  - ACM International Conference on Interactive Surfaces and Spaces
+  category: HI
+  category_name: Computer-Human Interaction
+  category_name_zh: 人机交互与普适计算
+  tier:
+    ccf: B
+    core: N
+    thcpl: N
+  source: ccfddl/ccf-deadlines
+- id: iui
+  display_name: IUI
+  full_name: ACM Conference on Intelligent User Interfaces
+  dblp_stream: conf/iui
+  aliases:
+  - IUI
+  - ACM Conference on Intelligent User Interfaces
+  category: HI
+  category_name: Computer-Human Interaction
+  category_name_zh: 人机交互与普适计算
+  tier:
+    ccf: B
+    core: A
+    thcpl: B
+  source: ccfddl/ccf-deadlines
+- id: percom
+  display_name: PerCom
+  full_name: IEEE International Conference on Pervasive Computing and Communications
+  dblp_stream: conf/percom
+  aliases:
+  - PerCom
+  - IEEE International Conference on Pervasive Computing and Communications
+  category: HI
+  category_name: Computer-Human Interaction
+  category_name_zh: 人机交互与普适计算
+  tier:
+    ccf: B
+    core: A*
+    thcpl: B
+  source: ccfddl/ccf-deadlines
+- id: ubicomp
+  display_name: UbiComp/ISWC
+  full_name: ACM International Joint Conference on Pervasive and Ubiquitous Computing
+  dblp_stream: conf/huc
+  aliases:
+  - UbiComp/ISWC
+  - ACM International Joint Conference on Pervasive and Ubiquitous Computing
+  category: HI
+  category_name: Computer-Human Interaction
+  category_name_zh: 人机交互与普适计算
+  tier:
+    ccf: A
+    core: N
+    thcpl: A
+  source: ccfddl/ccf-deadlines
+- id: uic
+  display_name: UIC
+  full_name: IEEE International Conference on Ubiquitous Intelligence and Computing
+  dblp_stream: conf/uic
+  aliases:
+  - UIC
+  - IEEE International Conference on Ubiquitous Intelligence and Computing
+  category: HI
+  category_name: Computer-Human Interaction
+  category_name_zh: 人机交互与普适计算
+  tier:
+    ccf: C
+    core: B
+    thcpl: N
+  source: ccfddl/ccf-deadlines
+- id: uist
+  display_name: UIST
+  full_name: ACM Symposium on User Interface Software and Technology
+  dblp_stream: conf/uist
+  aliases:
+  - UIST
+  - ACM Symposium on User Interface Software and Technology
+  category: HI
+  category_name: Computer-Human Interaction
+  category_name_zh: 人机交互与普适计算
+  tier:
+    ccf: A
+    core: A*
+    thcpl: A
+  source: ccfddl/ccf-deadlines
+- id: aft
+  display_name: AFT
+  full_name: Advances in Financial Technologies
+  dblp_stream: conf/aft
+  aliases:
+  - AFT
+  - Advances in Financial Technologies
+  category: MX
+  category_name: Interdiscipline/Mixture/Emerging
+  category_name_zh: 交叉/综合/新兴
+  tier:
+    ccf: C
+    core: B
+    thcpl: N
+  source: ccfddl/ccf-deadlines
+- id: apbc
+  display_name: APBC
+  full_name: Asia Pacific Bioinformatics Conference
+  dblp_stream: conf/apbc
+  aliases:
+  - APBC
+  - Asia Pacific Bioinformatics Conference
+  category: MX
+  category_name: Interdiscipline/Mixture/Emerging
+  category_name_zh: 交叉/综合/新兴
+  tier:
+    ccf: C
+    core: B
+    thcpl: N
+  source: ccfddl/ccf-deadlines
+- id: bibm
+  display_name: BIBM
+  full_name: IEEE International Conference on Bioinformatics and Biomedicine
+  dblp_stream: conf/bibm
+  aliases:
+  - BIBM
+  - IEEE International Conference on Bioinformatics and Biomedicine
+  category: MX
+  category_name: Interdiscipline/Mixture/Emerging
+  category_name_zh: 交叉/综合/新兴
+  tier:
+    ccf: B
+    core: N
+    thcpl: N
+  source: ccfddl/ccf-deadlines
+- id: bigdata
+  display_name: BigData
+  full_name: IEEE International Conference on Big Data
+  dblp_stream: conf/bigdataconf
+  aliases:
+  - BigData
+  - IEEE International Conference on Big Data
+  category: MX
+  category_name: Interdiscipline/Mixture/Emerging
+  category_name_zh: 交叉/综合/新兴
+  tier:
+    ccf: C
+    core: B
+    thcpl: N
+  source: ccfddl/ccf-deadlines
+- id: bis
+  display_name: BIS
+  full_name: International Conference on Business Information Systems
+  dblp_stream: conf/bis
+  aliases:
+  - BIS
+  - International Conference on Business Information Systems
+  category: MX
+  category_name: Interdiscipline/Mixture/Emerging
+  category_name_zh: 交叉/综合/新兴
+  tier:
+    ccf: N
+    core: N
+    thcpl: N
+  source: ccfddl/ccf-deadlines
+- id: cloud
+  display_name: Cloud
+  full_name: IEEE International Conference on Cloud Computing
+  dblp_stream: conf/IEEEcloud
+  aliases:
+  - Cloud
+  - IEEE International Conference on Cloud Computing
+  category: MX
+  category_name: Interdiscipline/Mixture/Emerging
+  category_name_zh: 交叉/综合/新兴
+  tier:
+    ccf: C
+    core: B
+    thcpl: B
+  source: ccfddl/ccf-deadlines
+- id: cogsci
+  display_name: CogSci
+  full_name: Annual Meeting of the Cognitive Science Society
+  dblp_stream: conf/cogsci
+  aliases:
+  - CogSci
+  - Annual Meeting of the Cognitive Science Society
+  category: MX
+  category_name: Interdiscipline/Mixture/Emerging
+  category_name_zh: 交叉/综合/新兴
+  tier:
+    ccf: B
+    core: B
+    thcpl: N
+  source: ccfddl/ccf-deadlines
+- id: emsoft
+  display_name: EMSOFT
+  full_name: International Conference on Embedded Software
+  dblp_stream: conf/emsoft
+  aliases:
+  - EMSOFT
+  - International Conference on Embedded Software
+  category: MX
+  category_name: Interdiscipline/Mixture/Emerging
+  category_name_zh: 交叉/综合/新兴
+  tier:
+    ccf: B
+    core: N
+    thcpl: B
+  source: ccfddl/ccf-deadlines
+- id: icic
+  display_name: ICIC
+  full_name: International Conference on Intelligent Computing
+  dblp_stream: conf/icic
+  aliases:
+  - ICIC
+  - International Conference on Intelligent Computing
+  category: MX
+  category_name: Interdiscipline/Mixture/Emerging
+  category_name_zh: 交叉/综合/新兴
+  tier:
+    ccf: C
+    core: N
+    thcpl: N
+  source: ccfddl/ccf-deadlines
+- id: isbra
+  display_name: ISBRA
+  full_name: International Symposium on Bioinformatics Research and Applications
+  dblp_stream: conf/isbra
+  aliases:
+  - ISBRA
+  - International Symposium on Bioinformatics Research and Applications
+  category: MX
+  category_name: Interdiscipline/Mixture/Emerging
+  category_name_zh: 交叉/综合/新兴
+  tier:
+    ccf: C
+    core: N
+    thcpl: N
+  source: ccfddl/ccf-deadlines
+- id: miccai
+  display_name: MICCAI
+  full_name: International Conference on Medical Image Computing and Computer Assisted
+    Intervention
+  dblp_stream: conf/miccai
+  aliases:
+  - MICCAI
+  - International Conference on Medical Image Computing and Computer Assisted Intervention
+  category: MX
+  category_name: Interdiscipline/Mixture/Emerging
+  category_name_zh: 交叉/综合/新兴
+  tier:
+    ccf: B
+    core: A
+    thcpl: B
+  source: ccfddl/ccf-deadlines
+- id: mlsys
+  display_name: MLSys
+  full_name: Conference on Machine Learning and Systems
+  dblp_stream: conf/mlsys
+  aliases:
+  - MLSys
+  - Conference on Machine Learning and Systems
+  category: MX
+  category_name: Interdiscipline/Mixture/Emerging
+  category_name_zh: 交叉/综合/新兴
+  tier:
+    ccf: N
+    core: N
+    thcpl: N
+  source: ccfddl/ccf-deadlines
+- id: recomb
+  display_name: RECOMB
+  full_name: International Conference on Research inComputational Molecular Biology
+  dblp_stream: conf/recomb
+  aliases:
+  - RECOMB
+  - International Conference on Research inComputational Molecular Biology
+  category: MX
+  category_name: Interdiscipline/Mixture/Emerging
+  category_name_zh: 交叉/综合/新兴
+  tier:
+    ccf: B
+    core: B
+    thcpl: A
+  source: ccfddl/ccf-deadlines
+- id: rtss
+  display_name: RTSS
+  full_name: The IEEE Real-Time Systems Symposium
+  dblp_stream: conf/rtss
+  aliases:
+  - RTSS
+  - The IEEE Real-Time Systems Symposium
+  category: MX
+  category_name: Interdiscipline/Mixture/Emerging
+  category_name_zh: 交叉/综合/新兴
+  tier:
+    ccf: A
+    core: A*
+    thcpl: B
+  source: ccfddl/ccf-deadlines
+- id: sigspatial
+  display_name: SIGSPATIAL
+  full_name: ACM SIGSPATIAL International Conference on Advances in Geographic Information
+    Systems
+  dblp_stream: conf/sigspatial
+  aliases:
+  - SIGSPATIAL
+  - ACM SIGSPATIAL International Conference on Advances in Geographic Information
+    Systems
+  category: MX
+  category_name: Interdiscipline/Mixture/Emerging
+  category_name_zh: 交叉/综合/新兴
+  tier:
+    ccf: C
+    core: A
+    thcpl: N
+  source: ccfddl/ccf-deadlines
+- id: smc
+  display_name: SMC
+  full_name: IEEE International Conference on Systems, Man, and Cybernetics
+  dblp_stream: conf/smc
+  aliases:
+  - SMC
+  - IEEE International Conference on Systems, Man, and Cybernetics
+  category: MX
+  category_name: Interdiscipline/Mixture/Emerging
+  category_name_zh: 交叉/综合/新兴
+  tier:
+    ccf: C
+    core: B
+    thcpl: N
+  source: ccfddl/ccf-deadlines
+- id: wine
+  display_name: WINE
+  full_name: Conference on Web and Internet Economics
+  dblp_stream: conf/wine
+  aliases:
+  - WINE
+  - Conference on Web and Internet Economics
+  category: MX
+  category_name: Interdiscipline/Mixture/Emerging
+  category_name_zh: 交叉/综合/新兴
+  tier:
+    ccf: B
+    core: N
+    thcpl: N
+  source: ccfddl/ccf-deadlines
+- id: www
+  display_name: WWW
+  full_name: International World Wide Web Conferences
+  dblp_stream: conf/www
+  aliases:
+  - WWW
+  - International World Wide Web Conferences
+  category: MX
+  category_name: Interdiscipline/Mixture/Emerging
+  category_name_zh: 交叉/综合/新兴
+  tier:
+    ccf: A
+    core: A*
+    thcpl: A
+  source: ccfddl/ccf-deadlines
+- id: apnet
+  display_name: APNet
+  full_name: Asia-Pacific Workshop on Networking
+  dblp_stream: conf/apnet
+  aliases:
+  - APNet
+  - Asia-Pacific Workshop on Networking
+  category: NW
+  category_name: Network System
+  category_name_zh: 计算机网络
+  tier:
+    ccf: C
+    core: N
+    thcpl: N
+  source: ccfddl/ccf-deadlines
+- id: conext
+  display_name: CoNEXT
+  full_name: International Conference on Emerging Networking Experiments and Technologies
+  dblp_stream: conf/conext
+  aliases:
+  - CoNEXT
+  - International Conference on Emerging Networking Experiments and Technologies
+  category: NW
+  category_name: Network System
+  category_name_zh: 计算机网络
+  tier:
+    ccf: B
+    core: A
+    thcpl: A
+  source: ccfddl/ccf-deadlines
+- id: forte
+  display_name: FORTE
+  full_name: International Conference on Formal Techniques for (Networked and) Distributed
+    Systems
+  dblp_stream: conf/forte
+  aliases:
+  - FORTE
+  - International Conference on Formal Techniques for (Networked and) Distributed
+    Systems
+  category: NW
+  category_name: Network System
+  category_name_zh: 计算机网络
+  tier:
+    ccf: C
+    core: C
+    thcpl: N
+  source: ccfddl/ccf-deadlines
+- id: globecom
+  display_name: GLOBECOM
+  full_name: IEEE Global Communications Conference
+  dblp_stream: conf/globecom
+  aliases:
+  - GLOBECOM
+  - IEEE Global Communications Conference
+  category: NW
+  category_name: Network System
+  category_name_zh: 计算机网络
+  tier:
+    ccf: C
+    core: B
+    thcpl: B
+  source: ccfddl/ccf-deadlines
+- id: hotnets
+  display_name: HotNets
+  full_name: ACM Workshop on Hot Topics in Networks
+  dblp_stream: conf/hotnets
+  aliases:
+  - HotNets
+  - ACM Workshop on Hot Topics in Networks
+  category: NW
+  category_name: Network System
+  category_name_zh: 计算机网络
+  tier:
+    ccf: C
+    core: N
+    thcpl: B
+  source: ccfddl/ccf-deadlines
+- id: icc
+  display_name: ICC
+  full_name: IEEE International Conference on Communications
+  dblp_stream: conf/icc
+  aliases:
+  - ICC
+  - IEEE International Conference on Communications
+  category: NW
+  category_name: Network System
+  category_name_zh: 计算机网络
+  tier:
+    ccf: C
+    core: N
+    thcpl: B
+  source: ccfddl/ccf-deadlines
+- id: icccn
+  display_name: ICCCN
+  full_name: IEEE International Conference on Computer Communications and Networks
+  dblp_stream: conf/icccn
+  aliases:
+  - ICCCN
+  - IEEE International Conference on Computer Communications and Networks
+  category: NW
+  category_name: Network System
+  category_name_zh: 计算机网络
+  tier:
+    ccf: C
+    core: B
+    thcpl: N
+  source: ccfddl/ccf-deadlines
+- id: icnp
+  display_name: ICNP
+  full_name: IEEE International Conference on Network Protocols
+  dblp_stream: conf/icnp
+  aliases:
+  - ICNP
+  - IEEE International Conference on Network Protocols
+  category: NW
+  category_name: Network System
+  category_name_zh: 计算机网络
+  tier:
+    ccf: B
+    core: B
+    thcpl: A
+  source: ccfddl/ccf-deadlines
+- id: imc
+  display_name: IMC
+  full_name: ACM Internet Measurement Conference
+  dblp_stream: conf/imc
+  aliases:
+  - IMC
+  - ACM Internet Measurement Conference
+  category: NW
+  category_name: Network System
+  category_name_zh: 计算机网络
+  tier:
+    ccf: B
+    core: A
+    thcpl: A
+  source: ccfddl/ccf-deadlines
+- id: infocom
+  display_name: INFOCOM
+  full_name: IEEE International Conference on Computer Communications
+  dblp_stream: conf/infocom
+  aliases:
+  - INFOCOM
+  - IEEE International Conference on Computer Communications
+  category: NW
+  category_name: Network System
+  category_name_zh: 计算机网络
+  tier:
+    ccf: A
+    core: A*
+    thcpl: A
+  source: ccfddl/ccf-deadlines
+- id: ipsn
+  display_name: IPSN
+  full_name: ACM/IEEE International Conference on Information Processing in Sensor
+    Networks
+  dblp_stream: conf/ipsn
+  aliases:
+  - IPSN
+  - ACM/IEEE International Conference on Information Processing in Sensor Networks
+  category: NW
+  category_name: Network System
+  category_name_zh: 计算机网络
+  tier:
+    ccf: B
+    core: A*
+    thcpl: A
+  source: ccfddl/ccf-deadlines
+- id: iscc
+  display_name: ISCC
+  full_name: IEEE Symposium on Computers and Communications
+  dblp_stream: conf/iscc
+  aliases:
+  - ISCC
+  - IEEE Symposium on Computers and Communications
+  category: NW
+  category_name: Network System
+  category_name_zh: 计算机网络
+  tier:
+    ccf: C
+    core: C
+    thcpl: N
+  source: ccfddl/ccf-deadlines
+- id: iwqos
+  display_name: IWQoS
+  full_name: IEEE/ACM International Symposium on Quality of Service
+  dblp_stream: conf/iwqos
+  aliases:
+  - IWQoS
+  - IEEE/ACM International Symposium on Quality of Service
+  category: NW
+  category_name: Network System
+  category_name_zh: 计算机网络
+  tier:
+    ccf: B
+    core: B
+    thcpl: B
+  source: ccfddl/ccf-deadlines
+- id: lcn
+  display_name: LCN
+  full_name: IEEE Conference on Local Computer Networks
+  dblp_stream: conf/lcn
+  aliases:
+  - LCN
+  - IEEE Conference on Local Computer Networks
+  category: NW
+  category_name: Network System
+  category_name_zh: 计算机网络
+  tier:
+    ccf: C
+    core: B
+    thcpl: N
+  source: ccfddl/ccf-deadlines
+- id: mmsys
+  display_name: MMSys
+  full_name: ACM International Conference on Multimedia Systems
+  dblp_stream: conf/mmsys
+  aliases:
+  - MMSys
+  - ACM International Conference on Multimedia Systems
+  category: NW
+  category_name: Network System
+  category_name_zh: 计算机网络
+  tier:
+    ccf: N
+    core: A
+    thcpl: N
+  source: ccfddl/ccf-deadlines
+- id: mobicom
+  display_name: MobiCom
+  full_name: ACM Annual International Conference On Mobile Computing And Networking
+  dblp_stream: conf/mobicom
+  aliases:
+  - MobiCom
+  - ACM Annual International Conference On Mobile Computing And Networking
+  category: NW
+  category_name: Network System
+  category_name_zh: 计算机网络
+  tier:
+    ccf: A
+    core: A*
+    thcpl: A
+  source: ccfddl/ccf-deadlines
+- id: mobihoc
+  display_name: MobiHoc
+  full_name: International Symposium on Mobile Ad Hoc Networking and Computing
+  dblp_stream: conf/mobihoc
+  aliases:
+  - MobiHoc
+  - International Symposium on Mobile Ad Hoc Networking and Computing
+  category: NW
+  category_name: Network System
+  category_name_zh: 计算机网络
+  tier:
+    ccf: B
+    core: A
+    thcpl: B
+  source: ccfddl/ccf-deadlines
+- id: mobisys
+  display_name: MobiSys
+  full_name: ACM International Conference on Mobile Systems, Applications, and Services
+  dblp_stream: conf/mobisys
+  aliases:
+  - MobiSys
+  - ACM International Conference on Mobile Systems, Applications, and Services
+  category: NW
+  category_name: Network System
+  category_name_zh: 计算机网络
+  tier:
+    ccf: B
+    core: A
+    thcpl: A
+  source: ccfddl/ccf-deadlines
+- id: msn
+  display_name: MSN
+  full_name: International Conference on Mobility, Sensing and Networking
+  dblp_stream: conf/msn
+  aliases:
+  - MSN
+  - International Conference on Mobility, Sensing and Networking
+  category: NW
+  category_name: Network System
+  category_name_zh: 计算机网络
+  tier:
+    ccf: C
+    core: N
+    thcpl: N
+  source: ccfddl/ccf-deadlines
+- id: mswim
+  display_name: MSWiM
+  full_name: International Conference on Modeling, Analysis and Simulation of Wireless
+    and Mobile Systems
+  dblp_stream: conf/mswim
+  aliases:
+  - MSWiM
+  - International Conference on Modeling, Analysis and Simulation of Wireless and
+    Mobile Systems
+  category: NW
+  category_name: Network System
+  category_name_zh: 计算机网络
+  tier:
+    ccf: C
+    core: A
+    thcpl: N
+  source: ccfddl/ccf-deadlines
+- id: networking
+  display_name: Networking
+  full_name: IFIP International Conference on Networking
+  dblp_stream: conf/networking
+  aliases:
+  - Networking
+  - IFIP International Conference on Networking
+  category: NW
+  category_name: Network System
+  category_name_zh: 计算机网络
+  tier:
+    ccf: C
+    core: B
+    thcpl: B
+  source: ccfddl/ccf-deadlines
+- id: nossdav
+  display_name: NOSSDAV
+  full_name: International Workshop on Network and Operating System Support for Digital
+    Audio and Video
+  dblp_stream: conf/nossdav
+  aliases:
+  - NOSSDAV
+  - International Workshop on Network and Operating System Support for Digital Audio
+    and Video
+  category: NW
+  category_name: Network System
+  category_name_zh: 计算机网络
+  tier:
+    ccf: B
+    core: B
+    thcpl: B
+  source: ccfddl/ccf-deadlines
+- id: nsdi
+  display_name: NSDI
+  full_name: USENIX Symposium on Networked Systems Design and Implementation
+  dblp_stream: conf/nsdi
+  aliases:
+  - NSDI
+  - USENIX Symposium on Networked Systems Design and Implementation
+  category: NW
+  category_name: Network System
+  category_name_zh: 计算机网络
+  tier:
+    ccf: A
+    core: N
+    thcpl: A
+  source: ccfddl/ccf-deadlines
+- id: secon
+  display_name: SECON
+  full_name: IEEE International Conference on Sensing, Communication, and Networking
+  dblp_stream: conf/secon
+  aliases:
+  - SECON
+  - IEEE International Conference on Sensing, Communication, and Networking
+  category: NW
+  category_name: Network System
+  category_name_zh: 计算机网络
+  tier:
+    ccf: B
+    core: B
+    thcpl: B
+  source: ccfddl/ccf-deadlines
+- id: sensys
+  display_name: SenSys
+  full_name: ACM Conference on Embedded Networked Sensor Systems
+  dblp_stream: conf/sensys
+  aliases:
+  - SenSys
+  - ACM Conference on Embedded Networked Sensor Systems
+  category: NW
+  category_name: Network System
+  category_name_zh: 计算机网络
+  tier:
+    ccf: B
+    core: A*
+    thcpl: A
+  source: ccfddl/ccf-deadlines
+- id: sigcomm
+  display_name: SIGCOMM
+  full_name: ACM International Conference on Applications, Technologies, Architectures,
+    and Protocols for Computer Communication
+  dblp_stream: conf/sigcomm
+  aliases:
+  - SIGCOMM
+  - ACM International Conference on Applications, Technologies, Architectures, and
+    Protocols for Computer Communication
+  category: NW
+  category_name: Network System
+  category_name_zh: 计算机网络
+  tier:
+    ccf: A
+    core: A*
+    thcpl: A
+  source: ccfddl/ccf-deadlines
+- id: wasa
+  display_name: WASA
+  full_name: International Conference on Wireless Algorithms, Systems, and Applications
+  dblp_stream: conf/wasa
+  aliases:
+  - WASA
+  - International Conference on Wireless Algorithms, Systems, and Applications
+  category: NW
+  category_name: Network System
+  category_name_zh: 计算机网络
+  tier:
+    ccf: C
+    core: N
+    thcpl: N
+  source: ccfddl/ccf-deadlines
+- id: wcnc
+  display_name: WCNC
+  full_name: Wireless Communications and Networking Conference
+  dblp_stream: conf/wcnc
+  aliases:
+  - WCNC
+  - Wireless Communications and Networking Conference
+  category: NW
+  category_name: Network System
+  category_name_zh: 计算机网络
+  tier:
+    ccf: C
+    core: N
+    thcpl: N
+  source: ccfddl/ccf-deadlines
+- id: wicon
+  display_name: WiCON
+  full_name: International Wireless Internet Conference
+  dblp_stream: conf/wicon
+  aliases:
+  - WiCON
+  - International Wireless Internet Conference
+  category: NW
+  category_name: Network System
+  category_name_zh: 计算机网络
+  tier:
+    ccf: N
+    core: N
+    thcpl: N
+  source: ccfddl/ccf-deadlines
+- id: wowmom
+  display_name: WoWMoM
+  full_name: IEEE International Symposium on a World of Wireless, Mobile and Multimedia
+    Networks
+  dblp_stream: conf/wowmom
+  aliases:
+  - WoWMoM
+  - IEEE International Symposium on a World of Wireless, Mobile and Multimedia Networks
+  category: NW
+  category_name: Network System
+  category_name_zh: 计算机网络
+  tier:
+    ccf: C
+    core: B
+    thcpl: B
+  source: ccfddl/ccf-deadlines
+- id: acisp
+  display_name: ACISP
+  full_name: Australasia Conference on Information Security and Privacy
+  dblp_stream: conf/acisp
+  aliases:
+  - ACISP
+  - Australasia Conference on Information Security and Privacy
+  category: SC
+  category_name: Network and System Security
+  category_name_zh: 网络与信息安全
+  tier:
+    ccf: C
+    core: N
+    thcpl: N
+  source: ccfddl/ccf-deadlines
+- id: acns
+  display_name: ACNS
+  full_name: Applied Cryptography and Network Security
+  dblp_stream: conf/acns
+  aliases:
+  - ACNS
+  - Applied Cryptography and Network Security
+  category: SC
+  category_name: Network and System Security
+  category_name_zh: 网络与信息安全
+  tier:
+    ccf: C
+    core: B
+    thcpl: B
+  source: ccfddl/ccf-deadlines
+- id: acsac
+  display_name: ACSAC
+  full_name: Annual Computer Security Applications Conference
+  dblp_stream: conf/acsac
+  aliases:
+  - ACSAC
+  - Annual Computer Security Applications Conference
+  category: SC
+  category_name: Network and System Security
+  category_name_zh: 网络与信息安全
+  tier:
+    ccf: B
+    core: A
+    thcpl: B
+  source: ccfddl/ccf-deadlines
+- id: asiaccs
+  display_name: AsiaCCS
+  full_name: Asia Conference on Computer and Communications Security
+  dblp_stream: conf/ccs
+  aliases:
+  - AsiaCCS
+  - Asia Conference on Computer and Communications Security
+  category: SC
+  category_name: Network and System Security
+  category_name_zh: 网络与信息安全
+  tier:
+    ccf: C
+    core: A
+    thcpl: B
+  source: ccfddl/ccf-deadlines
+- id: asiacrypt
+  display_name: ASIACRYPT
+  full_name: International Conference on the Theory and Application of Cryptology
+    and Information Security
+  dblp_stream: conf/asiacrypt
+  aliases:
+  - ASIACRYPT
+  - International Conference on the Theory and Application of Cryptology and Information
+    Security
+  category: SC
+  category_name: Network and System Security
+  category_name_zh: 网络与信息安全
+  tier:
+    ccf: B
+    core: A
+    thcpl: A
+  source: ccfddl/ccf-deadlines
+- id: blocksys
+  display_name: BlockSys
+  full_name: International Conference on Blockchain, Artificial Intelligence, and
+    Trustworthy Systems
+  dblp_stream: conf/blocksys
+  aliases:
+  - BlockSys
+  - International Conference on Blockchain, Artificial Intelligence, and Trustworthy
+    Systems
+  category: SC
+  category_name: Network and System Security
+  category_name_zh: 网络与信息安全
+  tier:
+    ccf: C
+    core: N
+    thcpl: N
+  source: ccfddl/ccf-deadlines
+- id: ccs
+  display_name: CCS
+  full_name: ACM Conference on Computer and Communications Security
+  dblp_stream: conf/ccs
+  aliases:
+  - CCS
+  - ACM Conference on Computer and Communications Security
+  category: SC
+  category_name: Network and System Security
+  category_name_zh: 网络与信息安全
+  tier:
+    ccf: A
+    core: A*
+    thcpl: A
+  source: ccfddl/ccf-deadlines
+- id: ches
+  display_name: CHES
+  full_name: International Conference on Cryptographic Hardware and Embedded Systems
+  dblp_stream: conf/ches
+  aliases:
+  - CHES
+  - International Conference on Cryptographic Hardware and Embedded Systems
+  category: SC
+  category_name: Network and System Security
+  category_name_zh: 网络与信息安全
+  tier:
+    ccf: B
+    core: A
+    thcpl: A
+  source: ccfddl/ccf-deadlines
+- id: codaspy
+  display_name: CODASPY
+  full_name: ACM Conference on Data and Application Security and Privacy
+  dblp_stream: conf/codaspy
+  aliases:
+  - CODASPY
+  - ACM Conference on Data and Application Security and Privacy
+  category: SC
+  category_name: Network and System Security
+  category_name_zh: 网络与信息安全
+  tier:
+    ccf: C
+    core: N
+    thcpl: N
+  source: ccfddl/ccf-deadlines
+- id: crypto
+  display_name: CRYPTO
+  full_name: International Cryptology Conference
+  dblp_stream: conf/crypto
+  aliases:
+  - CRYPTO
+  - International Cryptology Conference
+  category: SC
+  category_name: Network and System Security
+  category_name_zh: 网络与信息安全
+  tier:
+    ccf: A
+    core: A*
+    thcpl: A
+  source: ccfddl/ccf-deadlines
+- id: cscloud
+  display_name: CSCloud
+  full_name: IEEE International Conference on Cyber Security and Cloud Computing
+  dblp_stream: conf/cscloud
+  aliases:
+  - CSCloud
+  - IEEE International Conference on Cyber Security and Cloud Computing
+  category: SC
+  category_name: Network and System Security
+  category_name_zh: 网络与信息安全
+  tier:
+    ccf: C
+    core: N
+    thcpl: N
+  source: ccfddl/ccf-deadlines
+- id: csfw
+  display_name: CSFW
+  full_name: IEEE Computer Security Foundations Symposium
+  dblp_stream: conf/csfw
+  aliases:
+  - CSFW
+  - IEEE Computer Security Foundations Symposium
+  category: SC
+  category_name: Network and System Security
+  category_name_zh: 网络与信息安全
+  tier:
+    ccf: B
+    core: A
+    thcpl: B
+  source: ccfddl/ccf-deadlines
+- id: ct-rsa
+  display_name: CT-RSA
+  full_name: Cryptographer's Track at RSA Conference
+  dblp_stream: conf/ctrsa
+  aliases:
+  - CT-RSA
+  - Cryptographer's Track at RSA Conference
+  category: SC
+  category_name: Network and System Security
+  category_name_zh: 网络与信息安全
+  tier:
+    ccf: C
+    core: B
+    thcpl: B
+  source: ccfddl/ccf-deadlines
+- id: dfrws-apac
+  display_name: DFRWS APAC
+  full_name: Digital Forensic Research Workshop Asia Pacific
+  dblp_stream: conf/di
+  aliases:
+  - DFRWS APAC
+  - Digital Forensic Research Workshop Asia Pacific
+  category: SC
+  category_name: Network and System Security
+  category_name_zh: 网络与信息安全
+  tier:
+    ccf: C
+    core: N
+    thcpl: N
+  source: ccfddl/ccf-deadlines
+- id: dfrws
+  display_name: DFRWS
+  full_name: Digital Forensic Research Workshop
+  dblp_stream: conf/dfrws
+  aliases:
+  - DFRWS
+  - Digital Forensic Research Workshop
+  category: SC
+  category_name: Network and System Security
+  category_name_zh: 网络与信息安全
+  tier:
+    ccf: C
+    core: N
+    thcpl: N
+  source: ccfddl/ccf-deadlines
+- id: dimva
+  display_name: DIMVA
+  full_name: Detection of Intrusions and Malware & Vulnerability Assessment
+  dblp_stream: conf/dimva
+  aliases:
+  - DIMVA
+  - Detection of Intrusions and Malware & Vulnerability Assessment
+  category: SC
+  category_name: Network and System Security
+  category_name_zh: 网络与信息安全
+  tier:
+    ccf: C
+    core: B
+    thcpl: B
+  source: ccfddl/ccf-deadlines
+- id: dsn
+  display_name: DSN
+  full_name: International Conference on Dependable Systems and Networks
+  dblp_stream: conf/dsn
+  aliases:
+  - DSN
+  - International Conference on Dependable Systems and Networks
+  category: SC
+  category_name: Network and System Security
+  category_name_zh: 网络与信息安全
+  tier:
+    ccf: B
+    core: A
+    thcpl: B
+  source: ccfddl/ccf-deadlines
+- id: esorics
+  display_name: ESORICS
+  full_name: European Symposium on Research in Computer Security
+  dblp_stream: conf/esorics
+  aliases:
+  - ESORICS
+  - European Symposium on Research in Computer Security
+  category: SC
+  category_name: Network and System Security
+  category_name_zh: 网络与信息安全
+  tier:
+    ccf: B
+    core: A
+    thcpl: B
+  source: ccfddl/ccf-deadlines
+- id: eurocrypt
+  display_name: EUROCRYPT
+  full_name: European Cryptology Conference
+  dblp_stream: conf/eurocrypt
+  aliases:
+  - EUROCRYPT
+  - European Cryptology Conference
+  category: SC
+  category_name: Network and System Security
+  category_name_zh: 网络与信息安全
+  tier:
+    ccf: A
+    core: A*
+    thcpl: A
+  source: ccfddl/ccf-deadlines
+- id: eurosp
+  display_name: EuroS&P
+  full_name: IEEE European Symposium on Security and Privacy
+  dblp_stream: conf/eurosp
+  aliases:
+  - EuroS&P
+  - IEEE European Symposium on Security and Privacy
+  category: SC
+  category_name: Network and System Security
+  category_name_zh: 网络与信息安全
+  tier:
+    ccf: C
+    core: N
+    thcpl: N
+  source: ccfddl/ccf-deadlines
+- id: fc
+  display_name: FC
+  full_name: Financial Cryptography and Data Security
+  dblp_stream: conf/fc
+  aliases:
+  - FC
+  - Financial Cryptography and Data Security
+  category: SC
+  category_name: Network and System Security
+  category_name_zh: 网络与信息安全
+  tier:
+    ccf: C
+    core: A
+    thcpl: B
+  source: ccfddl/ccf-deadlines
+- id: fse
+  display_name: FSE
+  full_name: Fast Software Encryption
+  dblp_stream: conf/fse
+  aliases:
+  - FSE
+  - Fast Software Encryption
+  category: SC
+  category_name: Network and System Security
+  category_name_zh: 网络与信息安全
+  tier:
+    ccf: B
+    core: B
+    thcpl: B
+  source: ccfddl/ccf-deadlines
+- id: hotsec
+  display_name: HotSec
+  full_name: USENIX Workshop on Hot Topics in Security
+  dblp_stream: conf/events
+  aliases:
+  - HotSec
+  - USENIX Workshop on Hot Topics in Security
+  category: SC
+  category_name: Network and System Security
+  category_name_zh: 网络与信息安全
+  tier:
+    ccf: C
+    core: N
+    thcpl: N
+  source: ccfddl/ccf-deadlines
+- id: icdf2c
+  display_name: ICDF2C
+  full_name: International Conference on Digital Forensics & Cyber Crime
+  dblp_stream: conf/icdf2c
+  aliases:
+  - ICDF2C
+  - International Conference on Digital Forensics & Cyber Crime
+  category: SC
+  category_name: Network and System Security
+  category_name_zh: 网络与信息安全
+  tier:
+    ccf: C
+    core: N
+    thcpl: N
+  source: ccfddl/ccf-deadlines
+- id: icics
+  display_name: ICICS
+  full_name: International Conference on Information and Communications Security
+  dblp_stream: conf/icics
+  aliases:
+  - ICICS
+  - International Conference on Information and Communications Security
+  category: SC
+  category_name: Network and System Security
+  category_name_zh: 网络与信息安全
+  tier:
+    ccf: C
+    core: C
+    thcpl: N
+  source: ccfddl/ccf-deadlines
+- id: ifip119
+  display_name: IFIP WG 11.9
+  full_name: IFIP WG 11.9 International Conference on Digital Forensics
+  dblp_stream: conf/NO DBLP
+  aliases:
+  - IFIP WG 11.9
+  - IFIP WG 11.9 International Conference on Digital Forensics
+  category: SC
+  category_name: Network and System Security
+  category_name_zh: 网络与信息安全
+  tier:
+    ccf: C
+    core: N
+    thcpl: N
+  source: ccfddl/ccf-deadlines
+- id: ih-mmsec
+  display_name: IH&MMSec
+  full_name: ACM Workshop on Information Hiding and Multimedia Security
+  dblp_stream: conf/ih
+  aliases:
+  - IH&MMSec
+  - ACM Workshop on Information Hiding and Multimedia Security
+  category: SC
+  category_name: Network and System Security
+  category_name_zh: 网络与信息安全
+  tier:
+    ccf: C
+    core: C
+    thcpl: B
+  source: ccfddl/ccf-deadlines
+- id: indocrypt
+  display_name: INDOCRYPT
+  full_name: International Conference on Cryptology in India
+  dblp_stream: conf/indocrypt
+  aliases:
+  - INDOCRYPT
+  - International Conference on Cryptology in India
+  category: SC
+  category_name: Network and System Security
+  category_name_zh: 网络与信息安全
+  tier:
+    ccf: N
+    core: N
+    thcpl: N
+  source: ccfddl/ccf-deadlines
+- id: inscrypt
+  display_name: INSCRYPT
+  full_name: International Conference on Information Security and Cryptology
+  dblp_stream: conf/cisc
+  aliases:
+  - INSCRYPT
+  - International Conference on Information Security and Cryptology
+  category: SC
+  category_name: Network and System Security
+  category_name_zh: 网络与信息安全
+  tier:
+    ccf: C
+    core: N
+    thcpl: N
+  source: ccfddl/ccf-deadlines
+- id: isc
+  display_name: ISC
+  full_name: Information Security Conference
+  dblp_stream: conf/isw
+  aliases:
+  - ISC
+  - Information Security Conference
+  category: SC
+  category_name: Network and System Security
+  category_name_zh: 网络与信息安全
+  tier:
+    ccf: C
+    core: N
+    thcpl: N
+  source: ccfddl/ccf-deadlines
+- id: ndss
+  display_name: NDSS
+  full_name: Network and Distributed System Security (NDSS) Symposium
+  dblp_stream: conf/ndss
+  aliases:
+  - NDSS
+  - Network and Distributed System Security (NDSS) Symposium
+  category: SC
+  category_name: Network and System Security
+  category_name_zh: 网络与信息安全
+  tier:
+    ccf: A
+    core: A*
+    thcpl: A
+  source: ccfddl/ccf-deadlines
+- id: noms
+  display_name: NOMS
+  full_name: IEEE/IFIP Network Operations and Management Symposium
+  dblp_stream: conf/noms
+  aliases:
+  - NOMS
+  - IEEE/IFIP Network Operations and Management Symposium
+  category: SC
+  category_name: Network and System Security
+  category_name_zh: 网络与信息安全
+  tier:
+    ccf: N
+    core: B
+    thcpl: B
+  source: ccfddl/ccf-deadlines
+- id: nspw
+  display_name: NSPW
+  full_name: New Security Paradigms Workshop
+  dblp_stream: conf/nspw
+  aliases:
+  - NSPW
+  - New Security Paradigms Workshop
+  category: SC
+  category_name: Network and System Security
+  category_name_zh: 网络与信息安全
+  tier:
+    ccf: C
+    core: C
+    thcpl: N
+  source: ccfddl/ccf-deadlines
+- id: pam
+  display_name: PAM
+  full_name: Passive and Active Measurement Conference
+  dblp_stream: conf/pam
+  aliases:
+  - PAM
+  - Passive and Active Measurement Conference
+  category: SC
+  category_name: Network and System Security
+  category_name_zh: 网络与信息安全
+  tier:
+    ccf: C
+    core: B
+    thcpl: B
+  source: ccfddl/ccf-deadlines
+- id: pets
+  display_name: PETS
+  full_name: Privacy Enhancing Technologies Symposium
+  dblp_stream: conf/pet
+  aliases:
+  - PETS
+  - Privacy Enhancing Technologies Symposium
+  category: SC
+  category_name: Network and System Security
+  category_name_zh: 网络与信息安全
+  tier:
+    ccf: C
+    core: A
+    thcpl: B
+  source: ccfddl/ccf-deadlines
+- id: pkc
+  display_name: PKC
+  full_name: International Conference on Practice and Theory of Public-Key Cryptography
+  dblp_stream: conf/pkc
+  aliases:
+  - PKC
+  - International Conference on Practice and Theory of Public-Key Cryptography
+  category: SC
+  category_name: Network and System Security
+  category_name_zh: 网络与信息安全
+  tier:
+    ccf: B
+    core: B
+    thcpl: B
+  source: ccfddl/ccf-deadlines
+- id: raid
+  display_name: RAID
+  full_name: International Symposium on Recent Advances in Intrusion Detection
+  dblp_stream: conf/raid
+  aliases:
+  - RAID
+  - International Symposium on Recent Advances in Intrusion Detection
+  category: SC
+  category_name: Network and System Security
+  category_name_zh: 网络与信息安全
+  tier:
+    ccf: B
+    core: A
+    thcpl: B
+  source: ccfddl/ccf-deadlines
+- id: sac
+  display_name: SAC
+  full_name: Selected Areas in Cryptography
+  dblp_stream: conf/sacrypt
+  aliases:
+  - SAC
+  - Selected Areas in Cryptography
+  category: SC
+  category_name: Network and System Security
+  category_name_zh: 网络与信息安全
+  tier:
+    ccf: C
+    core: B
+    thcpl: B
+  source: ccfddl/ccf-deadlines
+- id: sacmat
+  display_name: SACMAT
+  full_name: ACM Symposium on Access Control Models and Technologies
+  dblp_stream: conf/sacmat
+  aliases:
+  - SACMAT
+  - ACM Symposium on Access Control Models and Technologies
+  category: SC
+  category_name: Network and System Security
+  category_name_zh: 网络与信息安全
+  tier:
+    ccf: C
+    core: C
+    thcpl: N
+  source: ccfddl/ccf-deadlines
+- id: satml
+  display_name: SATML
+  full_name: IEEE Conference on Secure and Trustworthy Machine Learning
+  dblp_stream: conf/satml
+  aliases:
+  - SATML
+  - IEEE Conference on Secure and Trustworthy Machine Learning
+  category: SC
+  category_name: Network and System Security
+  category_name_zh: 网络与信息安全
+  tier:
+    ccf: N
+    core: N
+    thcpl: N
+  source: ccfddl/ccf-deadlines
+- id: sec
+  display_name: SEC
+  full_name: IFIP International Information Security Conference
+  dblp_stream: conf/sec
+  aliases:
+  - SEC
+  - IFIP International Information Security Conference
+  category: SC
+  category_name: Network and System Security
+  category_name_zh: 网络与信息安全
+  tier:
+    ccf: C
+    core: N
+    thcpl: B
+  source: ccfddl/ccf-deadlines
+- id: securecomm
+  display_name: SecureComm
+  full_name: International Conference on Security and Privacy in Communication Networks
+  dblp_stream: conf/securecomm
+  aliases:
+  - SecureComm
+  - International Conference on Security and Privacy in Communication Networks
+  category: SC
+  category_name: Network and System Security
+  category_name_zh: 网络与信息安全
+  tier:
+    ccf: C
+    core: C
+    thcpl: N
+  source: ccfddl/ccf-deadlines
+- id: soups
+  display_name: SOUPS
+  full_name: Symposium On Usable Privacy and Security
+  dblp_stream: conf/soups
+  aliases:
+  - SOUPS
+  - Symposium On Usable Privacy and Security
+  category: SC
+  category_name: Network and System Security
+  category_name_zh: 网络与信息安全
+  tier:
+    ccf: C
+    core: B
+    thcpl: B
+  source: ccfddl/ccf-deadlines
+- id: sp
+  display_name: S&P
+  full_name: IEEE Symposium on Security and Privacy
+  dblp_stream: conf/sp
+  aliases:
+  - S&P
+  - IEEE Symposium on Security and Privacy
+  category: SC
+  category_name: Network and System Security
+  category_name_zh: 网络与信息安全
+  tier:
+    ccf: A
+    core: A*
+    thcpl: A
+  source: ccfddl/ccf-deadlines
+- id: srds
+  display_name: SRDS
+  full_name: IEEE International Symposium on Reliable Distributed Systems
+  dblp_stream: conf/srds
+  aliases:
+  - SRDS
+  - IEEE International Symposium on Reliable Distributed Systems
+  category: SC
+  category_name: Network and System Security
+  category_name_zh: 网络与信息安全
+  tier:
+    ccf: B
+    core: B
+    thcpl: N
+  source: ccfddl/ccf-deadlines
+- id: tcc
+  display_name: TCC
+  full_name: Theory of Cryptography Conference
+  dblp_stream: conf/tcc
+  aliases:
+  - TCC
+  - Theory of Cryptography Conference
+  category: SC
+  category_name: Network and System Security
+  category_name_zh: 网络与信息安全
+  tier:
+    ccf: B
+    core: A
+    thcpl: B
+  source: ccfddl/ccf-deadlines
+- id: trustcom
+  display_name: TrustCom
+  full_name: IEEE International Conference on Trust, Security and Privacy in Computing
+    and Communications
+  dblp_stream: conf/trustcom
+  aliases:
+  - TrustCom
+  - IEEE International Conference on Trust, Security and Privacy in Computing and
+    Communications
+  category: SC
+  category_name: Network and System Security
+  category_name_zh: 网络与信息安全
+  tier:
+    ccf: C
+    core: B
+    thcpl: N
+  source: ccfddl/ccf-deadlines
+- id: uss
+  display_name: USENIX Security
+  full_name: USENIX Security Symposium
+  dblp_stream: conf/uss
+  aliases:
+  - USENIX Security
+  - USENIX Security Symposium
+  category: SC
+  category_name: Network and System Security
+  category_name_zh: 网络与信息安全
+  tier:
+    ccf: A
+    core: A*
+    thcpl: A
+  source: ccfddl/ccf-deadlines
+- id: wisec
+  display_name: WiSec
+  full_name: ACM Conference on Security and Privacy in Wireless and Mobile Networks
+  dblp_stream: conf/wisec
+  aliases:
+  - WiSec
+  - ACM Conference on Security and Privacy in Wireless and Mobile Networks
+  category: SC
+  category_name: Network and System Security
+  category_name_zh: 网络与信息安全
+  tier:
+    ccf: C
+    core: B
+    thcpl: B
+  source: ccfddl/ccf-deadlines
+- id: aplas
+  display_name: APLAS
+  full_name: Asian Symposium on Programming Languages and Systems
+  dblp_stream: conf/aplas
+  aliases:
+  - APLAS
+  - Asian Symposium on Programming Languages and Systems
+  category: SE
+  category_name: Software Engineering/Operating System/Programming Language Design
+  category_name_zh: 软件工程/系统软件/程序设计语言
+  tier:
+    ccf: C
+    core: B
+    thcpl: N
+  source: ccfddl/ccf-deadlines
+- id: apsec
+  display_name: APSEC
+  full_name: Asia-Pacific Software Engineering Conference
+  dblp_stream: conf/apsec
+  aliases:
+  - APSEC
+  - Asia-Pacific Software Engineering Conference
+  category: SE
+  category_name: Software Engineering/Operating System/Programming Language Design
+  category_name_zh: 软件工程/系统软件/程序设计语言
+  tier:
+    ccf: C
+    core: C
+    thcpl: N
+  source: ccfddl/ccf-deadlines
+- id: ase
+  display_name: ASE
+  full_name: International Conference on Automated Software Engineering
+  dblp_stream: conf/kbse
+  aliases:
+  - ASE
+  - International Conference on Automated Software Engineering
+  category: SE
+  category_name: Software Engineering/Operating System/Programming Language Design
+  category_name_zh: 软件工程/系统软件/程序设计语言
+  tier:
+    ccf: A
+    core: A*
+    thcpl: A
+  source: ccfddl/ccf-deadlines
+- id: atva
+  display_name: ATVA
+  full_name: International Symposium on Automated Technology for Verification and
+    Analysis
+  dblp_stream: conf/atva
+  aliases:
+  - ATVA
+  - International Symposium on Automated Technology for Verification and Analysis
+  category: SE
+  category_name: Software Engineering/Operating System/Programming Language Design
+  category_name_zh: 软件工程/系统软件/程序设计语言
+  tier:
+    ccf: C
+    core: B
+    thcpl: B
+  source: ccfddl/ccf-deadlines
+- id: caise
+  display_name: CAiSE
+  full_name: International Conference on Advanced Information Systems Engineering
+  dblp_stream: conf/caise
+  aliases:
+  - CAiSE
+  - International Conference on Advanced Information Systems Engineering
+  category: SE
+  category_name: Software Engineering/Operating System/Programming Language Design
+  category_name_zh: 软件工程/系统软件/程序设计语言
+  tier:
+    ccf: B
+    core: A
+    thcpl: B
+  source: ccfddl/ccf-deadlines
+- id: compsac
+  display_name: COMPSAC
+  full_name: International Computer Software and Applications Conference
+  dblp_stream: conf/compsac
+  aliases:
+  - COMPSAC
+  - International Computer Software and Applications Conference
+  category: SE
+  category_name: Software Engineering/Operating System/Programming Language Design
+  category_name_zh: 软件工程/系统软件/程序设计语言
+  tier:
+    ccf: C
+    core: B
+    thcpl: N
+  source: ccfddl/ccf-deadlines
+- id: cp
+  display_name: CP
+  full_name: International Conference on Principles and Practice of Constraint Programming
+  dblp_stream: conf/cp
+  aliases:
+  - CP
+  - International Conference on Principles and Practice of Constraint Programming
+  category: SE
+  category_name: Software Engineering/Operating System/Programming Language Design
+  category_name_zh: 软件工程/系统软件/程序设计语言
+  tier:
+    ccf: B
+    core: A
+    thcpl: B
+  source: ccfddl/ccf-deadlines
+- id: ease
+  display_name: EASE
+  full_name: International Conference on Evaluation and Assessment in Software Engineering
+  dblp_stream: conf/ease
+  aliases:
+  - EASE
+  - International Conference on Evaluation and Assessment in Software Engineering
+  category: SE
+  category_name: Software Engineering/Operating System/Programming Language Design
+  category_name_zh: 软件工程/系统软件/程序设计语言
+  tier:
+    ccf: C
+    core: A
+    thcpl: B
+  source: ccfddl/ccf-deadlines
+- id: ecoop
+  display_name: ECOOP
+  full_name: European Conference on Object-Oriented Programming
+  dblp_stream: conf/ecoop
+  aliases:
+  - ECOOP
+  - European Conference on Object-Oriented Programming
+  category: SE
+  category_name: Software Engineering/Operating System/Programming Language Design
+  category_name_zh: 软件工程/系统软件/程序设计语言
+  tier:
+    ccf: B
+    core: A
+    thcpl: B
+  source: ccfddl/ccf-deadlines
+- id: esem
+  display_name: ESEM
+  full_name: International Symposium on Empirical Software Engineering and Measurement
+  dblp_stream: conf/esem
+  aliases:
+  - ESEM
+  - International Symposium on Empirical Software Engineering and Measurement
+  category: SE
+  category_name: Software Engineering/Operating System/Programming Language Design
+  category_name_zh: 软件工程/系统软件/程序设计语言
+  tier:
+    ccf: B
+    core: A
+    thcpl: B
+  source: ccfddl/ccf-deadlines
+- id: etaps
+  display_name: ETAPS
+  full_name: European Joint Conferences on Theory and Practice of Software
+  dblp_stream: conf/etaps
+  aliases:
+  - ETAPS
+  - European Joint Conferences on Theory and Practice of Software
+  category: SE
+  category_name: Software Engineering/Operating System/Programming Language Design
+  category_name_zh: 软件工程/系统软件/程序设计语言
+  tier:
+    ccf: B
+    core: N
+    thcpl: B
+  source: ccfddl/ccf-deadlines
+- id: fm
+  display_name: FM
+  full_name: International Symposium on Formal Methods
+  dblp_stream: conf/fm
+  aliases:
+  - FM
+  - International Symposium on Formal Methods
+  category: SE
+  category_name: Software Engineering/Operating System/Programming Language Design
+  category_name_zh: 软件工程/系统软件/程序设计语言
+  tier:
+    ccf: A
+    core: A
+    thcpl: B
+  source: ccfddl/ccf-deadlines
+- id: fse
+  display_name: FSE
+  full_name: ACM International Conference on the Foundations of Software Engineering
+  dblp_stream: conf/sigsoft
+  aliases:
+  - FSE
+  - ACM International Conference on the Foundations of Software Engineering
+  category: SE
+  category_name: Software Engineering/Operating System/Programming Language Design
+  category_name_zh: 软件工程/系统软件/程序设计语言
+  tier:
+    ccf: A
+    core: A*
+    thcpl: A
+  source: ccfddl/ccf-deadlines
+- id: hotos
+  display_name: HotOS
+  full_name: USENIX Workshop on Hot Topics in Operating Systems
+  dblp_stream: conf/hotos
+  aliases:
+  - HotOS
+  - USENIX Workshop on Hot Topics in Operating Systems
+  category: SE
+  category_name: Software Engineering/Operating System/Programming Language Design
+  category_name_zh: 软件工程/系统软件/程序设计语言
+  tier:
+    ccf: B
+    core: A
+    thcpl: B
+  source: ccfddl/ccf-deadlines
+- id: iceccs
+  display_name: ICECCS
+  full_name: International Conference on Engineering of Complex Computer Systems
+  dblp_stream: conf/iceccs
+  aliases:
+  - ICECCS
+  - International Conference on Engineering of Complex Computer Systems
+  category: SE
+  category_name: Software Engineering/Operating System/Programming Language Design
+  category_name_zh: 软件工程/系统软件/程序设计语言
+  tier:
+    ccf: C
+    core: B
+    thcpl: N
+  source: ccfddl/ccf-deadlines
+- id: icfem
+  display_name: ICFEM
+  full_name: International Conference on Formal Engineering Methods
+  dblp_stream: conf/icfem
+  aliases:
+  - ICFEM
+  - International Conference on Formal Engineering Methods
+  category: SE
+  category_name: Software Engineering/Operating System/Programming Language Design
+  category_name_zh: 软件工程/系统软件/程序设计语言
+  tier:
+    ccf: C
+    core: C
+    thcpl: N
+  source: ccfddl/ccf-deadlines
+- id: icfp
+  display_name: ICFP
+  full_name: International Conference on Function Programming
+  dblp_stream: conf/icfp
+  aliases:
+  - ICFP
+  - International Conference on Function Programming
+  category: SE
+  category_name: Software Engineering/Operating System/Programming Language Design
+  category_name_zh: 软件工程/系统软件/程序设计语言
+  tier:
+    ccf: B
+    core: A
+    thcpl: B
+  source: ccfddl/ccf-deadlines
+- id: icpc
+  display_name: ICPC
+  full_name: IEEE International Conference on Program Comprehension
+  dblp_stream: conf/icpc
+  aliases:
+  - ICPC
+  - IEEE International Conference on Program Comprehension
+  category: SE
+  category_name: Software Engineering/Operating System/Programming Language Design
+  category_name_zh: 软件工程/系统软件/程序设计语言
+  tier:
+    ccf: B
+    core: A
+    thcpl: B
+  source: ccfddl/ccf-deadlines
+- id: icse
+  display_name: ICSE
+  full_name: International Conference on Software Engineering
+  dblp_stream: conf/icse
+  aliases:
+  - ICSE
+  - International Conference on Software Engineering
+  category: SE
+  category_name: Software Engineering/Operating System/Programming Language Design
+  category_name_zh: 软件工程/系统软件/程序设计语言
+  tier:
+    ccf: A
+    core: A*
+    thcpl: A
+  source: ccfddl/ccf-deadlines
+- id: icsme
+  display_name: ICSME
+  full_name: International Conference on Software Maintenance and Evolution
+  dblp_stream: conf/icsm
+  aliases:
+  - ICSME
+  - International Conference on Software Maintenance and Evolution
+  category: SE
+  category_name: Software Engineering/Operating System/Programming Language Design
+  category_name_zh: 软件工程/系统软件/程序设计语言
+  tier:
+    ccf: B
+    core: A
+    thcpl: B
+  source: ccfddl/ccf-deadlines
+- id: icsoc
+  display_name: ICSOC
+  full_name: International Conference on Service Oriented Computing
+  dblp_stream: conf/icsoc
+  aliases:
+  - ICSOC
+  - International Conference on Service Oriented Computing
+  category: SE
+  category_name: Software Engineering/Operating System/Programming Language Design
+  category_name_zh: 软件工程/系统软件/程序设计语言
+  tier:
+    ccf: B
+    core: A
+    thcpl: N
+  source: ccfddl/ccf-deadlines
+- id: icst
+  display_name: ICST
+  full_name: IEEE International Conference on Software Testing, Verification and Validation
+  dblp_stream: conf/icst
+  aliases:
+  - ICST
+  - IEEE International Conference on Software Testing, Verification and Validation
+  category: SE
+  category_name: Software Engineering/Operating System/Programming Language Design
+  category_name_zh: 软件工程/系统软件/程序设计语言
+  tier:
+    ccf: C
+    core: A
+    thcpl: B
+  source: ccfddl/ccf-deadlines
+- id: icws
+  display_name: ICWS
+  full_name: IEEE International Conference on Web Services (Research Track)
+  dblp_stream: conf/icws
+  aliases:
+  - ICWS
+  - IEEE International Conference on Web Services (Research Track)
+  category: SE
+  category_name: Software Engineering/Operating System/Programming Language Design
+  category_name_zh: 软件工程/系统软件/程序设计语言
+  tier:
+    ccf: B
+    core: A
+    thcpl: B
+  source: ccfddl/ccf-deadlines
+- id: internetware
+  display_name: Internetware
+  full_name: Asia-Pacific Symposium on Internetware
+  dblp_stream: conf/internetware
+  aliases:
+  - Internetware
+  - Asia-Pacific Symposium on Internetware
+  category: SE
+  category_name: Software Engineering/Operating System/Programming Language Design
+  category_name_zh: 软件工程/系统软件/程序设计语言
+  tier:
+    ccf: C
+    core: N
+    thcpl: N
+  source: ccfddl/ccf-deadlines
+- id: ispass
+  display_name: ISPASS
+  full_name: International Symposium on Performance Analysis of Systems and Software
+  dblp_stream: conf/ispass
+  aliases:
+  - ISPASS
+  - International Symposium on Performance Analysis of Systems and Software
+  category: SE
+  category_name: Software Engineering/Operating System/Programming Language Design
+  category_name_zh: 软件工程/系统软件/程序设计语言
+  tier:
+    ccf: C
+    core: B
+    thcpl: B
+  source: ccfddl/ccf-deadlines
+- id: issre
+  display_name: ISSRE
+  full_name: International Symposium on Software Reliability Engineering
+  dblp_stream: conf/issre
+  aliases:
+  - ISSRE
+  - International Symposium on Software Reliability Engineering
+  category: SE
+  category_name: Software Engineering/Operating System/Programming Language Design
+  category_name_zh: 软件工程/系统软件/程序设计语言
+  tier:
+    ccf: B
+    core: A
+    thcpl: B
+  source: ccfddl/ccf-deadlines
+- id: issta
+  display_name: ISSTA
+  full_name: ACM SIGSOFT International Symposium on Software Testing and Analysis
+  dblp_stream: conf/issta
+  aliases:
+  - ISSTA
+  - ACM SIGSOFT International Symposium on Software Testing and Analysis
+  category: SE
+  category_name: Software Engineering/Operating System/Programming Language Design
+  category_name_zh: 软件工程/系统软件/程序设计语言
+  tier:
+    ccf: A
+    core: A
+    thcpl: A
+  source: ccfddl/ccf-deadlines
+- id: lctes
+  display_name: LCTES
+  full_name: International Conference on Languages, Compilers and Tools for Embedded
+    Systems
+  dblp_stream: conf/lctrts
+  aliases:
+  - LCTES
+  - International Conference on Languages, Compilers and Tools for Embedded Systems
+  category: SE
+  category_name: Software Engineering/Operating System/Programming Language Design
+  category_name_zh: 软件工程/系统软件/程序设计语言
+  tier:
+    ccf: B
+    core: B
+    thcpl: N
+  source: ccfddl/ccf-deadlines
+- id: middleware
+  display_name: Middleware
+  full_name: International Middleware Conference
+  dblp_stream: conf/middleware
+  aliases:
+  - Middleware
+  - International Middleware Conference
+  category: SE
+  category_name: Software Engineering/Operating System/Programming Language Design
+  category_name_zh: 软件工程/系统软件/程序设计语言
+  tier:
+    ccf: B
+    core: A
+    thcpl: B
+  source: ccfddl/ccf-deadlines
+- id: models
+  display_name: MoDELS
+  full_name: International Conference on Model Driven Engineering Languages and Systems
+  dblp_stream: conf/models
+  aliases:
+  - MoDELS
+  - International Conference on Model Driven Engineering Languages and Systems
+  category: SE
+  category_name: Software Engineering/Operating System/Programming Language Design
+  category_name_zh: 软件工程/系统软件/程序设计语言
+  tier:
+    ccf: B
+    core: A
+    thcpl: B
+  source: ccfddl/ccf-deadlines
+- id: msr
+  display_name: MSR
+  full_name: International Conference on Mining Software Repositories
+  dblp_stream: conf/msr
+  aliases:
+  - MSR
+  - International Conference on Mining Software Repositories
+  category: SE
+  category_name: Software Engineering/Operating System/Programming Language Design
+  category_name_zh: 软件工程/系统软件/程序设计语言
+  tier:
+    ccf: C
+    core: A
+    thcpl: B
+  source: ccfddl/ccf-deadlines
+- id: oopsla
+  display_name: OOPSLA
+  full_name: Conference on Object-Oriented Programming Systems, Languages, and Applications
+  dblp_stream: conf/oopsla
+  aliases:
+  - OOPSLA
+  - Conference on Object-Oriented Programming Systems, Languages, and Applications
+  category: SE
+  category_name: Software Engineering/Operating System/Programming Language Design
+  category_name_zh: 软件工程/系统软件/程序设计语言
+  tier:
+    ccf: A
+    core: A
+    thcpl: A
+  source: ccfddl/ccf-deadlines
+- id: osdi
+  display_name: OSDI
+  full_name: USENIX Symposium on Operating Systems Design and Implementation
+  dblp_stream: conf/osdi
+  aliases:
+  - OSDI
+  - USENIX Symposium on Operating Systems Design and Implementation
+  category: SE
+  category_name: Software Engineering/Operating System/Programming Language Design
+  category_name_zh: 软件工程/系统软件/程序设计语言
+  tier:
+    ccf: A
+    core: A*
+    thcpl: A
+  source: ccfddl/ccf-deadlines
+- id: pldi
+  display_name: PLDI
+  full_name: ACM SIGPLAN Conference on Programming Language Design & Implementation
+  dblp_stream: conf/pldi
+  aliases:
+  - PLDI
+  - ACM SIGPLAN Conference on Programming Language Design & Implementation
+  category: SE
+  category_name: Software Engineering/Operating System/Programming Language Design
+  category_name_zh: 软件工程/系统软件/程序设计语言
+  tier:
+    ccf: A
+    core: A*
+    thcpl: A
+  source: ccfddl/ccf-deadlines
+- id: popl
+  display_name: POPL
+  full_name: ACM SIGPLAN-SIGACT Symposium on Principles of Programming Languages
+  dblp_stream: conf/popl
+  aliases:
+  - POPL
+  - ACM SIGPLAN-SIGACT Symposium on Principles of Programming Languages
+  category: SE
+  category_name: Software Engineering/Operating System/Programming Language Design
+  category_name_zh: 软件工程/系统软件/程序设计语言
+  tier:
+    ccf: A
+    core: A*
+    thcpl: A
+  source: ccfddl/ccf-deadlines
+- id: qrs
+  display_name: QRS
+  full_name: IEEE International Conference on Software Quality, Reliability and Security
+  dblp_stream: conf/qrs
+  aliases:
+  - QRS
+  - IEEE International Conference on Software Quality, Reliability and Security
+  category: SE
+  category_name: Software Engineering/Operating System/Programming Language Design
+  category_name_zh: 软件工程/系统软件/程序设计语言
+  tier:
+    ccf: C
+    core: C
+    thcpl: N
+  source: ccfddl/ccf-deadlines
+- id: re
+  display_name: RE
+  full_name: IEEE International Requirements Engineering Conference
+  dblp_stream: conf/re
+  aliases:
+  - RE
+  - IEEE International Requirements Engineering Conference
+  category: SE
+  category_name: Software Engineering/Operating System/Programming Language Design
+  category_name_zh: 软件工程/系统软件/程序设计语言
+  tier:
+    ccf: B
+    core: A
+    thcpl: N
+  source: ccfddl/ccf-deadlines
+- id: refsq
+  display_name: REFSQ
+  full_name: 'Requirements Engineering: Foundation for Software Quality'
+  dblp_stream: conf/refsq
+  aliases:
+  - REFSQ
+  - 'Requirements Engineering: Foundation for Software Quality'
+  category: SE
+  category_name: Software Engineering/Operating System/Programming Language Design
+  category_name_zh: 软件工程/系统软件/程序设计语言
+  tier:
+    ccf: C
+    core: B
+    thcpl: N
+  source: ccfddl/ccf-deadlines
+- id: rv
+  display_name: RV
+  full_name: International Conference on Runtime Verification
+  dblp_stream: conf/rv
+  aliases:
+  - RV
+  - International Conference on Runtime Verification
+  category: SE
+  category_name: Software Engineering/Operating System/Programming Language Design
+  category_name_zh: 软件工程/系统软件/程序设计语言
+  tier:
+    ccf: C
+    core: B
+    thcpl: N
+  source: ccfddl/ccf-deadlines
+- id: saner
+  display_name: SANER
+  full_name: IEEE International Conference on Software Analysis, Evolution and Reengineering
+  dblp_stream: conf/wcre
+  aliases:
+  - SANER
+  - IEEE International Conference on Software Analysis, Evolution and Reengineering
+  category: SE
+  category_name: Software Engineering/Operating System/Programming Language Design
+  category_name_zh: 软件工程/系统软件/程序设计语言
+  tier:
+    ccf: B
+    core: A
+    thcpl: B
+  source: ccfddl/ccf-deadlines
+- id: sas
+  display_name: SAS
+  full_name: International Static Analysis Symposium
+  dblp_stream: conf/sas
+  aliases:
+  - SAS
+  - International Static Analysis Symposium
+  category: SE
+  category_name: Software Engineering/Operating System/Programming Language Design
+  category_name_zh: 软件工程/系统软件/程序设计语言
+  tier:
+    ccf: B
+    core: B
+    thcpl: N
+  source: ccfddl/ccf-deadlines
+- id: scam
+  display_name: SCAM
+  full_name: IEEE International Working Conference on Source Code Analysis and Manipulation
+  dblp_stream: conf/scam
+  aliases:
+  - SCAM
+  - IEEE International Working Conference on Source Code Analysis and Manipulation
+  category: SE
+  category_name: Software Engineering/Operating System/Programming Language Design
+  category_name_zh: 软件工程/系统软件/程序设计语言
+  tier:
+    ccf: C
+    core: C
+    thcpl: N
+  source: ccfddl/ccf-deadlines
+- id: seke
+  display_name: SEKE
+  full_name: International Conference on Software Engineering and Knowledge Engineering
+  dblp_stream: conf/seke
+  aliases:
+  - SEKE
+  - International Conference on Software Engineering and Knowledge Engineering
+  category: SE
+  category_name: Software Engineering/Operating System/Programming Language Design
+  category_name_zh: 软件工程/系统软件/程序设计语言
+  tier:
+    ccf: C
+    core: C
+    thcpl: N
+  source: ccfddl/ccf-deadlines
+- id: sosp
+  display_name: SOSP
+  full_name: ACM Symposium on Operating Systems Principles
+  dblp_stream: conf/sosp
+  aliases:
+  - SOSP
+  - ACM Symposium on Operating Systems Principles
+  category: SE
+  category_name: Software Engineering/Operating System/Programming Language Design
+  category_name_zh: 软件工程/系统软件/程序设计语言
+  tier:
+    ccf: A
+    core: A*
+    thcpl: A
+  source: ccfddl/ccf-deadlines
+- id: sse
+  display_name: SSE
+  full_name: IEEE International Conference on Software Services Engineering
+  dblp_stream: conf/IEEEscc
+  aliases:
+  - SSE
+  - IEEE International Conference on Software Services Engineering
+  category: SE
+  category_name: Software Engineering/Operating System/Programming Language Design
+  category_name_zh: 软件工程/系统软件/程序设计语言
+  tier:
+    ccf: C
+    core: B
+    thcpl: B
+  source: ccfddl/ccf-deadlines
+- id: tase
+  display_name: TASE
+  full_name: Theoretical Aspects of Software Engineering
+  dblp_stream: conf/tase
+  aliases:
+  - TASE
+  - Theoretical Aspects of Software Engineering
+  category: SE
+  category_name: Software Engineering/Operating System/Programming Language Design
+  category_name_zh: 软件工程/系统软件/程序设计语言
+  tier:
+    ccf: C
+    core: N
+    thcpl: N
+  source: ccfddl/ccf-deadlines
+- id: vmcai
+  display_name: VMCAI
+  full_name: International Conference on Verification, Model Checking, and Abstract
+    Interpretation
+  dblp_stream: conf/vmcai
+  aliases:
+  - VMCAI
+  - International Conference on Verification, Model Checking, and Abstract Interpretation
+  category: SE
+  category_name: Software Engineering/Operating System/Programming Language Design
+  category_name_zh: 软件工程/系统软件/程序设计语言
+  tier:
+    ccf: B
+    core: B
+    thcpl: B
+  source: ccfddl/ccf-deadlines

@@ -1,0 +1,2 @@
+{"file":".trellis/spec/backend/quality-guidelines.md","reason":"Defines required catalog and search behavior to verify after adding conferences."}
+{"file":".trellis/spec/guides/code-reuse-thinking-guide.md","reason":"Check that additions reused existing catalog normalization and did not duplicate logic."}

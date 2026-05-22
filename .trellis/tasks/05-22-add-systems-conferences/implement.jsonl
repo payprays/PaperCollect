@@ -1,0 +1,2 @@
+{"file":".trellis/spec/backend/quality-guidelines.md","reason":"Catalog, API option, RSS, and search contracts for conference metadata and tests."}
+{"file":".trellis/spec/guides/code-reuse-thinking-guide.md","reason":"Config/catalog changes require searching existing constants and avoiding duplicate conference metadata logic."}

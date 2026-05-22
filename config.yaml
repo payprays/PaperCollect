@@ -204,6 +204,7 @@ conferences:
     aliases: [MLSYS]
     category: MX
     focus_tags: [distributed_systems, cloud_native]
+    years: [2023, 2024, 2025, 2026]
     official_source:
       type: miniconf
       page_url: https://mlsys.org/virtual/{year}/papers.html
@@ -211,11 +212,98 @@ conferences:
       abstracts_url: https://mlsys.org/static/virtual/data/mlsys-{year}-abstracts.json
       event_type: Poster
     enabled: true
+  - id: sosp
+    display_name: SOSP
+    full_name: ACM Symposium on Operating Systems Principles
+    dblp_stream: conf/sosp
+    aliases: [ACM SOSP]
+    focus_tags: [distributed_systems, cloud_native]
+    years: [2023, 2024, 2025, 2026]
+    enabled: true
+  - id: osdi
+    display_name: OSDI
+    full_name: USENIX Symposium on Operating Systems Design and Implementation
+    dblp_stream: conf/osdi
+    aliases: [USENIX OSDI]
+    focus_tags: [distributed_systems, cloud_native]
+    years: [2023, 2024, 2025, 2026]
+    enabled: true
+  - id: nsdi
+    display_name: NSDI
+    full_name: USENIX Symposium on Networked Systems Design and Implementation
+    dblp_stream: conf/nsdi
+    aliases: [USENIX NSDI]
+    focus_tags: [distributed_systems, cloud_native]
+    years: [2023, 2024, 2025, 2026]
+    enabled: true
+  - id: eurosys
+    display_name: EuroSys
+    full_name: European Conference on Computer Systems
+    dblp_stream: conf/eurosys
+    aliases: [ACM EuroSys]
+    focus_tags: [distributed_systems, cloud_native]
+    years: [2023, 2024, 2025, 2026]
+    enabled: true
+  - id: usenix-atc
+    display_name: USENIX ATC
+    full_name: USENIX Annual Technical Conference
+    dblp_stream: conf/usenix
+    aliases: [ATC, SIGOPS ATC, USENIX Annual Technical Conference]
+    focus_tags: [distributed_systems, cloud_native]
+    years: [2023, 2024, 2025, 2026]
+    enabled: true
+  - id: fast
+    display_name: FAST
+    full_name: USENIX Conference on File and Storage Technologies
+    dblp_stream: conf/fast
+    aliases: [USENIX FAST]
+    focus_tags: [distributed_systems]
+    years: [2023, 2024, 2025, 2026]
+    enabled: true
+  - id: socc
+    display_name: SoCC
+    full_name: ACM Symposium on Cloud Computing
+    dblp_stream: conf/cloud
+    aliases: [ACM SoCC]
+    focus_tags: [distributed_systems, cloud_native]
+    years: [2023, 2024, 2025, 2026]
+    enabled: true
+  - id: asplos
+    display_name: ASPLOS
+    full_name: ACM International Conference on Architectural Support for Programming Languages and Operating Systems
+    dblp_stream: conf/asplos
+    aliases: [International Conference on Architectural Support for Programming Languages and Operating Systems]
+    focus_tags: [distributed_systems]
+    years: [2023, 2024, 2025, 2026]
+    enabled: true
+  - id: middleware
+    display_name: Middleware
+    full_name: ACM/IFIP International Middleware Conference
+    dblp_stream: conf/middleware
+    aliases: [International Middleware Conference]
+    focus_tags: [distributed_systems, cloud_native]
+    years: [2023, 2024, 2025, 2026]
+    enabled: true
+  - id: hpdc
+    display_name: HPDC
+    full_name: ACM International Symposium on High-Performance Parallel and Distributed Computing
+    dblp_stream: conf/hpdc
+    aliases: [International Symposium on High-Performance Parallel and Distributed Computing]
+    focus_tags: [distributed_systems, cloud_native]
+    years: [2023, 2024, 2025, 2026]
+    enabled: true
+  - id: icdcs
+    display_name: ICDCS
+    full_name: IEEE International Conference on Distributed Computing Systems
+    dblp_stream: conf/icdcs
+    aliases: [International Conference on Distributed Computing Systems]
+    focus_tags: [distributed_systems, cloud_native]
+    years: [2023, 2024, 2025, 2026]
+    enabled: true
 
 include_ccfddl_catalog: true
 
 years:
-  - 2022
   - 2023
   - 2024
   - 2025
