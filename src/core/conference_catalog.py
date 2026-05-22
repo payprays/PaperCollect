@@ -156,12 +156,19 @@ def valid_collection_year(year: int) -> bool:
 
 def catalog_categories(config: dict[str, Any]) -> list[dict[str, str]]:
     categories = load_ccfddl_catalog().get("categories", {}).copy()
+    for key, labels in PROJECT_CATEGORY_LABELS.items():
+        if key in categories:
+            categories[key] = {**categories[key], **labels}
+
     for entry in normalize_conferences(config):
         if entry.category and entry.category not in categories:
-            categories[entry.category] = {
-                "name": entry.category_name_zh or entry.category,
-                "name_en": entry.category_name or entry.category,
-            }
+            categories[entry.category] = PROJECT_CATEGORY_LABELS.get(
+                entry.category,
+                {
+                    "name": entry.category_name_zh or entry.category,
+                    "name_en": entry.category_name or entry.category,
+                },
+            )
 
     return [
         {
@@ -284,9 +291,23 @@ def _infer_focus_tags(raw: dict[str, Any]) -> list[str]:
 FOCUS_TAGS = {
     "cloud_security": "Cloud Security",
     "cloud_native": "Cloud Native",
-    "distributed_systems": "Distributed Systems",
+    "distributed_systems": "Systems / Distributed Systems",
     "software_engineering": "Software Engineering",
     "security": "Security",
+}
+
+
+PROJECT_CATEGORY_LABELS = {
+    "DS": {"name": "系统与体系结构", "name_en": "Systems & Architecture"},
+    "NW": {"name": "网络", "name_en": "Networking"},
+    "SC": {"name": "安全", "name_en": "Security"},
+    "SE": {"name": "软件工程/系统软件/程序语言", "name_en": "Software, OS & PL"},
+    "DB": {"name": "数据库/数据挖掘/检索", "name_en": "Data & Information Retrieval"},
+    "CT": {"name": "理论", "name_en": "Theory"},
+    "CG": {"name": "图形与多媒体", "name_en": "Graphics & Multimedia"},
+    "AI": {"name": "人工智能", "name_en": "AI"},
+    "HI": {"name": "人机交互/普适计算", "name_en": "HCI & Ubiquitous Computing"},
+    "MX": {"name": "交叉/综合/新兴", "name_en": "Interdisciplinary"},
 }
 
 

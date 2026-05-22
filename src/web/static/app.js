@@ -76,8 +76,8 @@ function fillCategorySelect(select, categories, includeAll = false) {
   for (const category of categories) {
     const option = document.createElement("option");
     option.value = category.id;
-    option.textContent = `${category.id} · ${category.name_en}`;
-    option.title = category.name;
+    option.textContent = formatCategoryLabel(category);
+    option.title = category.name_en || category.name || category.id;
     select.appendChild(option);
   }
 }
@@ -140,7 +140,17 @@ function fillConferenceSelect(select, conferences, category = null, focus = null
 
 function categoryLabel(categoryId) {
   const category = state.categories.find((item) => item.id === categoryId);
-  return category ? `${category.id} · ${category.name_en}` : categoryId;
+  return category ? formatCategoryLabel(category) : categoryId;
+}
+
+function formatCategoryLabel(category) {
+  const localName = category.name && category.name !== category.id ? category.name : "";
+  const englishName = category.name_en && category.name_en !== category.id ? category.name_en : "";
+  const label =
+    localName && englishName && localName !== englishName
+      ? `${localName} / ${englishName}`
+      : localName || englishName || category.id;
+  return `${category.id} · ${label}`;
 }
 
 function filterConferences(categorySelect, focusSelect, conferenceSelect, includeAll = false) {

@@ -61,21 +61,27 @@ def test_bundled_ccfddl_catalog_expands_conferences_and_categories():
     catalog = load_ccfddl_catalog()
     entries = normalize_conferences({"conferences": []})
     categories = catalog_categories({"conferences": []})
+    by_category = {category["id"]: category for category in categories}
 
     assert catalog["source"]["name"] == "ccfddl/ccf-deadlines"
     assert len(entries) > 300
     assert any(entry.id == "sigmod" for entry in entries)
-    assert any(category["id"] == "SC" for category in categories)
+    assert by_category["SC"]["name_en"] == "Security"
+    assert by_category["DS"]["name"] == "系统与体系结构"
+    assert by_category["DS"]["name_en"] == "Systems & Architecture"
+    assert by_category["SE"]["name_en"] == "Software, OS & PL"
 
 
 def test_focus_tags_mark_cloud_native_and_cloud_security_conferences():
     entries = normalize_conferences({"conferences": []})
     options = focus_tag_options({"conferences": []})
     by_id = {entry.id: entry for entry in entries}
+    by_option = {option["id"]: option for option in options}
 
     assert "cloud_native" in by_id["socc"].focus_tags
     assert "cloud_security" in by_id["cscloud"].focus_tags
-    assert any(option["id"] == "cloud_native" for option in options)
+    assert "cloud_native" in by_option
+    assert by_option["distributed_systems"]["label"] == "Systems / Distributed Systems"
 
 
 def test_local_catalog_override_keeps_rank_while_refining_category_and_focus():
