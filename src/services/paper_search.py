@@ -300,7 +300,13 @@ def search_saved_papers(
         paper = record["paper"]
         file_conference = record["file_conference"]
         file_year = record["file_year"]
-        keyword_score = _score_paper(paper, tokens, query)
+        keyword_score = _score_paper(
+            paper,
+            tokens,
+            query,
+            entry=entry,
+            file_conference=file_conference,
+        )
         concept_score = 0.0
         lexical_score = 0.0
         matched_concepts: list[str] = []
@@ -424,16 +430,40 @@ def _load_paper_file(path: str) -> list[dict[str, Any]]:
     return [item for item in data if isinstance(item, dict)]
 
 
-def _score_paper(paper: dict[str, Any], tokens: list[str], query: str) -> float:
+def _score_paper(
+    paper: dict[str, Any],
+    tokens: list[str],
+    query: str,
+    entry: ConferenceEntry | None = None,
+    file_conference: str | None = None,
+) -> float:
     if not tokens:
         return 0.0
 
     title = str(paper.get("title") or "")
     abstract = str(paper.get("abstract") or "")
     authors = " ".join(str(author) for author in (paper.get("authors") or []))
+    venue_values = [
+        paper.get("venue"),
+        file_conference,
+    ]
+    if entry:
+        venue_values.extend(
+            [
+                entry.id,
+                entry.display_name,
+                entry.full_name,
+                *entry.aliases,
+                entry.category,
+                entry.category_name,
+                " ".join(entry.focus_tags),
+            ]
+        )
+    venue_text = " ".join(str(value or "").replace("_", " ") for value in venue_values)
     haystacks = [
         (title.lower(), 5.0),
         (abstract.lower(), 2.0),
+        (venue_text.lower(), 4.0),
         (authors.lower(), 1.0),
     ]
 
@@ -448,6 +478,8 @@ def _score_paper(paper: dict[str, Any], tokens: list[str], query: str) -> float:
         score += 8.0
     elif phrase and phrase in abstract.lower():
         score += 3.0
+    elif phrase and phrase in venue_text.lower():
+        score += 6.0
 
     return score
 

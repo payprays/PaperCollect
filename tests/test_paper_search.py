@@ -98,6 +98,52 @@ def test_search_saved_papers_filters_by_focus_tag(tmp_path):
     assert "cloud_native" in results[0]["focus_tags"]
 
 
+def test_search_saved_papers_keyword_mode_matches_conference_metadata(tmp_path):
+    data_dir = tmp_path / "data"
+    data_dir.mkdir()
+    (data_dir / "usenix-atc_2025.json").write_text(
+        json.dumps(
+            [
+                {
+                    "title": "SpaceExit",
+                    "authors": ["A. Researcher"],
+                    "venue": "USENIX ATC",
+                    "year": 2025,
+                    "abstract": "Adaptive computing with early exits.",
+                }
+            ]
+        ),
+        encoding="utf-8",
+    )
+
+    config = {
+        "include_ccfddl_catalog": False,
+        "conferences": [
+            {
+                "id": "usenix-atc",
+                "display_name": "USENIX ATC",
+                "full_name": "USENIX Annual Technical Conference",
+                "aliases": ["ATC", "SIGOPS ATC"],
+                "category": "DS",
+                "focus_tags": ["distributed_systems", "cloud_native"],
+                "dblp_stream": "conf/usenix",
+            }
+        ],
+    }
+
+    results = search_saved_papers(
+        config,
+        str(data_dir),
+        "USENIX ATC",
+        limit=10,
+        mode="keyword",
+    )
+
+    assert len(results) == 1
+    assert results[0]["conference"] == "usenix-atc"
+    assert results[0]["display_name"] == "USENIX ATC"
+
+
 def test_search_saved_papers_concept_mode_expands_scientific_concepts(tmp_path):
     data_dir = tmp_path / "data"
     data_dir.mkdir()
