@@ -113,42 +113,56 @@ def create_app(config_path: str = "config.yaml") -> Flask:
     def collect() -> tuple[Response, int] | Response:
         payload = request.get_json(silent=True) or {}
         config = _load_config(config_path)
-        validation_error = _validate_collection_payload(payload, config)
+        conferences, validation_error = _resolve_collection_conferences(payload, config)
         if validation_error:
             return jsonify({"error": validation_error}), 400
+
+        try:
+            year = int(payload["year"])
+        except (KeyError, TypeError, ValueError):
+            return jsonify({"error": "Choose a valid year from config.yaml."}), 400
+        if not valid_collection_year(year):
+            return jsonify({"error": "Choose a year between 1900 and two years from now."}), 400
+
+        try:
+            limit = _resolve_limit(payload.get("limit"), config)
+        except ValueError as exc:
+            return jsonify({"error": str(exc)}), 400
 
         if not collection_lock.acquire(blocking=False):
             return jsonify({"error": "A collection job is already running."}), 409
 
-        conference = find_conference(config, str(payload["conference"]))
-        if conference is None:
-            return jsonify({"error": "Choose a conference from config.yaml."}), 400
-        year = int(payload["year"])
-        limit = _resolve_limit(payload.get("limit"), config)
         output_dir = str(config.get("output_dir", "data"))
         threads = int(config.get("concurrency", {}).get("threads", 4))
 
         job_id = str(next(job_ids))
+        feed_urls = [_feed_url(conference, year) for conference in conferences]
+        single_conference = len(conferences) == 1
         job = {
             "id": job_id,
             "status": "queued",
-            "conference": conference.id,
-            "display_name": conference.display_name,
+            "conference": conferences[0].id,
+            "display_name": conferences[0].display_name if single_conference else f"{len(conferences)} conferences",
+            "conferences": [conference.id for conference in conferences],
+            "display_names": [conference.display_name for conference in conferences],
+            "conference_count": len(conferences),
+            "completed_count": 0,
+            "failed_count": 0,
+            "results": [],
+            "errors": [],
             "year": year,
             "limit": limit,
-            "logs": [
-                f"Queued collection for {conference.display_name} {year}.",
-                f"RSS feed will be available at {_feed_url(conference, year)}.",
-            ],
+            "logs": _queued_collection_logs(conferences, year, feed_urls),
             "paper_count": None,
-            "feed_url": _feed_url(conference, year),
+            "feed_url": feed_urls[0] if single_conference else None,
+            "feed_urls": feed_urls,
         }
         with jobs_lock:
             jobs[job_id] = job
 
         thread = threading.Thread(
             target=_run_collection_job,
-            args=(job, conference, output_dir, threads, collection_lock),
+            args=(job, conferences, output_dir, threads, collection_lock),
             daemon=True,
         )
         thread.start()
@@ -267,56 +281,128 @@ def create_app(config_path: str = "config.yaml") -> Flask:
 
     def _run_collection_job(
         job: dict[str, Any],
-        conference: ConferenceEntry,
+        conferences: list[ConferenceEntry],
         output_dir: str,
         threads: int,
         active_lock: threading.Lock,
     ) -> None:
         _update_job(job, status="running")
-        _append_job_log(job, f"Started collection for {conference.display_name} {job['year']}.")
-        _append_job_log(
-            job,
-            "Using "
-            f"DBLP stream {conference.dblp_stream or conference.display_name}; "
-            f"limit={job['limit']}; metadata_threads={threads}.",
-        )
-        _append_job_log(job, "Fetching DBLP entries and metadata. This can take a while.")
-        log_writer = _JobLogWriter(lambda line: _append_job_log(job, line))
+        total = len(conferences)
+        results: list[dict[str, Any]] = []
+        errors: list[dict[str, str]] = []
         try:
             os.makedirs(output_dir, exist_ok=True)
-            with redirect_stdout(log_writer):
-                process_conference_year(
-                    conference,
-                    job["year"],
-                    DBLPClient(),
-                    MetadataManager(threads=threads),
-                    output_dir,
-                    job["limit"],
-                )
-            log_writer.flush()
 
-            papers = load_papers(
-                output_dir,
-                conference.id,
-                job["year"],
-                aliases=[conference.display_name, *conference.aliases],
-            )
-            output_path = get_output_path(output_dir, conference, job["year"])
-            _append_job_log(job, f"Completed collection with {len(papers)} saved papers.")
-            _append_job_log(job, f"Saved JSON output to {output_path}.")
-            _update_job(
-                job,
-                status="completed",
-                paper_count=len(papers),
-                output_path=output_path,
-            )
-        except Exception as exc:
-            log_writer.flush()
-            _append_job_log(job, f"Collection failed: {exc}")
+            for index, conference in enumerate(conferences, start=1):
+                progress = f" ({index}/{total})" if total > 1 else ""
+                _append_job_log(job, f"Started collection for {conference.display_name} {job['year']}{progress}.")
+                _append_job_log(
+                    job,
+                    "Using "
+                    f"DBLP stream {conference.dblp_stream or conference.display_name}; "
+                    f"limit={job['limit']}; metadata_threads={threads}.",
+                )
+                _append_job_log(job, "Fetching DBLP entries and metadata. This can take a while.")
+                log_writer = _JobLogWriter(lambda line: _append_job_log(job, line))
+                try:
+                    with redirect_stdout(log_writer):
+                        process_conference_year(
+                            conference,
+                            job["year"],
+                            DBLPClient(),
+                            MetadataManager(threads=threads),
+                            output_dir,
+                            job["limit"],
+                        )
+                    log_writer.flush()
+
+                    papers = load_papers(
+                        output_dir,
+                        conference.id,
+                        job["year"],
+                        aliases=[conference.display_name, *conference.aliases],
+                    )
+                    output_path = get_output_path(output_dir, conference, job["year"])
+                    result = {
+                        "conference": conference.id,
+                        "display_name": conference.display_name,
+                        "paper_count": len(papers),
+                        "output_path": output_path,
+                        "feed_url": _feed_url(conference, job["year"]),
+                    }
+                    results.append(result)
+                    if total == 1:
+                        _append_job_log(job, f"Completed collection with {len(papers)} saved papers.")
+                    else:
+                        _append_job_log(job, f"Completed {conference.display_name} with {len(papers)} saved papers.")
+                    _append_job_log(job, f"Saved JSON output to {output_path}.")
+                    _update_job(
+                        job,
+                        completed_count=len(results),
+                        failed_count=len(errors),
+                        results=list(results),
+                        errors=list(errors),
+                        paper_count=sum(result["paper_count"] for result in results),
+                        output_paths=[result["output_path"] for result in results],
+                    )
+                except Exception as exc:
+                    log_writer.flush()
+                    error = {
+                        "conference": conference.id,
+                        "display_name": conference.display_name,
+                        "error": str(exc),
+                    }
+                    errors.append(error)
+                    if total == 1:
+                        _append_job_log(job, f"Collection failed: {exc}")
+                        _update_job(
+                            job,
+                            status="failed",
+                            error=str(exc),
+                            failed_count=1,
+                            errors=list(errors),
+                        )
+                        return
+                    _append_job_log(job, f"Collection failed for {conference.display_name}: {exc}")
+                    _update_job(
+                        job,
+                        completed_count=len(results),
+                        failed_count=len(errors),
+                        errors=list(errors),
+                    )
+
+            if results:
+                if total > 1:
+                    _append_job_log(
+                        job,
+                        f"Batch completed: {len(results)} succeeded, {len(errors)} failed.",
+                    )
+                _update_job(
+                    job,
+                    status="completed",
+                    paper_count=sum(result["paper_count"] for result in results),
+                    output_path=results[0]["output_path"] if total == 1 else None,
+                    output_paths=[result["output_path"] for result in results],
+                    feed_url=results[0]["feed_url"] if total == 1 else None,
+                    feed_urls=[result["feed_url"] for result in results],
+                    results=list(results),
+                    errors=list(errors),
+                    completed_count=len(results),
+                    failed_count=len(errors),
+                )
+                return
+
+            error_message = "All selected conferences failed."
+            if errors:
+                error_message = "; ".join(
+                    f"{error['display_name']}: {error['error']}" for error in errors
+                )
             _update_job(
                 job,
                 status="failed",
-                error=str(exc),
+                error=error_message,
+                errors=list(errors),
+                failed_count=len(errors),
             )
         finally:
             active_lock.release()
@@ -376,11 +462,55 @@ def _prefix_rule(url_base: str, rule: str) -> str:
     return _with_url_base(rule, url_base)
 
 
+def _queued_collection_logs(conferences: list[ConferenceEntry], year: int, feed_urls: list[str]) -> list[str]:
+    if len(conferences) == 1:
+        return [
+            f"Queued collection for {conferences[0].display_name} {year}.",
+            f"RSS feed will be available at {feed_urls[0]}.",
+        ]
+
+    return [
+        f"Queued collection for {len(conferences)} conferences in {year}.",
+        "RSS feeds will be available as each conference completes.",
+    ]
+
+
+def _resolve_collection_conferences(
+    payload: dict[str, Any],
+    config: dict[str, Any],
+) -> tuple[list[ConferenceEntry], str | None]:
+    raw_values = payload.get("conferences")
+    if raw_values is None:
+        raw_value = payload.get("conference")
+        raw_values = [raw_value] if raw_value not in (None, "") else []
+    elif isinstance(raw_values, str):
+        raw_values = [raw_values]
+
+    if not isinstance(raw_values, list):
+        return [], "Choose conferences from config.yaml."
+
+    conferences = []
+    seen = set()
+    for raw_value in raw_values:
+        if raw_value in (None, ""):
+            continue
+        entry = find_conference(config, str(raw_value))
+        if entry is None:
+            return [], "Choose conferences from config.yaml."
+        if entry.id in seen:
+            continue
+        conferences.append(entry)
+        seen.add(entry.id)
+
+    if not conferences:
+        return [], "Choose at least one conference from config.yaml."
+    return conferences, None
+
+
 def _validate_collection_payload(payload: dict[str, Any], config: dict[str, Any]) -> str | None:
-    conference = payload.get("conference")
-    entry = find_conference(config, str(conference)) if conference else None
-    if entry is None:
-        return "Choose a conference from config.yaml."
+    _, conference_error = _resolve_collection_conferences(payload, config)
+    if conference_error:
+        return conference_error
 
     try:
         year = int(payload.get("year"))

@@ -280,6 +280,31 @@ def test_collect_rejects_conference_not_in_config(tmp_path):
     assert "conference" in response.get_json()["error"]
 
 
+def test_collect_rejects_empty_conference_batch(tmp_path):
+    config_path = tmp_path / "config.yaml"
+    config_path.write_text(
+        yaml.safe_dump(
+            {
+                "conferences": [
+                    {
+                        "id": "icse",
+                        "display_name": "ICSE",
+                        "dblp_stream": "conf/icse",
+                    }
+                ],
+                "years": [2025],
+            }
+        ),
+        encoding="utf-8",
+    )
+
+    client = create_app(str(config_path)).test_client()
+    response = client.post("/api/collect", json={"conferences": [], "year": 2025, "limit": 1})
+
+    assert response.status_code == 400
+    assert "conference" in response.get_json()["error"]
+
+
 def test_collect_accepts_year_not_listed_in_config(tmp_path, monkeypatch):
     data_dir = tmp_path / "data"
     config_path = tmp_path / "config.yaml"
@@ -313,6 +338,73 @@ def test_collect_accepts_year_not_listed_in_config(tmp_path, monkeypatch):
     response = client.post("/api/collect", json={"conference": "icse", "year": 2026, "limit": 1})
 
     assert response.status_code == 202
+
+
+def test_collect_endpoint_runs_batch_and_records_partial_failures(tmp_path, monkeypatch):
+    data_dir = tmp_path / "data"
+    config_path = tmp_path / "config.yaml"
+    config_path.write_text(
+        yaml.safe_dump(
+            {
+                "include_ccfddl_catalog": False,
+                "conferences": [
+                    {
+                        "id": "icse",
+                        "display_name": "ICSE",
+                        "dblp_stream": "conf/icse",
+                    },
+                    {
+                        "id": "fse",
+                        "display_name": "FSE",
+                        "dblp_stream": "conf/sigsoft",
+                    },
+                ],
+                "years": [2025],
+                "output_dir": str(data_dir),
+                "concurrency": {"threads": 1},
+            }
+        ),
+        encoding="utf-8",
+    )
+    calls = []
+
+    def fake_process_conference_year(conf, year, dblp_client, metadata_manager, output_dir, limit):
+        calls.append(conf.id)
+        print(f"Mock collector reached {conf.display_name}.")
+        if conf.id == "fse":
+            raise RuntimeError("FSE timed out")
+        output_path = get_output_path(output_dir, conf, year)
+        data_dir.mkdir(exist_ok=True)
+        with open(output_path, "w", encoding="utf-8") as f:
+            json.dump([{"title": "Collected ICSE Paper", "authors": [], "venue": "ICSE", "year": year}], f)
+
+    monkeypatch.setattr("src.web.app.process_conference_year", fake_process_conference_year)
+
+    client = create_app(str(config_path)).test_client()
+    response = client.post(
+        "/api/collect",
+        json={"conferences": ["icse", "icse", "fse"], "year": 2025, "limit": 1},
+    )
+
+    assert response.status_code == 202
+    status_url = response.get_json()["status_url"]
+
+    status = None
+    for _ in range(20):
+        status = client.get(status_url).get_json()
+        if status["status"] == "completed":
+            break
+        time.sleep(0.05)
+
+    assert calls == ["icse", "fse"]
+    assert status["status"] == "completed"
+    assert status["conference_count"] == 2
+    assert status["completed_count"] == 1
+    assert status["failed_count"] == 1
+    assert status["paper_count"] == 1
+    assert status["feed_urls"] == ["/feed/icse/2025.xml"]
+    assert status["errors"] == [{"conference": "fse", "display_name": "FSE", "error": "FSE timed out"}]
+    assert "Collection failed for FSE: FSE timed out" in status["logs"]
 
 
 def test_search_endpoint_returns_saved_papers(tmp_path):

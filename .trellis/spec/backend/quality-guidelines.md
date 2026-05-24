@@ -74,7 +74,8 @@ Questions to answer:
 
 ### 3. Contracts
 - `POST /api/collect` request fields:
-  - `conference`: string id or alias, must resolve through `find_conference`.
+  - `conference`: string id or alias, must resolve through `find_conference`; keep this legacy single-conference field working.
+  - `conferences`: optional array of string ids or aliases for batch collection; when present, validate every item through `find_conference`, ignore duplicates by normalized conference id, and reject an empty resulting selection.
   - `year`: integer, must pass `valid_collection_year`; it does not need to be present in `config.yaml` `years`.
   - `limit`: optional non-negative integer; empty means `limit_per_conference`.
 - Conference catalog fields:
@@ -105,8 +106,10 @@ Questions to answer:
   - Existing running job: HTTP 409 with `error`.
 - Job response fields:
   - `id`, `status`, `conference`, `display_name`, `year`, `limit`, `logs`, `feed_url`.
+  - Batch jobs also include `conferences`, `display_names`, `conference_count`, `completed_count`, `failed_count`, `results`, `errors`, and `feed_urls`.
   - `logs` must be incrementally visible while a job is still `queued` or `running`; do not buffer all stdout until completion.
-  - Completed jobs include `paper_count` and `output_path`.
+  - Completed single-conference jobs include `paper_count` and `output_path`; completed batch jobs include total `paper_count` plus per-conference `results` and `output_paths`.
+  - Batch collection should run selected conferences sequentially inside one background job. If one conference fails, record it in `errors`, continue the remaining conferences, and complete the job when at least one selected conference produced saved output.
   - Failed jobs include `error`.
 - RSS response:
   - Success: HTTP 200, `application/rss+xml`, RSS 2.0 XML.
@@ -122,6 +125,7 @@ Questions to answer:
 
 ### 4. Validation & Error Matrix
 - Conference missing or not configured -> 400.
+- `conferences` is present but empty, not an array/string, or resolves to no known entries -> 400.
 - Year missing, non-integer, before 1900, or more than two years ahead of the current year -> 400.
 - Limit non-integer or negative -> 400.
 - Second collection request while one is running -> 409.
@@ -135,6 +139,7 @@ Questions to answer:
 ### 5. Good/Base/Bad Cases
 - Good: configured `ICSE` and `2025` with saved JSON returns RSS items.
 - Base: valid collection request starts a background job and returns a status URL.
+- Batch: valid `conferences=["icse","fse"]` request starts one background job that processes the two conferences sequentially and exposes per-conference `results`/`errors`.
 - Bad: unknown conference is rejected before any network collection starts.
 - Legacy: string-only `conferences: ["ICSE"]` still normalizes to `id="icse"` and `dblp_stream="conf/icse"`.
 - Search: query `fuzzing` with category `SE` returns matching saved ICSE papers when present.
@@ -147,6 +152,7 @@ Questions to answer:
 - Options endpoint returns conference catalog objects, not raw strings.
 - Collection endpoint validates conference/year/limit.
 - Collection endpoint accepts a reasonable year that is not listed in config so the UI can crawl newly published proceedings.
+- Collection endpoint accepts a batch `conferences` array, de-duplicates repeated ids, streams per-conference logs, records partial failures, and keeps successful feeds visible.
 - Collection endpoint success path is tested with the collection function mocked; do not hit DBLP in unit tests.
 - Collection endpoint log streaming is tested with a mocked long-running collection function; assert `/api/jobs/<job_id>` includes captured output before the job completes.
 - Collection endpoint failure path is tested with the collection function mocked to raise; assert `/api/jobs/<job_id>` becomes `failed` and includes the captured DBLP-stage log.

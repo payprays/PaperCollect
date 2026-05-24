@@ -116,11 +116,94 @@ button:hover {
   background: #1d49a6;
 }
 
+button.secondary {
+  border: 1px solid var(--line);
+  background: #fff;
+  color: var(--text);
+  padding: 8px 11px;
+  font-weight: 650;
+}
+
+button.secondary:hover {
+  background: #eef2f7;
+}
+
 .actions {
   display: flex;
   align-items: center;
   gap: 12px;
   margin-top: 16px;
+}
+
+.conference-tools {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+#conference-count {
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 700;
+  margin-right: 4px;
+}
+
+.conference-picker {
+  display: grid;
+  gap: 10px;
+  max-height: 320px;
+  overflow: auto;
+  margin-top: 12px;
+  padding: 12px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: #fbfcfe;
+}
+
+.conference-group {
+  display: grid;
+  gap: 6px;
+}
+
+.conference-group + .conference-group {
+  border-top: 1px solid var(--line);
+  padding-top: 10px;
+}
+
+.conference-group h3 {
+  margin: 0;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 750;
+}
+
+.conference-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 4px 12px;
+}
+
+.conference-option {
+  display: flex;
+  align-items: center;
+  min-height: 30px;
+  gap: 7px;
+  color: var(--text);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.conference-option input {
+  width: auto;
+  margin: 0;
+}
+
+.conference-option span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 #rss-link {
@@ -231,5 +314,9 @@ a {
   .panel + .panel,
   label + label {
     margin-top: 14px;
+  }
+
+  .conference-list {
+    grid-template-columns: 1fr;
   }
 }

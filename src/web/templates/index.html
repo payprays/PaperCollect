@@ -20,17 +20,13 @@
           <div class="panel">
             <form id="collect-form">
               <div class="form-grid">
-              <label>
-                Category
-                <select id="collect-category" name="category"></select>
-              </label>
-              <label>
-                Focus
-                <select id="collect-focus" name="focus"></select>
-              </label>
-              <label>
-                Conference
-                <select id="conference" name="conference"></select>
+                <label>
+                  Category
+                  <select id="collect-category" name="category"></select>
+                </label>
+                <label>
+                  Focus
+                  <select id="collect-focus" name="focus"></select>
                 </label>
                 <label>
                   Year
@@ -42,6 +38,13 @@
                   <input id="limit" name="limit" type="number" min="0" step="1">
                 </label>
               </div>
+              <div class="conference-tools">
+                <span id="conference-count">0 selected</span>
+                <button id="collect-select-visible" type="button" class="secondary">Select visible</button>
+                <button id="collect-clear-visible" type="button" class="secondary">Clear visible</button>
+                <button id="collect-clear-all" type="button" class="secondary">Clear all</button>
+              </div>
+              <div id="conference-picker" class="conference-picker" aria-label="Conferences to collect"></div>
               <div class="actions">
                 <button type="submit">Collect</button>
                 <a id="rss-link" class="hidden" href="#" target="_blank" rel="noreferrer"></a>
