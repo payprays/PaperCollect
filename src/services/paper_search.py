@@ -431,7 +431,7 @@ def _search_agentic_or_fallback(
                     limit=limit,
                 )
             fallback_reason = "vector search returned no matches"
-        except (VectorIndexError, OSError, ValueError) as exc:
+        except (VectorIndexError, OSError, RuntimeError, ValueError) as exc:
             fallback_reason = str(exc)
 
     fallback_results = search_saved_papers(

@@ -268,7 +268,7 @@ def create_app(config_path: str = "config.yaml") -> Flask:
         if mode == "agentic":
             try:
                 payload["index_status"] = vector_index_status(config)
-            except (VectorIndexError, OSError, ValueError) as exc:
+            except (VectorIndexError, OSError, RuntimeError, ValueError) as exc:
                 payload["index_status"] = {"indexed": False, "error": str(exc)}
         return jsonify(payload)
 
@@ -277,7 +277,7 @@ def create_app(config_path: str = "config.yaml") -> Flask:
         config = _load_config(config_path)
         try:
             return jsonify(vector_index_status(config))
-        except (VectorIndexError, OSError, ValueError) as exc:
+        except (VectorIndexError, OSError, RuntimeError, ValueError) as exc:
             return jsonify({"error": str(exc), "indexed": False}), 503
 
     @route("/feed/<path:conference>/<int:year>.xml", methods=["GET"])

@@ -123,3 +123,45 @@ def test_agentic_search_falls_back_to_concept_when_index_missing(tmp_path):
     assert results[0]["search_mode"] == "agentic_fallback"
     assert results[0]["retrieval_backend"] == "concept_semantic"
     assert "Run pc-index first" in results[0]["fallback_reason"]
+
+
+def test_agentic_search_falls_back_when_qdrant_local_path_is_locked(tmp_path, monkeypatch):
+    data_dir = tmp_path / "data"
+    data_dir.mkdir()
+    (data_dir / "ndss_2026.json").write_text(
+        json.dumps(
+            [
+                {
+                    "title": "Kubernetes Policy Verification",
+                    "authors": ["A. Researcher"],
+                    "venue": "NDSS",
+                    "year": 2026,
+                    "abstract": "A paper about Kubernetes admission control and cluster security.",
+                }
+            ]
+        ),
+        encoding="utf-8",
+    )
+    config = {
+        "include_ccfddl_catalog": False,
+        "conferences": [{"id": "ndss", "display_name": "NDSS", "category": "SC"}],
+    }
+
+    import src.services.vector_index as vector_index
+
+    def raise_locked(*_args, **_kwargs):
+        raise RuntimeError("Storage folder data/qdrant is already accessed")
+
+    monkeypatch.setattr(vector_index, "search_vector_index", raise_locked)
+
+    results = search_saved_papers(
+        config,
+        str(data_dir),
+        "kubernetes security",
+        mode="agentic",
+        limit=5,
+    )
+
+    assert results[0]["title"] == "Kubernetes Policy Verification"
+    assert results[0]["search_mode"] == "agentic_fallback"
+    assert "already accessed" in results[0]["fallback_reason"]
