@@ -1,0 +1,82 @@
+[
+  {
+    "title": "Computer Security - ESORICS 2025 - 30th European Symposium on Research in Computer Security, Toulouse, France, September 22-24, 2025, Proceedings, Part I",
+    "authors": [
+      "Vincent Nicomette",
+      "Abdelmalek Benzekri",
+      "Nora Boulahia-Cuppens",
+      "Jaideep Vaidya"
+    ],
+    "venue": [
+      "ESORICS",
+      "Lecture Notes in Computer Science"
+    ],
+    "year": 2026,
+    "abstract": null,
+    "citation_count": 0,
+    "reference_count": 0,
+    "url": "https://dblp.org/rec/conf/esorics/2025-1",
+    "dblp_key": "conf/esorics/2025-1",
+    "source_id": "feb255f774ffdbc702cfd854caa8ae595608a708"
+  },
+  {
+    "title": "Computer Security - ESORICS 2025 - 30th European Symposium on Research in Computer Security, Toulouse, France, September 22-24, 2025, Proceedings, Part II",
+    "authors": [
+      "Vincent Nicomette",
+      "Abdelmalek Benzekri",
+      "Nora Boulahia-Cuppens",
+      "Jaideep Vaidya"
+    ],
+    "venue": [
+      "ESORICS",
+      "Lecture Notes in Computer Science"
+    ],
+    "year": 2026,
+    "abstract": null,
+    "citation_count": 0,
+    "reference_count": 0,
+    "url": "https://dblp.org/rec/conf/esorics/2025-2",
+    "dblp_key": "conf/esorics/2025-2",
+    "source_id": "c4236a2e0d1ecc2ee863736e44caa11a21f691bf"
+  },
+  {
+    "title": "Computer Security - ESORICS 2025 - 30th European Symposium on Research in Computer Security, Toulouse, France, September 22-24, 2025, Proceedings, Part III",
+    "authors": [
+      "Vincent Nicomette",
+      "Abdelmalek Benzekri",
+      "Nora Boulahia-Cuppens",
+      "Jaideep Vaidya"
+    ],
+    "venue": [
+      "ESORICS",
+      "Lecture Notes in Computer Science"
+    ],
+    "year": 2026,
+    "abstract": null,
+    "citation_count": null,
+    "reference_count": null,
+    "url": "https://dblp.org/rec/conf/esorics/2025-3",
+    "dblp_key": "conf/esorics/2025-3",
+    "source_id": null
+  },
+  {
+    "title": "Computer Security - ESORICS 2025 - 30th European Symposium on Research in Computer Security, Toulouse, France, September 22-24, 2025, Proceedings, Part IV",
+    "authors": [
+      "Vincent Nicomette",
+      "Abdelmalek Benzekri",
+      "Nora Boulahia-Cuppens",
+      "Jaideep Vaidya"
+    ],
+    "venue": [
+      "ESORICS",
+      "Lecture Notes in Computer Science"
+    ],
+    "year": 2026,
+    "abstract": null,
+    "citation_count": 0,
+    "reference_count": 0,
+    "url": "https://dblp.org/rec/conf/esorics/2025-4",
+    "dblp_key": "conf/esorics/2025-4",
+    "source_id": "6d0e7f7baaf32b3d68cb8ad66dbe6c0359d9b9bb"
+  }
+]

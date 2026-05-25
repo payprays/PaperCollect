@@ -1,0 +1,2501 @@
+[
+  {
+    "title": "SoK: Rowhammer on Commodity Operating Systems.",
+    "authors": [
+      "Zhi Zhang 0001",
+      "Decheng Chen",
+      "Jiahao Qi",
+      "Yueqiang Cheng",
+      "Shijie Jiang",
+      "Yiyang Lin",
+      "Yansong Gao 0001",
+      "Surya Nepal",
+      "Yi Zou",
+      "Jiliang Zhang 0002",
+      "Yang Xiang 0001"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2024,
+    "abstract": "Rowhammer has drawn much attention from both academia and industry in the past years as rowhammer exploitation poses severe consequences to system security. Since the first comprehensive study of rowhammer in 2014, a number of rowhammer attacks have been demonstrated against dynamic random access memory (DRAM)-based commodity systems to break software confidentiality, integrity and availability. Accordingly, numerous software defenses have been proposed to mitigate rowhammer attacks on commodity systems of either legacy (e.g., DDR3) or recent DRAM (e.g., DDR4). Besides, multiple hardware defenses (e.g., Target Row Refresh) from the industry have been deployed into recent DRAM to eliminate rowhammer, which we categorize as production defenses.   In this paper, we systematize rowhammer attacks and defenses with a focus on DRAM-based commodity systems. Particularly, we have established a unified framework demonstrating how a rowhammer attack affects a commodity system. With the framework, we characterize existing attacks, shedding light on new attack vectors that have not yet been explored. We further leverage the framework to categorize software and production defenses, generalize their key defense strategies and summarize their key limitations, from which potential defense strategies are identified.",
+    "citation_count": 3,
+    "reference_count": 32,
+    "url": "https://dblp.org/rec/conf/asiaccs/0001CQCJLGNZ0024",
+    "dblp_key": "conf/asiaccs/0001CQCJLGNZ0024",
+    "source_id": "https://openalex.org/W4400121246"
+  },
+  {
+    "title": "Transferable, Auditable and Anonymous Ticketing Protocol.",
+    "authors": [
+      "Pascal Lafourcade 0001",
+      "Dhekra Mahmoud",
+      "Gaël Marcadet",
+      "Charles Olivier-Anclin"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2024,
+    "abstract": null,
+    "citation_count": 0,
+    "reference_count": 42,
+    "url": "https://dblp.org/rec/conf/asiaccs/0001MMO24",
+    "dblp_key": "conf/asiaccs/0001MMO24",
+    "source_id": "https://openalex.org/W4399877812"
+  },
+  {
+    "title": "SoK: CryptographicEstimators - a Software Library for Cryptographic Hardness Estimation.",
+    "authors": [
+      "Andre Esser 0001",
+      "Javier A. Verbel",
+      "Floyd Zweydinger",
+      "Emanuele Bellini 0002"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2024,
+    "abstract": null,
+    "citation_count": 11,
+    "reference_count": 44,
+    "url": "https://dblp.org/rec/conf/asiaccs/0001VZ024",
+    "dblp_key": "conf/asiaccs/0001VZ024",
+    "source_id": "https://openalex.org/W4400121811"
+  },
+  {
+    "title": "Ratel: MPC-extensions for Smart Contracts.",
+    "authors": [
+      "Yunqi Li 0002",
+      "Kyle Soska",
+      "Zhen Huang",
+      "Sylvain Bellemare",
+      "Mikerah Quintyne-Collins",
+      "Lun Wang 0001",
+      "Xiaoyuan Liu",
+      "Dawn Song",
+      "Andrew Miller 0001"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2024,
+    "abstract": "Enhancing privacy on smart contract-enabled blockchains has garnered much attention in recent research. Zero-knowledge proofs (ZKPs) is one of the most popular approaches, however, they fail to provide full expressiveness and fine-grained privacy. To illustrate this, we underscore an underexplored type of Miner Extractable Value (MEV), called Residual Bids Extractable Value (RBEV). Residual bids highlight the vulnerability where unfulfilled bids inadvertently reveal traders' unmet demands and prospective trading strategies, thus exposing them to exploitation. ZKP-based approaches failed to address RBEV as they cannot provide post-execution privacy without some level of information disclosure. Other MEV mitigations like fair-ordering protocols also failed to address RBEV. We introduce Ratel, an innovative framework bridging a multi-party computation (MPC) prototyping framework (MP-SPDZ) and a smart contract language (Solidity), harmonizing the privacy with full expressiveness of MPC with Solidity 's on-chain programmability. This synergy empowers developers to effortlessly craft privacy-preserving decentralized applications (DApps). We demonstrate Ratel's efficacy through two distinguished decentralized finance (DeFi) applications: a decentralized exchange and a collateral auction, effectively mitigating the potential RBEV issue. Furthermore, Ratel is equipped with a lightweight crash-reset mechanism, enabling the seamless recovery of transiently benign faulty nodes. To prevent the crash-reset mechanism abused by malicious entities and ward off DoS attacks, we incorporate a cost-utility analysis anchored in the Bayesian approach. Our performance evaluation of the applications developed under the Ratel framework underscores their competency in managing real-world peak-time workloads.",
+    "citation_count": 2,
+    "reference_count": 43,
+    "url": "https://dblp.org/rec/conf/asiaccs/0002SHBQWLS024",
+    "dblp_key": "conf/asiaccs/0002SHBQWLS024",
+    "source_id": "https://openalex.org/W4400121544"
+  },
+  {
+    "title": "Efficient Post-Quantum Secure Deterministic Threshold Wallets from Isogenies.",
+    "authors": [
+      "Poulami Das 0003",
+      "Andreas Erwig",
+      "Michael Meyer 0001",
+      "Patrick Struck"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2024,
+    "abstract": "Cryptocurrency networks crucially rely on digital signature schemes, which are used as an authentication mechanism for transactions. Unfortunately, most major cryptocurren- cies today, including Bitcoin and Ethereum, employ signature schemes that are susceptible to quantum adversaries, i.e., an adversary with access to a quantum computer can forge signatures and thereby spend coins of honest users. In cryptocurrency networks, signa- ture schemes are typically not executed in isolation, but within a so-called cryptographic wallet. In order to achieve security against quantum adversaries, the signature scheme and the cryptographic wallet must withstand quantum attacks. In this work, we advance the study on post-quantum secure signature and wallet schemes. That is, we provide the first formal model for deterministic threshold wallets and we show a generic post-quantum secure construction from any post-quantum secure threshold signature scheme with rerandomizable keys. We then instantiate our construc- tion from the isogeny-based signature scheme CSI-FiSh and we show that our instantiation significantly improves over prior work.",
+    "citation_count": 3,
+    "reference_count": 40,
+    "url": "https://dblp.org/rec/conf/asiaccs/0003EMS24",
+    "dblp_key": "conf/asiaccs/0003EMS24",
+    "source_id": "https://openalex.org/W4400120435"
+  },
+  {
+    "title": "Madtls: Fine-grained Middlebox-aware End-to-end Security for Industrial Communication.",
+    "authors": [
+      "Eric Wagner 0003",
+      "David Heye",
+      "Martin Serror",
+      "Ike Kunze",
+      "Klaus Wehrle",
+      "Martin Henze"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2024,
+    "abstract": "Industrial control systems increasingly rely on middlebox functionality such as intrusion detection or in-network processing.However, traditional end-to-end security protocols interfere with the necessary access to in-flight data.While recent work on middlebox-aware end-to-end security protocols for the traditional Internet promises to address the dilemma between end-to-end security guarantees and middleboxes, the current state-of-the-art lacks critical features for industrial communication.Most importantly, industrial settings require fine-grained access control for middleboxes to truly operate in a least-privilege mode.Likewise, advanced applications even require that middleboxes can inject specific messages (e.g., emergency shutdowns).Meanwhile, industrial scenarios often expose tight latency and bandwidth constraints not found in the traditional Internet.As the current state-of-the-art misses critical features, we propose Middlebox-aware DTLS (Madtls), a middlebox-aware end-to-end security protocol specifically tailored to the needs of industrial networks.Madtls provides bit-level read and write access control of middleboxes to communicated data with minimal bandwidth and processing overhead, even on constrained hardware. CCS CONCEPTS• Networks → Middle boxes /",
+    "citation_count": 4,
+    "reference_count": 27,
+    "url": "https://dblp.org/rec/conf/asiaccs/0003HSKWH24",
+    "dblp_key": "conf/asiaccs/0003HSKWH24",
+    "source_id": "https://openalex.org/W4400121495"
+  },
+  {
+    "title": "Beneath the Phishing Scripts: A Script-Level Analysis of Phishing Kits and Their Impact on Real-World Phishing Websites.",
+    "authors": [
+      "Woonghee Lee 0004",
+      "Junbeom Hur",
+      "Doowon Kim"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2024,
+    "abstract": "Phishing kits have become increasingly popular among cybercriminals because they offer an easy-to-use and efficient way for phishing attackers to build phishing websites. Prior work on phishing kits has focused on analyzing specific behavioral features (e.g., evasion techniques), and measuring their effectiveness on the anti-phishing mechanisms. Unfortunately, such prior studies provide a limited perspective, either targeting specific phishing kits or not fully addressing the server-side strategies at the script level that offer insights into the phishing attacker's view. In this paper, we systematically conduct a comprehensive study of phishing kits at the script level, aiming to better understand the server-side behavior. Particularly, we design a crawler that periodically (every 15 mins) collects phishing kits used in the wild and client-side resources of real-world phishing websites (e.g., index.html, images, CSS, JavaScript) for 18 months. We utilize two types of our collected dataset (4,153 phishing kits and 2.4M phishing webpages) for our study. First, we classify user interaction patterns based on information-exfiltrating components of phishing kits into three categories: single-stage (non-real-time) phishing, multi-stage (non-real-time) phishing, and multi-stage (real-time) phishing. We then identify the potential information leakage of each pattern. Next, we conduct an in-depth script-level analysis of the evasive behaviors in the kits. Aiming to evaluate their practical impact on the phishing sites, we also measure how many phishing kits are used and deployed with an emphasis on the chronological trends for phishing attacks by clustering the landing pages of phishing kits with those of our collected phishing websites. Lastly, we discuss the security implications of our comprehensive study on web interaction, URL patterns/redirection, and kit-deployment trends in the phishing detection literature.",
+    "citation_count": 4,
+    "reference_count": 31,
+    "url": "https://dblp.org/rec/conf/asiaccs/0004HK24",
+    "dblp_key": "conf/asiaccs/0004HK24",
+    "source_id": "https://openalex.org/W4400120884"
+  },
+  {
+    "title": "Secure Data-Binding in FPGA-based Hardware Architectures utilizing PUFs.",
+    "authors": [
+      "Florian Frank 0004",
+      "Martin Schmid",
+      "Felix Klement",
+      "Purushothaman Palani",
+      "Andreas Weber",
+      "Elif Bilge Kavun",
+      "Wenjie Xiong 0001",
+      "Tolga Arul",
+      "Stefan Katzenbeisser 0001"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2024,
+    "abstract": "In this work, a novel FPGA-based data-binding architecture incorporating PUFs and a user-specific encryption key to protect the confidentiality of data on external non-volatile memories is presented. By utilizing an intrinsic PUF derived from the same memory, the confidential data is additionally bound to the device. This feature proves valuable in cases where software is restricted to be executed exclusively on specific hardware or privacy-critical data is not allowed to be decrypted elsewhere. To improve the resistance against hardware attacks, a novel method to randomly select memory cells utilized for PUF measurements is presented. The FPGA-based design presented in this work allows for low latency as well as small area utilization, offers high adaptability to diverse hardware and software platforms, and is accessible from bare-metal programs to full Linux kernels. Moreover, a detailed performance and security evaluation is conducted on five boards. A single read or write operation can be executed in 0.58 𝜇𝑠 when utilizing the lightweight PRINCE cipher on an AMD Zync 7000 MPSoC. Furthermore, the entire architecture occupies only about 10% of the FPGA’s available space on a resource-constrained AMD PYNQ-Z2. Ultimately, the implementation is demonstrated by storing confidential user data on new generations of network base stations equipped with FPGAs",
+    "citation_count": 0,
+    "reference_count": 45,
+    "url": "https://dblp.org/rec/conf/asiaccs/0004SKPWK0A024",
+    "dblp_key": "conf/asiaccs/0004SKPWK0A024",
+    "source_id": "https://openalex.org/W4400121546"
+  },
+  {
+    "title": "Auroch: Auction-Based Multipath Routing for Payment Channel Networks.",
+    "authors": [
+      "Mohammed Ababneh",
+      "Kartick Kolachala",
+      "Roopa Vishwanathan"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2024,
+    "abstract": null,
+    "citation_count": 1,
+    "reference_count": 13,
+    "url": "https://dblp.org/rec/conf/asiaccs/AbabnehKV24",
+    "dblp_key": "conf/asiaccs/AbabnehKV24",
+    "source_id": "https://openalex.org/W4400120607"
+  },
+  {
+    "title": "Mayhem: Targeted Corruption of Register and Stack Variables.",
+    "authors": [
+      "Andrew J. Adiletta",
+      "M. Caner Tol",
+      "Yarkin Doröz",
+      "Berk Sunar"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2024,
+    "abstract": "In the past decade, many vulnerabilities were discovered in microarchitectures which yielded attack vectors and motivated the study of countermeasures. Further, architectural and physical imperfections in DRAMs led to the discovery of Rowhammer attacks which give an adversary power to introduce bit flips in a victim's memory space. Numerous studies analyzed Rowhammer and proposed techniques to prevent it altogether or to mitigate its effects.   In this work, we push the boundary and show how Rowhammer can be further exploited to inject faults into stack variables and even register values in a victim's process. We achieve this by targeting the register value that is stored in the process's stack, which subsequently is flushed out into the memory, where it becomes vulnerable to Rowhammer. When the faulty value is restored into the register, it will end up used in subsequent iterations. The register value can be stored in the stack via latent function calls in the source or by actively triggering signal handlers. We demonstrate the power of the findings by applying the techniques to bypass SUDO and SSH authentication. We further outline how MySQL and other cryptographic libraries can be targeted with the new attack vector. There are a number of challenges this work overcomes with extensive experimentation before coming together to yield an end-to-end attack on an OpenSSL digital signature: achieving co-location with stack and register variables, with synchronization provided via a blocking window. We show that stack and registers are no longer safe from the Rowhammer attack.",
+    "citation_count": 2,
+    "reference_count": 45,
+    "url": "https://dblp.org/rec/conf/asiaccs/AdilettaTDS24",
+    "dblp_key": "conf/asiaccs/AdilettaTDS24",
+    "source_id": "https://openalex.org/W4400120800"
+  },
+  {
+    "title": "POSTER: iTieProbe: Is IoT Device Provisioning secure against MAC Layer authentication-token based replay attacks?",
+    "authors": [
+      "Anand Agrawal",
+      "Rajib Ranjan Maiti"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2024,
+    "abstract": null,
+    "citation_count": 1,
+    "reference_count": 0,
+    "url": "https://dblp.org/rec/conf/asiaccs/AgrawalM24",
+    "dblp_key": "conf/asiaccs/AgrawalM24",
+    "source_id": "https://openalex.org/W4400121265"
+  },
+  {
+    "title": "SoK: False Information, Bots and Malicious Campaigns: Demystifying Elements of Social Media Manipulations.",
+    "authors": [
+      "Mohammad Majid Akhtar",
+      "Rahat Masood",
+      "Muhammad Ikram 0001",
+      "Salil S. Kanhere"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2024,
+    "abstract": null,
+    "citation_count": 7,
+    "reference_count": 73,
+    "url": "https://dblp.org/rec/conf/asiaccs/AkhtarM0K24",
+    "dblp_key": "conf/asiaccs/AkhtarM0K24",
+    "source_id": "https://openalex.org/W4400120664"
+  },
+  {
+    "title": "VLIA: Navigating Shadows with Proximity for Highly Accurate Visited Location Inference Attack against Federated Recommendation Models.",
+    "authors": [
+      "Thirasara Ariyarathna",
+      "Meisam Mohammady",
+      "Hye-Young Paik",
+      "Salil S. Kanhere"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2024,
+    "abstract": "Personalized location recommendation allows users to enjoy a seamless travel experience by suggesting the optimal travel locations/routes based on user preferences. Most service providers collect users' location data centrally to develop accurate route recommendation applications. Federated learning (FL) can be used as an inherent privacy-preserving mechanism in these applications to prevent users from sharing private data. However, recent research shows that FL is still vulnerable to privacy leakages. Therefore, many FL-based recommendation systems use Local Differential Privacy (LDP) to defend against such attacks. In this paper, we propose the Visited Location Inference Attack (VLIA), a novel attack for federated location recommendation systems through the lens of Membership Inference Attack (MIA). Specifically, we focus on inferring user behaviour data (visited locations) even when the federated recommendation system is protected with LDP. We design and implement VLIA leveraging both embedding and proximity information of locations, making the inference more accurate. Our extensive experiments with two state-of-the-art personalized route recommendation (PRR) systems implemented in the FL setting and two real-world trajectory datasets showcase the effectiveness of the VLIA attack. Our results show that LDP cannot defend VLIA unless the recommendation performance is significantly compromised.",
+    "citation_count": 0,
+    "reference_count": 35,
+    "url": "https://dblp.org/rec/conf/asiaccs/AriyarathnaMPK24",
+    "dblp_key": "conf/asiaccs/AriyarathnaMPK24",
+    "source_id": "https://openalex.org/W4400121099"
+  },
+  {
+    "title": "Building Your Own Trusted Execution Environments Using FPGA.",
+    "authors": [
+      "Md. Armanuzzaman",
+      "Ahmad-Reza Sadeghi",
+      "Ziming Zhao 0001"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2024,
+    "abstract": "In recent years, we have witnessed unprecedented growth in using hardware-assisted Trusted Execution Environments (TEE) or enclaves to protect sensitive code and data on commodity devices thanks to new hardware security features, such as Intel SGX and Arm TrustZone. Even though the proprietary TEEs bring many benefits, they have been criticized for lack of transparency, vulnerabilities, and various restrictions. For example, existing TEEs only provide a static and fixed hardware Trusted Computing Base (TCB), which cannot be customized for different applications. Existing TEEs time-share a processor core with the Rich Execution Environment (REE), making execution less efficient and vulnerable to cache side-channel attacks. Moreover, TrustZone lacks hardware support for multiple TEEs, remote attestation, and memory encryption. In this paper, we present BYOTee (Build Your Own Trusted Execution Environments), which is an easy-to-use infrastructure for building multiple equally secure enclaves by utilizing commodity Field Programmable Gate Arrays (FPGA) devices. BYOTee creates enclaves with customized hardware TCBs, which include softcore CPUs, block RAMs, and peripheral connections, in FPGA on demand. Additionally, BYOTee provides mechanisms to attest the integrity of the customized enclaves' hardware and software stacks, including bitstream, firmware, and the Security-Sensitive Applications (SSA) along with their inputs and outputs to remote verifiers. We implement a BYOTee system for the Xilinx System-on-Chip (SoC) FPGA. The evaluations on the low-end Zynq-7000 system for four SSAs and 12 benchmark applications demonstrate the usage, security, effectiveness, and performance of the BYOTee framework.",
+    "citation_count": 5,
+    "reference_count": 0,
+    "url": "https://dblp.org/rec/conf/asiaccs/ArmanuzzamanSZ24",
+    "dblp_key": "conf/asiaccs/ArmanuzzamanSZ24",
+    "source_id": "https://openalex.org/W4226511101"
+  },
+  {
+    "title": "SecPLF: Secure Protocols for Loanable Funds against Oracle Manipulation Attacks.",
+    "authors": [
+      "Sanidhay Arora",
+      "Yingjiu Li",
+      "Yebo Feng",
+      "Jiahua Xu 0002"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2024,
+    "abstract": "The evolving landscape of Decentralized Finance (DeFi) has raised critical security concerns, especially pertaining to Protocols for Loanable Funds (PLFs) and their dependency on price oracles, which are susceptible to manipulation. The emergence of flash loans has further amplified these risks, enabling increasingly complex oracle manipulation attacks that can lead to significant financial losses. Responding to this threat, we first dissect the attack mechanism by formalizing the standard operational and adversary models for PLFs. Based on our analysis, we propose SecPLF, a robust and practical solution designed to counteract oracle manipulation attacks efficiently. SecPLF operates by tracking a price state for each crypto-asset, including the recent price and the timestamp of its last update. By imposing price constraints on the price oracle usage, SecPLF ensures a PLF only engages a price oracle if the last recorded price falls within a defined threshold, thereby negating the profitability of potential attacks. Our evaluation based on historical market data confirms SecPLF's efficacy in providing high-confidence prevention against arbitrage attacks that arise due to minor price differences. SecPLF delivers proactive protection against oracle manipulation attacks, offering ease of implementation, oracle-agnostic property, and resource and cost efficiency.",
+    "citation_count": 15,
+    "reference_count": 16,
+    "url": "https://dblp.org/rec/conf/asiaccs/AroraLFX24",
+    "dblp_key": "conf/asiaccs/AroraLFX24",
+    "source_id": "https://openalex.org/W4400121127"
+  },
+  {
+    "title": "SweetPAKE: Key exchange with decoy passwords.",
+    "authors": [
+      "Afonso Arriaga",
+      "Peter Y. A. Ryan",
+      "Marjan Skrobot"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2024,
+    "abstract": null,
+    "citation_count": 0,
+    "reference_count": 22,
+    "url": "https://dblp.org/rec/conf/asiaccs/ArriagaRS24",
+    "dblp_key": "conf/asiaccs/ArriagaRS24",
+    "source_id": "https://openalex.org/W4400121874"
+  },
+  {
+    "title": "ConFIDe: A PWM-Driven Control-Fused Intrusion Detection System for Hardware Security in Unmanned Aerial Vehicles.",
+    "authors": [
+      "Muneeba Asif",
+      "Mohammad Ashiqur Rahman",
+      "Kemal Akkaya",
+      "Ahmad Mohammad"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2024,
+    "abstract": null,
+    "citation_count": 2,
+    "reference_count": 35,
+    "url": "https://dblp.org/rec/conf/asiaccs/AsifRAM24",
+    "dblp_key": "conf/asiaccs/AsifRAM24",
+    "source_id": "https://openalex.org/W4400121174"
+  },
+  {
+    "title": "Tokenised Multi-client Provisioning for Dynamic Searchable Encryption with Forward and Backward Privacy.",
+    "authors": [
+      "Arnab Bag",
+      "Sikhar Patranabis",
+      "Debdeep Mukhopadhyay"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2024,
+    "abstract": null,
+    "citation_count": 3,
+    "reference_count": 26,
+    "url": "https://dblp.org/rec/conf/asiaccs/BagPM24",
+    "dblp_key": "conf/asiaccs/BagPM24",
+    "source_id": "https://openalex.org/W4400121239"
+  },
+  {
+    "title": "Formal Verification and Solutions for Estonian E-Voting.",
+    "authors": [
+      "Sevdenur Baloglu",
+      "Sergiu Bursuc",
+      "Sjouke Mauw",
+      "Jun Pang 0001"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2024,
+    "abstract": null,
+    "citation_count": 0,
+    "reference_count": 37,
+    "url": "https://dblp.org/rec/conf/asiaccs/BalogluBM024",
+    "dblp_key": "conf/asiaccs/BalogluBM024",
+    "source_id": "https://openalex.org/W4400120463"
+  },
+  {
+    "title": "ABBY: Automating leakage modelling for side-channel analysis.",
+    "authors": [
+      "Omid Bazangani",
+      "Alexandre Iooss",
+      "Ileana Buhan",
+      "Lejla Batina"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2024,
+    "abstract": "Contains fulltext : 308832.pdf (Publisher’s version ) (Open Access)",
+    "citation_count": 4,
+    "reference_count": 35,
+    "url": "https://dblp.org/rec/conf/asiaccs/BazanganiIBB24",
+    "dblp_key": "conf/asiaccs/BazanganiIBB24",
+    "source_id": "https://openalex.org/W4400120505"
+  },
+  {
+    "title": "Skye: An Expanding PRF based Fast KDF and its Applications.",
+    "authors": [
+      "Amit Singh Bhati",
+      "Antonin Dufka",
+      "Elena Andreeva 0001",
+      "Arnab Roy 0005",
+      "Bart Preneel"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2024,
+    "abstract": null,
+    "citation_count": 5,
+    "reference_count": 15,
+    "url": "https://dblp.org/rec/conf/asiaccs/BhatiD00P24",
+    "dblp_key": "conf/asiaccs/BhatiD00P24",
+    "source_id": "https://openalex.org/W4400121700"
+  },
+  {
+    "title": "Revocable TACO: Revocable Threshold based Anonymous Credentials over Blockchains.",
+    "authors": [
+      "Kanchan Bisht",
+      "Neel Yogendra Kansagra",
+      "Reisha Ali",
+      "Mohammed Sayeed Shaik",
+      "Maria Francis",
+      "Kotaro Kataoka"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2024,
+    "abstract": null,
+    "citation_count": 6,
+    "reference_count": 15,
+    "url": "https://dblp.org/rec/conf/asiaccs/BishtKASFK24",
+    "dblp_key": "conf/asiaccs/BishtKASFK24",
+    "source_id": "https://openalex.org/W4400120484"
+  },
+  {
+    "title": "Cryptography in the Wild: An Empirical Analysis of Vulnerabilities in Cryptographic Libraries.",
+    "authors": [
+      "Jenny Blessing",
+      "Michael A. Specter",
+      "Daniel J. Weitzner"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2024,
+    "abstract": null,
+    "citation_count": 5,
+    "reference_count": 17,
+    "url": "https://dblp.org/rec/conf/asiaccs/BlessingSW24",
+    "dblp_key": "conf/asiaccs/BlessingSW24",
+    "source_id": "https://openalex.org/W4400121418"
+  },
+  {
+    "title": "Efficient Privacy-Preserving Approximation of the Kidney Exchange Problem.",
+    "authors": [
+      "Malte Breuer",
+      "Ulrike Meyer",
+      "Susanne Wetzel"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2024,
+    "abstract": "The kidney exchange problem (KEP) seeks to find possible exchanges among pairs of patients and their incompatible kidney donors while meeting specific optimization criteria such as maximizing the overall number of possible transplants. Recently, several privacy-preserving protocols for solving the KEP have been proposed. However, the protocols known to date lack scalability in practice since the KEP is an NP-complete problem. We address this issue by proposing a novel privacy-preserving protocol which computes an approximate solution for the KEP that scales well for the large numbers of patient-donor pairs encountered in practice. As opposed to prior work on privacy-preserving kidney exchange, our protocol is generic w.r.t.\\ the security model that can be employed. Compared to the most efficient privacy-preserving protocols for kidney exchange existing to date, our protocol is entirely data oblivious and it exhibits a far superior run time performance. As a second contribution, we use a real-world data set to simulate the application of our protocol as part of a kidney exchange platform, where patient-donor pairs register and de-register over time, and thereby determine its approximation quality in a real-world setting.",
+    "citation_count": 1,
+    "reference_count": 36,
+    "url": "https://dblp.org/rec/conf/asiaccs/BreuerMW24",
+    "dblp_key": "conf/asiaccs/BreuerMW24",
+    "source_id": "https://openalex.org/W4400120374"
+  },
+  {
+    "title": "MOSAIC: A Prune-and-Assemble Approach for Efficient Model Pruning in Privacy-Preserving Deep Learning.",
+    "authors": [
+      "Yifei Cai",
+      "Qiao Zhang 0002",
+      "Rui Ning",
+      "Chunsheng Xin",
+      "Hongyi Wu"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2024,
+    "abstract": "To enable common users to capitalize on the power of deep learning, Machine Learning as a Service (MLaaS) has been proposed in the literature, which opens powerful deep learning models of service providers to the public. To protect the data privacy of end users, as well as the model privacy of the server, several state-of-the-art privacy-preserving MLaaS frameworks have also been proposed. Nevertheless, despite the exquisite design of these frameworks to enhance computation efficiency, the computational cost remains expensive for practical applications. To improve the computation efficiency of deep learning (DL) models, model pruning has been adopted as a strategic approach to remarkably compress DL models. However, for practical deep neural networks, a problem called pruning structure inflation significantly limits the pruning efficiency, as it can seriously hurt the model accuracy. In this paper, we propose MOSAIC, a highly flexible pruning framework, to address this critical challenge. By first pruning the network with the carefully selected basic pruning units, then assembling the pruned units into suitable HE Pruning Structures through smart channel transformations, MOSAIC achieves a high pruning ratio while avoiding accuracy reduction, eliminating the problem plagued by the pruning structure inflation. We apply MOSAIC to popular DL models such as VGG and ResNet series on classic datasets such as CIFAR-10 and Tiny ImageNet. Experimental results demonstrate that MOSAIC effectively and flexibly conducts pruning on those models, significantly reducing the Perm, Mult, and Add operations to achieve the global cost reduction without any loss in accuracy. For instance, in VGG-16 on Tiny ImageNet, the total cost is reduced to 21.14% and 29.49% under the MLaaS frameworks GAZELLE and CrypTFlow2, respectively.",
+    "citation_count": 1,
+    "reference_count": 28,
+    "url": "https://dblp.org/rec/conf/asiaccs/Cai0NXW24",
+    "dblp_key": "conf/asiaccs/Cai0NXW24",
+    "source_id": "https://openalex.org/W4400121218"
+  },
+  {
+    "title": "OASIS: An Intrusion Detection System Embedded in Bluetooth Low Energy Controllers.",
+    "authors": [
+      "Romain Cayre",
+      "Vincent Nicomette",
+      "Guillaume Auriol",
+      "Mohamed Kaâniche",
+      "Aurélien Francillon"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2024,
+    "abstract": null,
+    "citation_count": 5,
+    "reference_count": 28,
+    "url": "https://dblp.org/rec/conf/asiaccs/CayreNAKF24",
+    "dblp_key": "conf/asiaccs/CayreNAKF24",
+    "source_id": "https://openalex.org/W4399196495"
+  },
+  {
+    "title": "Reconstructing Chameleon Hash: Full Security and the Multi-Party Setting.",
+    "authors": [
+      "Kwan Yin Chan",
+      "Liqun Chen 0002",
+      "Yangguang Tian",
+      "Tsz Hon Yuen"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2024,
+    "abstract": null,
+    "citation_count": 2,
+    "reference_count": 31,
+    "url": "https://dblp.org/rec/conf/asiaccs/Chan0TY24",
+    "dblp_key": "conf/asiaccs/Chan0TY24",
+    "source_id": "https://openalex.org/W4400120835"
+  },
+  {
+    "title": "Multi-Turn Hidden Backdoor in Large Language Model-powered Chatbot Models.",
+    "authors": [
+      "Bocheng Chen",
+      "Nikolay Ivanov",
+      "Guangjing Wang 0001",
+      "Qiben Yan"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2024,
+    "abstract": null,
+    "citation_count": 6,
+    "reference_count": 23,
+    "url": "https://dblp.org/rec/conf/asiaccs/ChenI0Y24",
+    "dblp_key": "conf/asiaccs/ChenI0Y24",
+    "source_id": "https://openalex.org/W4400121199"
+  },
+  {
+    "title": "Nomadic: Normalising Maliciously-Secure Distance with Cosine Similarity for Two-Party Biometric Authentication.",
+    "authors": [
+      "Nan Cheng",
+      "Melek Önen",
+      "Aikaterini Mitrokotsa",
+      "Oubaïda Chouchane",
+      "Massimiliano Todisco",
+      "Alberto Ibarrondo"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2024,
+    "abstract": null,
+    "citation_count": 2,
+    "reference_count": 39,
+    "url": "https://dblp.org/rec/conf/asiaccs/ChengOMCTI24",
+    "dblp_key": "conf/asiaccs/ChengOMCTI24",
+    "source_id": "https://openalex.org/W4400120584"
+  },
+  {
+    "title": "(In)visible Privacy Indicator: Security Analysis of Privacy Indicator on Android Devices.",
+    "authors": [
+      "Yurak Choe",
+      "Hyungseok Yu",
+      "Taeho Kim 0001",
+      "Shinjae Lee",
+      "Hojoon Lee 0001",
+      "Hyoungshick Kim"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2024,
+    "abstract": null,
+    "citation_count": 1,
+    "reference_count": 9,
+    "url": "https://dblp.org/rec/conf/asiaccs/ChoeY0L0K24",
+    "dblp_key": "conf/asiaccs/ChoeY0L0K24",
+    "source_id": "https://openalex.org/W4400120532"
+  },
+  {
+    "title": "PowSpectre: Powering Up Speculation Attacks with TSX-based Replay.",
+    "authors": [
+      "Md Hafizul Islam Chowdhuryy",
+      "Zhenkai Zhang 0002",
+      "Fan Yao 0001"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2024,
+    "abstract": null,
+    "citation_count": null,
+    "reference_count": null,
+    "url": "https://dblp.org/rec/conf/asiaccs/ChowdhuryyZY24",
+    "dblp_key": "conf/asiaccs/ChowdhuryyZY24",
+    "source_id": null
+  },
+  {
+    "title": "zkMatrix: Batched Short Proof for Committed Matrix Multiplication.",
+    "authors": [
+      "Mingshu Cong",
+      "Tsz Hon Yuen",
+      "Siu-Ming Yiu"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2024,
+    "abstract": null,
+    "citation_count": null,
+    "reference_count": null,
+    "url": "https://dblp.org/rec/conf/asiaccs/CongYY24",
+    "dblp_key": "conf/asiaccs/CongYY24",
+    "source_id": null
+  },
+  {
+    "title": "Diagnosis-guided Attack Recovery for Securing Robotic Vehicles from Sensor Deception Attacks.",
+    "authors": [
+      "Pritam Dash",
+      "Guanpeng Li",
+      "Mehdi Karimibiuki",
+      "Karthik Pattabiraman"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2024,
+    "abstract": "Sensors are crucial for perception and autonomous operation in robotic vehicles (RV). Unfortunately, RV sensors can be compromised by physical attacks such as sensor tampering or spoofing. In this paper, we present DeLorean, a unified framework for attack detection, attack diagnosis, and recovering RVs from sensor deception attacks (SDA). DeLorean can recover RVs even from strong SDAs in which the adversary targets multiple heterogeneous sensors simultaneously. We propose a novel attack diagnosis technique that inspects the attack-induced errors under SDAs, and identifies the targeted sensors using causal analysis. DeLorean then uses historic state information to selectively reconstruct physical states for compromised sensors, enabling targeted attack recovery under single or multi-sensor SDAs. We evaluate DeLorean on four real and two simulated RVs under SDAs targeting various sensors, and we find that it successfully recovers RVs from SDAs in 93% of the cases.",
+    "citation_count": 6,
+    "reference_count": 24,
+    "url": "https://dblp.org/rec/conf/asiaccs/DashLKP24",
+    "dblp_key": "conf/asiaccs/DashLKP24",
+    "source_id": "https://openalex.org/W4400120586"
+  },
+  {
+    "title": "C2Miner: Tricking IoT Malware into Revealing Live Command &amp; Control Servers.",
+    "authors": [
+      "Ali Davanian",
+      "Michalis Faloutsos",
+      "Martina Lindorfer"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2024,
+    "abstract": null,
+    "citation_count": null,
+    "reference_count": null,
+    "url": "https://dblp.org/rec/conf/asiaccs/DavanianFL24",
+    "dblp_key": "conf/asiaccs/DavanianFL24",
+    "source_id": null
+  },
+  {
+    "title": "Toward Practical Client-Side Encryption in Cloud Computing.",
+    "authors": [
+      "Robert H. Deng"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2024,
+    "abstract": null,
+    "citation_count": null,
+    "reference_count": null,
+    "url": "https://dblp.org/rec/conf/asiaccs/Deng24",
+    "dblp_key": "conf/asiaccs/Deng24",
+    "source_id": null
+  },
+  {
+    "title": "Command Hijacking on Voice-Controlled IoT in Amazon Alexa Platform.",
+    "authors": [
+      "Wenbo Ding 0003",
+      "Song Liao",
+      "Long Cheng 0005",
+      "Xianghang Mi",
+      "Ziming Zhao 0001",
+      "Hongxin Hu"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2024,
+    "abstract": "Voice Personal Assistants (VPA) are becoming popular entry points to control connected devices in an IoT environment, e.g., by invoking Amazon Alexa voice-apps (called skills) to turn on/off lights through voice commands. Amazon Alexa platform allows third-party developers to build skills and publish them to marketplaces, which greatly extends the functionalities of VPA. Despite the many convenient features, there are increasing security and safety concerns about VPA-controlled IoT systems. Previous research demonstrated the prevalence of potentially malicious or problematic skills in the marketplace. However, existing works mainly focus on non-IoT skills (e.g., skills under the Kids and Health categories). The security and safety risks of IoT skills are largely under-explored. In this work, we discover new vulnerabilities in the Amazon Alexa platform, which allows malicious third-party developers to hijack Alexa's built-in voice commands to invoke malicious IoT skills. We present three new attacks hijacking Alexa's built-in IoT commands, including Command Invocation Confounding Attack, Custom Command Attack, and Command-Intent Hijacking Attack. We also find a vulnerability that allows arbitrary control of smart-home devices in the back-end code. We evaluate the success rate for each attack and prove that they can be used by malicious developers. In particular, we demonstrate that skills in the Connected Car category using Alexa's built-in intents can be hijacked by customized IoT skills. We also design and implement IoTSkillAnalyzer, a dynamic testing tool to examine IoT skills on the Alexa skills store. After analyzing 488 Alexa 3rd-party IoT skills using IoTSkillAnalyzer, we identified 52 skills with potential command hijacking attacks. We also found that 26 suspicious skills have hidden behaviors potentially caused by the Skill Back-end Code Manipulation vulnerability after they receive normal commands, such as failing to control devices, taking hidden actions, and providing wrong response information to users.",
+    "citation_count": 3,
+    "reference_count": 18,
+    "url": "https://dblp.org/rec/conf/asiaccs/DingL0M0H24",
+    "dblp_key": "conf/asiaccs/DingL0M0H24",
+    "source_id": "https://openalex.org/W4400121209"
+  },
+  {
+    "title": "Federated Learning Security: From Dusk to Dawn.",
+    "authors": [
+      "Alexandra Dmitrienko"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2024,
+    "abstract": "The evolution of machine learning (ML) as an enabling technology has opened a new era of possibilities and applications. Among these advancements, distributed learning, specifically federated learning (FL), emerges as a significant shift in collaborative intelligence. FL's unique ability to leverage decentralized data sources promises innovation and privacy protection for local datasets across diverse domains, including healthcare, finance, object recognition, and beyond. However, despite its potential benefits, FL has shown to be vulnerable to various threats. From poisoning attacks to adversarial perturbations and information inference, malicious actors pose significant challenges to the integrity of FL systems. Effectively addressing these vulnerabilities requires the implementation of security-by-design principles within FL frameworks. In this talk, we steer through the complex landscape of FL attacks and defenses, shedding light on the ongoing arms race between adversaries and defenders. We examine their advantages and drawbacks, gaining valuable insights into the evolving nature of these threats. We conclude by outlining research challenges and directions to enhance the resilience and security of FL systems.",
+    "citation_count": 0,
+    "reference_count": 0,
+    "url": "https://dblp.org/rec/conf/asiaccs/Dmitrienko24",
+    "dblp_key": "conf/asiaccs/Dmitrienko24",
+    "source_id": "https://openalex.org/W4400120619"
+  },
+  {
+    "title": "Towards Robust Domain Generation Algorithm Classification.",
+    "authors": [
+      "Arthur Drichel",
+      "Marc Meyer",
+      "Ulrike Meyer"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2024,
+    "abstract": "In this work, we conduct a comprehensive study on the robustness of domain\\ngeneration algorithm (DGA) classifiers. We implement 32 white-box attacks, 19\\nof which are very effective and induce a false-negative rate (FNR) of $\\\\approx$\\n100\\\\% on unhardened classifiers. To defend the classifiers, we evaluate\\ndifferent hardening approaches and propose a novel training scheme that\\nleverages adversarial latent space vectors and discretized adversarial domains\\nto significantly improve robustness. In our study, we highlight a pitfall to\\navoid when hardening classifiers and uncover training biases that can be easily\\nexploited by attackers to bypass detection, but which can be mitigated by\\nadversarial training (AT). In our study, we do not observe any trade-off\\nbetween robustness and performance, on the contrary, hardening improves a\\nclassifier's detection performance for known and unknown DGAs. We implement all\\nattacks and defenses discussed in this paper as a standalone library, which we\\nmake publicly available to facilitate hardening of DGA classifiers:\\nhttps://gitlab.com/rwth-itsec/robust-dga-detection\\n",
+    "citation_count": 3,
+    "reference_count": 57,
+    "url": "https://dblp.org/rec/conf/asiaccs/DrichelMM24",
+    "dblp_key": "conf/asiaccs/DrichelMM24",
+    "source_id": "https://openalex.org/W4394709582"
+  },
+  {
+    "title": "PARL: Poisoning Attacks Against Reinforcement Learning-based Recommender Systems.",
+    "authors": [
+      "Linkang Du",
+      "Quan Yuan",
+      "Min Chen 0032",
+      "Mingyang Sun",
+      "Peng Cheng 0001",
+      "Jiming Chen 0001",
+      "Zhikun Zhang 0001"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2024,
+    "abstract": "Recommender systems predict and suggest relevant options to users in various domains, such as e-commerce, streaming services, and social media. Recently, deep reinforcement learning (DRL)-based recommendation systems have become increasingly popular in academics and industry since DRL can characterize the long-term interaction between the system and users to achieve a better recommendation experience, e.g., Netflix, Spotify, Google, and YouTube. This paper demonstrates that an adversary can manipulate the DRL-based recommender system by injecting carefully designed user-system interaction records. The poisoning attack against the DRL-based recommender system is formulated as a non-convex integer programming problem. To solve the problem, we proposed a three-phase mechanism (called PARL) to maximize the hit ratio (the proportion of recommendations that result in actual user interactions, such as clicks, purchases, or other relevant actions) while avoiding easy detection. The core idea of PARL is to improve the ranking of the target item while fixing the rankings of other items. Considering the sequential decision-making characteristics of DRL, PARL rearranges the items' order of the fake users to mimic the normal users' sequential features, an aspect usually overlooked in existing work. Our experiments on three real-world datasets demonstrate the effectiveness of PARL and better concealment against the detection techniques. PARL is open-sourced at https://github.com/PARL-RS/PARL.",
+    "citation_count": 0,
+    "reference_count": 69,
+    "url": "https://dblp.org/rec/conf/asiaccs/DuYCSC0Z24",
+    "dblp_key": "conf/asiaccs/DuYCSC0Z24",
+    "source_id": "https://openalex.org/W4400120763"
+  },
+  {
+    "title": "VFCFinder: Pairing Security Advisories and Patches.",
+    "authors": [
+      "Trevor Dunlap",
+      "Elizabeth Lin",
+      "William Enck",
+      "Bradley Reaves"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2024,
+    "abstract": "Security advisories are the primary channel of communication for discovered vulnerabilities in open-source software, but they often lack crucial information. Specifically, 63% of vulnerability database reports are missing their patch links, also referred to as vulnerability fixing commits (VFCs). This paper introduces VFCFinder, a tool that generates the top-five ranked set of VFCs for a given security advisory using Natural Language Programming Language (NL-PL) models. VFCFinder achieves a 96.6% recall for finding the correct VFC within the Top-5 commits, and an 80.0% recall for the Top-1 ranked commit. VFCFinder generalizes to nine different programming languages and outperforms state-of-the-art approaches by 36 percentage points in terms of Top-1 recall. As a practical contribution, we used VFCFinder to backfill over 300 missing VFCs in the GitHub Security Advisory (GHSA) database. All of the VFCs were accepted and merged into the GHSA database. In addition to demonstrating a practical pairing of security advisories to VFCs, our general open-source implementation will allow vulnerability database maintainers to drastically improve data quality, supporting efforts to secure the software supply chain.",
+    "citation_count": 6,
+    "reference_count": 33,
+    "url": "https://dblp.org/rec/conf/asiaccs/DunlapLER24",
+    "dblp_key": "conf/asiaccs/DunlapLER24",
+    "source_id": "https://openalex.org/W4400121141"
+  },
+  {
+    "title": "WebGPU-SPY: Finding Fingerprints in the Sandbox through GPU Cache Attacks.",
+    "authors": [
+      "Ethan Ferguson",
+      "Adam Wilson",
+      "Hoda Naghibijouybari"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2024,
+    "abstract": null,
+    "citation_count": 5,
+    "reference_count": 20,
+    "url": "https://dblp.org/rec/conf/asiaccs/FergusonWN24",
+    "dblp_key": "conf/asiaccs/FergusonWN24",
+    "source_id": "https://openalex.org/W4400119998"
+  },
+  {
+    "title": "Privacy-Preserving Popularity-Based Deduplication against Malicious Behaviors of the Cloud.",
+    "authors": [
+      "Xiaowei Ge",
+      "Guanxiong Ha",
+      "Chunfu Jia",
+      "Zhen Su"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2024,
+    "abstract": null,
+    "citation_count": 3,
+    "reference_count": 21,
+    "url": "https://dblp.org/rec/conf/asiaccs/GeHJS24",
+    "dblp_key": "conf/asiaccs/GeHJS24",
+    "source_id": "https://openalex.org/W4400120910"
+  },
+  {
+    "title": "External Attack-Surface of Modern Organizations.",
+    "authors": [
+      "Nethanel Gelernter",
+      "Haya Schulmann",
+      "Michael Waidner"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2024,
+    "abstract": "589",
+    "citation_count": 5,
+    "reference_count": 27,
+    "url": "https://dblp.org/rec/conf/asiaccs/GelernterSW24",
+    "dblp_key": "conf/asiaccs/GelernterSW24",
+    "source_id": "https://openalex.org/W4400120604"
+  },
+  {
+    "title": "Generic and Automated Drive-by GPU Cache Attacks from the Browser.",
+    "authors": [
+      "Lukas Giner",
+      "Roland Czerny",
+      "Christoph Gruber",
+      "Fabian Rauscher",
+      "Andreas Kogler",
+      "Daniel De Almeida Braga",
+      "Daniel Gruss"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2024,
+    "abstract": "International audience",
+    "citation_count": 2,
+    "reference_count": 36,
+    "url": "https://dblp.org/rec/conf/asiaccs/GinerCGRKBG24",
+    "dblp_key": "conf/asiaccs/GinerCGRKBG24",
+    "source_id": "https://openalex.org/W4399985603"
+  },
+  {
+    "title": "An Empirical Study of Consensus Protocols&apos; DoS Resilience.",
+    "authors": [
+      "Giacomo Giuliari",
+      "Alberto Sonnino",
+      "Marc Frei",
+      "Fabio Streun",
+      "Lefteris Kokoris-Kogias",
+      "Adrian Perrig"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2024,
+    "abstract": "Blockchain naturally fits multiple industry sectors due its characteristics of decentralization, enhanced security, tamper-proof, improved traceability and transparency. However, there is a significant concern of blockchain’s performance, since blockchain trades off its performance for a completely distributed feature, which enhances its security. In this paper, we investigate the state-of-the-art progress of blockchain, mainly from a performance and security perspective. We extracted 42 primary papers from major scientific databases and 34 online technical articles. The objective is to understand the current research trends, challenges and future directions. We briefly introduce the key technologies of blockchain including distributed ledger, cryptography, consensus, smart contracts and benchmarks. We next summarize the performance and security concerns raised in the investigation. We discuss the architectural choices, performance metrics, database management enhancements, and hybrid blockchains, and try to identify the effort that the state-of-the-art has made to balance between the performance and security. We also make experiments on Ethereum and survey other popular blockchain platforms on the scalability feature of blockchain. We later discuss the potential applications and present the lessons learned. Finally, we attempt to identify the open issues and possible research directions.",
+    "citation_count": 73,
+    "reference_count": 47,
+    "url": "https://dblp.org/rec/conf/asiaccs/GiuliariSFSKP24",
+    "dblp_key": "conf/asiaccs/GiuliariSFSKP24",
+    "source_id": "https://openalex.org/W2984839651"
+  },
+  {
+    "title": "Sync-Millibottleneck Attack on Microservices Cloud Architecture.",
+    "authors": [
+      "Xuhang Gu",
+      "Qingyang Wang 0001",
+      "Qiben Yan",
+      "Jianshu Liu",
+      "Calton Pu"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2024,
+    "abstract": "The modern web services landscape is characterized by numerous fine-grained, loosely coupled microservices with increasingly stringent low-latency requirements. However, this architecture also brings new performance vulnerabilities. In this paper, we introduce a novel low-volume application layer DDoS attack called the Sync-Millibottleneck (SyncM) attack, specifically targeting microservices. The goal of this attack is to cause a long-tail latency problem that violates the service-level agreement (SLA) while evading state-of-the-art DDoS detection/defense mechanisms. The SyncM attack exploits two unique features of microservices architecture: (1) the shared frontend gateway that directs user requests to mid-tier/backend microservices, and (2) the co-existence of multiple logically independent execution paths, each with its own bottleneck resource. By creating synchronized millibottlenecks (i.e., sub-second duration bottlenecks) on multiple independent execution paths, SyncM attack can cause the queuing effect in each execution path to be propagated and superimposed in the shared frontend gateway. As a result, SyncM triggers surprisingly high latency spikes in the system, even when all system resources are far from saturation, making it challenging to trace the cause of performance instability. To evaluate the practicality of the SyncM attack, we conduct extensive experiments on real cloud systems such as EC2 and Azure, which are equipped with state-of-the-art IDS/IPS systems. We also conduct a large-scale simulation using a production Alibaba trace to show the scalability of our attack. Our results demonstrate that the SyncM attack is highly effective, as it only consumes less than 15% of additional CPU resources of the target system while increasing its 95th percentile response time by more than 20 times.",
+    "citation_count": 4,
+    "reference_count": 26,
+    "url": "https://dblp.org/rec/conf/asiaccs/Gu0YLP24",
+    "dblp_key": "conf/asiaccs/Gu0YLP24",
+    "source_id": "https://openalex.org/W4400120057"
+  },
+  {
+    "title": "DMTI: Accelerating Memory Error Detection in Precompiled C/C++ Binaries with ARM Memory Tagging Extension.",
+    "authors": [
+      "Andreas Hager-Clukas",
+      "Konrad Hohentanner"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2024,
+    "abstract": null,
+    "citation_count": 1,
+    "reference_count": 11,
+    "url": "https://dblp.org/rec/conf/asiaccs/Hager-ClukasH24",
+    "dblp_key": "conf/asiaccs/Hager-ClukasH24",
+    "source_id": "https://openalex.org/W4400120999"
+  },
+  {
+    "title": "Camel: E2E Verifiable Instant Runoff Voting without Tallying Authorities.",
+    "authors": [
+      "Luke Harrison",
+      "Samiran Bag",
+      "Feng Hao 0001"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2024,
+    "abstract": "Instant Runoff Voting (IRV) is one example of ranked-choice voting. It provides many known benefits when used in elections, such as minimising vote splitting, ensuring few votes are wasted, and providing resistance to strategic voting. However, the voting and tallying procedures for IRV are much more complicated than those of plurality and are both error-prone and tedious. Many automated systems have been proposed to simplify these procedures in IRV. Some of these also employ cryptographic techniques to protect the secrecy of ballots and enable verification of the tally. Nearly all of these cryptographic systems require a set of trustworthy tallying authorities (TAs) to perform the encryption of votes and/or running of mix servers, which adds significant complexity to the implementation and election management. We address this issue by proposing Camel: an E2E verifiable solution for IRV that requires no TAs. Camel employs a novel representation and a universally verifiable shifting procedure for ballots that facilitate the elimination of&#13;\\ncandidates as required in an IRV election. We combine these with a homomorphic encryption scheme and zero-knowledge proofs to protect the secrecy of the ballots and enable any party to verify the well-formedness of the ballots and the correctness of the tally in an IRV election. We examine the security of Camel and prove it maintains ballot secrecy by limiting the learned information (namely the tally) against a set of colluding voters.",
+    "citation_count": 2,
+    "reference_count": 23,
+    "url": "https://dblp.org/rec/conf/asiaccs/HarrisonB024",
+    "dblp_key": "conf/asiaccs/HarrisonB024",
+    "source_id": "https://openalex.org/W4400120877"
+  },
+  {
+    "title": "BinGo: Identifying Security Patches in Binary Code with Graph Representation Learning.",
+    "authors": [
+      "Xu He",
+      "Shu Wang 0004",
+      "Pengbin Feng",
+      "Xinda Wang 0001",
+      "Shiyu Sun",
+      "Qi Li 0002",
+      "Kun Sun 0001"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2024,
+    "abstract": null,
+    "citation_count": 1,
+    "reference_count": 31,
+    "url": "https://dblp.org/rec/conf/asiaccs/HeWF0S0024",
+    "dblp_key": "conf/asiaccs/HeWF0S0024",
+    "source_id": "https://openalex.org/W4400121158"
+  },
+  {
+    "title": "OPRFs from Isogenies: Designs and Analysis.",
+    "authors": [
+      "Lena Heimberger",
+      "Tobias Hennerbichler",
+      "Fredrik Meisingseth",
+      "Sebastian Ramacher",
+      "Christian Rechberger"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2024,
+    "abstract": "A fuzzy extractor is a foundational cryptographic component that enables the extraction of reproducible and uniformly random strings from sources with inherent noise, such as biometric traits. Reusable fuzzy extractor guarantees the security of multiple extractions from the same noisy source. In addition, although isogeny-based cryptography has become an important branch in post-quantum cryptography, the study of fuzzy extractors based on isogeny assumptions is still in its early stages and holds much room for improvement. In this paper, we give two reusable fuzzy extractor schemes derived from isogeny-based assumptions: one is based on the linear hidden shift assumption over group actions, while the other is built upon the group-action decisional Diffie–Hellman assumption within the isogeny framework. Both proposed constructions achieve post-quantum security and are capable of correcting a linear proportion of errors. They rely solely on fundamental cryptographic primitives, which ensure simplicity and efficiency. Additionally, the second construction is based on restricted effective group action, which is weaker than the effective group action used in the first construction, thereby offering greater practical applicability.",
+    "citation_count": 0,
+    "reference_count": 44,
+    "url": "https://dblp.org/rec/conf/asiaccs/HeimbergerHMRR24",
+    "dblp_key": "conf/asiaccs/HeimbergerHMRR24",
+    "source_id": "https://openalex.org/W4412019974"
+  },
+  {
+    "title": "Switchpoline: A Software Mitigation for Spectre-BTB and Spectre-BHB on ARMv8.",
+    "authors": [
+      "Lorenz Hetterich",
+      "Markus Bauer 0004",
+      "Michael Schwarz 0001",
+      "Christian Rossow"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2024,
+    "abstract": "Spectre-BTB, also known as Spectre Variant 2, is often considered the most dangerous Spectre variant. While there are widely-deployed software workarounds on x86, such as Retpoline, there are no automated software workarounds for protecting generic userspace applications on ARMv8. Moreover, hardware solutions do not consider in-place mistraining or variants such as branch-history injection (Spectre-BHI), also known as Spectre-BHB. In this paper, we introduce Switchpoline, the first automated Spectre-BTB and Spectre-BHB software workaround protecting C and C++ userspace applications on ARMv8 against all variants of Spectre-BTB and Spectre-BHB. The main security of Switchpoline is that eliminating indirect branches eliminates attacks on indirect branches. Switchpoline is based on a static compiler pass and a dynamic just-in-time (JIT) compiler component that rewrite indirect control-flow transfers into direct control-flow transfers. Switchpoline successfully prevents Spectre-BTB and Spectre-BHB in userspace applications with a negligible mean performance overhead of 1.8 % measured in the SPEC CPU 2017 benchmark. Moreover, unlike many x86-specific mitigations, Switchpoline is compatible with existing orthogonal defenses, such as (hardware) CFI or Spectre-PHT mitigations. Hence, Switchpoline is a practical generic software mitigation on ARMv8.",
+    "citation_count": 4,
+    "reference_count": 16,
+    "url": "https://dblp.org/rec/conf/asiaccs/Hetterich00R24",
+    "dblp_key": "conf/asiaccs/Hetterich00R24",
+    "source_id": "https://openalex.org/W4400120375"
+  },
+  {
+    "title": "Single Round-trip Hierarchical ORAM via Succinct Indices.",
+    "authors": [
+      "William L. Holland",
+      "Olga Ohrimenko",
+      "Anthony Wirth"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2024,
+    "abstract": "Access patterns to data stored remotely create a side channel that is known to leak information even if the content of the data is encrypted. To protect against access pattern leakage, Oblivious RAM is a cryptographic primitive that obscures the (actual) access trace at the expense of additional access and periodic shuffling of the server's contents. A class of ORAM solutions, known as Hierarchical ORAM, has achieved theoretically \\emph{optimal} logarithmic bandwidth overhead. However, to date, Hierarchical ORAMs are seen as only theoretical artifacts. This is because they require a large number of communication round-trips to locate (shuffled) elements at the server and involve complex building blocks such as cuckoo hash tables. To address the limitations of Hierarchical ORAM schemes in practice, we introduce Rank ORAM; the first Hierarchical ORAM that can retrieve data with a single round-trip of communication (as compared to a logarithmic number in previous work). To support non-interactive communication, we introduce a \\emph{compressed} client-side data structure that stores, implicitly, the location of each element at the server. In addition, this location metadata enables a simple protocol design that dispenses with the need for complex cuckoo hash tables. Rank ORAM requires asymptotically smaller memory than existing (non-Hierarchical) state-of-the-art practical ORAM schemes (e.g., Ring ORAM) while maintaining comparable bandwidth performance. Our experiments on real network file-system traces demonstrate a reduction in client memory, against existing approaches, of a factor of~$100$. For example, when {outsourcing} a database of $17.5$TB, required client-memory is only $290$MB vs. $40$GB for standard approaches.",
+    "citation_count": 0,
+    "reference_count": 0,
+    "url": "https://dblp.org/rec/conf/asiaccs/HollandOW24",
+    "dblp_key": "conf/asiaccs/HollandOW24",
+    "source_id": "https://openalex.org/W4300838440"
+  },
+  {
+    "title": "What is in the Chrome Web Store?",
+    "authors": [
+      "Sheryl Hsu",
+      "Manda Tran",
+      "Aurore Fass"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2024,
+    "abstract": "This paper is the first attempt at providing a holistic view of the Chrome Web Store (CWS). We leverage historical data provided by ChromeStats to study global trends in the CWS and security implications. We first highlight the extremely short life cycles of extensions: roughly 60% of extensions stay in the CWS for one year. Second, we define and show that Security-Noteworthy Extensions (SNE) are a significant issue: they pervade the CWS for years and affect almost 350 million users. Third, we identify clusters of extensions with a similar code base. We discuss how code similarity techniques could be used to flag suspicious extensions. By developing an approach to extract URLs from extensions' comments, we show that extensions reuse code snippets from public repositories or forums, leading to the propagation of dated code and vulnerabilities. Finally, we underline a critical lack of maintenance in the CWS: 60% of the extensions in the CWS have never been updated; half of the extensions known to be vulnerable are still in the CWS and still vulnerable 2 years after disclosure; a third of extensions use vulnerable library versions. We believe that these issues should be widely known in order to pave the way for a more secure CWS.",
+    "citation_count": 7,
+    "reference_count": 19,
+    "url": "https://dblp.org/rec/conf/asiaccs/HsuTF24",
+    "dblp_key": "conf/asiaccs/HsuTF24",
+    "source_id": "https://openalex.org/W4399837792"
+  },
+  {
+    "title": "The Catcher in the Eye: Recognizing Users by their Blinks.",
+    "authors": [
+      "Ryo Iijima",
+      "Tatsuya Takehisa",
+      "Tetsushi Ohki",
+      "Tatsuya Mori"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2024,
+    "abstract": null,
+    "citation_count": 4,
+    "reference_count": 37,
+    "url": "https://dblp.org/rec/conf/asiaccs/IijimaTOM24",
+    "dblp_key": "conf/asiaccs/IijimaTOM24",
+    "source_id": "https://openalex.org/W4400120432"
+  },
+  {
+    "title": "SpotOn: Adversarially Robust Keyword Spotting on Resource-Constrained IoT Platforms.",
+    "authors": [
+      "Mehreen Jabbeen",
+      "Vireshwar Kumar",
+      "Rijurekha Sen"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2024,
+    "abstract": null,
+    "citation_count": 1,
+    "reference_count": 33,
+    "url": "https://dblp.org/rec/conf/asiaccs/JabbeenKS24",
+    "dblp_key": "conf/asiaccs/JabbeenKS24",
+    "source_id": "https://openalex.org/W4400120109"
+  },
+  {
+    "title": "ALLOSAUR: Accumulator with Low-Latency Oblivious Sublinear Anonymous credential Updates with Revocations.",
+    "authors": [
+      "Samuel Jaques",
+      "Hart Montgomery",
+      "Michael Lodder"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2024,
+    "abstract": null,
+    "citation_count": 0,
+    "reference_count": 2,
+    "url": "https://dblp.org/rec/conf/asiaccs/JaquesML24",
+    "dblp_key": "conf/asiaccs/JaquesML24",
+    "source_id": "https://openalex.org/W4400119981"
+  },
+  {
+    "title": "Self-Supervised Fine-Tuning of Automatic Speech Recognition Systems against Signal Processing Attacks.",
+    "authors": [
+      "Oshan Jayawardena",
+      "Dilmi Caldera",
+      "Sandani Jayawardena",
+      "Avishka Sandeepa",
+      "Vincent Bindschaedler",
+      "Subodha Charles"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2024,
+    "abstract": null,
+    "citation_count": 0,
+    "reference_count": 9,
+    "url": "https://dblp.org/rec/conf/asiaccs/JayawardenaCJSB24",
+    "dblp_key": "conf/asiaccs/JayawardenaCJSB24",
+    "source_id": "https://openalex.org/W4400120162"
+  },
+  {
+    "title": "POSTER: Addressing the Privacy by Use Challenges in Verifiable Credential based Digital Wallets.",
+    "authors": [
+      "Jongkil Jay Jeong",
+      "Lu-Xing Yang",
+      "Robin Doss",
+      "Praveen Gauravaram",
+      "Zoe Wang",
+      "Mohamed Abdelrazek 0001",
+      "Ashish Nanda",
+      "Keerthivasan Viswanathan"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2024,
+    "abstract": null,
+    "citation_count": 0,
+    "reference_count": 2,
+    "url": "https://dblp.org/rec/conf/asiaccs/JeongYDGW0NV24",
+    "dblp_key": "conf/asiaccs/JeongYDGW0NV24",
+    "source_id": "https://openalex.org/W4400121148"
+  },
+  {
+    "title": "SiGBDT: Large-Scale Gradient Boosting Decision Tree Training via Function Secret Sharing.",
+    "authors": [
+      "Yufan Jiang",
+      "Fei Mei",
+      "Tianxiang Dai",
+      "Yong Li 0021"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2024,
+    "abstract": "As a well known machine learning model, Gradient Boosting Decision Tree (GBDT) is widely used in many real-world scenes such as online marketing, risk management, fraud detection and recommendation systems. Due to limited data resources, two data owners may collaborate with each other to jointly train a high-quality model. As privacy regulations such as HIPPA and GDPR come into force, Privacy-Preserving Machine Learning (PPML) has drawn increasingly higher attention. Recently, a line of works [3--6] studies function secret sharing (FSS) schemes in the preprocessing model, where the online stage of secure two-party computation (2PC) is significantly improved. While recent privacy-preserving GDBT frameworks mainly focus on improving the performance of a singular module (e.g. secure bucket aggregation), we propose SiGBDT, a globally silent two-party GBDT framework via function secret sharing on a vertically partitioned dataset. During the training process, we apply FSS schemes to construct efficient modular protocols, such as secure bucket aggregation, argmax computation and a node split approach. We run in-depth experiments and discover that SiGBDT completely outperforms state-of-the-art frameworks. The experiment results show that SiGBDT is at least 3.32 X faster in LAN and at least 6.4 X faster in WAN.",
+    "citation_count": 5,
+    "reference_count": 33,
+    "url": "https://dblp.org/rec/conf/asiaccs/JiangMDL24",
+    "dblp_key": "conf/asiaccs/JiangMDL24",
+    "source_id": "https://openalex.org/W4400120632"
+  },
+  {
+    "title": "POSTER: Identifying and Mitigating Vulnerabilities in LLM-Integrated Applications.",
+    "authors": [
+      "Fengqing Jiang",
+      "Zhangchen Xu",
+      "Luyao Niu",
+      "Boxin Wang",
+      "Jinyuan Jia 0001",
+      "Bo Li 0026",
+      "Radha Poovendran"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2024,
+    "abstract": null,
+    "citation_count": 15,
+    "reference_count": 0,
+    "url": "https://dblp.org/rec/conf/asiaccs/JiangXNWJLP24",
+    "dblp_key": "conf/asiaccs/JiangXNWJLP24",
+    "source_id": "https://openalex.org/W4400121375"
+  },
+  {
+    "title": "AIMFuzz: Automated Function-Level In-Memory Fuzzing on Binaries.",
+    "authors": [
+      "Taewook Kim",
+      "Seokhyun Hong",
+      "Yeongpil Cho"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2024,
+    "abstract": null,
+    "citation_count": 1,
+    "reference_count": 19,
+    "url": "https://dblp.org/rec/conf/asiaccs/KimHC24",
+    "dblp_key": "conf/asiaccs/KimHC24",
+    "source_id": "https://openalex.org/W4400120167"
+  },
+  {
+    "title": "WhisperVoiceTrace: A Comprehensive Analysis of Voice Command Fingerprinting.",
+    "authors": [
+      "Hyojin Kim",
+      "Minji Jo",
+      "Jiwoo Hong",
+      "Hosung Kang",
+      "Nate Mathews",
+      "Se Eun Oh"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2024,
+    "abstract": "Smart speakers such as Amazon Alexa or Google Home, have significantly enhanced the convenience and efficiency of our daily lives, leading to widespread adoption globally. Subsequently, the voice commands directed at these devices contain a wealth of private information, encompassing users' daily routines, details about clinic visits, and even shopping habits. Security researchers have already identified vulnerabilities in encrypted network traffic, particularly in the context of traffic analysis, enabling the network-level adversaries to infer the websites visited by users. This security threat, common in traditional web communication, extends to voice query communication between the smart speaker and the server, giving rise to the concept of Voice Command Traffic Fingerprinting (VCF). In this paper, building upon recent literature on VCF, we strive to conduct a more comprehensive study. Our contributions include proposing a variant of WF features that empowers adversaries to outperform state-of-the-art models. Additionally, we consider variations in voice command traffic influenced by factors such as device locations and user characteristics. Furthermore, we introduce a command category fingerprinting approach capable of inferring the voice command category even for unknown commands, presenting a more practical and scalable model. Through these contributions, we aim to advance the understanding of VCF by considering various practical factors influencing voice command traffic, and provide insights for the development of more robust defenses.",
+    "citation_count": 1,
+    "reference_count": 23,
+    "url": "https://dblp.org/rec/conf/asiaccs/KimJHKMO24",
+    "dblp_key": "conf/asiaccs/KimJHKMO24",
+    "source_id": "https://openalex.org/W4400121231"
+  },
+  {
+    "title": "zkLogis: Scalable, Privacy-Enhanced, and Traceable Logistics on Public Blockchain.",
+    "authors": [
+      "Jongho Kim",
+      "Junhee Lee",
+      "Hyunok Oh",
+      "Jihye Kim 0001"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2024,
+    "abstract": null,
+    "citation_count": 0,
+    "reference_count": 15,
+    "url": "https://dblp.org/rec/conf/asiaccs/KimLOK24",
+    "dblp_key": "conf/asiaccs/KimLOK24",
+    "source_id": "https://openalex.org/W4400120237"
+  },
+  {
+    "title": "Charting the Path to SBOM Adoption: A Business Stakeholder-Centric Approach.",
+    "authors": [
+      "Berend Kloeg",
+      "Aaron Yi Ding",
+      "Sjoerd Pellegrom",
+      "Yury Zhauniarovich"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2024,
+    "abstract": null,
+    "citation_count": 4,
+    "reference_count": 9,
+    "url": "https://dblp.org/rec/conf/asiaccs/KloegDPZ24",
+    "dblp_key": "conf/asiaccs/KloegDPZ24",
+    "source_id": "https://openalex.org/W4400120699"
+  },
+  {
+    "title": "Byzantine Fault-Tolerant Aggregate Signatures.",
+    "authors": [
+      "Quentin Kniep",
+      "Roger Wattenhofer"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2024,
+    "abstract": "Practical Byzantine Fault Tolerance (PBFT), a classic consensus algorithm in blockchain technology, is extensively used in consortium blockchain networks. However, it is challenged by issues such as low consensus efficiency, poor scalability, inability to guarantee throughput with large-scale node access, and complex communication processes. To solve these problems, this paper proposes an improved PBFT consensus mechanism based on credit scoring and aggregated signatures, i.e., the CA-PBFT algorithm. First, the algorithm designs the node credit scoring mechanism, adds the coordination node in the original algorithm model, stipulates the node state and functional limitations, and realizes the dynamic joining and exiting of the nodes, to solve the low efficiency of the PBFT algorithm during the consensus process and the problem of not supporting the dynamic joining and exiting of the nodes; at the same time, the signature scheme based on the BLS aggregated signature is designed, which reduces the length of the signature and simplifies the signing process, to solve the problem of the node&#x2019;s signature taking up too much space during the consensus process, which affects the efficiency of the signature validation as well as the efficiency of the signature construction. Experimental results show that this consensus mechanism enables an efficient, secure, and scalable consensus process with low resource and computational costs.",
+    "citation_count": 7,
+    "reference_count": 33,
+    "url": "https://dblp.org/rec/conf/asiaccs/KniepW24",
+    "dblp_key": "conf/asiaccs/KniepW24",
+    "source_id": "https://openalex.org/W4390738678"
+  },
+  {
+    "title": "RACED: Routing in Payment Channel Networks Using Distributed Hash Tables.",
+    "authors": [
+      "Kartick Kolachala",
+      "Mohammed Ababneh",
+      "Roopa Vishwanathan"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2024,
+    "abstract": "The Bitcoin scalability problem has led to the development of off-chain financial mechanisms such as payment channel networks (PCNs) which help users process transactions of varying amounts, including micro-payment transactions, without writing each transaction to the blockchain. Since PCNs only allow path-based transactions, effective, secure routing protocols that find a path between a sender and receiver are fundamental to PCN operations. In this paper, we propose RACED, a routing protocol that leverages the idea of Distributed Hash Tables (DHTs) to route transactions in PCNs in a fast and secure way. Our experiments on real-world transaction datasets show that RACED gives an average transaction success ratio of 98.74%, an average pathfinding time of 31.242 seconds, which is 1.65 × 103, 1.8 × 103, and 4 × 102 times faster than three other recent routing protocols that offer comparable security/privacy properties. We rigorously analyze and prove the security of RACED in the Universal Composability framework.",
+    "citation_count": 1,
+    "reference_count": 27,
+    "url": "https://dblp.org/rec/conf/asiaccs/KolachalaAV24",
+    "dblp_key": "conf/asiaccs/KolachalaAV24",
+    "source_id": "https://openalex.org/W4400120868"
+  },
+  {
+    "title": "SoK: Can We Really Detect Cache Side-Channel Attacks by Monitoring Performance Counters?",
+    "authors": [
+      "William Kosasih",
+      "Yusi Feng",
+      "Chitchanok Chuengsatiansup",
+      "Yuval Yarom",
+      "Ziyuan Zhu"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2024,
+    "abstract": "Sharing microarchitectural components between co-resident programs leads to potential information leaks, with devastating implications on security. Over the last decade, multiple proposals suggested monitoring hardware performance counters as a method for detecting such attacks. In this work we investigate these proposals and find that the promising results presented in most are unlikely to carry over to realistic use scenarios. We identify four main shortcomings affecting many of the proposals: implications of detection accuracy, unaccounted performance overheads, undocumented or slow detection speed and a weak threat model. We further find that research artifacts for the vast majority of proposals are not available, significantly hampering the reproducibility and scientific validation of the results. To overcome the reproducibility issue, we implement a detection scheme similar to those proposed in literature, achieving results similar to those in the literature. We then focus on the last shortcoming---the weak threat model. We observe that the threat model in existing proposals assumes that the attacker uses some variants of published proof-of-concept attacks, without trying to hide the attack. Instead, we propose an attack that modifies a benign program. We demonstrate that such attacks remain feasible, yet display no statistically significant variations in performance counter values. Hence, such attacks cannot be detected by monitoring performance counters. We therefore conclude that despite the large number of proposals, side-channel attack detection with hardware performance counters is not yet ready for real-world deployment.",
+    "citation_count": 14,
+    "reference_count": 49,
+    "url": "https://dblp.org/rec/conf/asiaccs/KosasihFCYZ24",
+    "dblp_key": "conf/asiaccs/KosasihFCYZ24",
+    "source_id": "https://openalex.org/W4400120328"
+  },
+  {
+    "title": "Battle of Wits: To What Extent Can Fraudsters Disguise Their Tracks in International bypass Fraud?",
+    "authors": [
+      "Anne Josiane Kouam",
+      "Aline Carneiro Viana",
+      "Alain Tchana"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2024,
+    "abstract": "International audience",
+    "citation_count": 1,
+    "reference_count": 26,
+    "url": "https://dblp.org/rec/conf/asiaccs/KouamVT24",
+    "dblp_key": "conf/asiaccs/KouamVT24",
+    "source_id": "https://openalex.org/W4399711455"
+  },
+  {
+    "title": "Cloud-Based Machine Learning Models as Covert Communication Channels.",
+    "authors": [
+      "Torsten Krauß",
+      "Jasper Stang",
+      "Alexandra Dmitrienko"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2024,
+    "abstract": null,
+    "citation_count": 1,
+    "reference_count": 7,
+    "url": "https://dblp.org/rec/conf/asiaccs/KraussSD24",
+    "dblp_key": "conf/asiaccs/KraussSD24",
+    "source_id": "https://openalex.org/W4400120544"
+  },
+  {
+    "title": "A Generative Framework for Low-Cost Result Validation of Machine Learning-as-a-Service Inference.",
+    "authors": [
+      "Abhinav Kumar 0007",
+      "Miguel A. Guirao Aguilera",
+      "Reza Tourani",
+      "Satyajayant Misra"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2024,
+    "abstract": "The growing popularity of Machine Learning (ML) has led to its deployment in various sensitive domains, which has resulted in significant research focused on ML security and privacy.However, in some applications, such as Augmented/Virtual Reality, integrity verification of the outsourced ML tasks is more critical-a facet that has not received much attention.Existing solutions, such as multi-party computation and proof-based systems, impose significant computation overhead, which makes them unfit for real-time applications.We propose Fides, a novel framework for real-time integrity validation of ML-as-a-Service (MLaaS) inference.Fides features a novel and efficient distillation technique-Greedy Distillation Transfer Learning-that dynamically distills and fine-tunes a space and compute-efficient verification model for verifying the corresponding service model while running inside a trusted execution environment.Fides features a client-side attack detection model that uses statistical analysis and divergence measurements to identify, with a high likelihood, if the service model is under attack.Fides also offers a re-classification functionality that predicts the original class whenever an attack is identified.We devised a generative adversarial network framework for training the attack detection and re-classification models.The evaluation shows that Fides achieves an accuracy of up to 98% for attack detection and 94% for re-classification. CCS CONCEPTS• Security and privacy → Domain-specific",
+    "citation_count": 1,
+    "reference_count": 45,
+    "url": "https://dblp.org/rec/conf/asiaccs/KumarATM24",
+    "dblp_key": "conf/asiaccs/KumarATM24",
+    "source_id": "https://openalex.org/W4400121299"
+  },
+  {
+    "title": "Semantic Ranking for Automated Adversarial Technique Annotation in Security Text.",
+    "authors": [
+      "Udesh Kumarasinghe",
+      "Ahmed Lekssays",
+      "Husrev Taha Sencar",
+      "Sabri Boughorbel",
+      "Charitha Elvitigala",
+      "Preslav Nakov"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2024,
+    "abstract": "We introduce a novel approach for mapping attack behaviors described in threat analysis reports to entries in an adversarial techniques knowledge base. Our method leverages a multi-stage ranking architecture to efficiently rank the most related techniques based on their semantic relevance to the input text. Each ranker in our pipeline uses a distinct design for text representation. To enhance relevance modeling, we leverage pretrained language models, which we fine-tune for the technique annotation task. While generic large language models are not yet capable of fully addressing this challenge, we obtain very promising results. We achieve a recall rate improvement of +35% compared to the previous state-of-the-art results. We further create new public benchmark datasets for training and validating methods in this domain, which we release to the research community aiming to promote future research in this important direction.",
+    "citation_count": 5,
+    "reference_count": 19,
+    "url": "https://dblp.org/rec/conf/asiaccs/KumarasingheLSB24",
+    "dblp_key": "conf/asiaccs/KumarasingheLSB24",
+    "source_id": "https://openalex.org/W4400121705"
+  },
+  {
+    "title": "POSTER: On the Feasibility of Inferring SGX Execution through PMU.",
+    "authors": [
+      "Woomin Lee",
+      "Taehun Kim",
+      "Youngjoo Shin"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2024,
+    "abstract": "Intel SGX is a power technology designed to establish a trusted execution environment on processors. Despite its promising features, there are various potential attack surfaces like the Performance Monitoring Unit (PMU) that could be exploited to extract security-sensitive data from SGX enclaves. To address this security threat, Intel has introduced anti side-channel interface (ASCI) that disables the PMU when an SGX enclave is running. However, little attention has been paid to performing the security evaluation of the ASCI feature, leaving the possibility of reviving such an attack. In this paper, we study if Intel's ASCI feature truly hides the internal execution state of SGX enclaves from the PMU to completely eliminate PMU-driven attack surfaces. To achieve this, we design a novel framework that investigates the effect of the running enclave on all possible performance monitoring events. The key idea of our framework is to (i) analyze the linearity between the number of instructions executed within an enclave and the corresponding measured events and (ii) perform single-stepping and zero-stepping attacks with performance monitoring events. Our security evaluation demonstrates that SGX enclave does not leave any footprint on PMUs, except for opt-in (i.e., debug) enclave where a hardware-based protection mechanism is not supported.",
+    "citation_count": 2,
+    "reference_count": 4,
+    "url": "https://dblp.org/rec/conf/asiaccs/LeeKS24",
+    "dblp_key": "conf/asiaccs/LeeKS24",
+    "source_id": "https://openalex.org/W4400121067"
+  },
+  {
+    "title": "SyzRisk: A Change-Pattern-Based Continuous Kernel Regression Fuzzer.",
+    "authors": [
+      "Gwangmu Lee",
+      "Duo Xu 0006",
+      "Solmaz Salimi",
+      "Byoungyoung Lee",
+      "Mathias Payer"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2024,
+    "abstract": null,
+    "citation_count": 1,
+    "reference_count": 50,
+    "url": "https://dblp.org/rec/conf/asiaccs/LeeXSLP24",
+    "dblp_key": "conf/asiaccs/LeeXSLP24",
+    "source_id": "https://openalex.org/W4400120312"
+  },
+  {
+    "title": "Username Squatting on Online Social Networks: A Study on X.",
+    "authors": [
+      "Anastasios Lepipas",
+      "Anastasia Borovykh",
+      "Soteris Demetriou"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2024,
+    "abstract": "Adversaries have been targeting unique identifiers to launch typo-squatting, mobile app squatting and even voice squatting attacks. Anecdotal evidence suggest that online social networks (OSNs) are also plagued with accounts that use similar usernames. This can be confusing to users but can also be exploited by adversaries. However, to date no study characterizes this problem on OSNs. In this work, we define the username squatting problem and design the first multi-faceted measurement study to characterize it on X. We develop a username generation tool (UsernameCrazy) to help us analyze hundreds of thousands of username variants derived from celebrity accounts. Our study reveals that thousands of squatted usernames have been suspended by X, while tens of thousands that still exist on the network are likely bots. Out of these, a large number share similar profile pictures and profile names to the original account signalling impersonation attempts. We found that squatted accounts are being mentioned by mistake in tweets hundreds of thousands of times and are even being prioritized in searches by the network's search recommendation algorithm exacerbating the negative impact squatted accounts can have in OSNs. We use our insights and take the first step to address this issue by designing a framework (SQUAD) that combines UsernameCrazy with a new classifier to efficiently detect suspicious squatted accounts. Our evaluation of SQUAD's prototype implementation shows that it can achieve 94% F1-score when trained on a small dataset.",
+    "citation_count": 1,
+    "reference_count": 61,
+    "url": "https://dblp.org/rec/conf/asiaccs/LepipasBD24",
+    "dblp_key": "conf/asiaccs/LepipasBD24",
+    "source_id": "https://openalex.org/W4400120378"
+  },
+  {
+    "title": "On Practicality of Using ARM TrustZone Trusted Execution Environment for Securing Programmable Logic Controllers.",
+    "authors": [
+      "Zhiang Li",
+      "Daisuke Mashima",
+      "Wen Shei Ong",
+      "Ertem Esiner",
+      "Zbigniew Kalbarczyk",
+      "Ee-Chien Chang"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2024,
+    "abstract": null,
+    "citation_count": 1,
+    "reference_count": 25,
+    "url": "https://dblp.org/rec/conf/asiaccs/LiMOEKC24",
+    "dblp_key": "conf/asiaccs/LiMOEKC24",
+    "source_id": "https://openalex.org/W4400121580"
+  },
+  {
+    "title": "SoK: Understanding Design Choices and Pitfalls of Trusted Execution Environments.",
+    "authors": [
+      "Mengyuan Li 0004",
+      "Yuheng Yang",
+      "Guoxing Chen",
+      "Mengjia Yan 0001",
+      "Yinqian Zhang"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2024,
+    "abstract": null,
+    "citation_count": 10,
+    "reference_count": 53,
+    "url": "https://dblp.org/rec/conf/asiaccs/LiYC0Z24",
+    "dblp_key": "conf/asiaccs/LiYC0Z24",
+    "source_id": "https://openalex.org/W4400120179"
+  },
+  {
+    "title": "Model Extraction Attacks Revisited.",
+    "authors": [
+      "Jiacheng Liang",
+      "Ren Pang",
+      "Changjiang Li",
+      "Ting Wang 0006"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2024,
+    "abstract": null,
+    "citation_count": 12,
+    "reference_count": 14,
+    "url": "https://dblp.org/rec/conf/asiaccs/LiangPLW24",
+    "dblp_key": "conf/asiaccs/LiangPLW24",
+    "source_id": "https://openalex.org/W4400121015"
+  },
+  {
+    "title": "Physical-Layer Public Key Encryption Through Massive MIMO.",
+    "authors": [
+      "Senlin Liu",
+      "Tong Gao",
+      "Yijian Liu",
+      "Xianhui Lu"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2024,
+    "abstract": "We propose a new physical-layer public key encryption scheme and establish a trapdoor one-way function through Massive MIMO techniques and precoding designs. Under standard arguments, we show that the eavesdropper's decoding complexity grows exponentially with the number of antennas, while the legitimate receiver's decoding complexity grows only quadratically. The proposed scheme builds a bridge between information-theoretic security and cryptographic security. Compared to the traditional physical-layer security, the proposed scheme is secure when the number of the eavesdropper's antennas is infinite or much larger than the number of transmitter/receiver antennas, provided that the eavesdropper's distance from the legitimate receiver is less than one-half of the wavelength, or that the channel estimation process between the sender-receiver pair is broken by the eavesdropper. Because the scheme is based on lattice, not on channel reciprocity, it can be applied to both time-division duplex and frequency-division duplex channels, and utilizes the simple physical layer characteristics of Massive MIMO to resist the currently known quantum attacks. The proposed scheme is adapted to the future requirements of 6G for the security of communication, and provides a new idea for the post-quantum cryptosystem. The simulation results show that the proposed scheme has a decoding bit error rate (BER) close to 0.5 at the eavesdropper and almost 0 at the legitimate receiver.",
+    "citation_count": 2,
+    "reference_count": 22,
+    "url": "https://dblp.org/rec/conf/asiaccs/LiuGLL24",
+    "dblp_key": "conf/asiaccs/LiuGLL24",
+    "source_id": "https://openalex.org/W4400121123"
+  },
+  {
+    "title": "Make out like a (Multi-Armed) Bandit: Improving the Odds of Fuzzer Seed Scheduling with T-Scheduler.",
+    "authors": [
+      "Simon Luo",
+      "Adrian Herrera",
+      "Paul Quirk",
+      "Michael Chase",
+      "Damith C. Ranasinghe",
+      "Salil S. Kanhere"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2024,
+    "abstract": null,
+    "citation_count": 2,
+    "reference_count": 34,
+    "url": "https://dblp.org/rec/conf/asiaccs/LuoHQCRK24",
+    "dblp_key": "conf/asiaccs/LuoHQCRK24",
+    "source_id": "https://openalex.org/W4400120398"
+  },
+  {
+    "title": "Publishing Common Neighbors Histograms of Social Networks under Edge Differential Privacy.",
+    "authors": [
+      "Chaojie Lv",
+      "Xiaokui Xiao",
+      "Lan Zhang 0002",
+      "Ting Yu 0001"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2024,
+    "abstract": "Analyzing common neighbors between node pairs in social networks provides valuable insights into the graph structure and enables a range of network analytics tasks. In this paper, we investigate techniques to publish the histogram of common neighbor counts between all node pairs in a social network under edge-differential privacy. This problem is particularly challenging, since the histogram of common neighbor counts has a high sensitivity of O(n), where n is the number of nodes in a social network. If we inject noise into the histogram in proportion to this sensitivity to achieve edge differential privacy, then the noise would overwhelm the signals of the histogram, since each node pair can have at most n - 2 common neighbors. Existing techniques address this issue by converting the histogram publication problem to an integer partition problem that has sensitivity of O(1), but these techniques tend to yield unsatisfactory data utility as they fail to take into account the characteristics of real social networks. To remedy the deficiency of existing methods, we propose a novel multi-stage approach that partitions the common neighbor count histogram into segments with controlled sensitivities lower than the global one, by exploiting the observation that common neighbor counts tend to follow a long-tail distribution: a small percentage of node pairs have large numbers of common neighbors while the remaining vast majority of pairs only have a few. We develop a utility-based technique to derive the optimal partition points. We conduct extensive experiments over several real social network datasets to validate our approach and evaluate the trade-offs of different design choices in our approach. Our code is available at https://github.com/VFVrPQ/edge-dp-cnh.",
+    "citation_count": 1,
+    "reference_count": 21,
+    "url": "https://dblp.org/rec/conf/asiaccs/LvX0Y24",
+    "dblp_key": "conf/asiaccs/LvX0Y24",
+    "source_id": "https://openalex.org/W4400121497"
+  },
+  {
+    "title": "Beyond the Edges of Kernel Control-Flow Hijacking Protection with HEK-CFI.",
+    "authors": [
+      "Lukas Maar",
+      "Pascal Nasahl",
+      "Stefan Mangard"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2024,
+    "abstract": null,
+    "citation_count": 5,
+    "reference_count": 20,
+    "url": "https://dblp.org/rec/conf/asiaccs/MaarNM24",
+    "dblp_key": "conf/asiaccs/MaarNM24",
+    "source_id": "https://openalex.org/W4400121104"
+  },
+  {
+    "title": "SRAM Imprinting for System Protection and Differentiation.",
+    "authors": [
+      "Jubayer Mahmod",
+      "Matthew Hicks"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2024,
+    "abstract": "The foundation of trusted computation depends on the ability to verify the authenticity of the underlying hardware. This need is further compounded by the presence of counterfeit components in the market, highlighting the necessity for pre-deployment and run-time chip identification techniques. Current solutions involve burning authentication information in physical fuses or creating a unique mask for each integrated circuit, which are either costly or susceptible to forgery. While many solutions have been proposed to prevent chip counterfeiting at design time, no accurate, reference-free, and cost-effective solutions exist for chip buyers to authenticate their purchases in the pre-deployment phase and enable software-level verification at runtime. The lack of industrystandard authentication methods forces chip buyers to either adopt expensive solutions, such as X-Ray imaging, or simply rely on blind faith.\\n\\nThis paper presents SKU-RAM, a technique for chip identification that allows manufacturers to embed their signature into integrated circuits, provides per-device identification, and facilitates hardwareenforced time-limited licensing functionality. Our approach takes advantage of the aging-induced power-on state changes in SRAM to encode authentication data into an already fabricated device, without modifying the mask of the chips. This hardware-overheadfree augmentation to the chips eliminates numerous instances of chip counterfeiting and enables software-level authentication. We demonstrate the effectiveness of SKU-RAM as a comprehensive and scalable anti-counterfeiting solution for existing and future computing devices using commercial off-the-shelf microcontrollers and microprocessors and multi-year real-time experiments.",
+    "citation_count": 0,
+    "reference_count": 30,
+    "url": "https://dblp.org/rec/conf/asiaccs/MahmodH24",
+    "dblp_key": "conf/asiaccs/MahmodH24",
+    "source_id": "https://openalex.org/W4400121153"
+  },
+  {
+    "title": "On the Role of Pre-trained Embeddings in Binary Code Analysis.",
+    "authors": [
+      "Alwin Maier",
+      "Felix Weißberg",
+      "Konrad Rieck"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2024,
+    "abstract": "State-of-the-art object detection networks depend on region proposal algorithms to hypothesize object locations. Advances like SPPnet and Fast R-CNN have reduced the running time of these detection networks, exposing region proposal computation as a bottleneck. In this work, we introduce a Region Proposal Network (RPN) that shares full-image convolutional features with the detection network, thus enabling nearly cost-free region proposals. An RPN is a fully convolutional network that simultaneously predicts object bounds and objectness scores at each position. The RPN is trained end-to-end to generate high-quality region proposals, which are used by Fast R-CNN for detection. We further merge RPN and Fast R-CNN into a single network by sharing their convolutional features---using the recently popular terminology of neural networks with 'attention' mechanisms, the RPN component tells the unified network where to look. For the very deep VGG-16 model, our detection system has a frame rate of 5fps (including all steps) on a GPU, while achieving state-of-the-art object detection accuracy on PASCAL VOC 2007, 2012, and MS COCO datasets with only 300 proposals per image. In ILSVRC and COCO 2015 competitions, Faster R-CNN and RPN are the foundations of the 1st-place winning entries in several tracks. Code has been made publicly available.",
+    "citation_count": 18214,
+    "reference_count": 22,
+    "url": "https://dblp.org/rec/conf/asiaccs/MaierWR24",
+    "dblp_key": "conf/asiaccs/MaierWR24",
+    "source_id": "https://openalex.org/W2613718673"
+  },
+  {
+    "title": "Beyond Over-Protection: A Targeted Approach to Spectre Mitigation and Performance Optimization.",
+    "authors": [
+      "Tiziano Marinaro",
+      "Pablo Buiras",
+      "Andreas Lindner",
+      "Roberto Guanciale",
+      "Hamed Nemati"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2024,
+    "abstract": null,
+    "citation_count": 0,
+    "reference_count": 35,
+    "url": "https://dblp.org/rec/conf/asiaccs/MarinaroBLGN24",
+    "dblp_key": "conf/asiaccs/MarinaroBLGN24",
+    "source_id": "https://openalex.org/W4400120939"
+  },
+  {
+    "title": "Exploiting Data Redundancy in CKKS Encoding for High-Speed Homomorphic Encryption.",
+    "authors": [
+      "Amir Sabbagh Molahosseini",
+      "Hans Vandierendonck"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2024,
+    "abstract": "&lt;div&gt; &lt;div&gt; &lt;div&gt;This paper presents an efficient encoding method for CKKS Homomorphic Encryption (HE) that exploits data redundancy to make the conversion of complex/real numbers to plaintext polynomials efficient without sacrificing security or accuracy. While the proposed method is amenable to customized hardware implementation, it is specifically designed to be embedded within HE software libraries such as Microsoft SEAL to provide a fast software implementation of CKKS encoding. Experimental evaluations show that the proposed approach results in up to 1.4&times; and 1.5&times; speed-ups for encoding complex and real numbers, respectively, compared to the SEAL library CKKS encoding for polynomial modulus degrees from 4096 to 32768.&lt;/div&gt; &lt;/div&gt; &lt;/div&gt; &lt;div&gt; &lt;/div&gt;",
+    "citation_count": 0,
+    "reference_count": 21,
+    "url": "https://dblp.org/rec/conf/asiaccs/MolahosseiniV24",
+    "dblp_key": "conf/asiaccs/MolahosseiniV24",
+    "source_id": "https://openalex.org/W4400120601"
+  },
+  {
+    "title": "Cross-Language Differential Testing of JSON Parsers.",
+    "authors": [
+      "Jonas Möller",
+      "Felix Weißberg",
+      "Lukas Pirch",
+      "Thorsten Eisenhofer",
+      "Konrad Rieck"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2024,
+    "abstract": null,
+    "citation_count": 1,
+    "reference_count": 24,
+    "url": "https://dblp.org/rec/conf/asiaccs/MollerWPER24",
+    "dblp_key": "conf/asiaccs/MollerWPER24",
+    "source_id": "https://openalex.org/W4400119984"
+  },
+  {
+    "title": "ISLAB: Immutable Memory Management Metadata for Commodity Operating System Kernels.",
+    "authors": [
+      "Marius Momeu",
+      "Fabian Kilger",
+      "Christopher Roemheld",
+      "Simon Schnückel",
+      "Sergej Proskurin",
+      "Michalis Polychronakis",
+      "Vasileios P. Kemerlis"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2024,
+    "abstract": null,
+    "citation_count": 3,
+    "reference_count": 16,
+    "url": "https://dblp.org/rec/conf/asiaccs/MomeuKRSPPK24",
+    "dblp_key": "conf/asiaccs/MomeuKRSPPK24",
+    "source_id": "https://openalex.org/W4400119962"
+  },
+  {
+    "title": "X-Ray-TLS: Transparent Decryption of TLS Sessions by Extracting Session Keys from Memory.",
+    "authors": [
+      "Florent Moriconi",
+      "Olivier Levillain",
+      "Aurélien Francillon",
+      "Raphaël Troncy"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2024,
+    "abstract": "International audience",
+    "citation_count": 2,
+    "reference_count": 14,
+    "url": "https://dblp.org/rec/conf/asiaccs/MoriconiLFT24",
+    "dblp_key": "conf/asiaccs/MoriconiLFT24",
+    "source_id": "https://openalex.org/W4400121414"
+  },
+  {
+    "title": "SilentProof: Anonymous Authentication with Blockchain-Backed Offloading.",
+    "authors": [
+      "Jamal Mosakheil",
+      "Kan Yang 0001"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2024,
+    "abstract": "Anonymous credentials empower users with strong privacy controls by enabling them to selectively disclose specific attributes from a credential without unveiling other personal details. However, current anonymous credential systems confront two primary challenges: 1) Their designs are not tailored for resource-limited devices due to their dependence on computationally heavy techniques such as generic zero-knowledge or Groth-Sahai proofs at both presentation and verification phases; and 2) They pose complexities in deploying anonymous credentials as-a-service since users must maintain specific key materials and dedicated software. To tackle these challenges, we present SilentProof, a blockchain-backed anonymous authentication protocol, which offloads the responsibility of credential presentation from individual users to the blockchain. By harnessing the combined strengths of zero-knowledge proxy re-identification and blind signatures, SilentProof empowers the blockchain to create zero-knowledge proofs for users, while ensuring clear user consent and eliminating the need for direct access to user-specific attributes. This design broadens the use cases for anonymous credentials, making it ideal for scalable, secure, and privacy-centric authentication, especially for resource-limited clients. Furthermore, SilentProof lays the groundwork for a new era of privacy-preserving identity management as-a-service. We provide rigorous security proofs to validate our approach and have developed a SilentProof prototype, showcasing the protocol's practical efficiency.",
+    "citation_count": 2,
+    "reference_count": 20,
+    "url": "https://dblp.org/rec/conf/asiaccs/Mosakheil024",
+    "dblp_key": "conf/asiaccs/Mosakheil024",
+    "source_id": "https://openalex.org/W4400120470"
+  },
+  {
+    "title": "An Investigation into Misuse of Java Security APIs by Large Language Models.",
+    "authors": [
+      "Zahra Mousavi",
+      "Chadni Islam",
+      "Kristen Moore",
+      "Alsharif Abuadbba",
+      "Muhammad Ali Babar 0001"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2024,
+    "abstract": "The increasing trend of using Large Language Models (LLMs) for code generation raises the question of their capability to generate trustworthy code. While many researchers are exploring the utility of code generation for uncovering software vulnerabilities, one crucial but often overlooked aspect is the security Application Programming Interfaces (APIs). APIs play an integral role in upholding software security, yet effectively integrating security APIs presents substantial challenges. This leads to inadvertent misuse by developers, thereby exposing software to vulnerabilities. To overcome these challenges, developers may seek assistance from LLMs. In this paper, we systematically assess ChatGPT's trustworthiness in code generation for security API use cases in Java. To conduct a thorough evaluation, we compile an extensive collection of 48 programming tasks for 5 widely used security APIs. We employ both automated and manual approaches to effectively detect security API misuse in the code generated by ChatGPT for these tasks. Our findings are concerning: around 70% of the code instances across 30 attempts per task contain security API misuse, with 20 distinct misuse types identified. Moreover, for roughly half of the tasks, this rate reaches 100%, indicating that there is a long way to go before developers can rely on ChatGPT to securely implement security API code.",
+    "citation_count": 10,
+    "reference_count": 52,
+    "url": "https://dblp.org/rec/conf/asiaccs/MousaviIMAB24",
+    "dblp_key": "conf/asiaccs/MousaviIMAB24",
+    "source_id": "https://openalex.org/W4400121384"
+  },
+  {
+    "title": "BinAdapter: Leveraging Continual Learning for Inferring Function Symbol Names in a Binary.",
+    "authors": [
+      "Nozima Murodova",
+      "Hyungjoon Koo"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2024,
+    "abstract": null,
+    "citation_count": 0,
+    "reference_count": 16,
+    "url": "https://dblp.org/rec/conf/asiaccs/MurodovaK24",
+    "dblp_key": "conf/asiaccs/MurodovaK24",
+    "source_id": "https://openalex.org/W4400121799"
+  },
+  {
+    "title": "What All the PHUZZ Is About: A Coverage-guided Fuzzer for Finding Vulnerabilities in PHP Web Applications.",
+    "authors": [
+      "Sebastian Neef",
+      "Lorenz Kleissner",
+      "Jean-Pierre Seifert"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2024,
+    "abstract": "Coverage-guided fuzz testing has received significant attention from the\\nresearch community, with a strong focus on binary applications, greatly\\ndisregarding other targets, such as web applications. The importance of the\\nWorld Wide Web in everyone's life cannot be overstated, and to this day, many\\nweb applications are developed in PHP. In this work, we address the challenges\\nof applying coverage-guided fuzzing to PHP web applications and introduce\\nPHUZZ, a modular fuzzing framework for PHP web applications. PHUZZ uses novel\\napproaches to detect more client-side and server-side vulnerability classes\\nthan state-of-the-art related work, including SQL injections, remote command\\ninjections, insecure deserialization, path traversal, external entity\\ninjection, cross-site scripting, and open redirection. We evaluate PHUZZ on a\\ndiverse set of artificial and real-world web applications with known and\\nunknown vulnerabilities, and compare it against a variety of state-of-the-art\\nfuzzers. In order to show PHUZZ' effectiveness, we fuzz over 1,000 API\\nendpoints of the 115 most popular WordPress plugins, resulting in over 20\\nsecurity issues and 2 new CVE-IDs. Finally, we make the framework publicly\\navailable to motivate and encourage further research on web application fuzz\\ntesting.\\n",
+    "citation_count": 3,
+    "reference_count": 15,
+    "url": "https://dblp.org/rec/conf/asiaccs/NeefKS24",
+    "dblp_key": "conf/asiaccs/NeefKS24",
+    "source_id": "https://openalex.org/W4399554241"
+  },
+  {
+    "title": "FakeX: A Framework for Detecting Fake Reviews of Browser Extensions.",
+    "authors": [
+      "Eric Olsson 0001",
+      "Benjamin Eriksson",
+      "Pablo Picazo-Sanchez",
+      "Lukas Andersson",
+      "Andrei Sabelfeld"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2024,
+    "abstract": "Browser extensions boost user experience on the web. Similarly to smartphone app stores, browsers like Chrome distribute browser extensions via their Web Store, enabling a thriving market of third-party developed extensions. The Web Store incorporates a user review system to help users decide which extensions to install. Unfortunately, the open nature of the review system is subject to reputation manipulation. As browser vendors fight reputation manipulation, attackers employ more sophisticated methods to stay under the radar. Focusing on fake reviews, we identify several techniques attackers use: fake accounts, disjoint sets of fake accounts for different extensions, automation of generated reviews, and focusing on reviews rather than ratings. We present FakeX, a framework to detect fake reviews by focusing on inference from review metadata. FakeX employs five distinct methods, including temporal distribution analysis, relationship clustering, and ratio-based assessments, to unveil patterns indicative of fake reviews. Evaluation of over 1.7 million reviews reveals the effectiveness of FakeX in identifying hundreds of fake review campaigns. Furthermore, our investigation of these fake reviews uncovers 86 malicious extensions, mounting attacks that range from data-stealing to monetization, impacting over 64 million users. In addition, we collaborate with Adblock Plus and Avast to demonstrate FakeX in action, expanding a seed list of newly detected malicious extensions to discover a further 16 malicious extensions with millions of users, where, in some cases, attackers tried to improve malicious code.",
+    "citation_count": 4,
+    "reference_count": 25,
+    "url": "https://dblp.org/rec/conf/asiaccs/OlssonEPAS24",
+    "dblp_key": "conf/asiaccs/OlssonEPAS24",
+    "source_id": "https://openalex.org/W4400121275"
+  },
+  {
+    "title": "MultiTEE: Distributing Trusted Execution Environments.",
+    "authors": [
+      "Simon Ott",
+      "Benjamin Orthen",
+      "Alexander Weidinger",
+      "Julian Horsch",
+      "Vijayanand Nayani",
+      "Jan-Erik Ekberg"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2024,
+    "abstract": null,
+    "citation_count": 4,
+    "reference_count": 16,
+    "url": "https://dblp.org/rec/conf/asiaccs/OttOWHNE24",
+    "dblp_key": "conf/asiaccs/OttOWHNE24",
+    "source_id": "https://openalex.org/W4400121703"
+  },
+  {
+    "title": "POSTER: Defense against False Data Injection Attack in a Cyber-Physical System.",
+    "authors": [
+      "Sushree Padhan",
+      "Ashok Kumar Turuk"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2024,
+    "abstract": null,
+    "citation_count": 0,
+    "reference_count": 8,
+    "url": "https://dblp.org/rec/conf/asiaccs/PadhanT24",
+    "dblp_key": "conf/asiaccs/PadhanT24",
+    "source_id": "https://openalex.org/W4400121423"
+  },
+  {
+    "title": "REPQC: Reverse Engineering and Backdooring Hardware Accelerators for Post-quantum Cryptography.",
+    "authors": [
+      "Samuel Pagliarini",
+      "Aikata",
+      "Malik Imran",
+      "Sujoy Sinha Roy"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2024,
+    "abstract": null,
+    "citation_count": 2,
+    "reference_count": 47,
+    "url": "https://dblp.org/rec/conf/asiaccs/PagliariniAIR24",
+    "dblp_key": "conf/asiaccs/PagliariniAIR24",
+    "source_id": "https://openalex.org/W4400121323"
+  },
+  {
+    "title": "SPRITE: Secure and Private Routing in Payment Channel Networks.",
+    "authors": [
+      "Gaurav Panwar",
+      "Roopa Vishwanathan",
+      "George Torres",
+      "Satyajayant Misra"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2024,
+    "abstract": null,
+    "citation_count": 4,
+    "reference_count": 16,
+    "url": "https://dblp.org/rec/conf/asiaccs/PanwarVTM24",
+    "dblp_key": "conf/asiaccs/PanwarVTM24",
+    "source_id": "https://openalex.org/W4400120452"
+  },
+  {
+    "title": "On The Effect of Replacement Policies on The Security of Randomized Cache Architectures.",
+    "authors": [
+      "Moritz Peters",
+      "Nicolas Gaudin",
+      "Jan Philipp Thoma",
+      "Vianney Lapôtre",
+      "Pascal Cotret",
+      "Guy Gogniat",
+      "Tim Güneysu"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2024,
+    "abstract": "International audience",
+    "citation_count": 3,
+    "reference_count": 29,
+    "url": "https://dblp.org/rec/conf/asiaccs/PetersGTLCGG24",
+    "dblp_key": "conf/asiaccs/PetersGTLCGG24",
+    "source_id": "https://openalex.org/W4400121626"
+  },
+  {
+    "title": "Deep Dive into Client-Side Anti-Phishing: A Longitudinal Study Bridging Academia and Industry.",
+    "authors": [
+      "Rana Pourmohamad",
+      "Steven Wirsz",
+      "Adam Oest",
+      "Tiffany Bao",
+      "Yan Shoshitaishvili",
+      "Ruoyu Wang 0001",
+      "Adam Doupé",
+      "Rida A. Bazzi"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2024,
+    "abstract": null,
+    "citation_count": 3,
+    "reference_count": 27,
+    "url": "https://dblp.org/rec/conf/asiaccs/PourmohamadWOBS24",
+    "dblp_key": "conf/asiaccs/PourmohamadWOBS24",
+    "source_id": "https://openalex.org/W4400121060"
+  },
+  {
+    "title": "Kirin: Hitting the Internet with Distributed BGP Announcements.",
+    "authors": [
+      "Lars Prehn",
+      "Pawel Foremski",
+      "Oliver Gasser"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2024,
+    "abstract": null,
+    "citation_count": 0,
+    "reference_count": 38,
+    "url": "https://dblp.org/rec/conf/asiaccs/PrehnFG24",
+    "dblp_key": "conf/asiaccs/PrehnFG24",
+    "source_id": "https://openalex.org/W4400121059"
+  },
+  {
+    "title": "FAKEPCD: Fake Point Cloud Detection via Source Attribution.",
+    "authors": [
+      "Yiting Qu",
+      "Zhikun Zhang 0001",
+      "Yun Shen",
+      "Michael Backes 0001",
+      "Yang Zhang 0016"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2024,
+    "abstract": "To prevent the mischievous use of synthetic (fake) point clouds produced by generative models, we pioneer the study of detecting point cloud authenticity and attributing them to their sources. We propose an attribution framework, FAKEPCD, to attribute (fake) point clouds to their respective generative models (or real-world collections). The main idea of FAKEPCD is to train an attribution model that learns the point cloud features from different sources and further differentiates these sources using an attribution signal. Depending on the characteristics of the training point clouds, namely, sources and shapes, we formulate four attribution scenarios: close-world, open-world, single-shape, and multiple-shape, and evaluate FAKEPCD's performance in each scenario. Extensive experimental results demonstrate the effectiveness of FAKEPCD on source attribution across different scenarios. Take the open-world attribution as an example, FAKEPCD attributes point clouds to known sources with an accuracy of 0.82-0.98 and to unknown sources with an accuracy of 0.73-1.00. Additionally, we introduce an approach to visualize unique patterns (fingerprints) in point clouds associated with each source. This explains how FAKEPCD recognizes point clouds from various sources by focusing on distinct areas within them. Overall, we hope our study establishes a baseline for the source attribution of (fake) point clouds.",
+    "citation_count": 0,
+    "reference_count": 0,
+    "url": "https://dblp.org/rec/conf/asiaccs/Qu0S0024",
+    "dblp_key": "conf/asiaccs/Qu0S0024",
+    "source_id": "https://openalex.org/W4389984434"
+  },
+  {
+    "title": "POSTER: Double-Dip: Thwarting Label-Only Membership Inference Attacks with Transfer Learning and Randomization.",
+    "authors": [
+      "Arezoo Rajabi",
+      "Reeya Pimple",
+      "Aiswarya Janardhanan",
+      "Surudhi Asokraj",
+      "Bhaskar Ramasubramanian",
+      "Radha Poovendran"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2024,
+    "abstract": null,
+    "citation_count": 0,
+    "reference_count": 9,
+    "url": "https://dblp.org/rec/conf/asiaccs/RajabiPJARP24",
+    "dblp_key": "conf/asiaccs/RajabiPJARP24",
+    "source_id": "https://openalex.org/W4400120609"
+  },
+  {
+    "title": "Non-Fusion Based Coherent Cache Randomization Using Cross-Domain Accesses.",
+    "authors": [
+      "Kartik Ramkrishnan",
+      "Stephen McCamant",
+      "Antonia Zhai",
+      "Pen-Chung Yew"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2024,
+    "abstract": "Randomization has proven to be a effective defense against conflict-based side-channel attacks in a shared cache. It improves security by assigning a unique randomization scheme to each security domain, e.g., though a different hashing function. However, if two domains have shared data, the domains must be fused in order to guarantee correctness (i.e., data coherence). Such domain fusion significantly reduces the effectiveness of randomization and weakens its security protection. We propose randomization with sharing (RAWS), which enables secure cross-domain accesses while enforcing cache coherence (and thus data coherence). Based on RAWS, we design a non-fusion based inter-domain coherence protocol (NF-IDCP). NF-IDCP enables cache coherence by looking up and flushing multiple cache lines associated with shared-writable data during their cross-domain accesses. Furthermore, NF-IDCP uses constant-delay banking to securely reduce the latency of the cache line flushes. We also use a secure tag-based filter (STF) to reduce flush costs, for example, by explicitly storing the exact cache locations to be flushed. The security evaluation shows that conflict attacks on the optimized NF-IDCP structures cannot leak conflict observations at a meaningful rate. Attack simulations using CacheFX demonstrate that domain fusion significantly retards the protection provided by randomization schemes. Performance overhead of SPECrate 2017 and PARSEC 3.0 benchmarks is evaluated on ZSim, a microarchitectural simulator. To study the performance impact on realistic workloads, such as Firefox, Chromium and X Server, we use a cache simulator built on top of PANDA, a full-system emulator. Across all configurations, the average performance overhead is less than 5%, and the hardware overhead is less than 3% compared to a domain-fused randomization.",
+    "citation_count": 2,
+    "reference_count": 32,
+    "url": "https://dblp.org/rec/conf/asiaccs/RamkrishnanMZY24",
+    "dblp_key": "conf/asiaccs/RamkrishnanMZY24",
+    "source_id": "https://openalex.org/W4400120801"
+  },
+  {
+    "title": "Who&apos;s Breaking the Rules? Studying Conformance to the HTTP Specifications and its Security Impact.",
+    "authors": [
+      "Jannis Rautenstrauch",
+      "Ben Stock"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2024,
+    "abstract": null,
+    "citation_count": 117,
+    "reference_count": 91,
+    "url": "https://dblp.org/rec/conf/asiaccs/RautenstrauchS24",
+    "dblp_key": "conf/asiaccs/RautenstrauchS24",
+    "source_id": "https://openalex.org/W4293020911"
+  },
+  {
+    "title": "Menhir: An Oblivious Database with Protection against Access and Volume Pattern Leakage.",
+    "authors": [
+      "Leonie Reichert",
+      "Gowri R. Chandran",
+      "Phillipp Schoppmann",
+      "Thomas Schneider 0003",
+      "Björn Scheuermann 0001"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2024,
+    "abstract": "Analyzing user data while protecting the privacy of individuals remains a big challenge. Trusted execution environments (TEEs) are a possible solution as they protect processes and Virtual Machines (VMs) against malicious hosts. However, TEEs can leak access patterns to code and to the data being processed. Furthermore, when data is stored in a TEE database, the data volume required to answer a query is another unwanted side channel that contains sensitive information. Both types of information leaks, access patterns and volume patterns, allow for database reconstruction attacks.&#13;\\nIn this paper, we present Menhir, an oblivious TEE database that hides access patterns with ORAM guarantees and volume patterns through differential privacy. The database allows range and point queries with SQL-like WHERE-clauses. It builds on the state-of-the-art oblivious AVL tree construction Oblix (S&amp;P'18), which by itself does not protect against volume leakage. We show how volume leakage can be exploited in range queries and improve the construction to mitigate this type of attack. We prove the correctness and obliviousness of Menhir. Our evaluation shows that our approach is feasible and scales well with the number of rows and columns in the database.",
+    "citation_count": 6,
+    "reference_count": 21,
+    "url": "https://dblp.org/rec/conf/asiaccs/ReichertCS0024",
+    "dblp_key": "conf/asiaccs/ReichertCS0024",
+    "source_id": "https://openalex.org/W4400120322"
+  },
+  {
+    "title": "TeeFilter: High-Assurance Network Filtering Engine for High-End IoT and Edge Devices based on TEEs.",
+    "authors": [
+      "Jonas Röckl",
+      "Nils Bernsdorf",
+      "Tilo Müller"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2024,
+    "abstract": null,
+    "citation_count": 1,
+    "reference_count": 8,
+    "url": "https://dblp.org/rec/conf/asiaccs/RocklBM24",
+    "dblp_key": "conf/asiaccs/RocklBM24",
+    "source_id": "https://openalex.org/W4400121119"
+  },
+  {
+    "title": "From User Insights to Actionable Metrics: A User-Focused Evaluation of Privacy-Preserving Browser Extensions.",
+    "authors": [
+      "Ritik Roongta",
+      "Rachel Greenstadt"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2024,
+    "abstract": "The rapid growth of web tracking via advertisements has led to an increased adoption of privacy-preserving browser extensions. These extensions are crucial for blocking trackers and enhancing the overall web browsing experience. The advertising industry is constantly changing, leading to ongoing development and improvements in both new and existing ad-blocking and anti-tracking extensions. Despite this, there is a lack of comprehensive studies exploring the set of user concerns associated with these extensions. Our research addresses this gap by identifying five user concerns and establishing a privacy and usability topics framework, specific to privacy-preserving extensions. Also, many of these user concerns have not been extensively studied in the prior works. Therefore, we conducted an extensive literature review to identify shortcomings in the current benchmarking methodology. This led to the development of new techniques, including experiments to measure newly identified metrics. Our study reveals eight new metrics for privacy-preserving extensions that have not been previously measured. Additionally, our study enhances the measurement methodology for two metrics, ensuring precise results. We focus particularly on metrics that users commonly encounter on the web and report in Chrome web store reviews. Our goal is to serve as a foundational reference for future research in this field.",
+    "citation_count": 1,
+    "reference_count": 25,
+    "url": "https://dblp.org/rec/conf/asiaccs/RoongtaG24",
+    "dblp_key": "conf/asiaccs/RoongtaG24",
+    "source_id": "https://openalex.org/W4400120449"
+  },
+  {
+    "title": "Unmasking the Veiled: A Comprehensive Analysis of Android Evasive Malware.",
+    "authors": [
+      "Antonio Ruggia",
+      "Dario Nisi",
+      "Savino Dambra",
+      "Alessio Merlo",
+      "Davide Balzarotti",
+      "Simone Aonzo"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2024,
+    "abstract": null,
+    "citation_count": 11,
+    "reference_count": 31,
+    "url": "https://dblp.org/rec/conf/asiaccs/RuggiaNDMBA24",
+    "dblp_key": "conf/asiaccs/RuggiaNDMBA24",
+    "source_id": "https://openalex.org/W4398223826"
+  },
+  {
+    "title": "POSTER: Game of Trojans: Adaptive Adversaries Against Output-based Trojaned-Model Detectors.",
+    "authors": [
+      "Dinuka Sahabandu",
+      "Xiaojun Xu",
+      "Arezoo Rajabi",
+      "Luyao Niu",
+      "Bhaskar Ramasubramanian",
+      "Bo Li 0026",
+      "Radha Poovendran"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2024,
+    "abstract": "Deep Neural Network (DNN) models are vulnerable to Trojan attacks, wherein a Trojaned DNN will mispredict trigger-embedded inputs as malicious targets, while outputs for clean inputs remain unaffected. Output-based Trojaned model detectors, which analyze outputs of DNNs to perturbed inputs have emerged as a promising approach for identifying Trojaned DNN models. At present, these SOTA detectors assume that the adversary is (i) static and (ii) does not have prior knowledge about deployed detection mechanisms. In this work in progress, we present an adaptive adversary that can retrain a Trojaned DNN and is also aware of output-based Trojaned model detectors. Such an adversary can ensure (1) high accuracy on both trigger-embedded and clean samples and (2) bypass detection. Our approach uses an observation that the high dimensionality of DNN parameters provides sufficient degrees of freedom to achieve these objectives. We also enable SOTA detectors to be adaptive by allowing retraining to recalibrate their parameters, thus modeling a co-evolution of parameters of a Trojaned model and detectors. We then show that this co-evolution can be modeled as an iterative game, and prove that the solution of this interactive game leads to the adversary successfully achieving the above objectives. We also show that for cross-entropy or log-likelihood loss functions used by the DNNs, a greedy algorithm provides provable guarantees on the needed number of trigger-embedded samples.",
+    "citation_count": 0,
+    "reference_count": 5,
+    "url": "https://dblp.org/rec/conf/asiaccs/SahabanduXRNRLP24",
+    "dblp_key": "conf/asiaccs/SahabanduXRNRLP24",
+    "source_id": "https://openalex.org/W4400120854"
+  },
+  {
+    "title": "Towards Understanding and Improving Security-Relevant Web Application Logging.",
+    "authors": [
+      "Merve Sahin",
+      "Noemi Daniele"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2024,
+    "abstract": null,
+    "citation_count": 0,
+    "reference_count": 32,
+    "url": "https://dblp.org/rec/conf/asiaccs/SahinD24",
+    "dblp_key": "conf/asiaccs/SahinD24",
+    "source_id": "https://openalex.org/W4400119946"
+  },
+  {
+    "title": "PEPPER: Privacy-prEserving, auditable, and fair Payment based resource discovery at the PERvasive edge.",
+    "authors": [
+      "Emrah Sariboz",
+      "Reza Tourani",
+      "Roopa Vishwanathan",
+      "Satyajayant Misra"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2024,
+    "abstract": "Pervasive Edge Computing (PEC), a recent addition to the edge computing paradigm, leverages the computing resources of end-user devices to execute computation tasks in close proximity to users. One of the primary challenges in the PEC environment is determining the appropriate servers for offloading computation tasks based on factors, such as computation latency, response quality, device reliability, and cost of service. Computation outsourcing in the PEC ecosystem requires additional security and privacy considerations. Finally, mechanisms need to be in place to guarantee fair payment for the executed service(s). We present PEPPER, a novel, privacy-preserving, and decentralized framework that addresses aforementioned challenges by utilizing blockchain technology and trusted execution environments (TEE). PEPPER improves the performance of PEC by allocating resources among end-users efficiently and securely. It also provides the underpinnings for building a financial ecosystem at the pervasive edge. To evaluate the effectiveness of PEPPER, we developed and deployed a proof of concept implementation on the Ethereum blockchain, utilizing Intel SGX as the TEE technology. We propose a simple but highly effective remote attestation method that is particularly beneficial to PEC compared to the standard remote attestation method used today. Our extensive comparison experiment shows that PEPPER is 1.23× to 2.15× faster than the current standard remote attestation procedure. In addition, we formally prove the security of our system using the universal composability (UC) framework.",
+    "citation_count": 0,
+    "reference_count": 21,
+    "url": "https://dblp.org/rec/conf/asiaccs/SaribozTVM24",
+    "dblp_key": "conf/asiaccs/SaribozTVM24",
+    "source_id": "https://openalex.org/W4400121501"
+  },
+  {
+    "title": "Uncovering Covert Attacks on EV Charging Infrastructure: How OCPP Backend Vulnerabilities Could Compromise Your System.",
+    "authors": [
+      "Khaled Sarieddine",
+      "Mohammad Ali Sayed",
+      "Sadegh Torabi",
+      "Ribal Attallah",
+      "Danial Jafarigiv",
+      "Chadi Assi",
+      "Mourad Debbabi"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2024,
+    "abstract": null,
+    "citation_count": 11,
+    "reference_count": 16,
+    "url": "https://dblp.org/rec/conf/asiaccs/SarieddineSTAJA24",
+    "dblp_key": "conf/asiaccs/SarieddineSTAJA24",
+    "source_id": "https://openalex.org/W4400121639"
+  },
+  {
+    "title": "Pairwise and Parallel: Enhancing the Key Mismatch Attacks on Kyber and Beyond.",
+    "authors": [
+      "Mingyao Shao",
+      "Yuejun Liu",
+      "Yongbin Zhou"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2024,
+    "abstract": null,
+    "citation_count": 6,
+    "reference_count": 7,
+    "url": "https://dblp.org/rec/conf/asiaccs/ShaoLZ24",
+    "dblp_key": "conf/asiaccs/ShaoLZ24",
+    "source_id": "https://openalex.org/W4400120549"
+  },
+  {
+    "title": "Fuzzing API Error Handling Behaviors using Coverage Guided Fault Injection.",
+    "authors": [
+      "Shashank Sharma",
+      "Sai Ritvik Tanksalkar",
+      "Sourag Cherupattamoolayil",
+      "Aravind Machiry"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2024,
+    "abstract": null,
+    "citation_count": 2,
+    "reference_count": 46,
+    "url": "https://dblp.org/rec/conf/asiaccs/SharmaTCM24",
+    "dblp_key": "conf/asiaccs/SharmaTCM24",
+    "source_id": "https://openalex.org/W4400120919"
+  },
+  {
+    "title": "Segment-Based Formal Verification of WiFi Fragmentation and Power Save Mode.",
+    "authors": [
+      "Zilin Shen",
+      "Imtiaz Karim",
+      "Elisa Bertino"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2024,
+    "abstract": "The IEEE 802.11 family of standards, better known as WiFi, is a widely used protocol utilized by billions of users. Previous works on WiFi formal verification have mostly focused on the four-way handshake and other security aspects. However, recent works have uncovered severe vulnerabilities in functional aspects of WiFi, which can cause information leakage for billions of devices. No formal analysis method exists able to reason on the functional aspects of the WiFi protocol. In this paper, we take the first steps in addressing this gap and present an extensive formal analysis of the functional aspects of the WiFi protocol, more specifically, the fragmentation and the power-save-mode process. To achieve this, we design a novel segment-based formal verification process and introduce a practical threat model (i.e. MAC spoofing) in Tamarin to reason about the various capabilities of the attacker. To this end, we verify 68 properties extracted from WiFi protocol specification, find 3 vulnerabilities from the verification, verify 3 known attacks, and discover 2 new issues. These vulnerabilities and issues affect 14 commercial devices out of 17 tested cases, showing the prevalence and impact of the issues. Apart from this, we show that the proposed countermeasures indeed are sufficient to address the issues. We hope our results and analysis will help vendors adopt the countermeasures and motivate further research into the verification of the functional aspects of the WiFi protocol.",
+    "citation_count": 1,
+    "reference_count": 27,
+    "url": "https://dblp.org/rec/conf/asiaccs/ShenKB24",
+    "dblp_key": "conf/asiaccs/ShenKB24",
+    "source_id": "https://openalex.org/W4400120355"
+  },
+  {
+    "title": "Decoding the MITRE Engenuity ATT&amp;CK Enterprise Evaluation: An Analysis of EDR Performance in Real-World Environments.",
+    "authors": [
+      "Xiangmin Shen",
+      "Zhenyuan Li",
+      "Graham Burleigh",
+      "Lingzhi Wang 0002",
+      "Yan Chen 0004"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2024,
+    "abstract": "Endpoint detection and response (EDR) systems have emerged as a critical component of enterprise security solutions, effectively combating endpoint threats like APT attacks with extended lifecycles. In light of the growing significance of endpoint detection and response (EDR) systems, many cybersecurity providers have developed their own proprietary EDR solutions. It's crucial for users to assess the capabilities of these detection engines to make informed decisions about which products to choose. This is especially urgent given the market's size, which is expected to reach around 3.7 billion dollars by 2023 and is still expanding. MITRE is a leading organization in cyber threat analysis. In 2018, MITRE started to conduct annual APT emulations that cover major EDR vendors worldwide. Indicators include telemetry, detection and blocking capability, etc. Nevertheless, the evaluation results published by MITRE don't contain any further interpretations or suggestions.   In this paper, we thoroughly analyzed MITRE evaluation results to gain further insights into real-world EDR systems under test. Specifically, we designed a whole-graph analysis method, which utilizes additional control flow and data flow information to measure the performance of EDR systems. Besides, we analyze MITRE evaluation's results over multiple years from various aspects, including detection coverage, detection confidence, detection modifier, data source, compatibility, etc. Through the above studies, we have compiled a thorough summary of our findings and gained valuable insights from the evaluation results. We believe these summaries and insights can assist researchers, practitioners, and vendors in better understanding the strengths and limitations of mainstream EDR products.",
+    "citation_count": 5,
+    "reference_count": 16,
+    "url": "https://dblp.org/rec/conf/asiaccs/ShenLBWC24",
+    "dblp_key": "conf/asiaccs/ShenLBWC24",
+    "source_id": "https://openalex.org/W4400120188"
+  },
+  {
+    "title": "TriSAS: Toward Dependable Inter-SAS Coordination with Auditability.",
+    "authors": [
+      "Shanghao Shi",
+      "Yang Xiao 0010",
+      "Changlai Du",
+      "Yi Shi 0001",
+      "Chonggang Wang",
+      "Robert Gazda",
+      "Y. Thomas Hou 0001",
+      "Eric William Burger",
+      "Luiz A. DaSilva",
+      "Wenjing Lou"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2024,
+    "abstract": "To facilitate dynamic spectrum sharing, the FCC has designated certified SAS administrators to implement their own spectrum access systems (SASs) that manage the shared spectrum usage in the novel CBRS band. As a premise, different SAS servers must conduct periodic inter-SAS coordination to synchronize service states and avoid allocation conflicts. However, SAS servers may inevitably stop service for regular upgrades, crash down, or even perform maliciously that deviate from the normal routines, posing a fundamental operation security problem — the system shall be robust against these faults to guarantee secure and efficient spectrum sharing service. Unfortunately, the incumbent inter-SAS coordination mechanism, CPAS, is prone to SAS failures and does not support real-time allocation. Recent proposals that rely on blockchain smart contracts or state machine replication mechanisms to realize faulttolerant inter-SAS coordination require all SASs to follow a unified allocation algorithm. They however face performance bottlenecks and cannot accommodate the current fact that different SASs hold their own proprietary allocation algorithms.\\n\\nIn this work, we propose TriSAS—a novel inter-SAS coordination mechanism to facilitate secure, efficient, and dependable spectrum allocation that is fully compatible with the existing SAS infrastructure. TriSAS decomposes the coordination process into two phases including input synchronization and decision finalization. The first phase ensures participants share a common input set while the second one fulfills a fair and verifiable spectrum allocation selection, which is generated efficiently via SAS proposers’ proprietary allocation algorithms and evaluated by a customized designed allocation evaluation algorithm (AEA), in the face of no more than one-third of malicious participants. We implemented a prototype of TriSAS on the AWS cloud computing platform and evaluated its throughput and latency performance. The results show that TriSAS achieves high transaction throughput and low latency under various practical settings.",
+    "citation_count": 0,
+    "reference_count": 22,
+    "url": "https://dblp.org/rec/conf/asiaccs/Shi0D0WG0BDL24",
+    "dblp_key": "conf/asiaccs/Shi0D0WG0BDL24",
+    "source_id": "https://openalex.org/W4400121640"
+  },
+  {
+    "title": "POSTER: Seccomp profiling with Dynamic Analysis via ChatGPT-assisted Test Code Generation.",
+    "authors": [
+      "Somin Song",
+      "Ashish Kundu",
+      "Byungchul Tak"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2024,
+    "abstract": null,
+    "citation_count": 2,
+    "reference_count": 4,
+    "url": "https://dblp.org/rec/conf/asiaccs/SongKT24",
+    "dblp_key": "conf/asiaccs/SongKT24",
+    "source_id": "https://openalex.org/W4400120134"
+  },
+  {
+    "title": "DISCO: Dynamic Searchable Encryption with Constant State.",
+    "authors": [
+      "Xiangfu Song",
+      "Yu Zheng 0021",
+      "Jianli Bai",
+      "Changyu Dong",
+      "Zheli Liu",
+      "Ee-Chien Chang"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2024,
+    "abstract": "Dynamic searchable encryption (DSE) with forward and backward privacy reduces leakages in early-stage schemes. Security enhancement comes with a price - maintaining updatable keyword-wise state information. State information, if stored locally, incurs significant client-side storage overhead for keyword-rich datasets, potentially hindering real-world deployments. We propose DISCO, a simple and efficient framework for designing DSE schemes using constant client state. DISCO combines range-constrained pseudorandom functions (RCPRFs) over a global counter and leverages nice properties from the underlying primitives and index structure to simultaneously achieve forward-and-backward privacy and constant client state. To configure DISCO concretely, we identify a set of RCPRF properties that are vital for the resulting DISCO instantiations. By configuring DISCO with different RCPRFs, we resolve efficiency and usability issues in existing schemes. We further optimize DISCO's concrete efficiency without downgrading security. We implement DISCO constructions and report performance, showing trade-offs from different DISCO constructions. Besides, we compare the practical efficiency of DISCO with existing non-constant-state DSE schemes, demonstrating DISCO's competitive efficiency.",
+    "citation_count": 4,
+    "reference_count": 14,
+    "url": "https://dblp.org/rec/conf/asiaccs/SongZBDLC24",
+    "dblp_key": "conf/asiaccs/SongZBDLC24",
+    "source_id": "https://openalex.org/W4400121641"
+  },
+  {
+    "title": "Quantum-Safe Account Recovery for WebAuthn.",
+    "authors": [
+      "Douglas Stebila",
+      "Spencer Wilson"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2024,
+    "abstract": "WebAuthn is a passwordless authentication protocol which allows users to authenticate to online services using public-key cryptography. Users prove their identity by signing a challenge with a private key, which is stored on a device such as a cell phone or a USB security token. This approach avoids many of the common security problems with password-based authentication. WebAuthn's reliance on proof-of-possession leads to a usability issue, however: a user who loses access to their authenticator device either loses access to their accounts or is required to fall back on a weaker authentication mechanism. To solve this problem, Yubico has proposed a protocol which allows a user to link two tokens in such a way that one (the primary authenticator) can generate public keys on behalf of the other (the backup authenticator). With this solution, users authenticate with a single token, only relying on their backup token if necessary for account recovery. However, Yubico's protocol relies on the hardness of the discrete logarithm problem for its security and hence is vulnerable to an attacker with a powerful enough quantum computer. We present a WebAuthn recovery protocol which can be instantiated with quantum-safe primitives. We also critique the security model used in previous analysis of Yubico's protocol and propose a new framework which we use to evaluate the security of both the group-based and the quantum-safe protocol. This leads us to uncover a weakness in Yubico's proposal which escaped detection in prior work but was revealed by our model. In our security analysis, we require the cryptographic primitives underlying the protocols to satisfy a number of novel security properties such as KEM unlinkability, which we formalize. We prove that well-known quantum-safe algorithms, including CRYSTALS-Kyber, satisfy the properties required for analysis of our quantum-safe protocol.",
+    "citation_count": 4,
+    "reference_count": 14,
+    "url": "https://dblp.org/rec/conf/asiaccs/StebilaW24",
+    "dblp_key": "conf/asiaccs/StebilaW24",
+    "source_id": "https://openalex.org/W4400121701"
+  },
+  {
+    "title": "POSTER: Multi-Block Fusion Mechanism for Multi-label Vulnerability Detection in Smart Contracts.",
+    "authors": [
+      "Van Tong",
+      "Cuong Dao",
+      "Thep Dong",
+      "Hai Anh Tran",
+      "Duc Tran",
+      "Truong X. Tran"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2024,
+    "abstract": null,
+    "citation_count": 0,
+    "reference_count": 1,
+    "url": "https://dblp.org/rec/conf/asiaccs/TongDDTTT24",
+    "dblp_key": "conf/asiaccs/TongDDTTT24",
+    "source_id": "https://openalex.org/W4400121317"
+  },
+  {
+    "title": "The SA4P Framework: Sensing and Actuation as a Privilege.",
+    "authors": [
+      "Piet De Vaere",
+      "Felix Stöger",
+      "Adrian Perrig",
+      "Gene Tsudik"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2024,
+    "abstract": null,
+    "citation_count": 2,
+    "reference_count": 43,
+    "url": "https://dblp.org/rec/conf/asiaccs/VaereSPT24",
+    "dblp_key": "conf/asiaccs/VaereSPT24",
+    "source_id": "https://openalex.org/W4400121035"
+  },
+  {
+    "title": "Catch me if you can: Covert Information Leakage from Drones using MAVLink Protocol.",
+    "authors": [
+      "Maryna Veksler",
+      "Kemal Akkaya",
+      "A. Selcuk Uluagac"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2024,
+    "abstract": null,
+    "citation_count": 1,
+    "reference_count": 16,
+    "url": "https://dblp.org/rec/conf/asiaccs/VekslerAU24",
+    "dblp_key": "conf/asiaccs/VekslerAU24",
+    "source_id": "https://openalex.org/W4400121527"
+  },
+  {
+    "title": "Mitigating Distributed Backdoor Attack in Federated Learning Through Mode Connectivity.",
+    "authors": [
+      "Kane Walter",
+      "Meisam Mohammady",
+      "Surya Nepal",
+      "Salil S. Kanhere"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2024,
+    "abstract": "Federated Learning (FL) is a privacy-preserving, collaborative machine learning technique where multiple clients train a shared model on their private datasets without sharing the data. While offering advantages, FL is susceptible to backdoor attacks, where attackers insert malicious model updates into the model aggregation process. Compromised models predict attacker-chosen targets when presented with specific attacker-defined inputs. Backdoor defences generally rely on anomaly detection techniques based on Differential Privacy (DP) or require legitimate clean test examples at the server. Anomaly detection-based defences can be defeated by stealth techniques and generally require inspection of client-submitted model updates. DP-based approaches tend to degrade the performance of the trained model due to excessive noise addition during training. Methods that require legitimate clean data on the server require strong assumptions about the task and may not be applicable in real-world settings. In this work, we view the question of backdoor attack robustness through the lens of loss function optimal points to build a defence that overcomes these limitations. We propose Mode Connectivity Based Federated Learning (MCFL), which leverages the recently discovered property of neural network loss surfaces, mode connectivity. We simulate backdoor attack scenarios using computer vision benchmark datasets, including CIFAR10, Fashion MNIST, MNIST, and Federated EMNIST. Our findings show that MCFL converges to high-quality models and effectively mitigates backdoor attacks relative to baseline defences from the literature without requiring inspection of client model updates or assuming clean data at the server.",
+    "citation_count": 1,
+    "reference_count": 10,
+    "url": "https://dblp.org/rec/conf/asiaccs/WalterMNK24",
+    "dblp_key": "conf/asiaccs/WalterMNK24",
+    "source_id": "https://openalex.org/W4400121396"
+  },
+  {
+    "title": "Security Of AI, By AI and For AI: Charting New Territories in AI-Centered Cybersecurity Research.",
+    "authors": [
+      "XiaoFeng Wang 0001"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2024,
+    "abstract": "The rapid advancements in artificial intelligence (AI) technologies and the unyielding demand for their transformative applications have ushered in significant opportunities for security and privacy research and innovations. There is an urgent need for innovative and practical solutions to protect data and other assets to support the training and utilization of large, complicated machine learning (ML) models in a scalable and cost-effective manner (\"Security For AI\"). In the meantime, substantial research efforts are focused on understanding the security and privacy implications of AI systems, particularly identification of vulnerabilities in ML models and mitigation of associated risks (\"Security Of AI\"). Furthermore, cutting-edge AI technologies are increasingly being deployed to enhance the security of computing systems, offering intelligent protection and more effective defenses against real-world threats (\"Security By AI\"). In this presentation, I will use our research in these areas to demonstrate how AI innovations have expanded the horizons of security and privacy research. For instance, under the theme \"Security For AI,\" I will provide an overview of ongoing research at the Center for Distributed Confidential Computing (CDCC) --- one of the largest initiatives funded by the US National Science Foundation aimed at advancing practical, scalable data-in-use protection. This initiative is poised to have a transformative impact on AI research. Regarding \"Security Of AI,\" I will discuss our investigations into Trojan threats to ML models, exploring the fundamentality of this emerging security risk, its defensibility in particular. In the context of \"Security By AI,\" I will showcase how AI and ML technologies are revolutionizing the detection and prediction of security threats within carrier networks---a vital infrastructure---by automating the analysis of their documentations. Lastly, I will discuss potential future directions in the vast space of AI-centered cybersecurity research and innovations.",
+    "citation_count": 1,
+    "reference_count": 1,
+    "url": "https://dblp.org/rec/conf/asiaccs/Wang24",
+    "dblp_key": "conf/asiaccs/Wang24",
+    "source_id": "https://openalex.org/W4400119956"
+  },
+  {
+    "title": "CryptGraph: An Efficient Privacy-Enhancing Solution for Accurate Shortest Path Retrieval in Cloud Environments.",
+    "authors": [
+      "Fuyi Wang",
+      "Zekai Chen",
+      "Lei Pan 0002",
+      "Leo Yu Zhang",
+      "Jianying Zhou 0001"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2024,
+    "abstract": null,
+    "citation_count": 1,
+    "reference_count": 28,
+    "url": "https://dblp.org/rec/conf/asiaccs/WangC0Z024",
+    "dblp_key": "conf/asiaccs/WangC0Z024",
+    "source_id": "https://openalex.org/W4400120685"
+  },
+  {
+    "title": "BlindShuffler: Universal and Trustless Mixing for Confidential Transactions.",
+    "authors": [
+      "Chenke Wang",
+      "Zhonghui Ge",
+      "Yu Long 0001",
+      "Xian Xu 0001",
+      "Shi-Feng Sun 0001",
+      "Dawu Gu"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2024,
+    "abstract": null,
+    "citation_count": 0,
+    "reference_count": 15,
+    "url": "https://dblp.org/rec/conf/asiaccs/WangG000G24",
+    "dblp_key": "conf/asiaccs/WangG000G24",
+    "source_id": "https://openalex.org/W4400120647"
+  },
+  {
+    "title": "POSTER: MalaQ - A Malware Against Quantum Computer.",
+    "authors": [
+      "Siyi Wang",
+      "Alex Jin",
+      "Suman Deb",
+      "Tarun Dutta",
+      "Manas Mukherjee",
+      "Anupam Chattopadhyay"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2024,
+    "abstract": "Quantum computers are set to revolutionize multiple application domains, including financial portfolio optimization, drug discovery, supply chain optimization, and cryptography, by offering algorithmic speed-up over the best-known classical algorithms. This large-scale adoption will also make quantum computers a lucrative target for cyber-criminals. However, to date, there has been minimal experimental study on the possible attack surfaces and the severity of attacks on a real quantum computer. In this work, we introduce MalaQ, a malware specifically developed for quantum computers. MalaQ exploits the classical-computer frontend of a quantum system and causes extensive damages like performance degradation and even complete failure of the quantum circuits. In this paper, we discuss the design, implementation, and experiments using MalaQ in great detail, including drawing parallels with prior works on both classical and quantum cyber-attacks.",
+    "citation_count": 3,
+    "reference_count": 10,
+    "url": "https://dblp.org/rec/conf/asiaccs/WangJDDMC24",
+    "dblp_key": "conf/asiaccs/WangJDDMC24",
+    "source_id": "https://openalex.org/W4400121150"
+  },
+  {
+    "title": "Key Establishment for Secure Asymmetric Cross-Technology Communication.",
+    "authors": [
+      "Wei Wang 0190",
+      "Xin Liu 0045",
+      "Zicheng Chi",
+      "Stuart Ray",
+      "Ting Zhu 0001"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2024,
+    "abstract": null,
+    "citation_count": 4,
+    "reference_count": 17,
+    "url": "https://dblp.org/rec/conf/asiaccs/WangLCRZ24",
+    "dblp_key": "conf/asiaccs/WangLCRZ24",
+    "source_id": "https://openalex.org/W4400121548"
+  },
+  {
+    "title": "A Formal Analysis of Data Distribution Service Security.",
+    "authors": [
+      "Binghan Wang",
+      "Hui Li 0070",
+      "Jingjing Guan"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2024,
+    "abstract": "Tables and Figures. Glossary. 1. Introduction. 1.1 Overview. 1.2 Examples of Surveys with Nonresponse. 1.3 Properly Handling Nonresponse. 1.4 Single Imputation. 1.5 Multiple Imputation. 1.6 Numerical Example Using Multiple Imputation. 1.7 Guidance for the Reader. 2. Statistical Background. 2.1 Introduction. 2.2 Variables in the Finite Population. 2.3 Probability Distributions and Related Calculations. 2.4 Probability Specifications for Indicator Variables. 2.5 Probability Specifications for (X,Y). 2.6 Bayesian Inference for a Population Quality. 2.7 Interval Estimation. 2.8 Bayesian Procedures for Constructing Interval Estimates, Including Significance Levels and Point Estimates. 2.9 Evaluating the Performance of Procedures. 2.10 Similarity of Bayesian and Randomization--Based Inferences in Many Practical Cases. 3. Underlying Bayesian Theory. 3.1 Introduction and Summary of Repeated--Imputation Inferences. 3.2 Key Results for Analysis When the Multiple Imputations are Repeated Draws from the Posterior Distribution of the Missing Values. 3.3 Inference for Scalar Estimands from a Modest Number of Repeated Completed--Data Means and Variances. 3.4 Significance Levels for Multicomponent Estimands from a Modest Number of Repeated Completed--Data Means and Variance--Covariance Matrices. 3.5 Significance Levels from Repeated Completed--Data Significance Levels. 3.6 Relating the Completed--Data and Completed--Data Posterior Distributions When the Sampling Mechanism is Ignorable. 4. Randomization--Based Evaluations. 4.1 Introduction. 4.2 General Conditions for the Randomization--Validity of Infinite--m Repeated--Imputation Inferences. 4.3Examples of Proper and Improper Imputation Methods in a Simple Case with Ignorable Nonresponse. 4.4 Further Discussion of Proper Imputation Methods. 4.5 The Asymptotic Distibution of (Qm,Um,Bm) for Proper Imputation Methods. 4.6 Evaluations of Finite--m Inferences with Scalar Estimands. 4.7 Evaluation of Significance Levels from the Moment--Based Statistics Dm and Dm with Multicomponent Estimands. 4.8 Evaluation of Significance Levels Based on Repeated Significance Levels. 5. Procedures with Ignorable Nonresponse. 5.1 Introduction. 5.2 Creating Imputed Values under an Explicit Model. 5.3 Some Explicit Imputation Models with Univariate YI and Covariates. 5.4 Monotone Patterns of Missingness in Multivariate YI. 5.5 Missing Social Security Benefits in the Current Population Survey. 5.6 Beyond Monotone Missingness. 6. Procedures with Nonignorable Nonresponse. 6.1 Introduction. 6.2 Nonignorable Nonresponse with Univariate YI and No XI. 6.3 Formal Tasks with Nonignorable Nonresponse. 6.4 Illustrating Mixture Modeling Using Educational Testing Service Data. 6.5 Illustrating Selection Modeling Using CPS Data. 6.6 Extensions to Surveys with Follow--Ups. 6.7 Follow--Up Response in a Survey of Drinking Behavior Among Men of Retirement Age. References. Author Index. Subject Index. Appendix I. Report Written for the Social Security Administration in 1977. Appendix II. Report Written for the Census Bureau in 1983.",
+    "citation_count": 19880,
+    "reference_count": 0,
+    "url": "https://dblp.org/rec/conf/asiaccs/WangLG24",
+    "dblp_key": "conf/asiaccs/WangLG24",
+    "source_id": "https://openalex.org/W2118502261"
+  },
+  {
+    "title": "ESem: To Harden Process Synchronization for Servers.",
+    "authors": [
+      "Zhanbo Wang",
+      "Jiaxin Zhan",
+      "Xuhua Ding",
+      "Fengwei Zhang",
+      "Ning Hu"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2024,
+    "abstract": null,
+    "citation_count": 0,
+    "reference_count": 12,
+    "url": "https://dblp.org/rec/conf/asiaccs/WangZDZH24",
+    "dblp_key": "conf/asiaccs/WangZDZH24",
+    "source_id": "https://openalex.org/W4400120645"
+  },
+  {
+    "title": "RootFree Attacks: Exploiting Mobile Platform&apos;s Super Apps From Desktop.",
+    "authors": [
+      "Chao Wang 0113",
+      "Yue Zhang 0025",
+      "Zhiqiang Lin 0001"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2024,
+    "abstract": null,
+    "citation_count": null,
+    "reference_count": null,
+    "url": "https://dblp.org/rec/conf/asiaccs/WangZL24",
+    "dblp_key": "conf/asiaccs/WangZL24",
+    "source_id": null
+  },
+  {
+    "title": "SoK: Where to Fuzz? Assessing Target Selection Methods in Directed Fuzzing.",
+    "authors": [
+      "Felix Weissberg",
+      "Jonas Möller",
+      "Tom Ganz",
+      "Erik Imgrund",
+      "Lukas Pirch",
+      "Lukas Seidel",
+      "Moritz Schloegel",
+      "Thorsten Eisenhofer",
+      "Konrad Rieck"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2024,
+    "abstract": "A common paradigm for improving fuzzing performance is to focus on selected regions of a program rather than its entirety. While previous work has largely explored how these locations can be reached, their selection, that is, the where, has received little attention so far. In this paper, we fill this gap and present the first comprehensive analysis of target selection methods for fuzzing. To this end, we examine papers from leading security and software engineering conferences, identifying prevalent methods for choosing targets. By modeling these methods as general scoring functions, we are able to compare and measure their efficacy on a corpus of more than 1,600 crashes from the OSS-Fuzz project. Our analysis provides new insights for target selection in practice: First, we find that simple software metrics significantly outperform other methods, including common heuristics used in directed fuzzing, such as recently modified code or locations with sanitizer instrumentation. Next to this, we identify language models as a promising choice for target selection. In summary, our work offers a new perspective on directed fuzzing, emphasizing the role of target selection as an orthogonal dimension to improve performance.",
+    "citation_count": 6,
+    "reference_count": 46,
+    "url": "https://dblp.org/rec/conf/asiaccs/WeissbergMGIPSS24",
+    "dblp_key": "conf/asiaccs/WeissbergMGIPSS24",
+    "source_id": "https://openalex.org/W4400121520"
+  },
+  {
+    "title": "LightPIR: Single-Server PIR via FHE without Gaussian Noise.",
+    "authors": [
+      "Han Xia",
+      "Mingsheng Wang"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2024,
+    "abstract": "We introduce the LightPIR family, a new series of single-server PIR protocols with reduced overhead in terms of storage, communication, and computation. The protocols rely on a new GSW-like homomorphic cryptosystem based on the Ring Learning with Rounding (RLWR) problem and several ciphertext conversion algorithms for matrix encoding. Our RLWR-based techniques offer considerable advantages across all evaluation metrics compared to the previous state-of-the-art, the Spiral family (S&P 2022), under various database configurations. On the server, the LightPIR family simultaneously achieves a 1.2--1.8× increase in the throughput and up to a 1.4× increase in the rate while reducing the storage requirements of public parameters by 1.6--5×. For the client, the LightPIR family eliminates the Gaussian noise sampling, resulting in an average 36% reduction in query encryption time and resilience against side-channel attacks. Meanwhile, communication efficiency between the client and server is also enhanced by a reduction of up to 3.8× in query size and up to 1.8× in response size. All the optimizations indicate that our constructions are more lightweight for both the client and the server, highlighting a new practical scenario where RLWR-based schemes can showcase their advantages.",
+    "citation_count": 0,
+    "reference_count": 61,
+    "url": "https://dblp.org/rec/conf/asiaccs/XiaW24",
+    "dblp_key": "conf/asiaccs/XiaW24",
+    "source_id": "https://openalex.org/W4400121726"
+  },
+  {
+    "title": "Poster: Brave: Byzantine-Resilient and Privacy-Preserving Peer-to-Peer Federated Learning.",
+    "authors": [
+      "Zhangchen Xu",
+      "Fengqing Jiang",
+      "Luyao Niu",
+      "Jinyuan Jia 0001",
+      "Radha Poovendran"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2024,
+    "abstract": null,
+    "citation_count": 1,
+    "reference_count": 6,
+    "url": "https://dblp.org/rec/conf/asiaccs/XuJNJP24",
+    "dblp_key": "conf/asiaccs/XuJNJP24",
+    "source_id": "https://openalex.org/W4400120781"
+  },
+  {
+    "title": "Efficient Unbalanced Quorum PSI from Homomorphic Encryption.",
+    "authors": [
+      "Xinpeng Yang",
+      "Liang Cai",
+      "Yinghao Wang",
+      "Keting Yin",
+      "Lu Sun",
+      "Jingwei Hu"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2024,
+    "abstract": "Multiparty private set intersection (mPSI) protocol is capable of finding the intersection of multiple sets securely without revealing any other information. However, its limitation lies in processing only those elements present in every participant's set, which proves inadequate in scenarios where certain elements are common to several, but not all, sets. In this paper, we introduce an innovative variant of the mPSI protocol named unbalanced quorum PSI to fill in the gaps of the mPSI protocol. Unlike the previous quorum-PSI proposals which detect elements present in at least k out of n equal sets, our protocol is particularly tailored for unbalanced cases where the size of the receiver's set is much smaller than the size of the senders' sets. Our work achieves logarithmic communication complexity in the semi-honest setting, significantly surpassing previous work in efficiency. The benchmarks show that it takes 22.7 seconds in WAN and 14.7 seconds in LAN for online computation, and only 87.8 MB of total communication to intersect 5535 elements across 15 sets, each containing 224 elements. Compared to prior work, this is roughly an 87× reduction in communication and a 31× reduction in online time. Our protocols can be easily extended to the larger set with 228 elements which is nearly impractical for prior work.",
+    "citation_count": 2,
+    "reference_count": 16,
+    "url": "https://dblp.org/rec/conf/asiaccs/YangCWYSH24",
+    "dblp_key": "conf/asiaccs/YangCWYSH24",
+    "source_id": "https://openalex.org/W4400121129"
+  },
+  {
+    "title": "Exposed by Default: A Security Analysis of Home Router Default Settings.",
+    "authors": [
+      "Junjian Ye",
+      "Xavier de Carné de Carnavalet",
+      "Lianying Zhao",
+      "Mengyuan Zhang 0001",
+      "Lifa Wu",
+      "Wei Zhang 0122"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2024,
+    "abstract": "With ubiquitous Internet connectivity, home routers have become a cornerstone of our digital lives, often deployed with minimal changes to the factory default settings. However, if left unexamined, these settings can pose risks to user security and privacy. To systematically evaluate potential risks, we developed a threat model-based framework and conducted a comprehensive analysis of 40 commercial off-the-shelf home routers, representative of recent models across 14 brands. We surveyed 81 parameters and behaviors including default and deep default settings. We identified a variety of security flaws including the exposure of IPv6 local devices due to a lack of firewall protection, vulnerable Wi-Fi security protocols, open Wi-Fi networks and trivial admin passwords for “plug-and-play” routers, and unencrypted firmware update communications. We also discovered concealed WPS PIN support - at times associated with a trivial PIN. In total, we are reporting 30 exploitable vulnerabilities to the vendors. This paper highlights the need for heightened scrutiny of default router settings, providing valuable insights to both manufacturers and consumers for enhancing home network security. Our findings underscore the importance of meticulous device configuration, advocating for proactive measures from all stakeholders to mitigate the threats posed by insecure router default settings.",
+    "citation_count": 5,
+    "reference_count": 13,
+    "url": "https://dblp.org/rec/conf/asiaccs/YeCZZWZ24",
+    "dblp_key": "conf/asiaccs/YeCZZWZ24",
+    "source_id": "https://openalex.org/W4400121504"
+  },
+  {
+    "title": "Delegating FIDO Credentials Using Single-use ECDSA Signatures.",
+    "authors": [
+      "Wei-Zhu Yeoh",
+      "Lucjan Hanzlik",
+      "Oliver Valta"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2024,
+    "abstract": "Single-use delegatable signatures allow a delegatee to give the signing right in a restrictive way to a third party. This cryptographic primitive finds applications in the design of blank checks and can even delegate access rights in web authentication. Unfortunately, known constructions work only with non-standard signature schemes and require non-existing secure hardware, making them impractical. In this paper, we construct single-use delegatable ECDSA signatures based on commodity smartphones with hardware-backed keystores. We show how to apply our construction to the web authentication use case. In particular, we show how to delegate FIDO credentials to third parties while not introducing new assumptions to the setting besides the delegate's trust in the security of the keystore. As an independent application, we discuss the use of our construction as a way to implement blind checks in ECDSA-based cryptocurrencies.",
+    "citation_count": 0,
+    "reference_count": 20,
+    "url": "https://dblp.org/rec/conf/asiaccs/YeohHV24",
+    "dblp_key": "conf/asiaccs/YeohHV24",
+    "source_id": "https://openalex.org/W4400120201"
+  },
+  {
+    "title": "HQsFL: A Novel Training Strategy for Constructing High-performance and Quantum-safe Federated Learning.",
+    "authors": [
+      "Bo Yu",
+      "Huajie Shen",
+      "Qian Xu 0008",
+      "Wei He 0015",
+      "Wankui Mao",
+      "Qing Zhang",
+      "Fan Zhang 0010"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2024,
+    "abstract": "Federated Learning (FL) has attracted increasing attention from both academia and industry due to its merit of securely constructing AI models across multiple entities while preserving the privacy of local training data. However, recent research shows two persisting problems in FL that have yet to be solved: (1) limited practical adaptation of federated learning because of time-consuming conventional privacy-preserving methods, and (2) the absence of quantum-computing resistance in these methods. To address these problems, we propose a novel vertical federated learning strategy, HQsFL, which relies on Fully Homomorphic Encryption (FHE) and Matrix Vector Product basing on Coefficient Encoding. The proposed method can be widely applied to FL algorithms such as logistic regression and XGBoost, etc. We fully implement our approach and evaluate its utility and efficiency through extensive experiments performed on four synthetic datasets. The experimental results demonstrate that our proposed methods for vertical LR and XGBoost achieve comparable levels of AUC to conventional methods, while significantly improving training efficiency and achieving security property of quantum-computing resistance.",
+    "citation_count": 2,
+    "reference_count": 17,
+    "url": "https://dblp.org/rec/conf/asiaccs/YuSXHMZZ24",
+    "dblp_key": "conf/asiaccs/YuSXHMZZ24",
+    "source_id": "https://openalex.org/W4400121385"
+  },
+  {
+    "title": "Honest Majority Multiparty Computation over Rings with Constant Online Communication.",
+    "authors": [
+      "Minghua Zhao"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2024,
+    "abstract": null,
+    "citation_count": 0,
+    "reference_count": 25,
+    "url": "https://dblp.org/rec/conf/asiaccs/Zhao24",
+    "dblp_key": "conf/asiaccs/Zhao24",
+    "source_id": "https://openalex.org/W4400121591"
+  },
+  {
+    "title": "CapsuleFormer: A Capsule and Transformer combined model for Decentralized Application encrypted traffic classification.",
+    "authors": [
+      "Xiang Zhou",
+      "Xi Xiao",
+      "Qing Li 0006",
+      "Bin Zhang 0048",
+      "Guangwu Hu",
+      "Xiapu Luo",
+      "Tianwei Zhang 0004"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2024,
+    "abstract": null,
+    "citation_count": 1,
+    "reference_count": 14,
+    "url": "https://dblp.org/rec/conf/asiaccs/ZhouXLZHLZ24",
+    "dblp_key": "conf/asiaccs/ZhouXLZHLZ24",
+    "source_id": "https://openalex.org/W4400120053"
+  },
+  {
+    "title": "Look What&apos;s There! Utilizing the Internet&apos;s Existing Data for Censorship Circumvention with OPPRESSION.",
+    "authors": [
+      "Sebastian Zillien",
+      "Tobias Schmidbauer",
+      "Mario Kubek",
+      "Jörg Keller 0001",
+      "Steffen Wendzel"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2024,
+    "abstract": "The thesis is a qualitative study that analyses the personal narratives of isolation and resistance of former Baader-Meinhof prisoners (RAF) in the period 1970-1995 within the context of imprisonment and penality in Germany. The thesis constructs a picture of isolation and resistance through these individual narratives that illustrate how a state policy to control the communication of individual RAF prisoners was translated into techniques of immobilization - solitary confinement- and surveillance - searches, censorship and monitoring-. The narratives recount how these techniques, though central to security and order in prison, were applied and adapted in order to disable the group both within prison and on the outside, and to diminish the (political) resolve of the individual prisoner. The narratives also give insight into individual and collective resistance to isolation, namely the rationales of individual survival and striving for community in the pursuit of collective detention of RAF prisoners. The thesis contributes to the literature on RAF imprisonment by framing the lived experiences of former women and men RAF prisoners and the meanings they attach to isolation and resistance within a power and gendered dimensions of prison life and penality. The study also hopes to contribute wider discussions on imprisonment and penality in Germany, in particular the governance of women and men prisoners who are constructed as dangerous.",
+    "citation_count": 1,
+    "reference_count": 0,
+    "url": "https://dblp.org/rec/conf/asiaccs/ZillienSK0W24",
+    "dblp_key": "conf/asiaccs/ZillienSK0W24",
+    "source_id": "https://openalex.org/W2606827665"
+  },
+  {
+    "title": "Unstoppable Wallets: Chain-assisted Threshold ECDSA and its Applications.",
+    "authors": [
+      "Guy Zyskind",
+      "Avishay Yanai",
+      "Alex Pentland"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2024,
+    "abstract": null,
+    "citation_count": 3,
+    "reference_count": 26,
+    "url": "https://dblp.org/rec/conf/asiaccs/ZyskindYP24",
+    "dblp_key": "conf/asiaccs/ZyskindYP24",
+    "source_id": "https://openalex.org/W4400120702"
+  },
+  {
+    "title": "Proceedings of the 19th ACM Asia Conference on Computer and Communications Security, ASIA CCS 2024, Singapore, July 1-5, 2024",
+    "authors": [
+      "Jianying Zhou 0001",
+      "Tony Q. S. Quek",
+      "Debin Gao",
+      "Alvaro A. Cárdenas"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2024,
+    "abstract": "As the Internet of Things (IoT) continues to revolutionize the way we interact with our living spaces, the concept of smart homes has become increasingly prevalent. However, along with the convenience and connectivity offered by IoT-enabled devices in smart homes comes a range of security challenges. This paper explores the landscape of smart-home security. In contrast to similar surveys, this study also examines the particularities of popular categories of smart devices, like home assistants, TVs, AR/VR, locks, sensors, etc. It examines various security threats and vulnerabilities inherent in smart-home ecosystems, including unauthorized access, data breaches, and device tampering. Additionally, the paper discusses existing security mechanisms and protocols designed to mitigate these risks, such as encryption, authentication, and intrusion-detection systems. Furthermore, it highlights the importance of user awareness and education in maintaining the security of smart-home environments. Finally, the paper proposes future research directions and recommendations for enhancing smart-home security with IoT, including the development of robust security best practices and standards, improved device authentication methods, and more effective intrusion-detection techniques. By addressing these challenges, the potential of IoT-enabled smart homes to enhance convenience and efficiency while ensuring privacy, security, and cyber-resilience can be realized.",
+    "citation_count": 29,
+    "reference_count": 170,
+    "url": "https://dblp.org/rec/conf/asiaccs/2024",
+    "dblp_key": "conf/asiaccs/2024",
+    "source_id": "https://openalex.org/W4401752117"
+  }
+]

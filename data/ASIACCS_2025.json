@@ -1,0 +1,2157 @@
+[
+  {
+    "title": "Robust Locally Differentially Private Graph Analysis.",
+    "authors": [
+      "Amrita Roy Chowdhury 0001",
+      "Jacob Imola",
+      "Kamalika Chaudhuri"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2025,
+    "abstract": "Locally differentially private (LDP) graph analysis allows private analysis on a graph that is distributed across multiple users. However, such computations are vulnerable to data poisoning attacks where an adversary can skew the results by submitting malformed data. In this paper, we formally study the impact of poisoning attacks for graph degree estimation protocols under LDP. We make two key technical contributions. First, we observe LDP makes a protocol more vulnerable to poisoning -- the impact of poisoning is worse when the adversary can directly poison their (noisy) responses, rather than their input data. Second, we observe that graph data is naturally redundant -- every edge is shared between two users. Leveraging this data redundancy, we design robust degree estimation protocols under LDP that can significantly reduce the impact of data poisoning and compute degree estimates with high accuracy. We evaluate our proposed robust degree estimation protocols under poisoning attacks on real-world datasets to demonstrate their efficacy in practice.",
+    "citation_count": 2,
+    "reference_count": 0,
+    "url": "https://dblp.org/rec/conf/asiaccs/0001IC25",
+    "dblp_key": "conf/asiaccs/0001IC25",
+    "source_id": "https://openalex.org/W4307473985"
+  },
+  {
+    "title": "Breaking Bad: How Compilers Break Constant-Time Implementations.",
+    "authors": [
+      "Moritz Schneider 0001",
+      "Daniele Lain",
+      "Ivan Puddu",
+      "Nicolas Dutly",
+      "Srdjan Capkun"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2025,
+    "abstract": "The implementations of most hardened cryptographic libraries use defensive programming techniques for side-channel resistance. These techniques are usually specified as guidelines to developers on specific code patterns to use or avoid. Examples include performing arithmetic operations to choose between two variables instead of executing a secret-dependent branch. However, such techniques are only meaningful if they persist across compilation. In this paper, we investigate how optimizations used by modern compilers break the protections introduced by defensive programming techniques. Specifically, how compilers break high-level constant-time implementations used to mitigate timing side-channel attacks. We run a large-scale experiment to see if such compiler-induced issues manifest in state-of-the-art cryptographic libraries. We develop a tool that can profile virtually any architecture, and we use it to run trace-based dynamic analysis on 44,604 different targets. Particularly, we focus on the most widely deployed cryptographic libraries, which aim to provide side-channel resistance. We are able to evaluate whether their claims hold across various CPU architectures, including x86-64, x86-i386, armv7, aarch64, RISC-V, and MIPS-32. Our large-scale study reveals that several compiler-induced secret-dependent operations occur within some of the most highly regarded hardened cryptographic libraries. To the best of our knowledge, such findings represent the first time these issues have been observed in the wild. One of the key takeaways of this paper is that the state-of-the-art defensive programming techniques employed for side-channel resistance are still inadequate, incomplete, and bound to fail when paired with the optimizations that compilers continuously introduce.",
+    "citation_count": 1,
+    "reference_count": 27,
+    "url": "https://dblp.org/rec/conf/asiaccs/0001LPDC25",
+    "dblp_key": "conf/asiaccs/0001LPDC25",
+    "source_id": "https://openalex.org/W4413177813"
+  },
+  {
+    "title": "SAFE: A Novel Approach For Software Vulnerability Detection from Enhancing The Capability of Large Language Models.",
+    "authors": [
+      "Van Nguyen 0002",
+      "Surya Nepal",
+      "Xingliang Yuan",
+      "Tingmin Wu",
+      "Carsten Rudolph"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2025,
+    "abstract": null,
+    "citation_count": 0,
+    "reference_count": 32,
+    "url": "https://dblp.org/rec/conf/asiaccs/0002NYWR25",
+    "dblp_key": "conf/asiaccs/0002NYWR25",
+    "source_id": "https://openalex.org/W4413175825"
+  },
+  {
+    "title": "BIP32-Compatible Threshold Wallets.",
+    "authors": [
+      "Poulami Das 0003",
+      "Andreas Erwig",
+      "Sebastian Faust",
+      "Philipp-Florens Lehwalder",
+      "Julian Loss",
+      "Ziyan Qu",
+      "Siavash Riahi 0002"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2025,
+    "abstract": "Cryptographic wallets are an essential tool to securely store and maintain users’ secret keys and consequently their funds in Blockchain networks. A compelling approach to construct such wallets is to share the user’s secret key among several devices, such that an adversary must corrupt multiple machines to extract the entire secret key. Indeed, many leading cryptocurrency companies such as Coinbase, Binance, or ZenGo have started offering such distributed wallets to their customers. An important feature of a cryptographic wallet is its compatibility with the so-called BIP32 specification, the most widely adopted standard for cryptographic wallets. Essentially, BIP32 specifies the notion of a hierarchical deterministic wallet, which allows to create a key hierarchy in a deterministic fashion. Unfortunately, despite significant interest, no practically efficiently solution for a fully distributed wallet scheme, that also follows the BIP32 standard, exists. In this work, we show the first concretely efficient construction of a fully distributed wallet that is compliant with the BIP32 standard. To this end, we first provide a game-based notion of threshold signatures with rerandomizable keys and show an instantiation via the Gennaro and Goldfeder threshold ECDSA scheme (CCS’18). We then observe that one of BIP32’s key derivation mechanisms, the so-called hardened derivation, cannot efficiently be translated to the threshold setting. Instead, we devise a novel and efficient hardened derivation mechanism for the threshold setting that satisfies the same properties as the original mechanism as specified by BIP32. As a final contribution, we evaluate our solution with respect to its running time and communication cost.",
+    "citation_count": 2,
+    "reference_count": 34,
+    "url": "https://dblp.org/rec/conf/asiaccs/0003EFLLQ025",
+    "dblp_key": "conf/asiaccs/0003EFLLQ025",
+    "source_id": "https://openalex.org/W4413175535"
+  },
+  {
+    "title": "Scalable Time-Lock Puzzle.",
+    "authors": [
+      "Aydin Abadi",
+      "Dan Ristea",
+      "Artem Grigor",
+      "Steven J. Murdoch"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2025,
+    "abstract": "<b>Objective.</b> To design an educational game that will increase third-year professional pharmacy students' knowledge of diabetes mellitus disease management and to evaluate their perceived value of the game. <b>Methods.</b> Faculty members created an innovative educational game, the diabetes escape room. An authentic escape room gaming environment was established through the use of a locked room, an escape time limit, and game rules within which student teams completed complex puzzles focused on diabetes disease management. To evaluate the impact, students completed a pre-test and post-test to measure the knowledge they've gained and a perception survey to identify moderating factors that could help instructors improve the game's effectiveness and utility. <b>Results.</b> Students showed statistically significant increases in knowledge after completion of the game. A one-sample <i>t</i>-test indicated that students' mean perception was statistically significantly higher than the mean value of the evaluation scale. This statically significant result proved that this gaming act offers a potential instructional benefit beyond its novelty. <b>Conclusion.</b> The diabetes escape room proved to be a valuable educational game that increased students' knowledge of diabetes mellitus disease management and showed a positive perceived overall value by student participants.",
+    "citation_count": 297,
+    "reference_count": 10,
+    "url": "https://dblp.org/rec/conf/asiaccs/AbadiRGM25",
+    "dblp_key": "conf/asiaccs/AbadiRGM25",
+    "source_id": "https://openalex.org/W2753069971"
+  },
+  {
+    "title": "Enabling Microarchitectural Agility: Taking ML-KEM &amp; ML-DSA from Cortex-M4 to M7 with SLOTHY.",
+    "authors": [
+      "Amin Abdulrahman",
+      "Matthias J. Kannwischer",
+      "Thing-Han Lim"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2025,
+    "abstract": "Highly-optimized assembly is commonly used to achieve the best performance for popular cryptographic schemes such as the newly standardized ML-KEM and ML-DSA. The majority of implementations today rely on hand-optimized assembly for the core building blocks to achieve both security and performance. However, recent work by Abdulrahman et al. takes a new approach, writing a readable assembly implementation first and leaving the bulk of the optimization work to a tool named SLOTHY based on constraint programming. SLOTHY performs instruction scheduling, register allocation, and software pipelining simultaneously using constraints modeling the (micro-)architectural details of the target platform. In this work, we extend SLOTHY and investigate how it can be used to migrate already highly hand-optimized assembly to a different microarchitecture, while maximizing performance. As a case study, we optimize state-of-the-art Arm Cortex-M4 implementations of ML-KEM and ML-DSA for the Arm Cortex-M7. Our results suggest that this approach is promising: For the number-theoretic transform (NTT) – the core building block of both ML-DSA and ML-KEM – we achieve speed-ups of 1.97 × and 1.69 × , respectively. For Keccak– the permutation used by SHA-3 and SHAKE and also vastly used in ML-DSA and ML-KEM – we achieve speed-ups of 30% compared to the M4 code and 5% compared to hand-optimized M7 code. For many other building blocks, we achieve similarly significant speed-ups of up to 2.35 ×. Overall, this results in 11 to 33% faster code for the entire cryptosystems.",
+    "citation_count": 2,
+    "reference_count": 32,
+    "url": "https://dblp.org/rec/conf/asiaccs/AbdulrahmanKL25",
+    "dblp_key": "conf/asiaccs/AbdulrahmanKL25",
+    "source_id": "https://openalex.org/W4413177826"
+  },
+  {
+    "title": "Prior-Based Label Differential Privacy via Secure Two-Party Computation.",
+    "authors": [
+      "Amit Agarwal",
+      "Stanislav Peceny",
+      "Mariana Raykova 0001",
+      "Phillipp Schoppmann",
+      "Karn Seth"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2025,
+    "abstract": "Differential privacy (DP) is a fundamental technique used in machine learning (ML) training for protecting the privacy of sensitive individual user data. In the past few years, a new approach for combining prior-based Local Differential Privacy (LDP) mechanisms with a relaxed DP criterion, known as Label DP, has shown great promise in increasing the utility of the final trained model without compromising on the DP privacy budget. In this work, we identify a crucial privacy gap in the current implementations of these prior-based LDP mechanisms, namely the leakage of sensitive priors. We address the challenge of implementing such LDP mechanisms without leaking any information about the priors while preserving the efficiency and accuracy of the current insecure implementations. To that end, we design simple and efficient secure two-party computation (2PC) protocols for addressing this challenge, implement them, and perform end-to-end testing on standard datasets such as MNIST, CIFAR-10. Our empirical results indicate that the added security benefit essentially comes almost for “free” in the sense that the gap between the current insecure implementations and our proposed secure version, in terms of runtime overhead and accuracy degradation, is minimal. E.g., for CIFAR-10, with strong DP privacy parameter, the additional runtime due to 2PC is \\(\\approx 3.9\\%\\) over WAN with \\(0.4\\%\\) decrease in accuracy over an insecure (non-2PC) approach.",
+    "citation_count": 0,
+    "reference_count": 41,
+    "url": "https://dblp.org/rec/conf/asiaccs/AgarwalP0SS25",
+    "dblp_key": "conf/asiaccs/AgarwalP0SS25",
+    "source_id": "https://openalex.org/W4413175031"
+  },
+  {
+    "title": "Eradicating the Unseen: Detecting, Exploiting, and Remediating a Path Traversal Vulnerability across GitHub.",
+    "authors": [
+      "Jafar Akhoundali",
+      "Hamidreza Hamidi",
+      "Kristian F. D. Rietveld",
+      "Olga Gadyatskaya"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2025,
+    "abstract": "Vulnerabilities in open-source software can cause cascading effects in the modern digital ecosystem. It is especially worrying if these vulnerabilities repeat across many projects, as once the adversaries find one of them, they can scale up the attack very easily. Unfortunately, since developers frequently reuse code from their own or external code resources, some nearly identical vulnerabilities exist across many open-source projects. We conducted a study to examine the prevalence of a particular vulnerable code pattern that enables path traversal attacks (CWE-22) across open-source GitHub projects. To handle this study at the GitHub scale, we developed an automated pipeline that scans GitHub for the targeted vulnerable pattern, confirms the vulnerability by first running a static analysis and then exploiting the vulnerability in the context of the studied project, assesses its impact by calculating the CVSS score, generates a patch using GPT-4, and reports the vulnerability to the maintainers. Using our pipeline, we identified 1,756 vulnerable open-source projects, some of which are very influential. For many of the affected projects, the vulnerability is critical (CVSS score higher than 9.0), as it can be exploited remotely without any privileges and critically impact the confidentiality and availability of the system. We have responsibly disclosed the vulnerability to the maintainers, and 14\\% of the reported vulnerabilities have been remediated. We also investigated the root causes of the vulnerable code pattern and assessed the side effects of the large number of copies of this vulnerable pattern that seem to have poisoned several popular LLMs. Our study highlights the urgent need to help secure the open-source ecosystem by leveraging scalable automated vulnerability management solutions and raising awareness among developers.",
+    "citation_count": 0,
+    "reference_count": 0,
+    "url": "https://dblp.org/rec/conf/asiaccs/AkhoundaliHRG25",
+    "dblp_key": "conf/asiaccs/AkhoundaliHRG25",
+    "source_id": "https://openalex.org/W4414588264"
+  },
+  {
+    "title": "Proxies as Sensors: Measuring Censorship of Refraction Networking in Iran.",
+    "authors": [
+      "Abdulrahman Alaraj",
+      "Eric Wustrow"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2025,
+    "abstract": null,
+    "citation_count": 0,
+    "reference_count": 18,
+    "url": "https://dblp.org/rec/conf/asiaccs/AlarajW25",
+    "dblp_key": "conf/asiaccs/AlarajW25",
+    "source_id": "https://openalex.org/W4413176211"
+  },
+  {
+    "title": "Bits and Pieces: Piecing Together Factors of IoT Vulnerability Exploitation.",
+    "authors": [
+      "Arwa Abdulkarim Al Alsadi",
+      "Mathew Vermeer",
+      "Takayuki Sasaki",
+      "Katsunari Yoshioka",
+      "Michel van Eeten",
+      "Carlos Gañán"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2025,
+    "abstract": null,
+    "citation_count": 0,
+    "reference_count": 40,
+    "url": "https://dblp.org/rec/conf/asiaccs/AlsadiVSYEG25",
+    "dblp_key": "conf/asiaccs/AlsadiVSYEG25",
+    "source_id": "https://openalex.org/W4413177741"
+  },
+  {
+    "title": "An Automated Blackbox Noncompliance Checker for QUIC Server Implementations.",
+    "authors": [
+      "Kian Kai Ang",
+      "Guy Farrelly",
+      "Cheryl Pope",
+      "Damith C. Ranasinghe"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2025,
+    "abstract": "We develop QUICtester, an automated approach for uncovering non-compliant behaviors in the ratified QUIC protocol implementations (RFC 9000/9001). QUICtester leverages active automata learning to abstract the behavior of a QUIC implementation into a finite state machine (FSM) representation. Unlike prior noncompliance checking methods, to help uncover state dependencies on event timing, QUICtester introduces the idea of state learning with event timing variations, adopting both valid and invalid input configurations, and combinations of security and transport layer parameters during learning. We use pairwise differential analysis of learned behaviour models of tested QUIC implementations to identify non-compliance instances as behaviour deviations in a property-agnostic way. This exploits the existence of the many different QUIC implementations, removing the need for validated, formal models. The diverse implementations act as cross-checking test oracles to discover non-compliance. We used QUICtester to analyze analyze 186 learned models from 19 QUIC implementations under the five security settings and discovered 55 implementation errors. Significantly, the tool uncovered a QUIC specification ambiguity resulting in an easily exploitable DoS vulnerability, led to 5 CVE assignments from developers, and two bug bounties thus far.",
+    "citation_count": 1,
+    "reference_count": 48,
+    "url": "https://dblp.org/rec/conf/asiaccs/AngFPR25",
+    "dblp_key": "conf/asiaccs/AngFPR25",
+    "source_id": "https://openalex.org/W4413176449"
+  },
+  {
+    "title": "POSTER: Disappearing Ink: How Partial Model Extraction Erases Watermarks.",
+    "authors": [
+      "Venkata Sai Pranav Bachina",
+      "Ankit Gangwal"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2025,
+    "abstract": null,
+    "citation_count": 0,
+    "reference_count": 2,
+    "url": "https://dblp.org/rec/conf/asiaccs/BachinaG25",
+    "dblp_key": "conf/asiaccs/BachinaG25",
+    "source_id": "https://openalex.org/W4413175965"
+  },
+  {
+    "title": "ProbeShooter: A New Practical Approach for Probe Aiming.",
+    "authors": [
+      "Daehyeon Bae",
+      "Sujin Park",
+      "Minsig Choi",
+      "Young-Giu Jung",
+      "Changmin Jeong",
+      "Heeseok Kim",
+      "Seokhie Hong"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2025,
+    "abstract": null,
+    "citation_count": 0,
+    "reference_count": 34,
+    "url": "https://dblp.org/rec/conf/asiaccs/BaePCJJKH25",
+    "dblp_key": "conf/asiaccs/BaePCJJKH25",
+    "source_id": "https://openalex.org/W4413176756"
+  },
+  {
+    "title": "SoK: A Literature and Engineering Review of Regular Expression Denial of Service (ReDoS).",
+    "authors": [
+      "Masudul Hasan Masud Bhuiyan",
+      "Berk Çakar",
+      "Ethan H. Burmane",
+      "James C. Davis 0001",
+      "Cristian-Alexandru Staicu"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2025,
+    "abstract": "Regular Expression Denial of Service (ReDoS) is a vulnerability class that has become prominent in recent years. Attackers can weaponize such weaknesses as part of asymmetric cyberattacks that exploit the slow worst-case matching time of regular expression (regex) engines. In the past, problematic regexes have led to outages at Cloudflare and Stack Overflow, showing the severity of the problem. While ReDoS has drawn significant research attention, there has been no systematization of knowledge to delineate the state of the art and identify opportunities for further research. In this paper, we describe the existing knowledge on ReDoS. We first provide a systematic literature review, discussing approaches for detecting, preventing, and mitigating ReDoS vulnerabilities. Then, our engineering review surveys the latest regex engines to examine whether and how ReDoS defenses have been realized. Combining our findings, we observe that (1) in the literature, almost no studies evaluate whether and how ReDoS vulnerabilities can be weaponized against real systems, making it difficult to assess their real-world impact; and (2) from an engineering view, many mainstream regex engines have introduced partial or full ReDoS defenses, rendering many threat models obsolete. We conclude by highlighting avenues for future work. The open challenges in ReDoS research are to evaluate emerging defenses and support engineers in migrating to defended engines. We also highlight the parallel between performance bugs and asymmetric DoS, and we argue that future work should capitalize more on this similarity and adopt a more systematic view on ReDoS-like vulnerabilities.",
+    "citation_count": 0,
+    "reference_count": 55,
+    "url": "https://dblp.org/rec/conf/asiaccs/BhuiyanCB0S25",
+    "dblp_key": "conf/asiaccs/BhuiyanCB0S25",
+    "source_id": "https://openalex.org/W4413176238"
+  },
+  {
+    "title": "Rejection Sampling for Covert Information Channel: Symmetric Power-Of-2-Choices.",
+    "authors": [
+      "Dominik Bojko",
+      "Jacek Cichon",
+      "Miroslaw Kutylowski",
+      "Oliwer Sobolewski"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2025,
+    "abstract": null,
+    "citation_count": 1,
+    "reference_count": 27,
+    "url": "https://dblp.org/rec/conf/asiaccs/BojkoCKS25",
+    "dblp_key": "conf/asiaccs/BojkoCKS25",
+    "source_id": "https://openalex.org/W4413177782"
+  },
+  {
+    "title": "Post-Compromise Security with Application-Level Key-Controls - with a comprehensive study of the 5G AKMA protocol.",
+    "authors": [
+      "Ioana Boureanu",
+      "Cristina Onete",
+      "Stephan Wesemeyer",
+      "Léo Robert",
+      "Rhys Miller",
+      "Pascal Lafourcade 0001",
+      "Fortunat Rajaona"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2025,
+    "abstract": "International audience",
+    "citation_count": 0,
+    "reference_count": 13,
+    "url": "https://dblp.org/rec/conf/asiaccs/BoureanuOWRM0R25",
+    "dblp_key": "conf/asiaccs/BoureanuOWRM0R25",
+    "source_id": "https://openalex.org/W4413177709"
+  },
+  {
+    "title": "Different Seas, Different Phishes - Large-Scale Analysis of Phishing Simulations Across Different Industries.",
+    "authors": [
+      "Oskar Braun",
+      "Jan Hörnemann",
+      "Norbert Pohlmann",
+      "Tobias Urban",
+      "Matteo Große-Kampmann"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2025,
+    "abstract": "Phishing is an increasing threat to the security of end-users, networks, and organizations. Phishing simulations via email are a widespread tool used to measure user awareness, especially in workplace settings. However, current studies focusing on large-scale analysis of phishing simulations often have issues: The phishing simulations were conducted using a small sample size (mostly one or two organizations), or while many emails are sent, the analysis focuses only on specific companies. This study analyzes phishing simulations conducted over three years at 36 organizations with over 68 000 delivered emails. We compare different dimensions of the organizations where these simulations were conducted, such as the economic sector and departments. Furthermore, we evaluate various dimensions of phishing simulation campaigns, such as detection difficulty and the scenario under which the simulation occurs. Our findings indicate significant disparities in the results, such as the industry sector in which the company operates. Moreover, we find substantial differences between the success rates of varying scenarios used for phishing emails.",
+    "citation_count": 1,
+    "reference_count": 41,
+    "url": "https://dblp.org/rec/conf/asiaccs/BraunHPUG25",
+    "dblp_key": "conf/asiaccs/BraunHPUG25",
+    "source_id": "https://openalex.org/W4413177878"
+  },
+  {
+    "title": "PSP: A Privacy-Preserving Self-certify Pseudonym Protocol for V2X.",
+    "authors": [
+      "Xuyuan Cai",
+      "Rui Song",
+      "Bin Xie",
+      "Qingjun Xiao",
+      "Bin Xiao"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2025,
+    "abstract": "The advancement of Vehicle-to-Everything (V2X) communication is pivotal in the deployment of Intelligent Transportation Systems (ITS), offering significant improvements in road safety and traffic management. Current systems predominantly utilize pseudonym-based approaches to address privacy concerns; however, these systems confront several limitations, including reliance on centralized authorization authorities and insufficient support for practical scenarios where there is a need to disclose certain necessary attributes. In this paper, we introduce PSP, a novel privacy-preserving, self-certify pseudonym protocol explicitly designed for V2X networks that support selective disclosure. PSP employs an anonymous credential framework, facilitating decentralized pseudonym generation and eliminating dependence on central authorities. This innovative approach (1) supports decentralized pseudonym generation and binding, eliminating the reliance on a centralized Authorization Authority. (2) restricts vehicles to binding only one pseudonym with their long-term credential per epoch, thereby thwarting Sybil attacks; (3) enables vehicles to selectively disclose the necessary attributes while safeguarding credential privacy; and (4) incorporates credential tracing and revocation mechanisms to ensure accountability for malicious activities. We substantiate our contributions with formal security analysis and demonstrate the practicality of PSP through implementation, achieving efficient proof generation and verification times suitable for real-time ITS applications.",
+    "citation_count": 0,
+    "reference_count": 37,
+    "url": "https://dblp.org/rec/conf/asiaccs/CaiSXXX25",
+    "dblp_key": "conf/asiaccs/CaiSXXX25",
+    "source_id": "https://openalex.org/W4413177972"
+  },
+  {
+    "title": "Infiltrated Selfish Mining: Think Win-Win to Escape Dilemmas.",
+    "authors": [
+      "Xuelian Cao",
+      "Zheng Yang 0001",
+      "Tao Xiang 0001",
+      "Jianting Ning",
+      "Yuhan Liu",
+      "Zhiming Liu 0001",
+      "Jianying Zhou 0001"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2025,
+    "abstract": null,
+    "citation_count": 0,
+    "reference_count": 25,
+    "url": "https://dblp.org/rec/conf/asiaccs/Cao0XNL0025",
+    "dblp_key": "conf/asiaccs/Cao0XNL0025",
+    "source_id": "https://openalex.org/W4413176590"
+  },
+  {
+    "title": "Can Small-scale Evaluation Reflect Real Ability? A Performance Study of Emerging Biometric Authentication.",
+    "authors": [
+      "Hangcheng Cao",
+      "Guowen Xu",
+      "Wenbin Huang 0003",
+      "Hongwei Li 0001"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2025,
+    "abstract": null,
+    "citation_count": 0,
+    "reference_count": 69,
+    "url": "https://dblp.org/rec/conf/asiaccs/CaoX0025",
+    "dblp_key": "conf/asiaccs/CaoX0025",
+    "source_id": "https://openalex.org/W4413178044"
+  },
+  {
+    "title": "Towards Usability of Data with Privacy: A Unified Framework for Privacy-Preserving Data Sharing with High Utility.",
+    "authors": [
+      "M. A. P. Chamikara",
+      "Seung Ick Jang",
+      "Ian J. Oppermann",
+      "Dongxi Liu",
+      "Musotto Roberto",
+      "Sushmita Ruj",
+      "Arindam Pal 0001",
+      "Meisam Mohammady",
+      "Seyit Camtepe",
+      "Sylvia Young",
+      "Chris Dorrian",
+      "Nasir David"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2025,
+    "abstract": null,
+    "citation_count": 0,
+    "reference_count": 30,
+    "url": "https://dblp.org/rec/conf/asiaccs/ChamikaraJOLRR025",
+    "dblp_key": "conf/asiaccs/ChamikaraJOLRR025",
+    "source_id": "https://openalex.org/W4413176546"
+  },
+  {
+    "title": "Concretely Efficient Private Set Union via Circuit-Based PSI.",
+    "authors": [
+      "Gowri R. Chandran",
+      "Thomas Schneider 0003",
+      "Maximilian Stillger",
+      "Christian Weinert"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2025,
+    "abstract": null,
+    "citation_count": 3,
+    "reference_count": 33,
+    "url": "https://dblp.org/rec/conf/asiaccs/Chandran0SW25",
+    "dblp_key": "conf/asiaccs/Chandran0SW25",
+    "source_id": "https://openalex.org/W4413175350"
+  },
+  {
+    "title": "Vulnerable Intel GPU Context: Prohibit Complete Context Restore by Modifying Kernel Driver.",
+    "authors": [
+      "Wonseok Choi",
+      "Youngjoo Shin"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2025,
+    "abstract": null,
+    "citation_count": 0,
+    "reference_count": 14,
+    "url": "https://dblp.org/rec/conf/asiaccs/ChoiS25",
+    "dblp_key": "conf/asiaccs/ChoiS25",
+    "source_id": "https://openalex.org/W4413176258"
+  },
+  {
+    "title": "ChainMarks: Securing DNN Watermark with Cryptographic Chain.",
+    "authors": [
+      "Brian Choi",
+      "Shu Wang 0004",
+      "Isabelle Choi",
+      "Kun Sun 0001"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2025,
+    "abstract": "With the widespread deployment of deep neural network (DNN) models, dynamic watermarking techniques are being used to protect the intellectual property of model owners. However, recent studies have shown that existing watermarking schemes are vulnerable to watermark removal and ambiguity attacks. Besides, the vague criteria for determining watermark presence further increase the likelihood of such attacks. In this paper, we propose a secure DNN watermarking scheme named ChainMarks, which generates secure and robust watermarks by introducing a cryptographic chain into the trigger inputs and utilizes a two-phase Monte Carlo method for determining watermark presence. First, ChainMarks generates trigger inputs as a watermark dataset by repeatedly applying a hash function over a secret key, where the target labels associated with trigger inputs are generated from the digital signature of model owner. Then, the watermarked model is produced by training a DNN over both the original and watermark datasets. To verify watermarks, we compare the predicted labels of trigger inputs with the target labels and determine ownership with a more accurate decision threshold that considers the classification probability of specific models. Experimental results show that ChainMarks exhibits higher levels of robustness and security compared to state-of-the-art watermarking schemes. With a better marginal utility, ChainMarks provides a higher probability guarantee of watermark presence in DNN models with the same level of watermark accuracy.",
+    "citation_count": 0,
+    "reference_count": 63,
+    "url": "https://dblp.org/rec/conf/asiaccs/ChoiWCS25",
+    "dblp_key": "conf/asiaccs/ChoiWCS25",
+    "source_id": "https://openalex.org/W4413177946"
+  },
+  {
+    "title": "NoBU: An effective and viable cyber-physical solution to thwart BadUSB attacks.",
+    "authors": [
+      "Andrea Ciccotelli",
+      "Maurantonio Caprolu",
+      "Roberto Di Pietro"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2025,
+    "abstract": "In a BadUSB attack, the malicious payload is delivered via an attack vector that disguises itself as a Human Interface Device (HID), typically a keyboard. In this paper, we propose NoBU, a novel, efficient, and effective solution to counter this threat that leverages information contextual to the physical space surrounding the targeted asset. NoBU captures vibrations from keystrokes and correlates them with input signals to distinguish between legitimate, human-generated inputs, and fake ones—blocking the latter. We evaluated our solution across various environments and keyboard types, demonstrating NoBU’s promising capabilities. A preliminary version of NoBU, which constitutes the core of our proposal, achieves an accuracy of 99.92%, scoring 99.83% on precision and a recall of 100% in identifying malicious keystrokes; hence, the system does not accept false negatives. We further enhanced our detection methodology, moving from continuous input validation to seamless keyboard enrollment, still leveraging the basic idea introduced by NoBU. The new proposal (eNoBU), achieves a staggering accuracy of 100%, while improving the user experience and further reducing the system overhead. These results suggest that eNoBU, leveraging the cyber-physical properties that naturally arise from human-computer interactions, is a potential candidate for a definitive solution to the BadUSB threat.",
+    "citation_count": 0,
+    "reference_count": 23,
+    "url": "https://dblp.org/rec/conf/asiaccs/CiccotelliCP25",
+    "dblp_key": "conf/asiaccs/CiccotelliCP25",
+    "source_id": "https://openalex.org/W4413176501"
+  },
+  {
+    "title": "POSTER: Multimodal Graph Networks for Systematic Generalization in Code Clone Detection.",
+    "authors": [
+      "Cuong Dao",
+      "Van Tong",
+      "Hai Anh Tran",
+      "Duc Tran",
+      "Giang Nguyen"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2025,
+    "abstract": "Code clone detection is vital for software security and plagiarism detection. Traditional syntactic methods struggle with semantic clones. A method is proposed that leverages Graph Isomorphism Network (GIN) and Graph Attention Network (GAT) to analyze Program Dependence Graphs (PDGs), achieving 96% accuracy on a 1-million-sample BigCloneBench subset.",
+    "citation_count": 0,
+    "reference_count": 3,
+    "url": "https://dblp.org/rec/conf/asiaccs/DaoTTTN25",
+    "dblp_key": "conf/asiaccs/DaoTTTN25",
+    "source_id": "https://openalex.org/W4413176078"
+  },
+  {
+    "title": "Virtual End-to-End Encryption: Analysis of the Doctolib Protocol.",
+    "authors": [
+      "Dennis Dayanikli",
+      "Laura Holz",
+      "Anja Lehmann"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2025,
+    "abstract": "Doctolib is a popular healthcare platform, used by over 90 million users across France, Italy, and Germany. One of its main features is the secure data exchange between patients and doctors, with 7 million documents shared per month. Doctolib claims to provide the \"world’s first end-to-end encryption platform built for health applications\". The encryption protocol, described in a Whitepaper and Github repository, relies on envelope encryption and lets users upload ciphertexts for the secure data exchange. The ciphertexts are stored and retrieved through a distributed system, consisting of a data server and a key server. To access the data, recipients fetch the ciphertexts and decrypt them with their private key. However, the platform does not require end-users to maintain any cryptographic keys themselves and instead relies on a virtual device that leverages the two-server setting. The virtual device splits the user’s private key over both servers, and uses password-based authentication for its retrieval. Overall, the goal of the protocol is to ensure confidentiality of the uploaded medical records as long as at most one server is corrupt. In this work, we analyze the security of Doctolib’s distributed encryption protocol. First, we define a set of formal security models for such password-based distributed envelope encryption, that capture the optimal security properties under different corruption settings. We then analyze the protocol – abstracted from the available information – in our model, and show that it does not achieve the desired security guarantees. We finally propose a simple modification that strengthens the original protocol through the use of a distributed oblivious pseudorandom function that provably achieves all our security properties.",
+    "citation_count": 0,
+    "reference_count": 18,
+    "url": "https://dblp.org/rec/conf/asiaccs/DayanikliHL25",
+    "dblp_key": "conf/asiaccs/DayanikliHL25",
+    "source_id": "https://openalex.org/W4413176039"
+  },
+  {
+    "title": "FAULT+PROBE: A Generic Rowhammer-based Bit Recovery Attack.",
+    "authors": [
+      "Kemal Derya",
+      "M. Caner Tol",
+      "Berk Sunar"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2025,
+    "abstract": "Rowhammer is a security vulnerability that allows unauthorized attackers to induce errors within DRAM cells. To prevent fault injections from escalating to successful attacks, a widely accepted mitigation is implementing fault checks on instructions and data.   We challenge the validity of this assumption by examining the impact of the fault on the victim's functionality. Specifically, we illustrate that an attacker can construct a profile of the victim's memory based on the directional patterns of bit flips. This profile is then utilized to identify the most susceptible bit locations within DRAM rows. These locations are then subsequently leveraged during an online attack phase with side information observed from the change in the victim's behavior to deduce sensitive bit values. Consequently, the primary objective of this study is to utilize Rowhammer as a probe, shifting the emphasis away from the victim's memory integrity and toward statistical fault analysis (SFA) based on the victim's operational behavior.   We show FAULT+PROBE may be used to circumvent the verify-after-sign fault check mechanism, which is designed to prevent the generation of erroneous signatures that leak sensitive information. It does so by injecting directional faults into key positions identified during a memory profiling stage. The attacker observes the signature generation rate and decodes the secret bit value accordingly. This circumvention is enabled by an observable channel in the victim. FAULT+PROBE is not limited to signing victims and can be used to probe secret bits on arbitrary systems where an observable channel is present that leaks the result of the fault injection attempt. To demonstrate the attack, we target the fault-protected ECDSA in wolfSSL's implementation of the TLS 1.3 handshake. We recover 256-bit session keys with an average recovery rate of 22 key bits/hour and a 100% success rate.",
+    "citation_count": 0,
+    "reference_count": 46,
+    "url": "https://dblp.org/rec/conf/asiaccs/DeryaTS25",
+    "dblp_key": "conf/asiaccs/DeryaTS25",
+    "source_id": "https://openalex.org/W4413178082"
+  },
+  {
+    "title": "AWOSE: Probabilistic State Model for Consensus Algorithms&apos; Fuzzing Frameworks.",
+    "authors": [
+      "Tannishtha Devgun",
+      "Gulshan Kumar",
+      "Rahul Saha",
+      "Alessandro Brighente",
+      "Mauro Conti"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2025,
+    "abstract": "Fuzzing frameworks allow the detection of code bugs or errors by feeding the code with unconventional inputs. Recently, Ma et al. proposed LOKI (NDSS, 2023), the first fuzzing framework tailored to blockchain consensus protocols [1]. LOKI uses high-frequency messages to model the dynamics of consensus algorithms. However, low-frequency messages are fundamental to the consensus’s state evolution. Thus, neglecting them hinders the in-depth exploration of vulnerabilities, leading to missed bugs or critical issues generated by low-frequency messages. In this paper, we propose messAge-aWare hybrid markOved StatE model (AWOSE), a fuzzing framework modeling high and low-frequency messages to uncover vulnerabilities and bugs in consensus algorithms. AWOSE leverages Markov Chains (MCs) to model the general states of the consensus messages while leveraging Hidden Markov Models (HMMs) to model latent or hidden state transitions based on code mutations (as in LOKI) or external factors (e.g., malicious inputs). Such probabilistic state models are beneficial for capturing the uncertain nature of system behaviors, enabling a more realistic and flexible representation of consensus dynamics. AWOSE is the first model to introduce the message context-based state model generation for fuzzing purposes. Via a thorough evaluation, we compare AWOSE with LOKI. Results show that our proposed AWOSE provides \\(48.3\\%\\) more accurate states and \\(83.2\\%\\) better path coverage. Thanks to AWOSE we were able to uncover new bugs that LOKI did not detect. Our experiments lead to the identification of previously unknown vulnerabilities, currently being evaluated as CVEs.",
+    "citation_count": 0,
+    "reference_count": 42,
+    "url": "https://dblp.org/rec/conf/asiaccs/DevgunKSBC25",
+    "dblp_key": "conf/asiaccs/DevgunKSBC25",
+    "source_id": "eb6a96d804397f66c723c5c4874f731be65730f3"
+  },
+  {
+    "title": "N-Tracer: A Trace Driven Attack on NoC-Based MPSoC Architecture.",
+    "authors": [
+      "Dipesh",
+      "Urbi Chatterjee"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2025,
+    "abstract": "Network-on-Chip (NoC) has emerged as a promising technology to interconnect different components of Multiprocessor System-on-Chip (MPSoC) and is preferred due to its high throughput and lower latency. Despite all its advantages, NoCs are vulnerable to side-channel attacks. Recently, researchers have demonstrated practical time-driven cache attacks and access-driven cache attacks namely Earthquake, PP-Arrow, and PP-Firework on NoC to retrieve secret keys of AES. Although trace-driven cache attacks are more powerful due to their simplicity and enhanced key entropy reduction capabilities, no such attack has been demonstrated so far for NoC architecture. The downside could be the fact that a) the attack setup overhead is high due to the requirement of an oscilloscope, b) unavailability of hardware performance counters (HPCs) of the secure zone in the NoC. In this work, we propose a novel method to monitor cache hit/miss in L1 (private) cache of AES core of the secure zone just by observing the delay in throughput drop of the adversarial packets on the NoC network. This completely eliminates the above-mentioned requirements. The proposed attack is able to reduce the key search space to 28 with the requirement of 256 traces only.",
+    "citation_count": 1,
+    "reference_count": 31,
+    "url": "https://dblp.org/rec/conf/asiaccs/DipeshC25",
+    "dblp_key": "conf/asiaccs/DipeshC25",
+    "source_id": "https://openalex.org/W4413175117"
+  },
+  {
+    "title": "SEEC: Memory Safety Meets Efficiency in Secure Two-Party Computation.",
+    "authors": [
+      "Henri Dohmen",
+      "Robin Hundt",
+      "Nora Khayata",
+      "Thomas Schneider 0003"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2025,
+    "abstract": null,
+    "citation_count": 0,
+    "reference_count": 50,
+    "url": "https://dblp.org/rec/conf/asiaccs/DohmenHK025",
+    "dblp_key": "conf/asiaccs/DohmenHK025",
+    "source_id": "https://openalex.org/W4413176145"
+  },
+  {
+    "title": "Toward Malicious Clients Detection in Federated Learning.",
+    "authors": [
+      "Zhihao Dou",
+      "Jiaqi Wang",
+      "Wei Sun 0013",
+      "Zhuqing Liu",
+      "Minghong Fang"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2025,
+    "abstract": "Federated learning (FL) enables multiple clients to collaboratively train a global machine learning model without sharing their raw data. However, the decentralized nature of FL introduces vulnerabilities, particularly to poisoning attacks, where malicious clients manipulate their local models to disrupt the training process. While Byzantine-robust aggregation rules have been developed to mitigate such attacks, they remain inadequate against more advanced threats. In response, recent advancements have focused on FL detection techniques to identify potentially malicious participants. Unfortunately, these methods often misclassify numerous benign clients as threats or rely on unrealistic assumptions about the server's capabilities. In this paper, we propose a novel algorithm, SafeFL, specifically designed to accurately identify malicious clients in FL. The SafeFL approach involves the server collecting a series of global models to generate a synthetic dataset, which is then used to distinguish between malicious and benign models based on their behavior. Extensive testing demonstrates that SafeFL outperforms existing methods, offering superior efficiency and accuracy in detecting malicious clients.",
+    "citation_count": 0,
+    "reference_count": 34,
+    "url": "https://dblp.org/rec/conf/asiaccs/DouWSLF25",
+    "dblp_key": "conf/asiaccs/DouWSLF25",
+    "source_id": "https://openalex.org/W4413176721"
+  },
+  {
+    "title": "Transferable Adversarial Examples with Bayesian Approach.",
+    "authors": [
+      "Mingyuan Fan 0003",
+      "Cen Chen 0001",
+      "Wenmeng Zhou",
+      "Yinggui Wang"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2025,
+    "abstract": null,
+    "citation_count": 0,
+    "reference_count": 19,
+    "url": "https://dblp.org/rec/conf/asiaccs/Fan0ZW25",
+    "dblp_key": "conf/asiaccs/Fan0ZW25",
+    "source_id": "https://openalex.org/W4413177836"
+  },
+  {
+    "title": "Sounds Vishy: Automating Vishing Attacks with AI-Powered Systems.",
+    "authors": [
+      "João Figueiredo",
+      "Afonso Carvalho",
+      "Daniel Castro 0004",
+      "Daniel Gonçalves 0002",
+      "Nuno Santos 0001"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2025,
+    "abstract": "Vishing is a form of social engineering where attackers deceive individuals into disclosing sensitive information, such as personal data, financial information, or security credentials via phone calls, exploiting the perceived urgency and authenticity of voice communication to manipulate victims, often posing as legitimate entities like banks or tech support. Vishing is a particularly serious threat as it bypasses security controls designed to protect information. In this work, we study the potential for vishing attacks to escalate with the advent of AI. In theory, AI-powered software bots may have the ability to automate these attacks by initiating conversations with potential victims via phone calls and deceiving them into disclosing sensitive information. To validate this thesis, we introduce ViKing, an AI-powered vishing system developed using publicly available AI technology. It relies on a Large Language Model (LLM) as its core cognitive processor to steer conversations with victims, complemented by a pipeline of speech-to-text and text-to-speech modules that facilitate audio-text conversion in phone calls. Through a controlled social experiment involving 240 participants, we discovered that ViKing has successfully persuaded many participants to reveal sensitive information, even those who had been explicitly warned about the risk of vishing campaigns. Interactions with ViKing’s bots were generally considered realistic. From these findings, we conclude that tools like ViKing may already be accessible to potential malicious actors, while also serving as an invaluable resource for cyber awareness programs.",
+    "citation_count": 1,
+    "reference_count": 35,
+    "url": "https://dblp.org/rec/conf/asiaccs/FigueiredoCCGS25",
+    "dblp_key": "conf/asiaccs/FigueiredoCCGS25",
+    "source_id": "https://openalex.org/W4413178183"
+  },
+  {
+    "title": "A Cryptographic Analysis of Google&apos;s PSP and Falcon Channel Protocols.",
+    "authors": [
+      "Marc Fischlin",
+      "Sascha Hoffmann",
+      "Leonhard Ruppel",
+      "Gözde Saçiak",
+      "Tobias Schnitzler",
+      "Christian Schwarz",
+      "Maximilian Stillger"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2025,
+    "abstract": null,
+    "citation_count": null,
+    "reference_count": null,
+    "url": "https://dblp.org/rec/conf/asiaccs/FischlinHRSSSS25",
+    "dblp_key": "conf/asiaccs/FischlinHRSSSS25",
+    "source_id": null
+  },
+  {
+    "title": "POSTER: Investigating Transferability of Adversarial Examples in Model Merging.",
+    "authors": [
+      "Ankit Gangwal",
+      "Aaryan Ajay Sharma"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2025,
+    "abstract": null,
+    "citation_count": 0,
+    "reference_count": 2,
+    "url": "https://dblp.org/rec/conf/asiaccs/GangwalS25",
+    "dblp_key": "conf/asiaccs/GangwalS25",
+    "source_id": "https://openalex.org/W4413176084"
+  },
+  {
+    "title": "Pay What You Spend! Privacy-Aware Real-Time Pricing with High Precision IEEE 754 Floating Point Division.",
+    "authors": [
+      "Soumyadyuti Ghosh",
+      "Harishma Boyapally",
+      "Ajith Suresh",
+      "Arpita Patra",
+      "Soumyajit Dey",
+      "Debdeep Mukhopadhyay"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2025,
+    "abstract": null,
+    "citation_count": 0,
+    "reference_count": 69,
+    "url": "https://dblp.org/rec/conf/asiaccs/GhoshBSPDM25",
+    "dblp_key": "conf/asiaccs/GhoshBSPDM25",
+    "source_id": "https://openalex.org/W4413176526"
+  },
+  {
+    "title": "Key Extension: Multi-Key FHE Utilizing LWR.",
+    "authors": [
+      "Mansi Goyal",
+      "Aditi Kar Gangopadhyay"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2025,
+    "abstract": "Multi-Key Fully Homomorphic Encryption (MKFHE) schemes represent a significant advancement in cryptographic technology, enabling multiple parties to perform arbitrary computations on data encrypted under different keys. These schemes utilize the complex ciphertext extension algorithms that extend the ciphertexts encrypted by the public key of a single party to the ciphertexts encrypted under all the participants’ public keys, enabling collaborative evaluation. However, this process often compromises efficiency by increasing ciphertext size and requiring intricate operations. Moreover, the hardness of the majority of existing MKFHE schemes based on lattice problems such as Learning with Errors (LWE) or Ring Learning with Errors (RLWE) necessitates extensive sampling from error distributions. This approach leads to substantial noise propagation after only a few operations, limiting the scheme’s practical utility. By addressing these key challenges, our work proposes a more streamlined and efficient Key Extension Multi-key Fully Homomorphic Encryption (MKEFHE) scheme based on the Learning with Rounding (LWR) problem, which eliminates the need for a complex ciphertext extension algorithm and an error distribution.",
+    "citation_count": 0,
+    "reference_count": 38,
+    "url": "https://dblp.org/rec/conf/asiaccs/GoyalG25",
+    "dblp_key": "conf/asiaccs/GoyalG25",
+    "source_id": "https://openalex.org/W4413175655"
+  },
+  {
+    "title": "QUIC-Exfil: Exploiting QUIC&apos;s Server Preferred Address Feature to Perform Data Exfiltration Attacks.",
+    "authors": [
+      "Thomas Grübl",
+      "Weijie Niu",
+      "Jan von der Assen",
+      "Burkhard Stiller"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2025,
+    "abstract": null,
+    "citation_count": null,
+    "reference_count": null,
+    "url": "https://dblp.org/rec/conf/asiaccs/GrublNAS25",
+    "dblp_key": "conf/asiaccs/GrublNAS25",
+    "source_id": null
+  },
+  {
+    "title": "DUPLEX: Scalable Zero-Knowledge Lookup Arguments over RSA Group.",
+    "authors": [
+      "Semin Han",
+      "Geonho Yoon",
+      "Hyunok Oh",
+      "Jihye Kim 0001"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2025,
+    "abstract": null,
+    "citation_count": 0,
+    "reference_count": 24,
+    "url": "https://dblp.org/rec/conf/asiaccs/HanYOK25",
+    "dblp_key": "conf/asiaccs/HanYOK25",
+    "source_id": "https://openalex.org/W4413177735"
+  },
+  {
+    "title": "NailKey: Mutable Biometric Using Fingernails.",
+    "authors": [
+      "Yihong Hang",
+      "Zhice Yang"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2025,
+    "abstract": null,
+    "citation_count": 0,
+    "reference_count": 45,
+    "url": "https://dblp.org/rec/conf/asiaccs/HangY25",
+    "dblp_key": "conf/asiaccs/HangY25",
+    "source_id": "https://openalex.org/W4413176473"
+  },
+  {
+    "title": "Formal Analysis of SDNsec: Attacks and Corrections for Payload, Route Integrity and Accountability.",
+    "authors": [
+      "Ayoub Ben Hassen",
+      "Pascal Lafourcade 0001",
+      "Dhekra Mahmoud",
+      "Maxime Puys"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2025,
+    "abstract": "Modern networks increasingly rely on Software-Defined Networking (SDN) to achieve flexibility and efficiency, which makes it more critical to ensure their security. Particularly, it is crucial to ensure the integrity of packets routing within the Network. In this paper, we address key security challenges within SDN architectures with a particular focus on the data plane. We explore these challenges through the lens of a security solution called SDNsec. We identify three fundamental security properties, namely payload integrity, route integrity and accountability. We define these security properties in the formal framework of the applied Π -Calculus. Likewise, we suggest two levels of route integrity: strong and weak, depending on the protocol’s requirements. We use ProVerif, a cryptographic protocol verifier, to conduct a formal analysis of the security of SDNsec. Thanks to our models, we discover several flaws on all the aforementioned properties. In response, we propose corrective measures to enhance SDNsec’s security. Moreover, to ensure that such attacks are feasible and that our improvements are effective, we implement and test SDNsec and our corrected solution using the RYU controller and Mininet network emulator.",
+    "citation_count": 0,
+    "reference_count": 40,
+    "url": "https://dblp.org/rec/conf/asiaccs/Hassen0MP25",
+    "dblp_key": "conf/asiaccs/Hassen0MP25",
+    "source_id": "https://openalex.org/W4413177841"
+  },
+  {
+    "title": "BISON: Blind Identification with Stateless scOped pseudoNyms.",
+    "authors": [
+      "Jakob Heher",
+      "Stefan More",
+      "Lena Heimberger"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2025,
+    "abstract": "Delegating authentication to identity providers like Google or Facebook, while convenient, compromises user privacy. These identity providers can record users' every move; the global identifiers they provide also enable internet-wide tracking.   We show that neither is a necessary evil by presenting the BISON pseudonym derivation protocol, inspired by Oblivious Pseudorandom Functions. It hides the service provider's identity from the identity provider yet produces a trusted, scoped, immutable pseudonym. Colluding service providers cannot link BISON pseudonyms; this prevents user tracking. BISON does not require a long-lived state on the user device and does not add additional actors to the authentication process.   BISON is practical. It is easy to understand, implement, and reason about, and is designed to integrate into existing authentication protocols. To demonstrate this, we provide an OpenID Connect extension that allows OIDC's PPID pseudonyms to be derived using BISON while remaining fully backwards compatible. Additionally, BISON uses only lightweight cryptography. Pseudonym derivation requires a total of four elliptic curve scalar-point multiplications and four hash function evaluations, taking $\\approx$3 ms in our proof of concept implementation. Thus, BISON's privacy guarantees can be realized in practice. This makes BISON a crucial stepping stone towards the privacy-preserving internet of tomorrow.",
+    "citation_count": 0,
+    "reference_count": 42,
+    "url": "https://dblp.org/rec/conf/asiaccs/HeherMH25",
+    "dblp_key": "conf/asiaccs/HeherMH25",
+    "source_id": "https://openalex.org/W4413176157"
+  },
+  {
+    "title": "Minerva: A File-Based Ransomware Detector.",
+    "authors": [
+      "Dorjan Hitaj",
+      "Giulio Pagnotta",
+      "Fabio De Gaspari",
+      "Lorenzo De Carli",
+      "Luigi V. Mancini"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2025,
+    "abstract": "Ransomware attacks have caused billions of dollars in damages in recent years, and are expected to cause billions more in the future. Consequently, significant effort has been devoted to ransomware detection and mitigation. Behavioral-based ransomware detection approaches have garnered considerable attention recently. These behavioral detectors typically rely on process-based behavioral profiles to identify malicious behaviors. However, with an increasing body of literature highlighting the vulnerability of such approaches to evasion attacks, a comprehensive solution to the ransomware problem remains elusive. This paper presents Minerva, a novel, robust approach to ransomware detection. Minerva is engineered to be robust by design against evasion attacks, with architectural and feature selection choices informed by their resilience to adversarial manipulation. We conduct a comprehensive analysis of Minerva across a diverse spectrum of ransomware types, encompassing unseen ransomware as well as variants designed specifically to evade Minerva. Our evaluation showcases the ability of Minerva to accurately identify ransomware, generalize to unseen threats, and withstand evasion attacks. Furthermore, over 99% of detected ransomware are identified within 0.52sec of activity, enabling the adoption of data loss prevention techniques with near-zero overhead.",
+    "citation_count": 3,
+    "reference_count": 0,
+    "url": "https://dblp.org/rec/conf/asiaccs/HitajPGCM25",
+    "dblp_key": "conf/asiaccs/HitajPGCM25",
+    "source_id": "https://openalex.org/W4318348981"
+  },
+  {
+    "title": "Enhancing Search Privacy on Tor: Advanced Deep Keyword Fingerprinting Attacks and BurstGuard Defense.",
+    "authors": [
+      "Chaiwon Hwang",
+      "Haeseung Jeon",
+      "Jiwoo Hong",
+      "Hosung Kang",
+      "Nate Mathews",
+      "Goun Kim",
+      "Se Eun Oh"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2025,
+    "abstract": "This paper addresses the privacy risks associated with Keyword Fingerprinting (KF) on Tor, a process that involves inferring user-typed keywords through traffic analysis. Existing research has been inadequate in effectively fingerprinting keywords. To bridge this gap, we introduce Deep Keyword Fingerprinting (DKF), a novel approach that utilizes a large dataset, deep learning models, and adapted website fingerprinting features to significantly enhance the accuracy of predicting user-searched keywords. Additionally, we propose BurstGuard, an effective defense designed to disrupt keyword trace patterns and substantially defeat DKF, thereby improving upon state-of-the-art defense methods. Collectively, our study not only advances KF detection techniques but also strengthens defenses, significantly enhancing user privacy on Tor.",
+    "citation_count": 1,
+    "reference_count": 20,
+    "url": "https://dblp.org/rec/conf/asiaccs/HwangJHKMKO25",
+    "dblp_key": "conf/asiaccs/HwangJHKMKO25",
+    "source_id": "https://openalex.org/W4413176781"
+  },
+  {
+    "title": "Your Control Host Intrusion Left Some Physical Breadcrumbs: Physical Evidence-Guided Post-Mortem Triage of SCADA Attacks.",
+    "authors": [
+      "Moses Ike",
+      "Keaton Sadoski",
+      "Romuald Valme",
+      "Burak Sahin",
+      "Saman A. Zonouz",
+      "Wenke Lee"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2025,
+    "abstract": null,
+    "citation_count": 0,
+    "reference_count": 37,
+    "url": "https://dblp.org/rec/conf/asiaccs/IkeSVSZL25",
+    "dblp_key": "conf/asiaccs/IkeSVSZL25",
+    "source_id": "https://openalex.org/W4413176625"
+  },
+  {
+    "title": "Preventing Radio Fingerprinting through Low-Power Jamming.",
+    "authors": [
+      "Muhammad Irfan",
+      "Savio Sciancalepore",
+      "Gabriele Oligeri"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2025,
+    "abstract": "Radio Frequency fingerprinting enables a passive receiver to recognize and authenticate a transmitter without the need for cryptographic tools. Authentication is achieved by isolating specific features of the transmitted signal that are unique to the transmitter's hardware. Much research has focused on improving the effectiveness and efficiency of radio frequency fingerprinting to maximize its performance in various scenarios and conditions, while little research examined how to protect devices from being subject to radio fingerprinting in the wild.   In this paper, we explore a novel point of view. We examine the threat posed by radio frequency fingerprinting, which facilitates the unauthorized identification of wireless devices in the field by malicious entities. We also suggest a method to sanitize the transmitted signal of its fingerprint using a low-power jammer, deployed on purpose to improve devices' anonymity on the channel while still guaranteeing the link's quality of service. Our experimental results and subsequent analysis demonstrate that a low-power jammer can effectively block a malicious eavesdropper from identifying a device without affecting the quality of the wireless link, thereby restoring the privacy of the user when accessing the radio spectrum.",
+    "citation_count": 0,
+    "reference_count": 32,
+    "url": "https://dblp.org/rec/conf/asiaccs/IrfanSO25",
+    "dblp_key": "conf/asiaccs/IrfanSO25",
+    "source_id": "https://openalex.org/W4413177951"
+  },
+  {
+    "title": "POSTER: An Empirical Study of Smart Contract Patching Practices in the Wild.",
+    "authors": [
+      "Taeyoung Kim",
+      "Gilhee Lee",
+      "Hyoungshick Kim"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2025,
+    "abstract": null,
+    "citation_count": 0,
+    "reference_count": 4,
+    "url": "https://dblp.org/rec/conf/asiaccs/KimLK25",
+    "dblp_key": "conf/asiaccs/KimLK25",
+    "source_id": "https://openalex.org/W4413175962"
+  },
+  {
+    "title": "AVXProbe: Enhancing Website Fingerprinting with Side-Channel-Assisted Kernel-Level Traces.",
+    "authors": [
+      "Suryeon Kim",
+      "Seung Ho Na",
+      "Jaehan Kim",
+      "Seungwon Shin 0001",
+      "Hyunwoo Choi"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2025,
+    "abstract": "Cache-based website fingerprinting attacks pose substantial privacy and security concerns. These attacks can unveil a user’s browsing behavior by monitoring cache activities without depending on network traces. However, existing studies that monitor the entire cache often generate noisy data and require large datasets. This study addresses the limitations of the aforementioned methods by introducing a novel cache-based website fingerprinting technique, called AVXProbe, which leverages kernel-level information. In this attack, an attacker collects timing information from specific regions of the Translation Lookaside Buffer (TLB) and cache within the address space of loaded kernel modules by measuring the access time of AVX masked operations. As AVX operations are commonly used on x86, our attack is effective on a broad range of modern Intel and AMD processors. The attacker employs machine learning techniques to identify the website visited by the victim. The evaluation results show that our attack achieves up to 97.7% accuracy on 100 websites. The attack is robust, achieving nearly 90% accuracy with 3.2 seconds of data collection time and 8 training data per website, while state-of-the-art attacks demonstrate about 44-70% accuracy under the same conditions. Additionally, ablation studies reveal that the attack’s performance depends on combining multiple kernel module groups rather than a single module. Our attack highlights the potential of kernel-level side-channel information to enhance website fingerprinting attacks, posing new challenges to privacy and security in web browsing.",
+    "citation_count": 0,
+    "reference_count": 52,
+    "url": "https://dblp.org/rec/conf/asiaccs/KimNK0C25",
+    "dblp_key": "conf/asiaccs/KimNK0C25",
+    "source_id": "https://openalex.org/W4413176763"
+  },
+  {
+    "title": "An Optimized Instantiation of Post-Quantum MQTT protocol on 8-bit AVR Sensor Nodes.",
+    "authors": [
+      "YoungBeom Kim",
+      "Seog Chung Seo"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2025,
+    "abstract": null,
+    "citation_count": 2,
+    "reference_count": 58,
+    "url": "https://dblp.org/rec/conf/asiaccs/KimS25",
+    "dblp_key": "conf/asiaccs/KimS25",
+    "source_id": "https://openalex.org/W4413175970"
+  },
+  {
+    "title": "SigN: SIMBox Activity Detection Through Latency Anomalies at the Cellular Edge.",
+    "authors": [
+      "Anne Josiane Kouam",
+      "Aline Carneiro Viana",
+      "Philippe Martins",
+      "Cédric Adjih",
+      "Alain Tchana"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2025,
+    "abstract": "Despite their widespread adoption, cellular networks face growing vulnerabilities due to their inherent complexity and the integration of advanced technologies. One of the major threats in this landscape is Voice over IP (VoIP) to GSM gateways, known as SIMBox devices. These devices use multiple SIM cards to route VoIP traffic through cellular networks, enabling international bypass fraud with losses of up to $3.11 billion annually. Beyond financial impact, SIMBox activity degrades network performance, threatens national security, and facilitates eavesdropping on communications. Existing detection methods for SIMBox activity are hindered by evolving fraud techniques and implementation complexities, limiting their practical adoption in operator networks.This paper addresses the limitations of current detection methods by introducing SigN , a novel approach to identifying SIMBox activity at the cellular edge. The proposed method focuses on detecting remote SIM card association, a technique used by SIMBox appliances to mimic human mobility patterns. The method detects latency anomalies between SIMBox and standard devices by analyzing cellular signaling during network attachment. Extensive indoor and outdoor experiments demonstrate that SIMBox devices generate significantly higher attachment latencies, particularly during the authentication phase, where latency is up to 23 times greater than that of standard devices. We attribute part of this overhead to immutable factors such as LTE authentication standards and Internet-based communication protocols. Therefore, our approach offers a robust, scalable, and practical solution to mitigate SIMBox activity risks at the network edge.",
+    "citation_count": 0,
+    "reference_count": 0,
+    "url": "https://dblp.org/rec/conf/asiaccs/KouamVMAT25",
+    "dblp_key": "conf/asiaccs/KouamVMAT25",
+    "source_id": "https://openalex.org/W4407131605"
+  },
+  {
+    "title": "Three Glitches to Rule One Car: Fault Injection Attacks on a Connected EV.",
+    "authors": [
+      "Niclas Kühnapfel",
+      "Christian Werling",
+      "Hans Niklas Jacob",
+      "Jean-Pierre Seifert"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2025,
+    "abstract": null,
+    "citation_count": 0,
+    "reference_count": 32,
+    "url": "https://dblp.org/rec/conf/asiaccs/KuhnapfelWJS25",
+    "dblp_key": "conf/asiaccs/KuhnapfelWJS25",
+    "source_id": "https://openalex.org/W4413178045"
+  },
+  {
+    "title": "POSTER: Automating ICS Malware Analysis with MITRE ATT&amp;CK.",
+    "authors": [
+      "Fatih Kurt",
+      "Neetesh Saxena",
+      "Vijay Kumar",
+      "George Theodorakopoulos 0001"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2025,
+    "abstract": "The increasing interconnections and rapid changes in the nature of cyber threats targeting the Industrial Control Systems (ICS), it is crucial to understand how the malware patterns and behavior have evolved over the years. Gaining this understanding allows us to assess the effectiveness of current detection and defense mechanisms. Insights from this work will help in building effective defenses to counter such sophisticated behavior. Traditional threat analysis methods rely on text heavy representations, making it difficult to identify attack trends efficiently. This work improves the usability of the MITRE ATT&CK framework by automating the extraction, comparison, and visualization of malware attack techniques. By analyzing five ICS targeting malware families BlackEnergy, Industroyer, Industroyer2, Pipedream, and Triton, our developed tool identifies recurring adversary tactics and provides structured heatmaps and network graphs for improved threat intelligence. This approach enables analysts to compare malware behaviors more effectively, prioritize security strategies, and strengthen ICS cybersecurity resilience.",
+    "citation_count": 0,
+    "reference_count": 5,
+    "url": "https://dblp.org/rec/conf/asiaccs/KurtSKT25",
+    "dblp_key": "conf/asiaccs/KurtSKT25",
+    "source_id": "https://openalex.org/W4413175911"
+  },
+  {
+    "title": "poqeth: Efficient, post-quantum signature verification on Ethereum.",
+    "authors": [
+      "Ruslan Kysil",
+      "István András Seres",
+      "Péter Kutas",
+      "Nándor Kelecsényi"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2025,
+    "abstract": "This work explores the application and efficient deployment of (standardized) post-quantum (PQ) digital signature algorithms in the blockchain environment. Specifically, we implement and evaluate four PQ signatures in the Ethereum Virtual Machine: W-OTS+, XMSS, SPHINCS+, and MAYO. We focus on optimizing the gas costs of the verification algorithms as that is the signature schemes’ only algorithm executed on-chain, thus incurring financial costs (transaction fees) for the users. Hence, the verification algorithm is the signature schemes’ main bottleneck for decentralized applications. We examine two methods to verify post-quantum digital signatures on-chain. Our practical performance evaluation shows that full on-chain verification is often prohibitively costly. Naysayer proofs (FC’24) allow a novel optimistic verification mode. We observe that the Naysayer verification mode is generally the cheapest, at the cost of additional trust assumptions. We release our implementation called poqeth as an open-source library.",
+    "citation_count": 0,
+    "reference_count": 33,
+    "url": "https://dblp.org/rec/conf/asiaccs/KysilSKK25",
+    "dblp_key": "conf/asiaccs/KysilSKK25",
+    "source_id": "https://openalex.org/W4413176731"
+  },
+  {
+    "title": "Slice it up: Unmasking User Identities in Smartwatch Health Data.",
+    "authors": [
+      "Lucas Lange",
+      "Tobias Schreieder",
+      "Victor Christen",
+      "Erhard Rahm"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2025,
+    "abstract": "Wearables are widely used for health data collection due to their availability and advanced sensors, enabling smart health applications like stress detection. However, the sensitivity of personal health data raises significant privacy concerns. While user de-identification by removing direct identifiers such as names and addresses is commonly employed to protect privacy, the data itself can still be exploited to re-identify individuals. We introduce a novel framework for similarity-based Dynamic Time Warping (DTW) re-identification attacks on time series health data. Using the WESAD dataset and two larger synthetic datasets, we demonstrate that even short segments of sensor data can achieve perfect re-identification with our Slicing-DTW-Attack. Our attack is independent of training data and computes similarity rankings in about 2 minutes for 10,000 subjects on a single CPU core. These findings highlight that de-identification alone is insufficient to protect privacy. As a defense, we show that adding random noise to the signals significantly reduces re-identification risk while only moderately affecting usability in stress detection tasks, offering a promising approach to balancing privacy and utility.",
+    "citation_count": 0,
+    "reference_count": 45,
+    "url": "https://dblp.org/rec/conf/asiaccs/LangeSCR25",
+    "dblp_key": "conf/asiaccs/LangeSCR25",
+    "source_id": "https://openalex.org/W4413175474"
+  },
+  {
+    "title": "GAE4HT: Detecting Hardware Trojans with Graph Autoencoder-Trained on Golden Model Data Flow Graphs.",
+    "authors": [
+      "Daehyeon Lee",
+      "Junghee Lee 0004"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2025,
+    "abstract": "Hardware Trojans (HTs) are malicious circuits covertly embedded in hardware, similar to software backdoors, that can cause malfunctions or leak confidential information when activated. Detecting and localizing these HTs is critical, especially in sensitive systems like weaponry, where they pose significant security threats. Traditional detection methods often rely on side-channel analysis, which requires specialized equipment and expertise, making them costly and limited to post-manufacturing stages. Localization is crucial because merely detecting an HT does not allow for effective neutralization. Pinpointing the exact location helps in assessing the impact, facilitating targeted removal, and avoiding costly hardware redesigns. In critical applications like military systems, this minimizes the risk of security breaches that could compromise the entire system. This paper proposes a novel method for HT detection and localization using a Graph Autoencoder (GAE). Unlike existing techniques, our approach utilizes the structural information in Data Flow Graphs (DFGs) to identify HTs without the need for labeled datasets or manual feature engineering. By training solely on the Golden Model (GM) of the hardware design, the GAE captures the circuit’s normal structural patterns. Our method analyzes the reconstruction error of each node in the GAE to not only detect the presence of HTs but also accurately pinpoint their insertion points within the hardware design. Experimental results show that our method outperforms existing approaches across various benchmarks, achieving high detection accuracy. It also offers practical advantages by avoiding the need for additional equipment or HT data during training, making it a feasible solution for early HT detection and mitigation in hardware systems.",
+    "citation_count": 0,
+    "reference_count": 35,
+    "url": "https://dblp.org/rec/conf/asiaccs/LeeL25",
+    "dblp_key": "conf/asiaccs/LeeL25",
+    "source_id": "https://openalex.org/W4413175904"
+  },
+  {
+    "title": "POSTER: Stealthy SWAP-Based Side-Channel Attack on Multi-Tenant Quantum Cloud Systems.",
+    "authors": [
+      "Wei Jie Bryan Lee",
+      "Siyi Wang",
+      "Suman Dutta 0001",
+      "Walid El Maouaki",
+      "Anupam Chattopadhyay"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2025,
+    "abstract": null,
+    "citation_count": 1,
+    "reference_count": 13,
+    "url": "https://dblp.org/rec/conf/asiaccs/LeeW0MC25",
+    "dblp_key": "conf/asiaccs/LeeW0MC25",
+    "source_id": "https://openalex.org/W4413176097"
+  },
+  {
+    "title": "Unveiling Privacy Risks in Quantum Optimization Services.",
+    "authors": [
+      "Mateusz Lesniak",
+      "Michal Wronski",
+      "Ewa Syta",
+      "Miroslaw Kutylowski"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2025,
+    "abstract": null,
+    "citation_count": 0,
+    "reference_count": 36,
+    "url": "https://dblp.org/rec/conf/asiaccs/LesniakWSK25",
+    "dblp_key": "conf/asiaccs/LesniakWSK25",
+    "source_id": "https://openalex.org/W4413177958"
+  },
+  {
+    "title": "Efficient Updatable Private Information Retrieval From Simulatable Homomorphic Ciphertexts.",
+    "authors": [
+      "Yini Lin",
+      "Haibo Tian"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2025,
+    "abstract": null,
+    "citation_count": 0,
+    "reference_count": 19,
+    "url": "https://dblp.org/rec/conf/asiaccs/LinT25",
+    "dblp_key": "conf/asiaccs/LinT25",
+    "source_id": "https://openalex.org/W4413176146"
+  },
+  {
+    "title": "Fast SNARK-based Non-Interactive Distributed Verifiable Random Function with Ethereum Compatibility.",
+    "authors": [
+      "Jia Liu 0003",
+      "Mark Manulis"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2025,
+    "abstract": "Distributed randomness beacons (DRBs) are fundamental for various decentralised applications, such as consensus protocols, decentralised gaming and lotteries, and collective governance protocols. These applications are heavily used on modern blockchain platforms. This paper presents the so far most efficient direct construction and implementation of a non-interactive distributed verifiable random function (NI-DVRF) that is fully compatible with Ethereum. Our NI-DVRF scheme adopts pairings and combines techniques from secret sharing, SNARKs, and BLS signatures. The security properties of the resulting NI-DVRF scheme are formally modelled and proven in the random oracle model under standard pairing-based assumptions. To justify the efficiency and cost claims and more generally its adoption potential in practice, the proposed NI-DVRF scheme was implemented in Rust and Solidity. Our implementation is highly optimised and is currently being investigated for deployment on the multichain layer-2 scaling solution provided by Boba Network to power its DRB service zkRand. Our experimental analysis, therefore, also evaluates performance and scalability properties of the proposed NI-DVRF and its implementation.",
+    "citation_count": 1,
+    "reference_count": 27,
+    "url": "https://dblp.org/rec/conf/asiaccs/LiuM25",
+    "dblp_key": "conf/asiaccs/LiuM25",
+    "source_id": "https://openalex.org/W4413175479"
+  },
+  {
+    "title": "Telescope: Top-Down Hierarchical Pre-silicon Side-channel Leakage Assessment in System-on-Chip Design.",
+    "authors": [
+      "Zhenyuan Liu",
+      "Andrew Malnicof",
+      "Arna Roy",
+      "Patrick Schaumont"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2025,
+    "abstract": null,
+    "citation_count": 0,
+    "reference_count": 43,
+    "url": "https://dblp.org/rec/conf/asiaccs/LiuMRS25",
+    "dblp_key": "conf/asiaccs/LiuMRS25",
+    "source_id": "https://openalex.org/W4413177766"
+  },
+  {
+    "title": "Secure Steganography Based on Chaos-Aided Quantization Index Modulation.",
+    "authors": [
+      "Shanxiang Lyu",
+      "Xinquan Xu",
+      "Ling Liu",
+      "Lip Yee Por"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2025,
+    "abstract": "This paper presents a secure steganographic method based on chaos-aided quantization index modulation (QIM). By integrating chaotic dynamics with lattice-based quantization, the proposed scheme enhances security while preserving the statistical properties of the cover signal. A chaotic system generates a pseudorandom sequence, which is transformed into a uniform distribution via modulo lattice operations. This sequence then serves as a dither signal in the QIM embedding process, ensuring that the stego signals remain indistinguishable from the original. We provide formal proof of statistical indistinguishability. Theoretical and experimental results confirm that the chaos-aided QIM approach resists statistical detection while maintaining high embedding efficiency. The method is particularly suited for applications requiring undetectable covert communication.",
+    "citation_count": 0,
+    "reference_count": 32,
+    "url": "https://dblp.org/rec/conf/asiaccs/LyuXLP25",
+    "dblp_key": "conf/asiaccs/LyuXLP25",
+    "source_id": "https://openalex.org/W4413177891"
+  },
+  {
+    "title": "Comprehensive Evaluation of Cloaking Backdoor Attacks on Object Detector in Real-World.",
+    "authors": [
+      "Hua Ma",
+      "Alsharif Abuadbba",
+      "Yansong Gao 0001",
+      "Hyoungshick Kim",
+      "Surya Nepal"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2025,
+    "abstract": "The exploration of backdoor vulnerabilities in object detectors, particularly in real-world scenarios, remains limited. A significant challenge lies in the absence of a natural physical backdoor dataset, and constructing such a dataset is both time- and labor-intensive. In this work, we address this gap by creating a large-scale dataset comprising approximately 11,800 images/frames with annotations featuring natural objects (e.g., T-shirts and hats) as triggers to incur cloaking adversarial effects in diverse real-world scenarios. This dataset is tailored for the study of physical backdoors in object detectors. Leveraging this dataset, we conduct a comprehensive evaluation of an insidious cloaking backdoor effect against object detectors, wherein the bounding box around a person vanishes when the individual is near a natural object (e.g., a commonly available T-shirt) in front of the detector. Our evaluations encompass three prevalent attack surfaces: data outsourcing, model outsourcing, and the use of pretrained models. The cloaking effect is successfully implanted in object detectors across all three attack surfaces. We extensively evaluate four popular object detection algorithms (anchor-based Yolo-V3, Yolo-V4, Faster R-CNN, and anchor-free CenterNet) using 19 videos (totaling approximately 11,800 frames) in real-world scenarios. Our results demonstrate that the backdoor attack exhibits remarkable robustness against various factors, including movement, distance, angle, non-rigid deformation, and lighting. In data and model outsourcing scenarios, the attack success rate (ASR) in most videos reaches 100% or near it, while the clean data accuracy of the backdoored model remains indistinguishable from that of the clean model, making it impossible to detect backdoor behavior through a validation set.",
+    "citation_count": 1,
+    "reference_count": 27,
+    "url": "https://dblp.org/rec/conf/asiaccs/MaA0KN25",
+    "dblp_key": "conf/asiaccs/MaA0KN25",
+    "source_id": "https://openalex.org/W4413175465"
+  },
+  {
+    "title": "Enhanced CKKS Bootstrapping with Generalized Polynomial Composites Approximation.",
+    "authors": [
+      "Seonhong Min",
+      "Joon-Woo Lee",
+      "Yongsoo Song"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2025,
+    "abstract": null,
+    "citation_count": 0,
+    "reference_count": 22,
+    "url": "https://dblp.org/rec/conf/asiaccs/MinLS25",
+    "dblp_key": "conf/asiaccs/MinLS25",
+    "source_id": "https://openalex.org/W4413177864"
+  },
+  {
+    "title": "DTL: Data Tumbling Layer A Composable Unlinkability for Smart Contracts.",
+    "authors": [
+      "Mohsen Minaei",
+      "Pedro Moreno-Sanchez",
+      "Zhiyong Fang",
+      "Srinivasan Raghuraman",
+      "Navid Alamati",
+      "Panagiotis Chatzigiannis",
+      "Ranjit Kumaresan",
+      "Duc V. Le"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2025,
+    "abstract": "We propose Data Tumbling Layer (DTL), a cryptographic scheme for non-interactive data tumbling. The core concept is to enable users to commit to specific data and subsequently re-use to the encrypted version of these data across different applications while removing the link to the previous data commit action. We define the following security and privacy notions for DTL: (i) no one-more redemption: a malicious user cannot redeem and use the same data more than the number of times they have committed the data; (ii) theft prevention: a malicious user cannot use data that has not been committed by them; (iii) non-slanderabilty: a malicious user cannot prevent an honest user from using their previously committed data; and (iv) unlinkability: a malicious user cannot link tainted data from an honest user to the corresponding data after it has been tumbled.   To showcase the practicality of DTL, we use DTL to realize applications for (a) unlinkable fixed-amount payments; (b) unlinkable and confidential payments for variable amounts; (c) unlinkable weighted voting protocol. Finally, we implemented and evaluated all the proposed applications. For the unlinkable and confidential payment application, a user can initiate such a transaction in less than $1.5$s on a personal laptop. In terms of on-chain verification, the gas cost is less than $1.8$ million.",
+    "citation_count": 0,
+    "reference_count": 19,
+    "url": "https://dblp.org/rec/conf/asiaccs/MinaeiMFRACKL25",
+    "dblp_key": "conf/asiaccs/MinaeiMFRACKL25",
+    "source_id": "https://openalex.org/W4413176391"
+  },
+  {
+    "title": "PITCH: AI-assisted Tagging of Deepfake Audio Calls using Challenge-Response.",
+    "authors": [
+      "Govind Mittal",
+      "Arthur Jakobsson",
+      "Kelly O. Marshall",
+      "Chinmay Hegde",
+      "Nasir D. Memon"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2025,
+    "abstract": "The rise of AI voice-cloning technology, particularly audio Real-time Deepfakes (RTDFs), has intensified social engineering attacks by enabling real-time voice impersonation that bypasses conventional enrollment-based authentication. This technology represents an existential threat to phone-based authentication systems, while total identity fraud losses reached $43 billion. Unlike traditional robocalls, these personalized AI-generated voice attacks target high-value accounts and circumvent existing defensive measures, creating an urgent cybersecurity challenge. To address this, we propose PITCH, a robust challenge-response method to detect and tag interactive deepfake audio calls. We developed a comprehensive taxonomy of audio challenges based on the human auditory system, linguistics, and environmental factors, yielding 20 prospective challenges. Testing against leading voice-cloning systems using a novel dataset (18,600 original and 1.6 million deepfake samples from 100 users), PITCH's challenges enhanced machine detection capabilities to 88.7% AUROC score, enabling us to identify 10 highly-effective challenges. For human evaluation, we filtered a challenging, balanced subset on which human evaluators independently achieved 72.6% accuracy, while machines scored 87.7%. Recognizing that call environments require human control, we developed a novel human-AI collaborative system that tags suspicious calls as \"Deepfake-likely.\" Contrary to prior findings, we discovered that integrating human intuition with machine precision offers complementary advantages, giving users maximum control while boosting detection accuracy to 84.5%. This significant improvement situates PITCH's potential as an AI-assisted pre-screener for verifying calls, offering an adaptable approach to combat real-time voice-cloning attacks while maintaining human decision authority.",
+    "citation_count": 1,
+    "reference_count": 0,
+    "url": "https://dblp.org/rec/conf/asiaccs/MittalJMHM25",
+    "dblp_key": "conf/asiaccs/MittalJMHM25",
+    "source_id": "https://openalex.org/W4392340268"
+  },
+  {
+    "title": "From Transients to Flips: Hardware-level Bit Manipulation of In-Vehicle Serial Communication.",
+    "authors": [
+      "Abdullah Zubair Mohammed",
+      "Ryan M. Gerdes"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2025,
+    "abstract": "In a modern automobile, the in-vehicle communication network interconnects multiple subsystems, including those that perform safety-critical functions such as engine control, anti-lock braking, and airbag deployment, among many others. Therefore, the loss of data integrity in the network can have serious consequences for the safety of the vehicle. To that extent, CAN protocol, the most common in-vehicle communication standard, employs error-handling mechanisms such as bit-monitoring and cyclic-redundancy check to detect intentional or unintentional data manipulation. In this work, we exploit the transmission line nature of the CAN physical layer (a twisted pair cable) to induce voltage transients that result in bit manipulations. Specifically, we demonstrate bidirectional bit flip attacks, recessive to dominant (R → D) and dominant to recessive (D → R) with the aid of multiple compromised nodes (electronic control units) in the network. In addition, both the attacks, the simpler R → D, and the complex D → R are designed to be undetectable to the aforementioned error-handling mechanisms. The attacks become effective for distances ≥ 4 m for D → R and ≥ 1 m for R → D between the transmitter and receiver nodes. By demonstrating these bit flips, we challenge two fundamental physical layer assumptions of CAN: the impossibility of turning a dominant bit to recessive without an external current source, and having nonidentical signals on two nodes at the same time. The theory behind the attacks is presented, backed by circuit simulations, in-lab validations, and real-world demonstrations in a vehicle. These bit-level attacks, designed at the physical layer, circumvent software-based CAN defenses and lay the groundwork for a broader spectrum of potential attacks, including the manipulation of a data frame that we demonstrate.",
+    "citation_count": 0,
+    "reference_count": 23,
+    "url": "https://dblp.org/rec/conf/asiaccs/MohammedG25",
+    "dblp_key": "conf/asiaccs/MohammedG25",
+    "source_id": "https://openalex.org/W4413177697"
+  },
+  {
+    "title": "Glitch in Time: Exploiting Temporal Misalignment of IMU For Eavesdropping.",
+    "authors": [
+      "Ahmed Najeeb",
+      "Abdul Rafay 0002",
+      "Muhammad Hamad Alizai",
+      "Naveed Anwar Bhatti"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2025,
+    "abstract": "The increasing use of voice assistants and related applications has raised significant concerns about the security of Inertial Measurement Units (IMUs) in smartphones. These devices are vulnerable to acoustic eavesdropping attacks, jeopardizing user privacy. In response, Google imposed a rate limit of 200 Hz on permission-free access to IMUs, aiming to neutralize such side-channel attacks. Our research introduces a novel exploit, STAG, which circumvents these protections. It induces a temporal misalignment between the gyroscope and accelerometer, cleverly combining their data to resample at higher rates and reviving the potential for eavesdropping attacks previously curtailed by Google's security enhancements. Compared to prior methods, STAG achieves an 83.4% reduction in word error rate, highlighting its effectiveness in exploiting IMU data under restricted access and emphasizing the persistent security risks associated with these sensors.",
+    "citation_count": 0,
+    "reference_count": 0,
+    "url": "https://dblp.org/rec/conf/asiaccs/Najeeb0AB25",
+    "dblp_key": "conf/asiaccs/Najeeb0AB25",
+    "source_id": "https://openalex.org/W4403789155"
+  },
+  {
+    "title": "Nosy Layers, Noisy Fixes: Tackling DRAs in Federated Learning Systems using Explainable AI.",
+    "authors": [
+      "Meghali Nandi",
+      "Arash Shaghaghi",
+      "Nazatul Haque Sultan",
+      "Gustavo Batista",
+      "Raymond K. Zhao",
+      "Sanjay K. Jha"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2025,
+    "abstract": "Federated Learning (FL) has emerged as a powerful paradigm for collaborative model training while keeping client data decentralized and private. However, it is vulnerable to Data Reconstruction Attacks (DRA) such as \"LoKI\" and \"Robbing the Fed\", where malicious models sent from the server to the client can reconstruct sensitive user data. To counter this, we introduce DRArmor, a novel defense mechanism that integrates Explainable AI with targeted detection and mitigation strategies for DRA. Unlike existing defenses that focus on the entire model, DRArmor identifies and addresses the root cause (i.e., malicious layers within the model that send gradients with malicious intent) by analyzing their contribution to the output and detecting inconsistencies in gradient values. Once these malicious layers are identified, DRArmor applies defense techniques such as noise injection, pixelation, and pruning to these layers rather than the whole model, minimizing the attack surface and preserving client data privacy. We evaluate DRArmor's performance against the advanced LoKI attack across diverse datasets, including MNIST, CIFAR-10, CIFAR-100, and ImageNet, in a 200-client FL setup. Our results demonstrate DRArmor's effectiveness in mitigating data leakage, achieving high True Positive and True Negative Rates of 0.910 and 0.890, respectively. Additionally, DRArmor maintains an average accuracy of 87%, effectively protecting client privacy without compromising model performance. Compared to existing defense mechanisms, DRArmor reduces the data leakage rate by 62.5% with datasets containing 500 samples per client.",
+    "citation_count": 0,
+    "reference_count": 0,
+    "url": "https://dblp.org/rec/conf/asiaccs/NandiSSBZJ25",
+    "dblp_key": "conf/asiaccs/NandiSSBZJ25",
+    "source_id": "https://openalex.org/W4417093138"
+  },
+  {
+    "title": "PRISM: To Fortify Widget Based User-App Data Exchanges Using Android Virtualization Framework.",
+    "authors": [
+      "YingTat Ng",
+      "Zhe Chen",
+      "Haiqing Qiu",
+      "Xuhua Ding"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2025,
+    "abstract": null,
+    "citation_count": 0,
+    "reference_count": 21,
+    "url": "https://dblp.org/rec/conf/asiaccs/NgCQD25",
+    "dblp_key": "conf/asiaccs/NgCQD25",
+    "source_id": "https://openalex.org/W4413178227"
+  },
+  {
+    "title": "Open Access Alert: Studying the Privacy Risks in Android WebView&apos;s Web Permission Enforcement.",
+    "authors": [
+      "Trung Tin Nguyen",
+      "Ben Stock"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2025,
+    "abstract": null,
+    "citation_count": null,
+    "reference_count": null,
+    "url": "https://dblp.org/rec/conf/asiaccs/NguyenS25",
+    "dblp_key": "conf/asiaccs/NguyenS25",
+    "source_id": null
+  },
+  {
+    "title": "Practical Deniable Post-Quantum X3DH: A Lightweight Split-KEM for K-Waay.",
+    "authors": [
+      "Guilhem Niot"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2025,
+    "abstract": "International audience",
+    "citation_count": 0,
+    "reference_count": 9,
+    "url": "https://dblp.org/rec/conf/asiaccs/Niot25",
+    "dblp_key": "conf/asiaccs/Niot25",
+    "source_id": "https://openalex.org/W4413176485"
+  },
+  {
+    "title": "Monocle: Transient Execution Proof Memory Views for Runtime Compiled Code.",
+    "authors": [
+      "Matteo Oldani",
+      "William Blair",
+      "Shweta Shinde",
+      "Matthias Neugschwandtner"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2025,
+    "abstract": "Most managed runtime environments abandoned attempts to mitigate speculative execution attacks between different trust domains within the same process (in-process), in favor of using process isolation to confine attackers. Indeed, many code-generation based mitigations focused on specific variants of speculative execution vulnerabilities. This makes design-level defenses with clear guarantees, such as process isolation, a more attractive solution, despite the challenges that may arise while adopting a multi-process architecture. We present Monocle, a fundamental runtime code-generation approach that mitigates speculative execution attacks in-process. Monocle is based on software fault isolation (SFI) and can be validated at the machine code level to ensure all potential known Spectre gadgets are covered. Benchmarks show an overhead of only 20% over the baseline, on average, and an improvement of >4.1x when compared to using memory fences, a comprehensive baseline speculative execution barrier-based mitigation strategy.",
+    "citation_count": 0,
+    "reference_count": 22,
+    "url": "https://dblp.org/rec/conf/asiaccs/OldaniBSN25",
+    "dblp_key": "conf/asiaccs/OldaniBSN25",
+    "source_id": "https://openalex.org/W4413176262"
+  },
+  {
+    "title": "CryptoGuard: Lightweight Hybrid Detection and Response to Host-based Cryptojackers in Linux Cloud Environments.",
+    "authors": [
+      "Gyeonghoon Park",
+      "Jaehan Kim",
+      "Jinu Choi",
+      "Jinwoo Kim"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2025,
+    "abstract": "Host-based cryptomining malware, commonly known as cryptojackers, have gained notoriety for their stealth and the significant financial losses they cause in Linux-based cloud environments. Existing solutions often struggle with scalability due to high monitoring overhead, low detection accuracy against obfuscated behavior, and lack of integrated remediation. We present CryptoGuard, a lightweight hybrid solution that combines detection and remediation strategies to counter cryptojackers. To ensure scalability, CryptoGuard uses sketch- and sliding window-based syscall monitoring to collect behavior patterns with minimal overhead. It decomposes the classification task into a two-phase process, leveraging deep learning models to identify suspicious activity with high precision. To counter evasion techniques such as entry point poisoning and PID manipulation, CryptoGuard integrates targeted remediation mechanisms based on eBPF, a modern Linux kernel feature deployable on any compatible host. Evaluated on 123 real-world cryptojacker samples, it achieves average F1-scores of 96.12% and 92.26% across the two phases, and outperforms state-of-the-art baselines in terms of true and false positive rates, while incurring only 0.06% CPU overhead per host.",
+    "citation_count": 0,
+    "reference_count": 23,
+    "url": "https://dblp.org/rec/conf/asiaccs/ParkKCK25",
+    "dblp_key": "conf/asiaccs/ParkKCK25",
+    "source_id": "https://openalex.org/W4413176598"
+  },
+  {
+    "title": "TrustyMon: Practical Detection of DOM-based Cross-Site Scripting Attacks Using Trusted Types.",
+    "authors": [
+      "Sunnyeo Park",
+      "Jihwan Kim",
+      "Seongho Keum",
+      "Hyunjoon Lee",
+      "Sooel Son"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2025,
+    "abstract": null,
+    "citation_count": 0,
+    "reference_count": 34,
+    "url": "https://dblp.org/rec/conf/asiaccs/ParkKKLS25",
+    "dblp_key": "conf/asiaccs/ParkKKLS25",
+    "source_id": "https://openalex.org/W4413176602"
+  },
+  {
+    "title": "AuthentiSafe: Lightweight and Future-Proof Device-to-Device Authentication for IoT.",
+    "authors": [
+      "Lukas Petzi",
+      "Torsten Krauß",
+      "Alexandra Dmitrienko",
+      "Gene Tsudik"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2025,
+    "abstract": null,
+    "citation_count": 0,
+    "reference_count": 59,
+    "url": "https://dblp.org/rec/conf/asiaccs/PetziKDT25",
+    "dblp_key": "conf/asiaccs/PetziKDT25",
+    "source_id": "https://openalex.org/W4413175386"
+  },
+  {
+    "title": "Can You Run My Code? A Close Look at Process Injection in Windows Malware.",
+    "authors": [
+      "Giorgia Di Pietro",
+      "Daniele Cono D&apos;Elia",
+      "Leonardo Querzoni"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2025,
+    "abstract": "Process injection is a core technique for malware authors to evade detection and enhance stealth. Despite its widespread use and importance in malware analysis, process injection remains underexplored in academic research, with prior work often limited to specific techniques or lacking a systematic approach. This paper proposes a principled analysis methodology centered on fundamental operational steps inherent to all known process injection variants. By looking for the co-occurrence of a minimal set of said steps and correlating them via memory address identity, our approach overcomes the accuracy and overhead limitations of prior studies, enables reliable detection and fine-grained analysis of process injection attacks with tenable run-time costs. We provide fresh insights into how threat actors leverage this technique by analyzing malware spotted in the wild from 2017 to 2023. An analysis of 56,340 representative samples from 2,667 malware families estimates process injection as a dominant evasion strategy, and suggests that threat actors continuously adapt their choices and implementation variants in response to evolving defense mechanisms and community knowledge. Comparative experiments then show that our method outperforms dedicated solutions and mainstream sandboxes in identifying injection activity. To foster future research, we share with the community the implementation, dataset, and experimental logs from this study.",
+    "citation_count": 0,
+    "reference_count": 23,
+    "url": "https://dblp.org/rec/conf/asiaccs/PietroDQ25",
+    "dblp_key": "conf/asiaccs/PietroDQ25",
+    "source_id": "https://openalex.org/W4413175256"
+  },
+  {
+    "title": "BRC20 Snipping Attack.",
+    "authors": [
+      "Minfeng Qi",
+      "Qin Wang 0008",
+      "Ningran Li",
+      "Shiping Chen 0001",
+      "Tianqing Zhu"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2025,
+    "abstract": "In this paper, we introduce and implement BRC20 sniping attack. Our attack manipulates the BRC20 token transfers in open markets and disrupts the fairness among bidding participants. The long-standing principle of ``highest bidder wins'' is rendered ineffective.   Typically, open BRC20 token markets rely on Partially Signed Bitcoin Transactions (PSBT) to broadcast selling intents and wait for buying auctions. Our attack targets the BRC20 buying process (i.e., transfer) by injecting a front-running transaction to complete the full signature of the PSBT. At its core, the attack exploits the mempool's fee-based transaction selection mechanism to snipe the victim transaction, replicate metadata, and front-run the legesmate transaction. This attack applies to platforms using PSBT for BRC20 token transfers, including popular Bitcoin exchanges and marketplaces (e.g., Magic Eden, Unisat, Gate.io, OKX).   We implemented and tested the attack on a Bitcoin testnet (regtest), validating its effectiveness through multiple experimental rounds. Results show that the attacker consistently replaces legitimate transactions by submitting higher-fee PSBTs. We have also made responsible disclosures to the mentioned exchanges.",
+    "citation_count": 1,
+    "reference_count": 26,
+    "url": "https://dblp.org/rec/conf/asiaccs/QiWL0Z25",
+    "dblp_key": "conf/asiaccs/QiWL0Z25",
+    "source_id": "https://openalex.org/W4413175179"
+  },
+  {
+    "title": "Systematic Analysis of Kernel Security Performance and Energy Costs.",
+    "authors": [
+      "Fabian Rauscher",
+      "Benedict Herzog",
+      "Timo Hönig",
+      "Daniel Gruss"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2025,
+    "abstract": null,
+    "citation_count": 0,
+    "reference_count": 36,
+    "url": "https://dblp.org/rec/conf/asiaccs/RauscherHHG25",
+    "dblp_key": "conf/asiaccs/RauscherHHG25",
+    "source_id": "https://openalex.org/W4413176516"
+  },
+  {
+    "title": "Quantum-safe Signatureless DNSSEC.",
+    "authors": [
+      "Aditya Singh Rawat",
+      "Mahabir Prasad Jhanwar"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2025,
+    "abstract": "We present \\(\\mathsf {SL\\text{-}DNSSEC}\\): a backward-compatible protocol that leverages a quantum-safe KEM and a MAC to perform signature-less \\(\\mathsf {(SL)}\\) DNSSEC validations in a single UDP query/response style. Our experiments targeting NIST level I security for \\(\\texttt{QTYPE}\\) \\(\\texttt{A}\\) query resolution show that \\(\\mathsf {SL\\text{-}DNSSEC}\\) is practically equivalent to the presently deployed RSA-2048 in terms of bandwidth usage and resolution speeds. Compared to post-quantum signatures, \\(\\mathsf {SL\\text{-}DNSSEC}\\) reduces bandwidth consumption and resolution times by up to \\(95\\%\\) and \\(60\\%\\), respectively. Moreover, with response size < query size ≤ 1232 bytes, \\(\\mathsf {SL\\text{-}DNSSEC}\\) obviates the long-standing issues of IP fragmentation, TCP re-transmits and DDoS amplification attacks.",
+    "citation_count": 2,
+    "reference_count": 40,
+    "url": "https://dblp.org/rec/conf/asiaccs/RawatJ25",
+    "dblp_key": "conf/asiaccs/RawatJ25",
+    "source_id": "https://openalex.org/W4413175394"
+  },
+  {
+    "title": "Evaluating Robustness of Reference-based Phishing Detectors.",
+    "authors": [
+      "Eunjin Roh",
+      "Sungwoo Jeon",
+      "Sooel Son",
+      "Sanghyun Hong 0001"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2025,
+    "abstract": null,
+    "citation_count": 0,
+    "reference_count": 23,
+    "url": "https://dblp.org/rec/conf/asiaccs/RohJS025",
+    "dblp_key": "conf/asiaccs/RohJS025",
+    "source_id": "https://openalex.org/W4413176091"
+  },
+  {
+    "title": "POSTER: Transparent Temporally-Specialized System Call Filters.",
+    "authors": [
+      "Matthew Rossi",
+      "Michele Beretta 0001",
+      "Dario Facchinetti",
+      "Stefano Paraboschi"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2025,
+    "abstract": null,
+    "citation_count": 0,
+    "reference_count": 4,
+    "url": "https://dblp.org/rec/conf/asiaccs/Rossi0FP25",
+    "dblp_key": "conf/asiaccs/Rossi0FP25",
+    "source_id": "https://openalex.org/W4413175984"
+  },
+  {
+    "title": "POSTER: Policy-driven security-aware scheduling in Kubernetes.",
+    "authors": [
+      "Matthew Rossi",
+      "Michele Beretta 0001",
+      "Dario Facchinetti",
+      "Stefano Paraboschi"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2025,
+    "abstract": null,
+    "citation_count": 0,
+    "reference_count": 4,
+    "url": "https://dblp.org/rec/conf/asiaccs/Rossi0FP25a",
+    "dblp_key": "conf/asiaccs/Rossi0FP25a",
+    "source_id": "https://openalex.org/W4413175941"
+  },
+  {
+    "title": "Generalized Adversarial Code-Suggestions: Exploiting Contexts of LLM-based Code-Completion.",
+    "authors": [
+      "Karl Rubel",
+      "Maximilian Noppel",
+      "Christian Wressnegger"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2025,
+    "abstract": "While convenient, relying on LLM-powered code assistants in day-to-day work gives rise to severe attacks. For instance, the assistant might introduce subtle flaws and suggest vulnerable code to the user. These adversarial code-suggestions can be introduced via data poisoning and, thus, unknowingly by the model creators. In this paper, we provide a generalized formulation of such attacks, spawning and extending related work in this domain. This formulation is defined over two components: First, a trigger pattern occurring in the prompts of a specific user group, and, second, a learnable map in embedding space from the prompt to an adversarial bait. The latter gives rise to novel and more flexible targeted attack-strategies, allowing the adversary to choose the most suitable trigger pattern for a specific user-group arbitrarily, without restrictions on the pattern's tokens. Our directional-map attacks and prompt-indexing attacks increase the stealthiness decisively. We extensively evaluate the effectiveness of these attacks and carefully investigate defensive mechanisms to explore the limits of generalized adversarial code-suggestions. We find that most defenses unfortunately offer little protection only.",
+    "citation_count": 1,
+    "reference_count": 25,
+    "url": "https://dblp.org/rec/conf/asiaccs/RubelNW25",
+    "dblp_key": "conf/asiaccs/RubelNW25",
+    "source_id": "https://openalex.org/W4413176111"
+  },
+  {
+    "title": "App-solutely Modded: Surveying Modded App Market Operators and Original App Developers.",
+    "authors": [
+      "Luis Adan Saavedra",
+      "Hridoy S. Dutta",
+      "Alastair R. Beresford",
+      "Alice Hutchings"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2025,
+    "abstract": null,
+    "citation_count": 0,
+    "reference_count": 13,
+    "url": "https://dblp.org/rec/conf/asiaccs/SaavedraDBH25",
+    "dblp_key": "conf/asiaccs/SaavedraDBH25",
+    "source_id": "https://openalex.org/W4413176325"
+  },
+  {
+    "title": "FIRST: FrontrunnIng Resistant Smart ConTracts.",
+    "authors": [
+      "Emrah Sariboz",
+      "Gaurav Panwar",
+      "Roopa Vishwanathan",
+      "Satyajayant Misra"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2025,
+    "abstract": "Owing to the increasing acceptance of cryptocurrencies, there has been widespread adoption of traditional financial applications such as lending, borrowing, margin trading, and more, into the cryptocurrency realm. In some cases, the inherently transparent and unregulated nature of cryptocurrencies exposes users of these applications to attacks. One such attack is frontrunning, where a malicious entity leverages the knowledge of currently unprocessed financial transactions and attempts to get its own transaction(s) executed ahead of the unprocessed ones. The consequences of this can be financial loss, inaccurate transactions, and even exposure to more attacks. We propose FIRST, a framework that prevents frontrunning, and as a secondary effect, also backrunning and sandwich attacks. FIRST is built using cryptographic protocols including verifiable delay functions and aggregate signatures. We formally prove the security of FIRST using the universal composability framework, and experimentally demonstrate its effectiveness using Ethereum and Binance Smart Chain blockchain data. We show that with FIRST, the probability of frontrunning is approximately 0.00004 (or 0.004%) on Ethereum and 0% on Binance Smart Chain, making it effectively near zero.",
+    "citation_count": 0,
+    "reference_count": 18,
+    "url": "https://dblp.org/rec/conf/asiaccs/SaribozPVM25",
+    "dblp_key": "conf/asiaccs/SaribozPVM25",
+    "source_id": "https://openalex.org/W4413176464"
+  },
+  {
+    "title": "Okapi: Efficiently Safeguarding Speculative Data Accesses in Sandboxed Environments.",
+    "authors": [
+      "Philipp Schmitz",
+      "Tobias Jauch",
+      "Alex Wezel",
+      "Mohammad Rahmani Fadiheh",
+      "Thore Tiemann",
+      "Jonah Heller",
+      "Thomas Eisenbarth 0001",
+      "Dominik Stoffel",
+      "Wolfgang Kunz"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2025,
+    "abstract": "This paper introduces Okapi, a new hardware/software cross-layer architecture designed to mitigate Transient Execution Side Channel attacks, including Spectre variants, in modern computing systems. Okapi provides a hardware basis for secure speculation in sandboxed environments and can replace expensive speculation barriers in software. At its core, it allows for speculative data accesses to a memory page only after the page has been accessed non-speculatively by the current trust domain. The granularity of the trust domains can be controlled in software to achieve different security and performance trade-offs. For environments with less stringent security needs, the features can be deactivated to remove all performance overhead. Without relying on any software modification, the Okapi hardware features provide full protection against TES breakout attacks, e.g., by Spectre-PHT or Spectre-BTB, at a thread-level granularity. This incurs an average performance overhead of only 3.17% for the SPEC CPU2017 benchmark suite. Okapi introduces the OkapiReset instruction for additional software-level security support. This instruction allows for fine-grained sandboxing with any custom size, resulting in 2.34% performance overhead in our WebAssembly runtime experiment. On top, Okapi provides the possibility to eliminate poisoning attacks. For the highest level of security, the OkapiLoad instruction prevents confidential data from being added to the trust domain after a sequential access, thereby enforcing weak speculative non-interference. In addition, we present a hardware extension that limits the exploitable code space for Spectre gadgets to well-defined sections of the program. Therefore, by ensuring the absence of gadgets in these sections, developers can tailor their software towards achieving beneficial trade-offs between the size of a trust domain and performance.",
+    "citation_count": 0,
+    "reference_count": 0,
+    "url": "https://dblp.org/rec/conf/asiaccs/SchmitzJWFTH0SK25",
+    "dblp_key": "conf/asiaccs/SchmitzJWFTH0SK25",
+    "source_id": "https://openalex.org/W4389768626"
+  },
+  {
+    "title": "Learning to Identify Conflicts in RPKI.",
+    "authors": [
+      "Haya Schulmann",
+      "Shujie Zhao"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2025,
+    "abstract": "The long history of misconfigurations and errors in RPKI indicates that they cannot be easily avoided and will most probably persist also in the future. These errors create conflicts between BGP announcements and their covering ROAs, causing the RPKI validation to result in status invalid. Networks that enforce RPKI filtering with Route Origin Validation (ROV) would block such conflicting BGP announcements and as a result lose traffic from the corresponding origins. Since the business incentives of networks are tightly coupled with the traffic they relay, filtering legitimate traffic leads to a loss of revenue, reducing the motivation to filter invalid announcements with ROV.   In this work, we introduce a new mechanism, LOV, designed for whitelisting benign conflicts on an Internet scale. The resulting whitelist is made available to RPKI supporting ASes to avoid filtering RPKI-invalid but benign routes. Saving legitimate traffic resolves one main obstacle towards RPKI deployment. We measure live BGP updates using LOV during a period of half a year and whitelist 52,846 routes with benign origin errors.",
+    "citation_count": 0,
+    "reference_count": 36,
+    "url": "https://dblp.org/rec/conf/asiaccs/SchulmannZ25",
+    "dblp_key": "conf/asiaccs/SchulmannZ25",
+    "source_id": "https://openalex.org/W4413175599"
+  },
+  {
+    "title": "Enhancing Binary Code Similarity Analysis for Software Updates: A Contextual Diffing Framework.",
+    "authors": [
+      "August See",
+      "Moritz Mönnich",
+      "Mathias Fischer 0001"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2025,
+    "abstract": "Software analysis and reverse engineering are essential for identifying vulnerabilities, analyzing malware, and modifying software. Rediscovering function locations across versions is critical in security applications such as vulnerability tracking, malware analysis, and maintaining instrumentations. Software updates disrupt these workflows by changing function layouts, requiring re-identification in updated binaries. Binary Code Similarity Analysis (BCSA) can help, but most existing approaches are designed and evaluated for cross-optimization (XO), cross-compiler (XC), cross-architecture (XA), or cross-binary (XB) scenarios, not the cross-version (XV) setting. XV enables assumptions such as the stability of a function’s role and surrounding call graph, which are often invalidated by transformations like inlining or splitting in other settings. We explore BCSA for function rediscovery across software updates (XV). Our method incorporates version-specific call graphs and recursive neighborhood matching to improve accuracy. While neighborhood-based strategies are common, we generalize them through recursive application and contextual integration. Applied as a meta-algorithm, our approach refines both structural and embedding-based techniques. We also introduce an evaluation framework tailored to rediscovery, measuring effectiveness beyond accuracy or recall@1. Our metrics capture differences across function properties like size, call graph complexity, and uniqueness. The approach improves the accuracy of existing BCSA tools (e.g., Asm2Vec, SAFE) by up to 38.66% in XV settings, reaching 90.02% overall. Significant gains are seen for functions with limited call graph context (up to 78%) and for uniquely identifiable functions (up to 352%).",
+    "citation_count": 0,
+    "reference_count": 26,
+    "url": "https://dblp.org/rec/conf/asiaccs/SeeM025",
+    "dblp_key": "conf/asiaccs/SeeM025",
+    "source_id": "https://openalex.org/W4413175879"
+  },
+  {
+    "title": "A Quantum-Secure Framework for IoD: Strengthening Authentication and Key-Establishment.",
+    "authors": [
+      "Salman Shamshad",
+      "Sana Belguith",
+      "Alma Oracevic"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2025,
+    "abstract": null,
+    "citation_count": 0,
+    "reference_count": 36,
+    "url": "https://dblp.org/rec/conf/asiaccs/ShamshadBO25",
+    "dblp_key": "conf/asiaccs/ShamshadBO25",
+    "source_id": "https://openalex.org/W4413178142"
+  },
+  {
+    "title": "SoK: The Privacy Paradox of Large Language Models: Advancements, Privacy Risks, and Mitigation.",
+    "authors": [
+      "Yashothara Shanmugarasa",
+      "Ming Ding 0001",
+      "Mahawaga Arachchige Pathum Chamikara",
+      "Thierry Rakotoarivelo"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2025,
+    "abstract": "Large language models (LLMs) are sophisticated artificial intelligence systems that enable machines to generate human-like text with remarkable precision. While LLMs offer significant technological progress, their development using vast amounts of user data scraped from the web and collected from extensive user interactions poses risks of sensitive information leakage. Most existing surveys focus on the privacy implications of the training data but tend to overlook privacy risks from user interactions and advanced LLM capabilities. This paper aims to fill that gap by providing a comprehensive analysis of privacy in LLMs, categorizing the challenges into four main areas: (i) privacy issues in LLM training data, (ii) privacy challenges associated with user prompts, (iii) privacy vulnerabilities in LLM-generated outputs, and (iv) privacy challenges involving LLM agents. We evaluate the effectiveness and limitations of existing mitigation mechanisms targeting these proposed privacy challenges and identify areas for further research.",
+    "citation_count": 2,
+    "reference_count": 40,
+    "url": "https://dblp.org/rec/conf/asiaccs/Shanmugarasa0CR25",
+    "dblp_key": "conf/asiaccs/Shanmugarasa0CR25",
+    "source_id": "https://openalex.org/W4413176572"
+  },
+  {
+    "title": "PentestAgent: Incorporating LLM Agents to Automated Penetration Testing.",
+    "authors": [
+      "Xiangmin Shen",
+      "Lingzhi Wang 0002",
+      "Zhenyuan Li",
+      "Yan Chen 0004",
+      "Wencheng Zhao",
+      "Dawei Sun",
+      "Jiashui Wang",
+      "Wei Ruan"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2025,
+    "abstract": "Penetration testing is a critical technique for identifying security vulnerabilities, traditionally performed manually by skilled security specialists. This complex process involves gathering information about the target system, identifying entry points, exploiting the system, and reporting findings. Despite its effectiveness, manual penetration testing is time-consuming and expensive, often requiring significant expertise and resources that many organizations cannot afford. While automated penetration testing methods have been proposed, they often fall short in real-world applications due to limitations in flexibility, adaptability, and implementation.   Recent advancements in large language models (LLMs) offer new opportunities for enhancing penetration testing through increased intelligence and automation. However, current LLM-based approaches still face significant challenges, including limited penetration testing knowledge and a lack of comprehensive automation capabilities. To address these gaps, we propose PentestAgent, a novel LLM-based automated penetration testing framework that leverages the power of LLMs and various LLM-based techniques like Retrieval Augmented Generation (RAG) to enhance penetration testing knowledge and automate various tasks. Our framework leverages multi-agent collaboration to automate intelligence gathering, vulnerability analysis, and exploitation stages, reducing manual intervention. We evaluate PentestAgent using a comprehensive benchmark, demonstrating superior performance in task completion and overall efficiency. This work significantly advances the practical applicability of automated penetration testing systems.",
+    "citation_count": 5,
+    "reference_count": 13,
+    "url": "https://dblp.org/rec/conf/asiaccs/Shen0LCZSWR25",
+    "dblp_key": "conf/asiaccs/Shen0LCZSWR25",
+    "source_id": "https://openalex.org/W4413176392"
+  },
+  {
+    "title": "An Efficient Circuit Synthesis Framework for TFHE via Convex Sub-graph Optimization.",
+    "authors": [
+      "Animesh Singh",
+      "Ayantika Chatterjee",
+      "Anupam Chattopadhyay",
+      "Debdeep Mukhopadhyay"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2025,
+    "abstract": null,
+    "citation_count": 0,
+    "reference_count": 26,
+    "url": "https://dblp.org/rec/conf/asiaccs/SinghCCM25",
+    "dblp_key": "conf/asiaccs/SinghCCM25",
+    "source_id": "https://openalex.org/W4413176125"
+  },
+  {
+    "title": "An Empirical Study of C Decompilers: Performance Metrics and Error Taxonomy.",
+    "authors": [
+      "Melih Sirlanci",
+      "Carter Yagemann",
+      "Zhiqiang Lin 0001"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2025,
+    "abstract": null,
+    "citation_count": 0,
+    "reference_count": 23,
+    "url": "https://dblp.org/rec/conf/asiaccs/SirlanciY025",
+    "dblp_key": "conf/asiaccs/SirlanciY025",
+    "source_id": "https://openalex.org/W4413177694"
+  },
+  {
+    "title": "Protocols and Formal Models for Delegated Authorisation with Server-Side Secrecy.",
+    "authors": [
+      "Jean Snyman",
+      "Chris Culnane",
+      "Ioana Boureanu",
+      "Gerault David"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2025,
+    "abstract": null,
+    "citation_count": 0,
+    "reference_count": 27,
+    "url": "https://dblp.org/rec/conf/asiaccs/SnymanCBD25",
+    "dblp_key": "conf/asiaccs/SnymanCBD25",
+    "source_id": "https://openalex.org/W4413177753"
+  },
+  {
+    "title": "ProwseBox: A Framework for the Analysis of the Web at Scale.",
+    "authors": [
+      "Dolière Francis Somé"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2025,
+    "abstract": null,
+    "citation_count": 0,
+    "reference_count": 16,
+    "url": "https://dblp.org/rec/conf/asiaccs/Some25",
+    "dblp_key": "conf/asiaccs/Some25",
+    "source_id": "https://openalex.org/W4413176118"
+  },
+  {
+    "title": "Sigy: Breaking Intel SGX Enclaves with Malicious Exceptions &amp; Signals.",
+    "authors": [
+      "Supraja Sridhara",
+      "Andrin Bertschi",
+      "Benedict Schlüter",
+      "Shweta Shinde"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2025,
+    "abstract": "User programs recover from hardware exceptions and respond to signals by executing custom handlers that they register specifically for such events. We present SIGY attack, which abuses this programming model on Intel SGX to break the confidentiality and integrity guarantees of enclaves. SIGY uses the untrusted OS to deliver fake hardware events and injects fake signals in an enclave at any point. Such unintended execution of benign program-defined handlers in an enclave corrupts its state and violates execution integrity. 7 runtimes and library OSes (OpenEnclave, Gramine, Scone, Asylo, Teaclave, Occlum, EnclaveOS) are vulnerable to SIGY. 8 languages supported in Intel SGX have programming constructs that are vulnerable to SIGY. We use SIGY to demonstrate 4 proof of concept exploits on webservers (Nginx, Node.js) to leak secrets and data analytics workloads in different languages (C and Java) to break execution integrity.",
+    "citation_count": 2,
+    "reference_count": 24,
+    "url": "https://dblp.org/rec/conf/asiaccs/SridharaBSS25",
+    "dblp_key": "conf/asiaccs/SridharaBSS25",
+    "source_id": "https://openalex.org/W4413175475"
+  },
+  {
+    "title": "When Better Features Mean Greater Risks: The Performance-Privacy Trade-Off in Contrastive Learning.",
+    "authors": [
+      "Ruining Sun",
+      "Hongsheng Hu",
+      "Wei Luo 0001",
+      "Zhaoxi Zhang",
+      "Yanjun Zhang",
+      "Haizhuan Yuan",
+      "Leo Yu Zhang"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2025,
+    "abstract": "With the rapid advancement of deep learning technology, pre-trained encoder models have demonstrated exceptional feature extraction capabilities, playing a pivotal role in the research and application of deep learning. However, their widespread use has raised significant concerns about the risk of training data privacy leakage. This paper systematically investigates the privacy threats posed by membership inference attacks (MIAs) targeting encoder models, focusing on contrastive learning frameworks. Through experimental analysis, we reveal the significant impact of model architecture complexity on membership privacy leakage: As more advanced encoder frameworks improve feature-extraction performance, they simultaneously exacerbate privacy-leakage risks. Furthermore, this paper proposes a novel membership inference attack method based on the p-norm of feature vectors, termed the Embedding Lp-Norm Likelihood Attack (LpLA). This method infers membership status, by leveraging the statistical distribution characteristics of the p-norm of feature vectors. Experimental results across multiple datasets and model architectures demonstrate that LpLA outperforms existing methods in attack performance and robustness, particularly under limited attack knowledge and query volumes. This study not only uncovers the potential risks of privacy leakage in contrastive learning frameworks, but also provides a practical basis for privacy protection research in encoder models. We hope that this work will draw greater attention to the privacy risks associated with self-supervised learning models and shed light on the importance of a balance between model utility and training data privacy. Our code is publicly available at: https://github.com/SeroneySun/LpLA_code.",
+    "citation_count": 0,
+    "reference_count": 33,
+    "url": "https://dblp.org/rec/conf/asiaccs/SunHLZZYZ25",
+    "dblp_key": "conf/asiaccs/SunHLZZYZ25",
+    "source_id": "https://openalex.org/W4413176732"
+  },
+  {
+    "title": "Ring-LWR based Commitments and ZK-PoKs with Application to Verifiable Quantum-Safe Searchable Symmetric Encryption.",
+    "authors": [
+      "Debadrita Talapatra",
+      "Nimish Mishra",
+      "Debdeep Mukhopadhyay"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2025,
+    "abstract": "Prior research on ensuring trust in delegated computation through lattice-based zero-knowledge proofs mostly rely on Learning-With-Errors (LWE) assumption. In this work, we propose a zero-knowledge proof of knowledge using the Ring Learning with Rounding (RLWR) assumption for an interesting and useful class of statements: linear relations on polynomials. We begin by proposing, to the best of our knowledge, the first efficient commitment scheme in literature based on the hardness of RLWR assumption. We establish two properties on RLWR that aid in the construction of our commitments: ① closure under addition with double rounding, and ② closure under multiplication with a short polynomial. Building upon our RLWR commitment scheme, we consequently design a RLWR based Σ2 protocol for proving knowledge of a single committed message under linear relations with public polynomials. As an use-case of our proposed Σ2 protocol, we showcase a construction of a quantum-safe Searchable Symmetric Encryption (SSE) scheme by plugging a prior LWR based SSE scheme from (EuroS&P 2023) with our Σ2 protocol. Concretely, using our Σ2 protocol for linear relations, we prove the correctness of an encrypted search result in a zero-knowledge manner. We implement our verifiable SSE framework and show that the overhead of an extra verification round is negligible (0.0023 seconds) and retains the asymptotic query execution time complexity of the original SSE scheme. Our work establishes results on zero-knowledge proof systems that can be of independent interest. By shifting the setting from RLWE to RLWR, we gain significant ① efficiency improvements in terms of communication complexity by O(M) (since some prior works on RLWE require rejection sampling by a factor of M), as well as ② very short proof size (8.4 KB) and tighter parameters (since RLWR does not explicitly manipulate error polynomials like RLWE).",
+    "citation_count": 0,
+    "reference_count": 60,
+    "url": "https://dblp.org/rec/conf/asiaccs/TalapatraMM25",
+    "dblp_key": "conf/asiaccs/TalapatraMM25",
+    "source_id": "https://openalex.org/W4413176136"
+  },
+  {
+    "title": "Adversarial Fog: Exploiting the Vulnerabilities of LiDAR Point Cloud Preprocessing Filters.",
+    "authors": [
+      "Yuna Tanaka",
+      "Kazuki Nomoto",
+      "Ryunosuke Kobayashi",
+      "Go Tsuruoka",
+      "Tatsuya Mori"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2025,
+    "abstract": null,
+    "citation_count": 0,
+    "reference_count": 27,
+    "url": "https://dblp.org/rec/conf/asiaccs/TanakaNKTM25",
+    "dblp_key": "conf/asiaccs/TanakaNKTM25",
+    "source_id": "https://openalex.org/W4413178022"
+  },
+  {
+    "title": "Ruling the Unruly: Designing Effective, Low-Noise Network Intrusion Detection Rules for Security Operations Centers.",
+    "authors": [
+      "Koen T. W. Teuwen",
+      "Tom Mulders",
+      "Emmanuele Zambon",
+      "Luca Allodi"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2025,
+    "abstract": "Many Security Operations Centers (SOCs) today still heavily rely on signature-based Network Intrusion Detection Systems (NIDS) such as Suricata. The specificity of intrusion detection rules and the coverage provided by rulesets are common concerns within the professional community surrounding SOCs, which impact the effectiveness of automated alert post-processing approaches. We postulate a better understanding of factors influencing the quality of rules can help address current SOC issues. In this paper, we characterize the rules in use at a collaborating commercial (managed) SOC serving customers in sectors including education and IT management. During this process, we discover six relevant design principles, which we consolidate through interviews with experienced rule designers at the SOC.We then validate our design principles by quantitatively assessing their effect on rule specificity. We find that several of these design considerations significantly impact unnecessary workload caused by rules. For instance, rules that leverage proxies for detection, and rules that do not employ alert throttling or do not distinguish (un)successful malicious actions, cause significantly more workload for SOC analysts. Moreover, rules that match a generalized characteristic to detect malicious behavior, which is believed to increase coverage, also significantly increase workload, suggesting a tradeoff must be struck between rule specificity and coverage. We show that these design principles can be applied successfully at a SOC to reduce workload whilst maintaining coverage despite the prevalence of violations of the principles.",
+    "citation_count": 1,
+    "reference_count": 19,
+    "url": "https://dblp.org/rec/conf/asiaccs/TeuwenMZA25",
+    "dblp_key": "conf/asiaccs/TeuwenMZA25",
+    "source_id": "https://openalex.org/W4406603635"
+  },
+  {
+    "title": "POSTER: SuriCap - A Measurement Platform to Study and Evaluate Intrusion Detection Rule Engineering.",
+    "authors": [
+      "Koen T. W. Teuwen",
+      "Emmanuele Zambon",
+      "Luca Allodi"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2025,
+    "abstract": null,
+    "citation_count": 0,
+    "reference_count": 2,
+    "url": "https://dblp.org/rec/conf/asiaccs/TeuwenZA25",
+    "dblp_key": "conf/asiaccs/TeuwenZA25",
+    "source_id": "https://openalex.org/W4413176121"
+  },
+  {
+    "title": "LogaLookup: Efficient Multivariate Lookup Argument for Accelerated Proof Generation.",
+    "authors": [
+      "Dien H. A. Tran",
+      "Tam N. B. Nguyen",
+      "Nhien-An Le-Khac",
+      "Thuc D. Nguyen"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2025,
+    "abstract": null,
+    "citation_count": 0,
+    "reference_count": 33,
+    "url": "https://dblp.org/rec/conf/asiaccs/TranNLN25",
+    "dblp_key": "conf/asiaccs/TranNLN25",
+    "source_id": "https://openalex.org/W4413175112"
+  },
+  {
+    "title": "FP-Rowhammer: DRAM-Based Device Fingerprinting.",
+    "authors": [
+      "Hari Venugopalan",
+      "Kaustav Goswami 0002",
+      "Zainul ul Abi Din",
+      "Jason Lowe-Power",
+      "Samuel T. King",
+      "Zubair Shafiq"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2025,
+    "abstract": "Device fingerprinting leverages attributes that capture heterogeneity in hardware and software configurations to extract unique and stable fingerprints. Fingerprinting countermeasures attempt to either present a uniform fingerprint across different devices through normalization or present different fingerprints for the same device each time through obfuscation. We present FP-Rowhammer, a Rowhammer-based device fingerprinting approach that can build unique and stable fingerprints even across devices with normalized or obfuscated hardware and software configurations. To this end, FP-Rowhammer leverages the DRAM manufacturing process variation that gives rise to unique distributions of Rowhammer-induced bit flips across different DRAM modules. Our evaluation on a test bed of 98 DRAM modules shows that FP-Rowhammer achieves 99.91% fingerprinting accuracy. FP-Rowhammer's fingerprints are also stable, with no degradation in fingerprinting accuracy over a period of ten days. We also demonstrate that FP-Rowhammer is efficient, taking less than five seconds to extract a fingerprint. FP-Rowhammer is the first Rowhammer fingerprinting approach that is able to extract unique and stable fingerprints efficiently and at scale.",
+    "citation_count": 0,
+    "reference_count": 0,
+    "url": "https://dblp.org/rec/conf/asiaccs/Venugopalan0DLK25",
+    "dblp_key": "conf/asiaccs/Venugopalan0DLK25",
+    "source_id": "https://openalex.org/W4383175739"
+  },
+  {
+    "title": "OblivCDN: A Practical Privacy-preserving CDN with Oblivious Content Access.",
+    "authors": [
+      "Viet Vo",
+      "Shangqi Lai",
+      "Xingliang Yuan",
+      "Surya Nepal",
+      "Qi Li 0002"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2025,
+    "abstract": "Content providers increasingly utilise Content Delivery Networks (CDNs) to enhance users' content download experience. However, this deployment scenario raises significant security concerns regarding content confidentiality and user privacy due to the involvement of third-party providers. Prior proposals using private information retrieval (PIR) and oblivious RAM (ORAM) have proven impractical due to high computation and communication costs, as well as integration challenges within distributed CDN architectures. In response, we present \\textsf{OblivCDN}, a practical privacy-preserving system meticulously designed for seamless integration with the existing real-world Internet-CDN infrastructure. Our design strategically adapts Range ORAM primitives to optimise memory and disk seeks when accessing contiguous blocks of CDN content, both at the origin and edge servers, while preserving both content confidentiality and user access pattern hiding features. Also, we carefully customise several oblivious building blocks that integrate the distributed trust model into the ORAM client, thereby eliminating the computational bottleneck in the origin server and reducing communication costs between the origin server and edge servers. Moreover, the newly-designed ORAM client also eliminates the need for trusted hardware on edge servers, and thus significantly ameliorates the compatibility towards networks with massive legacy devices.In real-world streaming evaluations, OblivCDN} demonstrates remarkable performance, downloading a $256$ MB video in just $5.6$ seconds. This achievement represents a speedup of $90\\times$ compared to a strawman approach (direct ORAM adoption) and a $366\\times$ improvement over the prior art, OblivP2P.",
+    "citation_count": 1,
+    "reference_count": 41,
+    "url": "https://dblp.org/rec/conf/asiaccs/VoLYNL25",
+    "dblp_key": "conf/asiaccs/VoLYNL25",
+    "source_id": "https://openalex.org/W4413178007"
+  },
+  {
+    "title": "Poster: Typosquatting Attacks on the Rust Ecosystem.",
+    "authors": [
+      "Minh-Khanh Vu",
+      "Thanh-Cong Nguyen",
+      "Duc-Ly Vu"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2025,
+    "abstract": null,
+    "citation_count": null,
+    "reference_count": null,
+    "url": "https://dblp.org/rec/conf/asiaccs/VuNV25",
+    "dblp_key": "conf/asiaccs/VuNV25",
+    "source_id": null
+  },
+  {
+    "title": "ClearMask: Noise-Free and Naturalness-Preserving Protection Against Voice Deepfake Attacks.",
+    "authors": [
+      "Yuanda Wang",
+      "Bocheng Chen",
+      "Hanqing Guo",
+      "Guangjing Wang 0001",
+      "Weikang Ding",
+      "Qiben Yan"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2025,
+    "abstract": "Voice deepfake attacks, which artificially impersonate human speech for malicious purposes, have emerged as a severe threat. Existing defenses typically inject noise into human speech to compromise voice encoders in speech synthesis models. However, these methods degrade audio quality and require prior knowledge of the attack approaches, limiting their effectiveness in diverse scenarios. Moreover, real-time audios, such as speech in virtual meetings and voice messages, are still exposed to voice deepfake threats. To overcome these limitations, we propose ClearMask, a noise-free defense mechanism against voice deepfake attacks. Unlike traditional approaches, ClearMask modifies the audio mel-spectrogram by selectively filtering certain frequencies, inducing a transferable voice feature loss without injecting noise. We then apply audio style transfer to further deceive voice decoders while preserving perceived sound quality. Finally, optimized reverberation is introduced to disrupt the output of voice generation models without affecting the naturalness of the speech. Additionally, we develop LiveMask to protect streaming speech in real-time through a universal frequency filter and reverberation generator. Our experimental results show that ClearMask and LiveMask effectively prevent voice deepfake attacks from deceiving speaker verification models and human listeners, even for unseen voice synthesis models and black-box API services. Furthermore, ClearMask demonstrates resilience against adaptive attackers who attempt to recover the original audio signal from the protected speech samples.",
+    "citation_count": 0,
+    "reference_count": 23,
+    "url": "https://dblp.org/rec/conf/asiaccs/WangCG0DY25",
+    "dblp_key": "conf/asiaccs/WangCG0DY25",
+    "source_id": "https://openalex.org/W4413176544"
+  },
+  {
+    "title": "BranchGauge: Modeling and Quantifying Side-Channel Leakage in Randomization-Based Secure Branch Predictors.",
+    "authors": [
+      "Quancheng Wang",
+      "Ming Tang 0002",
+      "Ke Xu",
+      "Han Wang 0057"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2025,
+    "abstract": "The inherent sharing characteristic of branch predictors makes modern processors vulnerable to microarchitectural side-channel attacks. Among proposed mitigations, randomization-based countermeasures stand out for their practical potential, offering lower performance overhead compared to flushing or partitioning techniques. However, these randomized approaches often fail to guarantee absolute security, and existing evaluation methods cannot accurately quantify leakage in such designs. This underscores the urgent need for a formal methodology to systematically model and measure side-channel leakage in randomization-based secure branch predictors. In this paper, we propose a leakage quantification framework to measure side-channel leakage in these randomized countermeasures at the microarchitecture level. Our methodology incorporates detailed modeling of the operational principles and indexing/content randomization mechanisms of PHT and BTB components, effectively capturing timing characteristics relevant to microarchitectural attacks. Based on this, we define attack strategies and secret spaces that breach security boundaries, facilitating seamless integration of microarchitectural attacks with branch predictor models. We then present leakage evaluation metrics and assess the security of existing randomized defenses under various attack strategies and secret spaces, demonstrating our framework’s effectiveness in quantifying side-channel leakage. In particular, Our experiments reveal that reuse-based PHT attacks, prune-based BTB attacks and occupancy-based attacks remain significant threats, highlighting the need for stronger countermeasures.",
+    "citation_count": 0,
+    "reference_count": 39,
+    "url": "https://dblp.org/rec/conf/asiaccs/WangTXW25",
+    "dblp_key": "conf/asiaccs/WangTXW25",
+    "source_id": "https://openalex.org/W4413176374"
+  },
+  {
+    "title": "A Novel Asymmetric BSGS Polynomial Evaluation Algorithm under Homomorphic Encryption.",
+    "authors": [
+      "Qingfeng Wang",
+      "Li-Ping Wang"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2025,
+    "abstract": null,
+    "citation_count": 0,
+    "reference_count": 40,
+    "url": "https://dblp.org/rec/conf/asiaccs/WangW25",
+    "dblp_key": "conf/asiaccs/WangW25",
+    "source_id": "https://openalex.org/W4413178196"
+  },
+  {
+    "title": "Pace: Privacy-Preserving and Atomic Cross-chain Swaps for Cryptocurrency Exchanges.",
+    "authors": [
+      "Jianhuan Wang",
+      "Bin Xiao 0001"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2025,
+    "abstract": null,
+    "citation_count": 0,
+    "reference_count": 30,
+    "url": "https://dblp.org/rec/conf/asiaccs/WangX25",
+    "dblp_key": "conf/asiaccs/WangX25",
+    "source_id": "https://openalex.org/W4413177919"
+  },
+  {
+    "title": "Unraveling Elevated Data Leakage in Split Learning for Fine-Tuning Stable Diffusion Models.",
+    "authors": [
+      "Fei Wang 0075",
+      "Yan Zhu",
+      "Baochun Li"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2025,
+    "abstract": null,
+    "citation_count": 0,
+    "reference_count": 26,
+    "url": "https://dblp.org/rec/conf/asiaccs/WangZL25",
+    "dblp_key": "conf/asiaccs/WangZL25",
+    "source_id": "https://openalex.org/W4413178184"
+  },
+  {
+    "title": "Perses: Unlocking Privilege Escalation for Small LLMs via Extensible Heterogeneity.",
+    "authors": [
+      "Dominik M. Weber",
+      "Ioannis Tzachristas",
+      "Aifen Sui"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2025,
+    "abstract": null,
+    "citation_count": 0,
+    "reference_count": 27,
+    "url": "https://dblp.org/rec/conf/asiaccs/WeberTS25",
+    "dblp_key": "conf/asiaccs/WeberTS25",
+    "source_id": "https://openalex.org/W4413176406"
+  },
+  {
+    "title": "The Impact of Emerging Phishing Threats: Assessing Quishing and LLM-generated Phishing Emails against Organizations.",
+    "authors": [
+      "Marie Weinz",
+      "Nicola Zannone",
+      "Luca Allodi",
+      "Giovanni Apruzzese"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2025,
+    "abstract": "Modern organizations are persistently targeted by phishing emails. Despite advances in detection systems and widespread employee training, attackers continue to innovate, posing ongoing threats. Two emerging vectors stand out in the current landscape: QR-code baits and LLM-enabled pretexting. Yet, little is known about the effectiveness of current defenses against these attacks, particularly when it comes to real-world impact on employees. This gap leaves uncertainty around to what extent related countermeasures are justified or needed. Our work addresses this issue. We conduct three phishing simulations across organizations of varying sizes -- from small-medium businesses to a multinational enterprise. In total, we send over 71k emails targeting employees, including: a \"traditional\" phishing email with a click-through button; a nearly-identical \"quishing\" email with a QR code instead; and a phishing email written with the assistance of an LLM and open-source intelligence. Our results show that quishing emails have the same effectiveness as traditional phishing emails at luring users to the landing webpage -- which is worrying, given that quishing emails are much harder to identify even by operational detectors. We also find that LLMs can be very good \"social engineers\": in one company, over 30% of the emails opened led to visiting the landing webpage -- a rate exceeding some prior benchmarks. Finally, we complement our study by conducting a survey across the organizations' employees, measuring their \"perceived\" phishing awareness. Our findings suggest a correlation between higher self-reported awareness and organizational resilience to phishing attempts.",
+    "citation_count": 0,
+    "reference_count": 69,
+    "url": "https://dblp.org/rec/conf/asiaccs/WeinzZAA25",
+    "dblp_key": "conf/asiaccs/WeinzZAA25",
+    "source_id": "https://openalex.org/W4413176630"
+  },
+  {
+    "title": "OMAD5G: Online Malware Detection in 5G Networks using Compound Paths.",
+    "authors": [
+      "Zhixin Wen",
+      "Guanhua Yan"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2025,
+    "abstract": null,
+    "citation_count": 0,
+    "reference_count": 59,
+    "url": "https://dblp.org/rec/conf/asiaccs/WenY25",
+    "dblp_key": "conf/asiaccs/WenY25",
+    "source_id": "https://openalex.org/W4413178108"
+  },
+  {
+    "title": "Evaluating Disassembly Errors With Only Binaries.",
+    "authors": [
+      "Lambang Akbar Wijayadi",
+      "Yuancheng Jiang",
+      "Roland H. C. Yap",
+      "Zhenkai Liang",
+      "Zhuohao Liu"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2025,
+    "abstract": "Disassemblers are crucial in the analysis and modification of binaries. Existing works showing disassembler errors largely rely on practical implementation without specific guarantees and assume source code and compiler toolchains to evaluate ground truth. However, the assumption of source code is contrary to typical binary scenarios where only the binary is available. In this work, we investigate an approach with minimal assumptions and a sound approach to disassembly error evaluation that does not require source code. Any source code does not address the fundamental problem of binary disassembly and fails when only the binary exists. As far as we know, this is the first work to evaluate disassembly errors using only the binary. We propose TraceBin, which uses dynamic execution to find disassembly errors. TraceBin targets the use case where the disassembly is used in an automated fashion for security tasks on a target binary, such as static binary instrumentation, binary hardening, automated code repair, and so on, which may be affected by disassembly errors. Discovering disassembly errors in the target binary aids in reducing problems caused by such errors. Furthermore, we are not aware of existing approaches that can evaluate errors given only a target binary, as they require source code. Our evaluation shows TraceBin finds: (i) errors consistent with existing studies even without source; (ii) disassembly errors due to control flow; (iii) new interesting errors; (iv) errors in non-C/C++ binaries; (v) errors in closed-source binaries; and (vi) show that disassembly errors can have significant security implications. Overall, our experimental results show that TraceBin finds many errors in existing popular disassemblers. It is also helpful in automated security tasks on (closed source) binaries relying on disassemblers.",
+    "citation_count": 0,
+    "reference_count": 0,
+    "url": "https://dblp.org/rec/conf/asiaccs/WijayadiJYLL25",
+    "dblp_key": "conf/asiaccs/WijayadiJYLL25",
+    "source_id": "https://openalex.org/W4415343259"
+  },
+  {
+    "title": "Efficient Private Set Intersection by Utilizing Oblivious Transfer Extension.",
+    "authors": [
+      "Mingli Wu",
+      "Tsz Hon Yuen",
+      "Siu-Ming Yiu"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2025,
+    "abstract": "The private set intersection (PSI) allows two parties to know the intersection of their sets securely without revealing anything else. Many PSI protocols have been proposed, and many efficient schemes are based on oblivious pseudorandom functions (OPRF) built from oblivious transfer (OT). In this paper, we first propose a computationally friendly OPRF protocol by combining an OT extension (Crypto’03) with an oblivious key-value store (OKVS). By directly utilizing our OPRF protocol, we propose our PSI protocol. Compared with the most computationally friendly OT-based PSI protocol KKRT (CCS’16), our protocol can overcome the uncertainty issue of cuckoo hashing and runs \\(22.3\\%\\sim 41.2\\%\\) faster. Compared with spot-low (Crypto’19) that has the lowest communication costs among the OT-based protocols, our protocol can run 69.5 × ∼124.6 × faster than it with only \\(22\\%\\sim 23\\%\\) more communication cost. CM (Crypto’20) aimed to balance computation and communication costs in their protocol such that it can run the fastest when the bandwidth is not high and not low. Our protocol outperforms CM in all settings with \\(5.8\\%\\sim 6.4\\%\\) less communication costs. By utilizing our OPRF protocol, we also propose a more functional oblivious programmable pseudorandom function (OPPRF) protocol, allowing a party to securely obtain the payloads that correspond to common items. Our OPPRF protocol can be 1.7 × ∼2.4 × as fast as the state-of-the-art OPPRF protocol (Eurocrypt’21) in the LAN setting.",
+    "citation_count": 0,
+    "reference_count": 28,
+    "url": "https://dblp.org/rec/conf/asiaccs/WuYY25",
+    "dblp_key": "conf/asiaccs/WuYY25",
+    "source_id": "https://openalex.org/W4413176162"
+  },
+  {
+    "title": "Fair Server-Aided Multiparty Private Set Intersection from OKVS and OPRF.",
+    "authors": [
+      "Fei Xiao",
+      "Chunyang Lv",
+      "Jianfeng Wang 0001"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2025,
+    "abstract": null,
+    "citation_count": 0,
+    "reference_count": 19,
+    "url": "https://dblp.org/rec/conf/asiaccs/XiaoL025",
+    "dblp_key": "conf/asiaccs/XiaoL025",
+    "source_id": "https://openalex.org/W4413178165"
+  },
+  {
+    "title": "EXAM: Exploiting Exclusive System-Level Cache in Apple M-Series SoCs for Enhanced Cache Occupancy Attacks.",
+    "authors": [
+      "Tianhong Xu",
+      "Aidong Adam Ding",
+      "Yunsi Fei"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2025,
+    "abstract": "Cache occupancy attacks exploit the shared nature of cache hierarchies to infer a victim's activities by monitoring overall cache usage, unlike access-driven cache attacks that focus on specific cache lines or sets. There exists some prior work that target the last-level cache (LLC) of Intel processors, which is inclusive of higher-level caches, and L2 caches of ARM systems. In this paper, we target the System-Level Cache (SLC) of Apple M-series SoCs, which is exclusive to higher-level CPU caches. We address the challenges of the exclusiveness and propose a suite of SLC-cache occupancy attacks, the first of its kind, where an adversary can monitor GPU and other CPU cluster activities from their own CPU cluster. We first discover the structure of SLC in Apple M1 SOC and various policies pertaining to access and sharing through reverse engineering. We propose two attacks against websites. One is a coarse-grained fingerprinting attack, recognizing which website is accessed based on their different GPU memory access patterns monitored through the SLC occupancy channel. The other attack is a fine-grained pixel stealing attack, which precisely monitors the GPU memory usage for rendering different pixels, through the SLC occupancy channel. Third, we introduce a novel screen capturing attack which works beyond webpages, with the monitoring granularity of 57 rows of pixels (there are 1600 rows for the screen). This significantly expands the attack surface, allowing the adversary to retrieve any screen display, posing a substantial new threat to system security. Our findings reveal critical vulnerabilities in Apple's M-series SoCs and emphasize the urgent need for effective countermeasures against cache occupancy attacks in heterogeneous computing environments.",
+    "citation_count": 0,
+    "reference_count": 18,
+    "url": "https://dblp.org/rec/conf/asiaccs/XuDF25",
+    "dblp_key": "conf/asiaccs/XuDF25",
+    "source_id": "https://openalex.org/W4413176150"
+  },
+  {
+    "title": "On the Account Security Risks Posed by Password Strength Meters.",
+    "authors": [
+      "Ming Xu 0006",
+      "Weili Han",
+      "Jitao Yu",
+      "Jing Liu",
+      "Xinyi Zhang",
+      "Yun Lin 0001",
+      "Jin Song Dong 0001"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2025,
+    "abstract": "Password strength meters (PSMs) have been widely used by websites to gauge password strength, encouraging users to create stronger passwords. Popular data-driven PSMs, e.g., based on Markov, Probabilistic Context-free Grammar (PCFG) and neural networks, alarm strength based on a model learned from real passwords. Despite their proven effectiveness, the secure utility that arises from the leakage of trained passwords remains largely overlooked. To address this gap, we analyze 11 PSMs and find that 5 data-driven meters are vulnerable to membership inference attacks that expose their trained passwords, and seriously, 3 rule-based meters openly disclose their blocked passwords. We specifically design a PSM privacy leakage evaluation approach, and uncover that a series of general data-driven meters are vulnerable to leaking between 10^4 to 10^5 trained passwords, with the PCFG-based models being more vulnerable than other counterparts; furthermore, we aid in deriving insights that the inherent utility-privacy tradeoff is not as severe as previously thought. To further exploit the risks, we develop novel meter-aware attacks when a clever attacker can filter the used passwords during compromising accounts on websites using the meter, and experimentally show that attackers targeting websites that deployed the popular Zxcvbn meter can compromise an additional 5.84% user accounts within 10 attempts, demonstrating the urgent need for privacy-preserving PSMs that protect the confidentiality of the meter's used passwords. Finally, we sketch some counter-measures to mitigate these threats.",
+    "citation_count": 0,
+    "reference_count": 37,
+    "url": "https://dblp.org/rec/conf/asiaccs/XuHYLZLD25",
+    "dblp_key": "conf/asiaccs/XuHYLZLD25",
+    "source_id": "https://openalex.org/W4413175168"
+  },
+  {
+    "title": "An Empirical Study on Cross-chain Transactions: Costs, Inconsistencies, and Activities.",
+    "authors": [
+      "Kailun Yan",
+      "Bo Lu",
+      "Pranav Agrawal 0002",
+      "Jiasun Li",
+      "Wenrui Diao",
+      "Xiaokuan Zhang"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2025,
+    "abstract": null,
+    "citation_count": 0,
+    "reference_count": 39,
+    "url": "https://dblp.org/rec/conf/asiaccs/YanL0LDZ25",
+    "dblp_key": "conf/asiaccs/YanL0LDZ25",
+    "source_id": "https://openalex.org/W4413177683"
+  },
+  {
+    "title": "Mining Attack with Zero Knowledge in the Blockchain.",
+    "authors": [
+      "Jiaping Yu",
+      "Shang Gao 0006",
+      "Rui Song",
+      "Zhiping Cai",
+      "Bin Xiao 0001"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2025,
+    "abstract": null,
+    "citation_count": 0,
+    "reference_count": 26,
+    "url": "https://dblp.org/rec/conf/asiaccs/Yu0SC025",
+    "dblp_key": "conf/asiaccs/Yu0SC025",
+    "source_id": "https://openalex.org/W4413177849"
+  },
+  {
+    "title": "POSTER: When Models Speak Too Much: Privacy Leakage on Large Language Models.",
+    "authors": [
+      "MingJun Zhang",
+      "Mahrokh Abdollahi",
+      "Thilina Ranbaduge",
+      "Ming Ding 0001"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2025,
+    "abstract": "As large language models (LLMs) become increasingly integrated into various applications, concerns regarding the inadvertent leakage of personally identifiable information (PII) have gained significant attention. This paper analyse the inherent risks associated with fine-tuning on extensive datasets that may contain PII and examine the implications of model outputs. We explore two different privacy attacks on various LLM architectures. Furthermore, we explore mitigation strategies, including data scrubbing and differential privacy in fine-tuning process. Our findings illustrate even with those mitigation techniques these powerful models could still ensuring that user privacy is prioritized without compromising the utility of these powerful models. This work aims to inform researchers and practitioners about the critical balance between leveraging LLM capabilities and safeguarding sensitive information.",
+    "citation_count": 0,
+    "reference_count": 6,
+    "url": "https://dblp.org/rec/conf/asiaccs/ZhangARD25",
+    "dblp_key": "conf/asiaccs/ZhangARD25",
+    "source_id": "https://openalex.org/W4413175953"
+  },
+  {
+    "title": "REFLECTA: Reflection-based Scalable and Semantic Scripting Language Fuzzing.",
+    "authors": [
+      "Chibin Zhang",
+      "Gwangmu Lee",
+      "Qiang Liu 0034",
+      "Mathias Payer"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2025,
+    "abstract": null,
+    "citation_count": 0,
+    "reference_count": 25,
+    "url": "https://dblp.org/rec/conf/asiaccs/ZhangLLP25",
+    "dblp_key": "conf/asiaccs/ZhangLLP25",
+    "source_id": "https://openalex.org/W4413176728"
+  },
+  {
+    "title": "VeRange: Verification-efficient Zero-knowledge Range Arguments with Transparent Setup for Blockchain Applications and More.",
+    "authors": [
+      "Yue Zhou",
+      "Sid Chi-Kin Chau"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2025,
+    "abstract": null,
+    "citation_count": 0,
+    "reference_count": 18,
+    "url": "https://dblp.org/rec/conf/asiaccs/ZhouC25",
+    "dblp_key": "conf/asiaccs/ZhouC25",
+    "source_id": "https://openalex.org/W4413176004"
+  },
+  {
+    "title": "Runtime Stealthy Perception Attacks against DNN-based Adaptive Cruise Control Systems.",
+    "authors": [
+      "Xugui Zhou",
+      "Anqi Chen",
+      "Maxfield Kouzel",
+      "Haotian Ren",
+      "Morgan McCarty",
+      "Cristina Nita-Rotaru",
+      "Homa Alemzadeh"
+    ],
+    "venue": "AsiaCCS",
+    "year": 2025,
+    "abstract": "Adaptive Cruise Control (ACC) is a widely used driver assistance technology for maintaining the desired speed and safe distance to the leading vehicle. This paper evaluates the security of the deep neural network (DNN) based ACC systems under runtime stealthy perception attacks that strategically inject perturbations into camera data to cause forward collisions. We present a context-aware strategy for the selection of the most critical times for triggering the attacks and a novel optimization-based method for the adaptive generation of image perturbations at runtime. We evaluate the effectiveness of the proposed attack using an actual vehicle, a publicly available driving dataset, and a realistic simulation platform with the control software from a production ACC system, a physical-world driving simulator, and interventions by the human driver and safety features such as Advanced Emergency Braking System (AEBS). Experimental results show that the proposed attack achieves 142.9 times higher success rate in causing hazards and 82.6% higher evasion rate than baselines, while being stealthy and robust to real-world factors and dynamic changes in the environment. This study highlights the role of human drivers and basic safety mechanisms in preventing attacks.",
+    "citation_count": 0,
+    "reference_count": 0,
+    "url": "https://dblp.org/rec/conf/asiaccs/ZhouCKRMNA25",
+    "dblp_key": "conf/asiaccs/ZhouCKRMNA25",
+    "source_id": "https://openalex.org/W4384807850"
+  },
+  {
+    "title": "Proceedings of the 20th ACM Asia Conference on Computer and Communications Security, ASIA CCS 2025, Hanoi, Vietnam, August 25-29, 2025",
+    "authors": [],
+    "venue": "AsiaCCS",
+    "year": 2025,
+    "abstract": "The CPace protocol (Internet-Draft:draft-irtf-cfrg-cpace-14) is a password-authenticated key exchange optimized for simplicity. In particular, it involves only two messages exchanged in an arbitrary order. CPace combines a simple and elegant design with privacy guarantees obtained via strict mathematical proofs. In this paper, we go further and analyze its resilience against malicious cryptography implementations. While the clever design of CPace immediately eliminates many kleptographic techniques applicable to many other protocols of this kind, we point to the remaining risks related to kleptographic setups. We show that such attacks can break the security and privacy features of CPace. Thereby, we point to the necessity of very careful certification of the devices running CPace, focusing in particular on critical threats related to random number generators.",
+    "citation_count": 0,
+    "reference_count": 0,
+    "url": "https://dblp.org/rec/conf/asiaccs/2025",
+    "dblp_key": "conf/asiaccs/2025",
+    "source_id": "https://openalex.org/W4413721156"
+  }
+]

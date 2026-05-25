@@ -1,0 +1,243 @@
+[
+  {
+    "title": "White-Box Concealment Attacks Against Anomaly Detectors for Cyber-Physical Systems.",
+    "authors": [
+      "Alessandro Erba 0001",
+      "Nils Ole Tippenhauer"
+    ],
+    "venue": "DIMVA",
+    "year": 2023,
+    "abstract": null,
+    "citation_count": 1,
+    "reference_count": 30,
+    "url": "https://dblp.org/rec/conf/dimva/0001T23",
+    "dblp_key": "conf/dimva/0001T23",
+    "source_id": "https://openalex.org/W4380031347"
+  },
+  {
+    "title": "A Security Analysis of CNC Machines in Industry 4.0.",
+    "authors": [
+      "Marco Balduzzi",
+      "Francesco Sortino",
+      "Fabio Castello",
+      "Leandro Pierguidi"
+    ],
+    "venue": "DIMVA",
+    "year": 2023,
+    "abstract": null,
+    "citation_count": 5,
+    "reference_count": 10,
+    "url": "https://dblp.org/rec/conf/dimva/BalduzziSCP23",
+    "dblp_key": "conf/dimva/BalduzziSCP23",
+    "source_id": "https://openalex.org/W4380087924"
+  },
+  {
+    "title": "Untangle: Aiding Global Function Pointer Hijacking for Post-CET Binary Exploitation.",
+    "authors": [
+      "Alessandro Bertani",
+      "Marco Bonelli",
+      "Lorenzo Binosi",
+      "Michele Carminati",
+      "Stefano Zanero",
+      "Mario Polino"
+    ],
+    "venue": "DIMVA",
+    "year": 2023,
+    "abstract": null,
+    "citation_count": 1,
+    "reference_count": 24,
+    "url": "https://dblp.org/rec/conf/dimva/BertaniBBCZP23",
+    "dblp_key": "conf/dimva/BertaniBBCZP23",
+    "source_id": "https://openalex.org/W4380088631"
+  },
+  {
+    "title": "The Finger in the Power: How to Fingerprint PCs by Monitoring Their Power Consumption.",
+    "authors": [
+      "Marina Botvinnik",
+      "Tomer Laor",
+      "Thomas Rokicki",
+      "Clémentine Maurice",
+      "Yossi Oren"
+    ],
+    "venue": "DIMVA",
+    "year": 2023,
+    "abstract": null,
+    "citation_count": 1,
+    "reference_count": 39,
+    "url": "https://dblp.org/rec/conf/dimva/BotvinnikLRMO23",
+    "dblp_key": "conf/dimva/BotvinnikLRMO23",
+    "source_id": "https://openalex.org/W4380090138"
+  },
+  {
+    "title": "Divak: Non-invasive Characterization of Out-of-Bounds Write Vulnerabilities.",
+    "authors": [
+      "Linus Hafkemeyer",
+      "Jerre Starink",
+      "Andrea Continella"
+    ],
+    "venue": "DIMVA",
+    "year": 2023,
+    "abstract": null,
+    "citation_count": 1,
+    "reference_count": 23,
+    "url": "https://dblp.org/rec/conf/dimva/HafkemeyerSC23",
+    "dblp_key": "conf/dimva/HafkemeyerSC23",
+    "source_id": "https://openalex.org/W4380089973"
+  },
+  {
+    "title": "Extended Abstract: Towards Reliable and Scalable Linux Kernel CVE Attribution in Automated Static Firmware Analyses.",
+    "authors": [
+      "René Helmke",
+      "Johannes vom Dorp"
+    ],
+    "venue": "DIMVA",
+    "year": 2023,
+    "abstract": "In vulnerability assessments, software component-based CVE attribution is a common method to identify possibly vulnerable systems at scale. However, such version-centric approaches yield high false-positive rates for binary distributed Linux kernels in firmware images. Not filtering included vulnerable components is a reason for unreliable matching, as heterogeneous hardware properties, modularity, and numerous development streams result in a plethora of vendor-customized builds. To make a step towards increased result reliability while retaining scalability of the analysis method, we enrich version-based CVE matching with kernel-specific build data from binary images using automated static firmware analysis. We open source an attribution pipeline that gathers kernel configuration and target architecture to dry build the present kernel version and filter CVEs based on affected file references in record descriptions. In a case study with 127 router firmware images, we show that in comparison to naive version matching, our approach identifies 68% of all version CVE matches as false-positives and reliably removes them from the result set. For 12% of all matches it provides additional evidence of issue applicability. For 19.4%, our approach does not improve reliability because required file references in CVEs are missing.",
+    "citation_count": 2,
+    "reference_count": 10,
+    "url": "https://dblp.org/rec/conf/dimva/HelmkeD23",
+    "dblp_key": "conf/dimva/HelmkeD23",
+    "source_id": "https://openalex.org/W4380087722"
+  },
+  {
+    "title": "Attackers as Instructors: Using Container Isolation to Reduce Risk and Understand Vulnerabilities.",
+    "authors": [
+      "Yunsen Lei",
+      "Julian P. Lanson",
+      "Craig A. Shue",
+      "Timothy W. Wood"
+    ],
+    "venue": "DIMVA",
+    "year": 2023,
+    "abstract": null,
+    "citation_count": 1,
+    "reference_count": 15,
+    "url": "https://dblp.org/rec/conf/dimva/LeiLSW23",
+    "dblp_key": "conf/dimva/LeiLSW23",
+    "source_id": "https://openalex.org/W4380089473"
+  },
+  {
+    "title": "A Deep Dive into the VirusTotal File Feed.",
+    "authors": [
+      "Kevin van Liebergen",
+      "Juan Caballero",
+      "Platon Kotzias",
+      "Chris Gates"
+    ],
+    "venue": "DIMVA",
+    "year": 2023,
+    "abstract": null,
+    "citation_count": 7,
+    "reference_count": 27,
+    "url": "https://dblp.org/rec/conf/dimva/LiebergenCKG23",
+    "dblp_key": "conf/dimva/LiebergenCKG23",
+    "source_id": "https://openalex.org/W4380031353"
+  },
+  {
+    "title": "Madvex: Instrumentation-Based Adversarial Attacks on Machine Learning Malware Detection.",
+    "authors": [
+      "Nils Loose",
+      "Felix Mächtle",
+      "Claudius Pott",
+      "Volodymyr Bezsmertnyi",
+      "Thomas Eisenbarth 0001"
+    ],
+    "venue": "DIMVA",
+    "year": 2023,
+    "abstract": "WebAssembly (Wasm) is a low-level binary format for web applications, which has found widespread adoption due to its improved performance and compatibility with existing software. However, the popularity of Wasm has also led to its exploitation for malicious purposes, such as cryptojacking, where malicious actors use a victim's computing resources to mine cryptocurrencies without their consent. To counteract this threat, machine learning-based detection methods aiming to identify cryptojacking activities within Wasm code have emerged. It is well-known that neural networks are susceptible to adversarial attacks, where inputs to a classifier are perturbed with minimal changes that result in a crass misclassification. While applying changes in image classification is easy, manipulating binaries in an automated fashion to evade malware classification without changing functionality is non-trivial. In this work, we propose a new approach to include adversarial examples in the code section of binaries via instrumentation. The introduced gadgets allow for the inclusion of arbitrary bytes, enabling efficient adversarial attacks that reliably bypass state-of-the-art machine learning classifiers such as the CNN-based Minos recently proposed at NDSS 2021. We analyze the cost and reliability of instrumentation-based adversarial example generation and show that the approach works reliably at minimal size and performance overheads.",
+    "citation_count": 5,
+    "reference_count": 30,
+    "url": "https://dblp.org/rec/conf/dimva/LooseMPB023",
+    "dblp_key": "conf/dimva/LooseMPB023",
+    "source_id": "https://openalex.org/W4380090167"
+  },
+  {
+    "title": "CEFI: Command Execution Flow Integrity for Embedded Devices.",
+    "authors": [
+      "Anni Peng",
+      "Dongliang Fang",
+      "Wei Zhou 0026",
+      "Erik van der Kouwe",
+      "Yin Li",
+      "Yuqing Zhang 0001"
+    ],
+    "venue": "DIMVA",
+    "year": 2023,
+    "abstract": null,
+    "citation_count": 1,
+    "reference_count": 29,
+    "url": "https://dblp.org/rec/conf/dimva/PengF0KL023",
+    "dblp_key": "conf/dimva/PengF0KL023",
+    "source_id": "https://openalex.org/W4380089281"
+  },
+  {
+    "title": "PwrLeak: Exploiting Power Reporting Interface for Side-Channel Attacks on AMD SEV.",
+    "authors": [
+      "Wubing Wang",
+      "Mengyuan Li 0004",
+      "Yinqian Zhang",
+      "Zhiqiang Lin 0001"
+    ],
+    "venue": "DIMVA",
+    "year": 2023,
+    "abstract": null,
+    "citation_count": 8,
+    "reference_count": 33,
+    "url": "https://dblp.org/rec/conf/dimva/WangLZL23",
+    "dblp_key": "conf/dimva/WangLZL23",
+    "source_id": "https://openalex.org/W4380031550"
+  },
+  {
+    "title": "MAMBO-V: Dynamic Side-Channel Leakage Analysis on RISC-V.",
+    "authors": [
+      "Jan Wichelmann",
+      "Christopher Peredy",
+      "Florian Sieck",
+      "Anna Pätschke",
+      "Thomas Eisenbarth 0001"
+    ],
+    "venue": "DIMVA",
+    "year": 2023,
+    "abstract": "RISC-V is an emerging technology, with applications ranging from embedded devices to high-performance servers. Therefore, more and more security-critical workloads will be conducted with code that is compiled for RISC-V. Well-known microarchitectural side-channel attacks against established platforms like x86 apply to RISC-V CPUs as well. As RISC-V does not mandate any hardware-based side-channel countermeasures, a piece of code compiled for a generic RISC-V CPU in a cloud server cannot make safe assumptions about the microarchitecture on which it is running. Existing tools for aiding software-level precautions by checking side-channel vulnerabilities on source code or x86 binaries are not compatible with RISC-V machine code.   In this work, we study the requirements and goals of architecture-specific leakage analysis for RISC-V and illustrate how to achieve these goals with the help of fast and precise dynamic binary analysis. We implement all necessary building blocks for finding side-channel leakages on RISC-V, while relying on existing mature solutions when possible. Our leakage analysis builds upon the modular side-channel analysis framework Microwalk, that examines execution traces for leakage through secret-dependent memory accesses or branches. To provide suitable traces, we port the ARM dynamic binary instrumentation tool MAMBO to RISC-V. Our port named MAMBO-V can instrument arbitrary binaries which use the 64-bit general purpose instruction set. We evaluate our toolchain on several cryptographic libraries with RISC-V support and identify multiple exploitable leakages.",
+    "citation_count": 4,
+    "reference_count": 29,
+    "url": "https://dblp.org/rec/conf/dimva/WichelmannPSP023",
+    "dblp_key": "conf/dimva/WichelmannPSP023",
+    "source_id": "https://openalex.org/W4380031408"
+  },
+  {
+    "title": "Honey, I Chunked the Passwords: Generating Semantic Honeywords Resistant to Targeted Attacks Using Pre-trained Language Models.",
+    "authors": [
+      "Fangyi Yu",
+      "Miguel Vargas Martin"
+    ],
+    "venue": "DIMVA",
+    "year": 2023,
+    "abstract": null,
+    "citation_count": 8,
+    "reference_count": 26,
+    "url": "https://dblp.org/rec/conf/dimva/YuM23",
+    "dblp_key": "conf/dimva/YuM23",
+    "source_id": "https://openalex.org/W4380031458"
+  },
+  {
+    "title": "Detection of Intrusions and Malware, and Vulnerability Assessment - 20th International Conference, DIMVA 2023, Hamburg, Germany, July 12-14, 2023, Proceedings",
+    "authors": [
+      "Daniel Gruss",
+      "Federico Maggi 0001",
+      "Mathias Fischer 0001",
+      "Michele Carminati"
+    ],
+    "venue": [
+      "DIMVA",
+      "Lecture Notes in Computer Science"
+    ],
+    "year": 2023,
+    "abstract": "The ever increasing popularity and availability of Trusted Execution Environments (TEEs) had a stark influence on microarchitectural attack research in academia, as their strong attacker model both boosts existing attack vectors and introduces several new ones. While many works have focused on Intel SGX, other TEEs like AMD SEV have recently also started to receive more attention. A common technique when attacking SGX enclaves is single-stepping, where the system’s APIC timer is used to interrupt the enclave after every instruction. Single-stepping increases the temporal resolution of subsequent microarchitectural attacks to a maximum. A key driver in the proliferation of this complex attack technique was the SGX-Step framework, which offered a stable reference implementation for single-stepping and a relatively easy setup. In this paper, we demonstrate that SEV VMs can also be reliably single-stepped. To lay the foundation for further microarchitectural attack research against SEV, we introduce the reusable SEV-Step framework. Besides reliable single-stepping, SEV-Step provides easy access to common attack primitives like page fault tracking and cache attacks against SEV. All features can be used interactively from user space. We demonstrate SEV-Step’s capabilities by carrying out an end-toend cache attack against SEV that leaks the volume key of a LUKS2-encrypted disk. Finally, we show for the first time that SEV is vulnerable to Nemesis-style attacks, which allow to extract information about the type and operands of single-stepped instructions from SEV-protected VMs.",
+    "citation_count": 10,
+    "reference_count": 42,
+    "url": "https://dblp.org/rec/conf/dimva/2023",
+    "dblp_key": "conf/dimva/2023",
+    "source_id": "https://openalex.org/W4389395102"
+  }
+]

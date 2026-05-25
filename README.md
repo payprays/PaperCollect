@@ -92,6 +92,16 @@ uv run pc-search "kubernetes security" --top_k 5 --year 2026
 uv run pc-search "云原生供应链攻击检测" --focus cloud_native --category SC
 ```
 
+数据同步
+- 仓库会跟踪 `data/*.json`，因此爬取后的论文数据可以随 `git push` 同步。
+- `data/embeddings.pkl`、临时文件和其它非 JSON 缓存不会进入仓库；当前搜索不需要它们。
+- 爬取后同步数据：
+```bash
+git add data/*.json
+git commit -m "data: update collected papers"
+git push
+```
+
 提示
 - 输出按会议-年份缓存，中断后可重跑。
 - 测试时可把 `limit_per_conference` 设小以减少 API 消耗。

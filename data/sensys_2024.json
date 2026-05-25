@@ -1,0 +1,2061 @@
+[
+  {
+    "title": "FireLoc: Low-latency Multi-modal Wildfire Geolocation.",
+    "authors": [
+      "Xiao Fu",
+      "Yue Hu 0019",
+      "Prashanth Sutrave",
+      "Peter A. Beerel",
+      "Barath Raghavan"
+    ],
+    "venue": "SenSys",
+    "year": 2024,
+    "abstract": "Firefighters still rely on coarse remote sensing and inaccurate eyewitness reports to localize spreading wildfires. Despite advances in sensing, UAVs, and computer vision, the community has yet to combine the right modalities to achieve effective wildfire geolocalization and spotting. We present FireLoc, a fast and accurate wildfire crowdsensing system that localizes and maps wildfires combining ground cameras and landscape data.",
+    "citation_count": 1,
+    "reference_count": 102,
+    "url": "https://doi.org/10.1145/3666025.3699318",
+    "dblp_key": "conf/sensys/FuHSBR24",
+    "source_id": "https://openalex.org/W4404034876"
+  },
+  {
+    "title": "F2Zip: Finetuning-Free Model Compression for Scenario-Adaptive Embedded Vision.",
+    "authors": [
+      "Puhan Luo",
+      "Jiahui Hou",
+      "Mu Yuan",
+      "Guangyu Wu",
+      "Yunhao Yao",
+      "Xiang-Yang Li 0001"
+    ],
+    "venue": "SenSys",
+    "year": 2024,
+    "abstract": "With the development of the Internet of Things and artificial intelligence, the deployment and inference of intelligent models have gradually raised concerns. To reduce the huge computation and storage overhead of modern deep neural networks, many studies use model pruning techniques to reduce the model size and computational cost. However, existing pruning techniques usually require model fine-tuning, which incurs high additional overhead, making them difficult to apply to real-world scenarios. In this work, we focus on vision model compression and present F2Zip, a scenario-adaptive finetuning-free pruning framework for embedded devices. First, we propose a scenario complexity measurement that quantifies scenario changes with pixel-level entropy. By analyzing the scenario complexity, F2Zip adaptively evaluates the importance of different channels and layers of the model using only a small amount (tens) of unlabeled data. Then we design a multi-constraint knapsack solver to prune scenario-unrelated redundant channels. We implemented and deployed F2Zip in surveillance scenarios and tested different models on videos collected from both public and real-world sources. Experimental results show that F2Zip is free of model fine-tuning in various scenarios. F2Zip reduces the end-to-end deployment time by 89.8% and reduces energy cost by 79.5%, which shows that F2Zip is computationally friendly for embedded devices. Without fine-tuning and any accuracy degradation, F2Zip achieves up to 50.2% parameter reduction, outperforming baseline methods by 35.1%.",
+    "citation_count": 2,
+    "reference_count": 30,
+    "url": "https://doi.org/10.1145/3666025.3699319",
+    "dblp_key": "conf/sensys/LuoHYWY024",
+    "source_id": "https://openalex.org/W4404034400"
+  },
+  {
+    "title": "Locating Your Smart Devices with a Single Speaker.",
+    "authors": [
+      "Guanyu Cai",
+      "Jiliang Wang"
+    ],
+    "venue": "SenSys",
+    "year": 2024,
+    "abstract": "The ability of smart devices to determine their locations is the basis for many applications. We present LEAD, a system which can simultaneously Locate Everyday smArt Devices, such as smartphone, smartwatch, and headphone, with only one speaker. The principle of LEAD is leveraging the reflected path (e.g., by the wall) for single speaker based localization. Previous works cannot simultaneously locate multiple devices with unknown orientations. To overcome the challenges, we estimate the direction difference and distance difference between the LoS and Echo paths and combine them to derive the device location. Given limited sound bandwidth, we develop a high-resolution method to estimate the distance difference. To address the sparsity of microphones with large inter-distance, we generate virtual microphones on smart devices to estimate the direction difference. We reduce the computation overhead by searching the decomposed space for distance and direction. We extensively evaluate LEAD's performance in different scenarios. The results show a median relative distance error of 2.0 cm, relative direction error of 0.7°, and localization error of 0.29 m across various settings.",
+    "citation_count": 3,
+    "reference_count": 44,
+    "url": "https://doi.org/10.1145/3666025.3699320",
+    "dblp_key": "conf/sensys/CaiW24",
+    "source_id": "https://openalex.org/W4404034416"
+  },
+  {
+    "title": "ASLiquid: Non-Intrusive Liquid Counterfeit Identification with Your Earphones.",
+    "authors": [
+      "Zhaohui Li",
+      "Wei Luo",
+      "Yongmin Zhang",
+      "Jianxi Chen",
+      "Yuanchao Shu",
+      "Yaoxue Zhang"
+    ],
+    "venue": "SenSys",
+    "year": 2024,
+    "abstract": "As society progresses, liquid identification plays an increasingly important role in human life. But for now, minority of existing liquid identification solutions on the market can meet daily requirements of being ubiquitous, cost-effective and non-intrusive enough. In this work, we propose ASLiquid, the first liquid counterfeit identification system with commercial off-the-shelf earphones. Our core insight is that earphones can effectively induce acoustic resonance in container, and this phenomenon is observed highly associated with the changes in liquid density and solute compositions. Deploying ASLiquid introduces three main challenges: hardware heterogeneity among different earphones, diversity of user operations, and data complexity due to variations in liquid volume and device placement. To address these issues, we first propose to eliminate the existence of hardware noise and frequency response diversity for an earphone-irrelevant solution. Afterwards, we design a user operation adaptation algorithm to extract valuable feature data during each measurement period. To alleviate problems in data complexity, we propose a spectrum projection algorithm that can effectively generate CFR data of unknown liquid volumes and a VAE based anomaly detection model for counterfeit identification. We evaluate our system with six different earphones and under various conditions. Experimental results reveal that ASLiquid can achieve F1 scores of 95%-99.25% for seven frequently occurring liquid counterfeit tasks, even in specialized attacks on liquids with 1% difference in mass fraction and different types of solutions but with the same density.",
+    "citation_count": 4,
+    "reference_count": 35,
+    "url": "https://doi.org/10.1145/3666025.3699321",
+    "dblp_key": "conf/sensys/LiLZCSZ24",
+    "source_id": "https://openalex.org/W4404034402"
+  },
+  {
+    "title": "MetaFL: Privacy-preserving User Authentication in Virtual Reality with Federated Learning.",
+    "authors": [
+      "Ruizhi Cheng",
+      "Yuetong Wu",
+      "Ashish Kundu",
+      "Hugo Latapie",
+      "Myungjin Lee",
+      "Songqing Chen",
+      "Bo Han 0001"
+    ],
+    "venue": "SenSys",
+    "year": 2024,
+    "abstract": "The increasing popularity of virtual reality (VR) has stressed the importance of authenticating VR users while preserving their privacy. Behavioral biometrics, owing to their robustness and ease of collection, compared to traditional modes such as passwords, have become a favored authentication choice. While current approaches that utilize behavioral biometrics to train classifiers for authentication yield promising accuracy, they cause privacy breaches by sharing sensitive data with a server to train a central model. In this paper, we present MetaFL, a first-of-its-kind privacy-preserving VR authentication framework that leverages federated learning (FL) on multi-modal motion data. The design of MetaFL is motivated by our key insight that various modalities of motion data uniquely affect authentication performance for individual users and among different users. It is attributed to the fundamental challenge of privacy-preserving user authentication: users can access only their own data with limited global knowledge. To tackle this issue, MetaFL judiciously selects the most suitable modalities for each user, which is decomposed into within-user ordering and between-user selection to eliminate the complex interplay between various conflicting factors. Moreover, we develop a personalized strategy to initialize FL models, further improving authentication accuracy. Our extensive performance evaluation on six public datasets shows that MetaFL outperforms state-of-the-art FL-based models (e.g., 17--28% higher authentication accuracy), and its accuracy gap with the non-privacy-preserving central model is small (i.e., only <2%).",
+    "citation_count": 13,
+    "reference_count": 97,
+    "url": "https://doi.org/10.1145/3666025.3699322",
+    "dblp_key": "conf/sensys/ChengWKLLC024",
+    "source_id": "https://openalex.org/W4404034694"
+  },
+  {
+    "title": "SALINA: Towards Sustainable Live Sonar Analytics in Wild Ecosystems.",
+    "authors": [
+      "Chi Xu 0004",
+      "Rongsheng Qian",
+      "Hao Fang 0012",
+      "Xiaoqiang Ma",
+      "William I. Atlas",
+      "Jiangchuan Liu",
+      "Mark A. Spoljaric"
+    ],
+    "venue": "SenSys",
+    "year": 2024,
+    "abstract": "Sonar radar captures visual representations of underwater objects and structures using sound wave reflections, making it essential for exploration, mapping, and continuous surveillance in wild ecosystems. Real-time analysis of sonar data is crucial for time-sensitive applications, including environmental anomaly detection and in-season fishery management, where rapid decision-making is needed. However, the lack of both relevant datasets andpre-trained DNN models, coupled with resource limitations in wild environments, hinders the effective deployment and continuous operation of live sonar analytics.",
+    "citation_count": 2,
+    "reference_count": 35,
+    "url": "https://doi.org/10.1145/3666025.3699323",
+    "dblp_key": "conf/sensys/0004QFMALS24",
+    "source_id": "https://openalex.org/W4404034893"
+  },
+  {
+    "title": "ImmerScope: Multi-view Video Aggregation at Edge towards Immersive Content Services.",
+    "authors": [
+      "Bo Chen 0025",
+      "Hongpeng Guo",
+      "Mingyuan Wu",
+      "Zhe Yang 0010",
+      "Zhisheng Yan",
+      "Klara Nahrstedt"
+    ],
+    "venue": "SenSys",
+    "year": 2024,
+    "abstract": "The multi-camera capture system is an emerging visual sensing modality. It facilitates the production of various immersive contents ranging from regular to neural videos. Although the delivery of immersive content is popular and promising, it suffers from the bandwidth bottleneck when streaming multi-view videos to the cloud (i.e., multi-view video aggregation). Existing works fail to provide a bandwidth-efficient and content-generic solution. Even the closest effort to ours based on the SOTA multi-view video codecs suffers from issues of underutilized dependency and content distortion. In this paper, we present ImmerScope, a multi-view video aggregation framework at the edge with a neural multi-view video codec. It outperforms existing solutions with highly-utilized dependency via neuron connections and distortion awareness via end-to-end training. Evaluations on diverse multi-camera setups show that ImmerScope outperforms single-view codecs by at least 64% bandwidth savings in peak-signal-to-noise ratio with a frame rate of 50 fps.",
+    "citation_count": 3,
+    "reference_count": 76,
+    "url": "https://doi.org/10.1145/3666025.3699324",
+    "dblp_key": "conf/sensys/ChenGW0YN24",
+    "source_id": "https://openalex.org/W4404034502"
+  },
+  {
+    "title": "PhyMask: An Adaptive Masking Paradigm for Efficient Self-Supervised Learning in IoT.",
+    "authors": [
+      "Denizhan Kara",
+      "Tomoyoshi Kimura",
+      "Yatong Chen 0001",
+      "Jinyang Li 0004",
+      "Ruijie Wang 0004",
+      "Yizhuo Chen",
+      "Tianshi Wang 0002",
+      "Shengzhong Liu",
+      "Tarek F. Abdelzaher"
+    ],
+    "venue": "SenSys",
+    "year": 2024,
+    "abstract": "This paper introduces PhyMask, an adaptive masking paradigm designed to enhance the efficiency and interpretability of Masked Autoencoders (MAEs) in analyzing IoT sensing signals. Different from all mainstream MAEs, which rely on random masking techniques, PhyMask employs an adaptive masking strategy that aligns with critical signal information. Its main contributions are threefold. First, PhyMask leverages the energy significance of frequency components to prioritize information-rich time-frequency regions, improving the reconstruction of original signals. Second, it includes a coherence-based masking component to identify and preserve essential temporal dynamics within the data. Finally, PhyMask integrates these components into an adaptive masking paradigm tailored to optimize the sensing context awareness within the masking configuration, focusing on the most informative parts of the data. This allows PhyMask to mask up to 96% of the input, reducing memory requirements by 14% and accelerating pre-training. Evaluations across two sensing applications, four datasets, and two real-world deployments demonstrate PhyMask's superior performance. PhyMask improves MAE accuracy by 7%, reduces pre-training data requirements by up to 75%, and enhances robustness to domain shifts and signal quality variations, making it of great value to robust and efficient intelligent IoT deployments.",
+    "citation_count": 9,
+    "reference_count": 46,
+    "url": "https://doi.org/10.1145/3666025.3699325",
+    "dblp_key": "conf/sensys/KaraKC00CWLA24",
+    "source_id": "https://openalex.org/W4404034391"
+  },
+  {
+    "title": "Effective Heterogeneous Federated Learning via Efficient Hypernetwork-based Weight Generation.",
+    "authors": [
+      "Yujin Shin",
+      "Kichang Lee",
+      "Sungmin Lee",
+      "You Rim Choi",
+      "Hyung-Sin Kim",
+      "JeongGil Ko"
+    ],
+    "venue": "SenSys",
+    "year": 2024,
+    "abstract": "While federated learning leverages distributed client resources, it faces challenges due to heterogeneous client capabilities. This necessitates allocating models suited to clients' resources and careful parameter aggregation to accommodate this heterogeneity. We propose HypeMeFed, a novel federated learning framework for supporting client heterogeneity by combining a multi-exit network architecture with hypernetwork-based model weight generation. This approach aligns the feature spaces of heterogeneous model layers and resolves per-layer information disparity during weight aggregation. To practically realize HypeMeFed, we also propose a low-rank factorization approach to minimize computation and memory overhead associated with hypernetworks. Our evaluations on a real-world heterogeneous device testbed indicate that HypeMeFed enhances accuracy by 5.12% over FedAvg, reduces the hypernetwork memory requirements by 98.22%, and accelerates its operations by 1.86X compared to a naive hypernetwork approach. These results demonstrate HypeMeFed's effectiveness in leveraging and engaging heterogeneous clients for federated learning.",
+    "citation_count": 14,
+    "reference_count": 47,
+    "url": "https://doi.org/10.1145/3666025.3699326",
+    "dblp_key": "conf/sensys/ShinLLCKK24",
+    "source_id": "https://openalex.org/W4404034606"
+  },
+  {
+    "title": "PieBridge: Fast and Parameter-Efficient On-Device Training via Proxy Networks.",
+    "authors": [
+      "Wangsong Yin",
+      "Daliang Xu",
+      "Gang Huang 0001",
+      "Ying Zhang 0012",
+      "Shiyun Wei",
+      "Mengwei Xu 0001",
+      "Xuanzhe Liu"
+    ],
+    "venue": "SenSys",
+    "year": 2024,
+    "abstract": "On-device training Neural Networks (NNs) has been a crucial catalyst towards privacy-preserving and personalized mobile intelligence. Recently, a novel training paradigm, namely Parameter-Efficient Training (PET), is attracting attention in both the machine learning and system community. In our preliminary measurements, we find PET well-suited for on-device scenarios; yet, its parameter efficiency does not translate coequal to time efficiency on resource-constrained devices, as the training time is dominated by the frozen layers.",
+    "citation_count": 0,
+    "reference_count": 38,
+    "url": "https://doi.org/10.1145/3666025.3699327",
+    "dblp_key": "conf/sensys/YinXHZWXL24",
+    "source_id": "https://openalex.org/W4404034656"
+  },
+  {
+    "title": "Boosting Collaborative Vehicular Perception on the Edge with Vehicle-to-Vehicle Communication.",
+    "authors": [
+      "Ruiyang Zhu",
+      "Xiao Zhu 0001",
+      "Anlan Zhang",
+      "Xumiao Zhang",
+      "Jiachen Sun",
+      "Feng Qian 0001",
+      "Hang Qiu 0001",
+      "Z. Morley Mao",
+      "Myungjin Lee"
+    ],
+    "venue": "SenSys",
+    "year": 2024,
+    "abstract": "Collaborative Vehicular Perception (CVP) enables connected and autonomous vehicles (CAVs) to cooperatively extend their views through wirelessly sharing their sensor data. Existing CVP systems employ either a vehicle-to-vehicle (V2V) or vehicle-to-infrastructure (V2I) view exchange paradigm. In this paper, we advocate a hybrid CVP design: our developed system, Harbor, employs V2I as its fundamental underlying framework, and opportunistically employs V2V to boost the performance. In Harbor, vehicles (helpers) may serve as relays to assist other vehicles (helpees) in reaching an edge node, which performs sensor data merging to produce the extended view. We judiciously partition the workload between the edge and vehicles, develop a robust helper-helpee assignment model, and solve it efficiently at runtime. We conduct both real-world tests and large-scale emulation experiments using two prevailing CAV applications: drivable space detection and object detection. Our real-world evaluation conducted at one of the world's first purpose-built autonomous driving testbeds demonstrates that Harbor outperforms state-of-the-art V2V- or V2I-only CVP schemes by up to 36% in detection accuracy, resulting in significantly fewer collisions under dangerous driving scenarios.",
+    "citation_count": 6,
+    "reference_count": 56,
+    "url": "https://doi.org/10.1145/3666025.3699328",
+    "dblp_key": "conf/sensys/Zhu0ZZS0QML24",
+    "source_id": "https://openalex.org/W4404034888"
+  },
+  {
+    "title": "MetaLink: Extending Air-to-Water Wireless Communications Using Passive Bianisotropic Metasurfaces.",
+    "authors": [
+      "John Nolan",
+      "Baicheng Chen",
+      "Xinyu Zhang 0003"
+    ],
+    "venue": "SenSys",
+    "year": 2024,
+    "abstract": "Reliable cross medium (e.g., air-water) communication using radio frequency (RF) has remained an open-problem for decades. Currently, underwater devices cannot communicate directly with land-based or airborne devices. Typical solutions are inadequate when communicating through the boundary due to cross-medium boundary reflection/refraction/attenuation effects. We present MetaLink, an RF wireless communication system that enables underwater radios to communicate with airborne ones using novel underwater antenna design and 3D printed bianisotropic metasurface. MetaLink leverages bianisotropic structures that can correct for the severe boundary reflections/refractions between the air/water mediums, opening up the air/water medium as a viable communication channel without the need for multiple types of signals. We further exploit the electromagnetic properties of water to drastically scale down MetaLink's meta-atom size, and improve communication range. To examine real world communications performance from water to air, we prototype MetaLink and measure in a 14 ft deep swimming pool. Moreover, we push the robustness, reliability, and performance of MetaLink to its limit under various real-world circumstances. Our experiments demonstrate that MetaLink can communicate through the water/air boundary with SNR improvements of more than 35dB using WiFi modulation at distances of 14 ft and reach a simulated maximum of 95 ft within water using commercially available equipment and measured data.",
+    "citation_count": 3,
+    "reference_count": 87,
+    "url": "https://doi.org/10.1145/3666025.3699329",
+    "dblp_key": "conf/sensys/NolanCZ24",
+    "source_id": "https://openalex.org/W4404034595"
+  },
+  {
+    "title": "Behaviors Speak More: Achieving User Authentication Leveraging Facial Activities via mmWave Sensing.",
+    "authors": [
+      "Chenxu Jiang",
+      "Sihan Yu",
+      "Jingjing Fu",
+      "ChunChih Lin",
+      "Huadi Zhu",
+      "Xiaolong Ma",
+      "Ming Li 0006",
+      "Linke Guo"
+    ],
+    "venue": "SenSys",
+    "year": 2024,
+    "abstract": "Human faces have been widely adopted in many applications and systems requiring a high-security standard. Although face authentication is deemed to be mature nowadays, many existing works have demonstrated not only the privacy leakage of facial information but also the success of spoofing attacks on face biometrics. The critical reason behind this is the failure of liveness detection in biometrics. This work advances most biometric-based user authentication schemes by exploring dynamic biometrics (human facial activities) rather than traditional static biometrics (human faces). Inspired by observations from psychology, we propose the mmFaceID to leverage humans' dynamic facial activities when performing word reading for achieving robust, highly accurate, and effective user authentication via mmWave sensing. By addressing a series of technical challenges of capturing micro-level facial muscle movements using a mmWave sensor, we build a neural network to reconstruct facial activities via estimated expression parameters. Then, unique features can be extracted to enable robust user authentication regardless of relative distances and orientations. We conduct comprehensive experiments on 23 participants to evaluate mmFaceID in terms of distances/orientations, length of word lists, occlusion, and language backgrounds, demonstrating an authentication accuracy of 94.7%. We also extend our evaluation in a real IoT scenario. By speaking real IoT commends, the average authentication accuracy can reach up to 92.28%.",
+    "citation_count": 2,
+    "reference_count": 71,
+    "url": "https://doi.org/10.1145/3666025.3699330",
+    "dblp_key": "conf/sensys/JiangYFLZMLG24",
+    "source_id": "https://openalex.org/W4404034610"
+  },
+  {
+    "title": "mmCLIP: Boosting mmWave-based Zero-shot HAR via Signal-Text Alignment.",
+    "authors": [
+      "Qiming Cao",
+      "Hongfei Xue",
+      "Tianci Liu 0003",
+      "Xingchen Wang",
+      "Haoyu Wang 0004",
+      "Xincheng Zhang",
+      "Lu Su 0001"
+    ],
+    "venue": "SenSys",
+    "year": 2024,
+    "abstract": "Millimeter-wave (mmWave) based human activity recognition (HAR) systems have demonstrated promising performance in various applications, leveraging the power of deep neural networks. However, these systems are suffering from the scarcity of available mmWave data for model training. To address this challenge, we explore the possibility of transferring knowledge from large AI models built on massive text and visual data to enhance the generalizability of mmWave-based HAR models. Towards this end, we introduce mmCLIP, a novel system that aligns mmWave signal space and text space to facilitate zero-shot recognition for unseen activities. To enable this alignment, we employ cross-modality signal synthesis to augment mmWave signal data using large human mesh datasets and design an activity attribute decomposition and recomposition approach to characterize the semantic interconnections among activities. We conducted extensive experiments to demonstrate the effectiveness of our proposed framework.",
+    "citation_count": 19,
+    "reference_count": 37,
+    "url": "https://doi.org/10.1145/3666025.3699331",
+    "dblp_key": "conf/sensys/CaoX0WWZ024",
+    "source_id": "https://openalex.org/W4404034597"
+  },
+  {
+    "title": "Riotee: An Open-source Hardware and Software Platform for the Battery-free Internet of Things.",
+    "authors": [
+      "Kai Geissdoerfer",
+      "Marco Zimmerling"
+    ],
+    "venue": "SenSys",
+    "year": 2024,
+    "abstract": "The rapidly growing Internet of Things (IoT) can avoid the high cost and environmental burden of replacing trillions of batteries by using sustainable battery-free devices that operate maintenance-free for decades. To develop battery-free IoT systems, researchers and makers require a common platform that is versatile, affordable, and easy to use. However, limited availability and lack of support have prevented widespread adoption of previous battery-free platforms. We introduce Riotee, an open-source and commercially available battery-free platform that includes multiple boards, extensive software, and comprehensive documentation. We demonstrate Riotee's capabilities through a machine-learning application and present results from a user study involving students and customers, who rated its usefulness and usability highly.",
+    "citation_count": 7,
+    "reference_count": 29,
+    "url": "https://doi.org/10.1145/3666025.3699332",
+    "dblp_key": "conf/sensys/GeissdoerferZ24",
+    "source_id": "https://openalex.org/W4404034882"
+  },
+  {
+    "title": "Processor-Sharing Internet of Things Architecture for Large-scale Deployment.",
+    "authors": [
+      "Qianhe Meng",
+      "Han Wang 0032",
+      "Chong Zhang",
+      "Yihang Song",
+      "Songfan Li",
+      "Li Lu 0001",
+      "Hongzi Zhu"
+    ],
+    "venue": "SenSys",
+    "year": 2024,
+    "abstract": "Large-scale IoT sensor deployment calls for inexpensive, low-power sensor nodes that still perform long-range, large-scale networking at the system level. However, current sensor nodes are constructed according to the `one-size-fits-all' embedded design, where the processor and RF transceiver are indispensable but underutilized in low-duty cycles, resulting in overwhelmingly significant unit price and run-time power. In this paper, we propose a novel processor-sharing IoT architecture that converts the vast majority of sensor nodes from embedded computers to low-end RF peripherals. The conventional full-fledged sensor nodes are smashed into the air, and the scattered chips are scaled well with negligible overheads through a virtual I2C bus called RFBus. Specifically, the RFBus interface is designed to be backward compatible with the I2C bus interface, and thus, the RFBus network inherits versatile link layer services transparently from the well-established I2C link layer protocol. We design the RFBus with a joint consideration of system-level performance and deployment costs and evaluate the prototypes in indoor and outdoor scenarios. The result indicates that the proposed architecture achieves 6.09 x (indoor) and 6.69 x (outdoor) energy saving and reduces the unit price of sensor nodes by 23.5% (indoor) and 33.5% (outdoor).",
+    "citation_count": 6,
+    "reference_count": 58,
+    "url": "https://doi.org/10.1145/3666025.3699333",
+    "dblp_key": "conf/sensys/MengWZSLLZ24",
+    "source_id": "https://openalex.org/W4404034894"
+  },
+  {
+    "title": "MetaSoil: Passive mmWave Metamaterial Multi-layer Soil Moisture Sensing.",
+    "authors": [
+      "Baicheng Chen",
+      "John Nolan",
+      "Xinyu Zhang 0003",
+      "Wan Du"
+    ],
+    "venue": "SenSys",
+    "year": 2024,
+    "abstract": "Soil moisture level sensing is essential for enabling smart irrigation, which is crucial for our food security and sustainable agriculture. Existing soil moisture sensing systems face limitations such as single-layer sensing, limited depth, power supply reliance, and complex calibration. In addition, costly and cumbersome sensor unit design hinders mass and dense deployment of passive intelligence. This paper introduces MetaSoil, a soil moisture sensing system that is calibration-free, continuous, and multi-layered, leveraging a passive 3D printable mmWave metamaterial. When soil moisture level changes, our hydrogel patched polylactic acid (PLA) metamaterial alters resonant frequency in the impinging mmWave signals due to impedance match offset. Our system eliminates in-soil power supply dependencies by utilizing the RF resonance of 3D-printed metamaterial, allowing for deeper placement, and simultaneous multi-layer sensing. We then integrate a commercial-off-the-shelf (COTS) mmWave radar to query the metamaterial sensor. With MetaSoil's fully passive metamaterial pole, RF signal from far is redirected towards the sensor unit, bypassing soil's heavy attenuation effect. Through our extensive evaluation, MetaSoil achieves 98.9 % accuracy with ±10% moisture level precision in single-layered sensing, at depth of 1m meter. It achieves 98.8 % accuracy with ±10% in double layered sensing at same depth with 10cm sensor spacing. We further examine the robustness of our system with real-world requirements. Overall, MetaSoil represents a low-cost, durable, and easily deployable solution that supports remote and continuous soil moisture monitoring, advancing the scalability and effectiveness of smart agricultural practices.",
+    "citation_count": 5,
+    "reference_count": 37,
+    "url": "https://doi.org/10.1145/3666025.3699334",
+    "dblp_key": "conf/sensys/ChenN0D24",
+    "source_id": "https://openalex.org/W4404034607"
+  },
+  {
+    "title": "Fast-Inf: Ultra-Fast Embedded Intelligence on the Batteryless Edge.",
+    "authors": [
+      "Leonardo Lucio Custode",
+      "Pietro Farina",
+      "Eren Yildiz",
+      "Renan Beran Kilic",
+      "Kasim Sinan Yildirim",
+      "Giovanni Iacca"
+    ],
+    "venue": "SenSys",
+    "year": 2024,
+    "abstract": "Batteryless edge devices are extremely resource-constrained compared to traditional mobile platforms. Existing tiny deep neural network (DNN) inference solutions are problematic due to their slow and resource-intensive nature, rendering them unsuitable for batteryless edge devices. To address this problem, we propose a new approach to embedded intelligence, called Fast-Inf, which achieves extremely lightweight computation and minimal latency. Fast-Inf uses binary tree-based neural networks that are ultra-fast and energy-efficient due to their logarithmic time complexity. Additionally, Fast-Inf models can skip the leaf nodes when necessary, further minimizing latency without requiring any modifications to the model or retraining. Moreover, Fast-Inf models have significantly lower backup and runtime memory overhead. Our experiments on an MSP430FR5994 platform showed that Fast-Inf can achieve ultra-fast and energy-efficient inference (up to 700x speedup and reduced energy) compared to a conventional DNN.",
+    "citation_count": 9,
+    "reference_count": 61,
+    "url": "https://doi.org/10.1145/3666025.3699335",
+    "dblp_key": "conf/sensys/CustodeFYKYI24",
+    "source_id": "https://openalex.org/W4404034611"
+  },
+  {
+    "title": "Wi2DMeasure: WiFi-based 2D Object Size Measurement.",
+    "authors": [
+      "Xuanzhi Wang",
+      "Junzhe Wang",
+      "Kai Niu 0003",
+      "Jie Xiong 0001",
+      "Fusang Zhang",
+      "Enze Yi",
+      "Anlan Yu",
+      "Zhiyun Yao",
+      "Daqing Zhang 0001"
+    ],
+    "venue": "SenSys",
+    "year": 2024,
+    "abstract": "While a large range of sensing applications such as activity sensing and vital sign monitoring have been realized with WiFi sensing, using commercial WiFi devices to obtain fine-grained size information of objects remains challenging due to the narrow bandwidth of WiFi. Very recent studies attempted to measure object sizes using WiFi signals. However, these systems are still far from practical with a lot of limitations including requiring multiple transceiver pairs and can only measure one-dimensional size, hindering their real-life adoption. Also, these systems rely on Channel State Information (CSI) to work, which is only available on few commercial WiFi cards. In this work, we propose to employ a new channel data, i.e., Beamforming Feedback Information (BFI), widely available on almost all new generation WiFi cards for fine-grained size measurement. Through thoroughly analyzing the mathematical relationship between BFI and CSI, we show how to use BFI to achieve fine-grained size measurement. We propose a novel method to accurately measure the two-dimensional size of an object using a single transceiver pair by identifying the positions of singularities when the object passes through the diffraction zone of the transceiver pair. Experiment results show that Wi2DMeasure can accurately measure the two-dimensional size of objects under various conditions, achieving a small median error of only 3.7 mm.",
+    "citation_count": 6,
+    "reference_count": 53,
+    "url": "https://doi.org/10.1145/3666025.3699336",
+    "dblp_key": "conf/sensys/WangW00ZYYY024",
+    "source_id": "https://openalex.org/W4404034591"
+  },
+  {
+    "title": "Acoustic Side-Channel Communications for Aerial Drones with HUM.",
+    "authors": [
+      "Suryansh Sharma",
+      "Robert Lica",
+      "R. Venkatesha Prasad",
+      "Luca Mottola",
+      "Leszek Ambroziak"
+    ],
+    "venue": "SenSys",
+    "year": 2024,
+    "abstract": "We present HUM-High-frequency UAV Messaging: an acoustic side channel communication system we design for localized drone-to-drone communications. We generate Pulse Width Modulated (PWM) signals from drone motors to carry information and improve communication reliability by mitigating propeller noise interference through modifications to the propeller's physical design. These modifications reduce propeller noise in the designated acoustic spectrum by up to 7 dB. We deploy a custom ultrasonic microphone shield specifically designed for decoding in the receiver. HUM's improved signal-to-noise ratio enables up to 80x higher data rates compared to the existing design from the literature while providing better scalability. HUM supports simultaneous decoding across 16 drones within 8 m, range as seen in real flight tests. The cost of this performance is minimal; we experimentally demonstrate that HUM has a marginal impact on flight dynamics and battery life.",
+    "citation_count": 1,
+    "reference_count": 53,
+    "url": "https://doi.org/10.1145/3666025.3699337",
+    "dblp_key": "conf/sensys/SharmaLPMA24",
+    "source_id": "https://openalex.org/W4404034880"
+  },
+  {
+    "title": "FDLoRa: Tackling Downlink-Uplink Asymmetry with Full-duplex LoRa Gateways.",
+    "authors": [
+      "Shiming Yu",
+      "Xianjin Xia",
+      "Ziyue Zhang",
+      "Ningning Hou",
+      "Yuanqing Zheng"
+    ],
+    "venue": "SenSys",
+    "year": 2024,
+    "abstract": "Unlike traditional data collection applications (e.g., environment monitoring) that are dominated by uplink transmissions, the newly emerging applications (e.g., device actuation, firmware update, packet reception acknowledgement) also pose ever-increasing demands on downlink transmission capabilities. However, current LoRaWAN falls short in supporting such applications primarily due to downlink-uplink asymmetry. While the uplink can concurrently receive multiple packets, downlink transmission is limited to a single logical channel at a time, which fundamentally hinders the deployment of downlink-hungry applications. To tackle this practical challenge, FDLoRa develops the first-of-its-kind in-band full-duplex LoRa gateway design with novel solutions to mitigate the impact of self-interference (i.e., strong downlink interference to ultra-weak uplink reception), which unleashes the full spectrum for in-band downlink transmissions without compromising the reception of weak uplink packets. Built upon the full-duplex gateways, FDLoRa introduces a new downlink framework to support concurrent downlink transmissions over multiple logical channels of available gateways. Evaluation results demonstrate that FDLoRa boosts downlink capacity by 5.7x compared to LoRaWAN on a three-gateway testbed and achieves 2.58x higher downlink concurrency per gateway than the state-of-the-art.",
+    "citation_count": 14,
+    "reference_count": 71,
+    "url": "https://doi.org/10.1145/3666025.3699338",
+    "dblp_key": "conf/sensys/YuXZHZ24",
+    "source_id": "https://openalex.org/W4404034874"
+  },
+  {
+    "title": "AdaShadow: Responsive Test-time Model Adaptation in Non-stationary Mobile Environments.",
+    "authors": [
+      "Cheng Fang",
+      "Sicong Liu 0005",
+      "Zimu Zhou",
+      "Bin Guo 0001",
+      "Jiaqi Tang 0005",
+      "Ke Ma",
+      "Zhiwen Yu 0001"
+    ],
+    "venue": "SenSys",
+    "year": 2024,
+    "abstract": "On-device adapting to continual, unpredictable domain shifts is essential for mobile applications like autonomous driving and augmented reality to deliver seamless user experiences in evolving environments. Test-time adaptation (TTA) emerges as a promising solution by tuning model parameters with unlabeled live data immediately before prediction. However, TTA's unique forward-backward-reforward pipeline notably increases the latency over standard inference, undermining the responsiveness in time-sensitive mobile applications. This paper presents AdaShadow, a responsive test-time adaptation framework for non-stationary mobile data distribution and resource dynamics via selective updates of adaptation-critical layers. Although the tactic is recognized in generic on-device training, TTA's unsupervised and online context presents unique challenges in estimating layer importance and latency, as well as scheduling the optimal layer update plan. AdaShadow addresses these challenges with a backpropagation-free assessor to rapidly identify critical layers, a unit-based runtime predictor to account for resource dynamics in latency estimation, and an online scheduler for prompt layer update planning. Also, AdaShadow incorporates a memory I/O-aware computation reuse scheme to further reduce latency in the reforwardpass. Results show that AdaShadow achieves the best accuracy-latency balance under continual shifts. At low memory and energy costs, Adashadow provides a 2x to 3.5x speedup (ms-level) over state-of-the-art TTA methods with comparable accuracy and a 14.8% to 25.4% accuracy boost over efficient supervised methods with similar latency.",
+    "citation_count": 6,
+    "reference_count": 59,
+    "url": "https://doi.org/10.1145/3666025.3699339",
+    "dblp_key": "conf/sensys/FangLZ00M024",
+    "source_id": "https://openalex.org/W4403443962"
+  },
+  {
+    "title": "Mission: mmWave Radar Person Identification with RGB Cameras.",
+    "authors": [
+      "Ruofeng Liu",
+      "Tianshun Yao",
+      "Ruili Shi",
+      "Luoyu Mei",
+      "Shuai Wang 0008",
+      "Zhimeng Yin 0001",
+      "Wenchao Jiang"
+    ],
+    "venue": "SenSys",
+    "year": 2024,
+    "abstract": "This paper presents Mission, the first-of-this-kind cross-modal reidentification (ReID) design for mmWave Radar and RGB cameras. Given a person of interest detected by Radar in camera-restricted scenarios, Mission can identify the image of the person from cameras that are ubiquitously deployed in camera-allowed areas. We envision that cross Vison-RF ReID can significantly enrich mmWave human sensing with a wide spectrum of applications in security surveillance, tracking, and personalized services. Technically, we introduce a novel method for cross-modal similarity estimation that exploits inherent synergies between fine-grained 2D images and coarse-grained 3D Radar point clouds to effectively overcome their modal discrepancy. Through extensive experiments, we demonstrated that our proposed system can achieve 85% top-1 accuracy and 90% top-5 accuracy among 58 volunteers.",
+    "citation_count": 13,
+    "reference_count": 36,
+    "url": "https://doi.org/10.1145/3666025.3699340",
+    "dblp_key": "conf/sensys/LiuYSMWYJW24",
+    "source_id": "https://openalex.org/W4404034643"
+  },
+  {
+    "title": "SEESys: Online Pose Error Estimation System for Visual SLAM.",
+    "authors": [
+      "Tianyi Hu",
+      "Tim Scargill",
+      "Fan Yang 0141",
+      "Ying Chen",
+      "Guohao Lan",
+      "Maria Gorlatova"
+    ],
+    "venue": "SenSys",
+    "year": 2024,
+    "abstract": "In this work, we introduce SEESys, the first system to provide online pose error estimation for Simultaneous Localization and Mapping (SLAM). Unlike prior offline error estimation approaches, the SEESys framework efficiently collects real-time system features and delivers accurate pose error magnitude estimates with low latency. This enables real-time quality-of-service information for downstream applications. To achieve this goal, we develop a SLAM system run-time status monitor (RTS monitor) that performs feature collection with minimal overhead, along with a multi-modality attention-based Deep SLAM Error Estimator (DeepSEE) for error estimation. We train and evaluate SEESys using both public SLAM benchmarks and a diverse set of synthetic datasets, achieving an RMSE of 0.235 cm of pose error estimation, which is 15.8% lower than the baseline. Additionally, we conduct a case study showcasing SEESys in a real-world scenario, where it is applied to a real-time audio error advisory system for human operators of a SLAM-enabled device. The results demonstrate that SEESys provides error estimates with an average end-to-end latency of 37.3 ms, and the audio error advisory reduces pose tracking error by 25%.",
+    "citation_count": 6,
+    "reference_count": 67,
+    "url": "https://doi.org/10.1145/3666025.3699341",
+    "dblp_key": "conf/sensys/HuSYCLG24",
+    "source_id": "https://openalex.org/W4404034644"
+  },
+  {
+    "title": "ZenseTag: An RFID assisted Twin-Tag Single Antenna COTS Sensor Interface.",
+    "authors": [
+      "Nagarjun Bhat",
+      "Agrim Gupta",
+      "Ishan Bansal",
+      "Harine Govindarajan",
+      "Dinesh Bharadia"
+    ],
+    "venue": "SenSys",
+    "year": 2024,
+    "abstract": "Sensors enable us to digitally capture stimuli like moisture, light, and force. Despite their low cost, reliability, and scalability, the lack of widespread adoption of IoT has hindered the realization of true ubiquitous sensing. A likely reason is that the current sensor platforms are bulky due to the batteries and complex electronics needed to interface sensors communication systems. In this work, we present a fully-passive, miniaturized, flexible form factor sensor interface titled ZenseTag that uses minimal electronics to read and communicate analog sensor data, directly at radio frequencies (RF). We exploit the fundamental principle of resonance, where a sensor's terminal impedance becomes most sensitive to the measured stimulus at its resonant frequency. This enables ZenseTag to read out the sensor variation using only energy harvested from wireless signals. We demonstrate its implementation with a 15x10mm flexible PCB that connects sensors to a printed antenna and passive RFID ICs, enabling near real-time readout through a performant GUI-enabled software.",
+    "citation_count": 6,
+    "reference_count": 71,
+    "url": "https://doi.org/10.1145/3666025.3699342",
+    "dblp_key": "conf/sensys/BhatGBGB24",
+    "source_id": "https://openalex.org/W4404034476"
+  },
+  {
+    "title": "EMTrig: Physical Adversarial Examples Triggered by Electromagnetic Injection towards LiDAR Perception.",
+    "authors": [
+      "Ziwei Liu 0007",
+      "Feng Lin 0004",
+      "Teshi Meng",
+      "Benaouda Chouaib Baha-eddine",
+      "Li Lu 0008",
+      "Qiang Xue",
+      "Kui Ren 0001"
+    ],
+    "venue": "SenSys",
+    "year": 2024,
+    "abstract": "LiDAR sensors measure the environment by emitting lasers and, when combined with deep neural networks (DNNs), can effectively identify surrounding obstacles such as vehicles and pedestrians. Given its crucial role in autonomous driving perception, the security of LiDAR is closely tied to driving safety. Some studies have explored its vulnerabilities to physical-world attacks, such as laser-based attacks or adversarial objects. However, these methods are either extremely difficult to execute or lack stealth and flexibility. In this paper, we propose a novel attack method called EMTrig, which leverages common roadside objects combined with controlled intentional electromagnetic interference (IEMI) targeting specific LiDARs to create flexible and covert adversarial attacks against designated vehicles. This causes the victim vehicle to misidentify roadside objects as obstacles, such as other vehicles, leading to dangerous driving behaviors like sudden stops and lane changes. Unlike conventional adversarial examples, our deployed objects are common items (e.g., signboards) that are harmless without the IEMI trigger but pose a threat only under IEMI attacks, providing better stealthiness and flexibility. Extensive experiments in both digital and physical domains validate the effectiveness of EMTrig, demonstrating its significant threat to LiDAR perception.",
+    "citation_count": 1,
+    "reference_count": 51,
+    "url": "https://doi.org/10.1145/3666025.3699343",
+    "dblp_key": "conf/sensys/LiuLMBLX024",
+    "source_id": "https://openalex.org/W4404034587"
+  },
+  {
+    "title": "MagicStream: Bandwidth-conserving Immersive Telepresence via Semantic Communication.",
+    "authors": [
+      "Ruizhi Cheng",
+      "Nan Wu 0012",
+      "Vu Le",
+      "Eugene Chai",
+      "Matteo Varvello",
+      "Bo Han 0001"
+    ],
+    "venue": "SenSys",
+    "year": 2024,
+    "abstract": "Immersive telepresence has the potential to revolutionize remote communication by offering a highly interactive and engaging user experience. However, state-of-the-art exchanges large volumes of 3D content to achieve satisfactory visual quality, resulting in substantial Internet bandwidth consumption. To tackle this challenge, we introduce MagicStream, a first-of-its-kind semantic-driven immersive telepresence system that effectively extracts and delivers compact semantic details of captured 3D representation of users, instead of traditional bit-by-bit communication of raw content. To minimize bandwidth consumption while maintaining low end-to-end latency and high visual quality, MagicStream incorporates the following key innovations: (1) efficient extraction of user's skin/cloth color and motion semantics based on lighting characteristics and body keypoints, respectively; (2) novel, real-time human body reconstruction from motion semantics; and (3) on-the-fly neural rendering of users' immersive representation with color semantics. We implement a prototype of MagicStream and extensively evaluate its performance through both controlled experiments and user trials. Our results show that, compared to existing schemes, MagicStream can drastically reduce Internet bandwidth usage by up to 1195X while maintaining good visual quality.",
+    "citation_count": 14,
+    "reference_count": 95,
+    "url": "https://doi.org/10.1145/3666025.3699344",
+    "dblp_key": "conf/sensys/ChengWLCV024",
+    "source_id": "https://openalex.org/W4404034698"
+  },
+  {
+    "title": "An Online Defense against Object-based LiDAR Attacks in Autonomous Driving.",
+    "authors": [
+      "Yan Zhang 0133",
+      "Zihao Liu 0001",
+      "Chongliu Jia",
+      "Yi Zhu 0012",
+      "Chenglin Miao"
+    ],
+    "venue": "SenSys",
+    "year": 2024,
+    "abstract": "LiDAR (Light Detection and Ranging) has been widely used in autonomous driving to perceive the surrounding environment of self-driving cars. Advanced LiDAR perception systems typically leverage deep neural networks (DNNs) to achieve high performance. However, the vulnerability of DNNs to malicious attacks provides attackers with the means to compromise the LiDAR perception system, potentially causing traffic accidents. Recently, object-based attacks against LiDAR perception systems have drawn significant attention. In such attacks, the attacker can easily fool the LiDAR perception system by placing physical objects within the driving environment. Despite the practicality of these attacks and their potential catastrophic consequences in autonomous driving, there is currently no effective and practical defense against them. To address this issue, we propose a novel online defense mechanism against object-based LiDAR attacks. This mechanism operates in an online manner, aiming to identify and remove the adversarial LiDAR points generated by the objects used by attackers before the data is fed into the perception module of autonomous driving systems. It is not only effective and efficient for real-world autonomous driving but also attack-agnostic and capable of identifying adversarial objects used by attackers. Extensive experiments in both simulated environments and real-world scenarios using a LiDAR perception testbed demonstrate the effectiveness and practicability of the proposed defense.",
+    "citation_count": 3,
+    "reference_count": 44,
+    "url": "https://doi.org/10.1145/3666025.3699345",
+    "dblp_key": "conf/sensys/ZhangLJZM24",
+    "source_id": "https://openalex.org/W4404034605"
+  },
+  {
+    "title": "FedHybrid: Breaking the Memory Wall of Federated Learning via Hybrid Tensor Management.",
+    "authors": [
+      "Kahou Tam",
+      "Chunlin Tian",
+      "Li Li 0064",
+      "Haikai Zhao",
+      "Chengzhong Xu 0001"
+    ],
+    "venue": "SenSys",
+    "year": 2024,
+    "abstract": "Federated Learning (FL) emerges as a new learning paradigm that enables multiple devices to collaboratively train a shared model while preserving data privacy. However, one fundamental and prevailing challenge that hinders the deployment of FL on mobile devices is the memory limitation. This paper proposes FedHybrid, a novel framework that effectively reduces the memory footprint during the training process while guaranteeing the model accuracy and the overall training progress. Specifically, FedHybrid first selects the participating devices for each training round by jointly evaluating their memory budget, computing capability, and data diversity. After that, it judiciously analyzes the computational graph and generates an execution plan for each selected client in order to meet the corresponding memory budget while minimizing the training delay through employing a hybrid of recomputation and compression techniques according to the characteristic of each tensor. During the local training process, FedHybrid carries out the execution plan with a well-designed activation compression technique to effectively achieve memory reduction with minimum accuracy loss. We conduct extensive experiments to evaluate FedHybrid on both simulation and off-the-shelf mobile devices. The experiment results demonstrate that FedHybrid achieves up to a 39.1% increase in model accuracy and a 15.5X reduction in wall clock time under various memory budgets compared with the baselines.",
+    "citation_count": 1,
+    "reference_count": 22,
+    "url": "https://doi.org/10.1145/3666025.3699346",
+    "dblp_key": "conf/sensys/TamT0Z024",
+    "source_id": "https://openalex.org/W4404034892"
+  },
+  {
+    "title": "TaDA: Task Decoupling Architecture for the Battery-less Internet of Things.",
+    "authors": [
+      "Weining Song",
+      "Stefanos Kaxiras",
+      "Thiemo Voigt",
+      "Yuan Yao 0009",
+      "Luca Mottola"
+    ],
+    "venue": "SenSys",
+    "year": 2024,
+    "abstract": "We present TaDA, a system architecture enabling efficient execution of Internet of Things (IoT) applications across multiple computing units, powered by ambient energy harvesting. Low-power microcontroller units (MCUs) are increasingly specialized; for example, custom designs feature hardware acceleration of neural network inference, next to designs providing energy-efficient input/output. As application requirements are growingly diverse, we argue that no single MCU can efficiently fulfill them. TaDA allows programmers to assign the execution of different slices of the application logic to the most efficient MCU for the job. We achieve this by decoupling task executions in time and space, using a special-purpose hardware interconnect we design, while providing persistent storage to cross periods of energy unavailability. We compare our prototype performance against the single most efficient computing unit for a given workload. We show that our prototype saves up to 96.7% energy per application round. Given the same energy budget, this yields up to a 68.7x throughput improvement.",
+    "citation_count": 6,
+    "reference_count": 37,
+    "url": "https://doi.org/10.1145/3666025.3699347",
+    "dblp_key": "conf/sensys/SongKV0M24",
+    "source_id": "https://openalex.org/W4404034696"
+  },
+  {
+    "title": "DynaSpa: Exploiting Spatial Sparsity for Efficient Dynamic DNN Inference on Devices.",
+    "authors": [
+      "Renyuan Liu",
+      "Yuyang Leng",
+      "Shilei Tian",
+      "Shaohan Hu",
+      "Chun-Fu (Richard) Chen",
+      "Shuochao Yao"
+    ],
+    "venue": "SenSys",
+    "year": 2024,
+    "abstract": "Recent advancements in exploring machine learning models' dynamic spatial sparsity have demonstrated great potential for superior efficiency and adaptability without compromising accuracy when compared to conventional static-and-dense DNNs. However, realizing theoretical inference acceleration under practical deployment environments is still faced with significant system challenges. Current vendor libraries and tensor compilers fall short due to their extra data copy operations or insufficient computation schemes, especially for DNN operators with dynamic spatial sparsity.",
+    "citation_count": 5,
+    "reference_count": 49,
+    "url": "https://doi.org/10.1145/3666025.3699348",
+    "dblp_key": "conf/sensys/LiuLTHCY24",
+    "source_id": "https://openalex.org/W4404034550"
+  },
+  {
+    "title": "Large Model for Small Data: Foundation Model for Cross-Modal RF Human Activity Recognition.",
+    "authors": [
+      "Yuxuan Weng",
+      "Guoquan Wu",
+      "Tianyue Zheng",
+      "Yanbing Yang 0001",
+      "Jun Luo 0001"
+    ],
+    "venue": "SenSys",
+    "year": 2024,
+    "abstract": "Radio-Frequency (RF)-based Human Activity Recognition (HAR) rises as a promising solution for applications unamenable to techniques requiring computer visions. However, the scarcity of labeled RF data due to their non-interpretable nature poses a significant obstacle. Thanks to the recent breakthrough of foundation models (FMs), extracting deep semantic insights from unlabeled visual data become viable, yet these vision-based FMs fall short when applied to small RF datasets. To bridge this gap, we introduce FM-Fi, an innovative cross-modal framework engineered to translate the knowledge of vision-based FMs for enhancing RF-based HAR systems. FM-Fi involves a novel cross-modal contrastive knowledge distillation mechanism, enabling an RF encoder to inherit the interpretative power of FMs for achieving zero-shot learning. It also employs the intrinsic capabilities of FM and RF to remove extraneous features for better alignment between the two modalities. The framework is further refined through metric-based few-shot learning techniques, aiming to boost the performance for predefined HAR tasks. Comprehensive evaluations evidently indicate that FM-Fi rivals the effectiveness of vision-based methodologies, and the evaluation results provide empirical validation of FM-Fi's generalizability across various environments.",
+    "citation_count": 23,
+    "reference_count": 64,
+    "url": "https://doi.org/10.1145/3666025.3699349",
+    "dblp_key": "conf/sensys/WengWZY024",
+    "source_id": "https://openalex.org/W4404034620"
+  },
+  {
+    "title": "LTA: Control-Driven UAV Testing and Bug Localization with Flight Record Decomposition.",
+    "authors": [
+      "Changyul Lee",
+      "Deokjin Kim",
+      "Giyeol Kim",
+      "Sangwook Lee",
+      "Taegyu Kim"
+    ],
+    "venue": "SenSys",
+    "year": 2024,
+    "abstract": "As UAVs have been widely used in various domains, such as the military and industry, their safety and security have become crucial. One of their root causes is software bugs, which fall into two bug categories: traditional software bugs, such as memory safety bugs, and UAV-specific logical model-misimplementation (LMM) bugs leading to physical misbehavior, such as crashes. To discover and localize bugs, many proactive and reactive techniques have been proposed. However, LMM bug mitigation techniques are still immature, unlike well-established techniques for traditional software bugs, because existing approaches are unable to track the causal relationship between the LMM bug root cause in software and its resulting physical misbehavior. Specifically, existing proactive approaches require extensive, time-consuming dynamic testing to capture the physical impacts of LMM bug exploitation amidst a vast input space. Conversely, previous reactive approaches are inaccurate because existing work cannot accurately identify the causal relationship between misbehavior and bug-triggering inputs mixed with benign but suspicious inputs.",
+    "citation_count": 2,
+    "reference_count": 38,
+    "url": "https://doi.org/10.1145/3666025.3699350",
+    "dblp_key": "conf/sensys/LeeKKLK24",
+    "source_id": "https://openalex.org/W4404034693"
+  },
+  {
+    "title": "RFCanvas: Modeling RF Channel by Fusing Visual Priors and Few-shot RF Measurements.",
+    "authors": [
+      "Xingyu Chen",
+      "Zihao Feng",
+      "Ke Sun 0012",
+      "Kun Qian 0004",
+      "Xinyu Zhang 0003"
+    ],
+    "venue": "SenSys",
+    "year": 2024,
+    "abstract": "Accurate and responsive simulation of radio frequency (RF) signal propagation is crucial for designing wireless systems operating in dynamic environments. Conventional ray tracing approaches struggle to accurately model the intricate geometries and material properties of objects that impact propagation. Recently proposed neural scene representations can learn such intricacies from RF data, but they treat the entire scene as implicit neural networks, necessitating retraining with a massive amount of RF data upon any environmental changes. In this paper, we propose RFCanvas, which fuses visual priors and RF measurements to achieve high accuracy for realistic scenes and be responsive to environmental changes. To ensure compatibility between visual priors and RF measurements, we introduce RFCanvas scene representations that model shapes and materials of substantial objects with tensorial fields and signed distance fields. We further extract motion information from visual priors to adapt RFCanvas scene representations to scene dynamics. RFCanvas is built upon an end-to-end optimization framework with differentiable RF simulation. Extensive evaluations across real-world wireless communication and sensing environments demonstrate RFCanvas's superiority over both existing methods.",
+    "citation_count": 6,
+    "reference_count": 35,
+    "url": "https://doi.org/10.1145/3666025.3699351",
+    "dblp_key": "conf/sensys/ChenFSQZ24",
+    "source_id": "https://openalex.org/W4404034666"
+  },
+  {
+    "title": "BSENSE: In-vehicle Child Detection and Vital Sign Monitoring with a Single mmWave Radar and Synthetic Reflectors.",
+    "authors": [
+      "Mingyue Tang",
+      "Pranshu Teckchandani",
+      "Jizheng He",
+      "Hanbo Guo",
+      "Elahe Soltanaghai"
+    ],
+    "venue": "SenSys",
+    "year": 2024,
+    "abstract": "Recent regulations on monitoring infants and children in vehicle cabins have spurred interest in using Millimeter-wave (mmWave) radars due to their reliability in various lighting conditions and privacy benefits. However, existing radar-based vital sign detection solutions fail in car settings with abundant occlusions or closely-seated multi-person scenarios. To resolve these limitations, we introduce BSENSE, a joint occupancy and vital sign monitoring system using a single radar that is robust to occlusion and varying seating arrangements and number of occupants in vehicle cabins. BSENSE incorporates synthetic wireless reflectors positioned in car corners to redirect radar signals toward blind spots, enabling Non-Line-of-Sight (NLoS) vital sign detection while maintaining sensing performance in Line-of-Sight (LoS) areas. The proposed system employs a hybrid architecture combining signal processing and a deep learning pipeline that can detect the car seating layout and jointly learn occupied seats and signatures of breathing to distinguish adults from children and infants, and monitor their vital signs over time. Our extensive evaluations with 120,000 radar data points, 400 different experimental scenarios, a mix of 10 adults, 5 children of age 1--11, and two programmable infant and child simulators demonstrate BSENSE's capability in child detection with over 97% accuracy and estimating their breathing rate within 6 BPM error, even in multi-person and NLoS scenarios, and across different car models.",
+    "citation_count": 12,
+    "reference_count": 87,
+    "url": "https://doi.org/10.1145/3666025.3699352",
+    "dblp_key": "conf/sensys/TangTHGS24",
+    "source_id": "https://openalex.org/W4404034581"
+  },
+  {
+    "title": "Don't Crosstalk to Me: Origami Structure-Augmented Sensing for Scalable Surface Pressure Monitoring.",
+    "authors": [
+      "Shubham Rohal",
+      "Dong Yoon Lee",
+      "Carlos Ruiz",
+      "Joshua Zhang",
+      "Jonathon Fagert",
+      "Jun Han 0001",
+      "Shijia Pan"
+    ],
+    "venue": "SenSys",
+    "year": 2024,
+    "abstract": "Background: Pancreatic ductal adenocarcinoma (PDAC) exhibits profound resistance to immunotherapy due to its highly immunosuppressive tumor microenvironment (TME). Objective: This review aims to elucidate the key mechanisms of TME-mediated immune evasion in PDAC and explore therapeutic strategies to overcome these barriers. Methods: A comprehensive analysis of recent studies was conducted, focusing on the cellular, stromal, and metabolic components of the PDAC TME, alongside emerging technologies for TME reprogramming. Results: Dense extracellular matrix, CAF-driven fibrosis, myeloid-derived suppressor cells (MDSCs), tumor-associated macrophages (TAMs), Tregs, and metabolic competition collectively impair immune cell infiltration and activation. Novel interventions-including ECM remodeling, CAF modulation, metabolic reprogramming, and myeloid cell targeting-show promise in restoring immune responsiveness. Conclusion: TME reprogramming represents a critical strategy to enhance immunotherapy efficacy in PDAC, offering new opportunities for overcoming immune exclusion and resistance.",
+    "citation_count": 5,
+    "reference_count": 164,
+    "url": "https://doi.org/10.1145/3666025.3699353",
+    "dblp_key": "conf/sensys/RohalLRZF0P24",
+    "source_id": "https://openalex.org/W4416341106"
+  },
+  {
+    "title": "Enhancing LoRa Reception with Generative Models: Channel-Aware Denoising of LoRaPHY Signals.",
+    "authors": [
+      "Kanav Sabharwal",
+      "Soundarya Ramesh",
+      "Jingxian Wang",
+      "Dinil Mon Divakaran",
+      "Mun Choon Chan"
+    ],
+    "venue": "SenSys",
+    "year": 2024,
+    "abstract": "The proliferation of Internet of Things (IoT) applications relying on Low Power Wide Area Networks (LPWANs) demands robust and energy-efficient communication solutions. Among various LP-WAN technologies, LoRa emerges as a prominent choice due to its long-range capabilities and low energy consumption. However, the practical deployment of LoRa is hindered by significant signal degradation caused by channel and hardware noise, especially in urban environments. We introduce GLoRiPHY, a novel generative framework designed to enhance the reception quality of LoRaPHY signals through a channel-aware denoising mechanism. Utilizing a transformer-based architecture, GLoRiPHY leverages the known preamble of LoRaPHY signals to compensate for channel-induced distortions, thereby generating a clean signal suitable for direct demodulation. The system integrates Convolutional Neural Networks (CNNs) for efficient feature encoding and decoding, maintaining a compact model footprint even at higher Spreading Factors (SFs). Evaluations on real-world and simulated datasets show that in comparison to the current state-of-the-art solution, GLoRiPHY significantly lowers the Symbol Error Rate (SER) by up to 2.85x and demonstrates generalizability in unseen environments, while reducing inference times by up to 5.75x.",
+    "citation_count": 2,
+    "reference_count": 38,
+    "url": "https://doi.org/10.1145/3666025.3699354",
+    "dblp_key": "conf/sensys/SabharwalRWDC24",
+    "source_id": "https://openalex.org/W4404034480"
+  },
+  {
+    "title": "LiteMoE: Customizing On-device LLM Serving via Proxy Submodel Tuning.",
+    "authors": [
+      "Yan Zhuang 0004",
+      "Zhenzhe Zheng 0001",
+      "Fan Wu 0006",
+      "Guihai Chen"
+    ],
+    "venue": "SenSys",
+    "year": 2024,
+    "abstract": "Considering limited on-device resources, current practices are attempting to deploy a system-level mixture-of-experts (MoE)-based foundation LLM shared by multiple mobile apps on a device to support mobile intelligence. However, mobile apps are hard to customize their services that require tuning adapters associated with the LLM using private in-app data. The difficulty arises due to both the limited on-device resources and the restricted control that apps have over the foundation LLM. To address this issue, in this work, we propose LiteMoE, a novel proxy submodel tuning framework that supports mobile apps to efficiently fine-tune customized adapters on devices using proxy submodels. The key technique behind LiteMoE is a post-training submodel extraction method, whereby without additional re-training, we can identify and reserve critical experts, match and merge moderate experts, to extract a lightweight and effective proxy submodel from the foundation LLM for a certain app. We implemented a prototype of LiteMoE and evaluated it over various MoE-based LLMs and mobile computing tasks. The results show that with LiteMoE, mobile apps are able to fine-tune customized adapters on resource-limited devices, achieving 12.7% accuracy improvement and 6.6× memory reduction compared with operating the original foundation LLM.",
+    "citation_count": 8,
+    "reference_count": 21,
+    "url": "https://doi.org/10.1145/3666025.3699355",
+    "dblp_key": "conf/sensys/ZhuangZ0C24",
+    "source_id": "https://openalex.org/W4404034470"
+  },
+  {
+    "title": "LiTEfoot: Ultra-low-power Localization using Ambient Cellular Signals.",
+    "authors": [
+      "Nakul Garg",
+      "Aritrik Ghosh",
+      "Nirupam Roy"
+    ],
+    "venue": "SenSys",
+    "year": 2024,
+    "abstract": "In this paper, we introduce a low-power wide-area cellular localization system, called LiTEfoot. The core architecture of the radio carefully applies non-linear transform of the entire cellular spectrum to obtain a systematic superimposition of the synchronization signals at the baseband. The system develops methods to simultaneously identify all the base stations that are active at any cellular band from the transformed signal. The radio front end uses a simple envelop detector to realize the non-linear transformation. We build on this low-power radio to implement a self-localization system leveraging ambient 4G-LTE signals. We show that the core system can also be extended to other cellular technologies like 5G-NR and NB-IoT. The prototype achieves a median localization error of 22 meters in urban areas and 50 meters in rural areas. It can sense a 3GHz wideband LTE spectrum in 10ms using non-linear intermodulation while consuming 0.9 mJ of energy for a PCB-based implementation and 40 μJ for CMOS simulation. In other words, LiTEfoot tags can last for 11 years on a coin cell while continuously estimating location every 5 seconds. We believe that LiTEfoot will have widespread implications in city-scale asset tracking and other location-based services. The radio architecture can be useful beyond low-power self-localization and can find application in synchronization and communication on battery-less platforms.",
+    "citation_count": 2,
+    "reference_count": 77,
+    "url": "https://doi.org/10.1145/3666025.3699356",
+    "dblp_key": "conf/sensys/GargGR24",
+    "source_id": "https://openalex.org/W4404034566"
+  },
+  {
+    "title": "HiSAC: High-Resolution Sensing with Multiband Communication Signals.",
+    "authors": [
+      "Jacopo Pegoraro",
+      "Jesus Omar Lacruz",
+      "Michele Rossi",
+      "Joerg Widmer"
+    ],
+    "venue": "SenSys",
+    "year": 2024,
+    "abstract": "Integrated Sensing And Communication (ISAC) systems are expected to perform accurate radar sensing while having minimal impact on communication. Ideally, sensing should only reuse communication resources, especially for spectrum which is contended by many applications. However, this poses a great challenge in that communication systems often operate on narrow subbands with low sensing resolution. Combining contiguous subbands has shown significant resolution gain in active localization. However, multiband ISAC remains unexplored due to communication subbands being highly sparse (non-contiguous) and affected by phase offsets that prevent their aggregation (incoherent). To tackle these problems, we design HiSAC, the first multiband ISAC system that combines diverse subbands across a wide frequency range to achieve super-resolved passive ranging. To solve the non-contiguity and incoherence of subbands, HiSAC combines them progressively, exploiting an anchor propagation path between transmitter and receiver in an optimization problem to achieve phase coherence. HiSAC fully reuses pilot signals in communication systems, applies to different frequencies, and can combine diverse technologies, e.g., 5G-NR and WiGig. We implement HiSAC on an experimental platform in the millimeter-wave unlicensed band and test it on objects and humans. Our results show it enhances the sensing resolution by up to 20 times compared to single-band processing while occupying the same spectrum.",
+    "citation_count": 8,
+    "reference_count": 63,
+    "url": "https://doi.org/10.1145/3666025.3699357",
+    "dblp_key": "conf/sensys/PegoraroLRW24",
+    "source_id": "https://openalex.org/W4404034574"
+  },
+  {
+    "title": "PiezoBud: A Piezo-Aided Secure Earbud with Practical Speaker Authentication.",
+    "authors": [
+      "Gen Li",
+      "Huaili Zeng",
+      "Hanqing Guo",
+      "Yidong Ren",
+      "Aiden Dixon",
+      "Zhichao Cao 0001",
+      "Tianxing Li 0001"
+    ],
+    "venue": "SenSys",
+    "year": 2024,
+    "abstract": "With the advancement of AI-powered personal voice assistants, speaker authentication via earbuds has become increasingly vital, serving as a critical interface between users and mobile devices. However, existing audio-based speaker authentication methods fail to defend against voice spoofing threats such as replay and deep-fake attacks. To counteract these risks, we introduce PiezoBud, a pioneering multi-modal user authentication system that is truly practical and lightweight for earbuds. PiezoBud uses miniature piezoelectric sensors to detect micro-vibrations on the skin, extracting user-specific biometric data to authenticate legitimate access on the local smartphone and protect against malicious attacks. Our exploratory study, involving 85 participants, demonstrates the effectiveness of PiezoBud in various everyday scenarios, including ambient noise, body movement, and in-ear media playing. Using only 15 seconds of enrollment data, PiezoBud achieves an Equal Error Rate (EER) of 1.05% and attain a mean authentication latency of 0.06 seconds on mobile devices. We also evaluate PiezoBud's effectiveness in countering challenging adaptive attack scenarios and its overall performance in various real-world situations. Our evaluation highlights that PiezoBud stands out as a practical, resilient, responsive, and secure option for earbuds users.",
+    "citation_count": 1,
+    "reference_count": 50,
+    "url": "https://doi.org/10.1145/3666025.3699358",
+    "dblp_key": "conf/sensys/LiZGRD0024",
+    "source_id": "https://openalex.org/W4404034686"
+  },
+  {
+    "title": "Hawk: An Efficient NALM System for Accurate Low-Power Appliance Recognition.",
+    "authors": [
+      "Zijian Wang",
+      "Xingzhou Zhang",
+      "Yifan Wang 0005",
+      "Xiaohui Peng 0002",
+      "Zhiwei Xu 0002"
+    ],
+    "venue": "SenSys",
+    "year": 2024,
+    "abstract": "Non-intrusive Appliance Load Monitoring (NALM) aims to recognize individual appliance usage from the main meter without indoor sensors. However, existing systems struggle to balance dataset construction efficiency and event/state recognition accuracy, especially for low-power appliance recognition. This paper introduces Hawk, an efficient and accurate NALM system that operates in two stages: dataset construction and event recognition. In the data construction stage, we efficiently collect a balanced and diverse dataset, HawkDATA, based on balanced Gray code and enable automatic data annotations via a sampling synchronization strategy called shared perceptible time. During the event recognition stage, our algorithm pipeline integrates steady-state differential pre-processing and voting-based post-processing for accurate event recognition from the aggregate current. Experimental results show that HawkDATA takes only 1/71.5 of the collection time to collect 6.34x more appliance state combinations than the baseline. In HawkDATA and a widely used dataset, Hawk achieves an average F1 score of 93.94% for state recognition and 97.07% for event recognition, which is a 47.98% and 11.57% increase over SOTA algorithms. Furthermore, selected appliance subsets and the model trained from HawkDATA are deployed in two real-world scenarios with many unknown background appliances. The average F1 scores of event recognition are 96.02% and 94.76%. Hawk's source code and HawkDATA are accessible at https://github.com/WZiJ/SenSys24-Hawk.",
+    "citation_count": 0,
+    "reference_count": 46,
+    "url": "https://doi.org/10.1145/3666025.3699359",
+    "dblp_key": "conf/sensys/WangZW0024",
+    "source_id": "https://openalex.org/W4404034472"
+  },
+  {
+    "title": "Towards Efficient Heterogeneous Multi-Modal Federated Learning with Hierarchical Knowledge Disentanglement.",
+    "authors": [
+      "Xingchen Wang",
+      "Haoyu Wang 0004",
+      "Feijie Wu",
+      "Tianci Liu 0003",
+      "Qiming Cao",
+      "Lu Su 0001"
+    ],
+    "venue": "SenSys",
+    "year": 2024,
+    "abstract": "Multi-modal sensing systems are becoming increasingly common in real-world applications like human activity recognition (HAR). To enable knowledge sharing among individuals, Federated Learning (FL) offers a solution as a distributed machine learning paradigm that retains user data locally, thereby safeguarding privacy. However, existing heterogeneous multi-modal Federated Learning (MMFL) solutions have yet to fully utilize all the potential knowledge-sharing opportunities, as they fail to capture fundamental common knowledge that is independent of both modality and client. In this paper, we propose Federated Hierarchical Knowledge Disentanglement (FedHKD), a new sensing system for heterogeneous multi-modal federated learning. FedHKD introduces a multi-stage training paradigm based on hierarchical knowledge disentanglement at both the modality and client levels. This design enhances collaboration among modality-heterogeneous clients while maintaining low storage overhead and high adaptation flexibility to new sensing modalities. Our evaluation of two public real-world multi-modal HAR datasets and a self-collected dataset demonstrates that FedHKD outperforms state-of-the-art baselines by up to 4.85% in accuracy while saving up to 2.29× in storage. Additionally, when adapting to new sensing modalities, it reduces communication overhead by up to 4.62×.",
+    "citation_count": 6,
+    "reference_count": 29,
+    "url": "https://doi.org/10.1145/3666025.3699360",
+    "dblp_key": "conf/sensys/Wang0W0C024",
+    "source_id": "https://openalex.org/W4404034890"
+  },
+  {
+    "title": "AdaFlow: Opportunistic Inference on Asynchronous Mobile Data with Generalized Affinity Control.",
+    "authors": [
+      "Fengmin Wu",
+      "Sicong Liu 0005",
+      "Kehao Zhu",
+      "Xiaochen Li",
+      "Bin Guo 0001",
+      "Zhiwen Yu 0001",
+      "Hongkai Wen 0001",
+      "Xiangrui Xu 0005",
+      "Lehao Wang",
+      "Xiangyu Liu"
+    ],
+    "venue": "SenSys",
+    "year": 2024,
+    "abstract": "The rise of mobile devices equipped with numerous sensors, such as LiDAR and cameras, has spurred the adoption of multi-modal deep intelligence for distributed sensing tasks, such as smart cabins and driving assistance. However, the arrival times of mobile sensory data vary due to modality size and network dynamics, which can lead to delays (if waiting for slower data) or accuracy decline (if inference proceeds without waiting). Moreover, the diversity and dynamic nature of mobile systems exacerbate this challenge. In response, we present a shift to opportunistic inference for asynchronous distributed multi-modal data, enabling inference as soon as partial data arrives. While existing methods focus on optimizing modality consistency and complementarity, known as modal affinity, they lack a computational approach to control this affinity in open-world mobile environments. AdaFlow pioneers the formulation of structured cross-modality affinity in mobile contexts using a hierarchical analysis-based normalized matrix. This approach accommodates the diversity and dynamics of modalities, generalizing across different types and numbers of inputs. Employing an affinity attention-based conditional GAN (ACGAN), AdaFlow facilitates flexible data imputation, adapting to various modalities and downstream tasks without retraining. Experiments show that AdaFlow significantly reduces inference latency by up to 79.9% and enhances accuracy by up to 61.9%, outperforming status quo approaches. Also, this method can enhance LLM performance to preprocess asynchronous data.",
+    "citation_count": 3,
+    "reference_count": 46,
+    "url": "https://doi.org/10.1145/3666025.3699361",
+    "dblp_key": "conf/sensys/WuLZL00W0WL24",
+    "source_id": "https://openalex.org/W4404034861"
+  },
+  {
+    "title": "Combating BLE Weak Links with Adaptive Symbol Extension and DNN-based Demodulation.",
+    "authors": [
+      "Yeming Li",
+      "Jiamei Lv",
+      "Hailong Lin",
+      "Yi Gao 0001",
+      "Wei Dong 0001"
+    ],
+    "venue": "SenSys",
+    "year": 2024,
+    "abstract": "Bluetooth Low Energy (BLE) is one of the most popular wireless protocols for building IoT applications because of its low energy, low cost, and wide compatibility nature. However, BLE communication performance can be easily affected by interference and blockages because of its low transmission power. This paper presents BLEW, a technique to improve the BLE communication performance over weak links by exploiting adaptive symbol extension and DNN-based demodulator to combat channel interference and maximize network throughput. First, we propose a phase peak clustering-based preamble detection method that coherently adds up the phase difference of preambles to combat the interference. We then propose a multi-domain DNN-based demodulator to fully extracts the temporal and spectrum features of the signal and enhance the demodulation performance. Finally, we model the throughput of Commercial Off-The-Shelf (COTS) BLE chips transmitting extended packets, which can be used to optimize the symbol length in an adaptive manner. We implement BLEW with USRP B210 and COTS nRF52840 platform. Experiments show that BLEW can increase throughput by up to 157.39 Kb/s compared with native BLE over typical weak links. Compared with existing approaches, BLEW has up to 25.70% higher preamble detection rate and up to 3.37 dB demodulation gain.",
+    "citation_count": 1,
+    "reference_count": 46,
+    "url": "https://doi.org/10.1145/3666025.3699362",
+    "dblp_key": "conf/sensys/LiLL0024",
+    "source_id": "https://openalex.org/W4404034572"
+  },
+  {
+    "title": "CommRad: Context-Aware Sensing-Driven Millimeter-Wave Networks.",
+    "authors": [
+      "Ish Kumar Jain",
+      "Suriyaa M. M.",
+      "Dinesh Bharadia"
+    ],
+    "venue": "SenSys",
+    "year": 2024,
+    "abstract": "Millimeter-wave (mmWave) technology is pivotal for next-generation wireless networks, enabling high-data-rate and low-latency applications such as autonomous vehicles and XR streaming. However, maintaining directional mmWave links in dynamic mobile environments is challenging due to mobility-induced disruptions and blockage. While effective, the current 5G NR beam training methods incur significant overhead and scalability issues in multi-user scenarios. To address this, we introduce CommRad, a sensing-driven solution incorporating a radar sensor at the base station to track mobile users and maintain directional beams even under blockages. While radar provides high-resolution object tracking, it suffers from a fundamental challenge of lack of context, i.e., it cannot discern which objects in the environment represent active users, reflectors, or blockers. To obtain this contextual awareness, CommRad unites wireless sensing capabilities of bi-static radio communication with the mono-static radar sensor, allowing radios to provide initial context to radar sensors. Subsequently, the radar aids in user tracking and sustains mobile links even in obstructed scenarios, resulting in robust and high-throughput directional connections for all mobile users at all times. We evaluate this collaborative radar-radio framework using a 28 GHz mmWave testbed integrated with a radar sensor in various indoor and outdoor scenarios, demonstrating a 2.5x improvement in median throughput compared to a non-collaborative baseline.",
+    "citation_count": 1,
+    "reference_count": 0,
+    "url": "https://doi.org/10.1145/3666025.3699363",
+    "dblp_key": "conf/sensys/JainMB24",
+    "source_id": "https://openalex.org/W4400667649"
+  },
+  {
+    "title": "Intermittent Inference: Trading a 1% Accuracy Loss for a 1.9x Throughput Speedup.",
+    "authors": [
+      "Rei Barjami",
+      "Antonio Miele",
+      "Luca Mottola"
+    ],
+    "venue": "SenSys",
+    "year": 2024,
+    "abstract": "We present INTERCEPT, a compile-time toolchain enabling manifold throughput improvements when running intermittent DNN inference on IoT devices, in exchange of a maximum 1% accuracy loss. Intermittently-computing IoT devices rely on ambient energy harvesting and compute opportunistically, as energy is available. They use NVM to persist intermediate results in anticipation of energy failures. Without requiring changes to existing models and by exploiting the features of STT-MRAM as NVM, INTERCEPT optimizes the placement and configuration of state persistence operations when executing the inference process. This happens off-line with no user intervention, while enforcing a maximum 1% accuracy loss. Our results, obtained across three platforms and six diverse neural networks, indicate that INTERCEPT provides a 40% energy gain in a single inference process, on average. With the same energy budget, this yields a 1.9x throughput speedup.",
+    "citation_count": 9,
+    "reference_count": 40,
+    "url": "https://doi.org/10.1145/3666025.3699364",
+    "dblp_key": "conf/sensys/BarjamiMM24",
+    "source_id": "https://openalex.org/W4404034537"
+  },
+  {
+    "title": "Advancing PPG-Based Continuous Blood Pressure Monitoring from a Generative Perspective.",
+    "authors": [
+      "Hui Ji 0003",
+      "Pengfei Zhou"
+    ],
+    "venue": "SenSys",
+    "year": 2024,
+    "abstract": "Cuffless blood pressure (BP) monitoring is a critical task in the cardiovascular diseases (CVDs) domain, commonly based on Photoplethysmography (PPG) and Electrocardiogram (ECG) signals, providing foresight into cardiac health. While ECG often delivers better BP monitoring performance, the acquisition via straps and patches leads to a poor user experience. On the contrary, PPG enables continuous and convenient monitoring, but offers less informative references. A potential approach is to convert PPG signals into ECG signals, ensuring both high convenience and optimal accuracy. Converting PPG into ECG, however, involves a substantial reduction in inherent entropy, necessitating a thorough understanding of the process and specific techniques to guide the ECG generation. In this paper, we present a blood pressure monitoring framework that achieves ECG-level performance using solely the PPG signal. A diffusion model is introduced to conduct a selective ECG-targeted generative process with the condition of PPG. Based on our observation from the experimental investigation, a set of techniques is developed to significantly enhance the model's ability in generating high-quality ECG signals. Specifically, in the forward process, we employ an adaptive search module to adapt the QRS segment within the ECG waveform. In the reverse process, we propose the scale alignment and frequency alignment modules to better guide the generative process. Extensive experiments conducted on two public datasets and one self-collected dataset demonstrate the superior performance of our proposed framework, offering a groundbreaking perspective for PPG-based continuous blood pressure monitoring.",
+    "citation_count": 9,
+    "reference_count": 66,
+    "url": "https://doi.org/10.1145/3666025.3699365",
+    "dblp_key": "conf/sensys/JiZ24",
+    "source_id": "https://openalex.org/W4404034571"
+  },
+  {
+    "title": "Eternity in a Second: Quick-pass Continuous Authentication Using Out-ear Microphones.",
+    "authors": [
+      "Ming Gao 0023",
+      "Xin Tong",
+      "Jiatong Chen",
+      "Yike Chen",
+      "Fu Xiao 0001",
+      "Jinsong Han"
+    ],
+    "venue": "SenSys",
+    "year": 2024,
+    "abstract": "Continuous authentication is increasingly critical for cyber security. However, existing approaches are time-inefficient due to their simple signal modulation with low-effective feature extraction throughput. In this paper, we propose a continuous authentication technique, OnePiece. OnePiece is free from the requirement of in-ear microphones, which are necessary for existing earphone authentication systems. It exploits out-ear microphones for biometrics extraction, which are ubiquitous on off-the-shelf earphones. We analyze the acoustic response model of ears towards out-ear microphones via the air, which is different from that towards in-ear microphones. A frequency-varying ultrasonic modulation scheme is proposed to characterize in-depth ear biometrics in user-friendly, error-free, and time-efficient ways. Therefore, OnePiece enables quick-pass authentication once users wear the earphones, followed by continuous authentication covering the whole course. Moreover, we propose a wake-up mechanism to reduce the consumed power, which addresses the key power consumption issue in ultrasonic sensing techniques. Particularly, OnePiece can be smoothly deployed on off-the-shelf wired and wireless earphones. It performs good cross-device performance in which users just register only once. Extensive evaluations are conducted to validate its effectiveness under real-world scenarios.",
+    "citation_count": 6,
+    "reference_count": 52,
+    "url": "https://doi.org/10.1145/3666025.3699366",
+    "dblp_key": "conf/sensys/GaoTCC0H24",
+    "source_id": "https://openalex.org/W4404034886"
+  },
+  {
+    "title": "StarAngle: User Orientation Sensing with Beacon Phase Measurements of Multiple Starlink Satellites.",
+    "authors": [
+      "Raghav Rathi",
+      "Zhenghao Zhang"
+    ],
+    "venue": "SenSys",
+    "year": 2024,
+    "abstract": "Low Earth Orbit (LEO) satellite networks have been growing very rapidly in recent years. In this paper, we propose a novel method, called StarAngle, which estimates user orientation with the beacon signals of Starlink satellites. StarAngle measures the beacon phase difference between two receiving antennas because the phase difference is a function of the user orientation. The phase measurements are compared with mathematical calculations based on known orbital parameters of Starlink satellites and the value that leads to the best agreement is used as the estimation. We overcome challenges due to asynchronous clocks in our commodity antennas by subtracting the phase measurements of one satellite by another which cancels the biases caused by clock mismatch. We experimentally test StarAngle in 10 locations under challenging weather conditions and our results show that the median estimation error is 7.5 degrees. Our results also confirm that the phase information of Starlink satellites can be measured reliably and may be used to support other applications in addition to user orientation estimation.",
+    "citation_count": 2,
+    "reference_count": 43,
+    "url": "https://doi.org/10.1145/3666025.3699367",
+    "dblp_key": "conf/sensys/RathiZ24",
+    "source_id": "https://openalex.org/W4404034687"
+  },
+  {
+    "title": "Towards High-Speed Passive Visible Light Communication with Event Cameras and Digital Micro-Mirrors.",
+    "authors": [
+      "Yanxiang Wang",
+      "Yiran Shen 0001",
+      "Kenuo Xu",
+      "Mahbub Hassan",
+      "Guangrong Zhao",
+      "Chenren Xu",
+      "Wen Hu 0001"
+    ],
+    "venue": "SenSys",
+    "year": 2024,
+    "abstract": "Passive visible light communication (VLC) modulates light propagation or reflection to transmit data without directly modulating the light source. Thus, passive VLC provides an alternative to conventional VLC, enabling communication where the light source cannot be directly controlled. There have been ongoing efforts to explore new methods and devices for modulating light propagation or reflection. The state-of-the-art has broken the 100 kbps data rate barrier for passive VLC by using a digital micro-mirror device (DMD) as the light modulating platform, or transmitter, and a photo-diode as the receiver. We significantly extend this work by proposing a massive spatial data channel framework for DMDs, where individual channels can be decoded in parallel using an event camera at the receiver. For the event camera, we introduce event processing algorithms to detect numerous channels and decode bits from individual channels with high reliability. Our prototype, built with off-the-shelf event cameras and DMDs, can decode up to ~2,000 parallel channels, achieving a data transmission rate of 1.6 Mbps, markedly surpassing current benchmarks by 16x.",
+    "citation_count": 6,
+    "reference_count": 46,
+    "url": "https://doi.org/10.1145/3666025.3699368",
+    "dblp_key": "conf/sensys/Wang0XHZXH24",
+    "source_id": "https://openalex.org/W4404034577"
+  },
+  {
+    "title": "SyncEcho: Echo-Based Single Speaker Time Offset Estimation for Time-of-Flight Localization.",
+    "authors": [
+      "Hiroaki Murakami",
+      "Takuya Sasatani",
+      "Masanori Sugimoto",
+      "Issey Sukeda",
+      "Yukiya Mita",
+      "Yoshihiro Kawahara"
+    ],
+    "venue": "SenSys",
+    "year": 2024,
+    "abstract": "Low-cost and accurate indoor location information can add spatiotemporal context to information systems, enabling new location-aware applications. Time-of-Flight (ToF)-based acoustic localization using speakers and microphones allows for localization accuracy within a few tens of centimeters, outperforming RF-based techniques. However, ToF-based localization requires synchronization between the speaker and microphone, i.e., the time offset between them must be known. Previous time offset estimation methods required custom hardware for speakers, limiting their practical use. Estimating the time offset using a single, unmodified speaker is essential for leveraging widely deployed speakers and enhancing coverage. This paper presents the first method for time offset estimation using a single speaker and a microphone, enabled by two key factors: (i) a time offset computation method that utilizes higher-order floor-ceiling reflections as multiple geometrically-constrained virtual speakers, and (ii) a signal processing pipeline that isolates these critical reflections from numerous others by leveraging the speaker's frequency-dependent radiation pattern. Experiments show that the proposed technique can achieve time offset estimation with a 90th percentile error of 259 μs at a 5 m distance. Furthermore, we implemented a ToF localization system based on SyncEcho, demonstrating a 11.0 cm localization accuracy with a 90th percentile error.",
+    "citation_count": 1,
+    "reference_count": 36,
+    "url": "https://doi.org/10.1145/3666025.3699369",
+    "dblp_key": "conf/sensys/MurakamiSSSMK24",
+    "source_id": "https://openalex.org/W4404034867"
+  },
+  {
+    "title": "BP3: Improving Cuff-less Blood Pressure Monitoring Performance by Fusing mmWave Pulse Wave Sensing and Physiological Factors: BP3: Cuff-less BP Monitoring by Fusing mmWave Pulse Wave Sensing and Physiological Factors.",
+    "authors": [
+      "Zixin Zheng",
+      "Yumeng Liang",
+      "Rui Lyu",
+      "Junjie Bao",
+      "Yiwen Huang",
+      "Anfu Zhou",
+      "Huadong Ma",
+      "Jingjia Wang",
+      "Xiangbin Meng",
+      "Chunli Shao",
+      "Yida Tang",
+      "Qian Zhang 0001"
+    ],
+    "venue": "SenSys",
+    "year": 2024,
+    "abstract": "Cardiovascular diseases remain a leading cause of mortality and disability. The convenient measurement of cardiovascular health using wearables is a key enabler to foster continuous, accurate and early detection, diagnosis and management of cardiovascular diseases. We integrate Photoplethysmography (PPG) and mmWave sensing in a mobile wearable device to detect the Inter-beat interval (IBI) and arterial pulse wave. Particularly, We have developed a hardware prototype that integrates both sensing modalities and have verified the system against the gold clinical standard reference with a diverse population of 23 subjects.",
+    "citation_count": 1,
+    "reference_count": 27,
+    "url": "https://doi.org/10.1145/3666025.3699370",
+    "dblp_key": "conf/sensys/ZhengLLBHZMWMST24",
+    "source_id": "https://openalex.org/W4414897278"
+  },
+  {
+    "title": "M3Cam: Extreme Super-resolution via Multi-Modal Optical Flow for Mobile Cameras.",
+    "authors": [
+      "Yu Lu 0022",
+      "Dian Ding",
+      "Hao Pan 0003",
+      "Yongjian Fu 0004",
+      "Liyun Zhang",
+      "Feitong Tan",
+      "Ran Wang",
+      "Yi-Chao Chen 0001",
+      "Guangtao Xue",
+      "Ju Ren 0001"
+    ],
+    "venue": "SenSys",
+    "year": 2024,
+    "abstract": "The demand for ultra-high-resolution imaging in mobile phone photography is continuously increasing. However, the image resolution of mobile devices is typically constrained by the size of the CMOS sensor. Although deep learning-based super-resolution (SR) techniques have the potential to overcome this limitation, existing SR neural network models require large computational resources, making them unsuitable for real-time SR imaging on current mobile devices. Additionally, cloud-based SR systems pose privacy leakage risks. In this paper, we propose M3Cam, an innovative and lightweight SR imaging system for mobile phones. M3Cam can ensure high-quality 16× SR image (4× in both height and width) visualization with almost negligible latency. In detail, we utilize an optical image stabilization (OIS) module for lens control and introduce a new modality of data, namely gyroscope readings, to achieve high-precision and compact optical flow estimation modules. Building upon this concept, we design a multi-frame-based SR model utilizing the Swin Transformer. Our proposed system can generate a 16× SR image from four captured low-resolution images in real-time, with low computational load, low inference latency, and minimal reliance on runtime RAM. Through extensive experiments, we demonstrate that our proposed multi-modal optical flow model significantly enhances pixel alignment accuracy between multiple frames and delivers outstanding 16× SR imaging results under various shooting scenarios. Code and dataset are available at: https://github.com/liangjindeamo-yuer/M3CAM",
+    "citation_count": 4,
+    "reference_count": 41,
+    "url": "https://doi.org/10.1145/3666025.3699371",
+    "dblp_key": "conf/sensys/LuD0FZTW0X024",
+    "source_id": "https://openalex.org/W4404034703"
+  },
+  {
+    "title": "Understanding Concurrent Transmissions over Ultra-Wideband Complex Channels.",
+    "authors": [
+      "Maximilian Schuh",
+      "Michael Baddeley",
+      "Kay Römer",
+      "Carlo Alberto Boano"
+    ],
+    "venue": "SenSys",
+    "year": 2024,
+    "abstract": "Ultra-wideband (UWB) devices operate only on a few frequency channels and commonly lack clear channel assessment capabilities: this makes it difficult to support several devices operating concurrently within a single network or to avoid coexistence issues with other UWB-based systems operating in close proximity. To address this issue, the IEEE 802.15.4 standard proposes the use of complex channels (i.e., diverse combinations of frequency channels and preamble codes) to enable multiple orthogonal transmissions. However, existing studies have shown that concurrent UWB transmissions on different complex channels are unreliable and incur high packet loss. In this paper, we investigate and shed light on the reason for this packet loss. We then present concrete methods to boost the reliability of concurrent UWB communications over different complex channels and demonstrate their effectiveness experimentally. In detail, we show that the synchronization and clock frequency offset among concurrent transmitters as well as the employed physical layer settings can be used to increase communication performance over different complex channels. Our study shows the feasibility of more than eight concurrent UWB transmissions on the same frequencies, sustaining a packet reception rate above 99% while retaining the ability to carry out centimetre-accurate ranging.",
+    "citation_count": 5,
+    "reference_count": 32,
+    "url": "https://doi.org/10.1145/3666025.3699372",
+    "dblp_key": "conf/sensys/SchuhBRB24",
+    "source_id": "https://openalex.org/W4404034625"
+  },
+  {
+    "title": "Exploiting Polarization and Color to Enable MIMO Backscattering with Light.",
+    "authors": [
+      "Seyed Keyarash Ghiasi",
+      "Marco Zuniga"
+    ],
+    "venue": "SenSys",
+    "year": 2024,
+    "abstract": "Multiple-input multiple-output (MIMO) methods play a pivotal role in increasing the capacity of wireless communication systems, but they have not been analyzed systematically in the nascent area of passive communication with visible light (passive-VLC). The main challenge in passive-VLC is its low data rate. This limitation is caused by the slow switching speed of the most popular modulator used in the state-of-the-art: liquid crystal cells (LCs). Several studies use sophisticated modulation schemes with multiple LCs to increase the data rate. However, these efforts have only led to logarithmic improvements. A transmitter with a single LC can provide 1 kbps, and a transmitter with 64 LCs delivers 8 kbps: resulting in an efficiency of 125 bps per LC cell. Ideally, the capacity should increase linearly with the number of LCs.",
+    "citation_count": 0,
+    "reference_count": 22,
+    "url": "https://doi.org/10.1145/3666025.3699373",
+    "dblp_key": "conf/sensys/GhiasiZ24",
+    "source_id": "https://openalex.org/W4404034554"
+  },
+  {
+    "title": "Unvoiced: Designing an LLM-assisted Unvoiced User Interface using Earables.",
+    "authors": [
+      "Tanmay Srivastava",
+      "Prerna Khanna",
+      "Shijia Pan",
+      "Phuc Nguyen 0002",
+      "Shubham Jain 0003"
+    ],
+    "venue": "SenSys",
+    "year": 2024,
+    "abstract": "We present Unvoiced, a novel unvoiced user interface that leverages jaw motion to enable users to silently interact with their devices using earables. The core idea is to translate low-frequency jaw motion signals into high-frequency information-rich mel spectrograms. Our proposed cross-modal translation incorporates phonetic, contextual, and syntactic information, while the specialized loss function optimizes for these linguistic features. This ensures that the generated spectrograms capture nuanced speech characteristics. Evaluated for 19 users across four tasks, Unvoiced demonstrates >94% task completion rate and <9% word error rate for over 90% of phrases. Further, Unvoiced maintains >90% task completion rate in noisy conditions.",
+    "citation_count": 4,
+    "reference_count": 73,
+    "url": "https://doi.org/10.1145/3666025.3699374",
+    "dblp_key": "conf/sensys/SrivastavaKP0J24",
+    "source_id": "https://openalex.org/W4404034891"
+  },
+  {
+    "title": "UrineSpec: A Lightweight Near-Infrared Spectroscopy System for Metabolite Detection in Urine.",
+    "authors": [
+      "Mengyao Chen",
+      "Hao Chen 0111",
+      "Siying Niu"
+    ],
+    "venue": "SenSys",
+    "year": 2024,
+    "abstract": "Urine concentration levels of important biomarkers offer valuable insights for the detection of chronic diseases. However, existing detection methods are hindered by high costs or limited performance, preventing long-term monitoring of urine components in domestic settings. This paper introduces UrineSpec, a low-cost, lightweight system using near-infrared (NIR) light for precise detection of trace macromolecules in urine. It proposes a novel method that recovers accurate multi-absorption features from coarse optical responses to obtain fine-grained spectra. Based on this, we manage to extract the absorption spectrum of the substance from the complex mixed spectra and achieve accurate concentration identification. Extensive experimental results indicate that UrineSpec can monitor five concentration levels of three important biomarkers with an accuracy of uric acid, albumin and glucose over 98.4%, 98.8% and 98.6% respectively. This high level of precision underscores the potential of UrineSpec as an effective tool for non-invasive chronic disease monitoring and early intervention.",
+    "citation_count": 0,
+    "reference_count": 44,
+    "url": "https://doi.org/10.1145/3666025.3699375",
+    "dblp_key": "conf/sensys/ChenCN24",
+    "source_id": "https://openalex.org/W4404034477"
+  },
+  {
+    "title": "Poster: Wideband Cellular Sensing for Real-time, Sustainable Geo-localization Tags.",
+    "authors": [
+      "Nakul Garg",
+      "Aritrik Ghosh",
+      "Nirupam Roy"
+    ],
+    "venue": "SenSys",
+    "year": 2024,
+    "abstract": "This paper presents LiTEfoot, an ultra-low power, wide-area localization system leveraging ambient cellular signals to address the limitations of traditional self-localization systems in terms of power consumption and latency. LiTEfoot uses a non-linear transformation of the cellular synchronization signal to efficiently achieve self-localization by systematically superimposing signals at the baseband. A simple envelope detector is used to realize this non-linear transformation, enabling the identification of multiple active base stations across any cellular band. The system is designed to operate with low power, consuming only 40 μJoules of energy per localization update, achieving a median localization error of 22 meters in urban areas.",
+    "citation_count": 0,
+    "reference_count": 9,
+    "url": "https://doi.org/10.1145/3666025.3699382",
+    "dblp_key": "conf/sensys/GargGR24a",
+    "source_id": "https://openalex.org/W4404034553"
+  },
+  {
+    "title": "Poster: Multi-Sensory Based Immersive Improvisational Music Intervention Space for Addressing Depression among Sino-Foreign University Students: A Preliminary Study.",
+    "authors": [
+      "Yongfu Wang 0002",
+      "Tiffany Ya Tang",
+      "Pinata Winoto",
+      "Jacklyn Cui"
+    ],
+    "venue": "SenSys",
+    "year": 2024,
+    "abstract": "Depression is a common mental health disorder that significantly impacts psychosocial functioning and the overall quality of life of individuals, with essential characteristics of depressed mood and anhedonia. Diverse pharmacological and psychological therapy intervention methodologies have been commonly applied in clinical settings to alleviate depression. However, these treatments are reported to be not always accessible, while treatment is often expensive. More recently, emerging studies attempted to apply technology-assisted interventions to alleviate depression, such as socially assistive robots (SARs) for assisting with emotion regulation (ER), to address the above challenges in the general population. In contrast, despite the continuous prevalence rising of depression among university students, relatively fewer studies have been placed on university students' depression. In particular, the work focusing on emotion regulation for Sino-foreign university students is even fewer, which motivates our work. In the meantime, the study integrating innovative human-computer interaction (HCI) intervention with novel psychological treatments is largely unexplored, further inspiring the proposed study. Our work proposes a multi-sensory-based immersive music intervention space to address depression among Sino-foreign university students.",
+    "citation_count": 1,
+    "reference_count": 5,
+    "url": "https://doi.org/10.1145/3666025.3699384",
+    "dblp_key": "conf/sensys/WangTWC24",
+    "source_id": "https://openalex.org/W4404034548"
+  },
+  {
+    "title": "Poster abstract: Detecting lung diseases with electrical impedance tomography.",
+    "authors": [
+      "Barbara Stefaniak",
+      "Dariusz Wójcik",
+      "Tomasz Rymarczyk"
+    ],
+    "venue": "SenSys",
+    "year": 2024,
+    "abstract": "This paper presents novel diagnostic system for medicine, based on electrical impedance tomography (EIT). One of the primary functional features of this system is its ability to detect respiratory diseases with high accuracy, particularly focusing on conditions such as Chronic Obstructive Pulmonary Disease (COPD), Acute Respiratory Distress Syndrome (ARDS), Pneumothorax (PTX), Pulmonary Hypertension (PHTN), Pneumonia (PNA), and bronchospasm. A comparison of several classification models is presented, with the best-performing model achieving an accuracy rate of 98.22% in distinguishing between healthy and diseased patients.",
+    "citation_count": 0,
+    "reference_count": 2,
+    "url": "https://doi.org/10.1145/3666025.3699385",
+    "dblp_key": "conf/sensys/StefaniakWR24",
+    "source_id": "https://openalex.org/W4404034515"
+  },
+  {
+    "title": "Demo Abstract: A Foot-Wearable Acoustic Sensing System for Capturing Ground Information.",
+    "authors": [
+      "Dongxu Tang",
+      "Shih-Ying-Lei",
+      "Yitian Shao"
+    ],
+    "venue": "SenSys",
+    "year": 2024,
+    "abstract": "Figure 1: The system overview.(a) The system synchronously records signals from the two accelerometers (ACC) and the microphone (MIC) attached to the shoe.(b) The system extracts the spectral features to recognize 18 ground materials.",
+    "citation_count": 0,
+    "reference_count": 3,
+    "url": "https://doi.org/10.1145/3666025.3699387",
+    "dblp_key": "conf/sensys/TangSS24",
+    "source_id": "https://openalex.org/W4404034458"
+  },
+  {
+    "title": "Poster: Single-tag NLoS mmWave Backscatter Localization.",
+    "authors": [
+      "Zhenguo Shi",
+      "Yihe Yan",
+      "Yanxiang Wang",
+      "Wen Hu 0001",
+      "Chun Tung Chou"
+    ],
+    "venue": "SenSys",
+    "year": 2024,
+    "abstract": "The accuracy of the current localization methods degrades significantly when the direct path between the wireless transmitter and the target is blocked. This paper considers the problem of using a single mmWave radar and a tag to facilitate localization in the non-penetrable non-line-of-sight (NLoS) scenario. We present mN2LoS (short for mmWave based Non-penetrable NLoS LOCalization), which accurately localizes the tag by using the multipath reflections. mN2LoS has a few novel features. First, we design HTRD for detecting reflectors and surroundings while distinguishing them from the tag, using Hybrid utilization of Tag localization code and Reflector localization code based on Direct sequence spread spectrum techniques. Second, we enhance the signal-to-noise ratio by exploiting the correlation features of the designed signal. Evaluation results demonstrate that the developed mN2LoS can achieve median errors (at 5m range) of 12.9cm and 3.8° for distance and AOA estimations for the office configuration, respectively.",
+    "citation_count": 0,
+    "reference_count": 3,
+    "url": "https://doi.org/10.1145/3666025.3699388",
+    "dblp_key": "conf/sensys/ShiYWHC24",
+    "source_id": "https://openalex.org/W4404034511"
+  },
+  {
+    "title": "Poster: Vi-Detect: Fine-Grained Vibration-Based Component Looseness Detection Using Smartphones.",
+    "authors": [
+      "Minarul Islam",
+      "Xueyang Hu",
+      "Tao Shu"
+    ],
+    "venue": "SenSys",
+    "year": 2024,
+    "abstract": "Many civil structures are at risk of failure due to bolts loosening under shock or vibration. Early detection of looseness is critical for safety. In this research, we utilize mathematical model with motion equations and optimization technique to estimate parameters that can detect looseness. A novel tightness index is introduced to quantify the extent/degree of looseness. The method was validated on wood and steel structures for demonstrating its effectiveness.",
+    "citation_count": 0,
+    "reference_count": 5,
+    "url": "https://doi.org/10.1145/3666025.3699389",
+    "dblp_key": "conf/sensys/IslamHS24",
+    "source_id": "https://openalex.org/W4404034569"
+  },
+  {
+    "title": "Poster: Module Lightweighting and Path Transferring in Vision-Language Models for Efficient Edge Deployment.",
+    "authors": [
+      "Jiahua Bao",
+      "Zhipeng Wang",
+      "Ziqian Li",
+      "Jiaxing Du",
+      "Jialiang Yan",
+      "Jie Liu 0001"
+    ],
+    "venue": "SenSys",
+    "year": 2024,
+    "abstract": "We propose an efficient lightweight fine-tuning method that simplifies model design and reduces parameters, focusing on optimizing Visual-Language Models (VLMs) for edge deployment. As VLMs evolve, the parameter size becomes increasingly challenging for edge devices. To overcome this limitation, we combine lightweighting and fine-tuning into a single step. We decompose large linear layers in the vision encoder and introduce smaller matrices in parallel, creating a new path.During fine tuning, performance is improved by reducing the matrix size and increasing the depth, gradually phasing out the original path. We deploy the lightened and fine-tuned model on a Jetson TX2 and shows comparable performance compared to VLMs with larger parameters.",
+    "citation_count": 0,
+    "reference_count": 1,
+    "url": "https://doi.org/10.1145/3666025.3699390",
+    "dblp_key": "conf/sensys/BaoWLDYL24",
+    "source_id": "https://openalex.org/W4404034551"
+  },
+  {
+    "title": "Poster: Practical Privacy-Preserving Decision Tree Evaluation for Resource-Constrained Devices.",
+    "authors": [
+      "Yuan Xue 0003",
+      "Fan Jin",
+      "Xiangyou Bei"
+    ],
+    "venue": "SenSys",
+    "year": 2024,
+    "abstract": "We investigate the problem of private decision tree evaluation, which involves a server who holds a private decision tree, and a client who wants to classify its private attribute vector on the decision tree. The goal is to enable the client to learn the classification result while revealing nothing about both parties' inputs. We propose a novel secure two-party protocol for the problem of private decision tree evaluation based on symmetric encryption and oblivious transfer, which achieves higher efficiency and can be applied to scenarios involving resource-constrained devices.",
+    "citation_count": 0,
+    "reference_count": 2,
+    "url": "https://doi.org/10.1145/3666025.3699391",
+    "dblp_key": "conf/sensys/XueJB24",
+    "source_id": "https://openalex.org/W4404034626"
+  },
+  {
+    "title": "Poster Abstract: FedMod: Towards Cross-modal Training for Heterogeneous Federated Learning Systems.",
+    "authors": [
+      "Xifan Zhang",
+      "Zhenyu Yan 0002",
+      "Guoliang Xing"
+    ],
+    "venue": "SenSys",
+    "year": 2024,
+    "abstract": "Federated learning in multi-modal systems faces challenges due to modality heterogeneity, where edge devices have different sensor setups. Labeling multi-modal data is labor-intensive and impractical, leading to the label scarcity issue on edge clients. This paper presents a novel semi-supervised federated learning framework to address these issues. It uses complementary data, like RGB images and depth sensors, with a pseudo-labeling algorithm to improve cross-modal learning. Applied to the human action recognition task, the framework outperforms baselines. It enables efficient federated learning, handling labeling difficulties and missing modalities, offering robust performance in real-world scenarios.",
+    "citation_count": 0,
+    "reference_count": 1,
+    "url": "https://doi.org/10.1145/3666025.3699392",
+    "dblp_key": "conf/sensys/Zhang0X24",
+    "source_id": "https://openalex.org/W4404034691"
+  },
+  {
+    "title": "Poster: The Use of Machine Learning in Electrical Impedance Tomography - A Variable Frequency Approach.",
+    "authors": [
+      "Monika Kulisz",
+      "Tomasz Rymarczyk",
+      "Grzegorz Klosowski",
+      "Konrad Niderla",
+      "Michal Oleszek"
+    ],
+    "venue": "SenSys",
+    "year": 2024,
+    "abstract": "This study presents a novel technique for reconstructing the internal structures of industrial tank reactors using electrical impedance tomography (EIT). The method uses three different measurement vectors, each corresponding to different electrical frequencies---100 kHz, 50 kHz, and 10 kHz---to improve the accuracy and reliability of EIT reconstructions. The goal was to get the most out of both the resistive and reactive data from the EIT system by using machine learning methods that took frequency-specific data into account. This data was shown as complex numbers. To process the multi-frequency data collected from the measurements, an LSTM network was used. The results show that the multi-frequency model significantly outperforms single-frequency methods in terms of reconstruction accuracy.",
+    "citation_count": 0,
+    "reference_count": 3,
+    "url": "https://doi.org/10.1145/3666025.3699393",
+    "dblp_key": "conf/sensys/KuliszRKNO24",
+    "source_id": "https://openalex.org/W4404034873"
+  },
+  {
+    "title": "Poster: Empowering Wearable Resistive Sensor by Near-Field WPT.",
+    "authors": [
+      "Hsuan-Ying Liu",
+      "Polly Huang"
+    ],
+    "venue": "SenSys",
+    "year": 2024,
+    "abstract": "We seek in this work to supply and conserve power for wearable resistive sensors by inductive coupling. A proof-of-concept experiment shows that through a pair of coils the core is able to deliver power and capture the resistance load at the remote sensor, achieving powering and communicating the state of the sensor simultaneously.",
+    "citation_count": 0,
+    "reference_count": 2,
+    "url": "https://doi.org/10.1145/3666025.3699394",
+    "dblp_key": "conf/sensys/LiuH24",
+    "source_id": "https://openalex.org/W4404034593"
+  },
+  {
+    "title": "Demo: CTSim: A Scalable and Flexible Cybertwin Network Simulator for Internet of Things Scenarios.",
+    "authors": [
+      "Yuke Ma",
+      "Shihan Lin",
+      "Yang Chen 0001",
+      "Jun Wu 0006"
+    ],
+    "venue": "SenSys",
+    "year": 2024,
+    "abstract": "The future of networking must address the connectivity demands of billions of people and trillions of networked devices. The Intelligent Internet of Everything (IoE) is widely considered the next evolution of the Internet, yet it poses significant challenges to the current TCP/IP architecture. To overcome these challenges, the concept of the Cybertwin network has been proposed as a promising future Internet architecture. To facilitate the advancement of Cybertwin-related research, we have developed CTSim, a Cybertwin network simulator. Our demo demonstrates that the Cybertwin network could effectively enhances mobility, availability, and security in Internet of Things scenarios, making it a powerful tool for researchers in these fields.",
+    "citation_count": 0,
+    "reference_count": 5,
+    "url": "https://doi.org/10.1145/3666025.3699395",
+    "dblp_key": "conf/sensys/MaLCW24",
+    "source_id": "https://openalex.org/W4404034677"
+  },
+  {
+    "title": "Demo: A Real Time Question Answering System for Multimodal Sensors using LLMs.",
+    "authors": [
+      "Xiaofan Yu 0001",
+      "Lanxiang Hu",
+      "Benjamin Z. Reichman",
+      "Rushil Chandrupatla",
+      "Dylan Chu",
+      "Xiyuan Zhang 0001",
+      "Larry Heck",
+      "Tajana Rosing"
+    ],
+    "venue": "SenSys",
+    "year": 2024,
+    "abstract": "Question Answering (QA) establishes a natural and intuitive way for humans to interpret and understand multimodal sensor data. However, existing sensor-based QA systems are limited in the types of questions & answers, and the duration of sensor data they can handle. In this demo, we introduce an end-to-end QA system for long-term multimodal timeseries sensors powered by Large Language Models (LLMs). Our system features a novel pipeline with LLM-based question decomposition, sensor data query and LLM-based answer assembly. We further quantize the LLMs and deploy our system on two typical edge platforms, delivering higher-quality answers with low latency.",
+    "citation_count": 1,
+    "reference_count": 2,
+    "url": "https://doi.org/10.1145/3666025.3699396",
+    "dblp_key": "conf/sensys/YuHRCC0HR24",
+    "source_id": "https://openalex.org/W4404034870"
+  },
+  {
+    "title": "Demo: Myotrainer: Muscle-Aware Motion Analysis and Feedback System for In-Home Resistance Training.",
+    "authors": [
+      "Yuting He",
+      "Xinyan Wang 0003",
+      "Mu Yuan",
+      "Di Duan",
+      "Doris Sau-Fung Yu",
+      "Guoliang Xing",
+      "Hongkai Chen 0001"
+    ],
+    "venue": "SenSys",
+    "year": 2024,
+    "abstract": "Resistance training is widely incorporated in exercise programs, including in-home fitness and rehabilitation. However, improper motion patterns and muscle stimulation can undermine the safety of the subjects, making precise monitoring essential. Existing solutions primarily focus on correcting motion patterns with difficulties assessing muscle contraction levels. In this work, we introduce MyoTrainer, which provides muscle-aware motion descriptions and personalized feedback in natural language. Taking a person's exercise video as input, MyoTrainer first utilizes pose estimation models to capture motion sequences in real-time. A GCN-Former model has been developed for fine-grained motion analysis, which includes action recognition, incorrect movement pattern detection, and muscle contraction intensity estimation. Additionally, MyoTrainer integrates fitness and physiotherapeutic domain knowledge to deliver personalized, professional feedback. Extensive evaluations show that our system outperforms existing solutions in all recognition tasks and a survey indicates 88.9% of users find the generated feedback to be beneficial.",
+    "citation_count": 1,
+    "reference_count": 5,
+    "url": "https://doi.org/10.1145/3666025.3699397",
+    "dblp_key": "conf/sensys/He0YDYXC24",
+    "source_id": "https://openalex.org/W4404034669"
+  },
+  {
+    "title": "Demo Abstract: RemoteHap: Enabling Haptic Exploration of Distant 3D Objects.",
+    "authors": [
+      "Jingru Wang",
+      "Chen Lu",
+      "Yitian Shao"
+    ],
+    "venue": "SenSys",
+    "year": 2024,
+    "abstract": "Current imaging and networking technologies facilitate the visual display of distant objects; however, remote displays typically suffer from a lack of haptic feedback. Here, we introduce RemoteHap, a haptic rendering system that enables its users to explore and perceive distant 3D objects through the sense of touch. RemoteHap can render the shape, stiffness, and surface texture of a distant object by integrating data from a remote robot equipped with optical and acoustic sensors. We developed a prototype to demonstrate the feasibility of our system design.",
+    "citation_count": 0,
+    "reference_count": 4,
+    "url": "https://doi.org/10.1145/3666025.3699398",
+    "dblp_key": "conf/sensys/WangLS24",
+    "source_id": "https://openalex.org/W4404034583"
+  },
+  {
+    "title": "Poster: Delay and Energy-Efficient Client Selection for Federated Learning in Vehicular Networks.",
+    "authors": [
+      "Junho Jeong",
+      "Chang Kyung Kim",
+      "SuKyoung Lee"
+    ],
+    "venue": "SenSys",
+    "year": 2024,
+    "abstract": "This paper proposes a delay and energy-aware clustering-based client selection scheme for federated learning in vehicular networks. We propose an algorithm that selects the appropriate number of vehicles for local training, minimizing delay and energy consumption while ensuring model performance. The simulation results demonstrate that the proposed algorithm achieves lower delay and energy consumption compared to benchmark methods, for both IID (independent and identically distributed) and non-IID datasets.",
+    "citation_count": 0,
+    "reference_count": 6,
+    "url": "https://doi.org/10.1145/3666025.3699399",
+    "dblp_key": "conf/sensys/JeongKL24",
+    "source_id": "https://openalex.org/W4404034453"
+  },
+  {
+    "title": "Poster: Towards Low-Power Comprehensive Biodiversity Monitoring.",
+    "authors": [
+      "Josh Millar",
+      "Sarab Sethi",
+      "Hamed Haddadi 0001",
+      "Anil Madhavapeddy"
+    ],
+    "venue": "SenSys",
+    "year": 2024,
+    "abstract": "The Kunming-Montreal Global Biodiversity Framework sets ambitious targets for 2023, including halting human-induced species extinction. Achieving these requires comprehensive data on global biodiversity patterns, which can only be gathered through in-situ distributed sensor networks. However, these multi-device networks are constrained by battery lifetimes, must gather rich data from power-hungry sensors, and yet need to be deployed in remote environments for long periods. This note introduces a prototype multi-sensor device, and outlines how embedded scheduling could be used for extending sensor lifetime and resource-efficiency.",
+    "citation_count": 0,
+    "reference_count": 16,
+    "url": "https://doi.org/10.1145/3666025.3699400",
+    "dblp_key": "conf/sensys/MillarSHM24",
+    "source_id": "https://openalex.org/W4404034525"
+  },
+  {
+    "title": "Demo: Invisible Adversarial Stripes against Traffic Sign Recognition in Autonomous Driving.",
+    "authors": [
+      "Dongfang Guo",
+      "Yuting Wu",
+      "Yimin Dai",
+      "Pengfei Zhou",
+      "Xin Lou 0005",
+      "Rui Tan 0001"
+    ],
+    "venue": "SenSys",
+    "year": 2024,
+    "abstract": "Camera-based computer vision is crucial for autonomous vehicle perception. We demonstrate GhostStripe [5], an attack system that uses light-emitting diodes and exploits the camera's rolling shutter effect to generate adversarial stripes that are invisible to humans while misleading traffic sign recognition. To maintain stable attack effectiveness, GhostStripe controls the timing of the modulated light emission, adapting to both the camera's framing operation and the movement of the victim vehicle. Evaluated on real testbeds, GhostStripe can stably spoof traffic sign recognition results for up to 97% of frames to a wrong class when the victim vehicle passes the road section.",
+    "citation_count": 0,
+    "reference_count": 3,
+    "url": "https://doi.org/10.1145/3666025.3699401",
+    "dblp_key": "conf/sensys/GuoWDZL024",
+    "source_id": "https://openalex.org/W4404034664"
+  },
+  {
+    "title": "Poster: Indoor NLoS Localization Using mmWave IRS with Commodity 24 GHz Radar.",
+    "authors": [
+      "Yihe Yan",
+      "Zhenguo Shi",
+      "Yanxiang Wang",
+      "Chun Tung Chou",
+      "Wen Hu 0001"
+    ],
+    "venue": "SenSys",
+    "year": 2024,
+    "abstract": "Non-line-of-sight (NLoS) sensing represents a significant advancement in sensor technology. Unlike traditional sensing methods that rely on direct line-of-sight, NLoS sensing allows for the detection and localization of objects obscured from the sensor's view. In this paper, we introduce mmMirror, a novel Van Atta Array based millimetre-wave (mmWave) reconfigurable intelligent reflecting surface (IRS) that provides: (i) NLoS localization at a range of approximately 3 meters, (ii) seamless communication between radar and IRS using existing frequency-modulated continuous-wave (FMCW) signals, and (iii) support for multiple targets. The mmMirror system is implemented on commodity 24 GHz radars, and the IRS is prototyped on printed circuit boards (PCBs).",
+    "citation_count": 1,
+    "reference_count": 3,
+    "url": "https://doi.org/10.1145/3666025.3699402",
+    "dblp_key": "conf/sensys/YanSWCH24",
+    "source_id": "https://openalex.org/W4404034578"
+  },
+  {
+    "title": "Poster Abstract: Liquid Identification via Container Acoustic Resonance.",
+    "authors": [
+      "Zhaohui Li",
+      "Wenyu Qi",
+      "Jianxi Chen",
+      "Yongmin Zhang"
+    ],
+    "venue": "SenSys",
+    "year": 2024,
+    "abstract": "With the improvement in quality of life, ensuring liquid safety has become increasingly important, leading to a growing focus on liquid identification technologies. While extensive prior work has employed RF signals for this purpose, such methods typically require expensive and bulky signal transmitters or receivers. In this work, we explore a novel modality for liquid identification, i.e. container acoustic resonance. Our key observation is that the acoustic resonance spectrum of each liquid-container system is strongly correlated with the liquid's density and solute composition. We design and implement a simple prototype for liquid identification with low-cost acoustic sensors. The spectrum of channel frequency response for each liquid-container system is extracted as the criterion. The results show that the average accuracy for classifying 10 common liquids is 99.4% with ResNet-5.",
+    "citation_count": 0,
+    "reference_count": 6,
+    "url": "https://doi.org/10.1145/3666025.3699403",
+    "dblp_key": "conf/sensys/LiQCZ24",
+    "source_id": "https://openalex.org/W4404034530"
+  },
+  {
+    "title": "Poster Abstract: LLM-Slice: Dedicated Wireless Network Slicing for Large Language Models.",
+    "authors": [
+      "Boyi Liu 0003",
+      "Jingwen Tong",
+      "Jun Zhang 0004"
+    ],
+    "venue": "SenSys",
+    "year": 2024,
+    "abstract": "The rapid adoption of large language models (LLMs) presents new challenges for existing network architectures due to significant peak traffic and high communication uncertainty. Traditional wireless networks struggle to support efficiently, leading to intolerable response delays, disconnections, and resource wastage. To address these issues, we propose LLM-Slice, the first system to provide dedicated communication slices for LLMs within a wireless network environment. By creating LLM-specific network slices, LLM-Slice efficiently binds services with communication resources. Based on user equipment (UE) requests and a permissions database, the system registers specific slices to offer controllable LLM services, integrating a downlink resource control module to optimize response speed, enhance resource utilization, and reduce disconnections. By deploying and validating in a real UE-gNB-CN environment, numerical results demonstrate that LLM-Slice significantly improves response speed and resource efficiency, providing a novel solution for fast and controllable LLM access in wireless networks.",
+    "citation_count": 4,
+    "reference_count": 1,
+    "url": "https://doi.org/10.1145/3666025.3699404",
+    "dblp_key": "conf/sensys/LiuTZ24",
+    "source_id": "https://openalex.org/W4404034863"
+  },
+  {
+    "title": "Poster: Vehicle-Edge Server Collaborative Task Offloading for UAVs: A Game Theoretic Approach.",
+    "authors": [
+      "Jihyun Park",
+      "Anna Cho",
+      "Shinyoung Cho",
+      "SuKyoung Lee"
+    ],
+    "venue": "SenSys",
+    "year": 2024,
+    "abstract": "This paper proposes a strategy for offloading unmanned aerial vehicles (UAVs) tasks to electric vehicles and edge servers using a Stackelberg game model. We introduce a suitability score that considers distance, resource availability, and battery level to select the most suitable nodes for offloading UAV tasks. Simulation results demonstrate that the proposed scheme outperforms existing methods in terms of energy consumption and utility for UAVs.",
+    "citation_count": 1,
+    "reference_count": 5,
+    "url": "https://doi.org/10.1145/3666025.3699405",
+    "dblp_key": "conf/sensys/ParkCCL24",
+    "source_id": "https://openalex.org/W4404034564"
+  },
+  {
+    "title": "Poster Abstract: Acoustic Analysis System for Monitoring Respiratory Disease Symptoms.",
+    "authors": [
+      "Tomasz Rymarczyk",
+      "Mariusz Mazurek",
+      "Marcin Dziadosz",
+      "Dariusz Wójcik",
+      "Oleksii Hyka",
+      "Krzysztof Król"
+    ],
+    "venue": "SenSys",
+    "year": 2024,
+    "abstract": "The aim of this work was to develop a proprietary device for real-time cough detection in audio recordings. Using models such as CNN, ResNet-50, and MobileNet, the system classifies cough sounds, enabling the early detection of potential infection cases, such as COVID-19. The device is intended for use in both private and public spaces, including medical facilities, nursing homes, and doctor's offices.",
+    "citation_count": 0,
+    "reference_count": 4,
+    "url": "https://doi.org/10.1145/3666025.3699406",
+    "dblp_key": "conf/sensys/RymarczykMDWHK24",
+    "source_id": "https://openalex.org/W4404034539"
+  },
+  {
+    "title": "Poster Abstract: A Computer Vision System for Human Motion Monitoring on a Bicycle Trainer.",
+    "authors": [
+      "Marcin Dziadosz",
+      "Mariusz Mazurek",
+      "Tomasz Rymarczyk",
+      "Dariusz Wójcik",
+      "Pawel Olszewski"
+    ],
+    "venue": "SenSys",
+    "year": 2024,
+    "abstract": "During the first stage of the project a computer vision system for human motion tracking was developed. For its implementation, a pair of cameras and a bicycle trainer are required. Human movement is monitored in real time by an effective algorithm that determines the key angles between the joints of a person exercising on a bike trainer. The following phase of the work focused on comparing the discussed system with a reference professional set, based on human motion sensors. The gathered data was then further analysed and compared, indicating that the accuracy of the developed system is fully satisfactory.",
+    "citation_count": 0,
+    "reference_count": 3,
+    "url": "https://doi.org/10.1145/3666025.3699407",
+    "dblp_key": "conf/sensys/DziadoszMRWO24",
+    "source_id": "https://openalex.org/W4404034497"
+  },
+  {
+    "title": "Demo: Enhancing the Networking Performance of IPv6 IoT Devices Using Machine Learning and IVI.",
+    "authors": [
+      "Mengying Zhou",
+      "Zhiyang Sun",
+      "Xin Wang 0002",
+      "Yang Chen 0001"
+    ],
+    "venue": "SenSys",
+    "year": 2024,
+    "abstract": "IPv6, with its larger address space, is well-suited for IoT scenarios, allowing each device to have a unique address for efficient communication. However, its adoption in sensor networks is hindered by underdeveloped IPv6 infrastructure and compatibility issues with IPv4-based networks. To address these challenges, this paper proposes a dual-stack load balancing approach to enhance seamless and reliable connectivity between IPv6 and IPv4. By adaptively distributing traffic between IPv6 and IPv4 channels, our system alleviates performance bottlenecks and improves reliability. A real-world deployment in the campus network of Fudan University demonstrates a 1.9x increase in throughput and a 27% reduction in congestion-related failures with only CPU overhead of 2.44% and a translation delay of 0.58 ms. These results highlight the potential of intelligent load balancing and IPv4/IPv6 translation in supporting scalable and efficient sensor networks and facilitating the transition to IPv6.",
+    "citation_count": 0,
+    "reference_count": 3,
+    "url": "https://doi.org/10.1145/3666025.3699408",
+    "dblp_key": "conf/sensys/ZhouSWC24",
+    "source_id": "https://openalex.org/W4404034665"
+  },
+  {
+    "title": "Poster: Hierarchical Clustered Federated Learning Framework for IoT in Remote Areas.",
+    "authors": [
+      "Chanmin Lee",
+      "Shinyoung Cho",
+      "Taeyoung Kim",
+      "Sukyoung Lee"
+    ],
+    "venue": "SenSys",
+    "year": 2024,
+    "abstract": "Unmanned Aerial Vehicles (UAVs) provide an effective solution for supporting Federated Learning (FL) in remote areas lacking infrastructure, but the non-IID nature of data affects FL efficiency. We propose a hierarchical clustering method with pipelined execution for UAV-assisted FL, clustering IoT devices based on computational capacity and data similarity to ensure balanced participation and faster convergence. Simulation results demonstrate improved learning efficiency and stability in non-IID environments, validating the method's effectiveness.",
+    "citation_count": 0,
+    "reference_count": 5,
+    "url": "https://doi.org/10.1145/3666025.3699409",
+    "dblp_key": "conf/sensys/LeeCKL24",
+    "source_id": "https://openalex.org/W4404034449"
+  },
+  {
+    "title": "Poster: Secure Federated Learning Network Based on Client Selection.",
+    "authors": [
+      "Anguo Jiang",
+      "Huan Zhou 0002",
+      "Rui Chen 0031",
+      "Hengtao Wang",
+      "Shouzhi Xu"
+    ],
+    "venue": "SenSys",
+    "year": 2024,
+    "abstract": "Federated learning (FL) enables the training of a global model using clients' local datasets, leveraging their computing resources for efficient machine learning while preserving user privacy. This paper explores FL in wireless networks, focusing on client selection and bandwidth allocation as key factors impacting latency, covert constraint and energy consumption. We propose the per-round energy drift plus cost (PEDPC) algorithm to address this optimization problem from an online perspective. The performance of the PEDPC algorithm is validated through simulations, evaluating latency and energy consumption under both IID and non-IID data distributions.",
+    "citation_count": 0,
+    "reference_count": 3,
+    "url": "https://doi.org/10.1145/3666025.3699410",
+    "dblp_key": "conf/sensys/JiangZCWX24",
+    "source_id": "https://openalex.org/W4404034570"
+  },
+  {
+    "title": "Poster Abstract: GnssQuest: Questing for Suitable GNSS Satellites through Augmented Reality.",
+    "authors": [
+      "Xu Weng",
+      "Yuhui Jin",
+      "Keck Voon Ling"
+    ],
+    "venue": "SenSys",
+    "year": 2024,
+    "abstract": "This poster introduces an Augmented Reality (AR)-assisted framework to help exclude Non-Line-of-Sight (NLOS) signals from the Global Navigation Satellite Systems (GNSS). We developed an AR mobile app named GnssQuest, augmenting the user's real-time camera view with a visualization of GNSS satellites. Our real-world experiment demonstrates that GnssQuest helps users to exclude NLOS satellites blocked by surrounding buildings, leading to significant improvements in GNSS positioning performance.",
+    "citation_count": 0,
+    "reference_count": 5,
+    "url": "https://doi.org/10.1145/3666025.3699411",
+    "dblp_key": "conf/sensys/WengJL24",
+    "source_id": "https://openalex.org/W4404034854"
+  },
+  {
+    "title": "Poster: A Contactless Health Monitoring System for Humans and Animals.",
+    "authors": [
+      "Yingjian Song",
+      "Zaid Farooq Pitafi",
+      "Zixuan Zeng",
+      "Jiayu Chen",
+      "Yida Zhang",
+      "Bradley G. Phillips",
+      "Benjamin M. Brainard",
+      "WenZhan Song 0001"
+    ],
+    "venue": "SenSys",
+    "year": 2024,
+    "abstract": "Health monitoring is essential for both humans and animals in daily life. While numerous health monitoring systems have been developed, the majority are designed exclusively for either humans or animals, and most require direct physical contact. We have developed BedDot, a contactless health monitoring system for both humans and animals using a seismic sensor. BedDot can be deployed in various environments, such as bed and seat settings for humans, as well as in cages for animals, to monitor occupancy, heart rate (HR), respiratory rate (RR), and blood pressure (BP). Our system demonstrates high accuracy in the clinical experiments of 150 patients and 16 dogs and cats.",
+    "citation_count": 2,
+    "reference_count": 3,
+    "url": "https://doi.org/10.1145/3666025.3699412",
+    "dblp_key": "conf/sensys/SongPZCZPBS24",
+    "source_id": "https://openalex.org/W4404034561"
+  },
+  {
+    "title": "Poster Unvoiced: Designing an Unvoiced User Interface using Earables and LLMs.",
+    "authors": [
+      "Tanmay Srivastava",
+      "Prerna Khanna",
+      "Shijia Pan",
+      "Phuc Nguyen 0002",
+      "Shubham Jain 0003"
+    ],
+    "venue": "SenSys",
+    "year": 2024,
+    "abstract": "This poster presents the design and implementation of Unvoiced, a silent speech interaction system. Unvoiced transforms subtle jaw movements into rich speech spectrograms, enabling seamless and private device interaction. Our system captures low-frequency jaw motion signals using ear-worn IMUs and translates them into high-fidelity mel-spectrograms through cross-modal translation techniques. By incorporating phonetic, contextual, and syntactic information, Unvoiced generates high-fidelity spectrograms that existing speech recognition systems can process. In our evaluation with 19 users across four common tasks, Unvoiced achieved a remarkable >94% task completion rate and <9% Word Error Rate (WER) for over 90% of phrases, maintaining robust performance even in noisy conditions.",
+    "citation_count": 0,
+    "reference_count": 7,
+    "url": "https://doi.org/10.1145/3666025.3699413",
+    "dblp_key": "conf/sensys/SrivastavaKPNJ24",
+    "source_id": "https://openalex.org/W4404034858"
+  },
+  {
+    "title": "Poster: The Concept of an Ultrasensitive Industrial Ultrasound Scanner Using Hilbert and Wavelet Transforms in a Machine Learning Model.",
+    "authors": [
+      "Grzegorz Klosowski",
+      "Tomasz Rymarczyk",
+      "Manuchehr Soleimani",
+      "Konrad Niderla"
+    ],
+    "venue": "SenSys",
+    "year": 2024,
+    "abstract": "The main goal of the research was to develop an effective, highresolution tomographic apparatus capable of non-invasively capturing real-time internal images of industrial tank reactors. For this purpose, a prototype of an ultrasonic tomograph (UST) was developed, which combines innovative design solutions and modern algorithmic techniques. A special feature of the presented solution is the use of a neural network with an unusual architecture. A deep, multi-branch neural network consisting of two inputs was used. The first input is a 120-element vector (sequence) of raw measurements. The third input consists of three sequences obtained as a result of the transformation of raw measurements: instantenous frequency (IF), approximation coefficients (Ca), and detail coefficients (Cd). The prototype was tested on a real model. The tomographic reconstructions obtained using the innovative neural architecture were compared with images obtained using a standard neural network. The results clearly confirm the high effectiveness of the presented approach.",
+    "citation_count": 0,
+    "reference_count": 2,
+    "url": "https://doi.org/10.1145/3666025.3699414",
+    "dblp_key": "conf/sensys/KlosowskiRSN24",
+    "source_id": "https://openalex.org/W4404034527"
+  },
+  {
+    "title": "Poster: FlexibleBP: Blood Pressure Monitoring Using Wrist-worn Flexible Sensor.",
+    "authors": [
+      "Yujing Zhang",
+      "Bing Li",
+      "Yanxi Peng",
+      "Jiao Li 0002",
+      "Tao Sun 0023",
+      "Jin Zhang 0001"
+    ],
+    "venue": "SenSys",
+    "year": 2024,
+    "abstract": "We propose FlexibleBP, a novel cuffless blood pressure monitoring system using a wrist-worn flexible sensor to enhance comfort and accuracy. By capturing pulse wave signals from the radial artery, we develop a personalized estimation framework incorporating a Transformer model with fine-tuning. Experiments with 36 participants confirm FlexibleBP's accuracy, meeting AAMI standards. This work marks a step toward more user-friendly, advanced wearable BP monitoring solutions.",
+    "citation_count": 1,
+    "reference_count": 5,
+    "url": "https://doi.org/10.1145/3666025.3699415",
+    "dblp_key": "conf/sensys/ZhangLPLSZ24",
+    "source_id": "https://openalex.org/W4404034659"
+  },
+  {
+    "title": "Poster: Stackelberg Game-based Model Partition and Resource Allocation in Split Federated Learning.",
+    "authors": [
+      "Jiaxin Xiong",
+      "Huan Zhou 0002",
+      "Kai Jiang 0006",
+      "Liang Zhao 0014",
+      "Victor C. M. Leung"
+    ],
+    "venue": "SenSys",
+    "year": 2024,
+    "abstract": "This paper investigates dynamic model partitioning and resource allocation in split federated learning, aiming to maximize the utility of clients and the Central Server (CS). We first model the interactions between the CS and clients as a Stackelberg game, where the CS acts as the leader to set payment and allocate computation resources, while clients as followers to determine model partitioning strategies. Then, we transform the problem into a bi-level optimization and propose a Nash-Equilibrium-based Stackelberg Algorithm (NESA) to solve it. Finally, the experimental results indicate that a Stackelberg equilibrium exists between the CS and clients, and NESA achieves higher utility and improves accuracy and convergence speed.",
+    "citation_count": 1,
+    "reference_count": 2,
+    "url": "https://doi.org/10.1145/3666025.3699416",
+    "dblp_key": "conf/sensys/XiongZJZL24",
+    "source_id": "https://openalex.org/W4404034862"
+  },
+  {
+    "title": "Demo Abstract: Advancing PPG-Based Continuous Blood Pressure Monitoring from a Generative Perspective.",
+    "authors": [
+      "Hui Ji 0003",
+      "Pengfei Zhou"
+    ],
+    "venue": "SenSys",
+    "year": 2024,
+    "abstract": "Cuffless blood pressure (BP) monitoring is a critical task in the cardiovascular diseases (CVDs) domain, commonly based on Photoplethysmography (PPG) and Electrocardiogram (ECG) signals. While ECG often delivers better BP monitoring performance, the acquisition via straps and patches leads to a poor user experience. On the contrary, PPG enables continuous and convenient monitoring, but offers less informative references. A potential approach is to convert PPG signals into ECG signals, ensuring both high convenience and optimal accuracy. Converting PPG into ECG, however, involves a substantial reduction in inherent entropy, necessitating a thorough understanding of the process and specific techniques to guide the ECG generation. In this demo, we present a blood pressure monitoring framework that achieves ECG-level performance using solely the PPG signal. A diffusion model is introduced to conduct a selective ECG-targeted generative process with the condition of PPG. Based on our observation from the experimental investigation, a set of techniques is developed to significantly enhance the model's ability in generating high-quality ECG signals. Specifically, in the forward process, we employ an adaptive search module to adapt the QRS segment within the ECG waveform. In the reverse process, we propose the scale alignment and frequency alignment modules to better guide the generative process. This framework bridges the gap between PPG convenience and ECG accuracy for improved BP monitoring.",
+    "citation_count": 0,
+    "reference_count": 2,
+    "url": "https://doi.org/10.1145/3666025.3699417",
+    "dblp_key": "conf/sensys/JiZ24a",
+    "source_id": "https://openalex.org/W4404034875"
+  },
+  {
+    "title": "Poster: Towards Privacy Preserving Patient State Classification in Psychiatric Seclusion Room using mmWave Radar.",
+    "authors": [
+      "Dongjin Seo",
+      "Jonghyuk Yun",
+      "Seongjin Wang",
+      "Jaewoo Son",
+      "Jun Han 0001"
+    ],
+    "venue": "SenSys",
+    "year": 2024,
+    "abstract": "Continuous monitoring of patients in psychiatric seclusion rooms is essential yet challenging, particularly with staff shortages that can delay responses to sudden changes in patient conditions. To this end, we propose PsiMo, a remote patient state monitoring system using mmWave Frequency Modulated Continuous Wave (FMCW) radar. Unlike existing vision-based or wearable systems, PsiMo captures patient movements without compromising privacy or risking potential self-harm. Our system continuously monitors patient's state of motion to alert medical staff in the event of abnormal conditions, such as agitation. Our preliminary evaluation shows PsiMo achieves 97.0% accuracy in patient state classification, demonstrating its potential for effective, non-contact monitoring.",
+    "citation_count": 0,
+    "reference_count": 2,
+    "url": "https://doi.org/10.1145/3666025.3699418",
+    "dblp_key": "conf/sensys/SeoYWS024",
+    "source_id": "https://openalex.org/W4404034853"
+  },
+  {
+    "title": "Demo: Battery-free TinyML Made Easy with Riotee.",
+    "authors": [
+      "Kai Geissdoerfer",
+      "Marco Zimmerling"
+    ],
+    "venue": "SenSys",
+    "year": 2024,
+    "abstract": "This demo uses a machine-learning-based hot word detection application to showcase the capabilities of Riotee, an open-source and commercially available hardware-software platform for the battery-free Internet of Things. We describe the Riotee hardware consisting of a base module, a debug probe for easy firmware updates, and several expansion boards that enhance functionality without the need for custom-designed printed circuit boards (PCBs). The demo features the classification of live audio recordings using TinyML deep neural network inference aboard a Riotee device. The Riotee device transmits the classification results via Bluetooth Low Energy (BLE) to a smartphone given to visitors. Visitors can also observe how the Riotee software checkpoints and restores critical state in case of power failures via the visualization of logic analyzer traces.",
+    "citation_count": 0,
+    "reference_count": 3,
+    "url": "https://doi.org/10.1145/3666025.3699419",
+    "dblp_key": "conf/sensys/GeissdoerferZ24a",
+    "source_id": "https://openalex.org/W4404034855"
+  },
+  {
+    "title": "Poster: Development of a Beamforming Defectoscope for Advanced Non-Destructive Evaluation Techniques.",
+    "authors": [
+      "Michal Golabek",
+      "Dariusz Majerek",
+      "Grzegorz Klosowski",
+      "Tomasz Rymarczyk"
+    ],
+    "venue": "SenSys",
+    "year": 2024,
+    "abstract": "This paper introduces the development of a beamforming defectoscope tailored for advanced non-invasive techniques. The device employs beamforming technology to enhance the detection and characterization of defects in a range of materials. Through the use of sophisticated signal processing algorithms, the defectoscope increases both the resolution and accuracy of non-invasive inspections. The study underscores the superior performance of the beamforming method when compared to traditional approaches, demonstrating notable improvements in diagnostic capabilities. This cutting-edge tool holds promising applications across multiple industries, such as aerospace, civil engineering, and manufacturing, where accurate defect detection is essential.",
+    "citation_count": 0,
+    "reference_count": 2,
+    "url": "https://doi.org/10.1145/3666025.3699420",
+    "dblp_key": "conf/sensys/GolabekMKR24",
+    "source_id": "https://openalex.org/W4404034531"
+  },
+  {
+    "title": "Demo: Smartwatch-Driven Gaming for Stroke Rehabilitation.",
+    "authors": [
+      "Vivek Chandel",
+      "Avik Ghose",
+      "Aniruddha Sinha"
+    ],
+    "venue": "SenSys",
+    "year": 2024,
+    "abstract": "Patients surviving a brain stroke often experience an impaired neuro-motor coordination and cognitive capability. Rehabilitation assisted by therapists can help them regain much of this coordination. In recent past, gamified activities have proved to be effective in this regard with enhanced patient engagement. But, they may require special hardware and certain usage restrictions regarding patient's positioning etc. for operating effectively. We have set out to develop a suite of games using a smartwatch to sense arm's motion to eliminate such challenges, supporting customized scoring for different post-stroke mobility stages and focusing on state-of-the-art 3D graphics offering a high realism aimed at better patient engagement and adherence. In this demonstration, we present two of these games. First is a 'Forest Stroll' game where the patient controls heading of an in-game character moving on a forest path, with scoring based on how closely the path is followed, with a few additional arm gestures which can be activated by the therapist optionally. Second is a 'Drumming' game, where the patient controls a virtual drumstick and tries to play a customizable pre-saved pattern involving multiple ranges of motion, scored on how closely the pattern is played, testing both motor and cognitive capabilities.",
+    "citation_count": 1,
+    "reference_count": 2,
+    "url": "https://doi.org/10.1145/3666025.3699421",
+    "dblp_key": "conf/sensys/ChandelGS24",
+    "source_id": "https://openalex.org/W4404034514"
+  },
+  {
+    "title": "Demo Abstract: Privacy-Preserving Room Occupancy Estimation Using Federated Analytics of BLE Packets.",
+    "authors": [
+      "Boyan Zhang",
+      "Chenshuhao Qin",
+      "Bing Luo 0002"
+    ],
+    "venue": "SenSys",
+    "year": 2024,
+    "abstract": "We present a privacy-preserving room occupancy estimation method using federated analytics of Bluetooth Low Energy (BLE) packets. By processing data locally and reporting only aggregated device counts, our approach preserves user privacy while achieving 95% accuracy in occupancy prediction. This method provides a cost-effective alternative to traditional sensing technologies like PIR and mmWave, balancing privacy, accuracy, and ease of deployment. Future work will expand testing to multi-room setups and enhance privacy measures. Code URL: https://github.com/Johnnybyzhang/BLE-capture",
+    "citation_count": 0,
+    "reference_count": 4,
+    "url": "https://doi.org/10.1145/3666025.3699422",
+    "dblp_key": "conf/sensys/ZhangQL24",
+    "source_id": "https://openalex.org/W4404034662"
+  },
+  {
+    "title": "Poster: Fusing radio tomography and RGB camera data for enhanced multi-person detection and tracking.",
+    "authors": [
+      "Michal Maj",
+      "Tomasz Rymarczyk",
+      "Lukasz Maciura",
+      "Dariusz Wójcik",
+      "Tomasz Cieplak",
+      "Damian Pliszczuk"
+    ],
+    "venue": "SenSys",
+    "year": 2024,
+    "abstract": "This paper presents a system that fuses radio tomography data with RGB camera information for enhanced multi-person detection and tracking in indoor environments. Experiments were conducted in an irregularly shaped room with four subjects. Due to its limited resolution, radio tomography initially represented all individuals as a single entity. By incorporating RGB camera data, we were able to accurately identify and track each person individually. Our findings underscore the significance of integrating data from both modalities for improved detection and tracking performance in indoor surveillance and security systems.",
+    "citation_count": 1,
+    "reference_count": 3,
+    "url": "https://doi.org/10.1145/3666025.3699423",
+    "dblp_key": "conf/sensys/MajRMWCP24",
+    "source_id": "https://openalex.org/W4404034535"
+  },
+  {
+    "title": "Poster: Optimizing ABS Deployment via LSTM-based Mobility and Data Traffic Demand Prediction.",
+    "authors": [
+      "Jeehee Nam",
+      "Anna Cho",
+      "Jihyun Park",
+      "Chang Kyung Kim",
+      "SuKyoung Lee"
+    ],
+    "venue": "SenSys",
+    "year": 2024,
+    "abstract": "This paper proposes a proactive aerial base station (ABS) deployment framework for hotspots that optimizes the placement of ABSs based on mobility and data traffic demand prediction using a LSTM model. We design a greedy-based ABS deployment algorithm to solve the data rate maximization problem, which is known to be NP-hard. Simulation results demonstrate that the proposed algorithm achieves a higher data rate with fewer ABSs compared to benchmark methods.",
+    "citation_count": 0,
+    "reference_count": 7,
+    "url": "https://doi.org/10.1145/3666025.3699424",
+    "dblp_key": "conf/sensys/NamCPKL24",
+    "source_id": "https://openalex.org/W4404034558"
+  },
+  {
+    "title": "Poster Cooperative UAV Sensor Fusion for Precision Localization and Navigation in Load Transport.",
+    "authors": [
+      "Alice James",
+      "Endrowednes Kuantama",
+      "Avishkar Seth",
+      "Richard Han 0001",
+      "Subhas Mukhopadhyay"
+    ],
+    "venue": "SenSys",
+    "year": 2024,
+    "abstract": "Cooperative UAV transport operations in GPS-denied environments pose significant challenges in localization, coordination, and payload stability. This paper introduces a vision-based Leader-Follower drone system using MAVROS and depth cameras for real-time pose estimation and control. The leader transmits pose and velocity updates to the follower, ensuring synchronized movements. The system maintained a 50 Hz update rate, achieving 28 FPS, 12 ms latency, and 1.2 cm position error on a straight path. The 3-DEE system effectively managed payload-induced attitude variations with low vibration levels and improved speed accuracy. These results confirm the system's robustness for precise localization and stable cooperative UAV transport.",
+    "citation_count": 0,
+    "reference_count": 2,
+    "url": "https://doi.org/10.1145/3666025.3699425",
+    "dblp_key": "conf/sensys/JamesKS0M24",
+    "source_id": "https://openalex.org/W4404034852"
+  },
+  {
+    "title": "Poster: AquaGuard: A Sonar-based Pool Monitoring System.",
+    "authors": [
+      "Haozheng Hou",
+      "Bowen Zheng",
+      "Peiheng Wu",
+      "Guoliang Xing",
+      "Zhenyu Yan 0002"
+    ],
+    "venue": "SenSys",
+    "year": 2024,
+    "abstract": "Drowning poses a significant threat to human life, making underwater human activity monitoring necessary for pool management. However, it is challenging for existing methods to recognize the aquatic activities of diverse users continuously without privacy concerns. In this paper, we propose a novel sonar-based pool monitoring system that localizes swimmers and recognizes pool activities. Our system is deployed and evaluated in a real-world pool, outperforming baselines in terms of activity recognition.",
+    "citation_count": 0,
+    "reference_count": 9,
+    "url": "https://doi.org/10.1145/3666025.3699426",
+    "dblp_key": "conf/sensys/HouZWX024",
+    "source_id": "https://openalex.org/W4404034563"
+  },
+  {
+    "title": "Poster: Resource-Efficient Environmental Sound Classification Using Hyperdimensional Computing.",
+    "authors": [
+      "Run Wang 0003",
+      "Shirley Bian",
+      "Xiaofan Yu 0001",
+      "Quanling Zhao",
+      "Le Zhang 0021",
+      "Tajana Rosing"
+    ],
+    "venue": "SenSys",
+    "year": 2024,
+    "abstract": "On-device environmental sound classification (ESC) in rural areas faces one major challenge of resource efficiency. Traditional methods rely on resource-intensive machine learning models, making them impractical for small edge devices like microcontrollers (MCUs). This poster presents SoundHD, a novel ESC solution using Hyperdimensional Computing (HDC), a brain-inspired and lightweight computing paradigm. We further optimize the memory footprint for deployment on MCUs. Our initial results show that SoundHD can be deployed and executed effectively on memory-constrained MCUs.",
+    "citation_count": 0,
+    "reference_count": 4,
+    "url": "https://doi.org/10.1145/3666025.3699427",
+    "dblp_key": "conf/sensys/WangBYZZR24",
+    "source_id": "https://openalex.org/W4404034559"
+  },
+  {
+    "title": "Poster Abstract: Tasking Heterogeneous Sensor Systems with LLMs.",
+    "authors": [
+      "Kaiwei Liu 0001",
+      "Bufang Yang",
+      "Lilin Xu",
+      "Yunqi Guo",
+      "Neiwen Ling",
+      "Zhihe Zhao",
+      "Guoliang Xing",
+      "Xian Shuai",
+      "Xiaozhe Ren",
+      "Xin Jiang 0002",
+      "Zhenyu Yan 0002"
+    ],
+    "venue": "SenSys",
+    "year": 2024,
+    "abstract": "Despite the extensive use of sensors enabling intelligent applications, the complementary potential of co-existing sensor systems is often not fully utilized, limiting more advanced applications. This paper introduces a novel solution using Large Language Models (LLMs) to coordinate sensor systems for handling complex user queries. It defines a sensor language for sensor systems, including vocabulary set and grammar rules, analogous to natural language components, enabling LLMs to translate user intentions into sensor coordination plans. Preliminary results show that our approach significantly outperforms the existing solution at plan generation, execution and response generation stages.",
+    "citation_count": 5,
+    "reference_count": 2,
+    "url": "https://doi.org/10.1145/3666025.3699428",
+    "dblp_key": "conf/sensys/LiuYXGLZXSRJ024",
+    "source_id": "https://openalex.org/W4404034443"
+  },
+  {
+    "title": "Poster: Enabling IoT Application Programming in Natural Language with IoTPilot.",
+    "authors": [
+      "Kaijie Gong",
+      "Wei Dong 0001",
+      "Yingqi Peng",
+      "Hao Wang 0238",
+      "Yi Gao 0001"
+    ],
+    "venue": "SenSys",
+    "year": 2024,
+    "abstract": "In recent years, the swift expansion of Internet of Things (IoT) applications has been notable. However, developing a comprehensive IoT application is highly challenging for non-expert developers due to the highly diverse characteristics of embedded operating systems. The LLM-based approach shows promise in generating code from natural language, but its performance in IoT code generation is poor. This stems from the LLM's insufficient understanding of the embedded IoT code context, leading to missed and conflicting OS-specific APIs. In this paper, we present IoTPilot, a LLM-driven multi-agent IoT programming framework. We develop a clustering-based progressive RAG strategy and auto-calibrating self-debug mechanism to enhance the quality of generated IoT applications.",
+    "citation_count": 2,
+    "reference_count": 1,
+    "url": "https://doi.org/10.1145/3666025.3699429",
+    "dblp_key": "conf/sensys/GongDPWG24",
+    "source_id": "https://openalex.org/W4404034533"
+  },
+  {
+    "title": "Poster: TapID: Wearable Sensing Technology for Identity Identification via Tap Vibration Sensing.",
+    "authors": [
+      "Jialiang Yan",
+      "Jiahua Bao",
+      "Ziqian Li",
+      "Zhipeng Wang",
+      "Jiaxing Du",
+      "Jie Liu 0001"
+    ],
+    "venue": "SenSys",
+    "year": 2024,
+    "abstract": "The increasing integration of wearable devices in daily activities has elevated the need for robust authentication methods that safeguard user data. Traditional knowledge-based and biometric authentication techniques face challenges in wearable contexts, including privacy risks and hardware limitations. We propose TapID, a novel authentication approach that leverages the unique relaxation vibrations of wrist bone conduction following a tapping gesture. This method bypasses the need for intrusive data collection and expensive hardware. Our method employs an energy window extraction algorithm and cross-correlation to isolate biometric signals, followed by feature extraction and k-NN classification. Tested on a Raspberry Pi, TapID authenticated users with a 93% success rate in a preliminary trial involving ten individuals, demonstrating its potential for secure and user-friendly wearable authentication.",
+    "citation_count": 0,
+    "reference_count": 5,
+    "url": "https://doi.org/10.1145/3666025.3699430",
+    "dblp_key": "conf/sensys/YanBLWDL24",
+    "source_id": "https://openalex.org/W4404034441"
+  },
+  {
+    "title": "Ph.D Forum: Towards Low-Power Comprehensive Biodiversity Monitoring.",
+    "authors": [
+      "Josh Millar"
+    ],
+    "venue": "SenSys",
+    "year": 2024,
+    "abstract": "The Kunming-Montreal Global Biodiversity Framework sets ambitious targets for 2023, including halting human-induced species extinction. Achieving these requires comprehensive data on global biodiversity patterns, which can only be gathered through in-situ distributed sensor networks. However, these multi-device networks are constrained by battery lifetimes, must gather rich data from power-hungry sensors, and yet need to be deployed in remote environments for long periods. This note introduces a prototype multi-sensor device, and outlines how collaborative event-driven scheduling could improve network lifetime and reliability.",
+    "citation_count": 0,
+    "reference_count": 15,
+    "url": "https://doi.org/10.1145/3666025.3699662",
+    "dblp_key": "conf/sensys/Millar24",
+    "source_id": "https://openalex.org/W4404034460"
+  },
+  {
+    "title": "Ph.D. Forum Abstract: Adapting Deep Learning-Based Sensing Systems to Cyber-Physical Dynamics.",
+    "authors": [
+      "Jiale Chen"
+    ],
+    "venue": "SenSys",
+    "year": 2024,
+    "abstract": "Deep neural networks are increasingly used in cyber-physical systems (CPS) to achieve better performance. The dynamic nature of a CPS resulting from the interactions between the physical processes and computational elements can affect the performance of the DNN model. The goal of my research is to explore and design adaptation approaches for a CPS that can achieve high and robust performance under dynamic conditions. The first approach aims to optimize resource allocation in CPS with concurrent sensors. The second approach focuses on quality inspection in production lines, aiming to optimize energy consumption and performance. The third approach is designed for autonomous driving and involves adapting the neural architecture in real-time to meet dynamic deadlines.",
+    "citation_count": 0,
+    "reference_count": 1,
+    "url": "https://doi.org/10.1145/3666025.3699663",
+    "dblp_key": "conf/sensys/Chen24",
+    "source_id": "https://openalex.org/W4404034488"
+  },
+  {
+    "title": "Ph.D. Forum: Leveraging Industrial Wireless Sensor Networks for Energy-Efficient HVAC System Operations.",
+    "authors": [
+      "Jan Schlichter"
+    ],
+    "venue": "SenSys",
+    "year": 2024,
+    "abstract": "This paper provides an overview of the Internet of Things (IoT) with emphasis on enabling technologies, protocols, and application issues. The IoT is enabled by the latest developments in RFID, smart sensors, communication technologies, and Internet protocols. The basic premise is to have smart sensors collaborate directly without human involvement to deliver a new class of applications. The current revolution in Internet, mobile, and machine-to-machine (M2M) technologies can be seen as the first phase of the IoT. In the coming years, the IoT is expected to bridge diverse technologies to enable new applications by connecting physical objects together in support of intelligent decision making. This paper starts by providing a horizontal overview of the IoT. Then, we give an overview of some technical details that pertain to the IoT enabling technologies, protocols, and applications. Compared to other survey papers in the field, our objective is to provide a more thorough summary of the most relevant protocols and application issues to enable researchers and application developers to get up to speed quickly on how the different protocols fit together to deliver desired functionalities without having to go through RFCs and the standards specifications. We also provide an overview of some of the key IoT challenges presented in the recent literature and provide a summary of related research work. Moreover, we explore the relation between the IoT and other emerging technologies including big data analytics and cloud and fog computing. We also present the need for better horizontal integration among IoT services. Finally, we present detailed service use-cases to illustrate how the different protocols presented in the paper fit together to deliver desired IoT services.",
+    "citation_count": 8238,
+    "reference_count": 178,
+    "url": "https://doi.org/10.1145/3666025.3699664",
+    "dblp_key": "conf/sensys/Schlichter24",
+    "source_id": "https://openalex.org/W2134295053"
+  },
+  {
+    "title": "Ph.D. Forum: Intelligent Home Energy Management: Developing AI-Driven Systems for Sustainable Living.",
+    "authors": [
+      "Yu Sheng"
+    ],
+    "venue": "SenSys",
+    "year": 2024,
+    "abstract": "The MAI-HOME project, funded by the Interreg initiative, addresses energy poverty and CO2 emission reduction through an AI-driven framework tailored for vulnerable populations. This research spans three years of data collection from multiple sensors installed in every room of sixteen houses across the Netherlands and Belgium. It aims to predict and promote energy-saving behaviors effectively. Utilizing an innovative blend of digital twins and robust data privacy measures, this project explores four critical areas: real-time data collection, predictive AI model development, data privacy enhancement, and behavioral intervention strategies. Initial findings suggest promising avenues for technological advancements and societal benefits in sustainable energy practices.",
+    "citation_count": 0,
+    "reference_count": 9,
+    "url": "https://doi.org/10.1145/3666025.3699665",
+    "dblp_key": "conf/sensys/Sheng24",
+    "source_id": "https://openalex.org/W4404034512"
+  },
+  {
+    "title": "Ph.D. Forum: A Study on Real-time Crowdedness Sensing and Pedestrian Tracking in Multi-environment.",
+    "authors": [
+      "Wenhao Huang 0004"
+    ],
+    "venue": "SenSys",
+    "year": 2024,
+    "abstract": "As urban areas continue to expand and populations grow, cities increasingly face challenges related to crowd management. Dense crowds can significantly impact urban traffic, safety, and management, while also creating discomfort in overcrowded spaces. This study investigates how multimodal ubiquitous sensing can be used to create real-time crowdedness sensing and pedestrian tracking in different scenarios. This study proposes new computer vision and wireless signal-based methods for deployment, experiment, evaluation and comparison in open space, semi-open space and closed space, respectively. This research aims to offer reference and guidance for applying crowdedness sensing technologies in various scenarios, which will help in better crowd management and the data sensing of smart cities.",
+    "citation_count": 0,
+    "reference_count": 2,
+    "url": "https://doi.org/10.1145/3666025.3699666",
+    "dblp_key": "conf/sensys/Huang24",
+    "source_id": "https://openalex.org/W4404034498"
+  },
+  {
+    "title": "Ph.D. Forum: Toward Adaptive Visible Light Positioning.",
+    "authors": [
+      "Jiawei Hu"
+    ],
+    "venue": "SenSys",
+    "year": 2024,
+    "abstract": "Visible light positioning (VLP) has shown great promise for high-precision indoor localization. This research aims to enhance VLP accuracy by leveraging spectral information, overcoming dynamic lighting challenges, and reducing the effort of fingerprint collection. Initially, Iris improves localization precision using spectral information and addresses dynamic lighting effects through a background subtraction module. Building upon this, LiDARSpectra employs synthetic mapping with low-cost LiDARs to automate fingerprint collection. Lastly, ongoing research with Large Language Model seeks to further improve accuracy and generalization across diverse indoor environments. Our work provides an adaptable framework for dynamic light-based IoT applications.",
+    "citation_count": 0,
+    "reference_count": 3,
+    "url": "https://doi.org/10.1145/3666025.3699667",
+    "dblp_key": "conf/sensys/Hu24",
+    "source_id": "https://openalex.org/W4404034452"
+  },
+  {
+    "title": "Ph.D. Forum: Field Sensing Model, A New Foundation for RF Sensing.",
+    "authors": [
+      "Fei Shang"
+    ],
+    "venue": "SenSys",
+    "year": 2024,
+    "abstract": "In recent years, radio frequency (RF) signal-based sensing has garnered significant attention due to its ubiquity, with numerous applications emerging in areas such as target localization, material recognition, and health monitoring. However, current sensing models are often based on ray tracing, which, although computationally convenient, can become severely distorted when the target size is not much larger than the wavelength. Additionally, using signals with smaller wavelengths to mitigate this issue is not always feasible. Noting that RF signals are a form of electromagnetic waves, we have explored the development of field sensing models directly based on Maxwell's equations. These models can finely characterize phenomena such as diffraction and multiple scattering, thereby enhancing the upper limits of sensing system capabilities. Based on this approach, we have achieved integrated material recognition and imaging of centimeter-scale targets using WiFi signals. This work has been accepted for presentation at Ubicomp 2024.",
+    "citation_count": 0,
+    "reference_count": 6,
+    "url": "https://doi.org/10.1145/3666025.3699668",
+    "dblp_key": "conf/sensys/Shang24",
+    "source_id": "https://openalex.org/W4404034684"
+  },
+  {
+    "title": "Ph.D. Forum: Enhancing EDHOC Protocol with Pre-Shared Key Authentication.",
+    "authors": [
+      "Elsa López Pérez"
+    ],
+    "venue": "SenSys",
+    "year": 2024,
+    "abstract": "This paper explores preliminary research on improving the Ephemeral Diffie-Hellman Over COSE (EDHOC) protocol by incorporating a new pre-shared key (PSK) authentication method. The research focuses on designing this PSK-based mechanism and its potential benefits, such as enhancing session key update efficiency and reducing computational demands compared to current EDHOC authentication methods. We also outline the planned implementation and evaluation approach, which will measure key performance indicators like memory consumption, energy consumption, handshake duration, message size or number of operations. The aim is to optimize EDHOC for secure communication in resource-limited environments.",
+    "citation_count": 0,
+    "reference_count": 1,
+    "url": "https://doi.org/10.1145/3666025.3699670",
+    "dblp_key": "conf/sensys/Perez24",
+    "source_id": "https://openalex.org/W4404034474"
+  },
+  {
+    "title": "Empowering Resource-efficient MoE Co-Adaptation for Multi-Task Vision Systems.",
+    "authors": [
+      "Lehao Wang"
+    ],
+    "venue": "SenSys",
+    "year": 2024,
+    "abstract": "Mobile and IoT vision applications increasingly utilize multitask deep learning (DL) models for real-time inference. The integration of Mixture of Experts (MoE) and Vision Transformers (ViTs) is particularly effective due to the task-agnostic backbone and scalable task-specific heads. However, data drift in open-world environments can lead to accuracy drops and safety risks, as observed in systems like Google Waymo One and NVIDIA NoTraffic. We present AdaSprite to integrate ViT-based MoE co-adaptation into resource-limited IoT systems, first addressing the expert dynamic sparsity during retraining as an opportunity in multi-task settings through cross-task collaboration in computation, I/O, and resource scheduling. Implemented as microservices, AdaSprite improves adaptation accuracy by 34.5% and latency by 77.1%, outperforming baselines across four practical scenarios.",
+    "citation_count": 0,
+    "reference_count": 3,
+    "url": "https://doi.org/10.1145/3666025.3699671",
+    "dblp_key": "conf/sensys/Wang24",
+    "source_id": "https://openalex.org/W4404034679"
+  },
+  {
+    "title": "Non-blocking Inference on Asynchronous Mobile Sensor Data with Affinity Control.",
+    "authors": [
+      "Fengmin Wu"
+    ],
+    "venue": "SenSys",
+    "year": 2024,
+    "abstract": "The rise of sensor-rich mobile devices has led to the adoption of multi-modal deep intelligence for distributed sensing tasks. However, varying arrival times of mobile sensory data can cause delays or accuracy decline. The diversity and dynamic nature of mobile systems further exacerbate this challenge. To address this, we present an opportunistic inference approach for asynchronous distributed multi-modal data, enabling inference upon partial data arrival. AdaFlow pioneers the formulation of structured cross-modality affinity using a hierarchical analysis-based normalized matrix, accommodating the diversity and dynamics of modalities. Employing an affinity attention-based conditional GAN (ACGAN), AdaFlow facilitates flexible data imputation, adapting to various modalities and tasks without retraining. Experiments show significant reductions in inference latency and enhanced accuracy compared to status quo approaches.",
+    "citation_count": 0,
+    "reference_count": 2,
+    "url": "https://doi.org/10.1145/3666025.3699672",
+    "dblp_key": "conf/sensys/Wu24",
+    "source_id": "https://openalex.org/W4404034532"
+  },
+  {
+    "title": "Ph.D. Forum: Responsive On-Device DNN Adaptation for Non-Stationary Mobile Environments.",
+    "authors": [
+      "Cheng Fang"
+    ],
+    "venue": "SenSys",
+    "year": 2024,
+    "abstract": "On-device adaptation to unpredictable domain shifts is crucial for mobile applications like autonomous driving and augmented reality. Test-time adaptation (TTA) offers a solution by tuning model parameters with unlabeled live data before prediction, but its forward-backward-reforward pipeline increases latency, compromising responsiveness. This paper presents AdaShadow, a responsive TTA framework for non-stationary mobile data distribution and resource dynamics via selective updates of critical layers. It utilizes a backpropagation-free assessor for quick identification of critical layers, a unit-based runtime predictor for latency estimation, and an online scheduler for effective updates. Evaluations show AdaShadow reduces adaptation latency by up to 3.5× and improves accuracy by up to 25.4%, with low memory and energy costs.",
+    "citation_count": 0,
+    "reference_count": 1,
+    "url": "https://doi.org/10.1145/3666025.3699673",
+    "dblp_key": "conf/sensys/Fang24",
+    "source_id": "https://openalex.org/W4404034872"
+  }
+]

@@ -1,0 +1,1930 @@
+[
+  {
+    "title": "MobiChem: A Ubiquitous Smartphone-Based Toolkit for Practical Fruit Monitoring and Analysis.",
+    "authors": [
+      "Zhiying Li",
+      "Abdul Aziz 0009",
+      "Patrick Phuoc Do",
+      "Phuc Nguyen 0002",
+      "Tianxing Li 0001"
+    ],
+    "venue": "MobiSys",
+    "year": 2025,
+    "abstract": "This paper introduces MobiChem, a low-cost, portable, practical, and ubiquitous smartphone-based toolkit for fruit monitoring. The key idea is to leverage the light emitted from a smartphone's screen and front camera, coupled with a custom-built screen cover, to perform comprehensive hyperspectral analysis on targeted objects. Specifically, we designed a zero-powered screen cover that selectively filters wavelengths essential for hyperspectral sensing. We then incorporate a CNN-based algorithm and a novel ranking-based learning technique that manipulates the latent space to classify maturity stages and characterize their chemical and physical factors. To demonstrate MobiChem's feasibility, robustness, and practicality, we showcase its application in tomato, banana, and avocado sensing. Our system examines the maturity, chlorophyll, lycopene content, free sugar levels, and firmness, enabling various dietary assessments and food safety applications. Experimental results using 117 tomatoes, 98 bananas, and 73 avocados show MobiChem achieved 95.67% accuracy in chlorophyll concentration measurement, 98.76% for lycopene detection, 93.53% for sugar concentrations analysis, and 91.34% average accuracy in classifying maturity (96.64% for tomato, 86.37% for banana, and 91.03% for avocado).",
+    "citation_count": 0,
+    "reference_count": 53,
+    "url": "https://doi.org/10.1145/3711875.3729135",
+    "dblp_key": "conf/mobisys/LiAD0025",
+    "source_id": "https://openalex.org/W4414760853"
+  },
+  {
+    "title": "PIT: A Novel Toothbrush Providing Real-Time and Robust Plaque Indication During Brushing.",
+    "authors": [
+      "Kaixin Chen 0002",
+      "Junfan Xiang",
+      "Wanying Tan",
+      "Keyu Chen",
+      "Yaqiong Luo",
+      "Chang Ma",
+      "Kaishun Wu",
+      "Lu Wang 0002"
+    ],
+    "venue": "MobiSys",
+    "year": 2025,
+    "abstract": "The dental plaque disclosing agent helps guide plaque removal by revealing plaque on the teeth. However, existing toothbrushes cannot provide visualization of the stained plaque beneath the toothpaste foam during brushing. To fill this gap, this paper proposes PIT and uses smartphone to provide real-time plaque visualization during brushing. PIT introduces novel hardware, including a micro camera, four green LEDs, and a mechanical structure, offering a stable camera view of bristle position and bristle rotation. To address the challenge of toothpaste foam obstruction, we derived an optical channel model that guided the design of the light source to enhance plaque visibility. Furthermore, we designed a deep neural network specifically for plaque segmentation under thick foam. Finally, the trained distilled student model was run on a smartphone and evaluated on both denture models and human subjects. The results show that PIT achieved an IoU (Intersection over Union) of 75.22% and a latency of 29 ms, with robust performance across various conditions. Evaluation by 10 participants revealed that PIT helped reduce plaque coverage to 5.6% within two minutes of brushing, significantly outperforming existing advanced toothbrushes.",
+    "citation_count": 0,
+    "reference_count": 30,
+    "url": "https://doi.org/10.1145/3711875.3729124",
+    "dblp_key": "conf/mobisys/0002XTCLMWW25",
+    "source_id": "https://openalex.org/W4414760804"
+  },
+  {
+    "title": "SigChord: Sniffing Wide Non-sparse Multiband Signals for Terrestrial and Non-terrestrial Networks.",
+    "authors": [
+      "Jinbo Peng",
+      "Junwen Duan",
+      "Zheng Lin 0001",
+      "Haoxuan Yuan",
+      "Yue Gao 0001",
+      "Zhe Chen 0015"
+    ],
+    "venue": "MobiSys",
+    "year": 2025,
+    "abstract": "While unencrypted information inspection in physical layer (e.g., open headers) can provide deep insights for optimizing wireless networks, the state-of-the-art (SOTA) methods heavily depend on full sampling rate (a.k.a Nyquist rate), and high-cost radios, due to terrestrial and non-terrestrial networks densely occupying multiple bands across large bandwidth (e.g., from 4G/5G at 0.4–7 GHz to LEO satellite at 4–40 GHz). To this end, we present SigChord, an efficient physical layer inspection system built on low-cost and sub-Nyquist sampling radios. We first design a deep and rule-based interleaving algorithm based on Transformer network to perform spectrum sensing and signal recovery under sub-Nyquist sampling rate, and second, cascade protocol identifier and decoder based on Transformer neural networks to help physical layer packets analysis. We implement SigChord using software-defined radio platforms, and extensively evaluate it on over-the-air terrestrial and non-terrestrial wireless signals. The experiments demonstrate that SigChord delivers over 99% accuracy in detecting and decoding, while still decreasing 34% sampling rate, compared with the SOTA approaches.",
+    "citation_count": 1,
+    "reference_count": 58,
+    "url": "https://doi.org/10.1145/3711875.3729159",
+    "dblp_key": "conf/mobisys/PengDLY0C25",
+    "source_id": "https://openalex.org/W4414760875"
+  },
+  {
+    "title": "TerraSLAM: Towards GPS-Denied Localization.",
+    "authors": [
+      "Jingao Xu",
+      "Mihir Bala",
+      "Thomas Eiszler",
+      "Xiangliang Chen",
+      "Qifei Dong",
+      "Aditya Chanana",
+      "Padmanabhan Pillai",
+      "Mahadev Satyanarayanan"
+    ],
+    "venue": "MobiSys",
+    "year": 2025,
+    "abstract": "A long-standing concern with GPS-based location sensing is its vulnerability to satellite signal loss. This may arise from adversarial attacks or natural causes such as urban canyons. Today, there are no real alternatives to GPS for providing absolute global coordinates. We address this concern by introducing TerraSLAM, a new global positioning system that uses a 3D GIS model to bridge relative and absolute coordinate systems, thereby enhancing visual SLAM to function as a global positioning solution. TerraSLAM offers localization accuracy and efficiency comparable to GPS-RTK even in GPS-denied settings. Extensive evaluation on drone localization scenarios shows that TerraSLAM achieves an average global positioning accuracy of 0.21m and a 99th percentile within 0.67m, outperforming advanced GPS solutions by over 70% (0.72m) and 80% (3.62m). Additionally, when integrated with ORB-SLAM3, the localization latency per frame is 16.7ms, achieving a 60% reduction compared to the baseline of 41.3ms. Code is available at https://github.com/cmusatyalab/TerraSLAM.",
+    "citation_count": 0,
+    "reference_count": 58,
+    "url": "https://doi.org/10.1145/3711875.3729144",
+    "dblp_key": "conf/mobisys/XuBECDCPS25",
+    "source_id": "https://openalex.org/W4414760728"
+  },
+  {
+    "title": "Are LoRa Logical Channels Really Orthogonal? Practically Orthogonalizing Massive Logical Channels.",
+    "authors": [
+      "Shiming Yu",
+      "Ziyue Zhang",
+      "Xianjin Xia",
+      "Yuanqing Zheng",
+      "Jiliang Wang"
+    ],
+    "venue": "MobiSys",
+    "year": 2025,
+    "abstract": "LoRaWANs are envisioned to connect billions of IoT devices through thousands of physically overlapping yet logically orthogonal channels (termed logical channels). These logical channels hold significant potential for enabling highly concurrent scalable IoT connectivity. Large-scale deployments however face strong interference between logical channels. This practical issue has been largely overlooked by existing works but becomes increasingly prominent as LoRaWAN scales up. To address this issue, we introduce Canas, an innovative gateway design that is poised to orthogonalize the logical channels by eliminating mutual interference. To this end, Canas develops a series of novel solutions to accurately extract the meta-information of individual ultra-weak LoRa signals from the received overlapping channels. The meta-information is then leveraged to accurately reconstruct and subtract the LoRa signals over thousands of logical channels iteratively. Real-world evaluations demonstrate that Canas can enhance concurrent transmissions across overlapping logical channels by 2.3× compared to the best known related works.",
+    "citation_count": 2,
+    "reference_count": 74,
+    "url": "https://doi.org/10.1145/3711875.3729125",
+    "dblp_key": "conf/mobisys/YuZXZW25",
+    "source_id": "https://openalex.org/W4414760884"
+  },
+  {
+    "title": "Programming Embedded IoT Applications in Natural Language with IoTPilot.",
+    "authors": [
+      "Kaijie Gong",
+      "Wei Dong 0001",
+      "Hao Wang 0238",
+      "Yingqi Peng",
+      "Yi Gao 0001"
+    ],
+    "venue": "MobiSys",
+    "year": 2025,
+    "abstract": "In recent years, the swift expansion of Internet of Things (IoT) applications has been notable. However, developing a comprehensive IoT application is highly challenging for non-expert developers due to the highly diverse characteristics of embedded operating systems. LLM-based methods provide a paradigm for code generation through natural language, which can greatly simplify and accelerate the development of IoT applications. While promising, existing works have failed to account for the specific characteristics of embedded operating system, resulting in the lower quality of generated IoT code. In this paper, we present IoTPilot, an LLM-driven embedded IoT programming tool. We have observed that the conflicts between LLM internal APIs/headers and external OS-specific APIs/headers are key factors leading to the low quality of generated embedded IoT applications. Thus, we introduce two effective self-thinking chains to integrate internal LLM knowledge with external documentation, addressing conflicts in APIs and headers. We provide embedded IoT benchmarks (IoTEval), which are built on RIOT, Zephyr, Contiki and FreeRTOS. Results show that IoTPilot can improve the performance of IoT code generation on all the three embedded OSes compared with existing state-of-the-art (SOTA) methods.",
+    "citation_count": 1,
+    "reference_count": 19,
+    "url": "https://doi.org/10.1145/3711875.3729136",
+    "dblp_key": "conf/mobisys/GongDWPG25",
+    "source_id": "https://openalex.org/W4414760858"
+  },
+  {
+    "title": "Satori: In-band Analog Backscatter for Audio Transmission.",
+    "authors": [
+      "Yang Zou",
+      "Xin Na",
+      "Yimiao Sun",
+      "Yande Chen",
+      "Yuan He 0004"
+    ],
+    "venue": "MobiSys",
+    "year": 2025,
+    "abstract": "In IoT applications such as environmental monitoring and industrial security surveillance, audio sensors are increasingly used, among which wireless sensors are preferred. In order to achieve a sustained transmission, low-power wireless technology such as backscatter has been widely considered. However, existing backscatter systems encounter difficulties in audio transmissions due to the high power consumption from the complicated digital processing and fast frequency-shifting clocks. In this paper, we propose Satori, the first-of-its-kind in-band analog backscatter system for audio transmission with ultra-low power consumption. Satori eliminates the need for in-place digital processing by directly embedding analog audio voltages into backscattered WiFi symbols through analog modulation. It also avoids the power consumption of the frequency-shifting clock by transmitting the audio within the excitation WiFi signal's band. We implement the Satori prototype and evaluate it under various settings. The results indicate that Satori can transmit audio at a sampling rate of 41.67 kHz and achieve a SNR exceeding 18 dB.",
+    "citation_count": 0,
+    "reference_count": 47,
+    "url": "https://doi.org/10.1145/3711875.3729153",
+    "dblp_key": "conf/mobisys/ZouNSC025",
+    "source_id": "https://openalex.org/W4414760726"
+  },
+  {
+    "title": "Unraveling the Missing Link in Low-power Communication: An Autodyning Receiver Architecture that Achieves a Long Range.",
+    "authors": [
+      "Pramuka Medaranga Sooriya Patabandige",
+      "Rajashekar Reddy Chinthalapani",
+      "Wenqing Yan",
+      "Prabal Dutta",
+      "Ambuj Varshney"
+    ],
+    "venue": "MobiSys",
+    "year": 2025,
+    "abstract": "Wireless communication remains the most energy-intensive component of embedded systems, often limiting their deployment in power-constrained or hard-to-reach environments. While backscatter communication offers energy efficiency by offloading carrier generation, it continues to face practical limitations, hindering widespread adoption. In this paper, we propose going beyond backscatter architecture that re-imagines both the transmitter and receiver using ultra-low-power components, such as tunnel diodes. Our approach eliminates the dependence on external emitters for transmission and moves beyond envelope detectors on the receiver side, resulting in significantly improved sensitivity and communication range.",
+    "citation_count": 0,
+    "reference_count": 2,
+    "url": "https://doi.org/10.1145/3711875.3729164",
+    "dblp_key": "conf/mobisys/PatabandigeCYDV25",
+    "source_id": "https://openalex.org/W4414760421"
+  },
+  {
+    "title": "Towards Distance-Adaptive Wireless Charging.",
+    "authors": [
+      "Lili Chen",
+      "Yizhe Zhao",
+      "Shuning Wang",
+      "Linghui Zhong",
+      "Yongjian Fu 0004",
+      "Sheng Yue 0001",
+      "Ju Ren 0001",
+      "Yaoxue Zhang"
+    ],
+    "venue": "MobiSys",
+    "year": 2025,
+    "abstract": "Wireless charging holds significant promise for IoT devices and transportation networks by facilitating convenient and autonomous power supply. Traditional wireless charging technologies have typically adhered to a singular approach, choosing between near-field coupling or far-field radiation. However, our investigations uncover that each method outperforms the other at specific distances. This insight leads us to integrating the advantages of both to enable rapid wireless charging across any distance within the charging range. For this vision, we poses an intriguing question: \"Can we develop a system that supports both near-field and far-field charging simultaneously?\"",
+    "citation_count": 1,
+    "reference_count": 52,
+    "url": "https://doi.org/10.1145/3711875.3729137",
+    "dblp_key": "conf/mobisys/ChenZWZFY0Z25",
+    "source_id": "https://openalex.org/W4414760769"
+  },
+  {
+    "title": "CrossLM: A Data-Free Collaborative Fine-Tuning Framework for Large and Small Language Models.",
+    "authors": [
+      "Yongheng Deng",
+      "Ziqing Qiao",
+      "Ye Zhang 0033",
+      "Zhenya Ma",
+      "Yang Liu 0165",
+      "Ju Ren 0001"
+    ],
+    "venue": "MobiSys",
+    "year": 2025,
+    "abstract": "While large language models (LLMs) are endowed with broad knowledge, their task-specific performance is often suboptimal. Fine-tuning LLMs with task-specific data from diverse nodes is necessary, but this data is typically safeguarded and not shared publicly due to privacy concerns. A common solution involves downstream nodes downloading the LLM locally and fine-tuning it with their proprietary data. However, owners often regard pre-trained LLMs as valuable assets and are reluctant to share them. Additionally, the significant computational resources required by LLMs make local fine-tuning impractical for many nodes. To mitigate these problems, this paper proposes CrossLM, a data-free collaborative fine-tuning framework for large and small language models. CrossLM enables resource-constrained nodes to train smaller language models (SLMs) using their private task-specific data. These SLMs are subsequently leveraged to promote the task-specific natural language generation and understanding capabilities of the LLMs. Simultaneously, the SLMs of nodes also benefit from enhancement by the fine-tuned LLMs. In this way, CrossLM avoids sharing private data and proprietary LLMs, and also reduces the resource requirements of nodes. Through extensive experiments across a range of benchmark tasks and popular language models, we demonstrate that CrossLM significantly boosts the task-specific performance of both LLMs and SLMs while preserving the generalization capabilities of LLMs.",
+    "citation_count": 0,
+    "reference_count": 20,
+    "url": "https://doi.org/10.1145/3711875.3729128",
+    "dblp_key": "conf/mobisys/DengQZML025",
+    "source_id": "https://openalex.org/W4414760872"
+  },
+  {
+    "title": "EdgeLoRA: An Efficient Multi-Tenant LLM Serving System on Edge Devices.",
+    "authors": [
+      "Zheyu Shen",
+      "Yexiao He",
+      "Ziyao Wang",
+      "Yuning Zhang",
+      "Guoheng Sun",
+      "Wanghao Ye",
+      "Ang Li 0005"
+    ],
+    "venue": "MobiSys",
+    "year": 2025,
+    "abstract": "Large Language Models (LLMs) have gained significant attention due to their versatility across a wide array of applications. Fine-tuning LLMs with parameter-efficient adapters, such as Low-Rank Adaptation (LoRA), enables these models to efficiently adapt to downstream tasks without extensive retraining. Deploying fine-tuned LLMs on multi-tenant edge devices offers substantial benefits, such as reduced latency, enhanced privacy, and personalized responses. However, serving LLMs efficiently on resource-constrained edge devices presents critical challenges, including the complexity of adapter selection for different tasks, memory overhead from frequent adapter swapping. Moreover, given the multiple requests in the multi-tenant settings, processing requests sequentially will result in underutilization of computational resources and significant latency. This paper introduces EdgeLoRA, an efficient system for serving LLMs on edge devices in multi-tenant environments. EdgeLoRA incorporates three key innovations: (1) an adaptive adapter selection mechanism to streamline the adapter configuration process; (2) heterogeneous memory management, leveraging intelligent adapter caching and pooling to mitigate memory operation overhead; and (3) batch LoRA inference, which enables efficient batch processing to significantly reduce computational latency. Comprehensive evaluations using the Llama3.1-8B model demonstrates that EdgeLoRA significantly outperforms the status quo (i.e., llama.cpp) in terms of both latency and throughput. The results demonstrates EdgeLoRA could achieve up to 4× boost in throughput with less energy consumption. Even more impressively, it manages to serve several orders of magnitude more adapters simultaneously without sacrificing inference performance. These results highlight EdgeLoRA's potential to transform edge deployment of LLMs in multi-tenant scenarios, offering a scalable and efficient solution for resource-constrained environments.",
+    "citation_count": 0,
+    "reference_count": 17,
+    "url": "https://doi.org/10.1145/3711875.3729141",
+    "dblp_key": "conf/mobisys/ShenHWZSY025",
+    "source_id": "https://openalex.org/W4414760881"
+  },
+  {
+    "title": "Never Start from Scratch: Expediting On-Device LLM Personalization via Explainable Model Selection.",
+    "authors": [
+      "Haoming Wang 0002",
+      "Boyuan Yang 0001",
+      "Xiangyu Yin 0002",
+      "Wei Gao 0006"
+    ],
+    "venue": "MobiSys",
+    "year": 2025,
+    "abstract": "Personalization of Large Language Models (LLMs) is important in practical applications to accommodate the individual needs of different mobile users. Due to data privacy concerns, LLM personalization often needs to be locally done at the user's mobile device, but such on-device personalization is constrained by both the limitation of on-device compute power and insufficiency of user's personal data. In this paper, we address these constraints by fine-tuning an already personalized LLM with user's personal data, and present XPerT, a new technique that ensure proper selection of such already personalized LLMs based on explainability about how they were being fine-tuned. We implemented and evaluated XPerT on various smartphone models with mainstream LLMs, and experiment results show that XPerT reduces the computation costs of on-device LLM personalization by 83%, and improves its data efficiency by 51%.",
+    "citation_count": 1,
+    "reference_count": 31,
+    "url": "https://doi.org/10.1145/3711875.3729132",
+    "dblp_key": "conf/mobisys/WangYYG25",
+    "source_id": "https://openalex.org/W4414760843"
+  },
+  {
+    "title": "WhisperFlow: speech foundation models in real time.",
+    "authors": [
+      "Rongxiang Wang",
+      "Zhiming Xu 0001",
+      "Felix Xiaozhu Lin"
+    ],
+    "venue": "MobiSys",
+    "year": 2025,
+    "abstract": "Speech foundation models, such as OpenAI's Whisper, become the state of the art in speech understanding due to their strong accuracy and generalizability. Yet, their applications are mostly limited to processing pre-recorded speech, whereas processing of streaming speech, in particular doing it efficiently, remains rudimentary. Behind this inefficiency are multiple fundamental reasons: (1) speech foundation models are trained to process long, fixed-length voice inputs (often 30 seconds); (2) encoding each voice input requires encoding as many as 1,500 tokens with tens of transformer layers; (3) decoding each output entails an irregular, complex beam search. As such, streaming speech processing on resource-constrained client devices is more expensive than other AI tasks, e.g., text generation. To this end, we present a novel framework, WhisperFlow, which embodies both model and system optimizations. (1) Hush word as a short, learnable audio segment; appended to a voice input, a hush word gracefully stops the speech model from processing more input without hallucination; (2) Beam pruning, which aligns streaming audio buffers over time and reuses results from earlier decoding rounds, therefore significantly accelerating decoding; and (3) CPU/GPU pipelining, which not only maps to the encoding/decoding stages dynamically, but also tunes to an optimal resource ratio, respecting the encoding/decoding speed that varies across voice inputs, models, and hardware. We test WhisperFlow on commodity ARM platforms with 4-12 CPU cores and 10-30 GPU cores. It reduces per-word latency by 1.6x-4.7x to as low as 0.5 second, while seeing negligible accuracy degradation. On an entry-level MacBook Air, WhisperFlow can keep the per-word latency around 1 second, with the whole device drawing only 7 Watts in total.",
+    "citation_count": 1,
+    "reference_count": 0,
+    "url": "https://doi.org/10.1145/3711875.3729151",
+    "dblp_key": "conf/mobisys/WangXL25",
+    "source_id": "https://openalex.org/W4405469917"
+  },
+  {
+    "title": "ARMing x86 Games: Accelerating Binary Translation Using Software-Only Validated Flag Speculation.",
+    "authors": [
+      "James Yen",
+      "Jiarui Wang",
+      "Zhibai Huang",
+      "Zhixiang Wei",
+      "Ziyang Zhang",
+      "Chen Chen",
+      "Senhao Yu",
+      "Yun Wang 0039",
+      "Hao Wang 0022",
+      "Zhengwei Qi"
+    ],
+    "venue": "MobiSys",
+    "year": 2025,
+    "abstract": "Side-channel attacks have become a severe threat to the confidentiality of computer applications and systems. One popular type of such attacks is the microarchitectural attack, where the adversary exploits the hardware features to break the protection enforced by the operating system and steal the secrets from the program. In this article, we systematize microarchitectural side channels with a focus on attacks and defenses in cryptographic applications. We make three contributions. (1) We survey past research literature to categorize microarchitectural side-channel attacks. Since these are hardware attacks targeting software, we summarize the vulnerable implementations in software, as well as flawed designs in hardware. (2) We identify common strategies to mitigate microarchitectural attacks, from the application, OS, and hardware levels. (3) We conduct a large-scale evaluation on popular cryptographic applications in the real world and analyze the severity, practicality, and impact of side-channel vulnerabilities. This survey is expected to inspire side-channel research community to discover new attacks, and more importantly, propose new defense solutions against them.",
+    "citation_count": 109,
+    "reference_count": 148,
+    "url": "https://doi.org/10.1145/3711875.3729163",
+    "dblp_key": "conf/mobisys/YenWHWZCYWWQ25",
+    "source_id": "https://openalex.org/W3181370975"
+  },
+  {
+    "title": "DAF: An Efficient End-to-End Dynamic Activation Framework for on-Device DNN Training.",
+    "authors": [
+      "Renyuan Liu",
+      "Yuyang Leng",
+      "Kaiyan Liu",
+      "Shaohan Hu",
+      "Chun-Fu (Richard) Chen",
+      "Peijun Zhao",
+      "Heechul Yun",
+      "Shuochao Yao"
+    ],
+    "venue": "MobiSys",
+    "year": 2025,
+    "abstract": "Recent advancements in on-device training for deep neural networks have underscored the critical need for efficient activation compression to overcome the memory constraints of mobile and edge devices. As activations dominate memory usage during training and are essential for gradient computation, compressing them without compromising accuracy remains a key research challenge. While existing methods for dynamic activation quantization promise theoretical memory savings, their practical deployment is impeded by system-level challenges such as computational overhead and memory fragmentation.",
+    "citation_count": 0,
+    "reference_count": 22,
+    "url": "https://doi.org/10.1145/3711875.3729145",
+    "dblp_key": "conf/mobisys/LiuLLHCZYY25",
+    "source_id": "https://openalex.org/W4414760848"
+  },
+  {
+    "title": "Data Can Speak for Itself: Quality-guided Utilization of Wireless Synthetic Data.",
+    "authors": [
+      "Chen Gong",
+      "Bo Liang 0003",
+      "Wei Gao 0006",
+      "Chenren Xu"
+    ],
+    "venue": "MobiSys",
+    "year": 2025,
+    "abstract": "Generative models have gained significant attention for their ability to produce realistic synthetic data that supplements the quantity of real-world datasets. While recent studies show performance improvements in wireless sensing tasks by incorporating all synthetic data into training sets, the quality of synthetic data remains unpredictable and the resulting performance gains are not guaranteed. To address this gap, we propose tractable and generalizable metrics to quantify quality attributes of synthetic data—affinity and diversity. Our assessment reveals prevalent affinity limitation in current wireless synthetic data, leading to mislabeled data and degraded task performance. We attribute the quality limitation to generative models' lack of awareness of untrained conditions and domain-specific processing. To mitigate these issues, we introduce SynCheck, a quality-guided synthetic data utilization scheme that refines synthetic data quality during task model training. Our evaluation demonstrates that SynCheck consistently outperforms quality-oblivious utilization of synthetic data, and achieves 4.3% performance improvement even when the previous utilization degrades performance by 13.4%.",
+    "citation_count": 1,
+    "reference_count": 36,
+    "url": "https://doi.org/10.1145/3711875.3729123",
+    "dblp_key": "conf/mobisys/GongLGX25",
+    "source_id": "https://openalex.org/W4414760883"
+  },
+  {
+    "title": "AutoDroid-V2: Boosting SLM-based GUI Agents via Code Generation.",
+    "authors": [
+      "Hao Wen 0004",
+      "Shizuo Tian",
+      "Borislav Pavlov",
+      "Wenjie Du 0004",
+      "Yixuan Li",
+      "Ge Chang 0002",
+      "Shanhui Zhao",
+      "Jiacheng Liu",
+      "Yunxin Liu 0001",
+      "Ya-Qin Zhang",
+      "Yuanchun Li 0003"
+    ],
+    "venue": "MobiSys",
+    "year": 2025,
+    "abstract": "Large language models (LLMs) have brought exciting new advances to mobile UI agents, a long-standing research field that aims to complete arbitrary natural language tasks through mobile UI interactions. However, existing UI agents usually demand powerful large language models that are difficult to be deployed locally on end-users' devices, raising huge concerns about user privacy and centralized serving cost. Inspired by the remarkable coding abilities of recent small language models (SLMs), we propose to convert the UI task automation problem to a code generation problem, which can be effectively solved by an on-device SLM and efficiently executed with an on-device code interpreter. Unlike normal coding tasks that can be extensively pre-trained with public datasets, generating UI automation code is challenging due to the diversity, complexity, and variability of target apps. Therefore, we adopt a document-centered approach that automatically builds fine-grained API documentation for each app and generates diverse task samples based on this documentation. By guiding the agent with the synthetic documents and task samples, it learns to generate precise and efficient scripts to complete unseen tasks. Based on detailed comparisons with state-of-the-art mobile UI agents, our approach effectively improves the mobile task automation with significantly higher success rates and lower latency/token consumption. Code is open-sourced at https://github.com/MobileLLM/AutoDroid-V2.",
+    "citation_count": 1,
+    "reference_count": 15,
+    "url": "https://doi.org/10.1145/3711875.3729134",
+    "dblp_key": "conf/mobisys/WenTP0LCZLLZL25",
+    "source_id": "https://openalex.org/W4414760685"
+  },
+  {
+    "title": "Shepherd Nova: A Public Testbed for Rigorous Experiments Under Repeatable Energy-Harvesting Conditions.",
+    "authors": [
+      "Kai Geissdoerfer",
+      "Ingmar Splitt",
+      "Matthias Sokolowski",
+      "Carsten Herrmann",
+      "Jonas Kubicki",
+      "Jasper de Winkel",
+      "Marco Zimmerling"
+    ],
+    "venue": "MobiSys",
+    "year": 2025,
+    "abstract": "Public testbeds are essential for replicable experiments and meaningful comparisons on shared physical infrastructure. While many testbeds exist for battery-powered Internet of Things (IoT) systems, there is a lack of public testbeds for observing and profiling the distributed operation of energy-harvesting IoT systems, including battery-free devices. We fill this gap and present Shepherd Nova, the first public testbed designed to support experiments under repeatable energy-harvesting conditions. Shepherd Nova uses field-recorded harvesting data to supply power to devices, consistently replicating real-world spatio-temporal energy availability across multiple experiments. Its virtual power source supports diverse ambient energy sources, harvesting circuitry, and energy storage devices. Moreover, Shepherd Nova provides services like general-purpose input/output (GPIO) tracing, power profiling, and serial output logging, all of which can run synchronously and with high resolution. Sub-microsecond synchronization enables precise correlation between these observations and emulated energy-harvesting conditions, offering unprecedented insights into distributed energy-harvesting IoT systems. In this paper, we describe Shepherd Nova's design, characterize its performance, and demonstrate its capabilities through controlled experiments and an example test case. To access the testbed, documentation as well as open-source harvesting data, hardware designs, and code, visit https://testbed.nes-lab.org/.",
+    "citation_count": 0,
+    "reference_count": 18,
+    "url": "https://doi.org/10.1145/3711875.3729146",
+    "dblp_key": "conf/mobisys/GeissdoerferSSH25",
+    "source_id": "https://openalex.org/W4414760849"
+  },
+  {
+    "title": "ARIA: Optimizing Vision Foundation Model Inference on Heterogeneous Mobile Processors for Augmented Reality.",
+    "authors": [
+      "Chanyoung Jung",
+      "Jeho Lee",
+      "Gunjoong Kim",
+      "Jiwon Kim",
+      "Seonghoon Park 0001",
+      "Hojung Cha"
+    ],
+    "venue": "MobiSys",
+    "year": 2025,
+    "abstract": "Mobile Augmented Reality (AR) applications demand high-quality, real-time visual prediction, including pixel-level depth and semantics, to enable immersive and context-aware user experiences. Recently, Vision Foundation Models (VFMs) offer strong generalization capabilities on diverse and unseen data, supporting scalable mobile AR experiences. However, deploying VFMs on mobile devices is challenging due to computational limitations, particularly in maintaining both prediction accuracy and real-time performance. In this paper, we present ARIA, the first system that enables on-device inference acceleration of a VFM. ARIA employs the heterogeneity of mobile processors through a parallel and selective inference scheme: full-frame prediction is periodically offloaded to a processor with high parallelism capability like GPU, while low-latency updates on dynamic regions are conducted via a specialized accelerator like NPU. Implemented and evaluated using mobile devices, ARIA achieved significant improvements in accuracy and deadline success rate on diverse real-world mobile AR scenarios.",
+    "citation_count": 2,
+    "reference_count": 45,
+    "url": "https://doi.org/10.1145/3711875.3729161",
+    "dblp_key": "conf/mobisys/JungLKK0C25",
+    "source_id": "https://openalex.org/W4414508187"
+  },
+  {
+    "title": "You Only Render Once: Enhancing Energy and Computation Efficiency of Mobile Virtual Reality.",
+    "authors": [
+      "Xingyu Chen",
+      "Xinmin Fang",
+      "Shuting Zhang",
+      "Xinyu Zhang 0003",
+      "Liang He",
+      "Zhengxiong Li"
+    ],
+    "venue": "MobiSys",
+    "year": 2025,
+    "abstract": "Mobile Virtual Reality (VR) is essential to achieving convenient and immersive human-computer interaction and realizing emerging applications such as Metaverse. However, existing VR technologies require two separate renderings of binocular images, causing a significant bottleneck for mobile devices with limited computing capability and power supply. This paper proposes an approach to rendering optimization for mobile VR called EffVR. By utilizing the per-pixel attribute, EffVR can generate binocular VR images from the monocular image through genuinely one rendering, saving half the computation over conventional approaches. Our evaluation indicates that, compared with the state-of-art, EffVRcan save 27% power consumption on average while achieving high binocular image quality (0.9679 SSIM and 34.09 PSNR) in mobile VR applications. Additionally, EffVR can increase the frame rate by 115.2%. These results corroborate EffVRsuperior computation/energy-saving performance, paving the road to a sustainable mobile VR. The source code, demo video, android app, and more are released anonymously at https://yoro-vr.github.io/",
+    "citation_count": 0,
+    "reference_count": 0,
+    "url": "https://doi.org/10.1145/3711875.3729133",
+    "dblp_key": "conf/mobisys/ChenFZZHL25",
+    "source_id": "https://openalex.org/W4415333561"
+  },
+  {
+    "title": "PointPresence: An Online Habitat for Multi-User Mixed Reality Telepresence.",
+    "authors": [
+      "Eugene Chai",
+      "Kittipat Apicharttrisorn",
+      "Limin Wang 0010",
+      "Hyunseok Chang",
+      "Sarit Mukherjee"
+    ],
+    "venue": "MobiSys",
+    "year": 2025,
+    "abstract": "Mixed reality (MR) telepresence provides a shared common 3D space for networked users to enjoy real-time immersive experiences with natural interactivity and movement. Due to its high hardware and compute demands, a large-scale cloud-edge MR solution is necessary for achieving critical mass adoption, where users engage in the MR environment using low-cost cameras at the edge and complex 3D world processing is offloaded to the cloud servers. However, cloud-edge MR solutions have distinct challenges such as concurrent multiple camera support, unpredictable compute demands, and CPU/GPU contention. In this paper, we present PointPresence, an edge-compute framework for large-scale MR applications. PointPresence is deployed at an edge node, such as an O-RAN RIC or a local enterprise server, and provides low-latency MR experiences to a large number of users by incorporating intelligent camera selection for compute reduction, reactive pipeline design for adaptation to compute demand changes, and context-aware GPU sharing. Our comprehensive evaluation on an MR testbed shows that PointPresence reduces end-to-end latency by up to 3.5× and improves end user perceived visual quality by 30%.",
+    "citation_count": 0,
+    "reference_count": 36,
+    "url": "https://doi.org/10.1145/3711875.3729148",
+    "dblp_key": "conf/mobisys/ChaiA0CM25",
+    "source_id": "https://openalex.org/W4414760888"
+  },
+  {
+    "title": "Tracking Blink Dynamics and Mental States on Glasses.",
+    "authors": [
+      "Dongyin Hu",
+      "Xin Yang",
+      "Ahhyun Yuh",
+      "Zihao Wang",
+      "Lama A. Al-Aswad",
+      "Insup Lee 0001",
+      "Mingmin Zhao"
+    ],
+    "venue": "MobiSys",
+    "year": 2025,
+    "abstract": "Eye blink dynamics offer crucial insights into physiological and cognitive states. Existing solutions either require specialized equipment for detailed measurements or sacrifice temporal resolution for accessibility. We present BlinkWise, the first system that transforms everyday eyewear into a wise device for detailed blink dynamics tracking as a tiny add-on. BlinkWise measures eye openness in real-time on resource-constrained edge devices by leveraging both RF modality's inherent efficiency and novel computational optimizations—including recurrentization of convolutional network operations, quantization-aware normalization, and a lightweight proposal algorithm. Evaluation with 20 subjects and more than 18,000 blink measurements demonstrated BlinkWise's high accuracy in capturing subtle blink dynamics at millisecond resolution, achieving a Pearson correlation of 0.981 with ground truth. Through three real-world application studies, we demonstrate BlinkWise's potential for monitoring cognitive states and ocular health. Code, datasets, and demo videos are available on our website.",
+    "citation_count": 0,
+    "reference_count": 57,
+    "url": "https://doi.org/10.1145/3711875.3729150",
+    "dblp_key": "conf/mobisys/HuYYWA0Z25",
+    "source_id": "https://openalex.org/W4414760864"
+  },
+  {
+    "title": "HELIX: High-speed Real-Time Experimentation Platform for 6G Wireless Networks.",
+    "authors": [
+      "Rafael Ruiz 0001",
+      "Jesus Omar Lacruz",
+      "Bastian Bloessl",
+      "Matthias Hollick",
+      "Joerg Widmer"
+    ],
+    "venue": "MobiSys",
+    "year": 2025,
+    "abstract": "Mobile networks are evolving rapidly, with 6G promising unprecedented capabilities in terms of data rates and ultra-low latencies. However, the development of testbed platforms for wireless experimentation has not kept pace. Existing platforms typically offer either end-to-end capabilities with low bandwidth or high bandwidth with limited or no real-time functionality. In this paper, we introduce HELIX, an experimentation platform with 6G scalable real-time capabilities. HELIX integrates a comprehensive physical layer subsystem with multi-numerology support alongside an advanced mixed software-hardware control unit responsible for interacting with the fronthaul network and dynamically configuring the functional split in real time. On the server side, we implement the necessary drivers and routines to enable seamless integration with O-RAN systems, thus facilitating open and end-to-end experimentation. We demonstrate the capabilities of HELIX through a variety of experiments at sub-6 GHz, 28 GHz, and 60 GHz frequencies. Notably, HELIX achieves data rates of up to 1200 Mbps using 256-QAM modulation with over 417 MHz of bandwidth, and end-to-end bidirectional latencies of 500 μs. We show advanced features, including the implementation of Integrated Sensing And Communication (ISAC), and discuss how the platform could be extended to support bandwidths of up to 1670 MHz.",
+    "citation_count": 0,
+    "reference_count": 30,
+    "url": "https://doi.org/10.1145/3711875.3729152",
+    "dblp_key": "conf/mobisys/0001LBHW25",
+    "source_id": "https://openalex.org/W4414760795"
+  },
+  {
+    "title": "High-resolution mmWave Imaging using Metasurface and Diffusion.",
+    "authors": [
+      "Yida Wang 0007",
+      "Yu Lu 0022",
+      "Yuxuan Zhou",
+      "Yifei Shen 0004",
+      "Lili Qiu",
+      "Zeyuan Lai",
+      "Yi-Chao Chen 0001",
+      "Hao Pan 0003",
+      "Juntao Zhou",
+      "Dian Ding",
+      "Mei Wang",
+      "Guangtao Xue",
+      "Qian Zhang 0001"
+    ],
+    "venue": "MobiSys",
+    "year": 2025,
+    "abstract": "6G and beyond will fulfill the requirements of a fully connected world and provide ubiquitous wireless connectivity for all. Transformative solutions are expected to drive the surge for accommodating a rapidly growing number of intelligent devices and services. Major technological breakthroughs to achieve connectivity goals within 6G include: (i) a network operating at the THz band with much wider spectrum resources, (ii) intelligent communication environments that enable a wireless propagation environment with active signal transmission and reception, (iii) pervasive artificial intelligence, (iv) large-scale network automation, (v) an all-spectrum reconfigurable front-end for dynamic spectrum access, (vi) ambient backscatter communications for energy savings, (vii) the Internet of Space Things enabled by CubeSats and UAVs, and (viii) cell-free massive MIMO communication networks. In this roadmap paper, use cases for these enabling techniques as well as recent advancements on related topics are highlighted, and open problems with possible solutions are discussed, followed by a development timeline outlining the worldwide efforts in the realization of 6G. Going beyond 6G, promising early-stage technologies such as the Internet of NanoThings, the Internet of BioNanoThings, and quantum communications, which are expected to have a far-reaching impact on wireless communications, have also been discussed at length in this paper.",
+    "citation_count": 1324,
+    "reference_count": 208,
+    "url": "https://doi.org/10.1145/3711875.3729162",
+    "dblp_key": "conf/mobisys/0007LZSQL00ZDWX25",
+    "source_id": "https://openalex.org/W3045086480"
+  },
+  {
+    "title": "MetaGen: LLM-Driven Generative Framework for Intelligent Metasurface Element.",
+    "authors": [
+      "Yizhe Zhao",
+      "Lili Chen",
+      "Xinyi Li 0005",
+      "Yue-Jiang Dong",
+      "Ju Ren 0001",
+      "Yaoxue Zhang"
+    ],
+    "venue": "MobiSys",
+    "year": 2025,
+    "abstract": "Metasurfaces are a transformative class of artificial electromagnetic materials with significant potential in communication, sensing, and security. However, existing design methods require detailed physical properties as input and lack flexibility under complex constraints, limiting their applicability. In this paper, we propose MetaGen, a general, efficient, and user-friendly generation framework for intelligent metasurface elements. MetaGen employs a fine-tuned large language model to translate natural language instructions into formatted physical properties and integrates a diffusion-based model to generate metasurface elements. Furthermore, we develop a metasurface element dataset with granular frequency sampling and extended geometric parameters to enable MetaGen to learn the complex relationships between metasurface element geometries and electromagnetic responses. Experimental results demonstrate that MetaGen effectively satisfies complex constraints, achieving electromagnetic responses closely aligned with target specifications.",
+    "citation_count": 0,
+    "reference_count": 38,
+    "url": "https://doi.org/10.1145/3711875.3729129",
+    "dblp_key": "conf/mobisys/ZhaoCLD0Z25",
+    "source_id": "https://openalex.org/W4414760871"
+  },
+  {
+    "title": "RISENSE: Long-Range In-Band Wireless Control of Passive Reconfigurable Intelligent Surfaces.",
+    "authors": [
+      "Sai Pavan Deram",
+      "Marco Rossanese",
+      "Andres Garcia-Saavedra",
+      "Syed Waqas Haider Shah",
+      "Vincenzo Sciancalepore",
+      "Joerg Widmer",
+      "Xavier Costa-Pérez"
+    ],
+    "venue": "MobiSys",
+    "year": 2025,
+    "abstract": "Reconfigurable Intelligent Surfaces (RIS) are a promising technology for creating smart radio environments by controlling wireless propagation. However, several factors hinder the integration of RIS technology into existing cellular networks, including the incompatibility of RIS control interfaces with 5G PHY/MAC procedures for synchronizing radio scheduling decisions and RIS operation, and the cost and energy limitations of passive RIS technology. This paper presents RISENSE, a system for practical RIS integration in cellular networks. First, we propose a novel, low-cost, and low-power RIS design capable of decoding control messages without complex baseband operations or additional RF chains, utilizing a power sensor and a network of microstrip lines and couplers. Second, we design an effective in-band wireless RIS control interface, compatible with 5G PHY/MAC procedures, that embeds amplitude-modulated (AM) RIS control commands directly into standard OFDM-modulated 5G data channels. Finally, we propose a low-overhead protocol that supports swift on-demand RIS re-configurability, making it adaptable to varying channel conditions and user mobility, while minimizing the wastage of 5G OFDM symbols. Our experiments validate the design of RISENSE and our evaluation shows that our system can re-configure a RIS at the same pace as users move, boosting 5G coverage where static or slow RIS controllers cannot.",
+    "citation_count": 0,
+    "reference_count": 38,
+    "url": "https://doi.org/10.1145/3711875.3729154",
+    "dblp_key": "conf/mobisys/DeramRGSSWC25",
+    "source_id": "https://openalex.org/W4414760798"
+  },
+  {
+    "title": "DeltaStream: 2D-Inferred Delta Encoding for Live Volumetric Video Streaming.",
+    "authors": [
+      "Hojeong Lee",
+      "Yu Hong Kim",
+      "Sangwoo Ryu",
+      "James Won-Ki Hong",
+      "Sangtae Ha",
+      "Seyeon Kim 0001"
+    ],
+    "venue": "MobiSys",
+    "year": 2025,
+    "abstract": "Live volumetric video streaming enables immersive user experiences but poses significant challenges due to the high bandwidth requirement that 3D representations entail. Recent research has focused on reducing volumetric video bandwidth, but it struggles to effectively address temporal redundancy under real-time constraints, limiting its applicability for live streaming scenarios. To address these challenges, we present DeltaStream, a novel live volumetric video streaming system that efficiently encodes 3D point clouds by leveraging 2D information. By utilizing 2D RGB and depth frames, DeltaStream efficiently infers inter-frame changes to reduce the streaming bandwidth of volumetric video. Furthermore, DeltaStream introduces an adaptive block-based approach that can reduce the client-side decoding load. Through extensive evaluations, our results demonstrate that DeltaStream reduces bandwidth by up to 71% with 1.63× faster decoding speed while maintaining visual quality compared to state-of-the-art systems.",
+    "citation_count": 0,
+    "reference_count": 41,
+    "url": "https://doi.org/10.1145/3711875.3729131",
+    "dblp_key": "conf/mobisys/LeeKRHHK25",
+    "source_id": "https://openalex.org/W4414760770"
+  },
+  {
+    "title": "Empilo: Realizing Immersive Mobile 3D Video Conferencing through Parameterized Communication.",
+    "authors": [
+      "Donggyu Yang",
+      "Wooseung Nam",
+      "Byunggu Kang",
+      "Kyunghan Lee"
+    ],
+    "venue": "MobiSys",
+    "year": 2025,
+    "abstract": "In this work, we explore a new communication paradigm for immersive 3D video conferencing, termed parameterized communication, which dramatically reduces bandwidth usage by eliminating the need to exchange excessive volumetric data. Instead, this approach extracts a compact set of informative parameters representing key elements in the 3D space, transmits only these parameters, and reconstructs the scene on the receiving end. Translating this concept into practice, we present Empilo, a mobile 3D conferencing system composed of a face parameter extractor and a neural rendering-based scene generator. However, while neural rendering excels at synthesizing arbitrary views of objects without explicit 3D models, its heavy computational demands present a major obstacle for mobile deployment. To overcome this challenge, we propose a novel technique called truncated ray marching, which significantly reduces computational overhead by replacing iterative MLP inferences with a single-pass of a shallow neural network. Furthermore, to ensure a consistently immersive experience, we structure the neural-free lightweight renderer as a decoupled component, dedicated to delivering rapid responsiveness to dynamic viewpoint changes. These breakthroughs on computation together enable Empilo to rely entirely on mobile resources, achieving real-time performance with a frame generation time of 30.3 ms and a re-rendering latency of just 6.6 ms—all while operating at an exceptionally low bitrate of 24 kbps. Our approach provides valuable guidance for the practical deployment of 3D conferencing, envisioning accessibility on par with platforms like FaceTime and Zoom.",
+    "citation_count": 0,
+    "reference_count": 48,
+    "url": "https://doi.org/10.1145/3711875.3729140",
+    "dblp_key": "conf/mobisys/YangNKL25",
+    "source_id": "https://openalex.org/W4414760791"
+  },
+  {
+    "title": "NeRFlow: Towards Adaptive Streaming for NeRF Videos.",
+    "authors": [
+      "Rui-Xiao Zhang",
+      "Tianchi Huang",
+      "Bo Chen 0025",
+      "Klara Nahrstedt"
+    ],
+    "venue": "MobiSys",
+    "year": 2025,
+    "abstract": "We present a method for estimating the intrinsic components of a dynamic scene captured with multi-view video sequences. Unlike previous work focused either on static scenes or single view videos, our method simultaneously addresses the challenges of dealing with the extra computational complexity given by the dynamic motion while enables novel view synthesis. Key to our method to make the output temporally consistent is to encode the temporal information in a latent embedding that leverages the redundant information of the dynamic scene. Our intrinsic components includes diffuse and specular albedo, as well as scene geometry and environment illumination. We explicitly account for light visibility, which we estimate efficiently by considering dynamic and static points separately, making the problem computationally tractable. We demonstrate the effectiveness of our approach through quantitative and qualitative experiments, showing that it outperforms the naïve per-frame decomposition approach in several real-world scenes.",
+    "citation_count": 7,
+    "reference_count": 67,
+    "url": "https://doi.org/10.1145/3711875.3729160",
+    "dblp_key": "conf/mobisys/ZhangH0N25",
+    "source_id": "https://openalex.org/W4399920819"
+  },
+  {
+    "title": "Towards End-to-End Latency Guarantee in MEC Live Video Analytics with App-RAN Mutual Awareness.",
+    "authors": [
+      "Juheon Yi",
+      "Goodsol Lee",
+      "Minkyung Jeong",
+      "Seokgyeong Shin",
+      "Daehyeok Kim",
+      "Youngki Lee 0001"
+    ],
+    "venue": "MobiSys",
+    "year": 2025,
+    "abstract": "While mobile live video analytics apps require end-to-end latency guarantee for responsiveness and immersiveness, achieving consistent low latency is challenging due to complex fluctuations of wireless channel and scene complexity; for example, latency SLO satisfaction rate drops to as low as 26% in commercial 5G MEC platforms. Prior works mostly focus on either app-only (bitrate, DNN adaptation, or GPU allocation) or RAN-only (radio resource allocation) scheduling, with mutual ignorance of the other side resulting in mismatched scheduling decisions and frequent SLO violations. Coordinating the two schedulers is also challenging, as they are run separately by network and cloud operators with disjoint control. We present ARMA, an end-to-end live video analytics system with app-RAN mutual-awareness for high end-to-end latency SLO satisfaction in MEC. We design a mutually-aware decoupled scheduling mechanism on top of RAN Intelligent Controller (RIC) in Open-RAN architecture that fosters cooperative interaction between the two operators' schedulers while preserving operational proprietaries. We prototype an Open RAN-enabled 5G MEC testbed and evaluate ARMA, showing that ARMA achieves 97% SLO satisfaction rate.",
+    "citation_count": 0,
+    "reference_count": 49,
+    "url": "https://doi.org/10.1145/3711875.3729139",
+    "dblp_key": "conf/mobisys/YiLJSK025",
+    "source_id": "https://openalex.org/W4414760855"
+  },
+  {
+    "title": "Toward Spoofing-Resilient and Communication-Integrated MmWave Radar Sensing.",
+    "authors": [
+      "Kun Qian 0004",
+      "Parth Pathak 0001"
+    ],
+    "venue": "MobiSys",
+    "year": 2025,
+    "abstract": "MmWave FMCW radars are integrated into many sensing systems for robust sensing. However, their sensing functions are vulnerable to spoofing attacks and interfered with by backscatter communications, both of which can cause sensor malfunction and system failure. Noticing that radar spoofing and communication share similar signal modulation mechanisms, in this paper, we present SCR, a new Spoofing-resilient and Communication-integrated Radar sensing scheme. SCR is based on the rigorous analysis of the radar sensing model that highlights the differences between modulated spoofing and communication signals and normal sensing signals reflected by natural objects. The key designs of SCR are a novel chirp configuration scheme and signal processing pipeline, which signify different patterns between modulated and normal signals in radar spectra, for reliable detection of spoofing and communication. We have developed SCR and tested it with actual 77 GHz mmWave radar sensors and backscatter prototypes. Our field tests show that SCR can reliably detect fake objects created by modulated signals in both velocity and distance radar sensing domains.",
+    "citation_count": 0,
+    "reference_count": 45,
+    "url": "https://doi.org/10.1145/3711875.3729155",
+    "dblp_key": "conf/mobisys/QianP25",
+    "source_id": "https://openalex.org/W4414760760"
+  },
+  {
+    "title": "Dynamic Defense for Car-Borne LiDAR Vehicle Detection.",
+    "authors": [
+      "Yihan Xu",
+      "Dongfang Guo",
+      "Qun Song 0001",
+      "Yang Lou",
+      "Yi Zhu 0012",
+      "Jianping Wang 0001",
+      "Chunming Qiao",
+      "Rui Tan 0001"
+    ],
+    "venue": "MobiSys",
+    "year": 2025,
+    "abstract": "Adversarial attacks with real objects or lasers on car-borne LiDAR-based object detection are concerning. The existing defense approaches are often designed to address specific attacks and short of considering adaptive attackers who may adapt based on all available information about the deployed defense to maximize attack effect. This paper proposes Hyper3Def, a new defense for the function of detecting vehicle objects, which uses a Hypernet to generate an ensemble of multiple new detection models when needed at run time. The detection results of these models are fused to give the final result. As a dynamic defense, Hyper3Def revokes an important basis of the adaptive attack, i.e., the object detection model is needed to plan effective adversarial perturbations. Evaluation based on open data and real-world experiments with embedded system implementation show that, when confronting adaptive attacks, Hyper3Def outperforms various baseline defenses including the adversarial training, which is often cited as the state of the art.",
+    "citation_count": 0,
+    "reference_count": 36,
+    "url": "https://doi.org/10.1145/3711875.3729157",
+    "dblp_key": "conf/mobisys/XuG0L00Q025",
+    "source_id": "https://openalex.org/W4414760867"
+  },
+  {
+    "title": "Non-Line-of-Sight 3D Object Reconstruction via mmWave Surface Normal Estimation.",
+    "authors": [
+      "Laura Dodds",
+      "Tara Boroushaki",
+      "Kaichen Zhou",
+      "Fadel Adib"
+    ],
+    "venue": "MobiSys",
+    "year": 2025,
+    "abstract": "This paper presents the design, implementation, and evaluation of mmNorm, a new and highly-accurate method for non-line-of-sight 3D object reconstruction using millimeter wave (mmWave) signals. In contrast to past approaches for millimeter-wave-based imaging that perform backprojection for 3D object reconstruction, mmNorm reconstructs the surface by estimating the object's surface normals. To do this, it introduces a novel algorithm that directly estimates the surface normal vector field from mmWave reflections. By then inverting the normal field, it can reconstruct structural isosurfaces, then solve for the exact surface through a novel mmWave optimization framework.",
+    "citation_count": 3,
+    "reference_count": 58,
+    "url": "https://doi.org/10.1145/3711875.3729138",
+    "dblp_key": "conf/mobisys/DoddsBZA25",
+    "source_id": "https://openalex.org/W4414760874"
+  },
+  {
+    "title": "UniSense: Spatial-Uncertainty-Aware Collaborative Sensing for Autonomous Driving.",
+    "authors": [
+      "Haojie Ren",
+      "Wuyang Zhang",
+      "Shuyao Shi",
+      "Xinran Zhang",
+      "Lu Zhang",
+      "Yanyong Zhang"
+    ],
+    "venue": "MobiSys",
+    "year": 2025,
+    "abstract": "Vehicle-to-vehicle collaborative perception faces fundamental deployment barriers: raw LiDAR data sharing requires over 300 Mbps per vehicle - far exceeding V2X network capacities, while network delays of 80-200ms create dangerous temporal misalignments at highway speeds. We present UniSense, a distributed collaborative perception system that enables efficient and reliable multi-vehicle perception through uncertainty-driven sensor data exchange. Instead of sharing raw sensor data, vehicles exchange compact uncertainty maps that identify regions requiring additional perceptual information. Our key innovations include: (1) a lightweight uncertainty quantification pipeline that runs in real-time on automotive hardware, identifying perception-critical regions while reducing bandwidth requirements by more than 10×, (2) a bandwidth-aware protocol that dynamically adapts data sharing based on network conditions and perception uncertainty, and (3) a selective motion compensation scheme that maintains temporal consistency. We evaluate UniSense through a year-long deployment with 16 roadside LiDAR nodes and autonomous vehicles across our campus. Our experimental results show that UniSense extends reliable perception range from local 80m to 140m, improving accuracy by 1.33× on average, up to 1.73×, over the state-of-the-art baselines, under communication constraints. The code and dataset are available at https://github.com/LetStarFly/UniSense.",
+    "citation_count": 1,
+    "reference_count": 34,
+    "url": "https://doi.org/10.1145/3711875.3729130",
+    "dblp_key": "conf/mobisys/RenZSZZZ25",
+    "source_id": "https://openalex.org/W4414760657"
+  },
+  {
+    "title": "CAMPrints: Leveraging the \"Fingerprints\" of Digital Cameras to Combat Image Theft.",
+    "authors": [
+      "Bangjie Sun",
+      "Mun Choon Chan",
+      "Jun Han 0001"
+    ],
+    "venue": "MobiSys",
+    "year": 2025,
+    "abstract": "Photo sharing is increasingly popular, driven by social media platforms like Instagram and services such as Flickr and Google Photos. However, this growth has been accompanied by significant issues, particularly image theft. To address this issue, we introduce CAMPrints, a robust system for detecting image theft. CAMPrints verifies whether edited images found online contain camera fingerprints matching those of user-provided reference images. The system overcomes the challenges of identifying images altered by diverse image processing operations. We select a small yet representative set of operations by categorizing them based on their impact on pixel values and locations. A deep-learning model is trained to recognize and compare camera noise patterns pre- and post-editing. We conduct real-world evaluations involving 36 cameras across eight make-and-model combinations, along with over 40 image processing operations applied to more than 4,000 images. CAMPrints achieves an average AUC of 0.92, significantly outperforming the state-of-the-art methods by up to 1.8 times.",
+    "citation_count": 0,
+    "reference_count": 40,
+    "url": "https://doi.org/10.1145/3711875.3729158",
+    "dblp_key": "conf/mobisys/SunC025",
+    "source_id": "https://openalex.org/W4414760836"
+  },
+  {
+    "title": "Chameleon: Towards Building Least-privileged TEE via Functionality-based Resource Re-grouping.",
+    "authors": [
+      "Nan Jiang",
+      "Qihang Zhou",
+      "Feifan Qian",
+      "Jiayun Chen",
+      "Heqing Huang 0001",
+      "Xiaoqi Jia",
+      "Haichao Du"
+    ],
+    "venue": "MobiSys",
+    "year": 2025,
+    "abstract": "TrustZone-assisted Trusted Execution Environment (TEE) has been widely employed in mobile devices to protect sensitive applications. With increased customization demands, Trusted Applications (TAs) have become more flexible and complex, exposing numerous vulnerabilities within the TEE. Furthermore, due to the unrestricted Trusted Operating System (TOS) services provided to TA, an attacker can exploit vulnerabilities to compromise the whole TEE system. In this paper, we propose a novel customized TOS partition approach, called Chameleon, to enhance the security of the TrustZone-assisted TEE system. Inspired by the principle of least privilege and our TEE vulnerability analysis, we first categorize the TOS into TOS service modules and basic kernel modules. Then, we selectively encapsulate these modules into distinct Capsules based on the TA's functional requirements, providing each TA with a separate execution environment (TA-entity). To enforce access control and confine vulnerable modules within a TA-entity, we introduce T-Visor, which serves as our Trusted Computing Base. Our prototype implementation, built upon Linaro's OP-TEE, requires only 2.9K Lines of Code (LoC) modifications. Evaluation on a Hikey960 board demonstrates that Chameleon reduces the attack surface of TOS services to 51% and mitigates 122 out of 138 CVEs (88.41%) with negligible performance overhead.",
+    "citation_count": 0,
+    "reference_count": 17,
+    "url": "https://doi.org/10.1145/3711875.3729143",
+    "dblp_key": "conf/mobisys/JiangZQC0JD25",
+    "source_id": "https://openalex.org/W4414760682"
+  },
+  {
+    "title": "Detection and Tracking of Drone Swarms using LiDAR.",
+    "authors": [
+      "Tasnim Azad Abir",
+      "Vu Le",
+      "Endrowednes Kuantama",
+      "Pranjol Sen Gupta",
+      "Austin Copley",
+      "Judith M. Dawes",
+      "Mohammad A. Islam 0001",
+      "Richard Han 0001",
+      "Phuc Nguyen 0002"
+    ],
+    "venue": "MobiSys",
+    "year": 2025,
+    "abstract": "This paper introduces LiSWARM, a low-cost LiDAR system to detect and track individual drones in a large swarm. LiSWARM provides robust and precise localization and recognition of drones in 3D space, which is not possible with state-of-the-art drone tracking systems that rely on radio-frequency (RF), acoustic, or RGB image signatures. It includes (1) an efficient data processing pipeline to process the point clouds, (2) robust priority-aware clustering algorithms to isolate swarm data from the background, (3) a reliable neural network-based algorithm to recognize the drones, and (4) a technique to track the trajectory of every drone in the swarm. We develop the LiSWARM prototype and validate it through both in-lab and field experiments. Notably, we measure its performance during two drone light shows involving 150 and 500 drones and confirm that the system achieves up to 98% accuracy in recognizing drones and reliably tracking drone trajectories. To evaluate the scalability of LiSWARM, we conduct a thorough analysis to benchmark the system's performance with a swarm consisting of 15,000 drones. The results demonstrate the potential to leverage LiSWARM for other applications, such as battlefield operations, errant drone detection, and securing sensitive areas such as airports and prisons.",
+    "citation_count": 2,
+    "reference_count": 73,
+    "url": "https://doi.org/10.1145/3711875.3729156",
+    "dblp_key": "conf/mobisys/AbirLKGCD00025",
+    "source_id": "https://openalex.org/W4414760840"
+  },
+  {
+    "title": "SecHeadset: A Practical Privacy Protection System for Real-time Voice Communication.",
+    "authors": [
+      "Peng Huang",
+      "Kun Pan",
+      "Qinglong Wang 0003",
+      "Peng Cheng 0007",
+      "Li Lu 0008",
+      "Zhongjie Ba",
+      "Kui Ren 0001"
+    ],
+    "venue": "MobiSys",
+    "year": 2025,
+    "abstract": "Voice communication is convenient while also poses risks of privacy leakage, due to potential interception or eavesdropping during voice transmission. Current protections of voice privacy are almost entirely controlled by communication service providers (CSPs), which operate as a black-box to users thus hard to fully trust. To take back the control of user privacy, in this paper, we introduce SecHeadset, an end-to-end solution for secure voice communication based on voice obfuscation, which is plug-and-play and compatible with various CSPs. Our solution involves two parts. First, we design a voice-like noise masking scheme for voice obfuscation. The noise, mimicking voice characteristics, could effectively obscure users' voices while demonstrating resilience against noise reduction methods. Second, we develop a protocol that enables efficient channel state estimation and secure information exchange between two communication entities. Based on this information, we propose a lightweight algorithm for voice retrieval during communication. We develop a prototype of SecHeadset and evaluate its performance with 8 widely-used applications, including Telegram and Skype. It reduces the voice recognition accuracy of various adversaries to below 15% while maintaining communication quality. We also integrate SecHeadset with off-the-shelf portable devices and verify its real-world effectiveness.",
+    "citation_count": 0,
+    "reference_count": 19,
+    "url": "https://doi.org/10.1145/3711875.3729142",
+    "dblp_key": "conf/mobisys/HuangP000B025",
+    "source_id": "https://openalex.org/W4414760819"
+  },
+  {
+    "title": "Agile3D: Adaptive Contention- and Content-Aware 3D Object Detection for Embedded GPUs.",
+    "authors": [
+      "Pengcheng Wang 0001",
+      "Zhuoming Liu 0001",
+      "Shayok Bagchi",
+      "Ran Xu 0003",
+      "Saurabh Bagchi",
+      "Yin Li 0003",
+      "Somali Chaterji"
+    ],
+    "venue": "MobiSys",
+    "year": 2025,
+    "abstract": "Efficient 3D perception is critical for autonomous systems—self-driving vehicles, drones—to navigate safely in dynamic environments. Accurate 3D object detection from LiDAR data must handle irregular, high-volume point clouds, variable latency from contention and scene complexity, and tight embedded GPU constraints. Balancing accuracy and latency under dynamic conditions is crucial, yet existing frameworks like Chanakya [NeurIPS '23], LiteReconfig [EuroSys '22], and AdaScale [MLSys '19] struggle with the unique demands of 3D detection. We present Agile3D, the first adaptive 3D system integrating a cross-model Multi-branch Execution Framework (MEF) and a Contention- and Content-Aware Reinforcement Learning-based controller (CARL). CARL dynamically selects the optimal execution branch using five novel MEF control knobs: encoding format, spatial resolution, spatial encoding, 3D feature extractor, and detection head. CARL uses supervised training for stable initial policies, then Direct Preference Optimization (DPO) to finetune branch selection without hand-crafted rewards, presenting the first application of DPO to branch scheduling in 3D detection. Comprehensive evaluations show that Agile3D achieves state-of-the-art performance, maintaining high accuracy across varying hardware contention levels and 100-500 ms latency budgets. On NVIDIA Orin and Xavier GPUs, it consistently leads the Pareto frontier, outperforming existing methods for efficient 3D detection.",
+    "citation_count": 0,
+    "reference_count": 47,
+    "url": "https://doi.org/10.1145/3711875.3729147",
+    "dblp_key": "conf/mobisys/0001LB0B0C25",
+    "source_id": "https://openalex.org/W4414760761"
+  },
+  {
+    "title": "EAR-Mapping: Edge-Assisted Real-Time Dense Mapping with Low Bandwidth Requirements.",
+    "authors": [
+      "Yubin Dai",
+      "Bin Qian 0002",
+      "Yuxuan Yan",
+      "Minglei Zhao",
+      "Yangkun Liu",
+      "Yuanchao Shu"
+    ],
+    "venue": "MobiSys",
+    "year": 2025,
+    "abstract": "3D reconstruction plays a critical role in applications such as augmented reality (AR) and robotic systems. However, implicit neural representations (INRs), widely used in modern 3D reconstruction systems, demand substantial communication and computational resources, making the reconstruction process excessively slow and costly. In this paper, we introduce EAR-Mapping, a novel edge-assisted online 3D reconstruction framework designed for latency-sensitive mobile applications. EAR-Mapping incorporates an innovative sampling mechanism that seamlessly integrates explicit and implicit methods, enabling selective processing of camera data to maximize reconstruction performance. In addition, we utilize a value-based representation module to maximize computation resource efficiency. Finally, we design a framework that minimizes communication overhead through ROI-based data transmission. Our prototype implementation on a mobile-edge testbed demonstrates that EAR-Mapping achieves up to a 1.2x reduction in reconstruction latency and a 3.5x reduction in bandwidth usage, offering a significant advancement in the efficiency of 3D reconstruction for mobile-edge systems.",
+    "citation_count": 0,
+    "reference_count": 29,
+    "url": "https://doi.org/10.1145/3711875.3729127",
+    "dblp_key": "conf/mobisys/Dai0YZLS25",
+    "source_id": "https://openalex.org/W4414760746"
+  },
+  {
+    "title": "Hopter: a Safe, Robust, and Responsive Embedded Operating System.",
+    "authors": [
+      "Zhiyao Ma",
+      "Guojun Chen",
+      "Zhuo Chen 0011",
+      "Lin Zhong 0001"
+    ],
+    "venue": "MobiSys",
+    "year": 2025,
+    "abstract": "Microcontroller-based embedded systems are vulnerable to memory safety errors and must be robust and responsive because they are often used in unmanned and mission-critical scenarios. The Rust programming language offers an appealing compile-time solution for memory safety but leaves stack overflows unresolved and foils zero-latency interrupt handling. We present Hopter, a Rust-based embedded operating system (OS) that provides memory safety, system robustness, and interrupt responsiveness to embedded systems while requiring minimal application cooperation. Hopter executes Rust code under a novel finite-stack semantics that converts stack overflows into Rust panics, enabling recovery from fatal errors through stack unwinding and restart. Hopter also employs a novel mechanism called soft-locks so that the OS never disables interrupts. We compare Hopter with other well-known embedded OSes using controlled workloads and report our experience using Hopter to develop a flight control system for a miniature drone and a gateway system for Internet of Things (IoT). We demonstrate that Hopter is well-suited for resource-constrained microcontrollers and supports error recovery for real-time workloads.",
+    "citation_count": 0,
+    "reference_count": 14,
+    "url": "https://doi.org/10.1145/3711875.3729149",
+    "dblp_key": "conf/mobisys/MaCC025",
+    "source_id": "https://openalex.org/W4414760873"
+  },
+  {
+    "title": "LEGO+: Redefining the Redundancy Removal for IoT Sensing Edge-End Systems.",
+    "authors": [
+      "Chong Zhang",
+      "Han Wang 0032",
+      "Qianhe Meng",
+      "Yize Zhao",
+      "Yihang Song",
+      "Kanglin Xu",
+      "Jinzhe Li",
+      "Li Lu 0001"
+    ],
+    "venue": "MobiSys",
+    "year": 2025,
+    "abstract": "The Internet of Things (IoT) can only thrive if IoT sensor nodes can be effortlessly deployed and maintained without compromising their general-purpose nature. However, existing low-power sensor systems fail to strike a balance between these two issues, leaving the widespread of IoT sensor nodes as an open problem. In this paper, we propose LEGO+ as a minimalist yet general-purpose sensing edge-end architecture. Instead of running embedded software on a redundant general-purpose microprocessor, LEGO+ can directly construct the desired control functionality for various IoT sensing applications through hardware-level logic orchestration. To achieve this, we first conduct an in-depth analysis of the underlying unit behaviors within IoT sensor systems and, based on this, abstract a uniform logic orchestration model. Next, to enable sensor nodes to comprehend and execute the generated logic, we devise a hierarchical atomic control circuit with negligible overheads. Finally, we develop a task state prediction scheme to further improve the overall operation efficiency among multiple nodes. We prototype LEGO+ for proof-of-concept and conduct comprehensive experiments, and the results demonstrate that LEGO+ can reduce the overall power consumption of sensor nodes by 86% and enhance task efficiency by 49%, thereby facilitating a wider array of IoT sensing applications.",
+    "citation_count": 0,
+    "reference_count": 30,
+    "url": "https://doi.org/10.1145/3711875.3729126",
+    "dblp_key": "conf/mobisys/ZhangWMZSXLL25",
+    "source_id": "https://openalex.org/W4414760850"
+  },
+  {
+    "title": "Poster: Large Language Model-powered Wi-Fi-based Human Activity Recognition.",
+    "authors": [
+      "Yili Ren",
+      "Haopeng Zhang 0005",
+      "Haohan Yuan",
+      "Jingzhe Zhang",
+      "Yitong Shen"
+    ],
+    "venue": "MobiSys",
+    "year": 2025,
+    "abstract": "Recent advances in LLMs have shown exceptional reasoning capability. However, their ability to integrate physical model knowledge for real-world signal interpretation remains largely unexplored. We introduce Wi-Chat, an LLM-powered Wi-Fi-based human activity recognition system. By embedding Wi-Fi sensing principles into prompts, we show that LLMs can infer human activities through Wi-Fi signals in a zero-shot manner without complex signal processing.",
+    "citation_count": 0,
+    "reference_count": 3,
+    "url": "https://doi.org/10.1145/3711875.3734545",
+    "dblp_key": "conf/mobisys/Ren0YZS25",
+    "source_id": "https://openalex.org/W4414760652"
+  },
+  {
+    "title": "Poster: GlueRT: Bridging the Gap Between Ray-tracing and Real-World Wireless Channel.",
+    "authors": [
+      "Bo Gao",
+      "Tianyue Zheng"
+    ],
+    "venue": "MobiSys",
+    "year": 2025,
+    "abstract": "Despite ray-tracing's theoretical foundation in radio frequency propagation modeling, significant discrepancies persist between simulated and measured channel characteristics in real environments. This paper presents GlueRT, a hybrid framework leveraging ray-tracing's physical interpretability while using a targeted neural network to correct simulation-reality gaps. GlueRT applies neural network-generated corrections to both amplitude and phase components of ray-tracing channel estimates, maintaining explainability while requiring less training data than pure learning methods. Experiments across various environments demonstrate GlueRT achieves higher channel estimation accuracy than traditional ray-tracing or neural network approaches.",
+    "citation_count": 1,
+    "reference_count": 10,
+    "url": "https://doi.org/10.1145/3711875.3734546",
+    "dblp_key": "conf/mobisys/GaoZ25",
+    "source_id": "https://openalex.org/W4414760889"
+  },
+  {
+    "title": "Poster: HeteroRF: Heterogeneity-Aware Federated Radio-Frequency Human Activity Recognition.",
+    "authors": [
+      "Yanru Cui",
+      "Tianyue Zheng"
+    ],
+    "venue": "MobiSys",
+    "year": 2025,
+    "abstract": null,
+    "citation_count": null,
+    "reference_count": null,
+    "url": "https://doi.org/10.1145/3711875.3734547",
+    "dblp_key": "conf/mobisys/CuiZ25",
+    "source_id": null
+  },
+  {
+    "title": "Poster: Mobile Menstrual Health Advising with Multimodal Feature Engineering.",
+    "authors": [
+      "Xiang Ji",
+      "Liekang Zeng",
+      "Zhenyu Yan 0002",
+      "Yunqi Guo",
+      "Hongkai Chen 0001",
+      "Yao Wang",
+      "Guoliang Xing"
+    ],
+    "venue": "MobiSys",
+    "year": 2025,
+    "abstract": "Community health workers (CHWs) provide last-mile healthcare services but face challenges due to limited medical knowledge and training. This paper describes the design, deployment, and evaluation of ASHABot, an LLM-powered, experts-in-the-loop, WhatsApp-based chatbot to address the information needs of CHWs in India. Through interviews with CHWs and their supervisors and log analysis, we examine factors affecting their engagement with ASHABot, and ASHABot's role in addressing CHWs' informational needs. We found that ASHABot provided a private channel for CHWs to ask rudimentary and sensitive questions they hesitated to ask supervisors. CHWs trusted the information they received on ASHABot and treated it as an authoritative resource. CHWs' supervisors expanded their knowledge by contributing answers to questions ASHABot failed to answer, but were concerned about demands on their workload and increased accountability. We emphasize positioning LLMs as supplemental fallible resources within the community healthcare ecosystem, instead of as replacements for supervisor support.",
+    "citation_count": 2,
+    "reference_count": 0,
+    "url": "https://doi.org/10.1145/3711875.3734548",
+    "dblp_key": "conf/mobisys/JiZ0G0WX25",
+    "source_id": "https://openalex.org/W4403705744"
+  },
+  {
+    "title": "Improving Network Attack Classification on Imbalanced Real-world Intrusion Incident Datasets.",
+    "authors": [
+      "Miru Kim",
+      "Mugon Joe",
+      "Minhae Kwon"
+    ],
+    "venue": "MobiSys",
+    "year": 2025,
+    "abstract": null,
+    "citation_count": 2386,
+    "reference_count": 145,
+    "url": "https://doi.org/10.1145/3711875.3734549",
+    "dblp_key": "conf/mobisys/KimJK25",
+    "source_id": "https://openalex.org/W3194730353"
+  },
+  {
+    "title": "Poster: A Diffusion Model for Predicting Spectrum Efficiency in 5G Networks.",
+    "authors": [
+      "Gyeongjune Hahm",
+      "Kyung-Yul Cheon",
+      "Hyeyeon Kwon",
+      "Seungkeun Park"
+    ],
+    "venue": "MobiSys",
+    "year": 2025,
+    "abstract": "This study proposes a regression diffusion model for predicting spectrum efficiency (SE) in 5G networks, addressing limitations of traditional analytical models in dense urban environments. Using 5G user equipment (UE) measurement data collected in Seoul, we developed a model that leverages SINR (Signal-to-Interference-plus-Noise Ratio) and TBS (Transport Block Size) as input variables with classifier-free guidance and hybrid loss functions. Experimental results demonstrate improved performance with 26.37% MAPE compared to alternative methods. The model accurately captures SE distribution characteristics and temporal variations, contributing to enhanced simulation accuracy for 5G network management in dense urban areas.",
+    "citation_count": 0,
+    "reference_count": 1,
+    "url": "https://doi.org/10.1145/3711875.3734550",
+    "dblp_key": "conf/mobisys/HahmCKP25",
+    "source_id": "https://openalex.org/W4414760885"
+  },
+  {
+    "title": "Poster: OCC Is Better Than Terahertz Wave for 6G.",
+    "authors": [
+      "Lih Wei Chia",
+      "Mehul Motani"
+    ],
+    "venue": "MobiSys",
+    "year": 2025,
+    "abstract": "The increasing demands of next-generation wireless applications are straining the limited sub-6 GHz spectrum. While terahertz wave (T-Wave) offers expanded bandwidths for 6G, its short range, increased energy use, and high costs limit viability. Optical Camera Communications (OCC) is a practical alternative, using image sensors to simultaneously decode multiple spatially-separated optical streams. OCC offers T-Wave-like directional communication, with added benefits such as signal origin verification and precise localization, at a higher technology readiness level. As an example, OCC can support applications like vehicle-to-everything (V2X), enabling ranging, lane-level positioning, and pedestrian safety. We also validated OCC's viability in dense, high-throughput scenarios through prototypes built with COTS components.",
+    "citation_count": 0,
+    "reference_count": 8,
+    "url": "https://doi.org/10.1145/3711875.3734551",
+    "dblp_key": "conf/mobisys/ChiaM25",
+    "source_id": "https://openalex.org/W4414760679"
+  },
+  {
+    "title": "Posters: Edge AI-Based Integrated Model Architecture for Optimization of Semiconductor ALD Processes: Real-Time Feedback and Model Update Framework for Thin Film Quality Control.",
+    "authors": [
+      "Hyungkoo Kim",
+      "Chulseoung Chae",
+      "Byeolhee Sim",
+      "Dongsik Yoon",
+      "Jeonghoon Kang"
+    ],
+    "venue": "MobiSys",
+    "year": 2025,
+    "abstract": "Background: Alzheimer's disease (AD) is the most common cause of dementia, affecting a significant number of individuals globally. AD is classified as a subtype of dementia, a comprehensive term that encompasses a decline in cognitive abilities and behavioural changes to the extent that it significantly disrupts everyday activities (Orru et al., 2009; Coin et al., 2009). In this context, early detection of AD is crucial for timely intervention and treatment, enabling more effective symptoms management and potentially slowing the disease's progression (Dubois et al., 2016). In recent year, machine learning (ML) techniques have become evident as a promising avenue to evaluate brain imaging data and detect characteristics linked to different neurological or psychiatric conditions (i.e., Dwyer, Falkai, &amp;amp; Koutsouleris, 2018; Ferrucci et al., 2022) and it has been successfully applied in various fields, including forensic sciences (i.e., Pace et al., 2019; Mazza et al., 2020), psychological research (i.e., Orrù et al., 2021; 2023) and liver transplantation (i.e., Ferrarese et al., 2021), amongst others.&#13;\\nAim: the objective of this study was to provide a brief overview of the current state of research on the application of ML in cognitive neuroscience for the early detection of AD. &#13;\\nMethods/Data Sources: we conducted a literature search of studies published in peer-reviewed journals. We included some of the studies that applied ML techniques to neuroimaging data, cognitive assessments, or multimodal data for the purpose of early detection of AD. &#13;\\nResults: Moradi et al., (2014) introduced an innovative magnetic resonance imaging (MRI)-derived technique for forecasting the progression MCI to AD up to three years prior diagnosis. The authors have created a “novel MRI biomarker”. This biomarker when combined with age and cognitive assessments, resulted in a comprehensive biomarker, referred to as the aggregate biomarker, which demonstrated a 10-fold cross-validated AUC of 0.9020 in accurately distinguishing between progressive and stable MCI patients. In another study, Khedher et al., (2014) have developed and introduced a computer-aided diagnosis system for early AD detection. The system was able to achieve promising results in distinguishing AD and MCI patients from healthy controls (sensitivity = 85.11%, specificity = 91.27% and accuracy 88.49%).&#13;\\nInterestingly, the study conducted by Uddin et al., (2023) applied a ML model which included different algorithms to accurately predict the occurrence of AD. The model was trained using the open access OASIS dataset. The results revealed that the Voting Classifier achieved the highest level of validation accuracy (96%). Salvatore et al., (2015) demonstrated that ML algorithms applied to structural brain MRI data have yielded encouraging results in discriminating among AD patients, MCI patients who will convert to AD (MCIc), MCI patients who will not convert to AD (MCInc), and healthy controls (AD vs healthy controls, 76%; MCIc vs healthy controls, 72%; MCIc vs MCInc, 66%). The study conducted by Nanni et al., (2020) attempted to assess the effectiveness of ensemble transfer-learning methods in predicting early diagnosis and prognosis of AD. The results demonstrated that the ensemble transfer-learning approach effectively discriminated between AD and healthy controls, MCIc and healthy controls, and MCIc and MCInc. The study by Venugopalan et al., (2021) used deep learning (DL) models combined with multiple data. The study revealed that deep models had superior performance compared to shallow models. &#13;\\nConclusions: based on the literature presented, ML algorithms and deep learning models have shown promising results in analysing complex patterns in neuroimaging data, cognitive assessments, and other biomarkers to identify individuals at risk of developing AD.",
+    "citation_count": 1,
+    "reference_count": 0,
+    "url": "https://doi.org/10.1145/3711875.3734557",
+    "dblp_key": "conf/mobisys/KimCSYK25",
+    "source_id": "https://openalex.org/W4400864441"
+  },
+  {
+    "title": "Poster: Towards Federated Embodied AI with FEAI.",
+    "authors": [
+      "Leming Shen",
+      "Yuanqing Zheng"
+    ],
+    "venue": "MobiSys",
+    "year": 2025,
+    "abstract": "Embodied AI (EAI) transforms our daily lives by bridging intelligent agents with various sensors and actuators. Large Language Models (LLMs) further enhance EAI agents in environment comprehension, task decomposition, and action execution for robotic manipulation. However, developing a general EAI agent capable of adapting to and continuously learning from diverse operating environments is extremely challenging: 1) Robots with mobility capture environments from multiple perspectives, leading to heterogeneous semantic interpretations, particularly in large or open settings. 2) Heterogeneous environments further exacerbate the variability of decomposed tasks and corresponding actions required for robotic manipulation. To address these challenges, we propose FEAI, a novel paradigm to enhance the adaptability and self-learning capabilities of EAI agents in heterogeneous environments via federated embodied learning. Specifically, FEAI shares and constructively aggregates environment semantic maps, decomposed task templates, and action-reward rules from federated EAI agents. The aggregated information can further enhance EAI agents' local models through continuous tuning or dynamically updated knowledge databases. We believe that FEAI has significant potential to integrate more advanced technologies, further advancing performance and innovation in the field of EAI.",
+    "citation_count": 2,
+    "reference_count": 0,
+    "url": "https://doi.org/10.1145/3711875.3734561",
+    "dblp_key": "conf/mobisys/ShenZ25",
+    "source_id": "https://openalex.org/W4414760410"
+  },
+  {
+    "title": "Poster: Efficient Passive Tracking using Commodity WiFi with Single-Shot Training.",
+    "authors": [
+      "Wei-Hsiang Wang",
+      "Yuqian Hu",
+      "Guozhen Zhu",
+      "Beibei Wang 0001",
+      "K. J. Ray Liu"
+    ],
+    "venue": "MobiSys",
+    "year": 2025,
+    "abstract": "Indoor tracking plays a critical role in a wide range of applications, yet existing solutions based on cameras, acoustics, or radar often face challenges related to privacy, deployment cost, and environmental sensitivity. WiFi-based methods offer a promising alternative by leveraging existing infrastructure, but most current approaches are active, requiring users to carry dedicated devices—limiting practicality in everyday scenarios. Passive WiFi tracking is more user-friendly, but existing solutions typically rely on complex feature engineering, require large training datasets, and struggle to generalize across different users and environments. In this work, we introduce a novel passive tracking system that requires only a single-shot training phase. By leveraging location signature based on statistical proximity metrics derived from CSI across multiple distributed WiFi devices, our method enables accurate, scalable, and training-efficient indoor tracking.",
+    "citation_count": 0,
+    "reference_count": 3,
+    "url": "https://doi.org/10.1145/3711875.3734563",
+    "dblp_key": "conf/mobisys/WangHZ0L25",
+    "source_id": "https://openalex.org/W4414760476"
+  },
+  {
+    "title": "Poster: IoT-Based Indoor Air Quality Monitoring for Health Risk Assessment and Well-Being.",
+    "authors": [
+      "Naser Hossein Motlagh",
+      "Martha Arbayani Zaidan",
+      "Pak Lun Fung",
+      "Samu Varjonen",
+      "Andrew Rebeiro-Hargrave",
+      "Petteri Nurmi",
+      "Sasu Tarkoma"
+    ],
+    "venue": "MobiSys",
+    "year": 2025,
+    "abstract": "We study the impact of air pollutants on occupants' health by deploying 26 low-cost IoT air quality sensors in the UbiKampus office space at the University of Helsinki. Our data shows significant air quality variation even within meter-scale distances, highlighting the need for detailed indoor air quality monitoring and emphasizing the potential benefits low-cost IoT sensors can bring.",
+    "citation_count": 0,
+    "reference_count": 3,
+    "url": "https://doi.org/10.1145/3711875.3734564",
+    "dblp_key": "conf/mobisys/MotlaghZFVRNT25",
+    "source_id": "https://openalex.org/W4414760383"
+  },
+  {
+    "title": "Poster: MobiChem: A Ubiquitous Smartphone-Based Toolkit for Practical Fruit Monitoring and Analysis.",
+    "authors": [
+      "Zhiying Li",
+      "Abdul Aziz 0009",
+      "Patrick Phuoc Do",
+      "Phuc Nguyen 0002",
+      "Tianxing Li 0001"
+    ],
+    "venue": "MobiSys",
+    "year": 2025,
+    "abstract": "This paper introduces MobiChem, a low-cost, portable, practical, and ubiquitous smartphone-based toolkit for fruit monitoring. The key idea is to leverage the light emitted from a smartphone's screen and front camera, coupled with a custom-built screen cover, to perform comprehensive hyperspectral analysis on targeted objects. Specifically, we designed a zero-powered screen cover that selectively filters wavelengths essential for hyperspectral sensing. We then incorporate a CNN-based algorithm and a novel ranking-based learning technique that manipulates the latent space to classify maturity stages and characterize their chemical and physical factors. We showcased its application in tomato, banana, and avocado sensing. Our system examines the maturity, chlorophyll, lycopene content, free sugar levels, and firmness, enabling various dietary assessments and food safety applications.",
+    "citation_count": 0,
+    "reference_count": 5,
+    "url": "https://doi.org/10.1145/3711875.3734565",
+    "dblp_key": "conf/mobisys/LiAD0025a",
+    "source_id": "https://openalex.org/W4414760436"
+  },
+  {
+    "title": "Poster: Joint RF-Gas Sensing for Victim Localization using UAV Networks.",
+    "authors": [
+      "Guillermo Benito-Calvino",
+      "Ahmed Boubrima",
+      "Hervé Rivano",
+      "Alessandro Renzaglia",
+      "Zhambyl Shaikhanov"
+    ],
+    "venue": "MobiSys",
+    "year": 2025,
+    "abstract": "Using UAVs has recently emerged as a cost-efficient solution to assist first responders in search and rescue missions. Victims are usually equipped with wireless devices, which makes RF sensing an efficient solution for their localization in disaster situations. Nevertheless, the success of existing methods is highly diminished by the noisy nature of RF measurements. While leveraging recent advancements in lightweight gas sensing, we present in this ongoing work paper a novel localization approach that efficiently combines RF measurements with victim odor information while accounting for the dynamic nature of measurements' quality. We discuss the approach design, early simulation results, and ongoing experimental evaluation.",
+    "citation_count": 0,
+    "reference_count": 5,
+    "url": "https://doi.org/10.1145/3711875.3734566",
+    "dblp_key": "conf/mobisys/Benito-CalvinoB25",
+    "source_id": "https://openalex.org/W4414760488"
+  },
+  {
+    "title": "Poster: PeekXR: Understanding Privacy Leakages from Eye Gaze in Extended Reality.",
+    "authors": [
+      "Chuyang Peng",
+      "Mutahar Ali",
+      "Habiba Farrukh"
+    ],
+    "venue": "MobiSys",
+    "year": 2025,
+    "abstract": "Extended Reality (XR) headsets are increasingly integrating eye tracking for enhanced user experience, adaptive interfaces, and foveated rendering. However, this rich biometric signal introduces new privacy risks. In this work, we demonstrate that eye-tracking data collected by commercial XR devices can be exploited to infer sensitive user activity. We leverage users' gaze sequences captured while interacting with a VR app to classify the type of content a user is watching. Our results reveal that eye movements alone, without any video or audio context, carry enough information to accurately predict content categories. We discuss the implications of this threat and outline how eye tracking can potentially be used to fingerprint applications and user behavior. This work is a step towards exposing and mitigating emerging privacy threats in immersive systems.",
+    "citation_count": 0,
+    "reference_count": 6,
+    "url": "https://doi.org/10.1145/3711875.3734567",
+    "dblp_key": "conf/mobisys/PengAF25",
+    "source_id": "https://openalex.org/W4414760494"
+  },
+  {
+    "title": "Poster: SiHear (Sign-to-Hear): Empowering Seemless Sign-Speech Interactions over Smart Glasses.",
+    "authors": [
+      "Chen Peng",
+      "Jiaxin Du",
+      "Chunyi Peng 0001"
+    ],
+    "venue": "MobiSys",
+    "year": 2025,
+    "abstract": "Sign language is the primary communication channel used by deaf and hard-of-hearing (DHH) people. However, they face significant barriers in interacting with hearing people who are unfamiliar with sign language. In this poster, we propose SiHear, a system over wearable smart glasses to enable two-way, seamless and real-time communication between DHH and hearing individuals for daily use. SiHear supports two communication modes: (1) \"I See You Hear\" for translating the signs performed by the DDH people into speech which can be heard by the hearing people, and (2) \"You See I Hear\" for converting the spoken language by the hearing people into the sign language which can be seen by the DDH people on their smart glasses. We implement SiHear on commodity glasses each tethered with an Android phone and a laptop.",
+    "citation_count": 0,
+    "reference_count": 2,
+    "url": "https://doi.org/10.1145/3711875.3734568",
+    "dblp_key": "conf/mobisys/PengD025",
+    "source_id": "https://openalex.org/W4414760485"
+  },
+  {
+    "title": "Poster: DNN Models for Underground Root Tuber Image Reconstruction using WiFi CSI.",
+    "authors": [
+      "Said Elhadi",
+      "Yang Zhao 0020"
+    ],
+    "venue": "MobiSys",
+    "year": 2025,
+    "abstract": "Non-invasive monitoring of underground biomass like root tubers is vital for smart agriculture. We present a wireless sensing system using Wi-Fi Channel State Information (CSI) from a low-cost ESP32 mesh network for high-resolution underground tuber imaging. Our approach uses synchronized CSI data collection and deep neural network (DNN) models including UNet, FCN and DeepLabV3+ for image reconstruction. We describe the testbed, data processing, experiments and DNN models in this paper. Comparative results show DNN models using the CSI data significantly outperforms those using traditional RSSI data. The DeepLabV3+ model using CSI data achieves the best imaging accuracy with an IoU of 0.6971, demonstrating the potential of WiFi CSI for fine-grained underground tuber sensing.",
+    "citation_count": 0,
+    "reference_count": 2,
+    "url": "https://doi.org/10.1145/3711875.3734569",
+    "dblp_key": "conf/mobisys/Elhadi025",
+    "source_id": "https://openalex.org/W4414760430"
+  },
+  {
+    "title": "Poster: InstaPose: Dynamic Photography Feedback via Adaptive Pose Recommendation System.",
+    "authors": [
+      "Yu Ji",
+      "I-Han Hsiao"
+    ],
+    "venue": "MobiSys",
+    "year": 2025,
+    "abstract": "Many pose recommendation applications have been proposed and studied, primarily focusing on providing exercise feedback and fine-tuning postures to enhance precision for skill acquisition. These applications often utilize pose extraction and identification to help users perfect their form, whether in yoga, fitness routines, or other sports activities. However, these specialized applications are not generalizable for leisure use, such as capturing a photogenic or novel pose in front of an iconic tourist attraction. To address this issue, we present InstaPose, a mobile-friendly framework that delivers real-time pose recommendation and correction feedback. The core of our approach leverages Mobile Vision Transformers (MobileViT) to retrieve refined pose images from our dataset by matching the background context of the input photo. In addition, the proposed model outperforms VGG16 on our newly curated, large-scale high-quality dataset. This demonstrates the potential of our approach for real-time mobile pose guidance.",
+    "citation_count": 1,
+    "reference_count": 3,
+    "url": "https://doi.org/10.1145/3711875.3734571",
+    "dblp_key": "conf/mobisys/JiH25",
+    "source_id": "https://openalex.org/W4414760413"
+  },
+  {
+    "title": "Poster: Mixture of Class-aware Experts for Efficient AIoT Inference.",
+    "authors": [
+      "Hyemin Jeong",
+      "Jeho Lee",
+      "Seunghyeok Jeon",
+      "Hojung Cha"
+    ],
+    "venue": "MobiSys",
+    "year": 2025,
+    "abstract": "Deep neural networks (DNNs) have enabled a wide range of artificial intelligence of things (AIoT) applications, but their increasing complexity poses challenges for deployment on resource-constrained devices. Model compression techniques such as pruning and quantization have been widely adopted to address these challenges; however, they inevitably incur accuracy loss due to information loss. Recently, class-aware pruning has emerged as a promising approach, but existing methods often lack flexibility, as they are typically tailored to fixed target class sets and fail to generalize well to dynamic or broad class distributions. To address this limitation, we propose Mixture of Class-aware Experts (MoCE), a novel framework that combines class-aware pruning with a Mixture of Experts (MoE) architecture. MoCE constructs multiple lightweight experts using class-aware pruning, each specialized for a subset of classes, and employs a shared encoder and a lightweight router to dynamically select the appropriate expert at runtime. Our preliminary results demonstrate the potential of combining class-aware pruning and expert selection to enable accurate and efficient inference on resource-limited AIoT devices.",
+    "citation_count": 0,
+    "reference_count": 3,
+    "url": "https://doi.org/10.1145/3711875.3734573",
+    "dblp_key": "conf/mobisys/JeongLJC25",
+    "source_id": "https://openalex.org/W4414760396"
+  },
+  {
+    "title": "Poster: Real-time Keyboard Segmentation and Finger-Press Detection for Keystroke Tracking in Virtual Keyboards.",
+    "authors": [
+      "Lawrence Amadi",
+      "Andrew Lu",
+      "Chih-Hsien Chou",
+      "Ning Lu"
+    ],
+    "venue": "MobiSys",
+    "year": 2025,
+    "abstract": "Real-time recognition and localization of keyboard keys combined with real-time hand tracking and detection of finger-press actions are critical functions of vision-based virtual keyboards. These are not trivial tasks because there are numerous types of keyboard layouts and typist behaviors. Furthermore, key detection is especially difficult in uncontrolled real-world scenarios, where users' hands occlude significant portions of the keyboard while typing. Also, the detection finger press-down actions is further complicated in-the-wild by frequently changing camera viewpoints without direct line of sight to the finger pressing a key. In this work, we address the challenge of complete keyboard segmentation and detection of hand-occluded keys by proposing a deep learning approach for realtime finger-press detection, visible-key detection, and occluded-key recovery. Our models were trained and evaluated on Kaggle's Keyboard Key Detection dataset [1] and further empirically tested on the MSU Typing Behavior Database [3]. Our best models achieved 88% finger press-down detection and a key detection performance of 0.91 IOU and 97.8% mAP@75, while running at 60 fps.",
+    "citation_count": 0,
+    "reference_count": 2,
+    "url": "https://doi.org/10.1145/3711875.3734578",
+    "dblp_key": "conf/mobisys/AmadiLCL25",
+    "source_id": "https://openalex.org/W4414760460"
+  },
+  {
+    "title": "Demo: WhisperFlow: speech foundation models in real time.",
+    "authors": [
+      "Rongxiang Wang",
+      "Felix Xiaozhu Lin"
+    ],
+    "venue": "MobiSys",
+    "year": 2025,
+    "abstract": "Speech foundation models, such as OpenAI's Whisper, become the state of the art in speech understanding due to their strong accuracy and generalizability. Yet, their applications are mostly limited to processing pre-recorded speech, whereas processing of streaming speech, in particular doing it efficiently, remains rudimentary.",
+    "citation_count": 0,
+    "reference_count": 3,
+    "url": "https://doi.org/10.1145/3711875.3734370",
+    "dblp_key": "conf/mobisys/WangL25",
+    "source_id": "https://openalex.org/W4414760852"
+  },
+  {
+    "title": "Demo: CollabTrans: Device-cloud Collaborative Inference Framework for Transformer-based Models.",
+    "authors": [
+      "Jingcan Chen",
+      "Huatao Xu",
+      "Mo Li 0001"
+    ],
+    "venue": "MobiSys",
+    "year": 2025,
+    "abstract": "Model splitting and offloading part of the DNN model from the mobile device to the cloud server, known as collaborative inference, improves end-to-end latency and server throughput in CNN-based models. However, current collaborative approaches do not apply to popular Transformer-based models, as these models generate large intermediate outputs with significant transmission latency and have a uniform block structure that makes it challenging to serve tail models efficiently on the server. We propose CollabTrans, a collaborative inference framework designed for Transformer-based models to enhance server scalability when handling requests from numerous end devices, taming the large output with truncated SVD and serving heterogeneous tail models by sharing a complete model. We demonstrate our framework with a real-time image classification mobile application together with background inference request traffic, showing the high inference throughput of our framework.",
+    "citation_count": 0,
+    "reference_count": 1,
+    "url": "https://doi.org/10.1145/3711875.3734371",
+    "dblp_key": "conf/mobisys/ChenX025",
+    "source_id": "https://openalex.org/W4414760887"
+  },
+  {
+    "title": "Demo: Cellular-X: An LLM-empowered Cellular Agent for Efficient Base Station Operations.",
+    "authors": [
+      "Liujianfu Wang",
+      "Xinyi Long",
+      "Yuyang Du 0001",
+      "Xiaoyan Liu",
+      "Kexin Chen 0003",
+      "Soung Chang Liew"
+    ],
+    "venue": "MobiSys",
+    "year": 2025,
+    "abstract": "This paper introduces Cellular-X, an LLM-powered agent designed to automate cellular base station (BS) maintenance. Leveraging multimodal LLM and retrieval-augmented generation (RAG) techniques, Cellular-X significantly enhances field engineer efficiency by quickly interpreting user intents, retrieving relevant technical information, and configuring a BS through iterative self-correction. Key features of the demo include automatic customized BS setup, document-based query answering, and voice-controlled configuration reporting and revision. We implemented Cellular-X on a USRP X310 testbed for demonstration. Demo videos and implementation details are available at https://github.com/SeaBreezing/Cellular-X.",
+    "citation_count": 0,
+    "reference_count": 0,
+    "url": "https://doi.org/10.1145/3711875.3734372",
+    "dblp_key": "conf/mobisys/WangL0L0L25",
+    "source_id": "https://openalex.org/W4414760733"
+  },
+  {
+    "title": "Demo: FlyEnJoy: An Offline-First Mobile System for Trip Planning and In-Flight Social Interaction.",
+    "authors": [
+      "Tanmoy Sen",
+      "Madhusudan Basak",
+      "Himel Dev",
+      "Michael Linden"
+    ],
+    "venue": "MobiSys",
+    "year": 2025,
+    "abstract": "Air travel often lacks cohesive digital tools to support both pre-trip organization and engaging in-flight experiences. We present FlyEnJoy, a mobile application with an offline-first architecture that integrates itinerary planning management, and in-flight social features to improve travel satisfaction. The system highlights local peer-to-peer networking for realtime in-flight interaction without the Internet and context-aware smart planning tools that adapt to each trip. This demo paper outlines the design and technical components of FlyEnJoy, including its offline-first design, peer-to-peer networking and context-aware smart planning approach. We also discuss insights from a traveler survey that motivated the need for such a platform and conclude with a demonstration that showcases the capabilities of FlyEnJoy in a live scenario.",
+    "citation_count": 0,
+    "reference_count": 0,
+    "url": "https://doi.org/10.1145/3711875.3734373",
+    "dblp_key": "conf/mobisys/SenBDL25",
+    "source_id": "https://openalex.org/W4414760663"
+  },
+  {
+    "title": "Demo: WiMU: Real-time Indoor Localization via Wi-Fi/IMU Fusion with Minimal Site Survey.",
+    "authors": [
+      "Qirui Yang",
+      "Huatao Xu",
+      "Mengxuan Song",
+      "Mo Li 0001"
+    ],
+    "venue": "MobiSys",
+    "year": 2025,
+    "abstract": "Due to the ubiquitous deployment of WiFi infrastructure, numerous studies have employed WiFi RSSI fingerprinting for indoor localization. However, fingerprinting methods necessitate labour-intensive site surveys for fingerprint collection and location annotation. To address these limitations, we propose WiMU, a real-time indoor localization system that integrates WiFi and inertial measurement unit (IMU) data to enhance the real-time performance and accuracy of localization. WiMU operates on commodity WiFi infrastructure without the need for additional hardware, leveraging crowd-sourced user trajectories to learn spatial representations of access points (APs). These representations can be fine-tuned with minimal labeled data to support effective localization. Extensive evaluations demonstrate that WiMU reduces the cost of building an indoor localization system while ensuring high positioning accuracy, paving the way for the large-scale deployment of real-time indoor localization systems.",
+    "citation_count": 0,
+    "reference_count": 1,
+    "url": "https://doi.org/10.1145/3711875.3734375",
+    "dblp_key": "conf/mobisys/YangXS025",
+    "source_id": "https://openalex.org/W4414760801"
+  },
+  {
+    "title": "Demo: Liquid Identification via Vision-Guided mmWave Imaging and LLM Reasoning.",
+    "authors": [
+      "Bo Liang 0003",
+      "JingZhe Peng",
+      "Xingyuming Liu",
+      "Chen Gong",
+      "Chenren Xu"
+    ],
+    "venue": "MobiSys",
+    "year": 2025,
+    "abstract": "We introduce ErLang Sight, a novel multimodal system designed for liquid identification, integrating vision-based object detection, millimeter-wave (mmWave) Synthetic Aperture Radar (SAR) imaging, and large language model (LLM)-based contextual reasoning. Initially, the system leverages a visual detection pipeline to identify potential liquid containers within the environment, subsequently directing a mmWave sensor to perform targeted SAR imaging of these identified regions, and the permittivity values of the liquids are estimated using reflection coefficient analysis techniques. These physical measurements, combined with visual context and environmental indicators (such as whether the scenario is a kitchen, laboratory, or bar), are then input into a pretrained LLM. The LLM employs advanced semantic and situational reasoning to accurately determine the most likely type of liquid by integrating physics-based data with contextual knowledge. Experimental evaluations demonstrate that ErLang Sight significantly enhances the accuracy of distinguishing visually ambiguous liquids and exhibits robust generalization to previously unseen environments.",
+    "citation_count": 1,
+    "reference_count": 0,
+    "url": "https://doi.org/10.1145/3711875.3734376",
+    "dblp_key": "conf/mobisys/LiangPLGX25",
+    "source_id": "https://openalex.org/W4414760735"
+  },
+  {
+    "title": "Demo: ROARQuad: Robust, Open Academic Research Quadcopter.",
+    "authors": [
+      "Matthew Hatch",
+      "Cody Fellinge",
+      "Jonathan Diller",
+      "Qi Han 0001"
+    ],
+    "venue": "MobiSys",
+    "year": 2025,
+    "abstract": null,
+    "citation_count": 1,
+    "reference_count": 1,
+    "url": "https://doi.org/10.1145/3711875.3734378",
+    "dblp_key": "conf/mobisys/HatchFD025",
+    "source_id": "https://openalex.org/W4414760715"
+  },
+  {
+    "title": "Demo: InvisibleFence: Non-Lethal Edge-Optimized AI for Human Wildlife Coexistence and Crop Protection.",
+    "authors": [
+      "Snehalraj Chugh",
+      "Elijah Polyakov",
+      "Milind Rampure",
+      "Bipendra Basnyat",
+      "Nirmalya Roy"
+    ],
+    "venue": "MobiSys",
+    "year": 2025,
+    "abstract": "Human-wildlife conflicts in residential/agricultural settings rely on ineffective deterrents like rodenticides or fences. We introduce InvisibleFence, a modular 3D-printed Vision Pod system with off-the-shelf deterrents. The Vision Pod fuses a 2K camera and 240° motion sensing with an edge-optimized pipeline trained on 44,000 wildlife images of eleven classes—achieving 86.7% mAP. Benchmarking YOLO variants (416p–2K) ensures performance. Upon detection, it sends MQTT commands to drive deterrent units—ultrasonic speakers or lighting/spray modules—that emit tones without affecting humans or pets. InvisibleFence creates adaptive zones that reduce false triggers and limit habituation.",
+    "citation_count": 0,
+    "reference_count": 2,
+    "url": "https://doi.org/10.1145/3711875.3734379",
+    "dblp_key": "conf/mobisys/ChughPRBR25",
+    "source_id": "https://openalex.org/W4414760823"
+  },
+  {
+    "title": "Demo: Enabling Ubiquitous Connectivity for Embedded Systems through Audio-Broadcasting Low-power Tags.",
+    "authors": [
+      "Rajashekar Reddy Chinthalapani",
+      "Dhairya Shah",
+      "Ambuj Varshney"
+    ],
+    "venue": "MobiSys",
+    "year": 2025,
+    "abstract": "Wireless connectivity challenges hinder large-scale deployment of embedded systems. We introduce AudioCast to address two critical issues: spectrum scarcity-induced contention and high power consumption of radio transmitters. The decline of FM-broadcast stations and the ubiquity of FM-receivers motivate the design of Audio-Cast. By leveraging the negative differential resistance of tunnel diodes—which occurs at low power—AudioCast rethinks the conventional transmitter design. Combined with their self-modulation capability, tunnel diode oscillators enable frequency modulated transmissions while consuming under 200 μW. The transmitter achieves upto 130 m range in line-of-sight and tens of meters in non-line-of-sight environments.",
+    "citation_count": 0,
+    "reference_count": 6,
+    "url": "https://doi.org/10.1145/3711875.3734380",
+    "dblp_key": "conf/mobisys/ChinthalapaniSV25",
+    "source_id": "https://openalex.org/W4414760822"
+  },
+  {
+    "title": "Demo: UI Based Attacks in WebXR.",
+    "authors": [
+      "Chandrika Mukherjee",
+      "Reham Mohamed Aburas",
+      "Arjun Arunasalam",
+      "Habiba Farrukh",
+      "Z. Berkay Celik"
+    ],
+    "venue": "MobiSys",
+    "year": 2025,
+    "abstract": "The WebXR API enables immersive AR/VR experiences directly through web browsers on head-mounted displays (HMDs). However, prior research shows that security-sensitive UI properties and the lack of an <iframe> like element that separates different origins can be exploited to manipulate user actions, particularly within the advertising ecosystem. In our prior work, we proposed five novel UI-based attacks in WebXR, targeting the ad ecosystem. This demo presents these attacks in a unified gaming application, embedding each into distinct interactive scenarios. Our work highlights the need to address design challenges and requirements for improving immersive web-based experiences. We provide our demo video at: https://youtu.be/lTBQbxnNq34.",
+    "citation_count": 0,
+    "reference_count": 0,
+    "url": "https://doi.org/10.1145/3711875.3734381",
+    "dblp_key": "conf/mobisys/MukherjeeAAFC25",
+    "source_id": "https://openalex.org/W4414760824"
+  },
+  {
+    "title": "Demo: Balboa Park Alive!: Exploring Biodiversity through Mobile AR.",
+    "authors": [
+      "Biayna Bogosian",
+      "Ying Choon Wu",
+      "Akshit Nassa",
+      "Daniel Jalali",
+      "Jacob Yenney"
+    ],
+    "venue": "MobiSys",
+    "year": 2025,
+    "abstract": "Balboa Park Alive is a mobile augmented reality (AR) application that transforms outdoor exploration into an immersive educational experience centered on biodiversity and conservation. Designed for families and informal learners, the app uses gesture-based AR to connect users with ecological phenomena in the San Diego-Tijuana region. Integrating Niantic Lightship ARDK, Mapbox SDK, and MediaPipe Hands, the system creates inquiry-driven moments that engage users through embodied interaction, geospatial storytelling, and environmental awareness. Early user testing suggests the app fosters curiosity, intergenerational dialogue, and stewardship, offering a replicable model for mobile, location-based environmental education.",
+    "citation_count": 1,
+    "reference_count": 4,
+    "url": "https://doi.org/10.1145/3711875.3734382",
+    "dblp_key": "conf/mobisys/BogosianWNJY25",
+    "source_id": "https://openalex.org/W4414760818"
+  },
+  {
+    "title": "Demo: Unveiling Randomized Device Identity in Dynamic Wi-Fi Networks.",
+    "authors": [
+      "Federico Cifuentes-Urtubey",
+      "Deepak Vasisht",
+      "Robin Kravets"
+    ],
+    "venue": "MobiSys",
+    "year": 2025,
+    "abstract": "This work presents an attack to undermine MAC address randomization using a dual-layer approach combining PHY and MAC-layer analysis. By passively collecting CSI features along with MAC-layer behavioral patterns, our system applies an XGBoost classifier to distinguish devices enabling MAC randomization in dense networks, achieving up to 100% precision and 86% recall.",
+    "citation_count": 0,
+    "reference_count": 3,
+    "url": "https://doi.org/10.1145/3711875.3734384",
+    "dblp_key": "conf/mobisys/Cifuentes-Urtubey25",
+    "source_id": "https://openalex.org/W4414760825"
+  },
+  {
+    "title": "Exploiting and Securing WiFi for Pervasive Human Sensing.",
+    "authors": [
+      "Rui Xiao 0002"
+    ],
+    "venue": "MobiSys",
+    "year": 2025,
+    "abstract": null,
+    "citation_count": 11894,
+    "reference_count": 77,
+    "url": "https://doi.org/10.1145/3711875.3736658",
+    "dblp_key": "conf/mobisys/Xiao25",
+    "source_id": "https://openalex.org/W2111619626"
+  },
+  {
+    "title": "mmWave Communications, Sensing, and Interference Mitigation.",
+    "authors": [
+      "Abhishek Adhikari"
+    ],
+    "venue": "MobiSys",
+    "year": 2025,
+    "abstract": "New research directions will lead to fundamental changes in the design of future fifth generation (5G) cellular networks. This article describes five technologies that could lead to both architectural and component disruptive design changes: device-centric architectures, millimeter wave, massive MIMO, smarter devices, and native support for machine-to-machine communications. The key ideas for each technology are described, along with their potential impact on 5G and the research challenges that remain.",
+    "citation_count": 3828,
+    "reference_count": 16,
+    "url": "https://doi.org/10.1145/3711875.3736659",
+    "dblp_key": "conf/mobisys/Adhikari25",
+    "source_id": "https://openalex.org/W2103972037"
+  },
+  {
+    "title": "Time-Resolved Designs for Narrowband Radio Localization and Vehicular Visual Sensing Compromise.",
+    "authors": [
+      "Dongfang Guo"
+    ],
+    "venue": "MobiSys",
+    "year": 2025,
+    "abstract": "The Internet of Things (IoT) is reshaping numerous application domains, including automated manufacturing, healthcare monitoring, autonomous transportation, resource allocation, and urban infrastructure management. A foundational element of IoT systems is reliable sensing, which depends on accurately capturing and interpreting environmental data. In this thesis, we focus on the concept of time-resolved sensing, wherein signals are recorded and analyzed at fine temporal resolutions to infer spatial and contextual information. By leveraging the intrinsic relationship between space and time, time-resolved sensing enables richer and more fine-grained insights into the sensed environment. This concept enables a wide range of applications, including localization, gesture recognition, vital sign monitoring, privacy-preserving sensing, and visible light communication. At the same time, time-resolved designs pose various challenges, such as stringent requirements for synchronization, efficient data processing pipelines, and resilience to environmental variability. This thesis explores both the constructive and adversarial aspects of time-resolved designs, highlighting their dual role in improving the capabilities of IoT systems and exposing potential security vulnerabilities. This thesis considers two IoT application contexts to illustrate how time-resolved designs can be exploited to either strengthen or compromise system capabilities. First, it presents how narrowband radio signals can be meticulously processed to enable indoor localization. LoRaWAN is a narrowband wireless technology for ubiquitous connectivity. For various applications, it is desirable to localize LoRaWAN devices based on their uplink frames that convey application data. This localization service operates in an unobtrusive manner, in that it requires no special software instrumentation to the LoRaWAN devices. This thesis investigates the feasibility of unobtrusive localization for LoRaWAN devices in hall-size indoor spaces like warehouses, airport terminals, sports centers, museum halls, etc. We study the TDoA-based approach, which needs to address two challenges of poor timing performance of LoRaWAN narrowband signal and nanosecond-level clock synchronization among anchors. We propose the ILLOC system featuring two LoRaWAN-specific techniques: (1) the cross-correlation among the differential phase sequences received by two anchors to estimate TDoA and (2) the just-in-time synchronization enabled by a specially deployed LoRaWAN end device providing time reference upon detecting a target device’s transmission. In a long tunnel corridor, a 70 × 32 m2 sports hall, and a 110 × 70 m2 indoor plaza with extensive non-line-of-sight propagation paths, ILLOC achieves median localization errors of 6 m (with 2 anchors), 8.36 m (with 6 anchors), and 15.16 m (with 6 anchors and frame fusion), respectively. The achieved accuracy makes ILLOC useful for applications including zone-level asset tracking, misplacement detection, airport trolley management, and cybersecurity enforcement like detecting impersonation attacks launched by remote radios. The second part of this thesis studies how time-resolved visual sensing can be exploited to compromise vehicular perception. Camera-based computer vision is essential to autonomous driving perception. This thesis presents an attack that uses light-emitting diodes and exploits the camera’s rolling shutter effect to create adversarial stripes in the captured images to mislead traffic sign recognition. The attack is stealthy because the stripes on the traffic sign are invisible to human. For the attack to be threatening, the recognition results need to be stable over consecutive image frames. To achieve this, we design and implement GhostStripe, an attack system that controls the timing of the modulated light emission to adapt to camera operations and victim vehicle movements. Evaluated on real testbeds, GhostStripe can stably spoof the traffic sign recognition results for up to 94% of frames to a wrong class when the victim vehicle passes the road section. In reality, such attack effect may fool victim vehicles into life-threatening incidents. To counteract this threat, we propose GhostBuster, a software-based defense module to detect and mitigate the effects of GhostStripe. GhostBuster incorporates a perturbation detector and a sign restorer, effectively restoring the natural appearance of compromised traffic signs and significantly reducing the attack’s impact. We also discuss other countermeasures at the levels of camera sensor and autonomous driving system. To summarize, the designs of ILLOC and GhostStripe highlight how time-resolved properties in sensing processes (i.e., radio and light signal sampling) can be harnessed to improve performance or exploited to reveal vulnerabilities. By leveraging the temporal characteristics of LoRa signals and employing precise processing techniques, ILLOC achieves unobtrusive device localization in challenging indoor environments, addressing the limitations inherent to narrowband communication systems. By exploiting the temporal characteristics of rolling shutter cameras, GhostStripe demonstrates how adversarial perturbations can be introduced to deceive critical perception systems, exposing vulnerabilities in time-resolved sensing mechanisms that are widely adopted in vision-based IoT applications.",
+    "citation_count": 0,
+    "reference_count": 0,
+    "url": "https://doi.org/10.1145/3711875.3736660",
+    "dblp_key": "conf/mobisys/Guo25",
+    "source_id": "https://openalex.org/W4412955228"
+  },
+  {
+    "title": "Measuring the Mobile Gap: From Network Performance to Infrastructure Criticality.",
+    "authors": [
+      "Varshika Srinivasavaradhan"
+    ],
+    "venue": "MobiSys",
+    "year": 2025,
+    "abstract": null,
+    "citation_count": 11894,
+    "reference_count": 77,
+    "url": "https://doi.org/10.1145/3711875.3736661",
+    "dblp_key": "conf/mobisys/Srinivasavaradhan25",
+    "source_id": "https://openalex.org/W2111619626"
+  },
+  {
+    "title": "Physics-Informed AI for Wireless Communication and Sensing.",
+    "authors": [
+      "Zhenlin An"
+    ],
+    "venue": "MobiSys",
+    "year": 2025,
+    "abstract": "Deep learning models encounter fundamental challenges when directly applied to wireless systems, including limited interpretability, low data efficiency, and poor adaptability in dynamic environments. To overcome these challenges, this extended abstract presents my research on embedding electromagnetic physics into AI frameworks to create physics-informed models for wireless communication and sensing. These hybrid models leverage the structure of physical laws alongside data-driven learning, leading to substantial improvements in accuracy, generalization, interpretability, and robustness across complex scenarios. My work demonstrates how this methodology reforms wireless systems across multiple key applications: channel prediction, indoor localization, antenna design, and hardware fingerprinting. Together, these efforts establish a new paradigm for next-generation wireless system design.",
+    "citation_count": 0,
+    "reference_count": 5,
+    "url": "https://doi.org/10.1145/3711875.3736662",
+    "dblp_key": "conf/mobisys/An25",
+    "source_id": "https://openalex.org/W4414760522"
+  },
+  {
+    "title": "Ubiquitous Acoustic Intelligence: Toward Intuitive, Resilient, and Secure Mobile Sensing Systems.",
+    "authors": [
+      "Qiang Yang 0018"
+    ],
+    "venue": "MobiSys",
+    "year": 2025,
+    "abstract": "Ubiquitous acoustic intelligence leverages the pervasiveness of sound and the ubiquity of microphones/speakers to enable intelligent, seamless, and privacy-preserving interaction between humans and mobile devices. However, enabling such intelligence poses multiple challenges: human voice and behavior manifest in acoustics in subtle, complex ways that are difficult to capture robustly; acoustic communication suffers from significant distortion in complex environments and cross-heterogeneous devices; and processing audio data requires careful design to ensure privacy and efficiency. To address these challenges, we developed a series of systems across three pillars: intelligent acoustic sensing, robust acoustic communication, and privacy-aware acoustic computing.",
+    "citation_count": 0,
+    "reference_count": 8,
+    "url": "https://doi.org/10.1145/3711875.3736663",
+    "dblp_key": "conf/mobisys/Yang25",
+    "source_id": "https://openalex.org/W4414760489"
+  },
+  {
+    "title": "Federated LLM Pre-Training on Mobile Phones.",
+    "authors": [
+      "Dongqi Cai 0001"
+    ],
+    "venue": "MobiSys",
+    "year": 2025,
+    "abstract": "Over the past decades, billions of mobile phones have become the primary interface to the Internet, accessing vast amounts of private user data. These devices are idle most of the time or become obsolete after a few years. Pre-training Large Language Models (LLMs) on ubiquitous mobile phones offers a promising way to utilize both private data and idle computing power. In this work, we propose the first federated LLM pre-training framework for mobile devices and demonstrate that it can potentially achieve wall-clock training time comparable to centralized pre-training.",
+    "citation_count": 0,
+    "reference_count": 6,
+    "url": "https://doi.org/10.1145/3711875.3736664",
+    "dblp_key": "conf/mobisys/Cai25",
+    "source_id": "https://openalex.org/W4414760523"
+  },
+  {
+    "title": "Beyond Backscatter: Rethinking Low-Power Wireless Communication to Tackle the Energy Challenge of Embedded Systems.",
+    "authors": [
+      "Rajashekar Reddy Chinthalapani"
+    ],
+    "venue": "MobiSys",
+    "year": 2025,
+    "abstract": "Wireless communication remains the most energy-intensive component of embedded systems, often limiting their deployment in power-constrained or hard-to-reach environments. While backscatter communication offers energy efficiency by offloading carrier generation, it continues to face practical limitations, hindering widespread adoption. In this paper, we propose going beyond backscatter architecture that re-imagines both the transmitter and receiver using ultra-low-power components, such as tunnel diodes. Our approach eliminates the dependence on external emitters for transmission and moves beyond envelope detectors on the receiver side, resulting in significantly improved sensitivity and communication range.",
+    "citation_count": 0,
+    "reference_count": 2,
+    "url": "https://doi.org/10.1145/3711875.3736665",
+    "dblp_key": "conf/mobisys/Chinthalapani25",
+    "source_id": "https://openalex.org/W4414760421"
+  },
+  {
+    "title": "Assistive AR System for Enhancing Human-Human and Human-Environment Interactions.",
+    "authors": [
+      "Yunqi Guo"
+    ],
+    "venue": "MobiSys",
+    "year": 2025,
+    "abstract": "Augmented reality (AR) is used to enhance the perception of the real world by integrating virtual objects to an image sequence acquired from various camera technologies. Numerous AR applications in robotics have been developed in recent years. The aim of this paper is to provide an overview of AR research in robotics during the five year period from 2015 to 2019. We classified these works in terms of application areas into four categories: (1) Medical robotics: Robot-Assisted surgery (RAS), prosthetics, rehabilitation, and training systems; (2) Motion planning and control: trajectory generation, robot programming, simulation, and manipulation; (3) Human-robot interaction (HRI): teleoperation, collaborative interfaces, wearable robots, haptic interfaces, brain-computer interfaces (BCIs), and gaming; (4) Multi-agent systems: use of visual feedback to remotely control drones, robot swarms, and robots with shared workspace. Recent developments in AR technology are discussed followed by the challenges met in AR due to issues of camera localization, environment mapping, and registration. We explore AR applications in terms of how AR was integrated and which improvements it introduced to corresponding fields of robotics. In addition, we summarize the major limitations of the presented applications in each category. Finally, we conclude our review with future directions of AR research in robotics. The survey covers over 100 research works published over the last five years.",
+    "citation_count": 262,
+    "reference_count": 113,
+    "url": "https://doi.org/10.1145/3711875.3736666",
+    "dblp_key": "conf/mobisys/Guo25a",
+    "source_id": "https://openalex.org/W3014471496"
+  },
+  {
+    "title": "Multi-user Intelligent Personalized Acoustic Field Manipulation.",
+    "authors": [
+      "Yijie Li 0002"
+    ],
+    "venue": "MobiSys",
+    "year": 2025,
+    "abstract": "Unlike previous studies on the Metaverse based on Second Life, the current Metaverse is based on the social value of Generation Z that online and offline selves are not different. With the technological development of deep learning-based high-precision recognition models and natural generation models, Metaverse is being strengthened with various factors, from mobile-based always-on access to connectivity with reality using virtual currency. The integration of enhanced social activities and neural-net methods requires a new definition of Metaverse suitable for the present, different from the previous Metaverse. This paper divides the concepts and essential techniques necessary for realizing the Metaverse into three components (i.e., hardware, software, and contents) and three approaches (i.e., user interaction, implementation, and application) rather than marketing or hardware approach to conduct a comprehensive analysis. Furthermore, we describe essential methods based on three components and techniques to Metaverse&#x2019;s representative Ready Player One, Roblox, and Facebook research in the domain of films, games, and studies. Finally, we summarize the limitations and directions for implementing the immersive Metaverse as social influences, constraints, and open challenges.",
+    "citation_count": 1731,
+    "reference_count": 424,
+    "url": "https://doi.org/10.1145/3711875.3736667",
+    "dblp_key": "conf/mobisys/Li25",
+    "source_id": "https://openalex.org/W4206484811"
+  },
+  {
+    "title": "Redesigning Mobile Systems for Foundation Models with model- and system-level orchestration.",
+    "authors": [
+      "Rongxiang Wang"
+    ],
+    "venue": "MobiSys",
+    "year": 2025,
+    "abstract": "Transformer-based speech and language models deliver high-quality transcription and context-aware responses but require significant resources, complicating on-device deployment. Our work aims to build efficient mobile systems for real-time, accurate on-device model processing through system- and runtime-level innovations, thus eliminating cloud dependency and enhancing privacy.",
+    "citation_count": 0,
+    "reference_count": 5,
+    "url": "https://doi.org/10.1145/3711875.3736668",
+    "dblp_key": "conf/mobisys/Wang25",
+    "source_id": "https://openalex.org/W4414760471"
+  },
+  {
+    "title": "Scalable and Adaptive RF Signal Propagation Modeling for Next-Generation Wireless Systems.",
+    "authors": [
+      "Kang Yang 0005"
+    ],
+    "venue": "MobiSys",
+    "year": 2025,
+    "abstract": "The global bandwidth shortage facing wireless carriers has motivated the exploration of the underutilized millimeter wave (mm-wave) frequency spectrum for future broadband cellular communication networks. There is, however, little knowledge about cellular mm-wave propagation in densely populated indoor and outdoor environments. Obtaining this information is vital for the design and operation of future fifth generation cellular networks that use the mm-wave spectrum. In this paper, we present the motivation for new mm-wave cellular systems, methodology, and hardware for measurements and offer a variety of measurement results that show 28 and 38 GHz frequencies can be used when employing steerable directional antennas at base stations and mobile devices.",
+    "citation_count": 7368,
+    "reference_count": 28,
+    "url": "https://doi.org/10.1145/3711875.3736669",
+    "dblp_key": "conf/mobisys/Yang25a",
+    "source_id": "https://openalex.org/W2116334496"
+  },
+  {
+    "title": "Intelligent Network Infrastructure for Extended Reality.",
+    "authors": [
+      "Bo Chen 0025"
+    ],
+    "venue": "MobiSys",
+    "year": 2025,
+    "abstract": "To meet the stringent service requirements of 6G applications such as immersive cloud eXtended Reality (XR), holographic communication, and digital twin, there is no doubt that an increasing number of servers will be deployed on the network edge. Then, the techniques, edge computing, edge caching, and edge intelligence will be more widely utilized for intelligent local data storage and processing generated by 6G applications, while innovative access network architecture based on the cloud-edge servers, such as the Open-Radio Access Network (O-RAN) will be adopted to improve the flexibility and openness for new service deployment and frequent network changes. On the other hand, new attack surfaces and vectors targeting local infrastructure and users will emerge along with the deployment of novel network architecture and techniques. Massive researchers have studied the potential security and privacy threats on the 6G network edge as well as the countermeasures. The three techniques, edge computing, edge caching, and edge intelligence have become a double-edged sword that can not only be synchronously utilized to develop defense countermeasures, but also become the targets of many new security and privacy threats. In this article, we provide a comprehensive survey of articles on the three techniques-related security threats and countermeasures on the 6G network edge. We explain how security and privacy can be destroyed by attacking one of the three technologies and how the three services support each other to realize efficient and achievable security protection. Moreover, the researches on the benefits and limitations of Federated Learning (FL) and blockchain for decentralized edge network systems in terms of security and privacy are also investigated. Additionally, we also analyze the existing challenges and future directions towards 6G.",
+    "citation_count": 264,
+    "reference_count": 221,
+    "url": "https://doi.org/10.1145/3711875.3736670",
+    "dblp_key": "conf/mobisys/002525",
+    "source_id": "https://openalex.org/W4320712861"
+  },
+  {
+    "title": "Time-sensitive AI System for Physical Agents.",
+    "authors": [
+      "Neiwen Ling"
+    ],
+    "venue": "MobiSys",
+    "year": 2025,
+    "abstract": "The integration of Artificial Intelligence (AI) into physical agents, such as drones, robots, and autonomous vehicles, demands not only intelligence but also timely perception and decision-making. This work presents a time-sensitive AI system architecture that addresses the critical timing challenges inherent in such intelligent physical agents. We propose system-level designs that enable deadline-aware Deep Neural Network (DNN) execution on edge/embedded platforms, along with time-sensitive Large Language Model (LLM) serving on edge servers, thereby providing end-to-end support for time-critical physical intelligence.",
+    "citation_count": 0,
+    "reference_count": 5,
+    "url": "https://doi.org/10.1145/3711875.3736671",
+    "dblp_key": "conf/mobisys/Ling25",
+    "source_id": "https://openalex.org/W4414760455"
+  },
+  {
+    "title": "Dissecting 5G in the Wild: Performance, Coverage, and Support for Next-Gen Applications.",
+    "authors": [
+      "Moinak Ghoshal"
+    ],
+    "venue": "MobiSys",
+    "year": 2025,
+    "abstract": "5G, officially rolled out in 2019, has been rapidly deployed by major mobile network operators across the globe. Key advancements in 5G such as higher-order modulation, massive MIMO, wider channels, and higher operating frequencies, have set high expectations over the predecessor technology LTE, especially for enabling high-bandwidth and latency-sensitive applications such as Mixed Reality (XR), Connected Autonomous Vehicles (CAVs), and 360° video streaming — often referred to as 5G \"killer\" apps. While 5G's technical promises have fueled widespread excitement, understanding its true impact requires a closer look at the real-world performance delivered to end users.",
+    "citation_count": 0,
+    "reference_count": 3,
+    "url": "https://doi.org/10.1145/3711875.3736672",
+    "dblp_key": "conf/mobisys/Ghoshal25",
+    "source_id": "https://openalex.org/W4414760409"
+  },
+  {
+    "title": "Building Generalizable Deep Learning Solutions for AIoT Applications.",
+    "authors": [
+      "Huatao Xu"
+    ],
+    "venue": "MobiSys",
+    "year": 2025,
+    "abstract": "In an era where embedded and mobile devices are becoming ubiquitous, the intersection of Artificial Intelligence and the Internet of Things (AIoT) is rapidly transforming various fields. This paper delves into the challenges and innovations in this domain, particularly focusing on the development of generalized sensing models for wearable sensor data. We introduce novel approaches to leverage the abundant unlabeled sensor data, physical sensing knowledge, and common knowledge embedded in Large Language Models (LLMs) to enhance the generalizability of AIoT models significantly.",
+    "citation_count": 0,
+    "reference_count": 27,
+    "url": "https://doi.org/10.1145/3711875.3736673",
+    "dblp_key": "conf/mobisys/Xu25",
+    "source_id": "https://openalex.org/W4414760457"
+  },
+  {
+    "title": "Commodity Hardware for Scalable RAN Infrastructure and Agricultural Sensing.",
+    "authors": [
+      "Jian Ding"
+    ],
+    "venue": "MobiSys",
+    "year": 2025,
+    "abstract": "Next-generation wireless networks promise massive connectivity with higher data rates and lower latency, offering transformative potential for agriculture by enabling smarter, more efficient, and sustainable farming practices. However, the advancement of wireless infrastructure and precision agriculture is constrained by the need for specialized, costly hardware. Our research addresses this challenge by designing systems that leverage general-purpose commodity hardware for both radio-access network (RAN) infrastructure and soil monitoring. By utilizing existing servers at edge and cloud data centers, as well as ubiquitous Wi-Fi devices, we can eliminate the need for expensive, dedicated equipment, reducing costs and accelerating the evolution of wireless and agricultural sensing technologies.",
+    "citation_count": 0,
+    "reference_count": 2,
+    "url": "https://doi.org/10.1145/3711875.3736674",
+    "dblp_key": "conf/mobisys/Ding25",
+    "source_id": "https://openalex.org/W4414760427"
+  },
+  {
+    "title": "Toward Reliable and Scalable LoRa Networking for Rural IoT.",
+    "authors": [
+      "Yidong Ren"
+    ],
+    "venue": "MobiSys",
+    "year": 2025,
+    "abstract": "The Internet of Things (IoT) is revolutionizing our interaction with the physical world, significantly enhancing precision agriculture, infrastructure monitoring, forest fire prevention, environmental protection, and numerous other applications in rural areas. Deploying reliable and scalable wireless connectivity in rural areas is critical, but it presents distinct technical and economic challenges. Local area wireless networks, such as Wi-Fi and Bluetooth, provide limited coverage and consume high power. They are not suitable for rural scenarios. Cellular technologies like LTE and 5G offer wide-area coverage but involve high infrastructure costs and power consumption. Recently, Low-Power Wide-Area Networks (LPWANs) have become promising alternatives. They address rural IoT needs by offering long-range communication, low power consumption, and reduced deployment costs. Among LPWAN technologies, LoRa stands out due to its robustness, scalability, and affordability.",
+    "citation_count": 1,
+    "reference_count": 7,
+    "url": "https://doi.org/10.1145/3711875.3736675",
+    "dblp_key": "conf/mobisys/Ren25",
+    "source_id": "https://openalex.org/W4414760415"
+  },
+  {
+    "title": "Democratizing Earable Computing via Hardware-Software Co-design.",
+    "authors": [
+      "Yongjie Yang 0008"
+    ],
+    "venue": "MobiSys",
+    "year": 2025,
+    "abstract": "Many of us have low-cost earphones that are often forgotten in drawers or discarded as electronic waste. Instead of letting billions of these earphones go to waste, can we transform them into smart earable devices—creating a cost-effective alternative, promoting sustainability, and ultimately democratizing Earable Computing? To answer this question, this paper presents a five-year research roadmap based on a hardware-software co-design approach, with the goal of repurposing low-cost earphones as powerful human-centric sensing devices. We begin with circuit design, develop adaptive signal processing algorithms, and ultimately integrate these efforts into a low-cost, user-friendly earable platform that pushes the boundaries of earable computing field.",
+    "citation_count": 0,
+    "reference_count": 1,
+    "url": "https://doi.org/10.1145/3711875.3736676",
+    "dblp_key": "conf/mobisys/000825",
+    "source_id": "https://openalex.org/W4414760501"
+  },
+  {
+    "title": "Towards Accurate, Adaptive, and Real-time Machine Perception on Resource-constrained Platforms.",
+    "authors": [
+      "Jeho Lee"
+    ],
+    "venue": "MobiSys",
+    "year": 2025,
+    "abstract": "Accurate, real-time machine perception is a key enabler of emerging mobile applications such as augmented reality and autonomous driving. However, running complex vision models within the tight latency budgets of resource-limited platforms remains challenging. We address two root causes: (i) the growing computational demands of state-of-the-art vision models and (ii) the variability of compute resource availability in on-device AI deployments. In this extended abstract, we introduce two adaptive perception systems that leverage AI-system co-design. Deployed on commercial devices and evaluated on representative perception workloads, our systems demonstrate high-performance perception under practical latency and resource constraints.",
+    "citation_count": 0,
+    "reference_count": 5,
+    "url": "https://doi.org/10.1145/3711875.3736677",
+    "dblp_key": "conf/mobisys/Lee25",
+    "source_id": "https://openalex.org/W4414760454"
+  },
+  {
+    "title": "Ultra-Lightweight Edge Intelligence Using Vector Symbolic Architecture.",
+    "authors": [
+      "Chae Young Lee"
+    ],
+    "venue": "MobiSys",
+    "year": 2025,
+    "abstract": "Edge intelligence greatly benefits Internet-of-Things devices by providing insights at the sensor node without transmitting the data to and from the cloud. Although recent work has scaled deep neural networks down to microcontrollers, these solutions remain impractical for devices operating under strict energy budgets—such as battery-powered camera traps in remote forests or micro-robots in disaster zones. My work addresses that gap by exploring a brain-inspired Vector Symbolic Architecture (VSA) over conventional neural networks. I introduce HyperCam for low-power image classification, NavHD for micro-robot navigation, and Omen for dynamic optimization during inference. These methods each optimize VSA's encoding and training algorithms to achieve meaningful speedups and energy savings. Ongoing work seeks to demonstrate these advances as real-world systems, where VSA can extend the lifespan of intelligent systems in remote or energy-constrained environments.",
+    "citation_count": 0,
+    "reference_count": 3,
+    "url": "https://doi.org/10.1145/3711875.3736678",
+    "dblp_key": "conf/mobisys/Lee25a",
+    "source_id": "https://openalex.org/W4414760482"
+  },
+  {
+    "title": "Hardware-Software Co-Design for Programmable Smart Radio Environments.",
+    "authors": [
+      "Kun Woo Cho"
+    ],
+    "venue": "MobiSys",
+    "year": 2025,
+    "abstract": "In this abstract, we introduce the concept of a programmable smart radio environment, which can be controlled and tuned by software to reconfigure itself in real time based on application needs. We design programmable smart surface systems and deploy them on buildings and vehicles to physically control radio environments. Our ideas are implemented as hardware-software systems, integrated into city-scale wireless testbeds alongside existing network protocols, and validated through rigorous experimental evaluation.",
+    "citation_count": 0,
+    "reference_count": 9,
+    "url": "https://doi.org/10.1145/3711875.3736680",
+    "dblp_key": "conf/mobisys/Cho25",
+    "source_id": "https://openalex.org/W4414760474"
+  },
+  {
+    "title": "Privacy-Aware Ambient Audio Sensing for Healthy Indoor Spaces.",
+    "authors": [
+      "Bhawana Chhaglani"
+    ],
+    "venue": "MobiSys",
+    "year": 2025,
+    "abstract": "Indoor airborne transmission poses a significant health risk, yet current monitoring solutions are invasive, costly, or fail to address it directly. My research explores the untapped potential of ambient audio sensing to estimate key transmission risk factors such as ventilation, aerosol emissions, and occupant distribution—non-invasively and in real time. I develop privacy-preserving systems that leverage existing microphones to monitor the whole spectrum of indoor air quality which can have a significant effect on an individual's health. This work lays the foundation for privacy-aware airborne risk monitoring using everyday devices.",
+    "citation_count": 0,
+    "reference_count": 5,
+    "url": "https://doi.org/10.1145/3711875.3736681",
+    "dblp_key": "conf/mobisys/Chhaglani25",
+    "source_id": "https://openalex.org/W4414760419"
+  },
+  {
+    "title": "Rethinking Inexpensive Wearables in the Era of AI: From Motion Analytics to Mobile Health.",
+    "authors": [
+      "Hao Zhou"
+    ],
+    "venue": "MobiSys",
+    "year": 2025,
+    "abstract": "Since their emergence, wearables have been widely proposed and utilized for counting steps, monitoring heart rate, and enhancing user interactions, suggesting their growing importance in both research and commercial domains. However, despite their ubiquity, the application scope of current wearables remains limited, largely due to an insufficient understanding of sensor signals. Mainstream devices such as smartphones and smartwatches predominantly support basic functionalities like human activity recognition and indoor navigation. However, enabling more advanced applications necessitates a deeper understanding of sensor signals within these wearables. Without such insight, these applications often depend on specialized, high-end hardware or fail to generalize across diverse conditions. For instance, sign language recognition, which requires fine-grained finger motion tracking, typically depends on bulky sensor gloves, vision-based systems that are expensive and intrusive, or wireless signal based systems that require specialized hardware, making them unsuitable for daily use. Similarly, while current smartwatches/rings can estimate heart rate, advanced health markers such as cardiac output, which offer insights into cardiac dysfunction, acute stress responses, and cognitive decline, are limited to specialized devices that cost thousands of US dollars.",
+    "citation_count": 1,
+    "reference_count": 4,
+    "url": "https://doi.org/10.1145/3711875.3736682",
+    "dblp_key": "conf/mobisys/Zhou25",
+    "source_id": "https://openalex.org/W4414760472"
+  },
+  {
+    "title": "δ-ATP: Towards Fast and Reliable Aerial Traffic Patrol.",
+    "authors": [
+      "Jiaxin Du",
+      "Chunyi Peng 0001"
+    ],
+    "venue": "MobiSys",
+    "year": 2025,
+    "abstract": "In this work, we present our efforts to develop δ-ATP, a working system for fast and reliable traffic patrol using drones in the sky. Compared to the state-of-art approaches, δ-ATP improves accuracy and responsiveness in detecting speeding incidents by focusing only on essential \"delta\" (δ) information - regions of interest (say, roads) and key frames needed for speed estimation. We have implemented and evaluated δ-ATP in real-world experiments, successfully detecting all the speeding vehicles and outperforming all other approaches with a higher accuracy for real-time traffic enforcement. The datasets collected in our field test are available at [7].",
+    "citation_count": 0,
+    "reference_count": 5,
+    "url": "https://doi.org/10.1145/3711875.3737658",
+    "dblp_key": "conf/mobisys/Du025",
+    "source_id": "https://openalex.org/W4414760463"
+  },
+  {
+    "title": "GazeboNS3: A Digital Twin System for UAV Swarms.",
+    "authors": [
+      "Dorian Cauwe",
+      "Chenyang Wang 0007",
+      "Qi Han 0001"
+    ],
+    "venue": "MobiSys",
+    "year": 2025,
+    "abstract": "Unmanned Aerial Vehicles (UAVs) have advanced significantly, with multi-UAV systems offering advantages such as redundancy, cost-effectiveness, and less dependency on infrastructure. These systems can benefit applications like remote surveillance, search and rescue, and environmental monitoring. Ideally, UAVs should behave distributively and make their own decisions. However, developing these distributed algorithms for multi-UAV systems presents challenges, particularly in real-world testing, where hardware constraints, environmental dependencies, and limited analytics can hinder the development progress. Simulations have emerged as a key solution, allowing for rapid iteration and detailed analytics. Yet, current simulators often lack the capability to accurately model both the physical dynamics of UAVs and the complexity of their communication networks. This paper introduces GazeboNS31, a Digital Twin system designed to bridge this gap. Specifically, we combine the Gazebo physics simulator, the NS-3 network simulator, the Ardupilot's flight controller, and our empirical measurements of energy consumption and computation time on various commonly used onboard computers. Experiment results show that GazeboNS3 enables seamless emulation of UAVs' behavior and communication in realistic environments.",
+    "citation_count": 1,
+    "reference_count": 10,
+    "url": "https://doi.org/10.1145/3711875.3737659",
+    "dblp_key": "conf/mobisys/CauweWH25",
+    "source_id": "https://openalex.org/W4414760446"
+  },
+  {
+    "title": "Rolling in the Deep: Exploiting Rolling Shutter Effect Against Stereo Depth Estimation in Drones.",
+    "authors": [
+      "Dongfang Guo",
+      "Rui Tan 0001"
+    ],
+    "venue": "MobiSys",
+    "year": 2025,
+    "abstract": "Stereo vision plays a critical role in enabling depth perception for drones, supporting navigation and obstacle avoidance in complex environments. However, the robustness and security of stereo vision systems remain largely underexplored. In this paper, we propose Rolling in the Deep (RiD), a novel physical attack that exploits the rolling shutter effect (RSE) to inject imperceptible, structured perturbations into stereo image pairs. We analyze RSE formation in binocular camera setups and show how RSE-based perturbations can degrade deep learning-based stereo matching by exploiting model vulnerabilities and sensor misalignments, resulting in incorrect depth estimation. Preliminary results show the feasibility of RiD under realistic stereo configurations, revealing a new class of threats to drone perception systems.",
+    "citation_count": 0,
+    "reference_count": 15,
+    "url": "https://doi.org/10.1145/3711875.3737660",
+    "dblp_key": "conf/mobisys/Guo025",
+    "source_id": "https://openalex.org/W4414760450"
+  },
+  {
+    "title": "Continuous Marine Monitoring via Autonomous UAV Handoff.",
+    "authors": [
+      "Heegyeong Kim",
+      "Alice James",
+      "Avishkar Seth",
+      "Endrowednes Kuantama",
+      "Jane Williamson",
+      "Yimeng Feng",
+      "Richard Han 0001"
+    ],
+    "venue": "MobiSys",
+    "year": 2025,
+    "abstract": "This paper introduces an autonomous UAV vision system for continuous, real-time tracking of marine animals, specifically sharks, in dynamic marine environments. The system integrates an onboard computer with a stabilised RGB-D camera and a custom-trained OSTrack pipeline, enabling visual identification under challenging lighting, occlusion, and sea-state conditions. A key innovation is the inter-UAV handoff protocol, which enables seamless transfer of tracking responsibilities between drones, extending operational coverage beyond single-drone battery limitations. Performance is evaluated on a curated shark dataset of 5,200 frames, achieving a tracking success rate of 81.9% during real-time flight control at 100 Hz, and robustness to occlusion, illumination variation, and background clutter. We present a seamless UAV handoff framework, where target transfer is attempted via high-confidence feature matching, achieving 82.9% target coverage. These results confirm the viability of coordinated UAV operations for extended marine tracking and lay the groundwork for scalable, autonomous monitoring.",
+    "citation_count": 2,
+    "reference_count": 12,
+    "url": "https://doi.org/10.1145/3711875.3737661",
+    "dblp_key": "conf/mobisys/KimJSKWF025",
+    "source_id": "https://openalex.org/W4414760458"
+  },
+  {
+    "title": "Drones in the Sky: Air Quality Monitoring at Heights.",
+    "authors": [
+      "Naser Hossein Motlagh",
+      "Martha Arbayani Zaidan",
+      "Matti Irjala",
+      "Andrew Rebeiro-Hargrave",
+      "Petteri Nurmi",
+      "Sasu Tarkoma"
+    ],
+    "venue": "MobiSys",
+    "year": 2025,
+    "abstract": "Air pollution represents a critical global health challenge. Traditional air quality monitoring methods, which rely on expensive stations or extensive low-cost sensor networks, often fall short in capturing the fine spatial and temporal variations of pollutants, particularly in urban environments dominated by vehicular emissions. Recent advancements in drone technology offer a novel solution to these limitations, enabling the collection of high-resolution air quality data across different altitudes and environments. We contribute by investigating the potential of drone-based air quality monitoring. Specifically, we conduct measurements in two distinct settings: an industrial site and a residential area. We present analytical findings that highlight the effectiveness of drones in capturing pollutant levels and discuss the key challenges associated with this technology. Our findings underscore the promise of drone-based monitoring in enhancing air quality assessment and inform directions for future research.",
+    "citation_count": 0,
+    "reference_count": 17,
+    "url": "https://doi.org/10.1145/3711875.3737662",
+    "dblp_key": "conf/mobisys/MotlaghZIRNT25",
+    "source_id": "https://openalex.org/W4414760478"
+  },
+  {
+    "title": "Real-time Adaptive Planning for Intelligent Distributed TSP-inspired Drone Swarming (RAPID-TSP).",
+    "authors": [
+      "Samira Hayat",
+      "Christian Raffelsberger"
+    ],
+    "venue": "MobiSys",
+    "year": 2025,
+    "abstract": "This paper presents RAPID-TSP, a distributed coordination algorithm for multi-drone scanning missions in dynamic environments. It enables drones to balance area coverage efficiency with network connectivity by leveraging a tunable parameter λ. This parameter allows each drone to adaptively choose its next scanning target based on proximity and the positions of neighboring drones, while aiming to maintain connectivity with a base station for mission updates. RAPID-TSP incorporates conflict resolution and supports two swarming strategies to minimize redundant scanning and ensure efficient collaboration. A realistic scenario involving the scanning of container stacks in a logistics hub serves as evaluation scenario. Extensive simulations show how RAPID-TSP performs robustly under varying conditions and can reduce mission completion time by up to 40% compared to traditional mTSP coordination methods. A key design insight is that mission time is significantly reduced by adding more drones only when communication range is sufficient; otherwise, sparse connectivity limits their effectiveness.",
+    "citation_count": 0,
+    "reference_count": 10,
+    "url": "https://doi.org/10.1145/3711875.3737663",
+    "dblp_key": "conf/mobisys/HayatR25",
+    "source_id": "https://openalex.org/W4414760467"
+  },
+  {
+    "title": "Bringing Edge Intelligence to Wildlife Camera Traps with Hyperdimensional Computing.",
+    "authors": [
+      "Jida Zhang",
+      "Timothy Jacques",
+      "Joseph Chen",
+      "Zerina Kapetanovic"
+    ],
+    "venue": "MobiSys",
+    "year": 2025,
+    "abstract": "Backpropagation of errors (BP) plays a vital role in the deep learning domain and exhibits impressive performance in real-world applications. Training state-of-the-art deep neural networks (DNNs) relies almost exclusively on BP, which consumes massive amounts of resources. However, the human brain learns new tasks with remarkable efficiency. This contrast has led to criticism of BP for its biologically implausible nature, underscoring the significant disparity in performance between DNNs and the human brain. The emerging forward-only adaptation, namely backward-pass-free, is proposed to remove the biologically implausible backward pass in deep learning, with the potential to improve memory, computing, and energy efficiency. This survey presents a comprehensive overview and a rethinking of BP-free learning given the emergence of forward-only adaptation. These BP-free algorithms are categorized across different historical stages according to their technical evolution, and are analyzed based on the core principles in each representative work. Moreover, we establish the taxonomy of supervisory signal and biological plausibility, providing a holistic lens into the extent to which various BP-free algorithms perform compared to forward-only adaptation. We further investigate the scalability of BP-free algorithms. Additionally, we discuss the advantages, practical applications, and current limitations of BP-free algorithms, while outlining potential future directions. This survey paper provides a comprehensive overview to foster progress in BP-free learning in the context of emerging forward-only adaptation.",
+    "citation_count": 0,
+    "reference_count": 0,
+    "url": "https://doi.org/10.1145/3711875.3736684",
+    "dblp_key": "conf/mobisys/ZhangJCK25",
+    "source_id": "https://openalex.org/W7118086397"
+  },
+  {
+    "title": "Presto: Hybrid CPU-GPU Preprocessing Framework for Video-based AI Inference System.",
+    "authors": [
+      "Jihyuk Lee",
+      "Dongsu Han",
+      "Jaehong Kim 0002"
+    ],
+    "venue": "MobiSys",
+    "year": 2025,
+    "abstract": "The growing adoption of video-based AI models has created a pressing demand for high throughput, low latency inference systems. However, existing preprocessing frameworks—whether CPU or GPU based—struggle to keep up with the computational burdens of video decoding and data augmentation, resulting in suboptimal GPU utilization and degraded inference system performance.",
+    "citation_count": 0,
+    "reference_count": 10,
+    "url": "https://doi.org/10.1145/3711875.3736688",
+    "dblp_key": "conf/mobisys/LeeH025",
+    "source_id": "https://openalex.org/W4414760447"
+  },
+  {
+    "title": "MRM3: Machine Readable ML Model Metadata.",
+    "authors": [
+      "Andrej Cop",
+      "Blaz Bertalanic",
+      "Marko Grobelnik",
+      "Carolina Fortuna"
+    ],
+    "venue": "MobiSys",
+    "year": 2025,
+    "abstract": "As the complexity and number of machine learning (ML) models grows, well-documented ML models are essential for developers and companies to use or adapt them to their specific use cases. Model metadata, already present in unstructured format as model cards in online repositories such as Hugging Face, could be more structured and machine readable while also incorporating environmental impact metrics such as energy consumption and carbon footprint. Our work extends the existing State of the Art by defining a structured schema for ML model metadata focusing on machine-readable format and support for integration into a knowledge graph (KG) for better organization and querying, enabling a wider set of use cases. Furthermore, we present an example wireless localization model metadata dataset consisting of 22 models trained on 4 datasets, integrated into a Neo4j-based KG with 113 nodes and 199 relations.",
+    "citation_count": null,
+    "reference_count": null,
+    "url": "https://doi.org/10.1145/3711875.3736685",
+    "dblp_key": "conf/mobisys/CopBGF25",
+    "source_id": "2505.13343v1"
+  },
+  {
+    "title": "SensorMCP: A Model Context Protocol Server for Custom Sensor Tool Creation.",
+    "authors": [
+      "Yunqi Guo",
+      "Guanyu Zhu",
+      "Kaiwei Liu 0001",
+      "Guoliang Xing"
+    ],
+    "venue": "MobiSys",
+    "year": 2025,
+    "abstract": "The Model Context Protocol (MCP) enables large language models to invoke external tools through natural-language descriptions, forming the foundation of many AI agent applications. However, MCP does not enforce consistency between documented tool behavior and actual code execution, even though MCP Servers often run with broad system privileges. This gap introduces a largely unexplored security risk. We study how mismatches between externally presented tool descriptions and underlying implementations systematically shape the mental models and decision-making behavior of intelligent agents. Specifically, we present the first large-scale study of description-code inconsistency in the MCP ecosystem. We design an automated static analysis framework and apply it to 10,240 real-world MCP Servers across 36 categories. Our results show that while most servers are highly consistent, approximately 13% exhibit substantial mismatches that can enable undocumented privileged operations, hidden state mutations, or unauthorized financial actions. We further observe systematic differences across application categories, popularity levels, and MCP marketplaces. Our findings demonstrate that description-code inconsistency is a concrete and prevalent attack surface in MCP-based AI agents, and motivate the need for systematic auditing and stronger transparency guarantees in future agent ecosystems.",
+    "citation_count": 0,
+    "reference_count": 0,
+    "url": "https://doi.org/10.1145/3711875.3736687",
+    "dblp_key": "conf/mobisys/GuoZ0X25",
+    "source_id": "https://openalex.org/W7127739802"
+  },
+  {
+    "title": "Empirical Analysis of LLMDPP: Advancing Log Parsing in the LLM Era.",
+    "authors": [
+      "Kehan Wang",
+      "Siqin Zhang",
+      "Haijing Nan",
+      "Xueyu Hou",
+      "Jiaqi Zou",
+      "Zicong Miao"
+    ],
+    "venue": "MobiSys",
+    "year": 2025,
+    "abstract": "In the field of software engineering, the automated analysis of log data is crucial for operations and maintenance teams. This study introduces LLMDPP, a novel log parser that leverages Large Language Models (LLMs) and Determinantal Point Process (DPP) sampling techniques to enhance the efficiency and accuracy of online log parsing. LLMDPP transforms raw log messages into structured log templates through a few-shot learning, thus simplifying the processing and analysis of log data. The study explores the accuracy of LLMDPP in log-parsing tasks and compares the effectiveness of different encoding functions (TF-IDF and Flan-T5-small embedding layer) in DPP sampling. Experimental results show that LLMDPP outperforms traditional methods in both Global Accuracy and Parsing Accuracy, with the semantic information encoding function performing better when the number of samples is low. Furthermore, we simulate an online scenario to evaluate the parsing effectiveness of different sampling methods on unseen log datasets. The results indicate that the DPP sampling method has an advantage in maintaining sample diversity and fairness, which can improve parsing accuracy.",
+    "citation_count": 0,
+    "reference_count": 20,
+    "url": "https://doi.org/10.1145/3711875.3736683",
+    "dblp_key": "conf/mobisys/WangZNHZM25",
+    "source_id": "https://openalex.org/W4414760428"
+  },
+  {
+    "title": "SPATIUM: A Context-Aware Machine Learning Framework for Immersive Spatiotemporal Health Understanding.",
+    "authors": [
+      "Yang Liu 0047",
+      "SiYoung Jang",
+      "Alessandro Montanari",
+      "Fahim Kawsar"
+    ],
+    "venue": "MobiSys",
+    "year": 2025,
+    "abstract": "Digital twin (DT) technologies are increasingly promoted for smart-city governance, yet many deployments remain fragmented and fail to support integrated lifecycle operations across planning, construction, and long-term management. This study proposes a digital-twin–driven urban lifecycle paradigm and examines its city-scale implementation through a structured case study of the Singapore–Nanjing Eco Hi-Tech Island. The study synthesizes a five-layer technical architecture encompassing sensing, data platforms, analytical modeling, service integration, and application scenarios, and organizes eight digital twin application domains spanning governance, community, education, transportation, industrial parks, ecology, security, and tourism. To demonstrate the scale and operational trajectory of the implementation, the paper reports phased quantitative deployment targets and lifecycle indicators (2020–2030), including environmental monitoring coverage, digital infrastructure penetration, public service integration, and governance digitalization. By linking scenario-based demand–supply data matching with lifecycle-oriented indicators, the case illustrates how digital twins can function as an enabling infrastructure for coordinated urban governance beyond isolated pilot projects. The findings offer transferable design and implementation insights for cities seeking to operationalize digital twins at the city scale.",
+    "citation_count": 0,
+    "reference_count": 81,
+    "url": "https://doi.org/10.1145/3711875.3736686",
+    "dblp_key": "conf/mobisys/LiuJMK25",
+    "source_id": "https://openalex.org/W7131365077"
+  },
+  {
+    "title": "First-principle crosstalk dynamics and Hamiltonian learning via Rabi experiments.",
+    "authors": [
+      "Jan Balewski",
+      "Adam Winick",
+      "Yilun Xu",
+      "Neel Vora",
+      "Gang Huang",
+      "David Santiago 0001",
+      "Joseph Emerson",
+      "Irfan Siddiqi"
+    ],
+    "venue": "MobiSys",
+    "year": 2025,
+    "abstract": "Coherent errors constitute a significant barrier to successful large-scale quantum computation. One such error mechanism is crosstalk, which violates spatial locality or the independence of operations. We present a description of crosstalk and learn the underlying parameters by executing novel simultaneous Rabi experiments and fitting the Hamiltonian to the observed data. We use this model to predict three- and four-qubit experiments and observe excellent agreement between our theoretical predictions and experimental results. Our technique enables researchers to study the dynamics of multi-qubit circuits without performing experiments, potentially facilitating the minimization of coherent gate errors via digital pulse precompilation. Additionally, this method provides whole-chip crosstalk characterization, a useful tool for guiding quantum processor design.",
+    "citation_count": 0,
+    "reference_count": 0,
+    "url": "https://doi.org/10.1145/3711875.3737654",
+    "dblp_key": "conf/mobisys/BalewskiWXVHSES25",
+    "source_id": "https://openalex.org/W4407384747"
+  },
+  {
+    "title": "Computing Systems for Superconducting Qubits: Challenges and Opportunities.",
+    "authors": [
+      "Vu Le",
+      "Neel Vora",
+      "Devanshu Brahmbhatt",
+      "Yilun Xu",
+      "Gang Huang",
+      "Phuc \"VP\" Nguyen"
+    ],
+    "venue": "MobiSys",
+    "year": 2025,
+    "abstract": "Superconducting qubits have emerged as leading candidates for realizing quantum computers, which are particularly useful for solving computational problems that are beyond the capabilities of classical supercomputers. The performance of such systems critically depends on the precision and reliability of their control infrastructure. In this paper, we present an overview of state-of-the-art quantum control systems, including both closed- and open-source solutions, and discuss their respective advantages and limitations. While we review both categories, we focus more extensively on open-source control platforms and explore how their flexibility and programmability can support the research community and drive progress in the field. Lastly, we outline several promising research directions in quantum computing infrastructure, including scalable control, high-precision readout, and leakage suppression. We believe that these areas should be prioritized by the community, as they are critical to realizing fault-tolerant quantum computation.",
+    "citation_count": 620,
+    "reference_count": 258,
+    "url": "https://doi.org/10.1145/3711875.3737657",
+    "dblp_key": "conf/mobisys/LeVBXHN25",
+    "source_id": "https://openalex.org/W2969694507"
+  },
+  {
+    "title": "Quantum Methods for Boundary Checking in Classical Programs.",
+    "authors": [
+      "Yicheng Guang",
+      "Pietro Zanotta",
+      "Kai Zhou",
+      "Yueqi Chen 0001",
+      "Ramin Ayanzadeh"
+    ],
+    "venue": "MobiSys",
+    "year": 2025,
+    "abstract": "Molecular simulation is an extremely useful, but computationally very expensive tool for studies of chemical and biomolecular systems. Here, we present a new implementation of our molecular simulation toolkit GROMACS which now both achieves extremely high performance on single processors from algorithmic optimizations and hand-coded routines and simultaneously scales very well on parallel machines. The code encompasses a minimal-communication domain decomposition algorithm, full dynamic load balancing, a state-of-the-art parallel constraint solver, and efficient virtual site algorithms that allow removal of hydrogen atom degrees of freedom to enable integration time steps up to 5 fs for atomistic simulations also in parallel. To improve the scaling properties of the common particle mesh Ewald electrostatics algorithms, we have in addition used a Multiple-Program, Multiple-Data approach, with separate node domains responsible for direct and reciprocal space interactions. Not only does this combination of algorithms enable extremely long simulations of large systems but also it provides that simulation performance on quite modest numbers of standard cluster nodes.",
+    "citation_count": 15957,
+    "reference_count": 31,
+    "url": "https://doi.org/10.1145/3711875.3737656",
+    "dblp_key": "conf/mobisys/GuangZZ0A25",
+    "source_id": "https://openalex.org/W1966078827"
+  }
+]

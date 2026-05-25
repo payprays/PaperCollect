@@ -1,0 +1,470 @@
+[
+  {
+    "title": "ACM CoNEXT Workshop on Edge-Cloud Collaboration with AI (ECCAI 2025).",
+    "authors": [
+      "Jialin Li 0001",
+      "Song Yang 0002"
+    ],
+    "venue": "CoNEXT",
+    "year": 2025,
+    "abstract": "With the rapid advancement of Artificial Intelligence (AI), an increasing number of AI methods are being deployed on the edge for real-time analytics. However, due to the intensive computational demands of many AI workloads, especially limited by resource-constrained edge devices, they often need to be offloaded to the cloud. At the same time, applications with stringent privacy requirements necessitate that data be processed at the edge. This duality introduces new challenges for networking and system design within edge-cloud collaboration. Moreover, AI itself can serve as a powerful enabler to address the complexities of edge-cloud co-deployment, optimizing resource allocation, data flow, and decision-making processes. ECCAI 2025 aims to explore this emerging space: a computing paradigm driven by AI and for AI in intelligent edge-cloud collaboration. Specifically, the workshop investigates:",
+    "citation_count": 0,
+    "reference_count": 0,
+    "url": "https://dblp.org/rec/conf/conext/0001025",
+    "dblp_key": "conf/conext/0001025",
+    "source_id": "https://openalex.org/W4416655230"
+  },
+  {
+    "title": "The Three Faces of Networking.",
+    "authors": [
+      "Ang Chen 0001"
+    ],
+    "venue": "CoNEXT",
+    "year": 2025,
+    "abstract": "We have developed a near-real-time computer system that can locate and track a subject's head, and then recognize the person by comparing characteristics of the face to those of known individuals. The computational approach taken in this system is motivated by both physiology and information theory, as well as by the practical requirements of near-real-time performance and accuracy. Our approach treats the face recognition problem as an intrinsically two-dimensional (2-D) recognition problem rather than requiring recovery of three-dimensional geometry, taking advantage of the fact that faces are normally upright and thus may be described by a small set of 2-D characteristic views. The system functions by projecting face images onto a feature space that spans the significant variations among known face images. The significant features are known as \"eigenfaces,\" because they are the eigenvectors (principal components) of the set of faces; they do not necessarily correspond to features such as eyes, ears, and noses. The projection operation characterizes an individual face by a weighted sum of the eigenface features, and so to recognize a particular face it is necessary only to compare these weights to those of known individuals. Some particular advantages of our approach are that it provides for the ability to learn and later recognize new faces in an unsupervised manner, and that it is easy to implement using a neural network architecture.",
+    "citation_count": 13753,
+    "reference_count": 23,
+    "url": "https://dblp.org/rec/conf/conext/000125",
+    "dblp_key": "conf/conext/000125",
+    "source_id": "https://openalex.org/W2138451337"
+  },
+  {
+    "title": "PN&apos;25: ACM CoNEXT 2025 Workshop on the Polymorphic Network.",
+    "authors": [
+      "Zehua Guo 0001",
+      "Chenren Xu",
+      "Yuxiang Hu"
+    ],
+    "venue": "CoNEXT",
+    "year": 2025,
+    "abstract": null,
+    "citation_count": null,
+    "reference_count": null,
+    "url": "https://dblp.org/rec/conf/conext/0001XH25",
+    "dblp_key": "conf/conext/0001XH25",
+    "source_id": null
+  },
+  {
+    "title": "Poster: Dynamic Path Allocation in Flat Topologies with Pulse.",
+    "authors": [
+      "Federico De Marchi 0002",
+      "Wei Bai 0001",
+      "Yiting Xia"
+    ],
+    "venue": "CoNEXT",
+    "year": 2025,
+    "abstract": "As Data Center Networks (DCNs) shift toward cost-efficient flat designs such as random and expander graphs, traditional load-balancing strategies that saturate all paths often underutilize the network. In flat topologies, links act as both sources and intermediates, making long paths consume increased bandwidth. We introduce Pulse, a dynamic traffic allocation scheme that decouples load balancing from transport and adapts to aggregate communication patterns. By alternating between expansion to underutilized paths and contraction to efficient ones, Pulse matches the performance of MPTCP on an ideal set of paths and outperforms it otherwise.",
+    "citation_count": 0,
+    "reference_count": 7,
+    "url": "https://dblp.org/rec/conf/conext/00020X25",
+    "dblp_key": "conf/conext/00020X25",
+    "source_id": "https://openalex.org/W4416655114"
+  },
+  {
+    "title": "Computing Transformation: From Large Language Model to Agentic AI.",
+    "authors": [
+      "Kun Tan 0003"
+    ],
+    "venue": "CoNEXT",
+    "year": 2025,
+    "abstract": "This talk examines the computing transformation during the era of modern AI revolution. Driven by high computing and bandwidth demand, scale-out datacenter architecture has shifted to scale-up super AI computers. And the evolution of AI models, from dense transformers, to sparse mixture-of-experts, to future agentic AI systems, continuously bring new types of workloads and cast new requirements to computing. Taken together, these render the next-generation accelerated and parallel techniques as well as distributed software designs.",
+    "citation_count": 0,
+    "reference_count": 0,
+    "url": "https://dblp.org/rec/conf/conext/000325",
+    "dblp_key": "conf/conext/000325",
+    "source_id": "https://openalex.org/W4416655211"
+  },
+  {
+    "title": "Poster: Cluster-Aware Federated Caching in Non-IID Environment.",
+    "authors": [
+      "Shinyoung Cho",
+      "Junho Jeong",
+      "Jaeseong Park",
+      "SuKyoung Lee"
+    ],
+    "venue": "CoNEXT",
+    "year": 2025,
+    "abstract": "Federated Learning (FL) has been applied to edge caching, but its performance often degrades under non-IID user request patterns. Therefore, we propose a cluster-aware caching algorithm where the caching space of the edge server is dynamically allocated to each cluster of similar user devices, while highly requested content from all clusters is stored in a shared cache to maximize the hit ratio of edge devices in strongly non-IID scenarios.",
+    "citation_count": 0,
+    "reference_count": 6,
+    "url": "https://dblp.org/rec/conf/conext/ChoJPL25",
+    "dblp_key": "conf/conext/ChoJPL25",
+    "source_id": "https://openalex.org/W4416655198"
+  },
+  {
+    "title": "Poster: Evaluating CAIDA&apos;s Inferred AS Relationships Through ASPAs.",
+    "authors": [
+      "Mauro Farina",
+      "Martino Trevisan",
+      "Alberto Bartoli"
+    ],
+    "venue": "CoNEXT",
+    "year": 2025,
+    "abstract": null,
+    "citation_count": null,
+    "reference_count": null,
+    "url": "https://dblp.org/rec/conf/conext/FarinaTB25",
+    "dblp_key": "conf/conext/FarinaTB25",
+    "source_id": null
+  },
+  {
+    "title": "Poster: KUT: Towards Lightweight On-path Network Assessment for Edge Orchestration.",
+    "authors": [
+      "Wei Geng",
+      "Oguz Kagan Altas",
+      "David Guzman",
+      "Giovanni Bartolomeo",
+      "Nitinder Mohan",
+      "Jörg Ott"
+    ],
+    "venue": "CoNEXT",
+    "year": 2025,
+    "abstract": "Edge computing orchestration faces significant challenges due to resource constraints, highly distributed topologies, and dynamic network conditions. The discrepancy between theoretical and actual runtime performance often leads to suboptimal deployment decisions. This discrepancy is severe in clustered deployments, as existing tools either saturate network links during testing or lack proactive assessment capabilities. None of these approaches accurately predicts service co-locating compatibility in real-world scenarios. We present KUT (Konnectivity Under Test), a lightweight network assessment framework designed specifically for edge environments, combining service-specific traffic simulation with periodical monitoring to provide accurate compatibility assessments without starving co-located services. KUT enables periodic background assessments that inform orchestration decisions while consuming minimal resources.",
+    "citation_count": 0,
+    "reference_count": 5,
+    "url": "https://dblp.org/rec/conf/conext/GengAGBMO25",
+    "dblp_key": "conf/conext/GengAGBMO25",
+    "source_id": "https://openalex.org/W4416655152"
+  },
+  {
+    "title": "Poster: The FAIRer Path Forward: Advancing Research Infrastructures for Unified Reproducibility and Usability.",
+    "authors": [
+      "Eric Hauser",
+      "Kilian Warmuth",
+      "Johannes Späth",
+      "Georg Carle"
+    ],
+    "venue": "CoNEXT",
+    "year": 2025,
+    "abstract": "Artifact evaluation places a significant burden on both authors and reviewers: Authors must package bespoke experimental setups, while committees struggle to validate them. Research Infrastructures (RIs) offer tools to support reproducibility, yet interoperability remains limited due to insufficient standardization efforts.",
+    "citation_count": 0,
+    "reference_count": 6,
+    "url": "https://dblp.org/rec/conf/conext/HauserWSC25",
+    "dblp_key": "conf/conext/HauserWSC25",
+    "source_id": "https://openalex.org/W4416655163"
+  },
+  {
+    "title": "BlockNetSys&apos;25: 1st Workshop on Blockchain-Network Synergy: Addressing Network-Centric Challenges in Decentralized Systems.",
+    "authors": [
+      "Huawei Huang",
+      "Dusit Niyato",
+      "Yi Sun",
+      "Hironori Washizaki"
+    ],
+    "venue": "CoNEXT",
+    "year": 2025,
+    "abstract": null,
+    "citation_count": null,
+    "reference_count": null,
+    "url": "https://dblp.org/rec/conf/conext/HuangNSW25",
+    "dblp_key": "conf/conext/HuangNSW25",
+    "source_id": null
+  },
+  {
+    "title": "Poster: ECN-enabled Congestion Control with Loss Differentiation in Integrated Satellite-Terrestrial Network.",
+    "authors": [
+      "Junho Jeong",
+      "Jaeseong Park",
+      "Shinyoung Cho",
+      "SuKyoung Lee"
+    ],
+    "venue": "CoNEXT",
+    "year": 2025,
+    "abstract": "Integrated Satellite–Terrestrial Network (ISTN) suffers from packet losses caused by handovers and link interference, which conventional congestion control misinterprets as congestion signals and unnecessarily reduces congestion window (cwnd). We propose an Explicit Congestion Notification (ECN)-enabled congestion control mechanism with a Bayesian loss differentiation model that uses round-trip time (RTT) deviation and ECN-marked acknowledgements to identify congestion-induced losses.",
+    "citation_count": 0,
+    "reference_count": 5,
+    "url": "https://dblp.org/rec/conf/conext/JeongPCL25",
+    "dblp_key": "conf/conext/JeongPCL25",
+    "source_id": "https://openalex.org/W4416655148"
+  },
+  {
+    "title": "Poster: Towards Autonomous Airborne Self-Calibration of Ultra-Wideband-Based Industrial Cyber-Physical Systems.",
+    "authors": [
+      "Heiko Johannsen",
+      "Oliver Petrovic",
+      "Christian Brecher"
+    ],
+    "venue": "CoNEXT",
+    "year": 2025,
+    "abstract": "Ultra-wideband delivers superior indoor localization accuracy and is emerging as the nexus of modern industrial cyber-physical systems, catalyzing location-aware intelligence, rapid shop-floor reconfiguration, and real-time closed-loop motion control for mobile robotics. However, prevailing self-calibration approaches consistently fail when confronted with the demanding realities of industrial deployment, rendering theoretically sound methods operationally infeasible. We present an autonomous airborne self-calibration framework that seamlessly unifies network-geometry recovery and site-datum registration, realizing zero-skill staging, one-time drop-in deployment, zero-touch recalibration, and plant-scale operation.",
+    "citation_count": 0,
+    "reference_count": 4,
+    "url": "https://dblp.org/rec/conf/conext/JohannsenPB25",
+    "dblp_key": "conf/conext/JohannsenPB25",
+    "source_id": "https://openalex.org/W4416655134"
+  },
+  {
+    "title": "Poster: Intent-Aware and LLM-Empowered Automatic Sampling Optimization for In-band Network Telemetry.",
+    "authors": [
+      "Heewon Kim",
+      "Chanbin Bae",
+      "Junkyu Hong",
+      "Hwimo Ku",
+      "Sangheon Pack"
+    ],
+    "venue": "CoNEXT",
+    "year": 2025,
+    "abstract": "In-band network telemetry (INT) enables real-time state measurement along the packet path. However, since INT inherently incurs transmission overhead due to its in-packet data insertion, sampling is commonly employed. To manage INT sampling in dynamic network environments without prior knowledge, large language models (LLMs) can be an effective solution due to their remarkable reasoning ability. In this work, we present Auto-INT, an automatic INT system that determines optimal sampling intervals by LLM agents. Auto-INT leverages in-context learning (ICL) of LLMs to infer the sampling interval that satisfies a target accuracy based on the action-reward history. Furthermore, it maintains a long-term memory of evaluated intervals, enabling faster and more accurate decision-making. Finally, Auto-INT interprets high-level operator intents to select an appropriate target accuracy from the trade-off between accuracy and overhead. Through our prototype, we demonstrate that Auto-INT converges to a suitable interval within only a few steps.",
+    "citation_count": 0,
+    "reference_count": 1,
+    "url": "https://dblp.org/rec/conf/conext/KimBHKP25",
+    "dblp_key": "conf/conext/KimBHKP25",
+    "source_id": "https://openalex.org/W4416655206"
+  },
+  {
+    "title": "INet4AI &apos;25: 1st Workshop on Inter-networking challenges for AI.",
+    "authors": [
+      "Dirk Kutscher",
+      "Antoine Fressancourt"
+    ],
+    "venue": "CoNEXT",
+    "year": 2025,
+    "abstract": null,
+    "citation_count": null,
+    "reference_count": null,
+    "url": "https://dblp.org/rec/conf/conext/KutscherF25",
+    "dblp_key": "conf/conext/KutscherF25",
+    "source_id": null
+  },
+  {
+    "title": "Poster: Using the Multifractal Spectrum for Fingerprinting Sets of Observed IP Addresses.",
+    "authors": [
+      "Chris Misa",
+      "Walter Willinger",
+      "Ramakrishnan Durairajan",
+      "Reza Rejaie"
+    ],
+    "venue": "CoNEXT",
+    "year": 2025,
+    "abstract": null,
+    "citation_count": 0,
+    "reference_count": 10,
+    "url": "https://dblp.org/rec/conf/conext/MisaWDR25",
+    "dblp_key": "conf/conext/MisaWDR25",
+    "source_id": "https://openalex.org/W4416655213"
+  },
+  {
+    "title": "Poster: Delay-Bounded Stable Routing in Satellite Networks.",
+    "authors": [
+      "Jaeseong Park",
+      "Junho Jeong",
+      "Shinyoung Cho",
+      "SuKyoung Lee"
+    ],
+    "venue": "CoNEXT",
+    "year": 2025,
+    "abstract": "Low Earth Orbit (LEO) satellite networks suffer from frequent path changes due to satellite mobility, disrupting route stability and increasing control overhead. To address this, we propose a delay-bounded stable routing scheme with an adaptive threshold that reduces route updates while preserving low end-to-end (E2E) delay. Simulation results show about 45% fewer route updates with E2E delay kept within 5% of a traditional shortest-path routing scheme.",
+    "citation_count": 0,
+    "reference_count": 7,
+    "url": "https://dblp.org/rec/conf/conext/ParkJCL25",
+    "dblp_key": "conf/conext/ParkJCL25",
+    "source_id": "https://openalex.org/W4416655203"
+  },
+  {
+    "title": "ACM CoNEXT 2025 Student Workshop (CoNEXT-SW&apos;25): Workshop Summary.",
+    "authors": [
+      "Hannah B. Pasandi",
+      "Shuai Wang 0028"
+    ],
+    "venue": "CoNEXT",
+    "year": 2025,
+    "abstract": "The ACM CoNEXT 2025 Student Workshop (CoNEXT--SW'25) provides a focused venue for early-stage and ambitious research in computer networks and systems. The workshop complements the main conference by giving student authors the opportunity to present developing work in a constructive and technically rigorous setting. CoNEXT--SW'25 emphasizes clarity, reproducibility, and open discussion of methods and evaluation plans. This summary outlines the motivation, structure, and highlights of this year's workshop, which features novel contributions on digital twin synchronization, transport innovations in QUIC, hybrid load balancing, secure time synchronization, and machine learning–driven intrusion detection. Keynote: To be announced.",
+    "citation_count": 0,
+    "reference_count": 0,
+    "url": "https://dblp.org/rec/conf/conext/PasandiW25",
+    "dblp_key": "conf/conext/PasandiW25",
+    "source_id": "9bd33cfedaf4b721560e01f180517663d0ab16c9"
+  },
+  {
+    "title": "Poster: Multi-Path Enabled Scalable Video Streaming.",
+    "authors": [
+      "Yuyang Qin",
+      "Jonghoon Kwon",
+      "Adrian Perrig"
+    ],
+    "venue": "CoNEXT",
+    "year": 2025,
+    "abstract": "Path-Aware Networking enables applications to select network paths based on performance objectives. We present a prototype video-streaming system that integrates Scalable Video Coding with SCION's multi-path routing. Our study highlights both the potential and overhead of a practical multi-path application, offering insights for future multi-path use cases.",
+    "citation_count": 0,
+    "reference_count": 8,
+    "url": "https://dblp.org/rec/conf/conext/QinKP25",
+    "dblp_key": "conf/conext/QinKP25",
+    "source_id": "https://openalex.org/W4416655222"
+  },
+  {
+    "title": "Poster - Reconnaissance via Certificate Transparency Logs: Exposing Self-Hosted Web Applications.",
+    "authors": [
+      "Damiano Ravalico",
+      "Martino Trevisan",
+      "Idilio Drago"
+    ],
+    "venue": "CoNEXT",
+    "year": 2025,
+    "abstract": "Software vulnerabilities in widely deployed, Internet-exposed applications pose a significant threat, but they are only exploited at scale when attackers have a practical way to discover vulnerable instances. One factor that makes such a discovery easier may be Certificate Transparency (CT) logs: although designed to improve trust in digital certificates, they also expose information that attackers could leverage. In this work, we investigate the misuse of CT logs for large-scale reconnaissance of self-hosted web applications. By filtering a single day of CT logs with keywords from 27 popular web applications, we identify over 96000 candidate domains. Crawling these domains reveals a median match rate of 10.9%, with some instances exceeding 20%. Our findings highlight that CT logs can provide attackers with an effective and timely method to identify potentially vulnerable instances of web applications, raising new considerations for Internet-scale security and privacy.",
+    "citation_count": 0,
+    "reference_count": 3,
+    "url": "https://dblp.org/rec/conf/conext/RavalicoTD25",
+    "dblp_key": "conf/conext/RavalicoTD25",
+    "source_id": "https://openalex.org/W4416655167"
+  },
+  {
+    "title": "Achieve Systematic Design with Computing and Network Convergence: CoNEXT CNC Workshop Summary.",
+    "authors": [
+      "Tao Sun 0010",
+      "Tian Pan 0001",
+      "Yau Yau Yolanda Tsang",
+      "Ruifeng Li"
+    ],
+    "venue": "CoNEXT",
+    "year": 2025,
+    "abstract": "With the continuous development of computing and network technology, as well as the technical breakthroughs in artificial intelligence, the systematic design approach with independent optimization of computing and network resources is gradually unable to meet performance requirements. Therefore, computing and network convergence (CNC) has become a hot topic. CNC aims to achieve effective and efficient access to computing power through joint optimization and scheduling of computing and network resources, thereby supporting high-performance systematic design and providing guaranteed service level agreement (SLA). However, the implementation of coordinated design and optimization requires new architecture design and also needs to overcome lots of technical challenges. This workshop tries to bring together of the two fields experts, scholars, and practitioners to explore the direction of CNC technological development and share research progress. This workshop attracted 14 submissions and finally accepted 7 of them.",
+    "citation_count": 0,
+    "reference_count": 0,
+    "url": "https://dblp.org/rec/conf/conext/Sun0TL25",
+    "dblp_key": "conf/conext/Sun0TL25",
+    "source_id": "https://openalex.org/W4416655216"
+  },
+  {
+    "title": "Poster: Towards Efficient and Faithful Underwater Acoustic Network Simulation with Direct Code Execution.",
+    "authors": [
+      "Xun Sun",
+      "Guoliang Weng",
+      "Lizhao You"
+    ],
+    "venue": "CoNEXT",
+    "year": 2025,
+    "abstract": "Underwater acoustic networks are gaining importance across diverse applications, and simulation is a practical way to validate protocol designs given the high cost of real-world deployment. However, existing simulators suffer from low fidelity due to oversimplified abstractions and poor scalability in large networks. In this paper, we present a new simulation approach that executes the actual code designed for embedded Linux devices, thereby ensuring high fidelity. Our method intercepts system calls of real programs and integrates them with a parallel discrete-event simulator for improved efficiency. Preliminary results show that our approach achieves up to 4.8× speedup over abstraction-based simulators for the example ALOHA protocol with 841 nodes.",
+    "citation_count": 0,
+    "reference_count": 6,
+    "url": "https://dblp.org/rec/conf/conext/SunWY25",
+    "dblp_key": "conf/conext/SunWY25",
+    "source_id": "https://openalex.org/W4416655207"
+  },
+  {
+    "title": "Poster: QueuePilot: Towards Adaptive Queue Scheduling via Live Digital Twins.",
+    "authors": [
+      "Francisco Germano Vogt",
+      "Zhiheng Yang",
+      "Victor Hugo Schneider Lopes",
+      "Fabricio Rodriguez",
+      "Marcelo Caggiani Luizelli",
+      "Christian Esteve Rothenberg",
+      "Chrysa Papagianni"
+    ],
+    "venue": "CoNEXT",
+    "year": 2025,
+    "abstract": "Queue management policies strongly influence latency, loss, and fairness, yet production switches often rely on static configurations. Changing policies in the wild is risky, as experiments can disrupt SLAs and queue dynamics are hard to reproduce offline. We present QueuePilot, a digital twin for switch queues that enables safe, traffic-driven evaluation of scheduling and Active Queue Management (AQM) policies. Our prototype, built on two Tofino switches, clones live traffic into the twin, multiplexes it across multiple queueing strategies, and monitors real-time fine-grained metrics. Preliminary results show that QueuePilot can synchronize with the production queues and simultaneously evaluate alternative queuing policies, allowing precise real-time queue management without affecting live traffic.",
+    "citation_count": 0,
+    "reference_count": 4,
+    "url": "https://dblp.org/rec/conf/conext/VogtYLRLRP25",
+    "dblp_key": "conf/conext/VogtYLRLRP25",
+    "source_id": "https://openalex.org/W4416655215"
+  },
+  {
+    "title": "Poster: Reconstructing LLM Training Workloads: A Topology- and Model-aware Network Tester.",
+    "authors": [
+      "Francisco Germano Vogt",
+      "Zhiheng Yang",
+      "Victor Hugo Schneider Lopes",
+      "Fabricio Rodriguez",
+      "Marcelo Caggiani Luizelli",
+      "Christian Esteve Rothenberg",
+      "Chrysa Papagianni"
+    ],
+    "venue": "CoNEXT",
+    "year": 2025,
+    "abstract": "Large Language Model (LLM) training generates synchronized Remote Direct Memory Access (RDMA) bursts that heavily stress datacenter fabrics and are highly sensitive to faults. However, access to full-scale training clusters is costly, and existing network testers fail to accurately reproduce such patterns. We introduce GPTraffic, a topology- and model-aware testing framework that predicts, emulates, and analyzes LLM training workloads on programmable hardware. By combining burst-accurate traffic generation, RDMA-aware semantics, and fine-grained fault injection, GPTraffic enables scalable, realistic, and reproducible experiments that faithfully reflect the dynamics of distributed LLM training. This allows researchers to explore performance bottlenecks, congestion behavior, and fault tolerance under conditions that closely mirror real-world AI training workloads.",
+    "citation_count": 0,
+    "reference_count": 3,
+    "url": "https://dblp.org/rec/conf/conext/VogtYLRLRP25a",
+    "dblp_key": "conf/conext/VogtYLRLRP25a",
+    "source_id": "https://openalex.org/W4416655214"
+  },
+  {
+    "title": "INCAS&apos;25 - Chairs Workshop Summary.",
+    "authors": [
+      "Wenfei Wu",
+      "Xiaoxi Zhang 0001",
+      "Yiran Zhang",
+      "Qingkai Meng 0001"
+    ],
+    "venue": "CoNEXT",
+    "year": 2025,
+    "abstract": "Inaugural lecture [The limits of exact science as applied to history] -- I. The forest children -- II. The dying empire -- Preface to lecture III [On Dr. Latham's 'Germania'] -- III. The human deluge -- IV. The Gothic civilizer -- V. Dietrich's end -- VI. The nemesis of the Goths -- VII. Paulus Diaconus -- VIII. The clergy and the heathen -- IX. The monk a civilizer -- X. The Lombard laws -- XI. The popes and the Lombards -- XII. The stratgey of Providence",
+    "citation_count": 19,
+    "reference_count": 0,
+    "url": "https://dblp.org/rec/conf/conext/Wu0Z025",
+    "dblp_key": "conf/conext/Wu0Z025",
+    "source_id": "https://openalex.org/W1574174711"
+  },
+  {
+    "title": "Poster: When Public Clouds Meet LEO Satellite Networks.",
+    "authors": [
+      "Zhaokun Yang",
+      "Tian Pan 0001",
+      "Guohao Ruan",
+      "Haonan Li",
+      "Yi Liu 0151",
+      "Wenxuan Zhao",
+      "Enge Song",
+      "Tao Huang 0005"
+    ],
+    "venue": "CoNEXT",
+    "year": 2025,
+    "abstract": "The growth of commercial space enables applications such as real-time Earth observation and global edge computing. A natural question arises: can existing public cloud infrastructures be effectively extended to leverage LEO satellite links, providing scalable compute capabilities for satellite data processing and cross-region connectivity? Integrating public clouds with LEO networks, however, presents challenges such as dynamic satellite topologies, session continuity as visible satellites change, limited onboard resources, and underlay complexity for tenant VMs. To address this, we present IrisGW, a cloud gateway architecture enabling seamless cross-region VM communication over topology-varying satellites. Built atop mature cloud virtualization, IrisGW embeds destination locations into VXLAN tunnels for geo-based routing, allowing access satellites to forward packets efficiently. This reduces routing inflation, minimizes on-satellite state, and provides transparent access for tenant VMs. IrisGW demonstrates how public clouds and LEO networks can be coalesced to support robust, planet-scale cloud services.",
+    "citation_count": 0,
+    "reference_count": 17,
+    "url": "https://dblp.org/rec/conf/conext/Yang0RL0ZSH25",
+    "dblp_key": "conf/conext/Yang0RL0ZSH25",
+    "source_id": "https://openalex.org/W4416655205"
+  },
+  {
+    "title": "Poster: Quantifying the Cross-Layer Reliance of DNS on the Submarine Cable Network.",
+    "authors": [
+      "Yanbo Yin",
+      "Yahui Li",
+      "Han Zhang 0009",
+      "Xia Yin 0001",
+      "Shibo Cui",
+      "Xingang Shi",
+      "Qiang Ma",
+      "Zhiliang Wang"
+    ],
+    "venue": "CoNEXT",
+    "year": 2025,
+    "abstract": "The Internet's DNS and physical layers are critically co-dependent, yet this reliance is poorly quantified. We present a global measurement study of DNS reliance on the Submarine Cable Network (SCN). Using a novel geolocation-based inference method validated by physical constraints (speed-of-light), we analyze 12,827 traceroutes from 179 RIPE Atlas probes to root and TLD servers. Our key finding is that DNS reliance on SCN is significant but highly uneven. Root servers exhibit low reliance due to extensive anycast deployment, while TLD reliance varies widely, with Ghana's ccTLD reaching an alarming 92%. This demonstrates that anycast alone does not guarantee physical resilience and highlights critical vulnerabilities in the global DNS infrastructure.",
+    "citation_count": 0,
+    "reference_count": 1,
+    "url": "https://dblp.org/rec/conf/conext/YinLZ0CSMW25",
+    "dblp_key": "conf/conext/YinLZ0CSMW25",
+    "source_id": "https://openalex.org/W4416655158"
+  },
+  {
+    "title": "Poster: Hybrid Differential Privacy for Metadata-Private and Indistinguishable Traffic.",
+    "authors": [
+      "Yichen Zang",
+      "Andreas Theodorou",
+      "Peter Membrey"
+    ],
+    "venue": "CoNEXT",
+    "year": 2025,
+    "abstract": "Encrypted traffic has become the default in modern communication networks, yet its metadata often remains vulnerable to feature-based analysis and classification attacks. To address this, Differential Privacy (DP) based traffic obfuscation has been introduced as a defensive measure. Although it has demonstrated strong privacy guarantees, we observe that it inadvertently introduces distinctive statistical patterns that can themselves be exploited by adversaries, leading to detection or active blocking of the protected traffic. In this paper, we propose a hybrid defense framework that combines macro-level user behavior emulation with micro-level differential privacy mechanisms. At a high level, our system simulates realistic browsing and communication behaviors of ordinary users, while at a granular level, we inject DP-controlled random noise into traffic features. This joint design preserves user privacy without making the resulting flows statistically distinguishable from normal traffic.",
+    "citation_count": 0,
+    "reference_count": 5,
+    "url": "https://dblp.org/rec/conf/conext/ZangTM25",
+    "dblp_key": "conf/conext/ZangTM25",
+    "source_id": "https://openalex.org/W4416655229"
+  },
+  {
+    "title": "Proceedings of the 21st International Conference on emerging Networking EXperiments and Technologies, CoNEXT 2025, Hong Kong, December 1-4, 2025",
+    "authors": [],
+    "venue": "CoNEXT",
+    "year": 2025,
+    "abstract": "Phishing is a major cyber threat to organizations that can cause financial and reputational damage, threatening their existence. The technical measures against phishing should be complemented by awareness training for employees. However, there is little validation of awareness measures. Consequently, organizations have an additional burden when integrating awareness training, as there is no consensus on which method brings the best success. This paper examines how awareness concepts can be successfully implemented and validated. For this purpose, various factors, such as requirements and possible combinations of methods, are taken into account in our case study at a small- and medium-sized enterprise (SME). To measure success, phishing exercises are conducted. The study suggests that pleasant campaigns result in better performance in the simulated phishing exercise. In addition, significant improvements and differences in the target groups could be observed. The implementation of awareness training with integrated key performance indicators can be used as a basis for other organizations.",
+    "citation_count": 8,
+    "reference_count": 27,
+    "url": "https://dblp.org/rec/conf/conext/2025",
+    "dblp_key": "conf/conext/2025",
+    "source_id": "https://openalex.org/W4385713444"
+  }
+]

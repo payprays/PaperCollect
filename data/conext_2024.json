@@ -1,0 +1,300 @@
+[
+  {
+    "title": "Poster: Evaluating Dual-Stack Content Delivery Within Websites.",
+    "authors": [
+      "Florian Dekinder",
+      "Eric Vyncke",
+      "Benoit Donnet"
+    ],
+    "venue": "CoNEXT",
+    "year": 2024,
+    "abstract": "This paper aims at evaluating how content distribution is spread between IPv4 and IPv6 within popular websites. Our measurement tool, based on a headless browser technology, has shown that most websites do not opt forIPv4 or IPv6 alone, but rather for a Mixed infrastructure where both protocols are required. Within this Mixed context, data shows that content delivery through IPv4 is predominant.",
+    "citation_count": 1,
+    "reference_count": 2,
+    "url": "https://dblp.org/rec/conf/conext/DekinderVD24",
+    "dblp_key": "conf/conext/DekinderVD24",
+    "source_id": "https://openalex.org/W4404622162"
+  },
+  {
+    "title": "Privacy Implications of AMQ-Based PQ TLS Authentication.",
+    "authors": [
+      "Dimitri Francolla",
+      "Mia Filic",
+      "Shannon Veitch"
+    ],
+    "venue": "CoNEXT",
+    "year": 2024,
+    "abstract": "During the TLS 1.3 handshake, an entity (e.g., a client application) commonly transmits a chain of certificates and certificates' digital signatures to the remote party to authenticate themselves. Towards a transition to post-quantum TLS, several proposals have been made to switch to post-quantum digital signatures in these certificate chains.",
+    "citation_count": 1,
+    "reference_count": 14,
+    "url": "https://dblp.org/rec/conf/conext/FrancollaFV24",
+    "dblp_key": "conf/conext/FrancollaFV24",
+    "source_id": "https://openalex.org/W4404622129"
+  },
+  {
+    "title": "Stress Testing the DMARC Reporting System: Compliance with Standards and Ways of Improvement.",
+    "authors": [
+      "Olivier Hureau",
+      "Andrzej Duda",
+      "Maciej Korczynski"
+    ],
+    "venue": "CoNEXT",
+    "year": 2024,
+    "abstract": "The DMARC reporting system enables domain name owners to receive failure and aggregate reports from email receivers to get insight into email authentication failures or unauthorized domain usage and take measures against phishing and spoofing attacks. In this paper, we test DMARC reporting of main Email Service Providers (ESPs) and show that most of them do not comply with the RFC specification, especially with respect to the generation of failure reports and external destination verification. We also analyze more than 40,000 DMARC aggregate reports and show that 94.93% of them do not follow the correct report syntax defined in RFC 7489. Finally, we provide recommendations for improving the DMARC reporting strategy.",
+    "citation_count": 0,
+    "reference_count": 16,
+    "url": "https://dblp.org/rec/conf/conext/HureauDK24",
+    "dblp_key": "conf/conext/HureauDK24",
+    "source_id": "https://openalex.org/W4404622154"
+  },
+  {
+    "title": "Poster: Jakiro: Spitting RDMA and TCP over Virtual Private Cloud.",
+    "authors": [
+      "Yirui Liu",
+      "Lidong Jiang",
+      "Deguo Li",
+      "Daxiang Kang",
+      "Zhaoyang Wei",
+      "Yuqi Chai",
+      "Bin Niu",
+      "Ke Lin",
+      "Xiaoning Ding",
+      "Jianwen Pi",
+      "Hao Luo 0013"
+    ],
+    "venue": "CoNEXT",
+    "year": 2024,
+    "abstract": "A Virtual Private Cloud (VPC) that enables both RDMA and TCP provides advantages for both tenants and cloud providers. In this study, we introduce Jakiro, an innovative framework of vNIC design that supports both RDMA and TCP over a unified VPC. Jakiro holds the capability to support fundamental VPC features for both RDMA and TCP streams while maintaining compatibility with applications and intra-host RDMA optimization techniques. Our test results indicate that Jakiro introduces negligible overhead.",
+    "citation_count": 0,
+    "reference_count": 0,
+    "url": "https://dblp.org/rec/conf/conext/LiuJLKWCNLDPL24",
+    "dblp_key": "conf/conext/LiuJLKWCNLDPL24",
+    "source_id": "https://openalex.org/W4404622148"
+  },
+  {
+    "title": "Estimating Video Quality Using Coarse-Grained Features: Insights and Limitations from Gaussian Mixture Models.",
+    "authors": [
+      "Jiamo Liu",
+      "Marcin Waz",
+      "Jae Chung",
+      "Kevin Moslehpour",
+      "David Lerner",
+      "Elizabeth M. Belding"
+    ],
+    "venue": "CoNEXT",
+    "year": 2024,
+    "abstract": "The significant demand for high-quality video streaming, and the wide proliferation of this application in entertainment, education and communication, has created an urgent need for methods that ensure user Quality of Experience (QoE). Traditional approaches for predicting video playback quality have focused on fine-grained network layer features, which can be computationally intensive and require extensive data collection. To reduce the high computation demand and data collection requirements, we propose to use machine learning methods to predict mean video playback bitrate using coarse-grained features derived from real-time packet scheduling priority weights. Although coarse-grained features alone may not always perform optimally due to data ambiguity, they can still enable meaningful predictions in specific contexts. In this work, we investigate the use of coarse-grained features and their ability to predict video streaming QoE. To do so, we introduce a Gaussian Mixture Model (GMM)-based filtering technique to identify regions where the model performs well. Our evaluation shows that while our model initially achieves a 56% macro-average F1 score for the entire dataset, it reaches an 81% macro-average F1 score with the filtered subset of data. This approach highlights the potential of coarse-grained features for accurate QoE estimation by identifying the regions of the dataset where these features possess sufficient discriminative power, thereby enhancing domain knowledge and the trustworthiness of model outputs.",
+    "citation_count": 1,
+    "reference_count": 12,
+    "url": "https://dblp.org/rec/conf/conext/LiuWCMLB24",
+    "dblp_key": "conf/conext/LiuWCMLB24",
+    "source_id": "https://openalex.org/W4404622164"
+  },
+  {
+    "title": "Sustainable Connections: Exploring Energy Efficiency in 5G Networks.",
+    "authors": [
+      "Yibo Ma",
+      "Tong Li 0013",
+      "Yuwei Du",
+      "Schahram Dustdar",
+      "Zhaocheng Wang 0001",
+      "Yong Li 0008"
+    ],
+    "venue": "CoNEXT",
+    "year": 2024,
+    "abstract": "Although 5G networks offer larger capacity due to more antennas and larger bandwidths, their increased energy consumption is concerning. This paper investigates energy consumption issues from widespread 5G deployment using city-scale real-world mobile network data. Our dataset includes traffic volume, energy consumption, and base station attributes spanning May 2022, July 2023, and April 2024, covering over 10,000 4G and 5,000 5G base stations. A portion of the dataset is published on GitHub. We develop high-accuracy models to profile 4G and 5G base station energy consumption, revealing 5G inefficiencies under low traffic loads. We identify energy efficiency traps where network energy efficiency drops post-5G deployment. Our study estimates the recovery time from energy efficiency traps, emphasizes that different functional regions have varying recovery levels, and analyzes the reasons for these differences. We provide recommendations for deploying and commercializing 5G to promote sustainable connectivity.",
+    "citation_count": 2,
+    "reference_count": 17,
+    "url": "https://dblp.org/rec/conf/conext/MaLDD0024",
+    "dblp_key": "conf/conext/MaLDD0024",
+    "source_id": "https://openalex.org/W4404622176"
+  },
+  {
+    "title": "iGuard: Efficient Isolation Forest Design for Malicious Traffic Detection in Programmable Switches.",
+    "authors": [
+      "Sankalp Mittal",
+      "Harikrishnan V.",
+      "Heetkumar Patel",
+      "Praveen Tammana"
+    ],
+    "venue": "CoNEXT",
+    "year": 2024,
+    "abstract": null,
+    "citation_count": 3,
+    "reference_count": 20,
+    "url": "https://dblp.org/rec/conf/conext/MittalVHT24",
+    "dblp_key": "conf/conext/MittalVHT24",
+    "source_id": "https://openalex.org/W4404622134"
+  },
+  {
+    "title": "Poster: Reducing Data Movement Tax for Serialization in Microservices.",
+    "authors": [
+      "Siddharth Nayak",
+      "Vishesh Rangwani",
+      "Kartikay Dubey",
+      "Rajorshi Mondal",
+      "Tushar Gupta",
+      "Rinku Shah"
+    ],
+    "venue": "CoNEXT",
+    "year": 2024,
+    "abstract": "Small-scale public cloud providers cannot adopt serialization data-copy optimizations that leverage hardware acceleration or kernel-bypass zero-copy paradigm (e.g., DPDK) because of (1) accelerator deployment costs, (2) securing kernel-bypass zero-copy serialization communication relies on encryption at the NIC hardware, and (3) kernel-bypass solutions require developers to rewrite the business logic. We propose a serialization library that leverages the kernel scatter-gather communication primitives to reduce serialization data copy costs without using custom hardware or a custom network stack.",
+    "citation_count": 0,
+    "reference_count": 3,
+    "url": "https://dblp.org/rec/conf/conext/NayakRDMGS24",
+    "dblp_key": "conf/conext/NayakRDMGS24",
+    "source_id": "https://openalex.org/W4404622130"
+  },
+  {
+    "title": "Poster: Pushing RDMA into Milliseconds RTT Communication.",
+    "authors": [
+      "Jisu Ok",
+      "Wonsup Yoon",
+      "Sue Moon"
+    ],
+    "venue": "CoNEXT",
+    "year": 2024,
+    "abstract": "Thanks to its high performance and efficiency, RDMA has become an essential networking primitive in today's datacenter. However, existing RDMA-based systems mainly focus on accelerating data communication of endpoints away from each other in tens or hundreds of microseconds RTT. This paper aims to address the following question: How far can RDMA be employed without losing its performance and efficiency merit? We present our methodology and analysis to study the potential of RDMA networking over a millisecond-scale RTT path.",
+    "citation_count": 0,
+    "reference_count": 0,
+    "url": "https://dblp.org/rec/conf/conext/OkYM24",
+    "dblp_key": "conf/conext/OkYM24",
+    "source_id": "https://openalex.org/W4404622254"
+  },
+  {
+    "title": "SONIC:  Connect the Unconnected via FM Radio &amp; SMS.",
+    "authors": [
+      "Ayush Pandey 0002",
+      "Rohail Asim",
+      "Khalid Mengal",
+      "Matteo Varvello",
+      "Yasir Zaki"
+    ],
+    "venue": "CoNEXT",
+    "year": 2024,
+    "abstract": "As of 2022, about 2.78 billion people in developing countries do not have access to the Internet. Lack of Internet access hinders economic growth, educational opportunities, and access to information and services. Recent initiatives to \"connect the unconnected\" have either failed (project Loon and Aquila) or are characterized by exorbitant costs (Starlink and similar), which are unsustainable for users in developing regions. This paper proposes SONIC, a novel connectivity solution that repurposes a widespread communication infrastructure (AM/FM radio) to deliver access to pre-rendered webpages. Our rationale is threefold: 1) the radio network is widely accessible -- currently reaching 70% of the world -- even in developing countries, 2) unused frequencies are highly available, 3) while data over sound can be slow, when combined with the radio network, it takes advantage of its broadcast nature, efficiently reaching a large number of users. We have designed and built a proof-of-concept for SONIC, which shows encouraging initial results.",
+    "citation_count": 1,
+    "reference_count": 19,
+    "url": "https://dblp.org/rec/conf/conext/PandeyAMVZ24",
+    "dblp_key": "conf/conext/PandeyAMVZ24",
+    "source_id": "https://openalex.org/W4404622174"
+  },
+  {
+    "title": "Poster: Distance Vector Routing for Named Data Networking.",
+    "authors": [
+      "Varun Patil",
+      "Sirapop Theeranantachai",
+      "Beichuan Zhang 0001",
+      "Lixia Zhang 0001"
+    ],
+    "venue": "CoNEXT",
+    "year": 2024,
+    "abstract": "Although Distance Vector (DV) routing protocols can have a simple design and low overhead, they bear a bad reputation for undesired behavior: routing updates may \"count to infinity\" after node or link failures, which result in packet looping in the data plane. Since Named Data Networking (NDN) has a stateful data plane that can detect and mitigate packet loops, we design a DV routing protocol over NDN, ndn-dv, and demonstrate that an NDN network running ndn-dv can prevent traffic disruptions in the face of dynamic network topology changes due to failures.",
+    "citation_count": 2,
+    "reference_count": 3,
+    "url": "https://dblp.org/rec/conf/conext/PatilT0024",
+    "dblp_key": "conf/conext/PatilT0024",
+    "source_id": "https://openalex.org/W4404622141"
+  },
+  {
+    "title": "Poster: GeoResolver, An Accurate, Scalable, and Explainable Geolocation Technique Using DNS Redirection.",
+    "authors": [
+      "Hugo Rimlinger",
+      "Kevin Vermeulen",
+      "Olivier Fourmaux",
+      "Timur Friedman"
+    ],
+    "venue": "CoNEXT",
+    "year": 2024,
+    "abstract": "Obtaining an accurate, explainable, Internet-scale IP geolocation dataset has been a longstanding goal of the research community. Despite decades of research on IP geolocation, no current technique can provide such a dataset. In particular, latency-based geolocation techniques do not scale, because, on one hand, we have thousands of available vantage points to perform measurements, but on the other hand, we have no way to select the right ones for each IP address. In this paper, we present GeoResolver, an efficient vantage point selection methodology, based on the assumption that two IP addresses that share a similar DNS redirection are likely to be geographically close together. GeoResolver performs nearly as well as a brute force approach using all the vantage points, geolocating 94% of the targets that could actually be geolocated at metro level by using all the vantage points, while using 4.3% of the probing budget compared to a state-of-the-art technique. We carefully design GeoResolver to be both accurate and scalable and with our implementation, we start a large-scale geolocation campaign.",
+    "citation_count": 1,
+    "reference_count": 4,
+    "url": "https://dblp.org/rec/conf/conext/RimlingerVFF24",
+    "dblp_key": "conf/conext/RimlingerVFF24",
+    "source_id": "https://openalex.org/W4404622251"
+  },
+  {
+    "title": "Poster: Intelligent Network Management: RAG-Enhanced LLMs for Log Analysis, Troubleshooting, and Documentation.",
+    "authors": [
+      "Shaghayegh Shajarian",
+      "Sajad Khorsandroo",
+      "Mahmoud Abdelsalam"
+    ],
+    "venue": "CoNEXT",
+    "year": 2024,
+    "abstract": null,
+    "citation_count": 3,
+    "reference_count": 2,
+    "url": "https://dblp.org/rec/conf/conext/ShajarianKA24",
+    "dblp_key": "conf/conext/ShajarianKA24",
+    "source_id": "https://openalex.org/W4404622131"
+  },
+  {
+    "title": "A First View of Topics API Usage in the Wild.",
+    "authors": [
+      "Alberto Verna",
+      "Nikhil Jha",
+      "Martino Trevisan",
+      "Marco Mellia"
+    ],
+    "venue": "CoNEXT",
+    "year": 2024,
+    "abstract": "Among several proposals for a privacy-preserving replacement of third-party cookies, Google's new Topics API is widely discussed as a possible solution. Some scepticism still lingers on the new paradigm from researchers and control bodies; however, the industry has started deploying and testing it. This paper measures the current usage of the Topics API in the wild, discovering third parties that started enabling it, the practices they adopt and their interplay with privacy policies and consent acquisition mechanisms.",
+    "citation_count": 2,
+    "reference_count": 14,
+    "url": "https://dblp.org/rec/conf/conext/VernaJTM24",
+    "dblp_key": "conf/conext/VernaJTM24",
+    "source_id": "https://openalex.org/W4404622277"
+  },
+  {
+    "title": "Poster: Towards In-Network Resource Scaling of VNFs.",
+    "authors": [
+      "Francisco Germano Vogt",
+      "Fabricio Rodriguez",
+      "Marcelo Caggiani Luizelli",
+      "Christian Esteve Rothenberg"
+    ],
+    "venue": "CoNEXT",
+    "year": 2024,
+    "abstract": "Intra-server resource orchestration is becoming increasingly challenging. Modern server architectures are now composed of multiple computing units, such as CPUs and DPUs. VNFs should be appropriately provisioned between these computing units, avoiding performance degradation and optimizing server resources. In this work, we introduce In-Network Resource Allocation (InReal), a system to orchestrate containerized VNFs. InReal can provision and manage VNF resources, optimizing CPU usage and enhancing power efficiency while meeting VNF performance requirements.",
+    "citation_count": 2,
+    "reference_count": 0,
+    "url": "https://dblp.org/rec/conf/conext/VogtRLR24",
+    "dblp_key": "conf/conext/VogtRLR24",
+    "source_id": "https://openalex.org/W4404622146"
+  },
+  {
+    "title": "NR-Scope: A Practical 5G Standalone Telemetry Tool.",
+    "authors": [
+      "Haoran Wan",
+      "Xuyang Cao",
+      "Alexander Marder",
+      "Kyle Jamieson"
+    ],
+    "venue": "CoNEXT",
+    "year": 2024,
+    "abstract": null,
+    "citation_count": 10,
+    "reference_count": 18,
+    "url": "https://dblp.org/rec/conf/conext/WanCMJ24",
+    "dblp_key": "conf/conext/WanCMJ24",
+    "source_id": "https://openalex.org/W4404622126"
+  },
+  {
+    "title": "Proceedings of the 20th International Conference on emerging Networking EXperiments and Technologies, CoNEXT 2024 (Short Papers), Los Angeles, CA, USA, December 9-12, 2024",
+    "authors": [
+      "Vijay Gopalakrishnan",
+      "Jia Wang 0001",
+      "Ihsan Ayyub Qazi",
+      "Gareth Tyson"
+    ],
+    "venue": "CoNEXT",
+    "year": 2024,
+    "abstract": "Network monitoring is becoming increasingly challenging as networks grow in scale, speed, and complexity. The evolution of monitoring approaches reflects a shift from device-centric, localized techniques toward network-wide observability enabled by modern networking paradigms. Early methods like SNMP polling and NetFlow provided basic insights but struggled with real-time visibility in large, dynamic environments. The emergence of Software-Defined Networking (SDN) introduced centralized control and a global view of network state, opening the door to more coordinated and programmable measurement strategies. More recently, programmable data planes (e.g., P4-based switches) and in-band telemetry frameworks have allowed fine grained, line rate data collection directly from traffic, reducing overhead and latency compared to traditional polling. These developments mark a move away from single point or per flow analysis toward holistic monitoring woven throughout the network fabric. In this survey, we systematically review the state of the art in network-wide monitoring. We define key concepts (topologies, flows, telemetry, observability) and trace the progression of monitoring architectures from traditional networks to SDN to fully programmable networks. We introduce a taxonomy spanning local device measures, path level techniques, global network-wide methods, and hybrid approaches. Finally, we summarize open research challenges and future directions, highlighting that modern networks demand monitoring frameworks that are not only scalable and real-time but also tightly integrated with network control and automation.",
+    "citation_count": 4,
+    "reference_count": 60,
+    "url": "https://dblp.org/rec/conf/conext/2024",
+    "dblp_key": "conf/conext/2024",
+    "source_id": "https://openalex.org/W4414246837"
+  }
+]

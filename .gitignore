@@ -10,7 +10,11 @@ wheels/
 .venv
 
 # data
-/data/
+/data/*
+!/data/
+!/data/*.json
+/data/embeddings.pkl
+/data/*.tmp
 
 # IDEs and editors
 .vscode/

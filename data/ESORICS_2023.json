@@ -1,0 +1,1623 @@
+[
+  {
+    "title": "Arithmetic Circuit Implementations of S-boxes for SKINNY and PHOTON in MPC.",
+    "authors": [
+      "Aysajan Abidin",
+      "Erik Pohle",
+      "Bart Preneel"
+    ],
+    "venue": "ESORICS",
+    "year": 2023,
+    "abstract": null,
+    "citation_count": 2,
+    "reference_count": 30,
+    "url": "https://dblp.org/rec/conf/esorics/AbidinPP23",
+    "dblp_key": "conf/esorics/AbidinPP23",
+    "source_id": "https://openalex.org/W4390747456"
+  },
+  {
+    "title": "Efficient Pruning for Machine Learning Under Homomorphic Encryption.",
+    "authors": [
+      "Ehud Aharoni",
+      "Moran Baruch",
+      "Pradip Bose",
+      "Alper Buyuktosunoglu",
+      "Nir Drucker",
+      "Subhankar Pal",
+      "Tomer Pelleg",
+      "Kanthi K. Sarpatwar",
+      "Hayim Shaul",
+      "Omri Soceanu",
+      "Roman Vaculín"
+    ],
+    "venue": "ESORICS",
+    "year": 2023,
+    "abstract": "Privacy-preserving machine learning (PPML) solutions are gaining widespread popularity. Among these, many rely on homomorphic encryption (HE) that offers confidentiality of the model and the data, but at the cost of large latency and memory requirements. Pruning neural network (NN) parameters improves latency and memory in plaintext ML but has little impact if directly applied to HE-based PPML. We introduce a framework called HE-PEx that comprises new pruning methods, on top of a packing technique called tile tensors, for reducing the latency and memory of PPML inference. HE-PEx uses permutations to prune additional ciphertexts, and expansion to recover inference loss. We demonstrate the effectiveness of our methods for pruning fully-connected and convolutional layers in NNs on PPML tasks, namely, image compression, denoising, and classification, with autoencoders, multilayer perceptrons (MLPs) and convolutional neural networks (CNNs). We implement and deploy our networks atop a framework called HElayers, which shows a 10-35% improvement in inference speed and a 17-35% decrease in memory requirement over the unpruned network, corresponding to 33-65% fewer ciphertexts, within a 2.5% degradation in inference accuracy over the unpruned network. Compared to the state-of-the-art pruning technique for PPML, our techniques generate networks with 70% fewer ciphertexts, on average, for the same degradation limit.",
+    "citation_count": 4,
+    "reference_count": 44,
+    "url": "https://dblp.org/rec/conf/esorics/AharoniBBBDPPSSSV23",
+    "dblp_key": "conf/esorics/AharoniBBBDPPSSSV23",
+    "source_id": "https://openalex.org/W4284963279"
+  },
+  {
+    "title": "Cheap and Fast Iterative Matrix Inverse in Encrypted Domain.",
+    "authors": [
+      "Tae Min Ahn",
+      "Kang Hoon Lee",
+      "Joon Soo Yoo",
+      "Ji Won Yoon 0001"
+    ],
+    "venue": "ESORICS",
+    "year": 2023,
+    "abstract": null,
+    "citation_count": 2,
+    "reference_count": 13,
+    "url": "https://dblp.org/rec/conf/esorics/AhnLYY23",
+    "dblp_key": "conf/esorics/AhnLYY23",
+    "source_id": "https://openalex.org/W4390747505"
+  },
+  {
+    "title": "A Practical TFHE-Based Multi-Key Homomorphic Encryption with Linear Complexity and Low Noise Growth.",
+    "authors": [
+      "Yavuz Akin",
+      "Jakub Klemsa",
+      "Melek Önen"
+    ],
+    "venue": "ESORICS",
+    "year": 2023,
+    "abstract": null,
+    "citation_count": 8,
+    "reference_count": 21,
+    "url": "https://dblp.org/rec/conf/esorics/AkinKO23",
+    "dblp_key": "conf/esorics/AkinKO23",
+    "source_id": "https://openalex.org/W4390741759"
+  },
+  {
+    "title": "SoK: A Tale of Reduction, Security, and Correctness - Evaluating Program Debloating Paradigms and Their Compositions.",
+    "authors": [
+      "Muaz Ali",
+      "Muhammad Muzammil",
+      "M. Faraz Karim",
+      "Ayesha Naeem",
+      "Rukhshan Haroon",
+      "Muhammad Haris",
+      "Huzaifah Nadeem",
+      "Waseem Sabir",
+      "Fahad Shaon",
+      "Fareed Zaffar",
+      "Vinod Yegneswaran",
+      "Ashish Gehani",
+      "Sazzadur Rahaman"
+    ],
+    "venue": "ESORICS",
+    "year": 2023,
+    "abstract": null,
+    "citation_count": 5,
+    "reference_count": 41,
+    "url": "https://dblp.org/rec/conf/esorics/AliMKNHHNSSZYGR23",
+    "dblp_key": "conf/esorics/AliMKNHHNSSZYGR23",
+    "source_id": "https://openalex.org/W4390699851"
+  },
+  {
+    "title": "Deniable Cryptosystems: Simpler Constructions and Achieving Leakage Resilience.",
+    "authors": [
+      "Zhiyuan An",
+      "Haibo Tian",
+      "Chao Chen 0036",
+      "Fangguo Zhang"
+    ],
+    "venue": "ESORICS",
+    "year": 2023,
+    "abstract": null,
+    "citation_count": 3,
+    "reference_count": 33,
+    "url": "https://dblp.org/rec/conf/esorics/AnTCZ23",
+    "dblp_key": "conf/esorics/AnTCZ23",
+    "source_id": "https://openalex.org/W4390748690"
+  },
+  {
+    "title": "An Ultra-High Throughput AES-Based Authenticated Encryption Scheme for 6G: Design and Implementation.",
+    "authors": [
+      "Ravi Anand",
+      "Subhadeep Banik",
+      "Andrea Caforio",
+      "Kazuhide Fukushima",
+      "Takanori Isobe 0001",
+      "Shinsaku Kiyomoto",
+      "Fukang Liu",
+      "Yuto Nakano",
+      "Kosei Sakamoto",
+      "Nobuyuki Takeuchi"
+    ],
+    "venue": "ESORICS",
+    "year": 2023,
+    "abstract": null,
+    "citation_count": 6,
+    "reference_count": 15,
+    "url": "https://dblp.org/rec/conf/esorics/AnandBCFIKLNST23",
+    "dblp_key": "conf/esorics/AnandBCFIKLNST23",
+    "source_id": "https://openalex.org/W4390741727"
+  },
+  {
+    "title": "Peering into the Darkness: The Use of UTRS in Combating DDoS Attacks.",
+    "authors": [
+      "Radu Anghel",
+      "Swaathi Vetrivel",
+      "Elsa Turcios Rodriguez",
+      "Kaichi Sameshima",
+      "Daisuke Makita",
+      "Katsunari Yoshioka",
+      "Carlos Gañán",
+      "Yury Zhauniarovich"
+    ],
+    "venue": "ESORICS",
+    "year": 2023,
+    "abstract": null,
+    "citation_count": 1,
+    "reference_count": 16,
+    "url": "https://dblp.org/rec/conf/esorics/AnghelVRSMYGZ23",
+    "dblp_key": "conf/esorics/AnghelVRSMYGZ23",
+    "source_id": "https://openalex.org/W4390698010"
+  },
+  {
+    "title": "Towards a Privacy-Preserving Attestation for Virtualized Networks.",
+    "authors": [
+      "Ghada Arfaoui",
+      "Thibaut Jacques",
+      "Marc Lacoste",
+      "Cristina Onete",
+      "Léo Robert"
+    ],
+    "venue": "ESORICS",
+    "year": 2023,
+    "abstract": null,
+    "citation_count": 1,
+    "reference_count": 16,
+    "url": "https://dblp.org/rec/conf/esorics/ArfaouiJLOR23",
+    "dblp_key": "conf/esorics/ArfaouiJLOR23",
+    "source_id": "https://openalex.org/W4387722951"
+  },
+  {
+    "title": "Tactics for Account Access Graphs.",
+    "authors": [
+      "Luca Arnaboldi 0001",
+      "David Aspinall 0001",
+      "Christina Kolb",
+      "Sasa Radomirovic"
+    ],
+    "venue": "ESORICS",
+    "year": 2023,
+    "abstract": null,
+    "citation_count": 1,
+    "reference_count": 12,
+    "url": "https://dblp.org/rec/conf/esorics/ArnaboldiAKR23",
+    "dblp_key": "conf/esorics/ArnaboldiAKR23",
+    "source_id": "https://openalex.org/W4390747011"
+  },
+  {
+    "title": "Layered Symbolic Security Analysis in $\\textsf {DY}\\star $.",
+    "authors": [
+      "Karthikeyan Bhargavan",
+      "Abhishek Bichhawat",
+      "Pedram Hosseyni",
+      "Ralf Küsters",
+      "Klaas Pruiksma",
+      "Guido Schmitz",
+      "Clara Waldmann",
+      "Tim Würtele"
+    ],
+    "venue": "ESORICS",
+    "year": 2023,
+    "abstract": null,
+    "citation_count": 0,
+    "reference_count": 34,
+    "url": "https://dblp.org/rec/conf/esorics/BhargavanBHKPSWW23",
+    "dblp_key": "conf/esorics/BhargavanBHKPSWW23",
+    "source_id": "https://openalex.org/W4390742546"
+  },
+  {
+    "title": "Fingerprinting of Cellular Infrastructure Based on Broadcast Information.",
+    "authors": [
+      "Anup Kiran Bhattacharjee",
+      "Stefano Cecconello",
+      "Fernando Kuipers",
+      "Georgios Smaragdakis"
+    ],
+    "venue": "ESORICS",
+    "year": 2023,
+    "abstract": null,
+    "citation_count": 2,
+    "reference_count": 19,
+    "url": "https://dblp.org/rec/conf/esorics/BhattacharjeeCKS23",
+    "dblp_key": "conf/esorics/BhattacharjeeCKS23",
+    "source_id": "https://openalex.org/W4390698129"
+  },
+  {
+    "title": "Malware Classification Using Open Set Recognition and HTTP Protocol Requests.",
+    "authors": [
+      "Piotr Bialczak",
+      "Wojciech Mazurczyk"
+    ],
+    "venue": "ESORICS",
+    "year": 2023,
+    "abstract": null,
+    "citation_count": 0,
+    "reference_count": 37,
+    "url": "https://dblp.org/rec/conf/esorics/BialczakM23",
+    "dblp_key": "conf/esorics/BialczakM23",
+    "source_id": "https://openalex.org/W4390700167"
+  },
+  {
+    "title": "Sequential Half-Aggregation of Lattice-Based Signatures.",
+    "authors": [
+      "Katharina Boudgoust",
+      "Akira Takahashi 0002"
+    ],
+    "venue": "ESORICS",
+    "year": 2023,
+    "abstract": null,
+    "citation_count": 11,
+    "reference_count": 39,
+    "url": "https://dblp.org/rec/conf/esorics/BoudgoustT23",
+    "dblp_key": "conf/esorics/BoudgoustT23",
+    "source_id": "https://openalex.org/W4390748839"
+  },
+  {
+    "title": "Identity-Based Matchmaking Encryption with Enhanced Privacy - A Generic Construction with Practical Instantiations.",
+    "authors": [
+      "Xavier Boyen",
+      "Qinyi Li"
+    ],
+    "venue": "ESORICS",
+    "year": 2023,
+    "abstract": null,
+    "citation_count": 8,
+    "reference_count": 22,
+    "url": "https://dblp.org/rec/conf/esorics/BoyenL23",
+    "dblp_key": "conf/esorics/BoyenL23",
+    "source_id": "https://openalex.org/W4390700182"
+  },
+  {
+    "title": "Covercrypt: An Efficient Early-Abort KEM for Hidden Access Policies with Traceability from the DDH and LWE.",
+    "authors": [
+      "Théophile Brézot",
+      "Paola de Perthuis",
+      "David Pointcheval"
+    ],
+    "venue": "ESORICS",
+    "year": 2023,
+    "abstract": null,
+    "citation_count": 1,
+    "reference_count": 14,
+    "url": "https://dblp.org/rec/conf/esorics/BrezotPP23",
+    "dblp_key": "conf/esorics/BrezotPP23",
+    "source_id": "https://openalex.org/W4390747696"
+  },
+  {
+    "title": "ResolFuzz: Differential Fuzzing of DNS Resolvers.",
+    "authors": [
+      "Jonas Bushart",
+      "Christian Rossow"
+    ],
+    "venue": "ESORICS",
+    "year": 2023,
+    "abstract": null,
+    "citation_count": 3,
+    "reference_count": 15,
+    "url": "https://dblp.org/rec/conf/esorics/BushartR23",
+    "dblp_key": "conf/esorics/BushartR23",
+    "source_id": "https://openalex.org/W4390700561"
+  },
+  {
+    "title": "Committed Private Information Retrieval.",
+    "authors": [
+      "Quang Cao",
+      "Hong-Yen Tran",
+      "Son Hoang Dau",
+      "Xun Yi",
+      "Emanuele Viterbo",
+      "Chen Feng 0001",
+      "Yu-Chih Huang",
+      "Jingge Zhu",
+      "Stanislav Kruglik",
+      "Han Mao Kiah"
+    ],
+    "venue": "ESORICS",
+    "year": 2023,
+    "abstract": "A private information retrieval (PIR) scheme allows a client to retrieve a data item $x_i$ among $n$ items $x_1,x_2,\\ldots,x_n$ from $k$ servers, without revealing what $i$ is even when $t < k$ servers collude and try to learn $i$. Such a PIR scheme is said to be $t$-private. A PIR scheme is $v$-verifiable if the client can verify the correctness of the retrieved $x_i$ even when $v \\leq k$ servers collude and try to fool the client by sending manipulated data. Most of the previous works in the literature on PIR assumed that $v < k$, leaving the case of all-colluding servers open. We propose a generic construction that combines a linear map commitment (LMC) and an arbitrary linear PIR scheme to produce a $k$-verifiable PIR scheme, termed a committed PIR scheme. Such a scheme guarantees that even in the worst scenario, when all servers are under the control of an attacker, although the privacy is unavoidably lost, the client won't be fooled into accepting an incorrect $x_i$. We demonstrate the practicality of our proposal by implementing the committed PIR schemes based on the Lai-Malavolta LMC and three well-known PIR schemes using the GMP library and blst, the current fastest C library for elliptic curve pairings.",
+    "citation_count": 3,
+    "reference_count": 19,
+    "url": "https://dblp.org/rec/conf/esorics/CaoTDYVFHZKK23",
+    "dblp_key": "conf/esorics/CaoTDYVFHZKK23",
+    "source_id": "https://openalex.org/W4390741694"
+  },
+  {
+    "title": "PrivMail: A Privacy-Preserving Framework for Secure Emails.",
+    "authors": [
+      "Gowri R. Chandran",
+      "Raine Nieminen",
+      "Thomas Schneider 0003",
+      "Ajith Suresh"
+    ],
+    "venue": "ESORICS",
+    "year": 2023,
+    "abstract": null,
+    "citation_count": 5,
+    "reference_count": 32,
+    "url": "https://dblp.org/rec/conf/esorics/ChandranNSS23",
+    "dblp_key": "conf/esorics/ChandranNSS23",
+    "source_id": "https://openalex.org/W4390700247"
+  },
+  {
+    "title": "DScope: To Reliably and Securely Acquire Live Data from Kernel-Compromised ARM Devices.",
+    "authors": [
+      "Zhe Chen",
+      "Haiqing Qiu",
+      "Xuhua Ding"
+    ],
+    "venue": "ESORICS",
+    "year": 2023,
+    "abstract": null,
+    "citation_count": 1,
+    "reference_count": 30,
+    "url": "https://dblp.org/rec/conf/esorics/ChenQD23",
+    "dblp_key": "conf/esorics/ChenQD23",
+    "source_id": "https://openalex.org/W4390699703"
+  },
+  {
+    "title": "Tamarin-Based Analysis of Bluetooth Uncovers Two Practical Pairing Confusion Attacks.",
+    "authors": [
+      "Tristan Claverie",
+      "Gildas Avoine",
+      "Stéphanie Delaune",
+      "José Lopes-Esteves"
+    ],
+    "venue": "ESORICS",
+    "year": 2023,
+    "abstract": null,
+    "citation_count": 5,
+    "reference_count": 28,
+    "url": "https://dblp.org/rec/conf/esorics/ClaverieADL23",
+    "dblp_key": "conf/esorics/ClaverieADL23",
+    "source_id": "https://openalex.org/W4390742529"
+  },
+  {
+    "title": "ConGISATA: A Framework for Continuous Gamified Information Security Awareness Training and Assessment.",
+    "authors": [
+      "Ofir Cohen",
+      "Ron Bitton",
+      "Asaf Shabtai",
+      "Rami Puzis"
+    ],
+    "venue": "ESORICS",
+    "year": 2023,
+    "abstract": null,
+    "citation_count": 0,
+    "reference_count": 27,
+    "url": "https://dblp.org/rec/conf/esorics/CohenBSP23",
+    "dblp_key": "conf/esorics/CohenBSP23",
+    "source_id": "https://openalex.org/W4390746771"
+  },
+  {
+    "title": "Accessorize in the Dark: A Security Analysis of Near-Infrared Face Recognition.",
+    "authors": [
+      "Amit Cohen",
+      "Mahmood Sharif"
+    ],
+    "venue": "ESORICS",
+    "year": 2023,
+    "abstract": null,
+    "citation_count": 1,
+    "reference_count": 39,
+    "url": "https://dblp.org/rec/conf/esorics/CohenS23",
+    "dblp_key": "conf/esorics/CohenS23",
+    "source_id": "https://openalex.org/W4390776708"
+  },
+  {
+    "title": "Panini - Anonymous Anycast and an Instantiation.",
+    "authors": [
+      "Christoph Coijanovic",
+      "Christiane Weis",
+      "Thorsten Strufe"
+    ],
+    "venue": "ESORICS",
+    "year": 2023,
+    "abstract": "Anycast messaging (i.e., sending a message to an unspecified receiver) has long been neglected by the anonymous communication community. An anonymous anycast prevents senders from learning who the receiver of their message is, allowing for greater privacy in areas such as political activism and whistleblowing. While there have been some protocol ideas proposed, formal treatment of the problem is absent. Formal definitions of what constitutes anonymous anycast and privacy in this context are however a requirement for constructing protocols with provable guarantees. In this work, we define the anycast functionality and use a game-based approach to formalize its privacy and security goals. We further propose Panini, the first anonymous anycast protocol that only requires readily available infrastructure. We show that Panini allows the actual receiver of the anycast message to remain anonymous, even in the presence of an honest but curious sender. In an empirical evaluation, we find that Panini adds only minimal overhead over regular unicast: Sending a message anonymously to one of eight possible receivers results in an end-to-end latency of 0.76s.",
+    "citation_count": 1,
+    "reference_count": 28,
+    "url": "https://dblp.org/rec/conf/esorics/CoijanovicWS23",
+    "dblp_key": "conf/esorics/CoijanovicWS23",
+    "source_id": "https://openalex.org/W4390700548"
+  },
+  {
+    "title": "Password-Based Credentials with Security Against Server Compromise.",
+    "authors": [
+      "Dennis Dayanikli",
+      "Anja Lehmann"
+    ],
+    "venue": "ESORICS",
+    "year": 2023,
+    "abstract": null,
+    "citation_count": 5,
+    "reference_count": 12,
+    "url": "https://dblp.org/rec/conf/esorics/DayanikliL23",
+    "dblp_key": "conf/esorics/DayanikliL23",
+    "source_id": "https://openalex.org/W4390747981"
+  },
+  {
+    "title": "μIPS: Software-Based Intrusion Prevention for Bare-Metal Embedded Systems.",
+    "authors": [
+      "Luca Degani",
+      "Majid Salehi",
+      "Fabio Martinelli",
+      "Bruno Crispo"
+    ],
+    "venue": "ESORICS",
+    "year": 2023,
+    "abstract": null,
+    "citation_count": 0,
+    "reference_count": 0,
+    "url": "https://dblp.org/rec/conf/esorics/DeganiSMC23",
+    "dblp_key": "conf/esorics/DeganiSMC23",
+    "source_id": "586864864b2f78a932d8ea205ad8429de0b074b6"
+  },
+  {
+    "title": "Machine-Checked Proofs of Accountability: How to sElect Who is to Blame.",
+    "authors": [
+      "Constantin Catalin Dragan",
+      "François Dupressoir",
+      "Kristian Gjøsteen",
+      "Thomas Haines",
+      "Peter B. Rønne",
+      "Morten Rotvold Solberg"
+    ],
+    "venue": "ESORICS",
+    "year": 2023,
+    "abstract": null,
+    "citation_count": 1,
+    "reference_count": 17,
+    "url": "https://dblp.org/rec/conf/esorics/DraganDGHRS23",
+    "dblp_key": "conf/esorics/DraganDGHRS23",
+    "source_id": "https://openalex.org/W4390742579"
+  },
+  {
+    "title": "SplITS: Split Input-to-State Mapping for Effective Firmware Fuzzing.",
+    "authors": [
+      "Guy Farrelly",
+      "Paul Quirk",
+      "Salil S. Kanhere",
+      "Seyit Camtepe",
+      "Damith C. Ranasinghe"
+    ],
+    "venue": "ESORICS",
+    "year": 2023,
+    "abstract": "Ability to test firmware on embedded devices is critical to discovering vulnerabilities prior to their adversarial exploitation. State-of-the-art automated testing methods rehost firmware in emulators and attempt to facilitate inputs from a diversity of methods (interrupt driven, status polling) and a plethora of devices (such as modems and GPS units). Despite recent progress to tackle peripheral input generation challenges in rehosting, a firmware's expectation of multi-byte magic values supplied from peripheral inputs for string operations still pose a significant roadblock. We solve the impediment posed by multi-byte magic strings in monolithic firmware. We propose feedback mechanisms for input-to-state mapping and retaining seeds for targeted replacement mutations with an efficient method to solve multi-byte comparisons. The feedback allows an efficient search over a combinatorial solution-space. We evaluate our prototype implementation, SplITS, with a diverse set of 21 real-world monolithic firmware binaries used in prior works, and 3 new binaries from popular open source projects. SplITS automatically solves 497% more multi-byte magic strings guarding further execution to uncover new code and bugs compared to state-of-the-art. In 11 of the 12 real-world firmware binaries with string comparisons, including those extensively analyzed by prior works, SplITS outperformed, statistically significantly. We observed up to 161% increase in blocks covered and discovered 6 new bugs that remained guarded by string comparisons. Significantly, deep and difficult to reproduce bugs guarded by comparisons, identified in prior work, were found consistently. To facilitate future research in the field, we release SplITS, the new firmware data sets, and bug analysis at https://github.com/SplITS-Fuzzer",
+    "citation_count": 2,
+    "reference_count": 30,
+    "url": "https://dblp.org/rec/conf/esorics/FarrellyQKCR23",
+    "dblp_key": "conf/esorics/FarrellyQKCR23",
+    "source_id": "https://openalex.org/W4390699593"
+  },
+  {
+    "title": "Protocol Dialects as Formal Patterns.",
+    "authors": [
+      "D. Galán",
+      "Víctor García",
+      "Santiago Escobar 0001",
+      "Catherine A. Meadows",
+      "José Meseguer 0001"
+    ],
+    "venue": "ESORICS",
+    "year": 2023,
+    "abstract": "Protocol dialects are methods for modifying protocols that provide light-weight security, especially against easy attacks that can lead to more serious ones. A lingo is a dialect's key security component by making attackers unable to \"speak\" the lingo. A lingo's \"talk\" changes all the time, becoming a moving target for attackers. We present several kinds of lingo transformations and compositions to generate stronger lingos from simpler ones, thus making dialects more secure.",
+    "citation_count": 2,
+    "reference_count": 16,
+    "url": "https://dblp.org/rec/conf/esorics/GalanGEMM23",
+    "dblp_key": "conf/esorics/GalanGEMM23",
+    "source_id": "https://openalex.org/W4390698018"
+  },
+  {
+    "title": "A Rowhammer Reproduction Study Using the Blacksmith Fuzzer.",
+    "authors": [
+      "Lukas Gerlach 0001",
+      "Fabian Thomas",
+      "Robert Pietsch",
+      "Michael Schwarz 0001"
+    ],
+    "venue": "ESORICS",
+    "year": 2023,
+    "abstract": null,
+    "citation_count": 3,
+    "reference_count": 25,
+    "url": "https://dblp.org/rec/conf/esorics/GerlachTPS23",
+    "dblp_key": "conf/esorics/GerlachTPS23",
+    "source_id": "https://openalex.org/W4390776734"
+  },
+  {
+    "title": "Traffic Analysis by Adversaries with Partial Visibility.",
+    "authors": [
+      "Iness Ben Guirat",
+      "Claudia Díaz",
+      "Karim Eldefrawy",
+      "Hadas Zeilberger"
+    ],
+    "venue": "ESORICS",
+    "year": 2023,
+    "abstract": null,
+    "citation_count": 4,
+    "reference_count": 16,
+    "url": "https://dblp.org/rec/conf/esorics/GuiratDEZ23",
+    "dblp_key": "conf/esorics/GuiratDEZ23",
+    "source_id": "https://openalex.org/W4390698000"
+  },
+  {
+    "title": "Learning Markov Chain Models from Sequential Data Under Local Differential Privacy.",
+    "authors": [
+      "Efehan Guner",
+      "Mehmet Emre Gursoy"
+    ],
+    "venue": "ESORICS",
+    "year": 2023,
+    "abstract": null,
+    "citation_count": 1,
+    "reference_count": 31,
+    "url": "https://dblp.org/rec/conf/esorics/GunerG23",
+    "dblp_key": "conf/esorics/GunerG23",
+    "source_id": "https://openalex.org/W4390700480"
+  },
+  {
+    "title": "An Empirical Study of the Imbalance Issue in Software Vulnerability Detection.",
+    "authors": [
+      "Yuejun Guo 0001",
+      "Qiang Hu",
+      "Qiang Tang 0001",
+      "Yves Le Traon"
+    ],
+    "venue": "ESORICS",
+    "year": 2023,
+    "abstract": null,
+    "citation_count": 2,
+    "reference_count": 40,
+    "url": "https://dblp.org/rec/conf/esorics/GuoHTT23",
+    "dblp_key": "conf/esorics/GuoHTT23",
+    "source_id": "https://openalex.org/W4390699426"
+  },
+  {
+    "title": "The Grant Negotiation and Authorization Protocol: Attacking, Fixing, and Verifying an Emerging Standard.",
+    "authors": [
+      "Florian Helmschmidt",
+      "Pedram Hosseyni",
+      "Ralf Küsters",
+      "Klaas Pruiksma",
+      "Clara Waldmann",
+      "Tim Würtele"
+    ],
+    "venue": "ESORICS",
+    "year": 2023,
+    "abstract": null,
+    "citation_count": 3,
+    "reference_count": 28,
+    "url": "https://dblp.org/rec/conf/esorics/HelmschmidtHKPWW23",
+    "dblp_key": "conf/esorics/HelmschmidtHKPWW23",
+    "source_id": "https://openalex.org/W4390742494"
+  },
+  {
+    "title": "Scaling Mobile Private Contact Discovery to Billions of Users.",
+    "authors": [
+      "Laura Hetz",
+      "Thomas Schneider 0003",
+      "Christian Weinert"
+    ],
+    "venue": "ESORICS",
+    "year": 2023,
+    "abstract": null,
+    "citation_count": 8,
+    "reference_count": 51,
+    "url": "https://dblp.org/rec/conf/esorics/HetzSW23",
+    "dblp_key": "conf/esorics/HetzSW23",
+    "source_id": "https://openalex.org/W4390741783"
+  },
+  {
+    "title": "Evaluating the Security Posture of 5G Networks by Combining State Auditing and Event Monitoring.",
+    "authors": [
+      "Md. Nazmul Hoq",
+      "Jia Wei Yao",
+      "Suryadipta Majumdar",
+      "Luis Suárez",
+      "Lingyu Wang 0001",
+      "Amine Boukhtouta",
+      "Makan Pourzandi",
+      "Mourad Debbabi"
+    ],
+    "venue": "ESORICS",
+    "year": 2023,
+    "abstract": null,
+    "citation_count": 1,
+    "reference_count": 19,
+    "url": "https://dblp.org/rec/conf/esorics/HoqYMSWBPD23",
+    "dblp_key": "conf/esorics/HoqYMSWBPD23",
+    "source_id": "https://openalex.org/W4390700576"
+  },
+  {
+    "title": "Enforcing the GDPR.",
+    "authors": [
+      "François Hublet",
+      "David A. Basin",
+      "Srdan Krstic"
+    ],
+    "venue": "ESORICS",
+    "year": 2023,
+    "abstract": "Introduction The European Union’s (EU) General Data Protection Regulation (GDPR) was put in force on 25th May 2018. It is not known how many personal data protection requests the national authority in Croatia had received before and after GDPR, and how many of those were related to research. Materials and methods We obtained data from the Croatian Personal Data Protection Agency (CPDPA) about requests/complaints related to personal data protection that were received specifically from academic/research institutions, specifically the number and type of all cases/requests between the years 2015-2019. Results In 2018, CPDPA had a dramatic increase in the number of requests in the post-GDPR period, compared to the pre-GDPR period of the same year. In 2019, CPDPA received 2718 requests/complaints; less than in the year 2018. From 2015 to 2019, CPDPA received only 37 requests related to research. Conclusions Very few requests about personal data protection from academic and research institutions in Croatia were submitted to the national Croatian data protection authority. Future studies could explore whether researchers have sufficient awareness and knowledge about personal data protection related to research, to adequately implement the GDPR regulations.",
+    "citation_count": 10,
+    "reference_count": 9,
+    "url": "https://dblp.org/rec/conf/esorics/HubletBK23",
+    "dblp_key": "conf/esorics/HubletBK23",
+    "source_id": "https://openalex.org/W3046727013"
+  },
+  {
+    "title": "Machine Learning for SAST: A Lightweight and Adaptable Approach.",
+    "authors": [
+      "Lorenz Hüther",
+      "Karsten Sohr",
+      "Bernhard J. Berger",
+      "Hendrik Rothe",
+      "Stefan Edelkamp"
+    ],
+    "venue": "ESORICS",
+    "year": 2023,
+    "abstract": null,
+    "citation_count": 0,
+    "reference_count": 14,
+    "url": "https://dblp.org/rec/conf/esorics/HutherSBRE23",
+    "dblp_key": "conf/esorics/HutherSBRE23",
+    "source_id": "https://openalex.org/W4390698511"
+  },
+  {
+    "title": "Practical Randomized Lattice Gadget Decomposition with Application to FHE.",
+    "authors": [
+      "Sohyun Jeon",
+      "Hyang-Sook Lee",
+      "Jeongeun Park 0001"
+    ],
+    "venue": "ESORICS",
+    "year": 2023,
+    "abstract": null,
+    "citation_count": 2,
+    "reference_count": 25,
+    "url": "https://dblp.org/rec/conf/esorics/JeonLP23",
+    "dblp_key": "conf/esorics/JeonLP23",
+    "source_id": "https://openalex.org/W4390748069"
+  },
+  {
+    "title": "A User-Centric Approach to API Delegations - Enforcing Privacy Policies on OAuth Delegations.",
+    "authors": [
+      "Shirin Kalantari",
+      "Pieter Philippaerts",
+      "Yana Dimova",
+      "Danny Hughes 0001",
+      "Wouter Joosen",
+      "Bart De Decker"
+    ],
+    "venue": "ESORICS",
+    "year": 2023,
+    "abstract": "The Information Technology Laboratory (ITL) at the National Institute of Standards and Technology (NIST) promotes the U.S. economy and public welfare by providing technical leadership for the nation's measurement and standards infrastructure.ITL develops tests, test methods, reference data, proof of concept implementations, and technical analyses to advance the development and productive use of information technology.ITL's responsibilities include the development of technical, physical, administrative, and management standards and guidelines for the cost-effective",
+    "citation_count": 248,
+    "reference_count": 0,
+    "url": "https://dblp.org/rec/conf/esorics/KalantariPDHJD23",
+    "dblp_key": "conf/esorics/KalantariPDHJD23",
+    "source_id": "https://openalex.org/W2792443233"
+  },
+  {
+    "title": "Everlasting ROBOT: The Marvin Attack.",
+    "authors": [
+      "Hubert Kario"
+    ],
+    "venue": "ESORICS",
+    "year": 2023,
+    "abstract": null,
+    "citation_count": 1,
+    "reference_count": 12,
+    "url": "https://dblp.org/rec/conf/esorics/Kario23",
+    "dblp_key": "conf/esorics/Kario23",
+    "source_id": "https://openalex.org/W4390747169"
+  },
+  {
+    "title": "MARF: A Memory-Aware CLFLUSH-Based Intra- and Inter-CPU Side-Channel Attack.",
+    "authors": [
+      "Sowoong Kim",
+      "Myeonggyun Han",
+      "Woongki Baek"
+    ],
+    "venue": "ESORICS",
+    "year": 2023,
+    "abstract": null,
+    "citation_count": 0,
+    "reference_count": 29,
+    "url": "https://dblp.org/rec/conf/esorics/KimHB23",
+    "dblp_key": "conf/esorics/KimHB23",
+    "source_id": "https://openalex.org/W4390747257"
+  },
+  {
+    "title": "Efficient Transparent Polynomial Commitments for zk-SNARKs.",
+    "authors": [
+      "Sungwook Kim",
+      "Sungju Kim",
+      "Yulim Shin",
+      "Sunmi Kim",
+      "Jihye Kim 0001",
+      "Hyunok Oh"
+    ],
+    "venue": "ESORICS",
+    "year": 2023,
+    "abstract": null,
+    "citation_count": 193,
+    "reference_count": 53,
+    "url": "https://dblp.org/rec/conf/esorics/KimKSKKO23",
+    "dblp_key": "conf/esorics/KimKSKKO23",
+    "source_id": "https://openalex.org/W2990120385"
+  },
+  {
+    "title": "Code-Based Secret Handshake Scheme, Revisited.",
+    "authors": [
+      "Minkyu Kim",
+      "Hyung Tae Lee"
+    ],
+    "venue": "ESORICS",
+    "year": 2023,
+    "abstract": null,
+    "citation_count": 0,
+    "reference_count": 19,
+    "url": "https://dblp.org/rec/conf/esorics/KimL23",
+    "dblp_key": "conf/esorics/KimL23",
+    "source_id": "https://openalex.org/W4390748553"
+  },
+  {
+    "title": "Security of NVMe Offloaded Data in Large-Scale Machine Learning.",
+    "authors": [
+      "Torsten Krauß",
+      "Raphael Götz",
+      "Alexandra Dmitrienko"
+    ],
+    "venue": "ESORICS",
+    "year": 2023,
+    "abstract": null,
+    "citation_count": 0,
+    "reference_count": 40,
+    "url": "https://dblp.org/rec/conf/esorics/KraussGD23",
+    "dblp_key": "conf/esorics/KraussGD23",
+    "source_id": "https://openalex.org/W4390698413"
+  },
+  {
+    "title": "Acumen: Analysing the Impact of Organisational Change on Users&apos; Access Entitlements.",
+    "authors": [
+      "Selasi Kwashie",
+      "Wei Kang 0004",
+      "Sandeep Santhosh Kumar",
+      "Geoff Jarrad",
+      "Seyit Camtepe",
+      "Surya Nepal"
+    ],
+    "venue": "ESORICS",
+    "year": 2023,
+    "abstract": "Marketers must never underestimate an online buyer. If they are assuming that mere marketing efforts from their side will influence a buyer, then they are being uncalculated and ignorant. Potential customers are not isolated people who are glued to their computer systems confused as to what product to buy. Instead they are tech-savvy, socially active, smart buyers who make a detailed analysis about the product they intend to buy online. Therefore, marketers need to re-design their online marketing strategies to suit to the needs of the buyer. The marketing approach should focus on social influence marketing as well.",
+    "citation_count": 4,
+    "reference_count": 20,
+    "url": "https://dblp.org/rec/conf/esorics/KwashieKKJCN23",
+    "dblp_key": "conf/esorics/KwashieKKJCN23",
+    "source_id": "https://openalex.org/W2602182327"
+  },
+  {
+    "title": "FLGuard: Byzantine-Robust Federated Learning via Ensemble of Contrastive Models.",
+    "authors": [
+      "Younghan Lee",
+      "Yungi Cho",
+      "Woorim Han",
+      "Ho Bae",
+      "Yunheung Paek"
+    ],
+    "venue": "ESORICS",
+    "year": 2023,
+    "abstract": "Federated Learning (FL) thrives in training a global model with numerous clients by only sharing the parameters of their local models trained with their private training datasets. Therefore, without revealing the private dataset, the clients can obtain a deep learning (DL) model with high performance. However, recent research proposed poisoning attacks that cause a catastrophic loss in the accuracy of the global model when adversaries, posed as benign clients, are present in a group of clients. Therefore, recent studies suggested byzantine-robust FL methods that allow the server to train an accurate global model even with the adversaries present in the system. However, many existing methods require the knowledge of the number of malicious clients or the auxiliary (clean) dataset or the effectiveness reportedly decreased hugely when the private dataset was non-independently and identically distributed (non-IID). In this work, we propose FLGuard, a novel byzantine-robust FL method that detects malicious clients and discards malicious local updates by utilizing the contrastive learning technique, which showed a tremendous improvement as a self-supervised learning method. With contrastive models, we design FLGuard as an ensemble scheme to maximize the defensive capability. We evaluate FLGuard extensively under various poisoning attacks and compare the accuracy of the global model with existing byzantine-robust FL methods. FLGuard outperforms the state-of-the-art defense methods in most cases and shows drastic improvement, especially in non-IID settings. https://github.com/201younghanlee/FLGuard",
+    "citation_count": 1,
+    "reference_count": 13,
+    "url": "https://dblp.org/rec/conf/esorics/LeeCHBP23",
+    "dblp_key": "conf/esorics/LeeCHBP23",
+    "source_id": "https://openalex.org/W4390698442"
+  },
+  {
+    "title": "Attacking Logo-Based Phishing Website Detectors with Adversarial Perturbations.",
+    "authors": [
+      "Jehyun Lee",
+      "Zhe Xin",
+      "Melanie Ng Pei See",
+      "Kanav Sabharwal",
+      "Giovanni Apruzzese",
+      "Dinil Mon Divakaran"
+    ],
+    "venue": "ESORICS",
+    "year": 2023,
+    "abstract": "Recent times have witnessed the rise of anti-phishing schemes powered by deep learning (DL). In particular, logo-based phishing detectors rely on DL models from Computer Vision to identify logos of well-known brands on webpages, to detect malicious webpages that imitate a given brand. For instance, Siamese networks have demonstrated notable performance for these tasks, enabling the corresponding anti-phishing solutions to detect even \"zero-day\" phishing webpages. In this work, we take the next step of studying the robustness of logo-based phishing detectors against adversarial ML attacks. We propose a novel attack exploiting generative adversarial perturbations to craft \"adversarial logos\" that evade phishing detectors. We evaluate our attacks through: (i) experiments on datasets containing real logos, to evaluate the robustness of state-of-the-art phishing detectors; and (ii) user studies to gauge whether our adversarial logos can deceive human eyes. The results show that our proposed attack is capable of crafting perturbed logos subtle enough to evade various DL models-achieving an evasion rate of up to 95%. Moreover, users are not able to spot significant differences between generated adversarial logos and original ones.",
+    "citation_count": 5,
+    "reference_count": 42,
+    "url": "https://dblp.org/rec/conf/esorics/LeeXSSAD23",
+    "dblp_key": "conf/esorics/LeeXSSAD23",
+    "source_id": "https://openalex.org/W4390746946"
+  },
+  {
+    "title": "Hiding Your Signals: A Security Analysis of PPG-Based Biometric Authentication.",
+    "authors": [
+      "Lin Li 0066",
+      "Chao Chen 0015",
+      "Lei Pan 0002",
+      "Yonghang Tai",
+      "Jun Zhang 0010",
+      "Yang Xiang 0001"
+    ],
+    "venue": "ESORICS",
+    "year": 2023,
+    "abstract": "Recently, physiological signal-based biometric systems have received wide attention. Unlike traditional biometric features, physiological signals can not be easily compromised (usually unobservable to human eyes). Photoplethysmography (PPG) signal is easy to measure, making it more attractive than many other physiological signals for biometric authentication. However, with the advent of remote PPG (rPPG), unobservability has been challenged when the attacker can remotely steal the rPPG signals by monitoring the victim's face, subsequently posing a threat to PPG-based biometrics. In PPG-based biometric authentication, current attack approaches mandate the victim's PPG signal, making rPPG-based attacks neglected. In this paper, we firstly analyze the security of PPG-based biometrics, including user authentication and communication protocols. We evaluate the signal waveforms, heart rate and inter-pulse-interval information extracted by five rPPG methods, including four traditional optical computing methods (CHROM, POS, LGI, PCA) and one deep learning method (CL_rPPG). We conducted experiments on five datasets (PURE, UBFC_rPPG, UBFC_Phys, LGI_PPGI, and COHFACE) to collect a comprehensive set of results. Our empirical studies show that rPPG poses a serious threat to the authentication system. The success rate of the rPPG signal spoofing attack in the user authentication system reached 0.35. The bit hit rate is 0.6 in inter-pulse-interval-based security protocols. Further, we propose an active defence strategy to hide the physiological signals of the face to resist the attack. It reduces the success rate of rPPG spoofing attacks in user authentication to 0.05. The bit hit rate was reduced to 0.5, which is at the level of a random guess. Our strategy effectively prevents the exposure of PPG signals to protect users' sensitive physiological data.",
+    "citation_count": 7,
+    "reference_count": 43,
+    "url": "https://dblp.org/rec/conf/esorics/LiCPTZX23",
+    "dblp_key": "conf/esorics/LiCPTZX23",
+    "source_id": "https://openalex.org/W4390746872"
+  },
+  {
+    "title": "Beyond Volume Pattern: Storage-Efficient Boolean Searchable Symmetric Encryption with Suppressed Leakage.",
+    "authors": [
+      "Feng Li 0041",
+      "Jianfeng Ma 0001",
+      "Yinbin Miao",
+      "Pengfei Wu",
+      "Xiangfu Song"
+    ],
+    "venue": "ESORICS",
+    "year": 2023,
+    "abstract": null,
+    "citation_count": 5,
+    "reference_count": 28,
+    "url": "https://dblp.org/rec/conf/esorics/LiMMWS23",
+    "dblp_key": "conf/esorics/LiMMWS23",
+    "source_id": "https://openalex.org/W4390741765"
+  },
+  {
+    "title": "Bijack: Breaking Bitcoin Network with TCP Vulnerabilities.",
+    "authors": [
+      "Shaoyu Li",
+      "Shanghao Shi",
+      "Yang Xiao 0010",
+      "Chaoyu Zhang",
+      "Y. Thomas Hou 0001",
+      "Wenjing Lou"
+    ],
+    "venue": "ESORICS",
+    "year": 2023,
+    "abstract": null,
+    "citation_count": 6,
+    "reference_count": 35,
+    "url": "https://dblp.org/rec/conf/esorics/LiSXZHL23",
+    "dblp_key": "conf/esorics/LiSXZHL23",
+    "source_id": "https://openalex.org/W4390746573"
+  },
+  {
+    "title": "Trajectory Hiding and Sharing for Supply Chains with Differential Privacy.",
+    "authors": [
+      "Tianyu Li 0002",
+      "Li Xu",
+      "Zekeriya Erkin",
+      "Reginald L. Lagendijk"
+    ],
+    "venue": "ESORICS",
+    "year": 2023,
+    "abstract": null,
+    "citation_count": 1,
+    "reference_count": 28,
+    "url": "https://dblp.org/rec/conf/esorics/LiXEL23",
+    "dblp_key": "conf/esorics/LiXEL23",
+    "source_id": "https://openalex.org/W4390700043"
+  },
+  {
+    "title": "Item-Oriented Personalized LDP for Discrete Distribution Estimation.",
+    "authors": [
+      "Xin Li",
+      "Hong Zhu 0003",
+      "Zhiqiang Zhang",
+      "Meiyi Xie"
+    ],
+    "venue": "ESORICS",
+    "year": 2023,
+    "abstract": "Discrete distribution estimation is a fundamental statistical tool, which is widely used to perform data analysis tasks in various applications involving sensitive personal information. Due to privacy concerns, individuals may not always provide their raw information, which leads to unpredictable biases in the final results of estimated distribution. Local Differential Privacy (LDP) is an advanced technique for privacy protection of discrete distribution estimation. Currently, typical LDP mechanisms provide same protection for all items in the domain, which imposes unnecessary perturbation on less sensitive items and thus degrades the utility of final results. Although, several recent works try to alleviate this problem, the utility can be further improved. In this paper, we propose a novel notion called Item-Oriented Personalized LDP (IPLDP), which independently perturbs different items with different privacy budgets to achieve personalized privacy protection. Furthermore, to satisfy IPLDP, we propose the Item-Oriented Personalized Randomized Response (IPRR) based on the observation that the sensitivity of data shows an inverse relationship with the population size of respective individuals. Theoretical analysis and experimental results demonstrate that our method can provide fine-grained privacy protection and improve data utility simultaneously.",
+    "citation_count": 0,
+    "reference_count": 36,
+    "url": "https://dblp.org/rec/conf/esorics/LiZZX23",
+    "dblp_key": "conf/esorics/LiZZX23",
+    "source_id": "https://openalex.org/W4379375003"
+  },
+  {
+    "title": "FSmell: Recognizing Inline Function in Binary Code.",
+    "authors": [
+      "Wei Lin 0004",
+      "Qingli Guo",
+      "Jiawei Yin",
+      "Xiangyu Zuo",
+      "Rongqing Wang",
+      "Xiaorui Gong"
+    ],
+    "venue": "ESORICS",
+    "year": 2023,
+    "abstract": null,
+    "citation_count": 2,
+    "reference_count": 27,
+    "url": "https://dblp.org/rec/conf/esorics/LinGYZWG23",
+    "dblp_key": "conf/esorics/LinGYZWG23",
+    "source_id": "https://openalex.org/W4390700110"
+  },
+  {
+    "title": "LFuzz: Exploiting Locality-Enabled Techniques for File-System Fuzzing.",
+    "authors": [
+      "Wenqing Liu",
+      "An-I Andy Wang"
+    ],
+    "venue": "ESORICS",
+    "year": 2023,
+    "abstract": null,
+    "citation_count": 1,
+    "reference_count": 15,
+    "url": "https://dblp.org/rec/conf/esorics/LiuW23",
+    "dblp_key": "conf/esorics/LiuW23",
+    "source_id": "https://openalex.org/W4390700030"
+  },
+  {
+    "title": "When is Slower Block Propagation More Profitable for Large Miners?",
+    "authors": [
+      "Zhichun Lu",
+      "Ren Zhang 0003"
+    ],
+    "venue": "ESORICS",
+    "year": 2023,
+    "abstract": null,
+    "citation_count": 1,
+    "reference_count": 12,
+    "url": "https://dblp.org/rec/conf/esorics/LuZ23",
+    "dblp_key": "conf/esorics/LuZ23",
+    "source_id": "https://openalex.org/W4390746780"
+  },
+  {
+    "title": "Two-Message Authenticated Key Exchange from Public-Key Encryption.",
+    "authors": [
+      "You Lyu",
+      "Shengli Liu 0001"
+    ],
+    "venue": "ESORICS",
+    "year": 2023,
+    "abstract": null,
+    "citation_count": 2,
+    "reference_count": 19,
+    "url": "https://dblp.org/rec/conf/esorics/LyuL23",
+    "dblp_key": "conf/esorics/LyuL23",
+    "source_id": "https://openalex.org/W4390747591"
+  },
+  {
+    "title": "Optimally-Fair Multi-party Exchange Without Trusted Parties.",
+    "authors": [
+      "Ivo Maffei",
+      "A. W. Roscoe 0001"
+    ],
+    "venue": "ESORICS",
+    "year": 2023,
+    "abstract": "Abstract We present a multi-party exchange protocol that achieves optimal partial fairness even in the presence of a dishonest majority. We demonstrate how this protocol can be applied to any type of multi-party exchange scenario where the network topology is complete. When combined with standard secure multi-party computation techniques, our protocol enables SMPC with partial fairness when a dishonest majority is involved. Fairness optimality is proven in an abstract model which applies to all protocols based on the concept of concealing the point when the secrets are exchanged. Our protocol improves known results via the use of timed-release encryption and commutative blinding.",
+    "citation_count": 0,
+    "reference_count": 21,
+    "url": "https://dblp.org/rec/conf/esorics/MaffeiR23",
+    "dblp_key": "conf/esorics/MaffeiR23",
+    "source_id": "https://openalex.org/W4390747712"
+  },
+  {
+    "title": "Commitments with Efficient Zero-Knowledge Arguments from Subset Sum Problems.",
+    "authors": [
+      "Jules Maire",
+      "Damien Vergnaud"
+    ],
+    "venue": "ESORICS",
+    "year": 2023,
+    "abstract": null,
+    "citation_count": 1,
+    "reference_count": 25,
+    "url": "https://dblp.org/rec/conf/esorics/MaireV23",
+    "dblp_key": "conf/esorics/MaireV23",
+    "source_id": "https://openalex.org/W4390748496"
+  },
+  {
+    "title": "Efficient Zero-Knowledge Arguments and Digital Signatures via Sharing Conversion in the Head.",
+    "authors": [
+      "Jules Maire",
+      "Damien Vergnaud"
+    ],
+    "venue": "ESORICS",
+    "year": 2023,
+    "abstract": null,
+    "citation_count": 2,
+    "reference_count": 30,
+    "url": "https://dblp.org/rec/conf/esorics/MaireV23a",
+    "dblp_key": "conf/esorics/MaireV23a",
+    "source_id": "https://openalex.org/W4390748106"
+  },
+  {
+    "title": "Secure Split Learning Against Property Inference, Data Reconstruction, and Feature Space Hijacking Attacks.",
+    "authors": [
+      "Yunlong Mao",
+      "Zexi Xin",
+      "Zhenyu Li",
+      "Jue Hong",
+      "Qingyou Yang",
+      "Sheng Zhong 0002"
+    ],
+    "venue": "ESORICS",
+    "year": 2023,
+    "abstract": "Split learning of deep neural networks (SplitNN) has provided a promising solution to learning jointly for the mutual interest of a guest and a host, which may come from different backgrounds, holding features partitioned vertically. However, SplitNN creates a new attack surface for the adversarial participant, holding back its practical use in the real world. By investigating the adversarial effects of highly threatening attacks, including property inference, data reconstruction, and feature hijacking attacks, we identify the underlying vulnerability of SplitNN and propose a countermeasure. To prevent potential threats and ensure the learning guarantees of SplitNN, we design a privacy-preserving tunnel for information exchange between the guest and the host. The intuition is to perturb the propagation of knowledge in each direction with a controllable unified solution. To this end, we propose a new activation function named R3eLU, transferring private smashed data and partial loss into randomized responses in forward and backward propagations, respectively. We give the first attempt to secure split learning against three threatening attacks and present a fine-grained privacy budget allocation scheme. The analysis proves that our privacy-preserving SplitNN solution provides a tight privacy budget, while the experimental results show that our solution performs better than existing solutions in most cases and achieves a good tradeoff between defense and model usability.",
+    "citation_count": 10,
+    "reference_count": 38,
+    "url": "https://dblp.org/rec/conf/esorics/MaoXLHYZ23",
+    "dblp_key": "conf/esorics/MaoXLHYZ23",
+    "source_id": "https://openalex.org/W4390698509"
+  },
+  {
+    "title": "Achilles&apos; Heels: Vulnerable Record Identification in Synthetic Data Publishing.",
+    "authors": [
+      "Matthieu Meeus",
+      "Florent Guépin",
+      "Ana-Maria Cretu 0002",
+      "Yves-Alexandre de Montjoye"
+    ],
+    "venue": "ESORICS",
+    "year": 2023,
+    "abstract": "From the start of the use of psychoactive prescription medications in the 1950s, physicians reported paradoxical adverse reactions, ranging from newly developing depressions to an increase in existing mood disorders, and extremely violent and bizarre acts of suicide and homicide. In this research, it is hypothesized that the pharmacological properties of the prescribed drugs or the interaction between the drugs and the enzymes that are primarily responsible for their metabolism (cytochrome P450s) could cause these reactions. Given that acts of violence could be medication-induced, the role of the rate of drug metabolism is discussed. Genetic testing of certain CYP450s could be helpful in preventing the emergence of acts of violence. Genotyping is a powerful tool in determining metabolic rates, but there are complicating issues, e.g., substrate specificity, enzyme promiscuity, unreliability of the probe used for phenotesting, phenoconversion, heterogeneity of CYP450 enzyme activity in different organs, and altered sensitivity to inhibition. The best way to estimate the possible metabolic rate is by combining genotyping, phenotyping, and therapeutic drug monitoring, in addition to carefully observing and listening to the patient.\\nIn this dissertation, three cases studies are presented in which the combination of variant alleles and psychoactive medication may have led to extreme acts of violence. In addition, a comparative study of violent offenders versus a control group indicates four risk factors for developing an altered emotional state which can develop into acts of violence:\\n• More than 4 variant alleles for CYP2B6, CYP2C8, CYP2C9, CYP2C19, CYP2D6 or CYP3A4.\\n• Three or more prescription medications, especially when an antidepressant or other psychoactive medication is prescribed.\\n• An intermediate phenotype for CYP3A4.\\n• Fluctuating levels of psychoactive medication in the blood.\\nThe guidelines set by the Clinical Pharmacogenetics Implementation Consortium (CPIC) and the Dutch Pharmacogenetics Working Group (DPWG) do not apply in cases of polypharmacy or when there is more than one-drug-one gene interaction involved. An easy-to-use protocol is described that could be used in general practice by prescribing physicians to reduce the risk of dangerous side effects.",
+    "citation_count": 0,
+    "reference_count": 0,
+    "url": "https://dblp.org/rec/conf/esorics/MeeusGCM23",
+    "dblp_key": "conf/esorics/MeeusGCM23",
+    "source_id": "https://openalex.org/W3130077965"
+  },
+  {
+    "title": "Syntax-Aware Mutation for Testing the Solidity Compiler.",
+    "authors": [
+      "Charalambos Mitropoulos",
+      "Thodoris Sotiropoulos",
+      "Sotiris Ioannidis",
+      "Dimitris Mitropoulos"
+    ],
+    "venue": "ESORICS",
+    "year": 2023,
+    "abstract": null,
+    "citation_count": 3,
+    "reference_count": 38,
+    "url": "https://dblp.org/rec/conf/esorics/MitropoulosSIM23",
+    "dblp_key": "conf/esorics/MitropoulosSIM23",
+    "source_id": "https://openalex.org/W4390742644"
+  },
+  {
+    "title": "Oblivious Extractors and Improved Security in Biometric-Based Authentication Systems.",
+    "authors": [
+      "Ivan De Oliveira Nunes",
+      "Peter Rindal",
+      "Maliheh Shirvanian"
+    ],
+    "venue": "ESORICS",
+    "year": 2023,
+    "abstract": null,
+    "citation_count": 2,
+    "reference_count": 26,
+    "url": "https://dblp.org/rec/conf/esorics/NunesRS23",
+    "dblp_key": "conf/esorics/NunesRS23",
+    "source_id": "https://openalex.org/W4390747730"
+  },
+  {
+    "title": "A New Model for Testing IPv6 Fragment Handling.",
+    "authors": [
+      "Edoardo Di Paolo",
+      "Enrico Bassetti",
+      "Angelo Spognardi"
+    ],
+    "venue": "ESORICS",
+    "year": 2023,
+    "abstract": "Since the origins of the Internet, various vulnerabilities exploiting the IP fragmentation process have plagued IPv4 protocol, many leading to a wide range of attacks. IPv6 modified the handling of fragmentations and introduced a specific extension header, not solving the related problems, as proved by extensive literature. One of the primary sources of problems has been the overlapping fragments, which result in unexpected or malicious packets when reassembled. To overcome the problem related to fragmentation, the authors of RFC 5722 decided that IPv6 hosts MUST silently drop overlapping fragments.   Since then, several studies have proposed methodologies to check if IPv6 hosts accept overlapping fragments and are still vulnerable to related attacks. However, some of the above methodologies have not been proven complete or need to be more accurate. In this paper we propose a novel model to check IPv6 fragmentation handling specifically suited for the reassembling strategies of modern operating systems. Previous models, indeed, considered OS reassembly policy as byte-based. However, nowadays, reassembly policies are fragment-based, making previous models inadequate. Our model leverages the commutative property of the checksum, simplifying the whole assessing process. Starting with this new model, we were able to better evaluate the RFC-5722 and RFC-9099 compliance of modern operating systems against fragmentation handling. Our results suggest that IPv6 fragmentation can still be considered a threat and that more effort is needed to solve related security issues.",
+    "citation_count": 6,
+    "reference_count": 22,
+    "url": "https://dblp.org/rec/conf/esorics/PaoloBS23",
+    "dblp_key": "conf/esorics/PaoloBS23",
+    "source_id": "https://openalex.org/W4390697953"
+  },
+  {
+    "title": "Reinforcement Learning Approach to Generate Zero-Dynamics Attacks on Control Systems Without State Space Models.",
+    "authors": [
+      "Bipin Paudel",
+      "George T. Amariucai"
+    ],
+    "venue": "ESORICS",
+    "year": 2023,
+    "abstract": null,
+    "citation_count": 3,
+    "reference_count": 21,
+    "url": "https://dblp.org/rec/conf/esorics/PaudelA23",
+    "dblp_key": "conf/esorics/PaudelA23",
+    "source_id": "https://openalex.org/W4390699819"
+  },
+  {
+    "title": "stoRNA: Stateless Transparent Proofs of Storage-time.",
+    "authors": [
+      "Reyhaneh Rabaninejad",
+      "Behzad Abdolmaleki",
+      "Giulio Malavolta",
+      "Antonis Michalas",
+      "Amir Nabizadeh"
+    ],
+    "venue": "ESORICS",
+    "year": 2023,
+    "abstract": null,
+    "citation_count": 6,
+    "reference_count": 17,
+    "url": "https://dblp.org/rec/conf/esorics/RabaninejadAMMN23",
+    "dblp_key": "conf/esorics/RabaninejadAMMN23",
+    "source_id": "https://openalex.org/W4390742669"
+  },
+  {
+    "title": "PassGPT: Password Modeling and (Guided) Generation with Large Language Models.",
+    "authors": [
+      "Javier Rando",
+      "Fernando Pérez-Cruz",
+      "Briland Hitaj"
+    ],
+    "venue": "ESORICS",
+    "year": 2023,
+    "abstract": "Large language models (LLMs) successfully model natural language from vast amounts of text without the need for explicit supervision. In this paper, we investigate the efficacy of LLMs in modeling passwords. We present PassGPT, a LLM trained on password leaks for password generation. PassGPT outperforms existing methods based on generative adversarial networks (GAN) by guessing twice as many previously unseen passwords. Furthermore, we introduce the concept of guided password generation, where we leverage PassGPT sampling procedure to generate passwords matching arbitrary constraints, a feat lacking in current GAN-based strategies. Lastly, we conduct an in-depth analysis of the entropy and probability distribution that PassGPT defines over passwords and discuss their use in enhancing existing password strength estimators.",
+    "citation_count": 19,
+    "reference_count": 29,
+    "url": "https://dblp.org/rec/conf/esorics/RandoPH23",
+    "dblp_key": "conf/esorics/RandoPH23",
+    "source_id": "https://openalex.org/W4390699478"
+  },
+  {
+    "title": "You Reset I Attack! A Master Password Guessing Attack Against Honey Password Vaults.",
+    "authors": [
+      "Tingting Rao",
+      "Yixin Su",
+      "Peng Xu 0003",
+      "Yubo Zheng",
+      "Wei Wang 0088",
+      "Hai Jin 0001"
+    ],
+    "venue": "ESORICS",
+    "year": 2023,
+    "abstract": null,
+    "citation_count": 1,
+    "reference_count": 16,
+    "url": "https://dblp.org/rec/conf/esorics/RaoSXZWJ23",
+    "dblp_key": "conf/esorics/RaoSXZWJ23",
+    "source_id": "https://openalex.org/W4390742524"
+  },
+  {
+    "title": "Intelligent Zigbee Protocol Fuzzing via Constraint-Field Dependency Inference.",
+    "authors": [
+      "Mengfei Ren 0001",
+      "Haotian Zhang 0006",
+      "Xiaolei Ren 0001",
+      "Jiang Ming 0002",
+      "Yu Lei 0001"
+    ],
+    "venue": "ESORICS",
+    "year": 2023,
+    "abstract": null,
+    "citation_count": 3,
+    "reference_count": 23,
+    "url": "https://dblp.org/rec/conf/esorics/RenZRML23",
+    "dblp_key": "conf/esorics/RenZRML23",
+    "source_id": "https://openalex.org/W4390700476"
+  },
+  {
+    "title": "The Power of MEME: Adversarial Malware Creation with Model-Based Reinforcement Learning.",
+    "authors": [
+      "Maria Rigaki",
+      "Sebastián García"
+    ],
+    "venue": "ESORICS",
+    "year": 2023,
+    "abstract": "Due to the proliferation of malware, defenders are increasingly turning to automation and machine learning as part of the malware detection tool-chain. However, machine learning models are susceptible to adversarial attacks, requiring the testing of model and product robustness. Meanwhile, attackers also seek to automate malware generation and evasion of antivirus systems, and defenders try to gain insight into their methods. This work proposes a new algorithm that combines Malware Evasion and Model Extraction (MEME) attacks. MEME uses model-based reinforcement learning to adversarially modify Windows executable binary samples while simultaneously training a surrogate model with a high agreement with the target model to evade. To evaluate this method, we compare it with two state-of-the-art attacks in adversarial malware creation, using three well-known published models and one antivirus product as targets. Results show that MEME outperforms the state-of-the-art methods in terms of evasion capabilities in almost all cases, producing evasive malware with an evasion rate in the range of 32-73%. It also produces surrogate models with a prediction label agreement with the respective target models between 97-99%. The surrogate could be used to fine-tune and improve the evasion rate in the future.",
+    "citation_count": 4,
+    "reference_count": 35,
+    "url": "https://dblp.org/rec/conf/esorics/RigakiG23",
+    "dblp_key": "conf/esorics/RigakiG23",
+    "source_id": "https://openalex.org/W4390698574"
+  },
+  {
+    "title": "Learning Type Inference for Enhanced Dataflow Analysis.",
+    "authors": [
+      "Lukas Seidel",
+      "Sedick David Baker Effendi",
+      "Xavier Pinho",
+      "Konrad Rieck",
+      "Brink van der Merwe",
+      "Fabian Yamaguchi"
+    ],
+    "venue": "ESORICS",
+    "year": 2023,
+    "abstract": "Statically analyzing dynamically-typed code is a challenging endeavor, as even seemingly trivial tasks such as determining the targets of procedure calls are non-trivial without knowing the types of objects at compile time. Addressing this challenge, gradual typing is increasingly added to dynamically-typed languages, a prominent example being TypeScript that introduces static typing to JavaScript. Gradual typing improves the developer's ability to verify program behavior, contributing to robust, secure and debuggable programs. In practice, however, users only sparsely annotate types directly. At the same time, conventional type inference faces performance-related challenges as program size grows. Statistical techniques based on machine learning offer faster inference, but although recent approaches demonstrate overall improved accuracy, they still perform significantly worse on user-defined types than on the most common built-in types. Limiting their real-world usefulness even more, they rarely integrate with user-facing applications. We propose CodeTIDAL5, a Transformer-based model trained to reliably predict type annotations. For effective result retrieval and re-integration, we extract usage slices from a program's code property graph. Comparing our approach against recent neural type inference systems, our model outperforms the current state-of-the-art by 7.85% on the ManyTypes4TypeScript benchmark, achieving 71.27% accuracy overall. Furthermore, we present JoernTI, an integration of our approach into Joern, an open source static analysis tool, and demonstrate that the analysis benefits from the additional type information. As our model allows for fast inference times even on commodity CPUs, making our system available through Joern leads to high accessibility and facilitates security research.",
+    "citation_count": 4,
+    "reference_count": 29,
+    "url": "https://dblp.org/rec/conf/esorics/SeidelEPRMY23",
+    "dblp_key": "conf/esorics/SeidelEPRMY23",
+    "source_id": "https://openalex.org/W4390699383"
+  },
+  {
+    "title": "Secure Approximate Nearest Neighbor Search with Locality-Sensitive Hashing.",
+    "authors": [
+      "Shang Song",
+      "Lin Liu 0018",
+      "Rongmao Chen",
+      "Wei Peng 0005",
+      "Yi Wang 0055"
+    ],
+    "venue": "ESORICS",
+    "year": 2023,
+    "abstract": null,
+    "citation_count": 2,
+    "reference_count": 51,
+    "url": "https://dblp.org/rec/conf/esorics/SongLCPW23",
+    "dblp_key": "conf/esorics/SongLCPW23",
+    "source_id": "https://openalex.org/W4390742654"
+  },
+  {
+    "title": "Threshold Fully Homomorphic Encryption Over the Torus.",
+    "authors": [
+      "Yukimasa Sugizaki",
+      "Hikaru Tsuchida 0001",
+      "Takuya Hayashi 0001",
+      "Koji Nuida",
+      "Akira Nakashima",
+      "Toshiyuki Isshiki",
+      "Kengo Mori"
+    ],
+    "venue": "ESORICS",
+    "year": 2023,
+    "abstract": null,
+    "citation_count": 2,
+    "reference_count": 30,
+    "url": "https://dblp.org/rec/conf/esorics/SugizakiTHNNIM23",
+    "dblp_key": "conf/esorics/SugizakiTHNNIM23",
+    "source_id": "https://openalex.org/W4390748622"
+  },
+  {
+    "title": "Two Models are Better Than One: Federated Learning is Not Private for Google GBoard Next Word Prediction.",
+    "authors": [
+      "Mohamed Suliman 0002",
+      "Douglas J. Leith"
+    ],
+    "venue": "ESORICS",
+    "year": 2023,
+    "abstract": "In this paper we present new attacks against federated learning when used to train natural language text models. We illustrate the effectiveness of the attacks against the next word prediction model used in Google's GBoard app, a widely used mobile keyboard app that has been an early adopter of federated learning for production use. We demonstrate that the words a user types on their mobile handset, e.g. when sending text messages, can be recovered with high accuracy under a wide range of conditions and that counter-measures such a use of mini-batches and adding local noise are ineffective. We also show that the word order (and so the actual sentences typed) can be reconstructed with high fidelity. This raises obvious privacy concerns, particularly since GBoard is in production use.",
+    "citation_count": 4,
+    "reference_count": 17,
+    "url": "https://dblp.org/rec/conf/esorics/SulimanL23",
+    "dblp_key": "conf/esorics/SulimanL23",
+    "source_id": "https://openalex.org/W4390699918"
+  },
+  {
+    "title": "AttnCall: Refining Indirect Call Targets in Binaries with Attention.",
+    "authors": [
+      "Rui Sun",
+      "Yinggang Guo",
+      "Zicheng Wang 0010",
+      "Qingkai Zeng 0002"
+    ],
+    "venue": "ESORICS",
+    "year": 2023,
+    "abstract": null,
+    "citation_count": 2,
+    "reference_count": 36,
+    "url": "https://dblp.org/rec/conf/esorics/SunGWZ23",
+    "dblp_key": "conf/esorics/SunGWZ23",
+    "source_id": "https://openalex.org/W4390699864"
+  },
+  {
+    "title": "Curveball+: Exploring Curveball-Like Vulnerabilities of Implicit Certificate Validation.",
+    "authors": [
+      "Yajun Teng",
+      "Wei Wang 0314",
+      "Jun Shao 0001",
+      "Huiqing Wan",
+      "Heqing Huang",
+      "Yong Liu",
+      "Jingqiang Lin 0001"
+    ],
+    "venue": "ESORICS",
+    "year": 2023,
+    "abstract": null,
+    "citation_count": 0,
+    "reference_count": 10,
+    "url": "https://dblp.org/rec/conf/esorics/TengWSWHLL23",
+    "dblp_key": "conf/esorics/TengWSWHLL23",
+    "source_id": "https://openalex.org/W4390700667"
+  },
+  {
+    "title": "Making an Asymmetric PAKE Quantum-Annoying by Hiding Group Elements.",
+    "authors": [
+      "Marcel Tiepelt",
+      "Edward Eaton",
+      "Douglas Stebila"
+    ],
+    "venue": "ESORICS",
+    "year": 2023,
+    "abstract": null,
+    "citation_count": 1,
+    "reference_count": 14,
+    "url": "https://dblp.org/rec/conf/esorics/TiepeltES23",
+    "dblp_key": "conf/esorics/TiepeltES23",
+    "source_id": "https://openalex.org/W4390747554"
+  },
+  {
+    "title": "Exploring Genomic Sequence Alignment for Improving Side-Channel Analysis.",
+    "authors": [
+      "Heitor Uchoa",
+      "Vipul Arora 0004",
+      "Dennis Vermoen",
+      "Marco Ottavi",
+      "Nikolaos Alachiotis 0001"
+    ],
+    "venue": "ESORICS",
+    "year": 2023,
+    "abstract": null,
+    "citation_count": 1,
+    "reference_count": 28,
+    "url": "https://dblp.org/rec/conf/esorics/UchoaAVOA23",
+    "dblp_key": "conf/esorics/UchoaAVOA23",
+    "source_id": "https://openalex.org/W4390742495"
+  },
+  {
+    "title": "Time Will Tell: Exploiting Timing Leaks Using HTTP Response Headers.",
+    "authors": [
+      "Vik Vanderlinden",
+      "Tom van Goethem",
+      "Mathy Vanhoef"
+    ],
+    "venue": "ESORICS",
+    "year": 2023,
+    "abstract": null,
+    "citation_count": 2,
+    "reference_count": 16,
+    "url": "https://dblp.org/rec/conf/esorics/VanderlindenGV23",
+    "dblp_key": "conf/esorics/VanderlindenGV23",
+    "source_id": "https://openalex.org/W4390700409"
+  },
+  {
+    "title": "Fully Tally-Hiding Verifiable E-Voting for Real-World Elections with Seat-Allocations.",
+    "authors": [
+      "Carmen Wabartha",
+      "Julian Liedtke",
+      "Nicolas Huber",
+      "Daniel Rausch 0001",
+      "Ralf Küsters"
+    ],
+    "venue": "ESORICS",
+    "year": 2023,
+    "abstract": null,
+    "citation_count": 0,
+    "reference_count": 20,
+    "url": "https://dblp.org/rec/conf/esorics/WabarthaLHRK23",
+    "dblp_key": "conf/esorics/WabarthaLHRK23",
+    "source_id": "https://openalex.org/W4390747589"
+  },
+  {
+    "title": "Revocable IBE with En-DKER from Lattices: A Novel Approach for Lattice Basis Delegation.",
+    "authors": [
+      "Qi Wang",
+      "Haodong Huang",
+      "Juyan Li",
+      "Qi Yuan"
+    ],
+    "venue": "ESORICS",
+    "year": 2023,
+    "abstract": null,
+    "citation_count": 4,
+    "reference_count": 28,
+    "url": "https://dblp.org/rec/conf/esorics/WangHLY23",
+    "dblp_key": "conf/esorics/WangHLY23",
+    "source_id": "https://openalex.org/W4390747875"
+  },
+  {
+    "title": "Towards Efficient Privacy-Preserving Deep Packet Inspection.",
+    "authors": [
+      "Weicheng Wang",
+      "Hyunwoo Lee 0001",
+      "Yan Huang",
+      "Elisa Bertino",
+      "Ninghui Li"
+    ],
+    "venue": "ESORICS",
+    "year": 2023,
+    "abstract": null,
+    "citation_count": 1,
+    "reference_count": 44,
+    "url": "https://dblp.org/rec/conf/esorics/WangLHBL23",
+    "dblp_key": "conf/esorics/WangLHBL23",
+    "source_id": "https://openalex.org/W4390700736"
+  },
+  {
+    "title": "n-MVTL Attack: Optimal Transaction Reordering Attack on DeFi.",
+    "authors": [
+      "Jianhuan Wang",
+      "Jichen Li",
+      "Zecheng Li",
+      "Xiaotie Deng",
+      "Bin Xiao"
+    ],
+    "venue": "ESORICS",
+    "year": 2023,
+    "abstract": null,
+    "citation_count": 1,
+    "reference_count": 7,
+    "url": "https://dblp.org/rec/conf/esorics/WangLLDX23",
+    "dblp_key": "conf/esorics/WangLLDX23",
+    "source_id": "https://openalex.org/W4390747303"
+  },
+  {
+    "title": "Indirect Meltdown: Building Novel Side-Channel Attacks from Transient-Execution Attacks.",
+    "authors": [
+      "Daniel Weber 0007",
+      "Fabian Thomas",
+      "Lukas Gerlach 0001",
+      "Ruiyi Zhang 0001",
+      "Michael Schwarz 0001"
+    ],
+    "venue": "ESORICS",
+    "year": 2023,
+    "abstract": "The transient-execution attack Meltdown leaks sensitive information by transiently accessing inaccessible data during out-of-order execution. Although Meltdown is fixed in hardware for recent CPU generations, most currently-deployed CPUs have to rely on software mitigations, such as KPTI. Still, Meltdown is considered non-exploitable on current systems. In this paper, we show that adding another layer of indirection to Meltdown transforms a transient-execution attack into a side-channel attack, leaking metadata instead of data. We show that despite software mitigations, attackers can still leak metadata from other security domains by observing the success rate of Meltdown on non-secret data. With LeakIDT, we present the first cache-line granular monitoring of kernel addresses. LeakIDT allows an attacker to obtain cycle-accurate timestamps for attacker-chosen interrupts. We use our attack to get accurate inter-keystroke timings and fingerprint visited websites. While we propose a low-overhead software mitigation to prevent the exploitation of LeakIDT, we emphasize that the side-channel aspect of transient-execution attacks should not be underestimated.",
+    "citation_count": 2,
+    "reference_count": 37,
+    "url": "https://dblp.org/rec/conf/esorics/WeberTGZS23",
+    "dblp_key": "conf/esorics/WeberTGZS23",
+    "source_id": "https://openalex.org/W4390742688"
+  },
+  {
+    "title": "Reviving Meltdown 3a.",
+    "authors": [
+      "Daniel Weber 0007",
+      "Fabian Thomas",
+      "Lukas Gerlach 0001",
+      "Ruiyi Zhang 0001",
+      "Michael Schwarz 0001"
+    ],
+    "venue": "ESORICS",
+    "year": 2023,
+    "abstract": "Since the initial discovery of Meltdown and Spectre in 2017, different variants of these attacks have been discovered. One often overlooked variant is Meltdown 3a, also known as Meltdown-CPL-REG. Even though Meltdown-CPL-REG was initially discovered in 2018, the available information regarding the vulnerability is still sparse. In this paper, we analyze Meltdown-CPL-REG on 19 different CPUs from different vendors using an automated tool. We observe that the impact is more diverse than documented and differs from CPU to CPU. Surprisingly, while the newest Intel CPUs do not seem affected by Meltdown-CPL-REG, the newest available AMD CPUs (Zen3+) are still affected by the vulnerability. Furthermore, given our attack primitive CounterLeak, we show that besides up-to-date patches, Meltdown-CPL-REG can still be exploited as we reenable performance-counter-based attacks on cryptographic algorithms, break KASLR, and mount Spectre attacks. Although Meltdown-CPL-REG is not as powerful as other transient-execution attacks, its attack surface should not be underestimated.",
+    "citation_count": 1,
+    "reference_count": 46,
+    "url": "https://dblp.org/rec/conf/esorics/WeberTGZS23a",
+    "dblp_key": "conf/esorics/WeberTGZS23a",
+    "source_id": "https://openalex.org/W4390746713"
+  },
+  {
+    "title": "One IDS Is Not Enough! Exploring Ensemble Learning for Industrial Intrusion Detection.",
+    "authors": [
+      "Konrad Wolsing",
+      "Dominik Kus",
+      "Eric Wagner 0003",
+      "Jan Pennekamp",
+      "Klaus Wehrle",
+      "Martin Henze"
+    ],
+    "venue": "ESORICS",
+    "year": 2023,
+    "abstract": null,
+    "citation_count": 4,
+    "reference_count": 47,
+    "url": "https://dblp.org/rec/conf/esorics/WolsingKWPWH23",
+    "dblp_key": "conf/esorics/WolsingKWPWH23",
+    "source_id": "https://openalex.org/W4390700504"
+  },
+  {
+    "title": "Static Semantics Reconstruction for Enhancing JavaScript-WebAssembly Multilingual Malware Detection.",
+    "authors": [
+      "Yifan Xia",
+      "Ping He",
+      "Xuhong Zhang 0002",
+      "Peiyu Liu 0003",
+      "Shouling Ji",
+      "Wenhai Wang"
+    ],
+    "venue": "ESORICS",
+    "year": 2023,
+    "abstract": "The emergence of WebAssembly allows attackers to hide the malicious functionalities of JavaScript malware in cross-language interoperations, termed JavaScript-WebAssembly multilingual malware (JWMM). However, existing anti-virus solutions based on static program analysis are still limited to monolingual code. As a result, their detection effectiveness decreases significantly against JWMM. The detection of JWMM is challenging due to the complex interoperations and semantic diversity between JavaScript and WebAssembly. To bridge this gap, we present JWBinder, the first technique aimed at enhancing the static detection of JWMM. JWBinder performs a language-specific data-flow analysis to capture the cross-language interoperations and then characterizes the functionalities of JWMM through a unified high-level structure called Inter-language Program Dependency Graph. The extensive evaluation on one of the most representative real-world anti-virus platforms, VirusTotal, shows that \\system effectively enhances anti-virus systems from various vendors and increases the overall successful detection rate against JWMM from 49.1\\% to 86.2\\%. Additionally, we assess the side effects and runtime overhead of JWBinder, corroborating its practical viability in real-world applications.",
+    "citation_count": 2,
+    "reference_count": 15,
+    "url": "https://dblp.org/rec/conf/esorics/XiaHZLJW23",
+    "dblp_key": "conf/esorics/XiaHZLJW23",
+    "source_id": "https://openalex.org/W4390698031"
+  },
+  {
+    "title": "JWTKey: Automatic Cryptographic Vulnerability Detection in JWT Applications.",
+    "authors": [
+      "Bowen Xu",
+      "Shijie Jia 0001",
+      "Jingqiang Lin 0001",
+      "Fangyu Zheng",
+      "Yuan Ma",
+      "Limin Liu",
+      "Xiaozhuo Gu",
+      "Li Song"
+    ],
+    "venue": "ESORICS",
+    "year": 2023,
+    "abstract": null,
+    "citation_count": 5,
+    "reference_count": 38,
+    "url": "https://dblp.org/rec/conf/esorics/XuJLZMLGS23",
+    "dblp_key": "conf/esorics/XuJLZMLGS23",
+    "source_id": "https://openalex.org/W4390747287"
+  },
+  {
+    "title": "Privacy-Preserving Split Learning via Pareto Optimal Search.",
+    "authors": [
+      "Xi Yu",
+      "Liyao Xiang",
+      "Shiming Wang",
+      "Chengnian Long"
+    ],
+    "venue": "ESORICS",
+    "year": 2023,
+    "abstract": null,
+    "citation_count": 0,
+    "reference_count": 17,
+    "url": "https://dblp.org/rec/conf/esorics/YuXWL23",
+    "dblp_key": "conf/esorics/YuXWL23",
+    "source_id": "https://openalex.org/W4390699967"
+  },
+  {
+    "title": "Aion: Secure Transaction Ordering Using TEEs.",
+    "authors": [
+      "Pouriya Zarbafian",
+      "Vincent Gramoli"
+    ],
+    "venue": "ESORICS",
+    "year": 2023,
+    "abstract": null,
+    "citation_count": 1,
+    "reference_count": 49,
+    "url": "https://dblp.org/rec/conf/esorics/ZarbafianG23",
+    "dblp_key": "conf/esorics/ZarbafianG23",
+    "source_id": "https://openalex.org/W4390698528"
+  },
+  {
+    "title": "On the (In)Security of Manufacturer-Provided Remote Attestation Frameworks in Android.",
+    "authors": [
+      "Ziyi Zhou",
+      "Xuangan Xiao",
+      "Tianxiao Hou",
+      "Yikun Hu",
+      "Dawu Gu"
+    ],
+    "venue": "ESORICS",
+    "year": 2023,
+    "abstract": null,
+    "citation_count": 0,
+    "reference_count": 12,
+    "url": "https://dblp.org/rec/conf/esorics/ZhouXHHG23",
+    "dblp_key": "conf/esorics/ZhouXHHG23",
+    "source_id": "https://openalex.org/W4390699903"
+  },
+  {
+    "title": "Secure Outsourced Matrix Multiplication with Fully Homomorphic Encryption.",
+    "authors": [
+      "Lin Zhu",
+      "Qiang-Sheng Hua",
+      "Yi Chen",
+      "Hai Jin 0001"
+    ],
+    "venue": "ESORICS",
+    "year": 2023,
+    "abstract": null,
+    "citation_count": 8,
+    "reference_count": 21,
+    "url": "https://dblp.org/rec/conf/esorics/ZhuHCJ23",
+    "dblp_key": "conf/esorics/ZhuHCJ23",
+    "source_id": "https://openalex.org/W4390748799"
+  }
+]

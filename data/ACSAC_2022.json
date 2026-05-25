@@ -1,0 +1,1314 @@
+[
+  {
+    "title": "If You Can&apos;t Beat Them, Pay Them: Bitcoin Protection Racket is Profitable.",
+    "authors": [
+      "Zheng Yang 0001",
+      "Chao Yin",
+      "Junming Ke",
+      "Tien Tuan Anh Dinh",
+      "Jianying Zhou 0001"
+    ],
+    "venue": "ACSAC",
+    "year": 2022,
+    "abstract": null,
+    "citation_count": null,
+    "reference_count": null,
+    "url": "https://dblp.org/rec/conf/acsac/0001YKD022",
+    "dblp_key": "conf/acsac/0001YKD022",
+    "source_id": null
+  },
+  {
+    "title": "TyPro: Forward CFI for C-Style Indirect Function Calls Using Type Propagation.",
+    "authors": [
+      "Markus Bauer 0004",
+      "Ilya Grishchenko",
+      "Christian Rossow"
+    ],
+    "venue": "ACSAC",
+    "year": 2022,
+    "abstract": "Maliciously-overwritten function pointers in C programs often lead to arbitrary code execution. In principle, forward CFI schemes mitigate this problem by restricting indirect function calls to valid call targets only. However, existing forward CFI schemes either depend on specific hardware capabilities, or are too permissive (weakening security guarantees) or too strict (breaking compatibility). We present TyPro, a Clang-based forward CFI scheme based on type propagation. TyPro uses static analysis to follow function pointer types through C programs, and can determine the possible target functions for indirect calls at compile time with high precision. TyPro does not underestimate possible targets and does not break real-world programs, including those relying on dynamically-loaded code. TyPro has no runtime overhead on average and does not depend on architecture or special hardware features.",
+    "citation_count": 8,
+    "reference_count": 33,
+    "url": "https://dblp.org/rec/conf/acsac/0004GR22",
+    "dblp_key": "conf/acsac/0004GR22",
+    "source_id": "https://openalex.org/W4311166013"
+  },
+  {
+    "title": "Squeezing More Utility via Adaptive Clipping on Differentially Private Gradients in Federated Meta-Learning.",
+    "authors": [
+      "Ning Wang 0022",
+      "Yang Xiao 0010",
+      "Yimin Chen 0004",
+      "Ning Zhang 0017",
+      "Wenjing Lou",
+      "Y. Thomas Hou 0001"
+    ],
+    "venue": "ACSAC",
+    "year": 2022,
+    "abstract": "Federated meta-learning has emerged as a promising AI framework for today’s mobile computing scenes involving distributed clients. It enables collaborative model training using the data located at distributed mobile clients and accommodates clients that need fast model customization with limited new data. However, federated meta-learning solutions are susceptible to inference-based privacy attacks since the global model encoded with clients’ training data is open to all clients and the central server. Meanwhile, differential privacy (DP) has been widely used as a countermeasure against privacy inference attacks in federated learning. The adoption of DP in federated meta-learning is complicated by the model accuracy-privacy trade-off and the model hierarchy attributed to the meta-learning component. In this paper, we introduce DP-FedMeta, a new differentially private federated meta-learning architecture that addresses such data privacy challenges. DP-FedMeta features an adaptive gradient clipping method and a one-pass meta-training process to improve the model utility-privacy trade-off. At the core of DPFedMeta are two DP mechanisms, namely DP-AGR and DP-AGRLR, to provide two notions of privacy protection for the hierarchical models. Extensive experiments in an emulated federated metalearning scenario on well-known datasets (Omniglot, CIFAR-FS, and Mini-ImageNet) demonstrate that DP-FedMeta accomplishes better privacy protection while maintaining comparable model accuracy compared to the state-of-the-art solution that directly applies DP-based meta-learning to the federated setting.",
+    "citation_count": 7,
+    "reference_count": 19,
+    "url": "https://dblp.org/rec/conf/acsac/0022X00LH22",
+    "dblp_key": "conf/acsac/0022X00LH22",
+    "source_id": "https://openalex.org/W4311165713"
+  },
+  {
+    "title": "Practical Binary Code Similarity Detection with BERT-based Transferable Similarity Learning.",
+    "authors": [
+      "Sunwoo Ahn",
+      "Seonggwan Ahn",
+      "Hyungjoon Koo",
+      "Yunheung Paek"
+    ],
+    "venue": "ACSAC",
+    "year": 2022,
+    "abstract": "Binary code similarity detection (BCSD) serves as a basis for a wide spectrum of applications, including software plagiarism, malware classification, and known vulnerability discovery. However, the inference of contextual meanings of a binary is challenging due to the absence of semantic information available in source codes. Recent advances leverage the benefits of a deep learning architecture into a better understanding of underlying code semantics and the advantages of the Siamese architecture into better BCSD.",
+    "citation_count": 38,
+    "reference_count": 52,
+    "url": "https://dblp.org/rec/conf/acsac/AhnAKP22",
+    "dblp_key": "conf/acsac/AhnAKP22",
+    "source_id": "https://openalex.org/W4311166089"
+  },
+  {
+    "title": "A Recent Year On the Internet: Measuring and Understanding the Threats to Everyday Internet Devices.",
+    "authors": [
+      "Afsah Anwar",
+      "Yi Hui Chen",
+      "Roy Hodgman",
+      "Tom Sellers",
+      "Engin Kirda",
+      "Alina Oprea"
+    ],
+    "venue": "ACSAC",
+    "year": 2022,
+    "abstract": "An effective way to improve resilience to cyber attacks is to measure and understand the adversary's capabilities. Gaining insights into the threats we are exposed to helps us build better defenses, share findings with practitioners, and identify the perpetrators to limit their impact. Honeypot interactions have been widely studied in the past to measure cyber attacks, but the focus of more recent honeypot studies has been on IoT-based threats. Hence, classic threats studied by honeypots in depth a decade ago, such as desktop malware and web threats, have lately received much less attention.",
+    "citation_count": 5,
+    "reference_count": 18,
+    "url": "https://dblp.org/rec/conf/acsac/AnwarCHSKO22",
+    "dblp_key": "conf/acsac/AnwarCHSKO22",
+    "source_id": "https://openalex.org/W4311165867"
+  },
+  {
+    "title": "SpacePhish: The Evasion-space of Adversarial Attacks against Phishing Website Detectors using Machine Learning.",
+    "authors": [
+      "Giovanni Apruzzese",
+      "Mauro Conti",
+      "Ying Yuan 0002"
+    ],
+    "venue": "ACSAC",
+    "year": 2022,
+    "abstract": "Existing literature on adversarial Machine Learning (ML) focuses either on showing attacks that break every ML model, or defenses that withstand most attacks. Unfortunately, little consideration is given to the actual cost of the attack or the defense. Moreover, adversarial samples are often crafted in the \"feature-space\", making the corresponding evaluations of questionable value. Simply put, the current situation does not allow to estimate the actual threat posed by adversarial attacks, leading to a lack of secure ML systems. We aim to clarify such confusion in this paper. By considering the application of ML for Phishing Website Detection (PWD), we formalize the \"evasion-space\"in which an adversarial perturbation can be introduced to fool a ML-PWD-demonstrating that even perturbations in the \"feature-space\"are useful. Then, we propose a realistic threat model describing evasion attacks against ML-PWD that are cheap to stage, and hence intrinsically more attractive for real phishers....",
+    "citation_count": 26,
+    "reference_count": 104,
+    "url": "https://dblp.org/rec/conf/acsac/ApruzzeseCY22",
+    "dblp_key": "conf/acsac/ApruzzeseCY22",
+    "source_id": "https://openalex.org/W4307415696"
+  },
+  {
+    "title": "Spacelord: Private and Secure Smart Space Sharing.",
+    "authors": [
+      "Yechan Bae",
+      "Sarbartha Banerjee",
+      "Sangho Lee 0001",
+      "Marcus Peinado"
+    ],
+    "venue": "ACSAC",
+    "year": 2022,
+    "abstract": "Space sharing services like vacation rentals are being equipped with smart devices. However, sharing of such devices has privacy and security problems due to no or unclear control transfer between owners and users. In this paper, we propose Spacelord, a system to time-share smart devices contained in a shared space privately and securely while allowing users to configure them. When a user stays at a space, Spacelord ensures that the smart devices contained in it run code and configurations the user trusts while removing pre-installed code and configurations. When the user leaves the space, Spacelord reverts any changes the user has introduced to the smart devices to delete remaining private data and let the owner take back control over the devices. We evaluate Spacelord for two realistic space-sharing cases—smart home and coworking meeting room—and observe reasonable provisioning delay and runtime overhead.",
+    "citation_count": 2,
+    "reference_count": 29,
+    "url": "https://dblp.org/rec/conf/acsac/BaeB0P22",
+    "dblp_key": "conf/acsac/BaeB0P22",
+    "source_id": "https://openalex.org/W4311165838"
+  },
+  {
+    "title": "BayesImposter: Bayesian Estimation Based.bss Imposter Attack on Industrial Control Systems.",
+    "authors": [
+      "Anomadarshi Barua",
+      "Lelin Pan",
+      "Mohammad Abdullah Al Faruque"
+    ],
+    "venue": "ACSAC",
+    "year": 2022,
+    "abstract": "Over the last six years, several papers used memory deduplication to trigger various security issues, such as leaking heap-address and causing bit-flip in the physical memory. The most essential requirement for successful memory deduplication is to provide identical copies of a physical page. Recent works use a brute-force approach to create identical copies of a physical page that is an inaccurate and time-consuming primitive from the attacker's perspective.",
+    "citation_count": 2,
+    "reference_count": 39,
+    "url": "https://dblp.org/rec/conf/acsac/BaruaPF22",
+    "dblp_key": "conf/acsac/BaruaPF22",
+    "source_id": "https://openalex.org/W4311165729"
+  },
+  {
+    "title": "You have been warned: Abusing 5G&apos;s Warning and Emergency Systems.",
+    "authors": [
+      "Evangelos Bitsikas",
+      "Christina Pöpper"
+    ],
+    "venue": "ACSAC",
+    "year": 2022,
+    "abstract": "The years 2020 and 2021 will linger in memory as the anni horribiles of the COVID-19 pandemic-with 2022 passing the baton to global security concerns of war and peace while the pandemic is still ongoing.The predicament of the pandemic poses considerable challenges to our societies: from our everyday life and our collective interaction with and understanding of science, to our ecclesial life and our theology.This special issue of Analogia is dedicated to the study of the relationship between the pandemic and the church, science and religion, in the predominantly Orthodox countries of Bulgaria, Serbia, Romania, and Greece during 2020 & 2021, yet it also addresses a wider aspect relating to the representations of 'science' and 'religion' in the public square of these countries and beyond.On Saturday 9 April 2022, we convened a virtual workshop on 'Representations of science and religion in the public square of predominantly Orthodox countries during COVID-19' , jointly hosted by IOCS Cambridge and the Faculty of Theology 'St Clement of Ohrid' in Skopje, which formed the basis for the present issue.In the first paper, Dr Sotiris Mitralexis provides insights from Greece, with a paper titled 'Religion as Science, Science as Religion,",
+    "citation_count": 0,
+    "reference_count": 2,
+    "url": "https://dblp.org/rec/conf/acsac/BitsikasP22",
+    "dblp_key": "conf/acsac/BitsikasP22",
+    "source_id": "https://openalex.org/W4316495427"
+  },
+  {
+    "title": "Reconstruction Attack on Differential Private Trajectory Protection Mechanisms.",
+    "authors": [
+      "Erik Buchholz",
+      "Alsharif Abuadbba",
+      "Shuo Wang 0012",
+      "Surya Nepal",
+      "Salil Subhash Kanhere"
+    ],
+    "venue": "ACSAC",
+    "year": 2022,
+    "abstract": "Location trajectories collected by smartphones and other devices represent a\\nvaluable data source for applications such as location-based services.\\nLikewise, trajectories have the potential to reveal sensitive information about\\nindividuals, e.g., religious beliefs or sexual orientations. Accordingly,\\ntrajectory datasets require appropriate sanitization. Due to their strong\\ntheoretical privacy guarantees, differential private publication mechanisms\\nreceive much attention. However, the large amount of noise required to achieve\\ndifferential privacy yields structural differences, e.g., ship trajectories\\npassing over land. We propose a deep learning-based Reconstruction Attack on\\nProtected Trajectories (RAoPT), that leverages the mentioned differences to\\npartly reconstruct the original trajectory from a differential private release.\\nThe evaluation shows that our RAoPT model can reduce the Euclidean and\\nHausdorff distances between the released and original trajectories by over 68%\\non two real-world datasets under protection with $\\\\varepsilon \\\\leq 1$. In this\\nsetting, the attack increases the average Jaccard index of the trajectories'\\nconvex hulls, representing a user's activity space, by over 180%. Trained on\\nthe GeoLife dataset, the model still reduces the Euclidean and Hausdorff\\ndistances by over 60% for T-Drive trajectories protected with a\\nstate-of-the-art mechanism ($\\\\varepsilon = 0.1$). This work highlights\\nshortcomings of current trajectory publication mechanisms, and thus motivates\\nfurther research on privacy-preserving publication schemes.\\n",
+    "citation_count": 13,
+    "reference_count": 51,
+    "url": "https://dblp.org/rec/conf/acsac/BuchholzAWNK22",
+    "dblp_key": "conf/acsac/BuchholzAWNK22",
+    "source_id": "https://openalex.org/W4306885655"
+  },
+  {
+    "title": "Boosting Neural Networks to Decompile Optimized Binaries.",
+    "authors": [
+      "Ying Cao 0006",
+      "Ruigang Liang",
+      "Kai Chen 0012",
+      "Peiwei Hu"
+    ],
+    "venue": "ACSAC",
+    "year": 2022,
+    "abstract": "Decompilation aims to transform a low-level program language (LPL) (eg.,\\nbinary file) into its functionally-equivalent high-level program language (HPL)\\n(e.g., C/C++). It is a core technology in software security, especially in\\nvulnerability discovery and malware analysis. In recent years, with the\\nsuccessful application of neural machine translation (NMT) models in natural\\nlanguage processing (NLP), researchers have tried to build neural decompilers\\nby borrowing the idea of NMT. They formulate the decompilation process as a\\ntranslation problem between LPL and HPL, aiming to reduce the human cost\\nrequired to develop decompilation tools and improve their generalizability.\\nHowever, state-of-the-art learning-based decompilers do not cope well with\\ncompiler-optimized binaries. Since real-world binaries are mostly\\ncompiler-optimized, decompilers that do not consider optimized binaries have\\nlimited practical significance. In this paper, we propose a novel\\nlearning-based approach named NeurDP, that targets compiler-optimized binaries.\\nNeurDP uses a graph neural network (GNN) model to convert LPL to an\\nintermediate representation (IR), which bridges the gap between source code and\\noptimized binary. We also design an Optimized Translation Unit (OTU) to split\\nfunctions into smaller code fragments for better translation performance.\\nEvaluation results on datasets containing various types of statements show that\\nNeurDP can decompile optimized binaries with 45.21% higher accuracy than\\nstate-of-the-art neural decompilation frameworks.\\n",
+    "citation_count": 19,
+    "reference_count": 89,
+    "url": "https://dblp.org/rec/conf/acsac/CaoL0H22",
+    "dblp_key": "conf/acsac/CaoL0H22",
+    "source_id": "https://openalex.org/W4311165734"
+  },
+  {
+    "title": "From Hindsight to Foresight: Enhancing Design Artifacts for Business Logic Flaw Discovery.",
+    "authors": [
+      "Carmen Cheh",
+      "Nicholas Tay",
+      "Binbin Chen 0001"
+    ],
+    "venue": "ACSAC",
+    "year": 2022,
+    "abstract": "Web applications have encroached on our lives, handling important tasks and sensitive information. There are many tools that check application code for implementation-level vulnerabilities but they are often blind to flaws caused by violation of design-level assumptions. Fixing such flaws after code deployment is costly. In this work, we seek to retroactively identify business logic flaws or design-level flaws by generating security tests during the design phase using available software artifacts. Specifically, we take in use case scenarios and automatically generate misuse case scenarios based on user-defined design constraints. By running those misuse case scenarios using already existing testing code written for functional use cases, we can discover potential design flaws during the coding phase. We apply our approach to two widely used open-source applications which have high-quality feature files. Running our generated misuse case scenarios discovers, and hence, potentially prevents seven flaws. Among them, several were only fixed in hindsight after someone stumbled upon a bug, with the remaining being new issues.",
+    "citation_count": 2,
+    "reference_count": 11,
+    "url": "https://dblp.org/rec/conf/acsac/ChehTC22",
+    "dblp_key": "conf/acsac/ChehTC22",
+    "source_id": "https://openalex.org/W4311595398"
+  },
+  {
+    "title": "ZeroDNS: Towards Better Zero Trust Security using DNS.",
+    "authors": [
+      "Levente Csikor",
+      "Sriram Ramachandran",
+      "Anantharaman Lakshminarayanan"
+    ],
+    "venue": "ACSAC",
+    "year": 2022,
+    "abstract": "Due to the increasing adoption of public cloud services, virtualization, IoT, and emerging 5G technologies, enterprise network services and users, e.g., remote workforce, can be at any physical location. This results in that network perimeter cannot be defined precisely anymore, making adequate access control with traditional perimeter-based network security models (e.g., firewall, DMZ) challenging. The Zero Trust (ZT) network access framework breaks with this traditional approach by removing the implicit trust in the network. ZT demands strong authentication, authorization, and encryption techniques irrespective of the physical location of the devices. While several prominent companies have embraced ZT (e.g., Google, Microsoft, Cloudflare), its adoption has several obstacles.",
+    "citation_count": 5,
+    "reference_count": 11,
+    "url": "https://dblp.org/rec/conf/acsac/CsikorRL22",
+    "dblp_key": "conf/acsac/CsikorRL22",
+    "source_id": "https://openalex.org/W4311165944"
+  },
+  {
+    "title": "Trebiz: Byzantine Fault Tolerance with Byzantine Merchants.",
+    "authors": [
+      "Xiaohai Dai",
+      "Liping Huang",
+      "Jiang Xiao",
+      "Zhaonan Zhang",
+      "Xia Xie",
+      "Hai Jin 0001"
+    ],
+    "venue": "ACSAC",
+    "year": 2022,
+    "abstract": "The popularity of blockchain technology has revived interest in Byzantine Fault Tolerance (BFT) consensus protocols. However, existing protocols suffer from high latency, especially when the system is deployed in a worldwide manner. Taking Practical Byzantine Fault Tolerance (PBFT), the best-known and de-facto standard of BFT consensus protocol, as an example, it requires at least three phases to commit a request. Although some works attempt to shorten the number of phases by proposing a fast-path commitment rule, they either sacrifice resilience or subvert security.",
+    "citation_count": 12,
+    "reference_count": 34,
+    "url": "https://dblp.org/rec/conf/acsac/DaiHXZX022",
+    "dblp_key": "conf/acsac/DaiHXZX022",
+    "source_id": "https://openalex.org/W4311165839"
+  },
+  {
+    "title": "Drone Authentication via Acoustic Fingerprint.",
+    "authors": [
+      "Yufeng Diao",
+      "Yichi Zhang",
+      "Guodong Zhao 0001",
+      "Mohamed Khamis"
+    ],
+    "venue": "ACSAC",
+    "year": 2022,
+    "abstract": "As drones become widely used in different applications, drone authentication becomes increasingly important due to various security risks, e.g., drone impersonation attacks. In this paper, we propose an idea of drone authentication based on Mel-frequency cepstral coefficient (MFCC) using an acoustic fingerprint that is physically embedded in each drone. We also point out that the uniqueness of the drone’s sound comes from the combination of bodies (motors) and propellers. In the experiment with 8 drones, we compare the authentication accuracy of different feature extraction settings. Three kinds of different sound features are used: MFCC, delta MFCC (DMFCC), and delta-delta MFCC (DDMFCC). We choose the feature extraction settings and the sound features according to the best authentication result. In the experiment with 24 drones, we compare the closed set authentication performance of eight machine learning methods in terms of recall under the influence of additive white Gaussian noise (AWGN) with different levels of signal-to-noise ratio (SNR). Furthermore, we conduct an open set drone authentication experiment. Our results show that Quadratic Discriminant Analysis (QDA) outperforms other methods in terms of the highest average recall (94.19%) in the authentication of registered drones and the third highest average recall (82.35%) in the authentication of unregistered drones.",
+    "citation_count": 14,
+    "reference_count": 32,
+    "url": "https://dblp.org/rec/conf/acsac/DiaoZZK22",
+    "dblp_key": "conf/acsac/DiaoZZK22",
+    "source_id": "https://openalex.org/W4311166012"
+  },
+  {
+    "title": "DF-SCA: Dynamic Frequency Side Channel Attacks are Practical.",
+    "authors": [
+      "Debopriya Roy Dipta",
+      "Berk Gülmezoglu"
+    ],
+    "venue": "ACSAC",
+    "year": 2022,
+    "abstract": "The arm race between hardware security engineers and side-channel researchers has become more competitive with more sophisticated attacks and defenses in the last decade. While modern hardware features improve the system performance significantly, they may create new attack surfaces for malicious people to extract sensitive information about users without physical access to the victim device. Although many previously exploited hardware and OS features were patched by OS developers and chip vendors, any feature that is accessible from userspace applications can be exploited to perform software-based side-channel attacks.",
+    "citation_count": 18,
+    "reference_count": 32,
+    "url": "https://dblp.org/rec/conf/acsac/DiptaG22",
+    "dblp_key": "conf/acsac/DiptaG22",
+    "source_id": "https://openalex.org/W4311165841"
+  },
+  {
+    "title": "Assessing Model-free Anomaly Detection in Industrial Control Systems Against Generic Concealment Attacks.",
+    "authors": [
+      "Alessandro Erba 0001",
+      "Nils Ole Tippenhauer"
+    ],
+    "venue": "ACSAC",
+    "year": 2022,
+    "abstract": "In recent years, a number of model-free process-based anomaly detection schemes for Industrial Control Systems (ICS) were proposed. Model-free anomaly detectors are trained directly from process data and do not require process knowledge. They are validated based on a set of public data with limited attacks present. As result, the resilience of those schemes against general concealment attacks is unclear. In addition, no structured discussion on the properties verified by the detectors exists. In this work, we provide the first systematic analysis of such anomaly detection schemes, focusing on six model-free process-based anomaly detectors. We hypothesize that the detectors verify a combination of temporal, spatial, and statistical consistencies. To test this, we systematically analyse their resilience against generic concealment attacks. Our generic concealment attacks are designed to violate a specific consistency verified by the detector, and require no knowledge of the attacked physical process or the detector. In addition, we compare against prior work attacks that were designed to attack neural network-based detectors. Our results demonstrate that the evaluated model-free detectors are in general susceptible to generic concealment attacks. For each evaluated detector, at least one of our generic concealment attacks performs better than prior work attacks. In particular, the results allow us to show which specific consistencies are verified by each detector. We also find that prior work attacks that target neural-network architectures transfer surprisingly well against other architectures.",
+    "citation_count": 11,
+    "reference_count": 36,
+    "url": "https://dblp.org/rec/conf/acsac/ErbaT22",
+    "dblp_key": "conf/acsac/ErbaT22",
+    "source_id": "https://openalex.org/W4311165941"
+  },
+  {
+    "title": "User Perceptions of the Privacy and Usability of Smart DNS.",
+    "authors": [
+      "Rahel A. Fainchtein",
+      "Adam J. Aviv",
+      "Micah Sherr"
+    ],
+    "venue": "ACSAC",
+    "year": 2022,
+    "abstract": "Smart DNS (SDNS) services enable their users to avoid geographic restrictions to content (i.e., geoblocking) with minimal internet quality of service overhead. While previous research has shown that usage of SDNS has numerous associated privacy risks, the security and privacy perceptions of users of SDNS are unexplored. In this paper, we perform a survey of n = 63 SDNS users, finding that many have limited understandings both of how these systems work and their overall security/privacy properties. As a result, many users put undue trust in purveyors of SDNS services and in the security they provide.",
+    "citation_count": 2,
+    "reference_count": 12,
+    "url": "https://dblp.org/rec/conf/acsac/FainchteinAS22",
+    "dblp_key": "conf/acsac/FainchteinAS22",
+    "source_id": "https://openalex.org/W4311165741"
+  },
+  {
+    "title": "AFLGuard: Byzantine-robust Asynchronous Federated Learning.",
+    "authors": [
+      "Minghong Fang",
+      "Jia Liu 0002",
+      "Neil Zhenqiang Gong",
+      "Elizabeth S. Bentley"
+    ],
+    "venue": "ACSAC",
+    "year": 2022,
+    "abstract": "Federated learning (FL) is an emerging machine learning paradigm, in which clients jointly learn a model with the help of a cloud server. A fundamental challenge of FL is that the clients are often heterogeneous, e.g., they have different computing powers, and thus the clients may send model updates to the server with substantially different delays. Asynchronous FL aims to address this challenge by enabling the server to update the model once any client's model update reaches it without waiting for other clients' model updates. However, like synchronous FL, asynchronous FL is also vulnerable to poisoning attacks, in which malicious clients manipulate the model via poisoning their local data and/or model updates sent to the server. Byzantine-robust FL aims to defend against poisoning attacks. In particular, Byzantine-robust FL can learn an accurate model even if some clients are malicious and have Byzantine behaviors. However, most existing studies on Byzantine-robust FL focused on synchronous FL, leaving asynchronous FL largely unexplored. In this work, we bridge this gap by proposing AFLGuard, a Byzantine-robust asynchronous FL method. We show that, both theoretically and empirically, AFLGuard is robust against various existing and adaptive poisoning attacks (both untargeted and targeted). Moreover, AFLGuard outperforms existing Byzantine-robust asynchronous FL methods.",
+    "citation_count": 17,
+    "reference_count": 16,
+    "url": "https://dblp.org/rec/conf/acsac/FangLGB22",
+    "dblp_key": "conf/acsac/FangLGB22",
+    "source_id": "https://openalex.org/W4311165757"
+  },
+  {
+    "title": "View from Above: Exploring the Malware Ecosystem from the Upper DNS Hierarchy.",
+    "authors": [
+      "Aaron Faulkenberry",
+      "Athanasios Avgetidis",
+      "Zane Ma",
+      "Omar Alrawi",
+      "Charles Lever",
+      "Panagiotis Kintis",
+      "Fabian Monrose",
+      "Angelos D. Keromytis",
+      "Manos Antonakakis"
+    ],
+    "venue": "ACSAC",
+    "year": 2022,
+    "abstract": "This work explores authoritative DNS (AuthDNS) as a new measurement perspective for studying the large-scale epidemiology of the malware ecosystem—when and where infections occur, and what infrastructure spreads and controls malware. Utilizing an AuthDNS dataset from a top registrar, we observe malware heterogeneity (202 families), global infrastructure (399,830 IPs in 151 countries) and infection (40,937 querying Autonomous Systems (ASes)) visibility, as well as breadth of temporal coverage (2017–2021). This combination of factors enables an extensive analysis of the malware ecosystem that reinforces prior work on malware infrastructure and also contributes new perspectives on malware infection distribution and lifecycle. We find that malware families re-use infrastructure, especially in cloud hosting countries, but contrary to prior work, we do not detect targeting of clients by countries or industry sector. Furthermore, our 4-year lifecycle analysis of diverse malware families shows that infection analysis is temporally sensitive: over 90% of ASes first query a malicious domain after public detection, and a median of 38.6% ASes only query after domain expiration or takedown. To fit AuthDNS into the broader context of malware research, we conclude with a comparison of experimental vantage points on four qualitative aspects and discuss their advantages and limitations. Ultimately, we establish AuthDNS as a unique measurement perspective capable of measuring global malware infections.",
+    "citation_count": 5,
+    "reference_count": 25,
+    "url": "https://dblp.org/rec/conf/acsac/FaulkenberryAMA22",
+    "dblp_key": "conf/acsac/FaulkenberryAMA22",
+    "source_id": "https://openalex.org/W4311165740"
+  },
+  {
+    "title": "Snappy: Efficient Fuzzing with Adaptive and Mutable Snapshots.",
+    "authors": [
+      "Elia Geretto",
+      "Cristiano Giuffrida",
+      "Herbert Bos",
+      "Erik van der Kouwe"
+    ],
+    "venue": "ACSAC",
+    "year": 2022,
+    "abstract": "Modern coverage-oriented fuzzers play a crucial role in vulnerability finding. While much research focuses on improving the core fuzzing techniques, some fundamental speed bottlenecks, such as the redundant computations incurred by re-executing the target for every input, remain. Prior solutions mitigate the impact of redundant computations by instead fuzzing a program snapshot, such as the one placed by a fork server at the program entry point or generalizations for annotated APIs, drivers, networked servers, etc. Such snapshots are static and, as such, cannot adapt to the characteristics of the target and the input, missing opportunities to further reduce redundancy and improve fuzzing speed. In this paper, we present Snappy, a new approach to speed up fuzzing by aggressively pruning redundant computations with adaptive and mutable snapshots. The key ideas are to: (i) push the snapshot as deep in the target execution as possible and also end its execution as early as possible, according to how the target processes the relevant input data (adaptive placement); (ii) for each identified placement, cache snapshots across different inputs by patching the snapshot just-in-time with the relevant input data (mutable restore). We propose a generic design applicable to both branch-agnostic and branch-guided input mutation operators and demonstrate Snappy on top of Angora (supporting both classes of operators). Our evaluation shows that, while general, Snappy scores gains even compared to a fork server with hand-optimized static placement such as in FuzzBench, for instance obtaining up to ≈ 1.8x speedups across benchmarks.",
+    "citation_count": 9,
+    "reference_count": 24,
+    "url": "https://dblp.org/rec/conf/acsac/GerettoGBK22",
+    "dblp_key": "conf/acsac/GerettoGBK22",
+    "source_id": "https://openalex.org/W4311165842"
+  },
+  {
+    "title": "Curiosity-Driven and Victim-Aware Adversarial Policies.",
+    "authors": [
+      "Chen Gong 0005",
+      "Zhou Yang 0003",
+      "Yunpeng Bai",
+      "Jieke Shi",
+      "Arunesh Sinha",
+      "Bowen Xu",
+      "David Lo 0001",
+      "Xinwen Hou",
+      "Guoliang Fan"
+    ],
+    "venue": "ACSAC",
+    "year": 2022,
+    "abstract": "Recent years have witnessed great potential in applying Deep Reinforcement Learning (DRL) in various challenging applications, such as autonomous driving, nuclear fusion control, complex game playing, etc. However, recently researchers have revealed that deep reinforcement learning models are vulnerable to adversarial attacks: malicious attackers can train adversarial policies to tamper with the observations of a well-trained victim agent, the latter of which fails dramatically when faced with such an attack. Understanding and improving the adversarial robustness of deep reinforcement learning is of great importance in enhancing the quality and reliability of a wide range of DRL-enabled systems.",
+    "citation_count": 14,
+    "reference_count": 35,
+    "url": "https://dblp.org/rec/conf/acsac/Gong0BSSX0HF22",
+    "dblp_key": "conf/acsac/Gong0BSSX0HF22",
+    "source_id": "https://openalex.org/W4311165731"
+  },
+  {
+    "title": "Ripples in the Pond: Transmitting Information through Grid Frequency Modulation.",
+    "authors": [
+      "Jan Sebastian Götte",
+      "Liran Katzir 0002",
+      "Björn Scheuermann 0001"
+    ],
+    "venue": "ACSAC",
+    "year": 2022,
+    "abstract": "The growing heterogenous ecosystem of networked consumer devices such as smart meters or IoT-connected appliances such as air conditioners is difficult to secure, unlike the utility side of the grid which can be defended effectively through rigorous IT security measures such as isolated control networks. In this paper, we consider a crisis scenario in which an attacker compromises a large number of consumer-side devices and modulates their electrical power to destabilize the grid and cause an electrical outage [9, 26, 27, 47, 50, 55].&#13;\\n&#13;\\nIn this paper propose a broadcast channel based on the modulation of grid frequency through which utility operators can issue commands to devices at the consumer premises both during an attack for mitigation and in its wake to aid recovery. Our proposed grid frequency modulation (GFM) channel is independent of other telecommunication networks. It is resilient towards localized blackouts and it is operational immediately after power is restored.&#13;\\n&#13;\\nBased on our GFM broadcast channel we propose a “safety reset” system to mitigate an ongoing attack by disabling a device’s network interfaces and resetting its control functions. It can also be used in the wake of an attack to aid recovery by shutting down non-essential loads to reduce strain on the grid.&#13;\\n&#13;\\nTo validate our proposed design, we conducted simulations based on measured grid frequency behavior. Based on these simulations, we performed an experimental validation on simulated grid voltage waveforms using a smart meter equipped with a prototype safety reset system based on a commodity microcontroller.",
+    "citation_count": 2,
+    "reference_count": 34,
+    "url": "https://dblp.org/rec/conf/acsac/Gotte0022",
+    "dblp_key": "conf/acsac/Gotte0022",
+    "source_id": "https://openalex.org/W4311165743"
+  },
+  {
+    "title": "Formal Modeling and Security Analysis for Intra-level Privilege Separation.",
+    "authors": [
+      "Yinggang Guo",
+      "Zicheng Wang 0010",
+      "Bingnan Zhong",
+      "Qingkai Zeng 0002"
+    ],
+    "venue": "ACSAC",
+    "year": 2022,
+    "abstract": "Privileged system software such as mainstream operating system kernels and hypervisors have an ongoing stream of vulnerabilities. Even the inflated secure world in Trusted Execution Environment (TEE) is no longer secure in complex real-world scenarios. Since higher privilege levels cannot always be stacked to provide protection, intra-level privilege separation has become a powerful way to build trustworthy systems. However, existing intra-level privilege separation systems lack sound security analysis and cannot give formal guarantees.",
+    "citation_count": 0,
+    "reference_count": 32,
+    "url": "https://dblp.org/rec/conf/acsac/GuoWZZ22",
+    "dblp_key": "conf/acsac/GuoWZZ22",
+    "source_id": "https://openalex.org/W4311165859"
+  },
+  {
+    "title": "POPKORN: Popping Windows Kernel Drivers At Scale.",
+    "authors": [
+      "Rajat Gupta",
+      "Lukas Patrick Dresel",
+      "Noah Spahn",
+      "Giovanni Vigna",
+      "Christopher Kruegel",
+      "Taesoo Kim"
+    ],
+    "venue": "ACSAC",
+    "year": 2022,
+    "abstract": "External vendors develop a significant percentage of Windows kernel drivers, and Microsoft relies on these vendors to handle all aspects of driver security. Unfortunately, device vendors are not immune to software bugs, which in some cases can be exploited to gain elevated privileges. Testing the security of kernel drivers remains challenging: the lack of source code, the requirement of the presence of a physical device, and the need for a functional kernel execution environment are all factors that can prevent thorough security analysis. As a result, there are no binary analysis tools that can scale and accurately find bugs at the Windows kernel level. To address these challenges, we introduce POPKORN, a lightweight framework that harnesses the power of taint analysis and targeted symbolic execution to automatically find security bugs in Windows kernel drivers at scale. Our system focuses on a class of bugs that affect security-critical Windows API functions used in privilege-escalation exploits. POPKORN analyzes drivers independently of both the kernel and the device, avoiding the complexity of performing a full-system analysis. We evaluate our system on a diverse dataset of 212 unique signed Windows kernel drivers. When run against these drivers, POPKORN reported 38 high impact bugs in 27 unique drivers, with manual verification revealing no false positives.Among thebugswe found, 31 were previously unknown vulnerabilities that potentially allow for Elevation of Privilege (EoP). During this research, we have received two CVEs and six acknowledgments from different driver vendors, and we continue to work with vendors to fix the issues that we identified.",
+    "citation_count": 0,
+    "reference_count": 9,
+    "url": "https://dblp.org/rec/conf/acsac/GuptaDSVKK22",
+    "dblp_key": "conf/acsac/GuptaDSVKK22",
+    "source_id": "https://openalex.org/W4311165923"
+  },
+  {
+    "title": "Differentially Private Map Matching for Mobility Trajectories.",
+    "authors": [
+      "Ammar Haydari",
+      "Chen-Nee Chuah",
+      "H. Michael Zhang",
+      "Jane MacFarlane",
+      "Sean Peisert"
+    ],
+    "venue": "ACSAC",
+    "year": 2022,
+    "abstract": "Human mobility trajectories provide valuable information for developing mobility applications, as they contain diverse and rich information about the users. User mobility data is valuable for various applications such as intelligent transportation systems (ITS), commercial business models, and disease-spread models. However, such spatio-temporal traces may pose a threat to user privacy. GPS trajectories in their raw form are not suitable for transportation studies, as they require matching locations with nearest road links-a process called map-matching. This paper presents a differential privacy (DP)-based map-matching algorithm, called DPMM, that generates link-level location trajectories in a privacy-preserving manner to protect users' origin destinations (OD) and travel paths. OD privacy is achieved by injecting Planar Laplace noise to the user OD GPS points. Travel-path privacy is provided with randomized travel path construction using exponential DP mechanism. The injected noise level is selected adaptively, by considering the link density of the location and the functional category of the localized links. For path privacy, our mechanism samples waypoints and selects candidate paths between waypoints. DPMM provides privacy effectively with respect to link density instead of other trajectory samples in the database compared to other privacy mechanisms. Compared to the different baseline models our DP-based privacy model offers closer query responses to the raw data in terms of individual and aggregate trajectory-level statistics with an average at absolute deviation from the baseline for individual statistics on eμ = 1.0. Beyond individual trajectory statistics, the DPMM outperforms the other benchmark DP-based mechanisms on different aggregate statistics with up to 8x improvement in utility.",
+    "citation_count": 1,
+    "reference_count": 36,
+    "url": "https://dblp.org/rec/conf/acsac/HaydariCZMP22",
+    "dblp_key": "conf/acsac/HaydariCZMP22",
+    "source_id": "https://openalex.org/W4311165744"
+  },
+  {
+    "title": "Are There Wireless Hidden Cameras Spying on Me?",
+    "authors": [
+      "Jeongyoon Heo",
+      "Sangwon Gil",
+      "Youngman Jung",
+      "Jinmok Kim",
+      "Donguk Kim 0003",
+      "Woojin Park",
+      "Yongdae Kim",
+      "Kang G. Shin",
+      "Choong-Hoon Lee"
+    ],
+    "venue": "ACSAC",
+    "year": 2022,
+    "abstract": "The proliferation of IoT devices has created risks of their abuse for unauthorized sensing/monitoring of our daily activities. Especially, the leakage of images taken by wireless spy cameras in sensitive spaces, such as hotel rooms, Airbnb rentals, public restrooms, and shower rooms, has become a serious privacy concern/threat. To mitigate/address this pressing concern, we propose a Spy Camera Finder (SCamF) that uses ubiquitous smartphones to detect and locate wireless spy cameras by analyzing encrypted Wi-Fi network traffic. Not only by characterizing the network traffic patterns of wireless cameras but also by reconstructing encoded video frame sizes from encrypted traffic, SCamF effectively determines the existence of wireless cameras on the Wi-Fi networks, and accurately verifies whether the thus-detected cameras are indeed recording users' activities. SCamF also accurately locates spy cameras by analyzing reconstructed video frame sizes. We have implemented SCamF on Android smartphones and evaluated its performance on a real testbed across 20 types of wireless cameras. Our experimental results show SCamF to: (1) classify wireless cameras with an accuracy of 0.98; (2) detect spy cameras among the classified wireless cameras with a true positive rate (TPR) of 0.97; (3) incur low false positive rates (FPRs) of 0 and 0.031 for non-camera devices and cameras not recording the users' activities, respectively; (4) locate spy cameras with centimeter-level distance errors.",
+    "citation_count": 14,
+    "reference_count": 27,
+    "url": "https://dblp.org/rec/conf/acsac/HeoGJK0PKSL22",
+    "dblp_key": "conf/acsac/HeoGJK0PKSL22",
+    "source_id": "https://openalex.org/W4311165748"
+  },
+  {
+    "title": "FAuST: Striking a Bargain between Forensic Auditing&apos;s Security and Throughput.",
+    "authors": [
+      "Muhammad Adil Inam",
+      "Akul Goyal",
+      "Jason Liu 0002",
+      "Jaron Mink",
+      "Noor Michael",
+      "Sneha Gaur",
+      "Adam Bates 0001",
+      "Wajih Ul Hassan"
+    ],
+    "venue": "ACSAC",
+    "year": 2022,
+    "abstract": null,
+    "citation_count": 7,
+    "reference_count": 52,
+    "url": "https://dblp.org/rec/conf/acsac/InamGLMMG0H22",
+    "dblp_key": "conf/acsac/InamGLMMG0H22",
+    "source_id": "27ade12ad3459bdb3c0ddc520121e6594bfea1eb"
+  },
+  {
+    "title": "Accept All Exploits: Exploring the Security Impact of Cookie Banners.",
+    "authors": [
+      "David Klein 0001",
+      "Marius Musch",
+      "Thomas Barber",
+      "Moritz Kopmann",
+      "Martin Johns"
+    ],
+    "venue": "ACSAC",
+    "year": 2022,
+    "abstract": "The General Data Protection Regulation (GDPR) and related regulations have had a profound impact on most aspects related to privacy on the Internet. By requiring the user's consent for e.g., tracking, an affirmative action has to take place before such data collection is lawful, leading to spread of so-called cookie banners across the Web. While the privacy impact and how well companies adhere to those regulations have been studied in detail, an open question is what effect these banners have on the security of netizens.",
+    "citation_count": 9,
+    "reference_count": 33,
+    "url": "https://dblp.org/rec/conf/acsac/KleinMBKJ22",
+    "dblp_key": "conf/acsac/KleinMBKJ22",
+    "source_id": "https://openalex.org/W4311165858"
+  },
+  {
+    "title": "SLOPT: Bandit Optimization Framework for Mutation-Based Fuzzing.",
+    "authors": [
+      "Yuki Koike",
+      "Hiroyuki Katsura",
+      "Hiromu Yakura",
+      "Yuma Kurogome"
+    ],
+    "venue": "ACSAC",
+    "year": 2022,
+    "abstract": "Mutation-based fuzzing has become one of the most common vulnerability discovery solutions over the last decade. Fuzzing can be optimized when targeting specific programs, and given that, some studies have employed online optimization methods to do it automatically, i.e., tuning fuzzers for any given program in a program-agnostic manner. However, previous studies have neither fully explored mutation schemes suitable for online optimization methods, nor online optimization methods suitable for mutation schemes. In this study, we propose an optimization framework called SLOPT that encompasses both a bandit-friendly mutation scheme and mutation-scheme-friendly bandit algorithms. The advantage of SLOPT is that it can generally be incorporated into existing fuzzers, such as AFL and Honggfuzz. As a proof of concept, we implemented SLOPT-AFL++ by integrating SLOPT into AFL++ and showed that the program-agnostic optimization delivered by SLOPT enabled SLOPT-AFL++ to achieve higher code coverage than AFL++ in all of ten real-world FuzzBench programs. Moreover, we ran SLOPT-AFL++ against several real-world programs from OSS-Fuzz and successfully identified three previously unknown vulnerabilities, even though these programs have been fuzzed by AFL++ for a considerable number of CPU days on OSS-Fuzz.",
+    "citation_count": 3,
+    "reference_count": 62,
+    "url": "https://dblp.org/rec/conf/acsac/KoikeKYK22",
+    "dblp_key": "conf/acsac/KoikeKYK22",
+    "source_id": "https://openalex.org/W4308614347"
+  },
+  {
+    "title": "DRAGON: Deep Reinforcement Learning for Autonomous Grid Operation and Attack Detection.",
+    "authors": [
+      "Matthew Landen",
+      "Key-whan Chung",
+      "Moses Ike",
+      "Sarah Mackay",
+      "Jean-Paul Watson",
+      "Wenke Lee"
+    ],
+    "venue": "ACSAC",
+    "year": 2022,
+    "abstract": "As power grids have evolved, IT has become integral to maintaining reliable power. While providing operators improved situational awareness and the ability to rapidly respond to dynamic situations, IT concurrently increases the cyberattack threat surface – as recent grid attacks such as Blackenergy and Crashoverride illustrate. To defend against such attacks, modern power grids require a system that can maintain reliable power during attacks and detect when these attacks occur to allow for a timely response. To help address limitations of prior work, we propose DRAGON– deep reinforcement learning for autonomous grid operation and attack detection, which (i) autonomously learns how to maintain reliable power operations while (ii) simultaneously detecting cyberattacks. We implement DRAGON and evaluate its effectiveness by simulating different attack scenarios on the IEEE 14 bus power transmission system model. Our experimental results show that DRAGON can maintain safe grid operations 225.5% longer than a state-of-the-art autonomous grid operator. Furthermore, on average, our detection method reports a true positive rate of 92.9% and a false positive rate of 11.4%, while also reducing the false negative rate by 63.1% compared to a recent attack detection method.",
+    "citation_count": 8,
+    "reference_count": 53,
+    "url": "https://dblp.org/rec/conf/acsac/LandenCIMWL22",
+    "dblp_key": "conf/acsac/LandenCIMWL22",
+    "source_id": "https://openalex.org/W4311166084"
+  },
+  {
+    "title": "MoLE: Mitigation of Side-channel Attacks against SGX via Dynamic Data Location Escape.",
+    "authors": [
+      "Fan Lang",
+      "Wei Wang 0314",
+      "Lingjia Meng",
+      "Jingqiang Lin 0001",
+      "Qiongxiao Wang",
+      "Linli Lu"
+    ],
+    "venue": "ACSAC",
+    "year": 2022,
+    "abstract": "Numerous works have experimentally shown that Intel Software Guard eXtensions (SGX) is vulnerable to side-channel attacks (SCAs) and related threats, including transient execution attacks. These threats compromise the security of SGX-protected apps. Obfuscating data access patterns is a realistic way to guard against these threats. However, existing defenses impose either too much performance overhead or additional usage restrictions (such as multi-threading). Furthermore, these obfuscation schemes may no longer work if the attacker has the capacity to single-step the target application.",
+    "citation_count": 9,
+    "reference_count": 27,
+    "url": "https://dblp.org/rec/conf/acsac/Lang0MLWL22",
+    "dblp_key": "conf/acsac/Lang0MLWL22",
+    "source_id": "https://openalex.org/W4311165943"
+  },
+  {
+    "title": "CryptoGo: Automatic Detection of Go Cryptographic API Misuses.",
+    "authors": [
+      "Wenqing Li",
+      "Shijie Jia 0001",
+      "Limin Liu",
+      "Fangyu Zheng",
+      "Yuan Ma",
+      "Jingqiang Lin 0001"
+    ],
+    "venue": "ACSAC",
+    "year": 2022,
+    "abstract": "Cryptographic algorithms act as essential ingredients of all secure systems. However, the expected security guarantee from cryptographic algorithms often falls short in practice due to various cryptographic application programming interfaces (API) misuses. While many research studies target cryptographic API misuses in the cases of Java, C/C++ and Python, similar issues within the Go domain are still uncovered.",
+    "citation_count": 12,
+    "reference_count": 23,
+    "url": "https://dblp.org/rec/conf/acsac/Li0LZML22",
+    "dblp_key": "conf/acsac/Li0LZML22",
+    "source_id": "https://openalex.org/W4311165732"
+  },
+  {
+    "title": "MProbe: Make the code probing meaningless.",
+    "authors": [
+      "Yong-Gang Li",
+      "Yeh-Ching Chung",
+      "Jinbiao Xing",
+      "Yu Bao",
+      "Guoyuan Lin"
+    ],
+    "venue": "ACSAC",
+    "year": 2022,
+    "abstract": "Modern security methods use address space layout randomization (ASLR) to defend against code reuse attacks (CRAs). However, code probing can still obtain the content and address of the code through code probing. Code probing invalidates the widely used ASLR methods, causing researchers to lose confidence in them. On the contrary, we believe the ASLR is still effective, if it has anti-probing capability. To enhance the anti-probing capability of ASLR and defense CRAs, this paper proposes an anti-probing method MProbe. First, it detects the code probing activities of attackers, including address probing and content probing. Next, the execution permission of the probed code will be de-enabled in the original address space. At the same time, the equivalent code block in a random address space will replace the probed code. Finally, new security strategies are used to prevent the probed code blocks from being used as gadgets. Experiments and analysis show that MProbe has a good defense effect against CRAs based on code probing, and only introduces less than 3% performance overhead to the operating system (OS).",
+    "citation_count": 1,
+    "reference_count": 51,
+    "url": "https://dblp.org/rec/conf/acsac/LiCXBL22",
+    "dblp_key": "conf/acsac/LiCXBL22",
+    "source_id": "https://openalex.org/W4311165921"
+  },
+  {
+    "title": "RAPID: Real-Time Alert Investigation with Context-aware Prioritization for Efficient Threat Discovery.",
+    "authors": [
+      "Yushan Liu 0004",
+      "Xiaokui Shu",
+      "Yixin Sun",
+      "Jiyong Jang",
+      "Prateek Mittal"
+    ],
+    "venue": "ACSAC",
+    "year": 2022,
+    "abstract": "Alerts reported by intrusion detection systems (IDSes) are often the starting points for attack campaign discovery and response procedures. However, the sheer number of alerts compared to the number of real attacks, along with the complexity of alert investigations, poses a challenge to achieving effective alert triage with limited computational resources. Automated procedures and human analysts could suffer from the burden of analyzing floods of alerts, and fail to respond to critical alerts promptly.",
+    "citation_count": 13,
+    "reference_count": 16,
+    "url": "https://dblp.org/rec/conf/acsac/LiuSSJM22",
+    "dblp_key": "conf/acsac/LiuSSJM22",
+    "source_id": "https://openalex.org/W4311165940"
+  },
+  {
+    "title": "Compact Abstract Graphs for Detecting Code Vulnerability with GNN Models.",
+    "authors": [
+      "Yu Luo",
+      "Weifeng Xu",
+      "Dianxiang Xu"
+    ],
+    "venue": "ACSAC",
+    "year": 2022,
+    "abstract": "Source code representation is critical to the machine-learning-based approach to detecting code vulnerability. This paper proposes Compact Abstract Graphs (CAGs) of source code in different programming languages for predicting a broad range of code vulnerabilities with Graph Neural Network (GNN) models. CAGs make the source code representation aligned with the task of vulnerability classification and reduce the graph size to accelerate model training with minimum impact on the prediction performance. We have applied CAGs to six GNN models and large Java/C datasets with 114 vulnerability types in Java programs and 106 vulnerability types in C programs. The experiment results show that the GNN models have performed well, with accuracy ranging from 94.7% to 96.3% on the Java dataset and from 91.6% to 93.2% on the C dataset. The resultant GNN models have achieved promising performance when applied to more than 2,500 vulnerabilities collected from real-world software projects. The results also show that using CAGs for GNN models is significantly better than ASTs, CFGs (Control Flow Graphs), and PDGs (Program Dependence Graphs). A comparative study has demonstrated that the CAG-based GNN models can outperform the existing methods for machine learning-based vulnerability detection.",
+    "citation_count": 9,
+    "reference_count": 45,
+    "url": "https://dblp.org/rec/conf/acsac/LuoXX22",
+    "dblp_key": "conf/acsac/LuoXX22",
+    "source_id": "https://openalex.org/W4311165706"
+  },
+  {
+    "title": "Stopping Silent Sneaks: Defending against Malicious Mixes with Topological Engineering.",
+    "authors": [
+      "Xinshu Ma",
+      "Florentin Rochet",
+      "Tariq Elahi"
+    ],
+    "venue": "ACSAC",
+    "year": 2022,
+    "abstract": "Mixnets provide strong meta-data privacy and recent academic research and industrial projects have made strides in making them more secure, performant, and scalable. In this paper, we focus our work on stratified Mixnets, a popular design with real-world adoption. We identify and measure significant impacts of practical aspects such as: relay sampling and topology placement, network churn, and risks due to real-world usage patterns. We show that, due to the lack of incorporating these aspects in design decisions, Mixnets of this type are far more susceptible to user deanonymization than expected. In order to reason about and resolve these issues, we model Mixnets as a three-stage \"Sample-Placement-Forward\" pipeline and develop tools to analyze and evaluate design decisions. To address the identified gaps and weaknesses we propose Bow-Tie, a design that mitigates user deanonymization through a novel adaption of Tor's guard design with an engineered guard layer and client guard-logic for stratified mixnets. We show that Bow-Tie has significantly higher user anonymity in the dynamic setting, where the Mixnet is used over a period of time, and is no worse in the static setting, where the user only sends a single message. We show the necessity of both the guard layer and client guard-logic in tandem as well as their individual effect when incorporated into other reference designs. We develop and implement two tools, 1) a mixnet topology generator (Mixnet-Topology-Generator (MTG)) and 2) a path simulator and security evaluator (routesim) that takes into account temporal dynamics and user behavior, to assist our analysis and empirical data collection. These tools are designed to help Mixnet designers assess the security and performance impact of their design decisions.",
+    "citation_count": 2,
+    "reference_count": 37,
+    "url": "https://dblp.org/rec/conf/acsac/MaRE22",
+    "dblp_key": "conf/acsac/MaRE22",
+    "source_id": "https://openalex.org/W4311165718"
+  },
+  {
+    "title": "Analysis of Payment Service Provider SDKs in Android.",
+    "authors": [
+      "Samin Yaseer Mahmud",
+      "K. Virgil English",
+      "Seaver Thorn",
+      "William Enck",
+      "Adam Oest",
+      "Muhammad Saad 0001"
+    ],
+    "venue": "ACSAC",
+    "year": 2022,
+    "abstract": "Payment Service Providers (PSPs) provide software development toolkits (SDKs) for integrating complex payment processing code into applications. Security weaknesses in payment SDKs can impact thousands of applications. In this work, we propose AARDroid for statically assessing payment SDKs against OWASP's MASVS industry standard for mobile application security. In creating AARDroid, we adapted application-level requirements and program analysis tools for SDK-specific analysis, tailoring dataflow analysis for SDKs using domain-specific ontologies to infer the security semantics of application programming interfaces (APIs). We apply AARDroid to 50 payment SDKs and discover security weaknesses including saving unencrypted credit card information to files, use of insecure cryptographic primitives, insecure input methods for credit card information, and insecure use of WebViews. These results demonstrate the value of applying security analysis at the SDK granularity to prevent the widespread deployment of insecure code.",
+    "citation_count": 1,
+    "reference_count": 34,
+    "url": "https://dblp.org/rec/conf/acsac/MahmudETEOS22",
+    "dblp_key": "conf/acsac/MahmudETEOS22",
+    "source_id": "https://openalex.org/W4311165752"
+  },
+  {
+    "title": "Learning from Failures: Secure and Fault-Tolerant Aggregation for Federated Learning.",
+    "authors": [
+      "Mohamad Mansouri",
+      "Melek Önen",
+      "Wafa Ben Jaballah"
+    ],
+    "venue": "ACSAC",
+    "year": 2022,
+    "abstract": "Federated learning allows multiple parties to collaboratively train a global machine learning (ML) model without sharing their private datasets. To make sure that these local datasets are not leaked, existing works propose to rely on a secure aggregation scheme that allows parties to encrypt their model updates before sending them to the central server that aggregates the encrypted inputs. In this work, we design and evaluate a new secure and fault-tolerant aggregation scheme for federated learning that is robust against client failures. We first develop a threshold-variant of the secure aggregation scheme proposed by Joye and Libert. Using this new building block together with a dedicated decentralized key management scheme and an input encoding solution, we design a privacy-preserving federated learning protocol that, when executed among n clients, can recover from up to failures. Our solution is secure against a malicious aggregator who can manipulate messages to learn clients' individual inputs. We show that our solution outperforms the state-of-the-art fault-tolerant secure aggregation schemes in terms of computation cost on the client. For example, with an ML model of 100,000 parameters, trained with 600 clients, our protocol is 5.5x faster (1.6x faster in case of 180 clients drop).",
+    "citation_count": 18,
+    "reference_count": 26,
+    "url": "https://dblp.org/rec/conf/acsac/MansouriOJ22",
+    "dblp_key": "conf/acsac/MansouriOJ22",
+    "source_id": "https://openalex.org/W4311165750"
+  },
+  {
+    "title": "A Qualitative Evaluation of Reverse Engineering Tool Usability.",
+    "authors": [
+      "James Mattei",
+      "Madeline McLaughlin",
+      "Samantha Katcher",
+      "Daniel Votipka"
+    ],
+    "venue": "ACSAC",
+    "year": 2022,
+    "abstract": "Software reverse engineering is a challenging and time consuming task. With the growing demand for reverse engineering in vulnerability discovery and malware analysis, manual reverse engineering cannot scale to meet the demand. There has been significant effort to develop automated tooling to support reverse engineers, but many reverse engineers report not using these tools. In this paper, we seek to understand whether this lack of use is an issue of usability. We performed a iterative open coding of 288 reverse engineering tools to identify common input and output methods, as well as whether the tools adhered to usability guidelines established in prior work. We found that most reverse engineering tools have limited interaction and usability support. However, usability issues vary between dynamic and static tools. Dynamic tools were less likely to provide easy-to-use interfaces, while static tools often did not allow reverse engineers to adjust the analysis. Based on our findings, we give recommendations for reverse engineering framework developers and suggest directions for future HCI research in reverse engineering.",
+    "citation_count": 10,
+    "reference_count": 30,
+    "url": "https://dblp.org/rec/conf/acsac/MatteiMKV22",
+    "dblp_key": "conf/acsac/MatteiMKV22",
+    "source_id": "https://openalex.org/W4311165756"
+  },
+  {
+    "title": "Compressed Federated Learning Based on Adaptive Local Differential Privacy.",
+    "authors": [
+      "Yinbin Miao",
+      "Rongpeng Xie",
+      "Xinghua Li 0001",
+      "Ximeng Liu",
+      "Zhuo Ma 0001",
+      "Robert H. Deng"
+    ],
+    "venue": "ACSAC",
+    "year": 2022,
+    "abstract": "Federated learning (FL) was once considered secure for keeping clients' raw data locally without relaying on a central server. However, the transmitted model weights or gradients still reveal private information, which can be exploited to launch various inference attacks. Moreover, FL based on deep neural networks is prone to the curse of dimensionality. In this paper, we propose a compressed and privacy-preserving FL scheme in DNN architecture by using Compressive sensing and Adaptive local differential privacy (called as CAFL). Specifically, we first compress the local models by using Compressive Sensing (CS), then adaptively perturb the remaining weights according to their different centers of variation ranges in different layers and their own offsets from corresponding range centers by using Local Differential Privacy (LDP), finally reconstruct the global model almost perfectly by using the reconstruction algorithm of CS. Formal security analysis shows that our scheme achieves ϵ-LDP security and introduces zero bias to estimating average weights. Extensive experiments using MINIST and Fashion-MINIST datasets demonstrate that our scheme with minimum compression ratio 0.05 can reduce the number of parameters by 95%, and with a lower privacy budget ϵ = 1 can improve the accuracy by 80% on MINIST and 12.7% on Fashion-MINIST compared with state-of-the-art schemes.",
+    "citation_count": 31,
+    "reference_count": 15,
+    "url": "https://dblp.org/rec/conf/acsac/MiaoXLLMD22",
+    "dblp_key": "conf/acsac/MiaoXLLMD22",
+    "source_id": "https://openalex.org/W4311166015"
+  },
+  {
+    "title": "Closing the Loophole: Rethinking Reconstruction Attacks in Federated Learning from a Privacy Standpoint.",
+    "authors": [
+      "Seung Ho Na",
+      "Hyeong Gwon Hong",
+      "Junmo Kim 0002",
+      "Seungwon Shin 0001"
+    ],
+    "venue": "ACSAC",
+    "year": 2022,
+    "abstract": "Federated Learning was deemed as a private distributed learning framework due to the separation of data from the central server. However, recent works have shown that privacy attacks can extract various forms of private information from legacy federated learning. Previous literature describe differential privacy to be effective against membership inference attacks and attribute inference attacks, but our experiments show them to be vulnerable against reconstruction attacks. To understand this outcome, we execute a systematic study of privacy attacks from the standpoint of privacy. The privacy characteristics that reconstruction attacks infringe are different from other privacy attacks, and we suggest that privacy breach occurred at different levels. From our study, reconstruction attack defense methods entail heavy computation or communication costs. To this end, we propose Fragmented Federated Learning (FFL), a lightweight solution against reconstruction attacks. This framework utilizes a simple yet novel gradient obscuring algorithm based on a newly proposed concept called the global gradient and determines which layers are safe for submission to the server. We show empirically in diverse settings that our framework improves practical data privacy of clients in federated learning with an acceptable performance trade-off without increasing communication cost. We aim to provide a new perspective to privacy in federated learning and hope this privacy differentiation can improve future privacy-preserving methods.",
+    "citation_count": 6,
+    "reference_count": 36,
+    "url": "https://dblp.org/rec/conf/acsac/NaHKS22",
+    "dblp_key": "conf/acsac/NaHKS22",
+    "source_id": "https://openalex.org/W4311165847"
+  },
+  {
+    "title": "DeView: Confining Progressive Web Applications by Debloating Web APIs.",
+    "authors": [
+      "ChangSeok Oh",
+      "Sangho Lee 0001",
+      "Chenxiong Qian",
+      "Hyungjoon Koo",
+      "Wenke Lee"
+    ],
+    "venue": "ACSAC",
+    "year": 2022,
+    "abstract": "A progressive web application (PWA) becomes an attractive option for building universal applications based on feature-rich web Application Programming Interfaces (APIs). While flexible, such vast APIs inevitably bring a significant increase in an API attack surface, which commonly corresponds to a functionality that is neither needed nor wanted by the application. A promising approach to reduce the API attack surface is software debloating, a technique wherein an unused functionality is programmatically removed from an application. Unfortunately, debloating PWAs is challenging, given the monolithic design and non-deterministic execution of a modern web browser. In this paper, we present DeView, a practical approach that reduces the attack surface of a PWA by blocking unnecessary but accessible web APIs. DeView tackles the challenges of PWA debloating by i) record-and-replay web API profiling that identifies needed web APIs on an app-by-app basis by replaying (recorded) browser interactions and ii) compiler-assisted browser debloating that eliminates the entry functions of corresponding web APIs from the mapping between web API and its entry point in a binary. Our evaluation shows the effectiveness and practicality of DeView. DeView successfully eliminates 91.8% of accessible web APIs while i) maintaining original functionalities and ii) preventing 76.3% of known exploits on average.",
+    "citation_count": 3,
+    "reference_count": 36,
+    "url": "https://dblp.org/rec/conf/acsac/Oh0QKL22",
+    "dblp_key": "conf/acsac/Oh0QKL22",
+    "source_id": "https://openalex.org/W4311165747"
+  },
+  {
+    "title": "CoCoTPM: Trusted Platform Modules for Virtual Machines in Confidential Computing Environments.",
+    "authors": [
+      "Joana Pecholt",
+      "Sascha Wessel"
+    ],
+    "venue": "ACSAC",
+    "year": 2022,
+    "abstract": "989",
+    "citation_count": 18,
+    "reference_count": 4,
+    "url": "https://dblp.org/rec/conf/acsac/PecholtW22",
+    "dblp_key": "conf/acsac/PecholtW22",
+    "source_id": "https://openalex.org/W4311165716"
+  },
+  {
+    "title": "No Signal Left to Chance: Driving Browser Extension Analysis by Download Patterns.",
+    "authors": [
+      "Pablo Picazo-Sanchez",
+      "Benjamin Eriksson",
+      "Andrei Sabelfeld"
+    ],
+    "venue": "ACSAC",
+    "year": 2022,
+    "abstract": "Browser extensions are popular small applications that allow users to enrich their browsing experience. Yet browser extensions pose security concerns because they can leak user data and maliciously act on behalf of the user. Because malicious behavior can manifest dynamically, detecting malicious extensions remains a challenge for the research community, browser vendors, and web application developers. This paper identifies download patterns as a useful signal for analyzing browser extensions. We leverage machine learning for clustering extensions based on their download patterns, confirming at a large scale that many extensions follow strikingly similar download patterns. Our key insight is that the download pattern signal can be used for identifying malicious extensions. To this end, we present a novel technique to detect malicious extensions based on the public number of downloads in the Chrome Web Store. This technique fruitfully combines machine learning with security analysis, showing that the download patterns signal can be used to both directly spot malicious extensions and as input to subsequent analysis of suspicious extensions. We demonstrate the benefits of our approach on a dataset from a daily crawl of the Web Store over 6 months to track the number of downloads. We find 135 clusters and identify 61 of them to have at least 80% malicious extensions. We train our classifier and run it on a test set of 1,212 currently active extensions in the Web Store successfully detecting 326 extensions as malicious solely based on downloads. Further, we show that by combining this signal with code similarity analysis, using the 326 as a seed, we find an additional 6,579 malicious extensions.",
+    "citation_count": 6,
+    "reference_count": 44,
+    "url": "https://dblp.org/rec/conf/acsac/Picazo-SanchezE22",
+    "dblp_key": "conf/acsac/Picazo-SanchezE22",
+    "source_id": "https://openalex.org/W4310588383"
+  },
+  {
+    "title": "Cloak: Transitioning States on Legacy Blockchains Using Secure and Publicly Verifiable Off-Chain Multi-Party Computation.",
+    "authors": [
+      "Qian Ren",
+      "Yingjun Wu",
+      "Han Liu 0010",
+      "Yue Li 0037",
+      "Anne Victor",
+      "Hong Lei 0001",
+      "Lei Wang 0031",
+      "Bangdao Chen"
+    ],
+    "venue": "ACSAC",
+    "year": 2022,
+    "abstract": "In recent years, the confidentiality of smart contracts has become a fundamental requirement for practical applications. While many efforts have been made to develop architectural capabilities for enforcing confidential smart contracts, a few works arise to extend confidential smart contracts to Multi-Party Computation (MPC), i.e., multiple parties jointly evaluate a transaction off-chain and commit the outputs on-chain without revealing their secret inputs/outputs to each other. However, existing solutions lack public verifiability and require O(n) transactions to enable negotiation or resist adversaries, thus suffering from inefficiency and compromised security.",
+    "citation_count": 4,
+    "reference_count": 20,
+    "url": "https://dblp.org/rec/conf/acsac/RenWLLVL0C22",
+    "dblp_key": "conf/acsac/RenWLLVL0C22",
+    "source_id": "https://openalex.org/W4311165922"
+  },
+  {
+    "title": "ArchiveSafe LT: Secure Long-term Archiving System.",
+    "authors": [
+      "Moe Sabry",
+      "Reza Samavi"
+    ],
+    "venue": "ACSAC",
+    "year": 2022,
+    "abstract": "Every year the amount of digitally stored sensitive information increases significantly. Information such as governmental and legal documents, health, and tax records are required to be securely archived for decades to comply with various laws and regulations. Since cryptographic schemes based on single computational assumptions are not guaranteed to stay secure for such long periods, current state-of-the-art systems providing long-term confidentiality and integrity rely on information-theoretic techniques, such as multi-server secret sharing and commitments. These systems achieve the desired results; however, establishing private channels for secret sharing is costly and requires a complex setup. In this paper, we present ArchiveSafe LT, a framework for archiving systems aiming to provide long-term confidentiality and integrity. The framework relies on multiple computationally-secure schemes using robust combiners, with a design that plans for agility and evolution of cryptographic schemes. ArchiveSafe LT is efficient and suitable for practical adoption as it eliminates the need for private channels compared to its counterparts. We present the ArchiveSafe LT framework structure and its security analysis using an automatic prover. We specify two ArchiveSafe LT-based system designs, which handle different adversarial storage providers. We experimentally evaluate a prototype built based on one of the designs to show the system's efficiency compared to information-theoretic systems.",
+    "citation_count": 1,
+    "reference_count": 10,
+    "url": "https://dblp.org/rec/conf/acsac/SabryS22",
+    "dblp_key": "conf/acsac/SabryS22",
+    "source_id": "https://openalex.org/W4311166090"
+  },
+  {
+    "title": "On the Implications of Spoofing and Jamming Aviation Datalink Applications.",
+    "authors": [
+      "Harshad Sathaye",
+      "Guevara Noubir",
+      "Aanjhan Ranganathan"
+    ],
+    "venue": "ACSAC",
+    "year": 2022,
+    "abstract": "Aviation datalink applications such as controller-pilot datalink communications (CPDLC) and automatic dependent surveillance-contract (ADS-C) were designed to supplement existing communication systems to accommodate increasing air traffic. These applications are typically used to provide departure clearance, en-route services such as altitude and flight plan changes, air traffic surveillance and reporting, and radio frequency assignments. Unlike most attacks proposed so far where the attacker influences decision-making through manipulated instruments, attacks on aviation datalink provide adversaries with a new attack vector to influence the flight crew's decision-making through direct instructions. In this work, we perform a security analysis of these applications and outline the requirements for executing a successful attack. Specifically, we propose a coordinated multi-aircraft attack and show how an adversary capable of spoofing datalink messages and reactive jamming can influence the flight crew's decision-making. Through geospatial analysis of historical flight data, we identify 48 vulnerable regions where an attacker has a 90% chance of encountering favorable conditions for coordinated multi-aircraft attacks. Next, we implement a reactive jammer that ensures stealthy attack execution by targeting messages from a specific aircraft with a reaction time of 1.48 ms and 98.85% jamming success. Even though by themselves these attacks have a lower probability of endangering the safety of the aircraft, the threat is magnified when combined with attacks on other avionics. Finally, we discuss the possibility of executing integrated attacks on aircraft system as a whole emphasizing the importance of securing individual components in the aviation ecosystem.",
+    "citation_count": 8,
+    "reference_count": 17,
+    "url": "https://dblp.org/rec/conf/acsac/SathayeNR22",
+    "dblp_key": "conf/acsac/SathayeNR22",
+    "source_id": "https://openalex.org/W4311165870"
+  },
+  {
+    "title": "Privacy-Preserving Trajectory Matching on Autonomous Unmanned Aerial Vehicles.",
+    "authors": [
+      "Savio Sciancalepore",
+      "Dominik Roy George"
+    ],
+    "venue": "ACSAC",
+    "year": 2022,
+    "abstract": "Autonomous Unmanned Aerial Vehicles (UAVs) are increasingly deployed nowadays, thanks to the additional features and enhanced flexibility they provide, e.g., for transportation and goods delivery. On the one hand, discovering in advance collisions occurring with other UAVs in the future could enhance the efficiency of the path planning, reducing further the delivery time and UAVs' energy consumption. On the other hand, location and timestamps-key to detecting and avoiding collisions in advance-are sensitive and cannot be shared indiscriminately with untrusted entities. This paper solves the aforementioned challenging problem by proposing PPTM, a new protocol for efficient and effective privacy-preserving trajectory matching on autonomous UAVs. PPTM allows two UAVs, possibly not connected to the Internet, to discover any spatial and temporal collisions in their future paths, without revealing to the other party anything else than the colliding time and coordinates. To this aim, PPTM grounds on a dedicated tree-based algorithm, namely, Incremental Capsule Matching, tailored to the unique features of spatio-temporal data, and it also integrates a lightweight privacy-preserving proximity testing solution for performing private comparisons. We tested our solution on real devices with heterogeneous processing capabilities (a regular laptop, a tiny processing unit, and a mini-drone), showing that PPTM can perform privacy-preserving trajectory matching even in a few milliseconds, up to 98.27% quicker compared to the most efficient competing solution.",
+    "citation_count": 9,
+    "reference_count": 23,
+    "url": "https://dblp.org/rec/conf/acsac/SciancaleporeG22",
+    "dblp_key": "conf/acsac/SciancaleporeG22",
+    "source_id": "https://openalex.org/W4311165857"
+  },
+  {
+    "title": "Heimdallr: Fingerprinting SD-WAN Control-Plane Architecture via Encrypted Control Traffic.",
+    "authors": [
+      "Minjae Seo",
+      "Jaehan Kim",
+      "Eduard Marin",
+      "Myoungsung You",
+      "Taejune Park",
+      "Seungsoo Lee",
+      "Seungwon Shin 0001",
+      "Jinwoo Kim"
+    ],
+    "venue": "ACSAC",
+    "year": 2022,
+    "abstract": "Software-defined wide area network (SD-WAN) has emerged as a new paradigm for steering a large-scale network flexibly by adopting distributed software-defined network (SDN) controllers. The key to building a logically centralized but physically distributed control-plane is running diverse cluster management protocols to achieve consistency through an exchange of control traffic. Meanwhile, we observe that the control traffic exposes unique time-series patterns and directional relationships due to the operational structure even though the traffic is encrypted, and this pattern can disclose confidential information such as control-plane topology and protocol dependencies, which can be exploited for severe attacks. With this insight, we propose a new SD-WAN fingerprinting system, called Heimdallr. It analyzes periodical and operational patterns of SD-WAN cluster management protocols and the context of flow directions from the collected control traffic utilizing a deep learning-based approach, so that it can classify the cluster management protocols automatically from miscellaneous control traffic datasets. Our evaluation, which is performed in a realistic SD-WAN environment consisting of geographically distant three campus networks and one enterprise network shows that Heimdallr can classify SD-WAN control traffic with $\\geq$ 93%, identify individual protocols with $\\geq$ 80% macro F-1 scores, and finally can infer control-plane topology with $\\geq$ 70% similarity.",
+    "citation_count": 10,
+    "reference_count": 39,
+    "url": "https://dblp.org/rec/conf/acsac/SeoKMYPLSK22",
+    "dblp_key": "conf/acsac/SeoKMYPLSK22",
+    "source_id": "https://openalex.org/W4311165714"
+  },
+  {
+    "title": "Randezvous: Making Randomization Effective on MCUs.",
+    "authors": [
+      "Zhuojia Shen",
+      "Komail Dharsee",
+      "John Criswell"
+    ],
+    "venue": "ACSAC",
+    "year": 2022,
+    "abstract": "Internet-of-Things devices such as autonomous vehicular sensors, medical devices, and industrial cyber-physical systems commonly rely on small, resource-constrained microcontrollers (MCUs). MCU software is typically written in C and is prone to memory safety vulnerabilities that are exploitable by remote attackers to launch code reuse attacks and code/control data leakage attacks.",
+    "citation_count": 1,
+    "reference_count": 55,
+    "url": "https://dblp.org/rec/conf/acsac/ShenDC22",
+    "dblp_key": "conf/acsac/ShenDC22",
+    "source_id": "https://openalex.org/W4311165719"
+  },
+  {
+    "title": "Better Together: Attaining the Triad of Byzantine-robust Federated Learning via Local Update Amplification.",
+    "authors": [
+      "Liyue Shen",
+      "Yanjun Zhang",
+      "Jingwei Wang 0003",
+      "Guangdong Bai"
+    ],
+    "venue": "ACSAC",
+    "year": 2022,
+    "abstract": "Manipulation of local training data and local updates, i.e., the Byzantine poisoning attack, is the main threat arising from the collaborative nature of the federated learning (FL) paradigm. Many Byzantine-robust aggregation algorithms (AGRs) have been proposed to filter out or moderate suspicious local updates uploaded by Byzantine participants at the central aggregator. However, they largely suffer from model quality degradation due to the over-removal of local updates or/and the inefficiency caused by the expensive analysis of the high-dimensional local updates. In this work, we propose AgrAmplifier that aims to simultaneously attain the triad of robustness, fidelity and efficiency for FL. AgrAmplifier features the amplification of the \"morality\"of local updates to render their maliciousness and benignness clearly distinguishable. It re-organizes the local updates into patches and extracts the most activated features in the patches. This strategy can effectively enhance the robustness of the aggregator, and it also retains high fidelity as the amplified updates become more resistant to local translations. Furthermore, the significant dimension reduction in the feature space greatly benefits the efficiency of the aggregation. AgrAmplifier is compatible with any existing Byzantine-robust mechanism. In this paper, we integrate it with three mainstream ones, i.e., distance-based, prediction-based, and trust bootstrapping-based mechanisms. Our extensive evaluation against five representative poisoning attacks on five datasets across diverse domains demonstrates the consistent enhancement for all of them, with average gains at, and in terms of robustness, fidelity, and efficiency respectively. We release the source code of AgrAmplifier and our artifacts to facilitate future research in this area: https://github.com/UQ-Trust-Lab/AgrAmplifier.",
+    "citation_count": 9,
+    "reference_count": 15,
+    "url": "https://dblp.org/rec/conf/acsac/ShenZWB22",
+    "dblp_key": "conf/acsac/ShenZWB22",
+    "source_id": "https://openalex.org/W4311165733"
+  },
+  {
+    "title": "Interaction matters: a comprehensive analysis and a dataset of hybrid IoT/OT honeypots.",
+    "authors": [
+      "Shreyas Srinivasa",
+      "Jens Myrup Pedersen",
+      "Emmanouil Vasilomanolakis"
+    ],
+    "venue": "ACSAC",
+    "year": 2022,
+    "abstract": "The Internet of things (IoT) and critical infrastructure utilizing operational technology (OT) protocols are nowadays a common attack target and/or attack surface used to further propagate malicious actions. Deception techniques such as honeypots have been proposed for both IoT and OT but they either lack an extensive evaluation or are subject to fingerprinting attacks. In this paper, we extend and evaluate RIoTPot, a hybrid-interaction honeypot, by exposing it to attacks on the Internet and perform a longitudinal study with multiple evaluation parameters for three months. Furthermore, we publish the aforementioned study in the form of a dataset that is available to researchers upon request. We leverage RIoTPot's hybrid-interaction model to deploy it in three interaction variants with six protocols deployed on both cloud and self-hosted infrastructure to study and compare the attacks gathered. At a glance, we receive 10.87 million attack events originating from 22,518 unique IP addresses that involve brute-force, poisoning, multistage and other attacks. Moreover, we fingerprint the attacker IP addresses to identify the type of devices who participate in the attacks. Lastly, our results indicate that the honeypot interaction levels have an important role in attracting specific attacks and scanning probes.",
+    "citation_count": 15,
+    "reference_count": 17,
+    "url": "https://dblp.org/rec/conf/acsac/SrinivasaPV22",
+    "dblp_key": "conf/acsac/SrinivasaPV22",
+    "source_id": "https://openalex.org/W4311165999"
+  },
+  {
+    "title": "One Fuzz Doesn&apos;t Fit All: Optimizing Directed Fuzzing via Target-tailored Program State Restriction.",
+    "authors": [
+      "Prashast Srivastava",
+      "Stefan Nagy",
+      "Matthew Hicks",
+      "Antonio Bianchi",
+      "Mathias Payer"
+    ],
+    "venue": "ACSAC",
+    "year": 2022,
+    "abstract": null,
+    "citation_count": 28,
+    "reference_count": 41,
+    "url": "https://dblp.org/rec/conf/acsac/SrivastavaNHBP22",
+    "dblp_key": "conf/acsac/SrivastavaNHBP22",
+    "source_id": "5575b4a6e1be85267dbfc346749b4500f6fedae3"
+  },
+  {
+    "title": "Towards Practical Application-level Support for Privilege Separation.",
+    "authors": [
+      "Nik Sultana",
+      "Henry Zhu",
+      "Ke Zhong",
+      "Zhilei Zheng",
+      "Ruijie Mao",
+      "Digvijaysinh Chauhan",
+      "Stephen Carrasquillo",
+      "Junyong Zhao",
+      "Lei Shi 0011",
+      "Nikos Vasilakis",
+      "Boon Thau Loo"
+    ],
+    "venue": "ACSAC",
+    "year": 2022,
+    "abstract": "Privilege separation (privsep) is an effective technique for improving software's security, but privsep involves decomposing software into components and assigning them different privileges. This is often laborious and error-prone. This paper contributes the following for applying privsep to C software: (1) a portable, lightweight, and distributed runtime library that abstracts externally-enforced compartment isolation; (2) an abstract compartmentalization model of software for reasoning about privsep; and (3) a privsep-aware Clang-based tool for code analysis and semi-automatic software transformation to use the runtime library. The evaluation spans 19 compartmentalizations of third-party software and examines: Security: 4 CVEs in widely-used software were rendered unexploitable; Approximate Effort Saving: on average, the synthesis-to-annotation code ratio was greater than 11.9 (i.e., 10 × lines of code were generated for each annotation); and Overhead: execution-time overhead was less than 2%, and memory overhead was linear in the number of compartments.",
+    "citation_count": 4,
+    "reference_count": 27,
+    "url": "https://dblp.org/rec/conf/acsac/SultanaZZZMCCZS22",
+    "dblp_key": "conf/acsac/SultanaZZZMCCZS22",
+    "source_id": "https://openalex.org/W4311165936"
+  },
+  {
+    "title": "Transformer-Based Language Models for Software Vulnerability Detection.",
+    "authors": [
+      "Chandra Thapa",
+      "Seung Ick Jang",
+      "Muhammad Ejaz Ahmed",
+      "Seyit Camtepe",
+      "Josef Pieprzyk",
+      "Surya Nepal"
+    ],
+    "venue": "ACSAC",
+    "year": 2022,
+    "abstract": "The large transformer-based language models demonstrate excellent performance in natural language processing. By considering the transferability of the knowledge gained by these models in one domain to other related domains, and the closeness of natural languages to high-level programming languages, such as C/C++, this work studies how to leverage (large) transformer-based language models in detecting software vulnerabilities and how good are these models for vulnerability detection tasks. In this regard, firstly, we present a systematic (cohesive) framework that details source code translation, model preparation, and inference. Then, we perform an empirical analysis of software vulnerability datasets of C/C++ source codes having multiple vulnerabilities corresponding to the library function call, pointer usage, array usage, and arithmetic expression. Our empirical results demonstrate the good performance of the language models in vulnerability detection. Moreover, these language models have better performance metrics, such as F1-score, than the contemporary models, namely bidirectional long short term memory and bidirectional gated recurrent unit. Experimenting with the language models is always challenging due to the requirement of computing resources, platforms, libraries, and dependencies. Thus, this paper also analyses the popular platforms to efficiently fine-tune these models and present recommendations while choosing the platforms for our framework.",
+    "citation_count": 92,
+    "reference_count": 19,
+    "url": "https://dblp.org/rec/conf/acsac/ThapaJACPN22",
+    "dblp_key": "conf/acsac/ThapaJACPN22",
+    "source_id": "https://openalex.org/W4311165836"
+  },
+  {
+    "title": "Designing a Provenance Analysis for SGX Enclaves.",
+    "authors": [
+      "Flavio Toffalini",
+      "Mathias Payer",
+      "Jianying Zhou 0001",
+      "Lorenzo Cavallaro"
+    ],
+    "venue": "ACSAC",
+    "year": 2022,
+    "abstract": "SGX enclaves are trusted user-space memory regions that ensure isolation from the host, which is considered malicious. However, enclaves may suffer from vulnerabilities that allow adversaries to compromise their trustworthiness. Consequently, the SGX isolation may hinder defenders from recognizing an intrusion. Ideally, to identify compromised enclaves, the owner should have privileged access to the enclave memory and a policy to recognize the attack. Most importantly, these operations should not break the SGX properties.",
+    "citation_count": 5,
+    "reference_count": 44,
+    "url": "https://dblp.org/rec/conf/acsac/ToffaliniP0C22",
+    "dblp_key": "conf/acsac/ToffaliniP0C22",
+    "source_id": "https://openalex.org/W4311165856"
+  },
+  {
+    "title": "ENIDrift: A Fast and Adaptive Ensemble System for Network Intrusion Detection under Real-world Drift.",
+    "authors": [
+      "Xian Wang"
+    ],
+    "venue": "ACSAC",
+    "year": 2022,
+    "abstract": "Machine Learning (ML) techniques have been widely applied for network intrusion detection. However, existing ML-based network intrusion detection systems (NIDSs) suffer from fundamental limitations that hinder them from being deployed in the real world. They consider a narrow scope rather than real-world drift that involves dynamically distributed network packets and well-crafted ML attacks. Besides, they pose high runtime overhead and have low processing speed. In this paper, we solve the limitations and design ENIDrift, a fast and adaptive ensemble system for real-world network intrusion detection. ENIDrift employs iP2V, a novel incremental feature extraction method based on network packet fields, which adopts a simple three-layer neural network with relatively lightweight computation and achieves high efficiency. ENIDrift uses a stable sub-classifier generation module that constructs new sub-classifiers based on the stability and accuracy of incoming data chunks, and its training time is reduced from to. We extend the threat model and place experiments in real-world settings. We make the first real-world drift dataset, RWDIDS, which contains intense and different drifts for NIDS. Our extensive evaluation under real-world drift demonstrates that ENIDrift significantly outperforms the state-of-the-art solutions by up to 69.78% of F1 and reduces running time by 87.6%. ENIDrift achieves a 100% F1 against our adversarial attack and is adaptive to various real-world drifts. Our field test also shows ENIDrift functions well even with delayed, inadequate training data, which is practical for real-world usage. © 2022 ACM.",
+    "citation_count": 18,
+    "reference_count": 52,
+    "url": "https://dblp.org/rec/conf/acsac/Wang22",
+    "dblp_key": "conf/acsac/Wang22",
+    "source_id": "https://openalex.org/W4311165866"
+  },
+  {
+    "title": "iService: Detecting and Evaluating the Impact of Confused Deputy Problem in AppleOS.",
+    "authors": [
+      "Yizhuo Wang 0003",
+      "Yikun Hu",
+      "Xuangan Xiao",
+      "Dawu Gu"
+    ],
+    "venue": "ACSAC",
+    "year": 2022,
+    "abstract": "Confused deputy problem is a specific type of privilege escalation. It happens when a program tricks another more privileged one into misusing its authority. On AppleOS, system services are adopted to perform privileged operations when receiving inter-process communication (IPC) request from a user process. The confused deputy vulnerabilities may result if system services overlook the checking of IPC input. Unfortunately, it is tough to identify such vulnerabilities, which requires to understand the closed-source system services and private frameworks of the complex AppleOS by unraveling the dependencies in binaries.",
+    "citation_count": 5,
+    "reference_count": 17,
+    "url": "https://dblp.org/rec/conf/acsac/WangHXG22",
+    "dblp_key": "conf/acsac/WangHXG22",
+    "source_id": "https://openalex.org/W4311166088"
+  },
+  {
+    "title": "Make Data Reliable: An Explanation-powered Cleaning on Malware Dataset Against Backdoor Poisoning Attacks.",
+    "authors": [
+      "Xutong Wang",
+      "Chaoge Liu",
+      "Xiaohui Hu",
+      "Zhi Wang 0018",
+      "Jie Yin",
+      "Xiang Cui"
+    ],
+    "venue": "ACSAC",
+    "year": 2022,
+    "abstract": "Machine learning (ML) based Malware classification provides excellent performance and has been deployed in various real-world applications. Training for malware classification often relies on crowdsourced threat feeds, which exposes a natural attack injection point. Considering a real-world threat model for backdoor poisoning attacks on a malware dataset, because attackers are generally considered to have no control over the sample-labeling process, they conduct a clean-label attack, a more realistic scenario, by generating backdoored benign binaries that will be disseminated through threat intelligence platforms and poison the datasets for downstream malware classifiers. To avoid the threat of backdoor poisoned datasets, we propose an explanation-powered defense methodology called make data reliable (MDR), which is a general and effective mitigation to ensure the reliability of datasets by removing backdoored samples. We use a surrogate model and explanation tool Shapley Additive exPlanations (SHAP) to filter suspicious samples, then perform watermark identification based on the filtered suspicious samples, and finally remove samples with the identified watermark to construct a reliable dataset. We conduct extensive experiments on two typical datasets that were manually poisoned using different attack strategies. Experimental results show that the MDR achieves backdoored samples removal rate greater than 99.0% for different datasets and attack conditions, while maintaining an extremely low false positive rate of less than 0.1%. Furthermore, to confirm the generality of MDR, we use different models to perform a model-agnostic evaluation. The results show that, MDR is a general methodology that does not rely on any specific model.",
+    "citation_count": 6,
+    "reference_count": 25,
+    "url": "https://dblp.org/rec/conf/acsac/WangLHWYC22",
+    "dblp_key": "conf/acsac/WangLHWYC22",
+    "source_id": "https://openalex.org/W4311165833"
+  },
+  {
+    "title": "MADDC: Multi-Scale Anomaly Detection, Diagnosis and Correction for Discrete Event Logs.",
+    "authors": [
+      "Xiaolei Wang 0003",
+      "Lin Yang",
+      "Dongyang Li",
+      "Linru Ma",
+      "Yongzhong He",
+      "Junchao Xiao",
+      "Jiyuan Liu 0003",
+      "Yuexiang Yang"
+    ],
+    "venue": "ACSAC",
+    "year": 2022,
+    "abstract": "Anomaly detection for discrete event logs can provide critical information for building secure and reliable systems in various application domains, such as large scale data centers, autonomous driving, and intrusion detection. However, the task is very challenging due to the lack of a clear understanding and definition of anomaly in the specific problem space, and the log data is often highly complex with temporal correlation. Existing deep learning based methods mostly suffer from such issues as overfitting, uncertainty or low interpretability; consequently, the detection results may be inaccurate, with little information to help security analysts diagnose the reported anomalies with high confidence. To tackle this challenge, in this research, we propose a general framework named MADDC, which aims to (1) accurately perform Multi-scale Anomaly Detection, Diagnosis and Correction for discrete event logs, and (2) help analysts further mitigate anomalies based on diagnosis results. Specifically, we first design a new anomaly critic for LSTM variational autoencoder based model to alleviate overfitting and reduce false negatives during anomaly detection. As one of our main contributions, we then introduce process mining technique to build process-centric workflow models in an unsupervised manner, which forms the 'normal' context of an event sequence and help perform accurate and consistent anomaly diagnosis through global sequence alignment. Experiments on publicly available datasets show that MADDC not only outperformed several representative methods in terms of detection accuracy, but also could improve the visibility to abnormal deviations from normal execution, hence helping security analysts understand anomalies and make further corrections.",
+    "citation_count": 12,
+    "reference_count": 25,
+    "url": "https://dblp.org/rec/conf/acsac/WangYLMHX0Y22",
+    "dblp_key": "conf/acsac/WangYLMHX0Y22",
+    "source_id": "https://openalex.org/W4311165754"
+  },
+  {
+    "title": "Towards Enhanced EEG-based Authentication with Motor Imagery Brain-Computer Interface.",
+    "authors": [
+      "Bingkun Wu",
+      "Weizhi Meng 0001",
+      "Wei-Yang Chiu"
+    ],
+    "venue": "ACSAC",
+    "year": 2022,
+    "abstract": "Electroencephalography (EEG) is the record of electrogram of the electrical activity on the scalp typically using non-invasive electrodes. In recent years, many studies started using EEG as a human characteristic to construct biometric identification or authentication. Being a kind of behavioral characteristics, EEG has its natural advantages whereas some characteristics have not been fully evaluated. For instance, we find that Motor Imagery (MI) brain-computer interface is mainly used for improving neurological motor function, but has not been widely studied in EEG authentication. Currently, there are many mature methods for understanding such signals. In this paper, we propose an enhanced EEG authentication framework with Motor Imagery, by offering a complete EEG signal processing and identity verification. Our framework integrates signal preprocess, channel selection and deep learning classification to provide an end-to-end authentication. In the evaluation, we explore the requirements of a biometric system such as uniqueness, permanency, collectability, and investigate the framework regarding insider and outsider attack performance, cross-session performance, and influence of channel selection. We also provide a large comparison with state-of-the-art methods, and our experimental results indicate that our framework can provide better performance based on two public datasets.",
+    "citation_count": 14,
+    "reference_count": 44,
+    "url": "https://dblp.org/rec/conf/acsac/Wu0C22",
+    "dblp_key": "conf/acsac/Wu0C22",
+    "source_id": "https://openalex.org/W4311165854"
+  },
+  {
+    "title": "User Perceptions of Five-Word Passwords.",
+    "authors": [
+      "Xiaoyuan Wu",
+      "Collins W. Munyendo",
+      "Eddie Cosic",
+      "Genevieve A. Flynn",
+      "Olivia Legault",
+      "Adam J. Aviv"
+    ],
+    "venue": "ACSAC",
+    "year": 2022,
+    "abstract": "Human-chosen passwords are often short, selected non-uniformly, and thus, susceptible to automated guessing attacks. To help users to select more secure but memorable passwords, experts have recommended the use of passphrases of multiple words or phrases. In this paper, we explore a strategy for passphrase selection, so-called five-word passwords, where users are assigned five random words for a passphrase. Such a password composition policy was recently adopted at Georgetown University in December 2020. Through a two-part online survey (n = 150 and n = 116), participants selected a five-word password under different conditions. We find that computer-generated five-word passwords are more diverse and likely more secure than five-word passwords users select themselves. While all cases of five-word passwords are likely more secure than a human-generated, traditional password, participants expressed misconceptions regarding the security of five-word passwords (and passwords generally). Five-word passwords also appear to negatively impact usability, only 39.7 % of participants successfully recalled their password after two weeks. While five-word passwords offer improvements for security, more outreach is needed to explain their security benefits and reduce usability burdens.",
+    "citation_count": 3,
+    "reference_count": 36,
+    "url": "https://dblp.org/rec/conf/acsac/WuMCFLA22",
+    "dblp_key": "conf/acsac/WuMCFLA22",
+    "source_id": "https://openalex.org/W4311165853"
+  },
+  {
+    "title": "More is Better (Mostly): On the Backdoor Attacks in Federated Graph Neural Networks.",
+    "authors": [
+      "Jing Xu 0028",
+      "Rui Wang 0070",
+      "Stefanos Koffas",
+      "Kaitai Liang",
+      "Stjepan Picek"
+    ],
+    "venue": "ACSAC",
+    "year": 2022,
+    "abstract": "Graph Neural Networks (GNNs) are a class of deep learning-based methods for processing graph domain information. GNNs have recently become a widely used graph analysis method due to their superior ability to learn representations for complex graph data. Due to privacy concerns and regulation restrictions, centralized GNNs can be difficult to apply to data-sensitive scenarios. Federated learning (FL) is an emerging technology developed for privacy-preserving settings when several parties need to train a shared global model collaboratively. Although several research works have applied FL to train GNNs (Federated GNNs), there is no research on their robustness to backdoor attacks.&lt;br/&gt;&lt;br/&gt;This paper bridges this gap by conducting two types of backdoor attacks in Federated GNNs: centralized backdoor attacks (CBA) and distributed backdoor attacks (DBA). Our experiments show that the DBA attack success rate is higher than CBA in almost all cases. For CBA, the attack success rate of all local triggers is similar to the global trigger, even if the training set of the adversarial party is embedded with the global trigger. To explore the properties of two backdoor attacks in Federated GNNs, we evaluate the attack performance for a different number of clients, trigger sizes, poisoning intensities, and trigger densities. Finally, we explore the robustness of DBA and CBA against two state-of-the-art defenses. We find that both attacks are robust against the investigated defenses, necessitating the need to consider backdoor attacks in Federated GNNs as a novel threat that requires custom defenses.",
+    "citation_count": 26,
+    "reference_count": 17,
+    "url": "https://dblp.org/rec/conf/acsac/XuWKLP22",
+    "dblp_key": "conf/acsac/XuWKLP22",
+    "source_id": "https://openalex.org/W4221155263"
+  },
+  {
+    "title": "NeuGuard: Lightweight Neuron-Guided Defense against Membership Inference Attacks.",
+    "authors": [
+      "Nuo Xu",
+      "Binghui Wang",
+      "Ran Ran",
+      "Wujie Wen",
+      "Parv Venkitasubramaniam"
+    ],
+    "venue": "ACSAC",
+    "year": 2022,
+    "abstract": "Membership inference attacks (MIAs) against machine learning models can lead\\nto serious privacy risks for the training dataset used in the model training.\\nIn this paper, we propose a novel and effective Neuron-Guided Defense method\\nnamed NeuGuard against membership inference attacks (MIAs). We identify a key\\nweakness in existing defense mechanisms against MIAs wherein they cannot\\nsimultaneously defend against two commonly used neural network based MIAs,\\nindicating that these two attacks should be separately evaluated to assure the\\ndefense effectiveness. We propose NeuGuard, a new defense approach that jointly\\ncontrols the output and inner neurons' activation with the object to guide the\\nmodel output of training set and testing set to have close distributions.\\nNeuGuard consists of class-wise variance minimization targeting restricting the\\nfinal output neurons and layer-wise balanced output control aiming to constrain\\nthe inner neurons in each layer. We evaluate NeuGuard and compare it with\\nstate-of-the-art defenses against two neural network based MIAs, five strongest\\nmetric based MIAs including the newly proposed label-only MIA on three\\nbenchmark datasets. Results show that NeuGuard outperforms the state-of-the-art\\ndefenses by offering much improved utility-privacy trade-off, generality, and\\noverhead.\\n",
+    "citation_count": 5,
+    "reference_count": 62,
+    "url": "https://dblp.org/rec/conf/acsac/XuWRWV22",
+    "dblp_key": "conf/acsac/XuWRWV22",
+    "source_id": "https://openalex.org/W4311165761"
+  },
+  {
+    "title": "DitDetector: Bimodal Learning based on Deceptive Image and Text for Macro Malware Detection.",
+    "authors": [
+      "Jia Yan 0004",
+      "Ming Wan",
+      "Xiangkun Jia",
+      "Lingyun Ying",
+      "Purui Su",
+      "Zhanyi Wang"
+    ],
+    "venue": "ACSAC",
+    "year": 2022,
+    "abstract": "Macro malware has always been a severe threat to cyber security although the Microsoft Office suite applies the default macro-disabling policy. Among the defense solutions at different stages of the attack chain, document analysis is more targeted through detecting malicious documents with macro malware. It is effective, especially with machine learning methods, but still faces problems handling malware variants, supporting file formats, and attack countermeasures with advanced attack techniques (e.g., Excel 4.0 macro and remote template injection).",
+    "citation_count": 11,
+    "reference_count": 37,
+    "url": "https://dblp.org/rec/conf/acsac/YanWJYSW22",
+    "dblp_key": "conf/acsac/YanWJYSW22",
+    "source_id": "https://openalex.org/W4311165726"
+  },
+  {
+    "title": "Making Memory Account Accountable: Analyzing and Detecting Memory Missing-account bugs for Container Platforms.",
+    "authors": [
+      "Yutian Yang",
+      "Wenbo Shen",
+      "Xun Xie",
+      "Kangjie Lu",
+      "Mingsen Wang",
+      "Tianyu Zhou",
+      "Chenggang Qin",
+      "Wang Yu",
+      "Kui Ren 0001"
+    ],
+    "venue": "ACSAC",
+    "year": 2022,
+    "abstract": "Linux kernel introduces the memory control group (memcg) to account and confine memory usage at the process-level. Due to its flexibility and efficiency, memcg has been widely adopted by container platforms and has become a fundamental technique. While being critical, memory accounting is prone to missing-account bugs due to the diverse memory accounting interfaces and the massive amount of allocation/free paths. To our knowledge, there is still no systematic analysis against the memory missing-account problem, with respect to its security impacts, detection, etc.",
+    "citation_count": 4,
+    "reference_count": 19,
+    "url": "https://dblp.org/rec/conf/acsac/YangSXLWZQY022",
+    "dblp_key": "conf/acsac/YangSXLWZQY022",
+    "source_id": "https://openalex.org/W4311165727"
+  },
+  {
+    "title": "Stepping out of the MUD: Contextual threat information for IoT devices with manufacturer-provided behavior profiles.",
+    "authors": [
+      "Luca Morgese Zangrandi",
+      "Thijs van Ede",
+      "Tim M. Booij",
+      "Savio Sciancalepore",
+      "Luca Allodi",
+      "Andrea Continella"
+    ],
+    "venue": "ACSAC",
+    "year": 2022,
+    "abstract": "Besides coming with unprecedented benefits, the Internet of Things (IoT) suffers deficits in security measures, leading to attacks increasing every year. In particular, network environments such as smart homes lack managed security capabilities to detect IoT-related attacks; IoT devices hosted therein are thus more easily targeted by threats. As such, context awareness of IoT infections is hard to achieve, preventing prompt response. In this work, we propose MUDscope, an approach to monitor malicious network activities affecting IoT systems in real-world consumer environments. We leverage the recent Manufacturer Usage Description (MUD) specification, which defines networking allow-lists for IoT devices in MUD profiles, to reflect consistent and necessarily-anomalous activities from smart things. Our approach characterizes this traffic and extracts signatures for given attacks. By analyzing attack signatures for multiple devices, we gather insights into emerging attack patterns. We evaluate our approach on both an existing dataset and a new, openly available dataset created for this research. We show that MUDscope detects several attacks targeting IoT devices with an F1-score of 95.77% and correctly identifies signatures for specific attacks with an F1-score of 87.72%.",
+    "citation_count": 15,
+    "reference_count": 35,
+    "url": "https://dblp.org/rec/conf/acsac/ZangrandiEBSAC22",
+    "dblp_key": "conf/acsac/ZangrandiEBSAC22",
+    "source_id": "https://openalex.org/W4311165848"
+  },
+  {
+    "title": "Play the Imitation Game: Model Extraction Attack against Autonomous Driving Localization.",
+    "authors": [
+      "Qifan Zhang 0002",
+      "Junjie Shen 0001",
+      "Mingtian Tan",
+      "Zhe Zhou 0001",
+      "Zhou Li 0001",
+      "Qi Alfred Chen",
+      "Haipeng Zhang 0004"
+    ],
+    "venue": "ACSAC",
+    "year": 2022,
+    "abstract": "The security of the Autonomous Driving (AD) system has been gaining researchers' and public's attention recently. Given that AD companies have invested a huge amount of resources in developing their AD models, e.g., localization models, these models, especially their parameters, are important intellectual property and deserve strong protection.",
+    "citation_count": 4,
+    "reference_count": 44,
+    "url": "https://dblp.org/rec/conf/acsac/Zhang0T00CZ22",
+    "dblp_key": "conf/acsac/Zhang0T00CZ22",
+    "source_id": "https://openalex.org/W4311166016"
+  },
+  {
+    "title": "StateDiver: Testing Deep Packet Inspection Systems with State-Discrepancy Guidance.",
+    "authors": [
+      "Zhechang Zhang",
+      "Bin Yuan",
+      "Kehan Yang",
+      "Deqing Zou",
+      "Hai Jin 0001"
+    ],
+    "venue": "ACSAC",
+    "year": 2022,
+    "abstract": "Deep Packet Inspection (DPI) systems are essential for securing modern networks (e.g., blocking or logging abnormal network connections). However, DPI systems are known to be vulnerable in their implementations, which could be exploited for evasion attacks. Due to the critical role DPI systems play, many efforts have been made to detect vulnerabilities in the DPI systems through manual inspection, symbolic execution, and fuzzing, which suffer from either poor scalability, path explosion, or inappropriate feedback. In this paper, based on our observation that a DPI system usually reaches an abnormal internal state before a forbidden packet passes through it, we propose a fuzzing framework that prioritizes inputs/mutations which could trigger the DPI system's abnormal internal states. Further, to avoid deep understanding of the DPI systems under inspection (e.g., to identify the abnormal states), we feed one pair of inputs to multiple DPI systems and check whether the state changes of these DPI systems are consistent — an inconsistent internal state change/transference in one of the DPI systems indicates a new abnormal state is reached in the corresponding DPI system. Naturally, inputs that trigger new abnormal states are preferentially selected for mutations to generate new inputs. Following this idea, we develop StateDiver, the first fuzzing framework that uses the state discrepancy between different DPI systems as feedback to find more bypassing strategies. We make StateDiver publicly available online. With the help of StateDiver, we tested 3 famous open-source DPI systems (Snort, Snort++, and Suricata) and discovered 16 bypass strategies (8 new and 8 previously known). We have reported all the vulnerabilities to the vendors and received one CVE by the time of paper writing. We also compared StateDiver with Geneva, the state-of-the-art fuzzing tool for detecting DPI bugs. Results showed that StateDiver outperformed Geneva at the number and speed of finding vulnerabilities, indicating the ability of StateDiver to detect strategies bypassing DPI systems effectively.",
+    "citation_count": 5,
+    "reference_count": 20,
+    "url": "https://dblp.org/rec/conf/acsac/ZhangYYZ022",
+    "dblp_key": "conf/acsac/ZhangYYZ022",
+    "source_id": "https://openalex.org/W4311165737"
+  },
+  {
+    "title": "Alphuzz: Monte Carlo Search on Seed-Mutation Tree for Coverage-Guided Fuzzing.",
+    "authors": [
+      "Yiru Zhao",
+      "Xiaoke Wang",
+      "Lei Zhao 0012",
+      "Yueqiang Cheng",
+      "Heng Yin 0001"
+    ],
+    "venue": "ACSAC",
+    "year": 2022,
+    "abstract": "Coverage-based greybox fuzzing (CGF) has been approved to be effective in finding security vulnerabilities. Seed scheduling, the process of selecting an input as the seed from the seed pool for the next fuzzing iteration, plays a central role in CGF. Although numerous seed scheduling strategies have been proposed, most of them treat these seeds independently and do not explicitly consider the relationships among seeds.",
+    "citation_count": 10,
+    "reference_count": 20,
+    "url": "https://dblp.org/rec/conf/acsac/ZhaoWZCY22",
+    "dblp_key": "conf/acsac/ZhaoWZCY22",
+    "source_id": "https://openalex.org/W4311166005"
+  },
+  {
+    "title": "Local Power Grids at Risk - An Experimental and Simulation-based Analysis of Attacks on Vehicle-To-Grid Communication.",
+    "authors": [
+      "Maria Zhdanova",
+      "Julian Urbansky",
+      "Anne Hagemeier",
+      "Daniel Zelle",
+      "Isabelle Herrmann",
+      "Dorian Höffner"
+    ],
+    "venue": "ACSAC",
+    "year": 2022,
+    "abstract": "With Electric Vehicles (EVs) becoming more prevalent, their battery recharge creates significant loads on power grids. Especially in local grids with a high share of households that own an EV, this additional energy demand can stress existing power distribution systems that were not designed for this kind of loads. The unexpected peak consumption may reduce service quality, damage sensitive equipment, cause power failures and even local blackouts. To mitigate this risk, grid components must be either significantly upgraded to match the increased demand, or the demand must be managed to avoid critical situations. Vehicle-to-Grid (V2G) technology is a major emerging trend for enabling load management in connection with EV charging. A key component of V2G is the ISO 15118 protocol allowing to set grid-friendly charging schedules for EVs. This standard is further supported by backend protocols like OCPP to permit corrective actions by a network operator.",
+    "citation_count": 10,
+    "reference_count": 22,
+    "url": "https://dblp.org/rec/conf/acsac/ZhdanovaUHZHH22",
+    "dblp_key": "conf/acsac/ZhdanovaUHZHH22",
+    "source_id": "https://openalex.org/W4311165832"
+  },
+  {
+    "title": "Parallel Small Polynomial Multiplication for Dilithium: A Faster Design and Implementation.",
+    "authors": [
+      "Jieyu Zheng",
+      "Feng He",
+      "Shiyu Shen 0001",
+      "Chenxi Xue",
+      "Yunlei Zhao"
+    ],
+    "venue": "ACSAC",
+    "year": 2022,
+    "abstract": "The lattice-based signature scheme CRYSTALS-Dilithium is one of the two signature finalists in the third round NIST post-quantum cryptography (PQC) standardization project. For applications of low-power Internet-of-Things (IoT) devices, recent research efforts have been focusing on the performance optimization of PQC algorithms on embedded systems. In particular, performance optimization is more demanding for PQC signature algorithms that are usually significantly more time-consuming than PQC public-key encryption counterparts. For most cryptographic algorithms based on algebraic lattices including Dilithium, the fundamental and most time-consuming operation is polynomial multiplication over rings. For this computational task, number theoretic transform (NTT) is the most efficient multiplication method for NTT-friendly rings, and is now the typical technique for performing fast polynomial multiplications when implementing lattice-based PQC algorithms.",
+    "citation_count": 13,
+    "reference_count": 20,
+    "url": "https://dblp.org/rec/conf/acsac/ZhengHSXZ22",
+    "dblp_key": "conf/acsac/ZhengHSXZ22",
+    "source_id": "https://openalex.org/W4311165831"
+  },
+  {
+    "title": "Annual Computer Security Applications Conference, ACSAC 2022, Austin, TX, USA, December 5-9, 2022",
+    "authors": [],
+    "venue": "ACSAC",
+    "year": 2022,
+    "abstract": "The Internet of Things (IoT) and the Android operating system have made cutting-edge technology accessible to the general public. These are affordable, easy-to-use, and open-source technology. Android devices connect to different IoT devices such as IoT-enabled cameras, Alexa powered by Amazon, and various other sensors. Due to the escalated growth of Android devices, users are facing cybercrime through their Android devices. This article aims to provide a comprehensive study of the IoT and Android systems. This article classifies different attacks on IoT and Android devices and mitigation strategies proposed by different researchers. The article emphasizes the role of the developer in secure application design. This article attempts to provide a relative analysis of several malware detection methods in the different environments of attacks. This study expands the awareness of certain application-hardening strategies applicable to IoT devices and Android applications and devices. This study will help domain experts and researchers to gain knowledge of IoT systems and Android systems from a security point of view and provide insight into how to design more efficient, robust, and comprehensive solutions. This article discusses different attack vectors and mitigation strategies available to both developers and in the open domain. Certain guidelines are also suggested for application and platform developers, as well as application databases (Google play store), to limit the risk of attack, and users can form their own defense with knowledge regarding keeping hardware and software updated and securing their system with a strong password.",
+    "citation_count": 86,
+    "reference_count": 39,
+    "url": "https://dblp.org/rec/conf/acsac/2022",
+    "dblp_key": "conf/acsac/2022",
+    "source_id": "https://openalex.org/W4288436242"
+  }
+]

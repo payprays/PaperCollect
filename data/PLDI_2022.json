@@ -1,0 +1,1194 @@
+[
+  {
+    "title": "Semantic soundness for language interoperability.",
+    "authors": [
+      "Daniel Patterson 0001",
+      "Noble Mushtak",
+      "Andrew Wagner",
+      "Amal Ahmed 0001"
+    ],
+    "venue": "PLDI",
+    "year": 2022,
+    "abstract": "Programs are rarely implemented in a single language, and thus questions of type soundness should address not only the semantics of a single language, but how it interacts with others. Even between type-safe languages, disparate features can frustrate interoperability, as invariants from one language can easily be violated in the other. In their seminal 2007 paper, Matthews and Findler proposed a multi-language construction that augments the interoperating languages with a pair of boundaries that allow code from one language to be embedded in the other. While this technique has been widely applied, their syntactic source-level interoperability doesn't reflect practical implementations, where the behavior of interaction is only defined after compilation to a common target, and any safety must be ensured by target invariants or inserted target-level \"glue code.\"",
+    "citation_count": 19,
+    "reference_count": 43,
+    "url": "https://dblp.org/rec/conf/pldi/0001MWA22",
+    "dblp_key": "conf/pldi/0001MWA22",
+    "source_id": "https://openalex.org/W4281974386"
+  },
+  {
+    "title": "PyLSE: a pulse-transfer level language for superconductor electronics.",
+    "authors": [
+      "Michael Christensen 0001",
+      "Georgios Tzimpragos",
+      "Harlan Kringen",
+      "Jennifer Volk",
+      "Timothy Sherwood",
+      "Ben Hardekopf"
+    ],
+    "venue": "PLDI",
+    "year": 2022,
+    "abstract": "Superconductor electronics (SCE) run at hundreds of GHz and consume only a fraction of the dynamic power of CMOS, but are naturally pulse-based, and operate on impulses with picosecond widths. The transiency of these operations necessitates using logic cells that are inherently stateful. Adopting stateful gates, however, implies an entire reconstruction of the design, simulation, and verification stack. Though challenging, this unique opportunity allows us to build a design framework from the ground up using fundamental principles of programming language design. To this end, we propose PyLSE, an embedded pulse-transfer level language for superconductor electronics. We define PyLSE through formal semantics based on transition systems, and build a framework around them to simulate and analyze SCE cells digitally. To demonstrate its features, we verify its results by model checking in UPPAAL, and compare its complexity and timing against a set of cells designed as analog circuit schematics and simulated in Cadence.",
+    "citation_count": 4,
+    "reference_count": 46,
+    "url": "https://dblp.org/rec/conf/pldi/0001TKVSH22",
+    "dblp_key": "conf/pldi/0001TKVSH22",
+    "source_id": "https://openalex.org/W4281695547"
+  },
+  {
+    "title": "Kleene algebra modulo theories: a framework for concrete KATs.",
+    "authors": [
+      "Michael Greenberg 0002",
+      "Ryan Beckett",
+      "Eric Hayden Campbell"
+    ],
+    "venue": "PLDI",
+    "year": 2022,
+    "abstract": "Kleene algebras with tests (KATs) offer sound, complete, and decidable\\nequational reasoning about regularly structured programs. Interest in KATs has\\nincreased greatly since NetKAT demonstrated how well extensions of KATs with\\ndomain-specific primitives and extra axioms apply to computer networks.\\nUnfortunately, extending a KAT to a new domain by adding custom primitives,\\nproving its equational theory sound and complete, and coming up with an\\nefficient implementation is still an expert's task. Abstruse metatheory is\\nholding back KAT's potential.\\n We offer a fast path to a \"minimum viable model\" of a KAT, formally or in\\ncode through our framework, Kleene algebra modulo theories (KMT). Given\\nprimitives and a notion of state, we can automatically derive a corresponding\\nKAT's semantics, prove its equational theory sound and complete with respect to\\na tracing semantics (programs are denoted as traces of states), and derive a\\nnormalization-based decision procedure for equivalence checking. Our framework\\nis based on pushback, a generalization of weakest preconditions that specifies\\nhow predicates and actions interact. We offer several case studies, showing\\ntracing variants of theories from the literature (bitvectors, NetKAT) along\\nwith novel compositional theories (products, temporal logic, and sets). We\\nderive new results over unbounded state, reasoning about monotonically\\nincreasing, unbounded natural numbers. Our OCaml implementation closely matches\\nthe theory: users define and compose KATs with the module system.\\n",
+    "citation_count": 6,
+    "reference_count": 58,
+    "url": "https://dblp.org/rec/conf/pldi/0002BC22",
+    "dblp_key": "conf/pldi/0002BC22",
+    "source_id": "https://openalex.org/W4281943563"
+  },
+  {
+    "title": "Finding the dwarf: recovering precise types from WebAssembly binaries.",
+    "authors": [
+      "Daniel Lehmann 0002",
+      "Michael Pradel"
+    ],
+    "venue": "PLDI",
+    "year": 2022,
+    "abstract": "The increasing popularity of WebAssembly creates a demand for understanding and reverse engineering WebAssembly binaries. Recovering high-level function types is an important part of this process. One method to recover types is data-flow analysis, but it is complex to implement and may require manual heuristics when logical constraints fall short. In contrast, this paper presents SnowWhite, a learning-based approach for recovering precise, high-level parameter and return types for WebAssembly functions. It improves over prior work on learning-based type recovery by representing the types-to-predict in an expressive type language, which can describe a large number of complex types, instead of the fixed, and usually small type vocabulary used previously. Thus, recovery of a single type is no longer a classification task but sequence prediction, for which we build on the success of neural sequence-to-sequence models. We evaluate SnowWhite on a new, large-scale dataset of 6.3 million type samples extracted from 300,905 WebAssembly object files. The results show the type language is expressive, precisely describing 1,225 types instead the 7 to 35 types considered in previous learning-based approaches. Despite this expressiveness, our type recovery has high accuracy, exactly matching 44.5% (75.2%) of all parameter types and 57.7% (80.5%) of all return types within the top-1 (top-5) predictions.",
+    "citation_count": 23,
+    "reference_count": 54,
+    "url": "https://dblp.org/rec/conf/pldi/0002P22",
+    "dblp_key": "conf/pldi/0002P22",
+    "source_id": "https://openalex.org/W4281769038"
+  },
+  {
+    "title": "Progressive polynomial approximations for fast correctly rounded math libraries.",
+    "authors": [
+      "Mridul Aanjaneya",
+      "Jay P. Lim",
+      "Santosh Nagarakatte"
+    ],
+    "venue": "PLDI",
+    "year": 2022,
+    "abstract": "This paper presents a novel method for generating a single polynomial approximation that produces correctly rounded results for all inputs of an elementary function for multiple representations. The generated polynomial approximation has the nice property that the first few lower degree terms produce correctly rounded results for specific representations of smaller bitwidths, which we call progressive performance. To generate such progressive polynomial approximations, we approximate the correctly rounded result and formulate the computation of correctly rounded polynomial approximations as a linear program similar to our prior work on the RLIBM project. To enable the use of resulting polynomial approximations in mainstream libraries, we want to avoid piecewise polynomials with large lookup tables. We observe that the problem of computing polynomial approximations for elementary functions is a linear programming problem in low dimensions, i.e., with a small number of unknowns. We design a fast randomized algorithm for computing polynomial approximations with progressive performance. Our method produces correct and fast polynomials that require a small amount of storage. A few polynomial approximations from our prototype have already been incorporated into LLVM's math library.",
+    "citation_count": 8,
+    "reference_count": 32,
+    "url": "https://dblp.org/rec/conf/pldi/AanjaneyaLN22",
+    "dblp_key": "conf/pldi/AanjaneyaLN22",
+    "source_id": "https://openalex.org/W4281835144"
+  },
+  {
+    "title": "Efficient approximations for cache-conscious data placement.",
+    "authors": [
+      "Ali Ahmadi",
+      "Majid Daliri",
+      "Amir Kafshdar Goharshady",
+      "Andreas Pavlogiannis"
+    ],
+    "venue": "PLDI",
+    "year": 2022,
+    "abstract": "There is a huge and growing gap between the speed of accesses to data stored in main memory vs cache. Thus, cache misses account for a significant portion of runtime overhead in virtually every program and minimizing them has been an active research topic for decades. The primary and most classical formal model for this problem is that of Cache-conscious Data Placement (CDP): given a commutative cache with constant capacity k and a sequence ς of accesses to data elements, the goal is to map each data element to a cache line such that the total number of cache misses over ς is minimized. Note that we are considering an offline single-threaded setting in which ς is known a priori. CDP has been widely studied since the 1990s. In POPL 2002, Petrank and Rawitz proved a notoriously strong hardness result: They showed that for every k ≥ 3, CDP is not only NP-hard but also hard-to-approximate within any non-trivial factor unless P=NP. As such, all subsequent works gave up on theoretical improvements and instead focused on heuristic algorithms with no theoretical guarantees. In this work, we present the first-ever positive theoretical result for CDP. The fundamental idea behind our approach is that real-world instances of the problem have specific structural properties that can be exploited to obtain efficient algorithms with strong approximation guarantees. Specifically, the access graphs corresponding to many real-world access sequences are sparse and tree-like. This was already well-known in the community but has only been used to design heuristics without guarantees. In contrast, we provide fixed-parameter tractable algorithms that provably approximate the optimal number of cache misses within any factor 1 + \", assuming that the access graph of a specific degree d \"is sparse, i.e. sparser real-world instances lead to tighter approximations. Our theoretical results are accompanied by an experimental evaluation in which our approach outperforms past heuristics over small caches with a handful of lines. However, the approach cannot currently handle large real-world caches and making it scalable in practice is a direction for future work. © 2022 ACM.",
+    "citation_count": 8,
+    "reference_count": 39,
+    "url": "https://dblp.org/rec/conf/pldi/AhmadiDGP22",
+    "dblp_key": "conf/pldi/AhmadiDGP22",
+    "source_id": "https://openalex.org/W4281714803"
+  },
+  {
+    "title": "Autoscheduling for sparse tensor algebra with an asymptotic cost model.",
+    "authors": [
+      "Willow Ahrens",
+      "Fredrik Kjolstad",
+      "Saman P. Amarasinghe"
+    ],
+    "venue": "PLDI",
+    "year": 2022,
+    "abstract": "While loop reordering and fusion can make big impacts on the constant-factor performance of dense tensor programs, the effects on sparse tensor programs are asymptotic, often leading to orders of magnitude performance differences in practice. Sparse tensors also introduce a choice of compressed storage formats that can have asymptotic effects. Research into sparse tensor compilers has led to simplified languages that express these tradeoffs, but the user is expected to provide a schedule that makes the decisions. This is challenging because schedulers must anticipate the interaction between sparse formats, loop structure, potential sparsity patterns, and the compiler itself. Automating this decision making process stands to finally make sparse tensor compilers accessible to end users.",
+    "citation_count": 24,
+    "reference_count": 58,
+    "url": "https://dblp.org/rec/conf/pldi/AhrensKA22",
+    "dblp_key": "conf/pldi/AhrensKA22",
+    "source_id": "https://openalex.org/W4281658036"
+  },
+  {
+    "title": "Turning manual concurrent memory reclamation into automatic reference counting.",
+    "authors": [
+      "Daniel Anderson",
+      "Guy E. Blelloch",
+      "Yuanhao Wei"
+    ],
+    "venue": "PLDI",
+    "year": 2022,
+    "abstract": "Safe memory reclamation (SMR) schemes are an essential tool for lock-free data structures and concurrent programming. However, manual SMR schemes are notoriously difficult to apply correctly, and automatic schemes, such as reference counting, have been argued for over a decade to be too slow for practical purposes. A recent wave of work has disproved this long-held notion and shown that reference counting can be as scalable as hazard pointers, one of the most common manual techniques. Despite these tremendous improvements, there remains a gap of up to 2x or more in performance between these schemes and faster manual techniques such as epoch-based reclamation (EBR).",
+    "citation_count": 12,
+    "reference_count": 22,
+    "url": "https://dblp.org/rec/conf/pldi/AndersonBW22",
+    "dblp_key": "conf/pldi/AndersonBW22",
+    "source_id": "https://openalex.org/W4224032755"
+  },
+  {
+    "title": "&quot;Synthesizing input grammars&quot;: a replication study.",
+    "authors": [
+      "Bachir Bendrissou",
+      "Rahul Gopinath",
+      "Andreas Zeller"
+    ],
+    "venue": "PLDI",
+    "year": 2022,
+    "abstract": null,
+    "citation_count": null,
+    "reference_count": null,
+    "url": "https://dblp.org/rec/conf/pldi/BendrissouGZ22",
+    "dblp_key": "conf/pldi/BendrissouGZ22",
+    "source_id": null
+  },
+  {
+    "title": "Guaranteed bounds for posterior inference in universal probabilistic programming.",
+    "authors": [
+      "Raven Beutner",
+      "C.-H. Luke Ong",
+      "Fabian Zaiser"
+    ],
+    "venue": "PLDI",
+    "year": 2022,
+    "abstract": "We propose a new method to approximate the posterior distribution of probabilistic programs by means of computing guaranteed bounds. The starting point of our work is an interval-based trace semantics for a recursive, higher-order probabilistic programming language with continuous distributions. Taking the form of (super-/subadditive) measures, these lower/upper bounds are non-stochastic and provably correct: using the semantics, we prove that the actual posterior of a given program is sandwiched between the lower and upper bounds (soundness); moreover, the bounds converge to the posterior (completeness). As a practical and sound approximation, we introduce a weight-aware interval type system, which automatically infers interval bounds on not just the return value but also the weight of program executions, simultaneously. We have built a tool implementation, called GuBPI, which automatically computes these posterior lower/upper bounds. Our evaluation on examples from the literature shows that the bounds are useful, and can even be used to recognise wrong outputs from stochastic posterior inference procedures.",
+    "citation_count": 17,
+    "reference_count": 59,
+    "url": "https://dblp.org/rec/conf/pldi/BeutnerOZ22",
+    "dblp_key": "conf/pldi/BeutnerOZ22",
+    "source_id": "https://openalex.org/W4281938159"
+  },
+  {
+    "title": "Choosing mathematical function implementations for speed and accuracy.",
+    "authors": [
+      "Ian Briggs",
+      "Pavel Panchekha"
+    ],
+    "venue": "PLDI",
+    "year": 2022,
+    "abstract": "Standard implementations of functions like sin and exp optimize for accuracy, not speed, because they are intended for general-purpose use. But just like many applications tolerate inaccuracy from cancellation, rounding error, and singularities, many application could also tolerate less-accurate function implementations. This raises an intriguing possibility: speeding up numerical code by using different function implementations.",
+    "citation_count": 4,
+    "reference_count": 32,
+    "url": "https://dblp.org/rec/conf/pldi/BriggsP22",
+    "dblp_key": "conf/pldi/BriggsP22",
+    "source_id": "https://openalex.org/W4281782829"
+  },
+  {
+    "title": "Abstract interpretation repair.",
+    "authors": [
+      "Roberto Bruni 0001",
+      "Roberto Giacobazzi",
+      "Roberta Gori",
+      "Francesco Ranzato"
+    ],
+    "venue": "PLDI",
+    "year": 2022,
+    "abstract": "Abstract interpretation is a sound-by-construction method for program verification: any erroneous program will raise some alarm. However, the verification of correct programs may yield false-alarms, namely it may be incomplete. Ideally, one would like to perform the analysis on the most abstract domain that is precise enough to avoid false-alarms. We show how to exploit a weaker notion of completeness, called local completeness, to optimally refine abstract domains and thus enhance the precision of program verification. Our main result establishes necessary and sufficient conditions for the existence of an optimal, locally complete refinement, called pointed shell. On top of this, we define two repair strategies to remove all false-alarms along a given abstract computation: the first proceeds forward, along with the concrete computation, while the second moves backward within the abstract computation. Our results pave the way for a novel modus operandi for automating program verification that we call Abstract Interpretation Repair (AIR): instead of choosing beforehand the right abstract domain, we can start in any abstract domain and progressively repair its local incompleteness as needed. In this regard, AIR is for abstract interpretation what CEGAR is for abstract model checking.",
+    "citation_count": 14,
+    "reference_count": 60,
+    "url": "https://dblp.org/rec/conf/pldi/BruniGGR22",
+    "dblp_key": "conf/pldi/BruniGGR22",
+    "source_id": "https://openalex.org/W4281618949"
+  },
+  {
+    "title": "A study of real-world data races in Golang.",
+    "authors": [
+      "Milind Chabbi",
+      "Murali Krishna Ramanathan"
+    ],
+    "venue": "PLDI",
+    "year": 2022,
+    "abstract": "The concurrent programming literature is rich with tools and techniques for data race detection. Less, however, has been known about real-world, industry-scale deployment, experience, and insights about data races. Golang (Go for short) is a modern programming language that makes concurrency a first-class citizen. Go offers both message passing and shared memory for communicating among concurrent threads. Go is gaining popularity in modern microservice-based systems. Data races in Go stand in the face of its emerging popularity. In this paper, using our industrial codebase as an example, we demonstrate that Go developers embrace concurrency and show how the abundance of concurrency alongside language idioms and nuances make Go programs highly susceptible to data races. Google's Go distribution ships with a built-in dynamic data race detector based on ThreadSanitizer. However, dynamic race detectors pose scalability and flakiness challenges; we discuss various software engineering trade-offs to make this detector work effectively at scale. We have deployed this detector in Uber's 46 million lines of Go codebase hosting 2100 distinct microservices, found over 2000 data races, and fixed over 1000 data races, spanning 790 distinct code patches submitted by 210 unique developers over a six-month period. Based on a detailed investigation of these data race patterns in Go, we make seven high-level observations relating to the complex interplay between the Go language paradigm and data races.",
+    "citation_count": 26,
+    "reference_count": 37,
+    "url": "https://dblp.org/rec/conf/pldi/ChabbiR22",
+    "dblp_key": "conf/pldi/ChabbiR22",
+    "source_id": "https://openalex.org/W4225528709"
+  },
+  {
+    "title": "Finding typing compiler bugs.",
+    "authors": [
+      "Stefanos Chaliasos",
+      "Thodoris Sotiropoulos",
+      "Diomidis Spinellis",
+      "Arthur Gervais",
+      "Benjamin Livshits",
+      "Dimitris Mitropoulos"
+    ],
+    "venue": "PLDI",
+    "year": 2022,
+    "abstract": "&lt;p&gt;We propose a testing framework for validating static typing procedures in compilers. Our core component is a program generator suitably crafted for producing programs that are likely to trigger typing compiler bugs. One of our main contributions is that our program generator gives rise to transformation-based compiler testing for finding typing bugs. We present two novel approaches (type erasure mutation and type overwriting mutation) that apply targeted transformations to an input program to reveal type inference and soundness compiler bugs respectively. Both approaches are guided by an intra-procedural type inference analysis used to capture type information flow. We implement our techniques as a tool, which we call Hephaestus. The extensibility of Hephaestus enables us to test the compilers of three popular JVM languages: Java, Kotlin, and Groovy. Within nine months of testing, we have found 156 bugs (137 confirmed and 85 fixed) with diverse manifestations and root causes in all the examined compilers. Most of the discovered bugs lie in the heart of many critical components related to static typing, such as type inference.&lt;/p&gt;",
+    "citation_count": 25,
+    "reference_count": 40,
+    "url": "https://dblp.org/rec/conf/pldi/ChaliasosSSGLM22",
+    "dblp_key": "conf/pldi/ChaliasosSSGLM22",
+    "source_id": "https://openalex.org/W4281613925"
+  },
+  {
+    "title": "All you need is superword-level parallelism: systematic control-flow vectorization with SLP.",
+    "authors": [
+      "Yishen Chen",
+      "Charith Mendis",
+      "Saman P. Amarasinghe"
+    ],
+    "venue": "PLDI",
+    "year": 2022,
+    "abstract": "Superword-level parallelism (SLP) vectorization is a proven technique for vectorizing straight-line code. It works by replacing independent, isomorphic instructions with equivalent vector instructions. Larsen and Amarasinghe originally proposed using SLP vectorization (together with loop unrolling) as a simpler, more flexible alternative to traditional loop vectorization. However, this vision of replacing traditional loop vectorization has not been realized because SLP vectorization cannot directly reason with control flow.",
+    "citation_count": 13,
+    "reference_count": 13,
+    "url": "https://dblp.org/rec/conf/pldi/ChenMA22",
+    "dblp_key": "conf/pldi/ChenMA22",
+    "source_id": "https://openalex.org/W4281621335"
+  },
+  {
+    "title": "Visualization question answering using introspective program synthesis.",
+    "authors": [
+      "Yanju Chen",
+      "Xifeng Yan",
+      "Yu Feng 0001"
+    ],
+    "venue": "PLDI",
+    "year": 2022,
+    "abstract": "Research Artifact for PLDI'22 Paper: Visualization Question Answering Using Introspective Program Synthesis",
+    "citation_count": 0,
+    "reference_count": 0,
+    "url": "https://dblp.org/rec/conf/pldi/ChenY022",
+    "dblp_key": "conf/pldi/ChenY022",
+    "source_id": "https://openalex.org/W4226372565"
+  },
+  {
+    "title": "Sequential reasoning for optimizing compilers under weak memory concurrency.",
+    "authors": [
+      "Minki Cho",
+      "Sung-Hwan Lee 0001",
+      "Dongjae Lee",
+      "Chung-Kil Hur",
+      "Ori Lahav 0001"
+    ],
+    "venue": "PLDI",
+    "year": 2022,
+    "abstract": "We formally show that sequential reasoning is adequate and sufficient for establishing soundness of various compiler optimizations under weakly consistent shared-memory concurrency. Concretely, we introduce a sequential model and show that behavioral refinement in that model entails contextual refinement in the Promising Semantics model, extended with non-atomic accesses for non-racy code. This is the first work to achieve such result for a full-fledged model with a variety of C11-style concurrency features. Central to our model is the lifting of the common data-race-freedom assumption, which allows us to validate irrelevant load introduction, a transformation that is commonly performed by compilers. As a proof of concept, we develop an optimizer for a toy concurrent language, and certify it (in Coq) while relying solely on the sequential model. We believe that the proposed approach provides useful means for compiler developers and validators, as well as a solid foundation for the development of certified optimizing compilers for weakly consistent shared-memory concurrency.",
+    "citation_count": 10,
+    "reference_count": 42,
+    "url": "https://dblp.org/rec/conf/pldi/ChoLLHL22",
+    "dblp_key": "conf/pldi/ChoLLHL22",
+    "source_id": "https://openalex.org/W4281651418"
+  },
+  {
+    "title": "Can reactive synthesis and syntax-guided synthesis be friends?",
+    "authors": [
+      "Wonhyuk Choi",
+      "Bernd Finkbeiner",
+      "Ruzica Piskac",
+      "Mark Santolucito"
+    ],
+    "venue": "PLDI",
+    "year": 2022,
+    "abstract": "While reactive synthesis and syntax-guided synthesis (SyGuS) have seen enormous progress in recent years, combining the two approaches has remained a challenge. In this work, we present the synthesis of reactive programs from Temporal Stream Logic modulo theories (TSL-MT), a framework that unites the two approaches to synthesize a single program. In our approach, reactive synthesis and SyGuS collaborate in the synthesis process, and generate executable code that implements both reactive and data-level properties.",
+    "citation_count": 16,
+    "reference_count": 30,
+    "url": "https://dblp.org/rec/conf/pldi/ChoiFPS22",
+    "dblp_key": "conf/pldi/ChoiFPS22",
+    "source_id": "https://openalex.org/W4281723906"
+  },
+  {
+    "title": "Modular information flow through ownership.",
+    "authors": [
+      "Will Crichton",
+      "Marco Patrignani",
+      "Maneesh Agrawala",
+      "Pat Hanrahan"
+    ],
+    "venue": "PLDI",
+    "year": 2022,
+    "abstract": "Statically analyzing information flow, or how data influences other data within a program, is a challenging task in imperative languages. Analyzing pointers and mutations requires access to a program's complete source. However, programs often use pre-compiled dependencies where only type signatures are available. We demonstrate that ownership types can be used to soundly and precisely analyze information flow through function calls given only their type signature. From this insight, we built Flowistry, a system for analyzing information flow in Rust, an ownership-based language. We prove the system's soundness as a form of noninterference using the Oxide formal model of Rust. Then we empirically evaluate the precision of Flowistry, showing that modular flows are identical to whole-program flows in 94% of cases drawn from large Rust codebases. We illustrate the applicability of Flowistry by using it to implement prototypes of a program slicer and an information flow control system.",
+    "citation_count": 11,
+    "reference_count": 30,
+    "url": "https://dblp.org/rec/conf/pldi/CrichtonPAH22",
+    "dblp_key": "conf/pldi/CrichtonPAH22",
+    "source_id": "https://openalex.org/W4226285758"
+  },
+  {
+    "title": "Compass: strong and compositional library specifications in relaxed memory separation logic.",
+    "authors": [
+      "Hoang-Hai Dang",
+      "Jaehwang Jung",
+      "Jaemin Choi",
+      "Duc-Than Nguyen",
+      "William Mansky",
+      "Jeehoon Kang",
+      "Derek Dreyer"
+    ],
+    "venue": "PLDI",
+    "year": 2022,
+    "abstract": "Several functional correctness criteria have been proposed for relaxed-memory consistency libraries, but most lack support for modular client reasoning. Mével and Jourdan recently showed that logical atomicity can be used to give strong modular Hoare-style specifications for relaxed libraries, but only for a limited instance in the Multicore OCaml memory model. It has remained unclear if their approach scales to weaker implementations in weaker memory models.",
+    "citation_count": 18,
+    "reference_count": 69,
+    "url": "https://dblp.org/rec/conf/pldi/DangJCNMKD22",
+    "dblp_key": "conf/pldi/DangJCNMKD22",
+    "source_id": "https://openalex.org/W4281945852"
+  },
+  {
+    "title": "PaC-trees: supporting parallel and compressed purely-functional collections.",
+    "authors": [
+      "Laxman Dhulipala",
+      "Guy E. Blelloch",
+      "Yan Gu 0001",
+      "Yihan Sun 0001"
+    ],
+    "venue": "PLDI",
+    "year": 2022,
+    "abstract": "Many modern programming languages are shifting toward a functional style for collection interfaces such as sets, maps, and sequences. Functional interfaces offer many advantages, including being safe for parallelism and providing simple and lightweight snapshots. However, existing high-performance functional interfaces such as PAM, which are based on balanced purely-functional trees, incur large space overheads for large-scale data analysis due to storing every element in a separate node in a tree.",
+    "citation_count": 14,
+    "reference_count": 27,
+    "url": "https://dblp.org/rec/conf/pldi/DhulipalaB0022",
+    "dblp_key": "conf/pldi/DhulipalaB0022",
+    "source_id": "https://openalex.org/W4223901115"
+  },
+  {
+    "title": "Leapfrog: certified equivalence for protocol parsers.",
+    "authors": [
+      "Ryan Doenges",
+      "Tobias Kappé",
+      "John Sarracino",
+      "Nate Foster",
+      "Greg Morrisett"
+    ],
+    "venue": "PLDI",
+    "year": 2022,
+    "abstract": "We present Leapfrog, a Coq-based framework for verifying equivalence of network protocol parsers. Our approach is based on an automata model of P4 parsers, and an algorithm for symbolically computing a compact representation of a bisimulation, using \"leaps.\" Proofs are powered by a certified compilation chain from first-order entailments to low-level bitvector verification conditions, which are discharged using off-the-shelf SMT solvers. As a result, parser equivalence proofs in Leapfrog are fully automatic and push-button. We mechanically prove the core metatheory that underpins our approach, including the key transformations and several optimizations. We evaluate Leapfrog on a range of practical case studies, all of which require minimal configuration and no manual proof. Our largest case study uses Leapfrog to perform translation validation for a third-party compiler from automata to hardware pipelines. Overall, Leapfrog represents a step towards a world where all parsers for critical network infrastructure are verified. It also suggests directions for follow-on efforts, such as verifying relational properties involving security.",
+    "citation_count": 8,
+    "reference_count": 52,
+    "url": "https://dblp.org/rec/conf/pldi/DoengesKSFM22",
+    "dblp_key": "conf/pldi/DoengesKSFM22",
+    "source_id": "https://openalex.org/W4282016927"
+  },
+  {
+    "title": "WebRobot: web robotic process automation using interactive programming-by-demonstration.",
+    "authors": [
+      "Rui Dong 0006",
+      "Zhicheng Huang",
+      "Ian Iong Lam",
+      "Yan Chen 0033",
+      "Xinyu Wang 0006"
+    ],
+    "venue": "PLDI",
+    "year": 2022,
+    "abstract": "It is imperative to democratize robotic process automation (RPA), as RPA has become a main driver of the digital transformation but is still technically very demanding to construct, especially for non-experts. In this paper, we study how to automate an important class of RPA tasks, dubbed web RPA, which are concerned with constructing software bots that automate interactions across data and a web browser. Our main contributions are twofold. First, we develop a formal foundation which allows semantically reasoning about web RPA programs and formulate its synthesis problem in a principled manner. Second, we propose a web RPA program synthesis algorithm based on a new idea called speculative rewriting. This leads to a novel speculate-and-validate methodology in the context of rewrite-based program synthesis, which has also shown to be both theoretically simple and practically efficient for synthesizing programs from demonstrations. We have built these ideas in a new interactive synthesizer called WebRobot and evaluate it on 76 web RPA benchmarks. Our results show that WebRobot automated a majority of them effectively. Furthermore, we show that WebRobot compares favorably with a conventional rewrite-based synthesis baseline implemented using egg. Finally, we conduct a small user study demonstrating WebRobot is also usable.",
+    "citation_count": 22,
+    "reference_count": 45,
+    "url": "https://dblp.org/rec/conf/pldi/DongHLCW22",
+    "dblp_key": "conf/pldi/DongHLCW22",
+    "source_id": "https://openalex.org/W4223562903"
+  },
+  {
+    "title": "Sound sequentialization for concurrent program verification.",
+    "authors": [
+      "Azadeh Farzan",
+      "Dominik Klumpp",
+      "Andreas Podelski"
+    ],
+    "venue": "PLDI",
+    "year": 2022,
+    "abstract": "We present a systematic investigation and experimental evaluation of a large space of algorithms for the verification of concurrent programs. The algorithms are based on sequentialization. In the analysis of concurrent programs, the general idea of sequentialization is to select a subset of interleavings, represent this subset as a sequential program, and apply a generic analysis for sequential programs. For the purpose of verification, the sequentialization has to be sound (meaning that the proof for the sequential program entails the correctness of the concurrent program). We use the concept of a preference order to define which interleavings the sequentialization is to select (\"the most preferred ones\"). A verification algorithm based on sound sequentialization that is parametrized in a preference order allows us to directly evaluate the impact of the selection of the subset of interleavings on the performance of the algorithm. Our experiments indicate the practical potential of sound sequentialization for concurrent program verification.",
+    "citation_count": 17,
+    "reference_count": 37,
+    "url": "https://dblp.org/rec/conf/pldi/FarzanKP22",
+    "dblp_key": "conf/pldi/FarzanKP22",
+    "source_id": "https://openalex.org/W4281968516"
+  },
+  {
+    "title": "Recursion synthesis with unrealizability witnesses.",
+    "authors": [
+      "Azadeh Farzan",
+      "Danya Lette",
+      "Victor Nicolet"
+    ],
+    "venue": "PLDI",
+    "year": 2022,
+    "abstract": "We propose SE2GIS, a novel inductive recursion synthesis approach with the ability to both synthesize code and declare a problem unsolvable. SE2GIS combines a symbolic variant of counterexample-guided inductive synthesis (CEGIS) with a new dual inductive procedure, which focuses on proving a synthesis problem unsolvable rather than finding a solution for it. A vital component of this procedure is a new algorithm that produces a witness, a set of concrete assignments to relevant variables, as a proof that the synthesis instance is not solvable. Witnesses in the dual inductive procedure play the same role that solutions do in classic CEGIS; that is, they ensure progress. Given a reference function, invariants on the input recursive data types, and a target family of recursive functions, SE2GIS synthesizes an implementation in this family that is equivalent to the reference implementation, or declares the problem unsolvable and produces a witness for it. We demonstrate that SE2GIS is effective in both cases; that is, for interesting data types with complex invariants, it can synthesize non-trivial recursive functions or output witnesses that contain useful feedback for the user.",
+    "citation_count": 17,
+    "reference_count": 36,
+    "url": "https://dblp.org/rec/conf/pldi/FarzanLN22",
+    "dblp_key": "conf/pldi/FarzanLN22",
+    "source_id": "https://openalex.org/W4281873108"
+  },
+  {
+    "title": "IRDL: an IR definition language for SSA compilers.",
+    "authors": [
+      "Mathieu Fehr",
+      "Jeff Niu",
+      "River Riddle",
+      "Mehdi Amini",
+      "Zhendong Su 0001",
+      "Tobias Grosser"
+    ],
+    "venue": "PLDI",
+    "year": 2022,
+    "abstract": "Designing compiler intermediate representations (IRs) is often a manual process that makes exploration and innovation in this space costly. Developers typically use general-purpose programming languages to design IRs. As a result, IR implementations are verbose, manual modifications are expensive, and designing tooling for the inspection or generation of IRs is impractical. While compilers relied historically on a few slowly evolving IRs, domain-specific optimizations and specialized hardware motivate compilers to use and evolve many IRs. We facilitate the implementation of SSA-based IRs by introducing IRDL, a domain-specific language to define IRs. We analyze all 28 domain-specific IRs developed as part of LLVM's MLIR project over the last two years and demonstrate how to express these IRs exclusively in IRDL while only rarely falling back to IRDL's support for generic C++ extensions. By enabling the concise and explicit specification of IRs, we provide foundations for developing effective tooling to automate the compiler construction process.",
+    "citation_count": 12,
+    "reference_count": 17,
+    "url": "https://dblp.org/rec/conf/pldi/FehrNRA0G22",
+    "dblp_key": "conf/pldi/FehrNRA0G22",
+    "source_id": "https://openalex.org/W4281950471"
+  },
+  {
+    "title": "Deoptless: speculation with dispatched on-stack replacement and specialized continuations.",
+    "authors": [
+      "Olivier Flückiger",
+      "Jan Jecmen",
+      "Sebastián Krynski",
+      "Jan Vitek"
+    ],
+    "venue": "PLDI",
+    "year": 2022,
+    "abstract": "Just-in-time compilation provides significant performance improvements for programs written in dynamic languages. These benefits come from the ability of the compiler to speculate about likely cases and generate optimized code for these. Unavoidably, speculations sometimes fail and the optimizations must be reverted. In some pathological cases, this can leave the program stuck with suboptimal code. In this paper we propose deoptless, a technique that replaces deoptimization points with dispatched specialized continuations. The goal of deoptless is to take a step towards providing users with a more transparent performance model in which mysterious slowdowns are less frequent and grave.",
+    "citation_count": 5,
+    "reference_count": 26,
+    "url": "https://dblp.org/rec/conf/pldi/FluckigerJKV22",
+    "dblp_key": "conf/pldi/FluckigerJKV22",
+    "source_id": "https://openalex.org/W4281722661"
+  },
+  {
+    "title": "Checking robustness to weak persistency models.",
+    "authors": [
+      "Hamed Gorjiara",
+      "Weiyu Luo",
+      "Alex Lee",
+      "Guoqing Harry Xu",
+      "Brian Demsky"
+    ],
+    "venue": "PLDI",
+    "year": 2022,
+    "abstract": "Persistent memory (PM) technologies offer performance close to DRAM with persistence. Persistent memory enables programs to directly modify persistent data through normal load and store instructions bypassing heavyweight OS system calls for persistency. However, these stores are not made immediately made persistent, the developer must manually flush the corresponding cache lines to force the data to be written to persistent memory. While state-of-the-art testing tools can help developers find and fix persistency bugs, prior studies have shown fixing persistency bugs on average takes a couple of weeks for PM developers. The developer has to manually inspect the execution to identify the root cause of the problem. In addition, most of the existing state-of-the-art testing tools require heavy user annotations to detect bugs without visible symptoms such as a segmentation fault.",
+    "citation_count": 9,
+    "reference_count": 76,
+    "url": "https://dblp.org/rec/conf/pldi/GorjiaraLLXD22",
+    "dblp_key": "conf/pldi/GorjiaraLLXD22",
+    "source_id": "https://openalex.org/W4281975372"
+  },
+  {
+    "title": "Deep and shallow types for gradual languages.",
+    "authors": [
+      "Ben Greenman"
+    ],
+    "venue": "PLDI",
+    "year": 2022,
+    "abstract": "Sound gradual types come in many forms and offer varying levels of soundness. Two extremes are deep types and shallow types. Deep types offer compositional guarantees but depend on expensive higher-order contracts. Shallow types enforce only local properties, but can be implemented with first-order checks. This paper presents a language design that supports both deep and shallow types to utilize their complementary strengths.",
+    "citation_count": 5,
+    "reference_count": 69,
+    "url": "https://dblp.org/rec/conf/pldi/Greenman22",
+    "dblp_key": "conf/pldi/Greenman22",
+    "source_id": "https://openalex.org/W4281615790"
+  },
+  {
+    "title": "P4BID: information flow control in p4.",
+    "authors": [
+      "Karuna Grewal",
+      "Loris D&apos;Antoni",
+      "Justin Hsu"
+    ],
+    "venue": "PLDI",
+    "year": 2022,
+    "abstract": "Modern programmable network switches can implement custom applications using\\nefficient packet processing hardware, and the programming language P4 provides\\nhigh-level constructs to program such switches. The increase in speed and\\nprogrammability has inspired research in dataplane programming, where many\\ncomplex functionalities, e.g., key-value stores and load balancers, can be\\nimplemented entirely in network switches. However, dataplane programs may\\nsuffer from novel security errors that are not traditionally found in network\\nswitches.\\n To address this issue, we present a new information-flow control type system\\nfor P4. We formalize our type system in a recently-proposed core version of P4,\\nand we prove a soundness theorem: well-typed programs satisfy non-interference.\\nWe also implement our type system in a tool, P4bid, which extends the type\\nchecker in the p4c compiler, the reference compiler for the latest version of\\nP4. We present several case studies showing that natural security, integrity,\\nand isolation properties in networks can be captured by non-interference, and\\nour type system can detect violations of these properties while certifying\\ncorrect programs.\\n",
+    "citation_count": 3,
+    "reference_count": 31,
+    "url": "https://dblp.org/rec/conf/pldi/GrewalDH22",
+    "dblp_key": "conf/pldi/GrewalDH22",
+    "source_id": "https://openalex.org/W4226002523"
+  },
+  {
+    "title": "Type-directed program synthesis for RESTful APIs.",
+    "authors": [
+      "Zheng Guo 0003",
+      "David Cao",
+      "Davin Tjong",
+      "Jean Yang 0001",
+      "Cole Schlesinger",
+      "Nadia Polikarpova"
+    ],
+    "venue": "PLDI",
+    "year": 2022,
+    "abstract": "With the rise of software-as-a-service and microservice architectures,\\nRESTful APIs are now ubiquitous in mobile and web applications. A service can\\nhave tens or hundreds of API methods, making it a challenge for programmers to\\nfind the right combination of methods to solve their task.\\n We present APIphany, a component-based synthesizer for programs that compose\\ncalls to RESTful APIs. The main innovation behind APIphany is the use of\\nprecise semantic types, both to specify user intent and to direct the search.\\nAPIphany contributes three novel mechanisms to overcome challenges in adapting\\ncomponent-based synthesis to the REST domain: (1) a type inference algorithm\\nfor augmenting REST specifications with semantic types; (2) an efficient\\nsynthesis technique for \"wrangling\" semi-structured data, which is commonly\\nrequired in working with RESTful APIs; and (3) a new form of simulated\\nexecution to avoid executing APIs calls during synthesis. We evaluate APIphany\\non three real-world APIs and 32 tasks extracted from GitHub repositories and\\nStackOverflow. In our experiments, APIphany found correct solutions to 29\\ntasks, with 23 of them reported among top ten synthesis results.\\n",
+    "citation_count": 14,
+    "reference_count": 28,
+    "url": "https://dblp.org/rec/conf/pldi/GuoCT0SP22",
+    "dblp_key": "conf/pldi/GuoCT0SP22",
+    "source_id": "https://openalex.org/W4226087539"
+  },
+  {
+    "title": "ANOSY: approximated knowledge synthesis with refinement types for declassification.",
+    "authors": [
+      "Sankha Narayan Guria",
+      "Niki Vazou",
+      "Marco Guarnieri",
+      "James Parker"
+    ],
+    "venue": "PLDI",
+    "year": 2022,
+    "abstract": "Non-interference is a popular way to enforce confidentiality of sensitive data. However, declassification of sensitive information is often needed in realistic applications but breaks non-interference. We present ANOSY, an approximate knowledge synthesizer for quantitative declassification policies. ANOSY uses refinement types to automatically construct machine checked over- and under-approximations of attacker knowledge for boolean queries on multi-integer secrets. It also provides an AnosyT monad to track the attacker knowledge over multiple declassification queries and checks for violations against user-specified policies in information flow control applications. We implement a prototype of ANOSY and show that it is precise and permissive: up to 14 declassification queries are permitted before a policy violation occurs using the powerset of intervals domain.",
+    "citation_count": 1,
+    "reference_count": 45,
+    "url": "https://dblp.org/rec/conf/pldi/GuriaVGP22",
+    "dblp_key": "conf/pldi/GuriaVGP22",
+    "source_id": "https://openalex.org/W4281853994"
+  },
+  {
+    "title": "Adore: atomic distributed objects with certified reconfiguration.",
+    "authors": [
+      "Wolf Honoré",
+      "Ji-Yong Shin",
+      "Jieung Kim",
+      "Zhong Shao 0001"
+    ],
+    "venue": "PLDI",
+    "year": 2022,
+    "abstract": "Finding the right abstraction is critical for reasoning about complex systems such as distributed protocols like Paxos and Raft. Despite a recent abundance of impressive verification work in this area, we claim the ways that past efforts model distributed state are not ideal for protocol-level reasoning: they either hide important details, or leak too much complexity from the network. As evidence we observe that nearly all of them avoid the complex, but important issue of reconfiguration. Reconfiguration's primary challenge lies in how it interacts with a protocol's core safety invariants. To handle this increased complexity, we introduce the Adore model, whose novel abstract state hides network-level communications while capturing dependencies between committed and uncommitted states, as well as metadata like election quorums. It includes first-class support for a generic reconfiguration command that can be instantiated with a variety of implementations. Under this model, the subtle interactions between reconfiguration and the core protocol become clear, and with this insight we completed the first mechanized proof of safety of a reconfigurable consensus protocol.",
+    "citation_count": 8,
+    "reference_count": 26,
+    "url": "https://dblp.org/rec/conf/pldi/HonoreSKS22",
+    "dblp_key": "conf/pldi/HonoreSKS22",
+    "source_id": "https://openalex.org/W4281749479"
+  },
+  {
+    "title": "Hamband: RDMA replicated data types.",
+    "authors": [
+      "Farzin Houshmand",
+      "Javad Saberlatibari",
+      "Mohsen Lesani"
+    ],
+    "venue": "PLDI",
+    "year": 2022,
+    "abstract": "Data centers are increasingly equipped with RDMAs. These network interfaces mark the advent of a new distributed system model where a node can directly access the remote memory of another. They have enabled microsecond-scale replicated services. The underlying replication protocols of these systems execute all operations under strong consistency. However, strong consistency can hinder response time and availability, and recent replication models have turned to a hybrid of strong and relaxed consistency. This paper presents RDMA well-coordinated replicated data types, the first hybrid replicated data types for the RDMA network model. It presents a novel operational semantics for these data types that considers three distinct categories of methods and captures their required coordination, and formally proves that they preserve convergence and integrity. It implements these semantics in a system called Hamband that leverages direct remote accesses to efficiently implement the required coordination protocols. The empirical evaluation shows that Hamband outperforms the throughput of existing message-based and strongly consistent implementations by more than 17x and 2.7x respectively.",
+    "citation_count": 4,
+    "reference_count": 70,
+    "url": "https://dblp.org/rec/conf/pldi/HoushmandSL22",
+    "dblp_key": "conf/pldi/HoushmandSL22",
+    "source_id": "https://openalex.org/W4281976460"
+  },
+  {
+    "title": "Exocompilation for productive programming of hardware accelerators.",
+    "authors": [
+      "Yuka Ikarashi",
+      "Gilbert Louis Bernstein",
+      "Alex Reinking",
+      "Hasan Genc",
+      "Jonathan Ragan-Kelley"
+    ],
+    "venue": "PLDI",
+    "year": 2022,
+    "abstract": "High-performance kernel libraries are critical to exploiting accelerators and specialized instructions in many applications. Because compilers are difficult to extend to support diverse and rapidly-evolving hardware targets, and automatic optimization is often insufficient to guarantee state-of-the-art performance, these libraries are commonly still coded and optimized by hand, at great expense, in low-level C and assembly. To better support development of high-performance libraries for specialized hardware, we propose a new programming language, Exo, based on the principle of exocompilation: externalizing target-specific code generation support and optimization policies to user-level code. Exo allows custom hardware instructions, specialized memories, and accelerator configuration state to be defined in user libraries. It builds on the idea of user scheduling to externalize hardware mapping and optimization decisions. Schedules are defined as composable rewrites within the language, and we develop a set of effect analyses which guarantee program equivalence and memory safety through these transformations. We show that Exo enables rapid development of state-of-the-art matrix-matrix multiply and convolutional neural network kernels, for both an embedded neural accelerator and x86 with AVX-512 extensions, in a few dozen lines of code each.",
+    "citation_count": 47,
+    "reference_count": 31,
+    "url": "https://dblp.org/rec/conf/pldi/IkarashiBRGR22",
+    "dblp_key": "conf/pldi/IkarashiBRGR22",
+    "source_id": "https://openalex.org/W4281707342"
+  },
+  {
+    "title": "CycleQ: an efficient basis for cyclic equational reasoning.",
+    "authors": [
+      "Eddie Jones",
+      "C.-H. Luke Ong",
+      "Steven J. Ramsay"
+    ],
+    "venue": "PLDI",
+    "year": 2022,
+    "abstract": "We propose a new cyclic proof system for automated, equational reasoning about the behaviour of pure functional programs. The key to the system is the way in which cyclic proofs and equational reasoning are mediated by the use of contextual substitution as a cut rule. We show that our system, although simple, already subsumes several of the approaches to implicit induction variously known as \"inductionless induction\", \"rewriting induction\", and \"proof by consistency\". By restricting the form of the traces, we show that global correctness in our system can be verified incrementally, taking advantage of the well-known size-change principle, which leads to an efficient implementation of proof search. Our CycleQ tool, implemented as a GHC plugin, shows promising results on a number of standard benchmarks.",
+    "citation_count": 7,
+    "reference_count": 55,
+    "url": "https://dblp.org/rec/conf/pldi/JonesOR22",
+    "dblp_key": "conf/pldi/JonesOR22",
+    "source_id": "https://openalex.org/W3216290363"
+  },
+  {
+    "title": "RunTime-assisted convergence in replicated data types.",
+    "authors": [
+      "Gowtham Kaki",
+      "Prasanth Prahladan",
+      "Nicholas V. Lewchenko"
+    ],
+    "venue": "PLDI",
+    "year": 2022,
+    "abstract": "We propose a runtime-assisted approach to enforce convergence in distributed executions of replicated data types. The key distinguishing aspect of our approach is that it guarantees convergence unconditionally – without requiring data type operations to satisfy algebraic laws such as commutativity and idempotence. Consequently, programmers are no longer obligated to prove convergence on a per-type basis. Moreover, our approach lets sequential data types be reused in a distributed setting by extending their implementations rather than refactoring them. The novel component of our approach is a distributed runtime that orchestrates well-formed executions that are guaranteed to converge. Despite the utilization of a runtime, our approach comes at no additional cost of latency and availability. Instead, we introduce a novel tradeoff against a metric called staleness, which roughly corresponds to the time taken for replicas to converge. We implement our approach in a system called Quark and conduct a thorough evaluation of its tradeoffs.",
+    "citation_count": 2,
+    "reference_count": 18,
+    "url": "https://dblp.org/rec/conf/pldi/KakiPL22",
+    "dblp_key": "conf/pldi/KakiPL22",
+    "source_id": "https://openalex.org/W4281695651"
+  },
+  {
+    "title": "Software-hardware codesign for efficient in-memory regular pattern matching.",
+    "authors": [
+      "Lingkun Kong",
+      "Qixuan Yu 0001",
+      "Agnishom Chattopadhyay",
+      "Alexis Le Glaunec",
+      "Yi Huang 0036",
+      "Konstantinos Mamouras",
+      "Kaiyuan Yang 0001"
+    ],
+    "venue": "PLDI",
+    "year": 2022,
+    "abstract": "Regular pattern matching is used in numerous application domains, including text processing, bioinformatics, and network security. Patterns are typically expressed with an extended syntax of regular expressions that include the computationally challenging construct of bounded iteration or counting, which describes the repetition of a pattern a fixed number of times. We develop a design for a specialized in-memory hardware architecture for NFA execution that integrates counter and bit vector elements. The design is inspired by the theoretical model of nondeterministic counter automata (NCA). A key feature of our approach is that we statically analyze regular expressions to determine bounds on the amount of memory needed for the occurrences of counting. The results of this analysis are used by a regex-to-hardware compiler in order to make an appropriate selection of counter or bit vector elements. We evaluate the performance of our hardware implementation on a simulator based on circuit parameters collected by SPICE simulation using a TSMC 28nm process. We find the usage of counter and bit vector quickly outperforms unfolding solutions by orders of magnitude with small counting quantifiers. Experiments concerning realistic workloads show up to 76% energy reduction and 58% area reduction in comparison to traditional in-memory NFA processors.",
+    "citation_count": 17,
+    "reference_count": 61,
+    "url": "https://dblp.org/rec/conf/pldi/KongYCGHM022",
+    "dblp_key": "conf/pldi/KongYCGHM022",
+    "source_id": "https://openalex.org/W4281667938"
+  },
+  {
+    "title": "WARio: efficient code generation for intermittent computing.",
+    "authors": [
+      "Vito Kortbeek",
+      "Souradip Ghosh",
+      "Josiah D. Hester",
+      "Simone Campanoni",
+      "Przemyslaw Pawelczak"
+    ],
+    "venue": "PLDI",
+    "year": 2022,
+    "abstract": "&lt;p&gt;Intermittently operating embedded computing platforms powered by energy harvesting require software frameworks to protect from errors caused by Write After Read (WAR) dependencies. A powerful method of code protection for systems with non-volatile main memory utilizes compiler analysis to insert a checkpoint inside each WAR violation in the code. However, such software frameworks are oblivious to the code structure - -and therefore, inefficient - -when many consecutive WAR violations exist. Our insight is that by transforming the input code, i.e., moving individual write operations from unique WARs close to each other, we can significantly reduce the number of checkpoints. This idea is the foundation for WARio: a set of compiler transformations for efficient code generation for intermittent computing. WARio, on average, reduces checkpoint overhead by 58%, and up to 88%, compared to the state of the art across various benchmarks.&lt;/p&gt;",
+    "citation_count": 16,
+    "reference_count": 34,
+    "url": "https://dblp.org/rec/conf/pldi/KortbeekGHCP22",
+    "dblp_key": "conf/pldi/KortbeekGHCP22",
+    "source_id": "https://openalex.org/W4281852219"
+  },
+  {
+    "title": "Mako: a low-pause, high-throughput evacuating collector for memory-disaggregated datacenters.",
+    "authors": [
+      "Haoran Ma",
+      "Shi Liu",
+      "Chenxi Wang 0005",
+      "Yifan Qiao",
+      "Michael D. Bond",
+      "Stephen M. Blackburn",
+      "Miryung Kim",
+      "Guoqing Harry Xu"
+    ],
+    "venue": "PLDI",
+    "year": 2022,
+    "abstract": "Resource disaggregation has gained much traction as an emerging datacenter architecture, as it improves resource utilization and simplifies hardware adoption. Under resource disaggregation, different types of resources (memory, CPUs, etc.) are disaggregated into dedicated servers connected by high-speed network fabrics. Memory disaggregation brings efficiency challenges to concurrent garbage collection (GC), which is widely used for latency-sensitive cloud applications, because GC and mutator threads simultaneously run and constantly compete for memory and swap resources.",
+    "citation_count": 17,
+    "reference_count": 36,
+    "url": "https://dblp.org/rec/conf/pldi/MaLWQBBKX22",
+    "dblp_key": "conf/pldi/MaLWQBBKX22",
+    "source_id": "https://openalex.org/W4281715971"
+  },
+  {
+    "title": "RustHornBelt: a semantic foundation for functional verification of Rust programs with unsafe code.",
+    "authors": [
+      "Yusuke Matsushita 0002",
+      "Xavier Denis",
+      "Jacques-Henri Jourdan",
+      "Derek Dreyer"
+    ],
+    "venue": "PLDI",
+    "year": 2022,
+    "abstract": "International audience",
+    "citation_count": 37,
+    "reference_count": 32,
+    "url": "https://dblp.org/rec/conf/pldi/MatsushitaDJD22",
+    "dblp_key": "conf/pldi/MatsushitaDJD22",
+    "source_id": "https://openalex.org/W4281773296"
+  },
+  {
+    "title": "A flexible type system for fearless concurrency.",
+    "authors": [
+      "Mae Milano",
+      "Joshua Turcotti",
+      "Andrew C. Myers"
+    ],
+    "venue": "PLDI",
+    "year": 2022,
+    "abstract": "This paper proposes a new type system for concurrent programs, allowing threads to exchange complex object graphs without risking destructive data races. While this goal is shared by a rich history of past work, existing solutions either rely on strictly enforced heap invariants that prohibit natural programming patterns or demand pervasive annotations even for simple programming tasks. As a result, past systems cannot express intuitively simple code without unnatural rewrites or substantial annotation burdens. Our work avoids these pitfalls through a novel type system that provides sound reasoning about separation in the heap while remaining flexible enough to support a wide range of desirable heap manipulations. This new sweet spot is attained by enforcing a heap domination invariant similarly to prior work, but tempering it by allowing complex exceptions that add little annotation burden. Our results include: (1) code examples showing that common data structure manipulations which are difficult or impossible to express in prior work are natural and direct in our system, (2) a formal proof of correctness demonstrating that well-typed programs cannot encounter destructive data races at run time, and (3) an efficient type checker implemented in Gallina and OCaml.",
+    "citation_count": 12,
+    "reference_count": 42,
+    "url": "https://dblp.org/rec/conf/pldi/MilanoTM22",
+    "dblp_key": "conf/pldi/MilanoTM22",
+    "source_id": "https://openalex.org/W4281922598"
+  },
+  {
+    "title": "Warping cache simulation of polyhedral programs.",
+    "authors": [
+      "Canberk Morelli",
+      "Jan Reineke 0001"
+    ],
+    "venue": "PLDI",
+    "year": 2022,
+    "abstract": "Techniques to evaluate a program's cache performance fall into two camps: 1. Traditional trace-based cache simulators precisely account for sophisticated real-world cache models and support arbitrary workloads, but their runtime is proportional to the number of memory accesses performed by the program under analysis. 2. Relying on implicit workload characterizations such as the polyhedral model, analytical approaches often achieve problem-size-independent runtimes, but so far have been limited to idealized cache models.",
+    "citation_count": 3,
+    "reference_count": 65,
+    "url": "https://dblp.org/rec/conf/pldi/MorelliR22",
+    "dblp_key": "conf/pldi/MorelliR22",
+    "source_id": "https://openalex.org/W4281692018"
+  },
+  {
+    "title": "Diaframe: automated verification of fine-grained concurrent programs in Iris.",
+    "authors": [
+      "Ike Mulder",
+      "Robbert Krebbers",
+      "Herman Geuvers"
+    ],
+    "venue": "PLDI",
+    "year": 2022,
+    "abstract": "Contains fulltext : 250782.pdf (Publisher’s version ) (Open Access)",
+    "citation_count": 27,
+    "reference_count": 88,
+    "url": "https://dblp.org/rec/conf/pldi/MulderKG22",
+    "dblp_key": "conf/pldi/MulderKG22",
+    "source_id": "https://openalex.org/W4281711013"
+  },
+  {
+    "title": "Quickstrom: property-based acceptance testing with LTL specifications.",
+    "authors": [
+      "Liam O&apos;Connor",
+      "Oskar Wickström"
+    ],
+    "venue": "PLDI",
+    "year": 2022,
+    "abstract": "We present Quickstrom, a property-based testing system for acceptance testing of interactive applications. Using Quickstrom, programmers can specify the behaviour of web applications as properties in our testing-oriented dialect of Linear Temporal Logic (LTL) called QuickLTL, and then automatically test their application against the given specification with hundreds of automatically generated interactions. QuickLTL extends existing finite variants of LTL for the testing use-case, determining likely outcomes from partial traces whose minimum length is itself determined by the LTL formula. This temporal logic is embedded in our specification language, Specstrom, which is designed to be approachable to web programmers, expressive for writing specifications, and easy to analyse. Because Quickstrom tests only user-facing behaviour, it is agnostic to the implementation language of the system under test. We therefore formally specify and test many implementations of the popular TodoMVC benchmark, used for evaluation and comparison across various web frontend frameworks and languages. Our tests uncovered bugs in almost half of the available implementations.",
+    "citation_count": 12,
+    "reference_count": 33,
+    "url": "https://dblp.org/rec/conf/pldi/OConnorW22",
+    "dblp_key": "conf/pldi/OConnorW22",
+    "source_id": "https://openalex.org/W4281961561"
+  },
+  {
+    "title": "Computing correctly with inductive relations.",
+    "authors": [
+      "Zoe Paraskevopoulou",
+      "Aaron Eline",
+      "Leonidas Lampropoulos"
+    ],
+    "venue": "PLDI",
+    "year": 2022,
+    "abstract": "Inductive relations are the predominant way of writing specifications in mechanized proof developments. Compared to purely functional specifications, they enjoy increased expressive power and facilitate more compositional reasoning. However, inductive relations also come with a significant drawback: they can't be used for computation.",
+    "citation_count": 13,
+    "reference_count": 24,
+    "url": "https://dblp.org/rec/conf/pldi/Paraskevopoulou22",
+    "dblp_key": "conf/pldi/Paraskevopoulou22",
+    "source_id": "https://openalex.org/W4281705085"
+  },
+  {
+    "title": "Landmarks and regions: a robust approach to data extraction.",
+    "authors": [
+      "Suresh Parthasarathy",
+      "Lincy Pattanaik",
+      "Anirudh Khatry",
+      "Arun Iyer",
+      "Arjun Radhakrishna",
+      "Sriram K. Rajamani",
+      "Mohammad Raza"
+    ],
+    "venue": "PLDI",
+    "year": 2022,
+    "abstract": "We propose a new approach to extracting data items or field values from semi-structured documents. Examples of such problems include extracting passenger name, departure time and departure airport from a travel itinerary, or extracting price of an item from a purchase receipt. Traditional approaches to data extraction use machine learning or program synthesis to process the whole document to extract the desired fields. Such approaches are not robust to for- mat changes in the document, and the extraction process typically fails even if changes are made to parts of the document that are unrelated to the desired fields of interest. We propose a new approach to data extraction based on the concepts of landmarks and regions. Humans routinely use landmarks in manual processing of documents to zoom in and focus their attention on small regions of interest in the document. Inspired by this human intuition, we use the notion of landmarks in program synthesis to automatically synthesize extraction programs that first extract a small region of interest, and then automatically extract the desired value from the region in a subsequent step. We have implemented our landmark based extraction approach in a tool LRSyn, and show extensive valuation on documents in HTML as well as scanned images of invoices and receipts. Our results show that the our approach is robust to various types of format changes that routinely happen in real-world settings",
+    "citation_count": 1,
+    "reference_count": 42,
+    "url": "https://dblp.org/rec/conf/pldi/ParthasarathyPK22",
+    "dblp_key": "conf/pldi/ParthasarathyPK22",
+    "source_id": "https://openalex.org/W4281718290"
+  },
+  {
+    "title": "Algebraic reasoning of Quantum programs via non-idempotent Kleene algebra.",
+    "authors": [
+      "Yuxiang Peng",
+      "Mingsheng Ying",
+      "Xiaodi Wu 0001"
+    ],
+    "venue": "PLDI",
+    "year": 2022,
+    "abstract": "We investigate the algebraic reasoning of quantum programs inspired by the success of classical program analysis based on Kleene algebra. One prominent example of such is the famous Kleene Algebra with Tests (KAT), which has furnished both theoretical insights and practical tools. The succinctness of algebraic reasoning would be especially desirable for scalable analysis of quantum programs, given the involvement of exponential-size matrices in most of the existing methods. A few key features of KAT including the idempotent law and the nice properties of classical tests, however, fail to hold in the context of quantum programs due to their unique quantum features, especially in branching. We propose Non-idempotent Kleene Algebra (NKA) as a natural alternative and identify complete and sound semantic models for NKA as well as their quantum interpretations. In light of applications of KAT, we demonstrate algebraic proofs in NKA of quantum compiler optimization and the normal form of quantum while-programs. Moreover, we extend NKA with Tests (i.e., NKAT), where tests model quantum predicates following effect algebra, and illustrate how to encode propositional quantum Hoare logic as NKAT theorems.",
+    "citation_count": 12,
+    "reference_count": 86,
+    "url": "https://dblp.org/rec/conf/pldi/PengYW22",
+    "dblp_key": "conf/pldi/PengYW22",
+    "source_id": "https://openalex.org/W3205136173"
+  },
+  {
+    "title": "Relational compilation for performance-critical applications: extensible proof-producing translation of functional models into low-level code.",
+    "authors": [
+      "Clément Pit-Claudel",
+      "Jade Philipoom",
+      "Dustin Jamner",
+      "Andres Erbsen",
+      "Adam Chlipala"
+    ],
+    "venue": "PLDI",
+    "year": 2022,
+    "abstract": "There are typically two ways to compile and run a purely functional program verified using an interactive theorem prover (ITP): automatically extracting it to a similar language (typically an unverified process, like Coq to OCaml) or manually proving it equivalent to a lower-level reimplementation (like a C program). Traditionally, only the latter produced both excellent performance and end-to-end proofs.",
+    "citation_count": 23,
+    "reference_count": 48,
+    "url": "https://dblp.org/rec/conf/pldi/Pit-ClaudelPJEC22",
+    "dblp_key": "conf/pldi/Pit-ClaudelPJEC22",
+    "source_id": "https://openalex.org/W4281843089"
+  },
+  {
+    "title": "Interpreter-guided differential JIT compiler unit testing.",
+    "authors": [
+      "Guillermo Polito",
+      "Stéphane Ducasse",
+      "Pablo Tesone"
+    ],
+    "venue": "PLDI",
+    "year": 2022,
+    "abstract": "International audience",
+    "citation_count": 5,
+    "reference_count": 23,
+    "url": "https://dblp.org/rec/conf/pldi/PolitoDT22",
+    "dblp_key": "conf/pldi/PolitoDT22",
+    "source_id": "https://openalex.org/W4280649982"
+  },
+  {
+    "title": "Lasagne: a static binary translator for weak memory model architectures.",
+    "authors": [
+      "Rodrigo C. O. Rocha",
+      "Dennis Sprokholt",
+      "Martin Fink 0004",
+      "Redha Gouicem",
+      "Tom Spink",
+      "Soham Chakraborty 0001",
+      "Pramod Bhatotia"
+    ],
+    "venue": "PLDI",
+    "year": 2022,
+    "abstract": "&lt;p&gt;The emergence of new architectures create a recurring challenge to ensure that existing programs still work on them. Manually porting legacy code is often impractical. Static binary translation (SBT) is a process where a program's binary is automatically translated from one architecture to another, while preserving their original semantics. However, these SBT tools have limited support to various advanced architectural features. Importantly, they are currently unable to translate concurrent binaries. The main challenge arises from the mismatches of the memory consistency model specified by the different architectures, especially when porting existing binaries to a weak memory model architecture. In this paper, we propose Lasagne, an end-to-end static binary translator with precise translation rules between x86 and Arm concurrency semantics. First, we propose a concurrency model for Lasagne's intermediate representation (IR) and formally proved mappings between the IR and the two architectures. The memory ordering is preserved by introducing fences in the translated code. Finally, we propose optimizations focused on raising the level of abstraction of memory address calculations and reducing the number of fences. Our evaluation shows that Lasagne reduces the number of fences by up to about 65%, with an average reduction of 45.5%, significantly reducing their runtime overhead.&lt;/p&gt;",
+    "citation_count": 15,
+    "reference_count": 60,
+    "url": "https://dblp.org/rec/conf/pldi/RochaS0GSCB22",
+    "dblp_key": "conf/pldi/RochaS0GSCB22",
+    "source_id": "https://openalex.org/W4281927845"
+  },
+  {
+    "title": "Islaris: verification of machine code against authoritative ISA semantics.",
+    "authors": [
+      "Michael Sammler",
+      "Angus Hammond",
+      "Rodolphe Lepigre",
+      "Brian Campbell 0001",
+      "Jean Pichon-Pharabod",
+      "Derek Dreyer",
+      "Deepak Garg 0001",
+      "Peter Sewell"
+    ],
+    "venue": "PLDI",
+    "year": 2022,
+    "abstract": "Recent years have seen great advances towards verifying large-scale systems code. However, these verifications are usually based on hand-written assembly or machine-code semantics for the underlying architecture that only cover a small part of the instruction set architecture (ISA). In contrast, other recent work has used Sail to establish formal models for large real-world architectures, including Armv8-A and RISC-V, that are comprehensive (complete enough to boot an operating system or hypervisor) and authoritative (automatically derived from the Arm internal model and validated against the Arm validation suite, and adopted as the official formal specification by RISC-V International, respectively). But the scale and complexity of these models makes them challenging to use as a basis for verification. In this paper, we propose Islaris, the first system to support verification of machine code above these complete and authoritative real-world ISA specifications. Islaris uses a novel combination of SMT-solver-based symbolic execution (the Isla symbolic executor) and automated reasoning in a foundational program logic (a new separation logic we derive using Iris in Coq). We show that this approach can handle Armv8-A and RISC-V machine code exercising a wide range of systems features, including installing and calling exception vectors, code parametric on a relocation address offset (from the production pKVM hypervisor); unaligned access faults; memory-mapped IO; and compiled C code using inline assembly and function pointers.",
+    "citation_count": 20,
+    "reference_count": 58,
+    "url": "https://dblp.org/rec/conf/pldi/SammlerHL0PD0S22",
+    "dblp_key": "conf/pldi/SammlerHL0PD0S22",
+    "source_id": "https://openalex.org/W4281916531"
+  },
+  {
+    "title": "A typed continuation-passing translation for lexical effect handlers.",
+    "authors": [
+      "Philipp Schuster",
+      "Jonathan Immanuel Brachthäuser",
+      "Marius Müller 0003",
+      "Klaus Ostermann"
+    ],
+    "venue": "PLDI",
+    "year": 2022,
+    "abstract": "Effect handlers are a language feature which enjoys popularity in academia and is also gaining traction in industry. Programs use abstract effect operations and handlers provide meaning to them in a delimited scope. Each effect operation is handled by the dynamically closest handler. Using an effect operation outside of a matching handler is meaningless and results in an error. A type-and-effect system prevents such errors from happening. Lexical effect handlers are a recent variant of effect handlers with a number of attractive properties. Just as with traditional effect handlers, programs use effect operations and handlers give meaning to them. But unlike with traditional effect handlers, the connection between effect operations and their handler is lexical. Consequently, they typically have different type-and-effect systems. The semantics of lexical effect handlers as well as their implementations use multi-prompt delimited control. They rely on the generation of fresh labels at runtime, which associate effect operations with their handlers. This use of labels and multi-prompt delimited control is theoretically and practically unsatisfactory. Our main result is that typed lexical effect handlers do not need the full power of multi-prompt delimited control. We present the first CPS translation for lexical effect handlers to pure System F. It preserves well-typedness and simulates the traditional operational semantics. Importantly, it does so without requiring runtime labels. The CPS translation can be used to study the semantics of lexical effect handlers as well as as an implementation technique.",
+    "citation_count": 9,
+    "reference_count": 29,
+    "url": "https://dblp.org/rec/conf/pldi/SchusterB0O22",
+    "dblp_key": "conf/pldi/SchusterB0O22",
+    "source_id": "https://openalex.org/W4282044797"
+  },
+  {
+    "title": "Certified mergeable replicated data types.",
+    "authors": [
+      "Vimala Soundarapandian",
+      "Adharsh Kamath",
+      "Kartik Nagar",
+      "K. C. Sivaramakrishnan"
+    ],
+    "venue": "PLDI",
+    "year": 2022,
+    "abstract": "Replicated data types (RDTs) are data structures that permit concurrent modification of multiple, potentially geo-distributed, replicas without coordination between them. RDTs are designed in such a way that conflicting operations are eventually deterministically reconciled ensuring convergence. Constructing correct RDTs remains a difficult endeavour due to the complexity of reasoning about independently evolving states of the replicas. With the focus on the correctness of RDTs (and rightly so), existing approaches to RDTs are less efficient compared to their sequential counterparts in terms of the time and space complexity of local operations. This is unfortunate since RDTs are often used in a local-first setting where the local operations far outweigh remote communication.",
+    "citation_count": 10,
+    "reference_count": 23,
+    "url": "https://dblp.org/rec/conf/pldi/Soundarapandian22",
+    "dblp_key": "conf/pldi/Soundarapandian22",
+    "source_id": "https://openalex.org/W4281971122"
+  },
+  {
+    "title": "Hardening attack surfaces with formally proven binary format parsers.",
+    "authors": [
+      "Nikhil Swamy",
+      "Tahina Ramananandro",
+      "Aseem Rastogi",
+      "Irina Spiridonova",
+      "Haobin Ni",
+      "Dmitry Malloy",
+      "Juan Vazquez",
+      "Michael Tang",
+      "Omar Cardona",
+      "Arti Gupta"
+    ],
+    "venue": "PLDI",
+    "year": 2022,
+    "abstract": "With an eye toward performance, interoperability, or legacy concerns, low-level system software often must parse binary encoded data formats. Few tools are available for this task, especially since the formats involve a mixture of arithmetic and data dependence, beyond what can be handled by typical parser generators. As such, parsers are written by hand in languages like C, with inevitable errors leading to security vulnerabilities.",
+    "citation_count": 16,
+    "reference_count": 17,
+    "url": "https://dblp.org/rec/conf/pldi/SwamyRRSNMVTCG22",
+    "dblp_key": "conf/pldi/SwamyRRSNMVTCG22",
+    "source_id": "https://openalex.org/W4281683690"
+  },
+  {
+    "title": "FreeTensor: a free-form DSL with holistic optimizations for irregular tensor programs.",
+    "authors": [
+      "Shizhi Tang",
+      "Jidong Zhai",
+      "Haojie Wang",
+      "Lin Jiang",
+      "Liyan Zheng 0001",
+      "Zhenhao Yuan",
+      "Chen Zhang 0001"
+    ],
+    "venue": "PLDI",
+    "year": 2022,
+    "abstract": "Tensor programs are of critical use in many domains. Existing frameworks, such as PyTorch, TensorFlow, and JAX, adopt operator-based programming to ease programming, increase performance, and perform automatic differentiation. However, as the rapid development of tensor programs, operator-based programming shows significant limitations for irregular patterns since a large amount of redundant computation or memory access is introduced.",
+    "citation_count": 13,
+    "reference_count": 20,
+    "url": "https://dblp.org/rec/conf/pldi/TangZWJZYZ22",
+    "dblp_key": "conf/pldi/TangZWJZYZ22",
+    "source_id": "https://openalex.org/W4281710230"
+  },
+  {
+    "title": "Giallar: push-button verification for the qiskit Quantum compiler.",
+    "authors": [
+      "Runzhou Tao 0001",
+      "Yunong Shi",
+      "Jianan Yao",
+      "Xupeng Li",
+      "Ali Javadi-Abhari",
+      "Andrew W. Cross",
+      "Frederic T. Chong",
+      "Ronghui Gu"
+    ],
+    "venue": "PLDI",
+    "year": 2022,
+    "abstract": "This paper presents Giallar, a fully-automated verification toolkit for quantum compilers. Giallar requires no manual specifications, invariants, or proofs, and can automatically verify that a compiler pass preserves the semantics of quantum circuits. To deal with unbounded loops in quantum compilers, Giallar abstracts three loop templates, whose loop invariants can be automatically inferred. To efficiently check the equivalence of arbitrary input and output circuits that have complicated matrix semantics representation, Giallar introduces a symbolic representation for quantum circuits and a set of rewrite rules for showing the equivalence of symbolic quantum circuits. With Giallar, we implemented and verified 44 (out of 56) compiler passes in 13 versions of the Qiskit compiler, the open-source quantum compiler standard, during which three bugs were detected in and confirmed by Qiskit. Furthermore, our evaluation shows that most of Qiskit compiler passes can be automatically verified in seconds and verification imposes only a modest overhead to compilation performance.",
+    "citation_count": 30,
+    "reference_count": 39,
+    "url": "https://dblp.org/rec/conf/pldi/TaoSYLJCCG22",
+    "dblp_key": "conf/pldi/TaoSYLJCCG22",
+    "source_id": "https://openalex.org/W4225409672"
+  },
+  {
+    "title": "Formally verified lifting of C-compiled x86-64 binaries.",
+    "authors": [
+      "Freek Verbeek",
+      "Joshua A. Bockenek",
+      "Zhoulai Fu",
+      "Binoy Ravindran"
+    ],
+    "venue": "PLDI",
+    "year": 2022,
+    "abstract": "Lifting binaries to a higher-level representation is an essential step for decompilation, binary verification, patching and security analysis. In this paper, we present the first approach to provably overapproximative x86-64 binary lifting. A stripped binary is verified for certain sanity properties such as return address integrity and calling convention adherence. Establishing these properties allows the binary to be lifted to a representation that contains an overapproximation of all possible execution paths of the binary. The lifted representation contains disassembled instructions, reconstructed control flow, invariants and proof obligations that are sufficient to prove the sanity properties as well as correctness of the lifted representation. We apply this approach to Linux Foundation and Intel's Xen Hypervisor covering about 400K instructions. This demonstrates our approach is the first approach to provably overapproximative binary lifting scalable to commercial off-the-shelf systems. The lifted representation is exportable to the Isabelle/HOL theorem prover, allowing formal verification of its correctness. If our technique succeeds and the proofs obligations are proven true, then - under the generated assumptions - the lifted representation is correct.",
+    "citation_count": 13,
+    "reference_count": 47,
+    "url": "https://dblp.org/rec/conf/pldi/VerbeekBFR22",
+    "dblp_key": "conf/pldi/VerbeekBFR22",
+    "source_id": "https://openalex.org/W4281659951"
+  },
+  {
+    "title": "Odin: on-demand instrumentation with on-the-fly recompilation.",
+    "authors": [
+      "Mingzhe Wang",
+      "Jie Liang 0006",
+      "Chijin Zhou",
+      "Zhiyong Wu 0010",
+      "Xinyi Xu",
+      "Yu Jiang 0001"
+    ],
+    "venue": "PLDI",
+    "year": 2022,
+    "abstract": "Instrumentation is vital to fuzzing. It provides fuzzing directions and helps detect covert bugs, yet its overhead greatly reduces the fuzzing throughput. To reduce the overhead, compilers compromise instrumentation correctness for better optimization, or seek convoluted runtime support to remove unused probes during fuzzing.",
+    "citation_count": 14,
+    "reference_count": 29,
+    "url": "https://dblp.org/rec/conf/pldi/WangLZWX022",
+    "dblp_key": "conf/pldi/WangLZWX022",
+    "source_id": "https://openalex.org/W4281741991"
+  },
+  {
+    "title": "Bind the gap: compiling real software to hardware FFT accelerators.",
+    "authors": [
+      "Jackson Woodruff",
+      "Jordi Armengol-Estapé",
+      "Sam Ainsworth 0001",
+      "Michael F. P. O&apos;Boyle"
+    ],
+    "venue": "PLDI",
+    "year": 2022,
+    "abstract": "Specialized hardware accelerators continue to be a source of performance improvement. However, such specialization comes at a programming price. The fundamental issue is that of a mismatch between the diversity of user code and the functionality of fixed hardware, limiting its wider uptake. Here we focus on a particular set of accelerators: those for Fast Fourier Transforms. We present FACC (Fourier ACcelerator Compiler), a novel approach to automatically map legacy code to Fourier Transform accelerators. It automatically generates drop-in replacement adapters using Input-Output (IO)-based program synthesis that bridge the gap between user code and accelerators. We apply FACC to unmodified GitHub C programs of varying complexity and compare against two existing approaches. We target FACC to a high-performance library, FFTW, and two hardware accelerators, the NXP PowerQuad and the Analog Devices FFTA, and demonstrate mean speedups of 9x, 17x and 27x respectively",
+    "citation_count": 11,
+    "reference_count": 101,
+    "url": "https://dblp.org/rec/conf/pldi/WoodruffAAO22",
+    "dblp_key": "conf/pldi/WoodruffAAO22",
+    "source_id": "https://openalex.org/W4281862314"
+  },
+  {
+    "title": "Quartz: superoptimization of Quantum circuits.",
+    "authors": [
+      "Mingkuan Xu",
+      "Zikun Li",
+      "Oded Padon",
+      "Sina Lin",
+      "Jessica Pointing",
+      "Auguste Hirth",
+      "Henry Ma",
+      "Jens Palsberg",
+      "Alex Aiken",
+      "Umut A. Acar",
+      "Zhihao Jia"
+    ],
+    "venue": "PLDI",
+    "year": 2022,
+    "abstract": "Existing quantum compilers optimize quantum circuits by applying circuit transformations designed by experts. This approach requires significant manual effort to design and implement circuit transformations for different quantum devices, which use different gate sets, and can miss optimizations that are hard to find manually. We propose Quartz, a quantum circuit superoptimizer that automatically generates and verifies circuit transformations for arbitrary quantum gate sets. For a given gate set, Quartz generates candidate circuit transformations by systematically exploring small circuits and verifies the discovered transformations using an automated theorem prover. To optimize a quantum circuit, Quartz uses a cost-based backtracking search that applies the verified transformations to the circuit. Our evaluation on three popular gate sets shows that Quartz can effectively generate and verify transformations for different gate sets. The generated transformations cover manually designed transformations used by existing optimizers and also include new transformations. Quartz is therefore able to optimize a broad range of circuits for diverse gate sets, outperforming or matching the performance of hand-tuned circuit optimizers.",
+    "citation_count": 47,
+    "reference_count": 26,
+    "url": "https://dblp.org/rec/conf/pldi/XuLPLPHMPAAJ22",
+    "dblp_key": "conf/pldi/XuLPLPHMPAAJ22",
+    "source_id": "https://openalex.org/W4281670955"
+  },
+  {
+    "title": "DISTAL: the distributed tensor algebra compiler.",
+    "authors": [
+      "Rohan Yadav",
+      "Alex Aiken",
+      "Fredrik Kjolstad"
+    ],
+    "venue": "PLDI",
+    "year": 2022,
+    "abstract": "We introduce DISTAL, a compiler for dense tensor algebra that targets modern\\ndistributed and heterogeneous systems. DISTAL lets users independently describe\\nhow tensors and computation map onto target machines through separate format\\nand scheduling languages. The combination of choices for data and computation\\ndistribution creates a large design space that includes many algorithms from\\nboth the past (e.g., Cannon's algorithm) and the present (e.g., COSMA). DISTAL\\ncompiles a tensor algebra domain specific language to a distributed task-based\\nruntime system and supports nodes with multi-core CPUs and multiple GPUs. Code\\ngenerated by DISTAL is competitive with optimized codes for matrix multiply on\\n256 nodes of the Lassen supercomputer and outperforms existing systems by\\nbetween 1.8x to 3.7x (with a 45.7x outlier) on higher order tensor operations.\\n",
+    "citation_count": 23,
+    "reference_count": 37,
+    "url": "https://dblp.org/rec/conf/pldi/YadavAK22",
+    "dblp_key": "conf/pldi/YadavAK22",
+    "source_id": "https://openalex.org/W4220690649"
+  },
+  {
+    "title": "PDL: a high-level hardware design language for pipelined processors.",
+    "authors": [
+      "Drew Zagieboylo",
+      "Charles Sherk",
+      "Gookwon Edward Suh",
+      "Andrew C. Myers"
+    ],
+    "venue": "PLDI",
+    "year": 2022,
+    "abstract": "Processors are typically designed in Register Transfer Level (RTL) languages, which give designers low-level control over circuit structure and timing. To achieve good performance, processors are pipelined, with multiple instructions execut- ing concurrently in different parts of the circuit. Thus even though processors implement a fundamentally sequential specification (the instruction set architecture), the imple- mentation is highly concurrent. The interactions of multiple instructions—potentially speculative—can cause incorrect behavior.",
+    "citation_count": 8,
+    "reference_count": 30,
+    "url": "https://dblp.org/rec/conf/pldi/ZagieboyloSSM22",
+    "dblp_key": "conf/pldi/ZagieboyloSSM22",
+    "source_id": "https://openalex.org/W4281703854"
+  },
+  {
+    "title": "Verifying optimizations of concurrent programs in the promising semantics.",
+    "authors": [
+      "Junpeng Zha",
+      "Hongjin Liang 0001",
+      "Xinyu Feng 0001"
+    ],
+    "venue": "PLDI",
+    "year": 2022,
+    "abstract": "Weak memory models for concurrent programming languages are expected to admit standard compiler optimizations. However, prior works on verifying optimizations in weak memory models are mostly focused on simple optimizations on small code snippets which satisfy certain syntactic requirements. It receives less attention whether weak memory models can admit real-world optimization algorithms based on program analyses.",
+    "citation_count": 4,
+    "reference_count": 24,
+    "url": "https://dblp.org/rec/conf/pldi/ZhaL022",
+    "dblp_key": "conf/pldi/ZhaL022",
+    "source_id": "https://openalex.org/W4281763171"
+  },
+  {
+    "title": "Karp: a language for NP reductions.",
+    "authors": [
+      "Chenhao Zhang 0003",
+      "Jason D. Hartline",
+      "Christos Dimoulas"
+    ],
+    "venue": "PLDI",
+    "year": 2022,
+    "abstract": "In CS theory courses, NP reductions are a notorious source of pain for students and instructors alike. Invariably, students use pen and paper to write down reductions that \"work\" in many but not all cases. When instructors observe that a student's reduction deviates from the expected one, they have to manually compute a counterexample that exposes the mistake. In other words, NP reductions are subtle yet, most of the time, unimplemented programs. And for a good reason: there exists no language tailored to NP reductions.",
+    "citation_count": 3,
+    "reference_count": 26,
+    "url": "https://dblp.org/rec/conf/pldi/ZhangHD22",
+    "dblp_key": "conf/pldi/ZhangHD22",
+    "source_id": "https://openalex.org/W4281750432"
+  },
+  {
+    "title": "Low-latency, high-throughput garbage collection.",
+    "authors": [
+      "Wenyu Zhao",
+      "Stephen M. Blackburn",
+      "Kathryn S. McKinley"
+    ],
+    "venue": "PLDI",
+    "year": 2022,
+    "abstract": "Production garbage collectors make substantial compromises in pursuit of\\nreduced pause times. They require far more CPU cycles and memory than prior\\nsimpler collectors. concurrent copying collectors (C4, ZGC, and Shenandoah)\\nsuffer from the following design limitations. 1) Concurrent copying. They only\\nreclaim memory by copying, which is inherently expensive with high memory\\nbandwidth demands. Concurrent copying also requires expensive read and write\\nbarriers. 2) Scalability. They depend on tracing, which in the limit and in\\npractice does not scale. 3) Immediacy. They do not reclaim older objects\\npromptly, incurring high memory overheads.\\n We present LXR, which takes a very different approach to optimizing\\nresponsiveness and throughput by minimizing concurrent collection work and\\noverheads. 1) LXR reclaims most memory without any copying by using the Immix\\nheap structure. It then combats fragmentation with limited judicious\\nstop-the-world copying. 2) LXR uses reference counting to achieve both\\nscalability and immediacy, promptly reclaiming young and old objects. It uses\\nconcurrent tracing as needed for identifying cyclic garbage. 3) To minimize\\npause times while allowing judicious copying of mature objects, LXR introduces\\nremembered sets for reference counting and concurrent decrement processing. 4)\\nLXR introduces a novel low-overhead write barrier that combines coalescing\\nreference counting, concurrent tracing, and remembered set maintenance.\\n The result is a collector with excellent responsiveness and throughput. On\\nthe widely-used Lucene search engine with a generously sized heap, LXR has 6x\\nhigher throughput while delivering 30x lower 99.9 percentile tail latency than\\nthe popular Shenandoah production collector in its default configuration.\\n",
+    "citation_count": 23,
+    "reference_count": 40,
+    "url": "https://dblp.org/rec/conf/pldi/ZhaoBM22",
+    "dblp_key": "conf/pldi/ZhaoBM22",
+    "source_id": "https://openalex.org/W4281848108"
+  },
+  {
+    "title": "Synthesizing analytical SQL queries from computation demonstration.",
+    "authors": [
+      "Xiangyu Zhou",
+      "Rastislav Bodík",
+      "Alvin Cheung",
+      "Chenglong Wang 0005"
+    ],
+    "venue": "PLDI",
+    "year": 2022,
+    "abstract": "Analytical SQL is widely used in modern database applications and data analysis. However, its partitioning and grouping operators are challenging for novice users. Unfortunately, programming by example, shown effective on standard SQL, are less attractive because examples for analytical queries are more laborious to solve by hand. To make demonstrations easier to create, we designed a new end-user specification, programming by computation demonstration, that allows the user to demonstrate the task using a (possibly incomplete) cell-level computation trace. This specification is exploited in a new abstraction-based synthesis algorithm to prove that a partially formed query cannot be completed to satisfy the specification, allowing us to prune the search space. We implemented our approach in a tool named Sickle and tested it on 80 real-world analytical SQL tasks. Results show that even from small demonstrations, Sickle can solve 76 tasks, in 12.8 seconds on average, while the prior approaches can solve only 60 tasks and are on average 22.5x slower. Our user study with 13 participants reveals that our specification increases user efficiency and confidence on challenging tasks.",
+    "citation_count": 9,
+    "reference_count": 55,
+    "url": "https://dblp.org/rec/conf/pldi/ZhouBCW22",
+    "dblp_key": "conf/pldi/ZhouBCW22",
+    "source_id": "https://openalex.org/W4224063440"
+  },
+  {
+    "title": "Differential cost analysis with simultaneous potentials and anti-potentials.",
+    "authors": [
+      "Dorde Zikelic",
+      "Bor-Yuh Evan Chang",
+      "Pauline Bolignano",
+      "Franco Raimondi"
+    ],
+    "venue": "PLDI",
+    "year": 2022,
+    "abstract": "We present a novel approach to differential cost analysis that, given a program revision, attempts to statically bound the difference in resource usage, or cost, between the two program versions. Differential cost analysis is particularly interesting because of the many compelling applications for it, such as detecting resource-use regressions at code-review time or proving the absence of certain side-channel vulnerabilities. One prior approach to differential cost analysis is to apply relational reasoning that conceptually constructs a product program on which one can over-approximate the difference in costs between the two program versions. However, a significant challenge in any relational approach is effectively aligning the program versions to get precise results. In this paper, our key insight is that we can avoid the need for and the limitations of program alignment if, instead, we bound the difference of two cost-bound summaries rather than directly bounding the concrete cost difference. In particular, our method computes a threshold value for the maximal difference in cost between two program versions simultaneously using two kinds of cost-bound summaries---a potential function that evaluates to an upper bound for the cost incurred in the first program and an anti-potential function that evaluates to a lower bound for the cost incurred in the second. Our method has a number of desirable properties: it can be fully automated, it allows optimizing the threshold value on relative cost, it is suitable for programs that are not syntactically similar, and it supports non-determinism. We have evaluated an implementation of our approach on a number of program pairs collected from the literature, and we find that our method computes tight threshold values on relative cost in most examples",
+    "citation_count": 6,
+    "reference_count": 50,
+    "url": "https://dblp.org/rec/conf/pldi/ZikelicCBR22",
+    "dblp_key": "conf/pldi/ZikelicCBR22",
+    "source_id": "https://openalex.org/W4281781753"
+  },
+  {
+    "title": "PLDI &apos;22: 43rd ACM SIGPLAN International Conference on Programming Language Design and Implementation, San Diego, CA, USA, June 13 - 17, 2022",
+    "authors": [
+      "Ranjit Jhala",
+      "Isil Dillig"
+    ],
+    "venue": "PLDI",
+    "year": 2022,
+    "abstract": null,
+    "citation_count": 4,
+    "reference_count": 0,
+    "url": "https://dblp.org/rec/conf/pldi/2022",
+    "dblp_key": "conf/pldi/2022",
+    "source_id": "a8e41090a9cf58e67cee9d729cb01cc82760cc4c"
+  }
+]

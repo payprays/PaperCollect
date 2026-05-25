@@ -1,0 +1,1082 @@
+[
+  {
+    "title": "Tigon: A Distributed Database for a CXL Pod.",
+    "authors": [
+      "Yibo Huang 0006",
+      "Haowei Chen",
+      "Newton Ni",
+      "Yan Sun",
+      "Vijay Chidambaram",
+      "Dixin Tang",
+      "Emmett Witchel"
+    ],
+    "venue": "OSDI",
+    "year": 2025,
+    "abstract": "Pooling PCIe devices across multiple hosts offers a promising solution to mitigate stranded I/O resources, enhance device utilization, address device failures, and reduce total cost of ownership. The only viable option today are PCIe switches, which decouple PCIe devices from hosts by connecting them through a hardware switch. However, the high cost and limited flexibility of PCIe switches hinder their widespread adoption beyond specialized datacenter use cases. This paper argues that PCIe device pooling can be effectively implemented in software using CXL memory pools. CXL memory pools improve memory utilization and already have positive return on investment. We find that, once CXL pools are in place, they can serve as a building block for pooling any kind of PCIe device. We demonstrate that PCIe devices can directly use CXL memory as I/O buffers without device modifications, which enables routing PCIe traffic through CXL pool memory. This software-based approach is deployable on today's hardware and is more flexible than hardware PCIe switches. In particular, we explore how disaggregating devices such as NICs can transform datacenter infrastructure.",
+    "citation_count": 0,
+    "reference_count": 35,
+    "url": "https://dblp.org/rec/conf/osdi/0006CNSCTW25",
+    "dblp_key": "conf/osdi/0006CNSCTW25",
+    "source_id": "https://openalex.org/W4411091180"
+  },
+  {
+    "title": "Tintin: A Unified Hardware Performance Profiling Infrastructure to Uncover and Manage Uncertainty.",
+    "authors": [
+      "Ao Li 0006",
+      "Marion Sudvarg",
+      "Zihan Li",
+      "Sanjoy K. Baruah",
+      "Chris Gill 0001",
+      "Ning Zhang 0017"
+    ],
+    "venue": "OSDI",
+    "year": 2025,
+    "abstract": "This open access book was prepared as a Final Publication of the COST Action IC1406 “High-Performance Modelling and Simulation for Big Data Applications (cHiPSet)“ project. Long considered important pillars of the scientific method, Modelling and Simulation have evolved from traditional discrete numerical methods to complex data-intensive continuous analytical optimisations. Resolution, scale, and accuracy have become essential to predict and analyse natural and complex systems in science and engineering. When their level of abstraction raises to have a better discernment of the domain at hand, their representation gets increasingly demanding for computational and data resources. On the other hand, High Performance Computing typically entails the effective use of parallel and distributed processing units coupled with efficient storage, communication and visualisation systems to underpin complex data-intensive applications in distinct scientific and technical domains. It is then arguably required to have a seamless interaction of High Performance Computing with Modelling and Simulation in order to store, compute, analyse, and visualise large data sets in science and engineering. Funded by the European Commission, cHiPSet has provided a dynamic trans-European forum for their members and distinguished guests to openly discuss novel perspectives and topics of interests for these two communities. This cHiPSet compendium presents a set of selected case studies related to healthcare, biological data, computational advertising, multimedia, finance, bioinformatics, and telecommunications.",
+    "citation_count": 35,
+    "reference_count": 1028,
+    "url": "https://dblp.org/rec/conf/osdi/0006SLB0025",
+    "dblp_key": "conf/osdi/0006SLB0025",
+    "source_id": "https://openalex.org/W3165278286"
+  },
+  {
+    "title": "WLB-LLM: Workload-Balanced 4D Parallelism for Large Language Model Training.",
+    "authors": [
+      "Zheng Wang 0075",
+      "Anna Cai",
+      "Xinfeng Xie",
+      "Zaifeng Pan",
+      "Yue Guan 0003",
+      "Weiwei Chu",
+      "Jie Wang 0022",
+      "Shikai Li",
+      "Jianyu Huang",
+      "Chris Cai",
+      "Yuchen Hao",
+      "Yufei Ding 0001"
+    ],
+    "venue": "OSDI",
+    "year": 2025,
+    "abstract": "In this work, we present WLB-LLM, a workLoad-balanced 4D parallelism for large language model training. We first thoroughly analyze the workload imbalance issue in LLM training and identify two primary sources of imbalance at the pipeline parallelism and context parallelism levels. Then, to address the imbalance issue, at the pipeline parallelism level, WLB-LLM incorporates a workload-aware variable-length document packing method to balance the computation and communication workload across micro-batches. Additionally, at the context parallelism level, WLB-LLM introduces a novel fine-grained per-document sharding strategy, ensuring each worker within a context parallelism group has an identical workload. Comprehensive experiments under different model scales demonstrate that WLB-LLM significantly mitigates the workload imbalance during 4D parallelism LLM training and achieves an average speedup of 1.23x when applying WLB-LLM in our internal LLM training framework.",
+    "citation_count": null,
+    "reference_count": null,
+    "url": "https://dblp.org/rec/conf/osdi/0075CXPGC0LHCH025",
+    "dblp_key": "conf/osdi/0075CXPGC0LHCH025",
+    "source_id": "2503.17924v1"
+  },
+  {
+    "title": "Paralegal: Practical Static Analysis for Privacy Bugs.",
+    "authors": [
+      "Justus Adam",
+      "Carolyn Zech",
+      "Livia Zhu",
+      "Sreshtaa Rajesh",
+      "Nathan Harbison",
+      "Mithi Jethwa",
+      "Will Crichton",
+      "Shriram Krishnamurthi",
+      "Malte Schwarzkopf"
+    ],
+    "venue": "OSDI",
+    "year": 2025,
+    "abstract": null,
+    "citation_count": 7,
+    "reference_count": 22,
+    "url": "https://dblp.org/rec/conf/osdi/AdamZZRHJCKS25",
+    "dblp_key": "conf/osdi/AdamZZRHJCKS25",
+    "source_id": "https://openalex.org/W3085629412"
+  },
+  {
+    "title": "Okapi: Decoupling Data Striping and Redundancy Grouping in Cluster File Systems.",
+    "authors": [
+      "Sanjith Athlur",
+      "Timothy Kim",
+      "Saurabh Kadekodi",
+      "Francisco Maturana",
+      "Xavier Ramos",
+      "Arif Merchant",
+      "K. V. Rashmi",
+      "Gregory R. Ganger"
+    ],
+    "venue": "OSDI",
+    "year": 2025,
+    "abstract": null,
+    "citation_count": null,
+    "reference_count": null,
+    "url": "https://dblp.org/rec/conf/osdi/AthlurKKMRMRG25",
+    "dblp_key": "conf/osdi/AthlurKKMRMRG25",
+    "source_id": null
+  },
+  {
+    "title": "Low End-to-End Latency atop a Speculative Shared Log with Fix-Ante Ordering.",
+    "authors": [
+      "Shreesha G. Bhat",
+      "Tony Hong",
+      "Xuhao Luo",
+      "Jiyu Hu",
+      "Aishwarya Ganesan",
+      "Ramnatthan Alagappan"
+    ],
+    "venue": "OSDI",
+    "year": 2025,
+    "abstract": "In one sense, America’s newest abolitionist movement—advocating the elimination of policing and prison—has been a success. Following the 2020 Black Lives Matter protests, a small group of self-described radicals convinced a wide swath of ordinary liberals to accept a sweeping claim: Mere reforms cannot meaningfully reduce prison and policing’s serious harms. Only elimination can. On the other hand, abolitionists have failed to secure lasting policy change. The difficulty is crime. In 2021, following a nationwide uptick in homicides, liberal support for abolitionist proposals collapsed. Despite being newly “abolition curious,” left-leaning voters consistently rejected concrete abolitionist policies. Faced with the difficult choice between reducing prison and policing and controlling serious crime, voters consistently chose the latter. This Article presents and analyzes a policy approach designed to accomplish both goals simultaneously: “Algorithmic Abolitionism.” Under Algorithmic Abolitionism, powerful machine learning algorithms would allocate policing and incarceration. They would maximally abolish both, up to the point at which crime would otherwise begin to rise. Results could be impressive. The best evidence evaluating modern machine learning models suggests that Algorithmic Abolitionist policies could: eliminate at least 40% of Terry stops, with highend estimates above 80%; free a similar share of incarcerated persons; eradicate most traffic stops; and potentially remove police patrols from at least half of city blocks—all without increasing crime. Beyond these practical effects, Algorithmic Abolitionist thinking generates new and important normative insights in the debate over algorithmic discrimination. In short, in an Algorithmic Abolitionist world, traditional frameworks for understanding and measuring such discrimination fall apart. Traditional frameworks sometimes rate Algorithmic Abolitionist policies as unfair, even when those policies massively reduce the number of people mistreated because of their race. And they rate other policies as fair, even when those policies would cause far more discriminatory harm. To overcome these problems, this Article introduces a new framework for understanding—and a new quantitative tool for measuring—algorithmic discrimination: “bias-impact.” It then explores the complex array of normative trade-offs that bias-impact analyses reveal. As the Article shows, bias-impact analysis will be vital not just in the criminal enforcement context, but in the wide range of settings—healthcare, finance, employment— where Algorithmic Abolitionist designs are possible.",
+    "citation_count": 0,
+    "reference_count": 7,
+    "url": "https://dblp.org/rec/conf/osdi/BhatHLHGA25",
+    "dblp_key": "conf/osdi/BhatHLHGA25",
+    "source_id": "https://openalex.org/W4409891540"
+  },
+  {
+    "title": "EMT: An OS Framework for New Memory Translation Architectures.",
+    "authors": [
+      "Siyuan Chai",
+      "Jiyuan Zhang 0003",
+      "Jongyul Kim 0001",
+      "Alan Wang",
+      "Fan Chung",
+      "Jovan Stojkovic",
+      "Weiwei Jia 0001",
+      "Dimitrios Skarlatos 0002",
+      "Josep Torrellas",
+      "Tianyin Xu"
+    ],
+    "venue": "OSDI",
+    "year": 2025,
+    "abstract": "Article Free AccessThe Flux OSKit: a substrate for kernel and language research Share on Authors: Bryan Ford University of Utah University of UtahView Profile , Godmar Back University of Utah University of UtahView Profile , Greg Benson University of California, Davis University of California, DavisView Profile , Jay Lepreau University of Utah University of UtahView Profile , Albert Lin MassachuSetts Institute of Technology MassachuSetts Institute of TechnologyView Profile , Olin Shivers MassachuSetts Institute of Technology MassachuSetts Institute of TechnologyView Profile Authors Info & Claims SOSP '97: Proceedings of the sixteenth ACM symposium on Operating systems principlesOctober 1997 Pages 38–51https://doi.org/10.1145/268998.266642Online:01 October 1997Publication History 170citation912DownloadsMetricsTotal Citations170Total Downloads912Last 12 Months34Last 6 weeks2 Get Citation AlertsNew Citation Alert added!This alert has been successfully added and will be sent to:You will be notified whenever a record that you have chosen has been cited.To manage your alert preferences, click on the button below.Manage my AlertsNew Citation Alert!Please log in to your account Save to BinderSave to BinderCreate a New BinderNameCancelCreateExport CitationPublisher SiteeReaderPDF",
+    "citation_count": 257,
+    "reference_count": 31,
+    "url": "https://dblp.org/rec/conf/osdi/Chai00WCS00TX25",
+    "dblp_key": "conf/osdi/Chai00WCS00TX25",
+    "source_id": "https://openalex.org/W2160275438"
+  },
+  {
+    "title": "Fork in the Road: Reflections and Optimizations for Cold Start Latency in Production Serverless Systems.",
+    "authors": [
+      "Xiaohu Chai",
+      "Tianyu Zhou",
+      "Keyang Hu",
+      "Jianfeng Tan",
+      "Tiwei Bie",
+      "Anqi Shen",
+      "Dawei Shen",
+      "Qi Xing",
+      "Shun Song",
+      "Tongkai Yang",
+      "Le Gao",
+      "Feng Yu",
+      "Zhengyu He",
+      "Dong Du 0003",
+      "Yubin Xia",
+      "Kang Chen",
+      "Yu Chen 0004"
+    ],
+    "venue": "OSDI",
+    "year": 2025,
+    "abstract": null,
+    "citation_count": null,
+    "reference_count": null,
+    "url": "https://dblp.org/rec/conf/osdi/ChaiZHTBSSXSYGY25",
+    "dblp_key": "conf/osdi/ChaiZHTBSSXSYGY25",
+    "source_id": null
+  },
+  {
+    "title": "PipeThreader: Software-Defined Pipelining for Efficient DNN Execution.",
+    "authors": [
+      "Yu Cheng",
+      "Lei Wang 0222",
+      "Yining Shi 0001",
+      "Yuqing Xia",
+      "Lingxiao Ma",
+      "Jilong Xue",
+      "Yang Wang 0053",
+      "Zhiwen Mo",
+      "Feiyang Chen",
+      "Fan Yang 0024",
+      "Mao Yang 0004",
+      "Zhi Yang 0001"
+    ],
+    "venue": "OSDI",
+    "year": 2025,
+    "abstract": null,
+    "citation_count": null,
+    "reference_count": null,
+    "url": "https://dblp.org/rec/conf/osdi/ChengW0XMXWMC0025",
+    "dblp_key": "conf/osdi/ChengW0XMXWMC0025",
+    "source_id": null
+  },
+  {
+    "title": "Decentralized, Epoch-based F2FS Journaling with Fine-grained Crash Recovery.",
+    "authors": [
+      "Yaotian Cui",
+      "Zhiqi Wang",
+      "Renhai Chen",
+      "Zili Shao"
+    ],
+    "venue": "OSDI",
+    "year": 2025,
+    "abstract": null,
+    "citation_count": 0,
+    "reference_count": 0,
+    "url": "https://dblp.org/rec/conf/osdi/CuiWCS25",
+    "dblp_key": "conf/osdi/CuiWCS25",
+    "source_id": "53e1b3e2d482450666680f36cb140beaa37bfbc8"
+  },
+  {
+    "title": "Kamino: Efficient VM Allocation at Scale with Latency-Driven Cache-Aware Scheduling.",
+    "authors": [
+      "David Domingo",
+      "Hugo Barbalho",
+      "Marco Molinaro 0004",
+      "Kuan Liu",
+      "Abhisek Pan",
+      "David Dion",
+      "Thomas Moscibroda",
+      "Sudarsun Kannan",
+      "Ishai Menache"
+    ],
+    "venue": "OSDI",
+    "year": 2025,
+    "abstract": null,
+    "citation_count": 0,
+    "reference_count": 50,
+    "url": "https://dblp.org/rec/conf/osdi/DomingoB0LPDMKM25",
+    "dblp_key": "conf/osdi/DomingoB0LPDMKM25",
+    "source_id": "0db4b2b68f41105886ea2cd9e0dddda80cc4a4bd"
+  },
+  {
+    "title": "QiMeng-Xpiler: Transcompiling Tensor Programs for Deep Learning Systems with a Neural-Symbolic Approach.",
+    "authors": [
+      "Shouyang Dong",
+      "Jun Bi",
+      "Di Huang",
+      "Jiaming Guo",
+      "Jianxing Xu",
+      "Ruibai Xu",
+      "Xinkai Song",
+      "Yifan Hao 0001",
+      "Ling Li 0001",
+      "Xuehai Zhou",
+      "Tianshi Chen 0002",
+      "Qi Guo 0001",
+      "Yunji Chen"
+    ],
+    "venue": "OSDI",
+    "year": 2025,
+    "abstract": "Heterogeneous deep learning systems (DLS) such as GPUs and ASICs have been widely deployed in industrial data centers, which requires to develop multiple low-level tensor programs for different platforms. An attractive solution to relieve the programming burden is to transcompile the legacy code of one platform to others. However, current transcompilation techniques struggle with either tremendous manual efforts or functional incorrectness, rendering \"Write Once, Run Anywhere\" of tensor programs an open question. We propose a novel transcompiler, i.e., QiMeng-Xpiler, for automatically translating tensor programs across DLS via both large language models (LLMs) and symbolic program synthesis, i.e., neural-symbolic synthesis. The key insight is leveraging the powerful code generation ability of LLM to make costly search-based symbolic synthesis computationally tractable. Concretely, we propose multiple LLM-assisted compilation passes via pre-defined meta-prompts for program transformation. During each program transformation, efficient symbolic program synthesis is employed to repair incorrect code snippets with a limited scale. To attain high performance, we propose a hierarchical auto-tuning approach to systematically explore both the parameters and sequences of transformation passes. Experiments on 4 DLS with distinct programming interfaces, i.e., Intel DL Boost with VNNI, NVIDIA GPU with CUDA, AMD MI with HIP, and Cambricon MLU with BANG, demonstrate that QiMeng-Xpiler correctly translates different tensor programs at the accuracy of 95% on average, and the performance of translated programs achieves up to 2.0x over vendor-provided manually-optimized libraries. As a result, the programming productivity of DLS is improved by up to 96.0x via transcompiling legacy tensor programs.",
+    "citation_count": 0,
+    "reference_count": 0,
+    "url": "https://dblp.org/rec/conf/osdi/DongBHGXXS00Z0025",
+    "dblp_key": "conf/osdi/DongBHGXXS00Z0025",
+    "source_id": "https://openalex.org/W4415030374"
+  },
+  {
+    "title": "Picsou: Enabling Replicated State Machines to Communicate Efficiently.",
+    "authors": [
+      "Reginald Frank",
+      "Micah Murray",
+      "Chawinphat Tankuranand",
+      "Junseo Yoo",
+      "Ethan Xu",
+      "Natacha Crooks",
+      "Suyash Gupta 0001",
+      "Manos Kapritsos"
+    ],
+    "venue": "OSDI",
+    "year": 2025,
+    "abstract": "Replicated state machines (RSMs) cannot communicate effectively today as there is no formal framework or efficient protocol to do so. To address this issue, we introduce a new primitive, Cross-Cluster Consistent Broadcast (C3B) and present PICSOU, a practical implementation of the C3B primitive. PICSOU draws inspiration from networking and TCP to allow two RSMs to communicate with constant metadata overhead in the failure-free case and a minimal number of message resends in the case of failures. PICSOU is flexible and allows both crash fault tolerant and Byzantine fault tolerant consensus protocols to communicate. At the heart of PICSOU's good performance and generality is the concept of QUACKs (quorum acknowledgments). QUACKs allow nodes in each RSM to precisely determine when messages have definitely been received, or likely lost. Our results are promising: we obtain up to 24x better performance than prior solutions on microbenchmarks and applications, ranging from disaster recovery to data reconciliation.",
+    "citation_count": 0,
+    "reference_count": 0,
+    "url": "https://dblp.org/rec/conf/osdi/FrankMTYXC0K25",
+    "dblp_key": "conf/osdi/FrankMTYXC0K25",
+    "source_id": "https://openalex.org/W4389984199"
+  },
+  {
+    "title": "Stripeless Data Placement for Erasure-Coded In-Memory Storage.",
+    "authors": [
+      "Jian Gao",
+      "Jiwu Shu",
+      "Bin Yan",
+      "Yuhao Zhang 0006",
+      "Keji Huang"
+    ],
+    "venue": "OSDI",
+    "year": 2025,
+    "abstract": null,
+    "citation_count": null,
+    "reference_count": null,
+    "url": "https://dblp.org/rec/conf/osdi/GaoSY0H25",
+    "dblp_key": "conf/osdi/GaoSY0H25",
+    "source_id": null
+  },
+  {
+    "title": "QOS: Quantum Operating System.",
+    "authors": [
+      "Emmanouil Giortamis",
+      "Francisco Romão",
+      "Nathaniel Tornow",
+      "Pramod Bhatotia"
+    ],
+    "venue": "OSDI",
+    "year": 2025,
+    "abstract": "EXtended Reality (XR) alongside the Digital Twin (DT) in Industrial Internet of Things (IIoT) emerges as a promising next-generation technology. Its diverse applications hod the potential to revolutionize multiple facets of Industry 4.0 and serve as a cornerstone for the rise of Industry 5.0. However, current systems are still not effective in providing a high-quality experience for users due to various factors, one of which is their limited resources for processing and transmitting complex data and big data. To overcome these challenges, this paper presents an in-depth analysis of performance optimization techniques for resource-constrained Augmented Reality (AR) and/or Virtual Reality (VR) environments operating with DT, with a specific focus on Quality of Service (QoS), Quality of Experience (QoE), Edge-Cloud architectures and future research directions. Furthermore, this study delves into the intricate complex trade-off relationships involving optimization factors, including system quality, information quality, and QoE. In addition, it also explores potential solutions based on powerful emerging technological tools, including data compression, blockchain, cloud computing, quantum computing, Artificial Intelligence (AI) / Machine Learning (ML), and cybersecurity in the Cyber-Physical Systems (CPS). The insights provided in this comprehensive survey can inspire and guide researchers and industrial practitioners in optimizing performance for XR with DT applications in resource-constrained Smart Manufacturing System (SMS).",
+    "citation_count": 43,
+    "reference_count": 101,
+    "url": "https://dblp.org/rec/conf/osdi/GiortamisRTB25",
+    "dblp_key": "conf/osdi/GiortamisRTB25",
+    "source_id": "https://openalex.org/W4391019608"
+  },
+  {
+    "title": "KPerfIR: Towards a Open and Compiler-centric Ecosystem for GPU Kernel Performance Tooling on Modern AI Workloads.",
+    "authors": [
+      "Yue Guan 0003",
+      "Yuanwei Fang",
+      "Keren Zhou 0001",
+      "Corbin Robeck",
+      "Manman Ren",
+      "Zhongkai Yu",
+      "Yufei Ding 0001",
+      "Adnan Aziz"
+    ],
+    "venue": "OSDI",
+    "year": 2025,
+    "abstract": "In this work, we propose KPerfIR, a novel multilevel compiler-centric infrastructure to enable the development of customizable, extendable, and portable profiling tools tailored for modern artificial intelligence (AI) workloads on modern GPUs. Our approach integrates profiling capabilities directly into the compiler workflow, allowing profiling functionalities to be implemented as compiler passes, offering a programmable and reusable framework for performance analysis. This design bridges the gap between compilers and profilers, enabling fine-grained insights into complex optimization challenges such as overlapping the execution of fine-grained function units on GPUs. KPerfIR is integrated into the Triton infrastructure to highlight the power of a compiler-centric approach to advance performance analysis and optimization in the ever-evolving landscape of AI compilers. Our evaluation shows that our tool incurs low overhead (8.2%), provides accurate measurements (2% relative error), and delivers actionable insights into complicated GPU intra-kernel optimizations.",
+    "citation_count": 0,
+    "reference_count": 0,
+    "url": "https://dblp.org/rec/conf/osdi/GuanF0RRY0A25",
+    "dblp_key": "conf/osdi/GuanF0RRY0A25",
+    "source_id": "https://openalex.org/W4415037814"
+  },
+  {
+    "title": "Achieving Low-Latency Graph-Based Vector Search via Aligning Best-First Search Algorithm with SSD.",
+    "authors": [
+      "Hao Guo",
+      "Youyou Lu"
+    ],
+    "venue": "OSDI",
+    "year": 2025,
+    "abstract": "In this paper we report the set-up and results of the Multimodal Brain Tumor Image Segmentation Benchmark (BRATS) organized in conjunction with the MICCAI 2012 and 2013 conferences. Twenty state-of-the-art tumor segmentation algorithms were applied to a set of 65 multi-contrast MR scans of low- and high-grade glioma patients-manually annotated by up to four raters-and to 65 comparable scans generated using tumor image simulation software. Quantitative evaluations revealed considerable disagreement between the human raters in segmenting various tumor sub-regions (Dice scores in the range 74%-85%), illustrating the difficulty of this task. We found that different algorithms worked best for different sub-regions (reaching performance comparable to human inter-rater variability), but that no single algorithm ranked in the top for all sub-regions simultaneously. Fusing several good algorithms using a hierarchical majority vote yielded segmentations that consistently ranked above all individual algorithms, indicating remaining opportunities for further methodological improvements. The BRATS image data and manual annotations continue to be publicly available through an online evaluation system as an ongoing benchmarking resource.",
+    "citation_count": 5927,
+    "reference_count": 156,
+    "url": "https://dblp.org/rec/conf/osdi/GuoL25",
+    "dblp_key": "conf/osdi/GuoL25",
+    "source_id": "https://openalex.org/W1641498739"
+  },
+  {
+    "title": "WaferLLM: Large Language Model Inference at Wafer Scale.",
+    "authors": [
+      "Congjie He",
+      "Yeqi Huang",
+      "Pei Mu 0003",
+      "Ziming Miao",
+      "Jilong Xue",
+      "Lingxiao Ma",
+      "Fan Yang 0024",
+      "Luo Mai"
+    ],
+    "venue": "OSDI",
+    "year": 2025,
+    "abstract": "Emerging AI accelerators increasingly adopt wafer-scale manufacturing technologies, integrating hundreds of thousands of AI cores in a mesh architecture with large distributed on-chip memory (tens of GB in total) and ultra-high on-chip memory bandwidth (tens of PB/s). However, current LLM inference systems, optimized for shared memory architectures like GPUs, fail to exploit these accelerators fully. We introduce WaferLLM, the first wafer-scale LLM inference system. WaferLLM is guided by a novel PLMR model (pronounced as \"Plummer\") that captures the unique hardware characteristics of wafer-scale architectures. Leveraging this model, WaferLLM pioneers wafer-scale LLM parallelism, optimizing the utilization of hundreds of thousands of on-chip cores. It also introduces MeshGEMM and MeshGEMV, the first GEMM and GEMV implementations designed to scale effectively on wafer-scale accelerators. Evaluations show that WaferLLM achieves up to 200$\\times$ higher accelerator utilization than state-of-the-art methods. Leveraging a wafer-scale accelerator (Cerebras WSE2), WaferLLM delivers GEMV operations 606$\\times$ faster and 16$\\times$ more energy-efficient than on an NVIDIA A100 GPU. For full LLM inference, WaferLLM achieves 10-20$\\times$ speedups over A100 GPU clusters running SGLang and vLLM. These advantages are expected to grow as wafer-scale AI models, software, and hardware continue to mature. WaferLLM is open-sourced at https://github.com/MeshInfra/WaferLLM.",
+    "citation_count": 0,
+    "reference_count": 0,
+    "url": "https://dblp.org/rec/conf/osdi/HeH0MXM0M25",
+    "dblp_key": "conf/osdi/HeH0MXM0M25",
+    "source_id": "https://openalex.org/W4407308982"
+  },
+  {
+    "title": "Neutrino: Fine-grained GPU Kernel Profiling via Programmable Probing.",
+    "authors": [
+      "Songlin Huang",
+      "Chenshu Wu"
+    ],
+    "venue": "OSDI",
+    "year": 2025,
+    "abstract": "We report on measurements of neutrino oscillation using data from the T2K long-baseline neutrino experiment collected between 2010 and 2013. In an analysis of muon neutrino disappearance alone, we find the following estimates and 68% confidence intervals for the two possible mass hierarchies: normal hierarchy: sin2θ23=0.514&#13;\\n+0.055&#13;\\n−0.056 and Δm&#13;\\n2&#13;\\n32=(2.51±0.10)×10−3 eV2/c4 and inverted hierarchy: sin2θ23=0.511±0.055 and Δm&#13;\\n2&#13;\\n13=(2.48±0.10)×10−3 eV2/c4. The analysis accounts for multinucleon mechanisms in neutrino interactions which were found to introduce negligible bias. We describe our first analyses that combine measurements of muon neutrino disappearance and electron neutrino appearance to estimate four oscillation parameters, |Δm2|, sin2θ23, sin2θ13, δCP, and the mass hierarchy. Frequentist and Bayesian intervals are presented for combinations of these parameters, with and without including recent reactor measurements. At 90% confidence level and including reactor measurements, we exclude the region δCP=[0.15,0.83]π for normal hierarchy and δCP=[−0.08,1.09]π for inverted hierarchy. The T2K and reactor data weakly favor the normal hierarchy with a Bayes factor of 2.2. The most probable values and 68% one-dimensional credible intervals for the other oscillation parameters, when reactor data are included, are sin2θ23=0.528&#13;\\n+0.055&#13;\\n−0.038 and |Δm&#13;\\n2&#13;\\n32|=(2.51±0.11)×10−3 eV2/c4.",
+    "citation_count": 269,
+    "reference_count": 136,
+    "url": "https://dblp.org/rec/conf/osdi/HuangW25",
+    "dblp_key": "conf/osdi/HuangW25",
+    "source_id": "https://openalex.org/W1652762507"
+  },
+  {
+    "title": "Bayesian Code Diffusion for Efficient Automatic Deep Learning Program Optimization.",
+    "authors": [
+      "Isu Jeong",
+      "Seulki Lee 0002"
+    ],
+    "venue": "OSDI",
+    "year": 2025,
+    "abstract": "In this paper we report the set-up and results of the Multimodal Brain Tumor Image Segmentation Benchmark (BRATS) organized in conjunction with the MICCAI 2012 and 2013 conferences. Twenty state-of-the-art tumor segmentation algorithms were applied to a set of 65 multi-contrast MR scans of low- and high-grade glioma patients-manually annotated by up to four raters-and to 65 comparable scans generated using tumor image simulation software. Quantitative evaluations revealed considerable disagreement between the human raters in segmenting various tumor sub-regions (Dice scores in the range 74%-85%), illustrating the difficulty of this task. We found that different algorithms worked best for different sub-regions (reaching performance comparable to human inter-rater variability), but that no single algorithm ranked in the top for all sub-regions simultaneously. Fusing several good algorithms using a hierarchical majority vote yielded segmentations that consistently ranked above all individual algorithms, indicating remaining opportunities for further methodological improvements. The BRATS image data and manual annotations continue to be publicly available through an online evaluation system as an ongoing benchmarking resource.",
+    "citation_count": 5927,
+    "reference_count": 156,
+    "url": "https://dblp.org/rec/conf/osdi/Jeong025",
+    "dblp_key": "conf/osdi/Jeong025",
+    "source_id": "https://openalex.org/W1641498739"
+  },
+  {
+    "title": "Training with Confidence: Catching Silent Errors in Deep Learning Training with Automated Proactive Checks.",
+    "authors": [
+      "Yuxuan Jiang 0016",
+      "Ziming Zhou",
+      "Boyu Xu 0005",
+      "Beijie Liu",
+      "Runhui Xu",
+      "Peng Huang 0005"
+    ],
+    "venue": "OSDI",
+    "year": 2025,
+    "abstract": "Training deep learning (DL) models is a complex process, making it prone to silent errors that are challenging to detect and diagnose. This paper presents TRAINCHECK, a framework that takes a proactive checking approach to address silent training errors. TRAINCHECK automatically infers invariants tailored for DL training. It uses these invariants to proactively detect silent errors during the training process while providing debugging help. To evaluate TRAINCHECK, we reproduce 20 real-world silent training errors with diverse root causes. TRAINCHECK successfully detects 18 errors within a single training iteration. It also uncovers 6 unknown bugs in popular training libraries that lead to silent errors.",
+    "citation_count": 0,
+    "reference_count": 0,
+    "url": "https://dblp.org/rec/conf/osdi/JiangZXLXH25",
+    "dblp_key": "conf/osdi/JiangZXLXH25",
+    "source_id": "https://openalex.org/W4415332908"
+  },
+  {
+    "title": "PoWER Never Corrupts: Tool-Agnostic Verification of Crash Consistency and Corruption Detection.",
+    "authors": [
+      "Hayley LeBlanc",
+      "Jacob R. Lorch",
+      "Chris Hawblitzel",
+      "Cheng Huang",
+      "Yiheng Tao",
+      "Nickolai Zeldovich",
+      "Vijay Chidambaram"
+    ],
+    "venue": "OSDI",
+    "year": 2025,
+    "abstract": "Faults have become the norm rather than the exception for high-end computing on clusters with 10s/100s of thousands of cores. Exacerbating this situation, some of these faults remain undetected, manifesting themselves as silent errors that corrupt memory while applications continue to operate and report incorrect results. This paper studies the potential for redundancy to both detect and correct soft errors in MPI message-passing applications. Our study investigates the challenges inherent to detecting soft errors within MPI application while providing transparent MPI redundancy. By assuming a model wherein corruption in application data manifests itself by producing differing MPI message data between replicas, we study the best suited protocols for detecting and correcting MPI data that is the result of corruption. To experimentally validate our proposed detection and correction protocols, we introduce RedMPI, an MPI library which resides in the MPI profiling layer. RedMPI is capable of both online detection and correction of soft errors that occur in MPI applications without requiring any modifications to the application source by utilizing either double or triple redundancy. Our results indicate that our most efficient consistency protocol can successfully protect applications experiencing even high rates of silent data corruption with runtime overheads between 0% and 30% as compared to unprotected applications without redundancy. Using our fault injector within RedMPI, we observe that even a single soft error can have profound effects on running applications, causing a cascading pattern of corruption in most cases causes that spreads to all other processes. RedMPI's protection has been shown to successfully mitigate the effects of soft errors while allowing applications to complete with correct results even in the face of errors.",
+    "citation_count": 80,
+    "reference_count": 29,
+    "url": "https://dblp.org/rec/conf/osdi/LeBlancLHHTZC25",
+    "dblp_key": "conf/osdi/LeBlancLHHTZC25",
+    "source_id": "https://openalex.org/W4242361160"
+  },
+  {
+    "title": "Understanding Stragglers in Large Model Training Using What-if Analysis.",
+    "authors": [
+      "Jinkun Lin",
+      "Ziheng Jiang",
+      "Zuquan Song",
+      "Sida Zhao",
+      "Menghan Yu",
+      "Zhanghan Wang",
+      "Chenyuan Wang",
+      "Zuocheng Shi",
+      "Xiang Shi",
+      "Wei Jia",
+      "Zherui Liu",
+      "Shuguang Wang",
+      "Haibin Lin",
+      "Xin Liu 0086",
+      "Aurojit Panda",
+      "Jinyang Li"
+    ],
+    "venue": "OSDI",
+    "year": 2025,
+    "abstract": "With the breakthroughs in deep learning, the recent years have witnessed a booming of artificial intelligence (AI) applications and services, spanning from personal assistant to recommendation systems to video/audio surveillance. More recently, with the proliferation of mobile computing and Internet of Things (IoT), billions of mobile and IoT devices are connected to the Internet, generating zillions bytes of data at the network edge. Driving by this trend, there is an urgent need to push the AI frontiers to the network edge so as to fully unleash the potential of the edge big data. To meet this demand, edge computing, an emerging paradigm that pushes computing tasks and services from the network core to the network edge, has been widely recognized as a promising solution. The resulted new interdiscipline, edge AI or edge intelligence (EI), is beginning to receive a tremendous amount of interest. However, research on EI is still in its infancy stage, and a dedicated venue for exchanging the recent advances of EI is highly desired by both the computer system and AI communities. To this end, we conduct a comprehensive survey of the recent research efforts on EI. Specifically, we first review the background and motivation for AI running at the network edge. We then provide an overview of the overarching architectures, frameworks, and emerging key technologies for deep learning model toward training/inference at the network edge. Finally, we discuss future research opportunities on EI. We believe that this survey will elicit escalating attentions, stimulate fruitful discussions, and inspire further research ideas on EI.",
+    "citation_count": 1915,
+    "reference_count": 168,
+    "url": "https://dblp.org/rec/conf/osdi/LinJSZYWWSSJLWL25",
+    "dblp_key": "conf/osdi/LinJSZYWWSSJLWL25",
+    "source_id": "https://openalex.org/W2950865323"
+  },
+  {
+    "title": "Tiered Memory Management Beyond Hotness.",
+    "authors": [
+      "Jinshu Liu",
+      "Hamid Hadian",
+      "Hanchen Xu",
+      "Huaicheng Li"
+    ],
+    "venue": "OSDI",
+    "year": 2025,
+    "abstract": "The highly successful architecture and protocols of today's Internet may operate poorly in environments characterized by very long delay paths and frequent network partitions. These problems are exacerbated by end nodes with limited power or memory resources. Often deployed in mobile and extreme environments lacking continuous connectivity, many such networks have their own specialized protocols, and do not utilize IP. To achieve interoperability between them, we propose a network architecture and application interface structured around optionally-reliable asynchronous message forwarding, with limited expectations of end-to-end connectivity and node resources. The architecture operates as an overlay above the transport layers of the networks it interconnects, and provides key services such as in-network data storage and retransmission, interoperable naming, authenticated forwarding and a coarse-grained class of service.",
+    "citation_count": 3052,
+    "reference_count": 27,
+    "url": "https://dblp.org/rec/conf/osdi/LiuHXL25",
+    "dblp_key": "conf/osdi/LiuHXL25",
+    "source_id": "https://openalex.org/W2112316694"
+  },
+  {
+    "title": "Deriving Semantic Checkers from Tests to Detect Silent Failures in Production Distributed Systems.",
+    "authors": [
+      "Chang Lou",
+      "Dimas Shidqi Parikesit",
+      "Yujin Huang",
+      "Zhewen Yang",
+      "Senapati Diwangkara",
+      "Yuzhuo Jing",
+      "Achmad Imam Kistijantoro",
+      "Ding Yuan 0004",
+      "Suman Nath",
+      "Peng Huang 0005"
+    ],
+    "venue": "OSDI",
+    "year": 2025,
+    "abstract": "File systems are too large to be bug free. Although handwritten test suites have been widely used to stress file systems, they can hardly keep up with the rapid increase in file system size and complexity, leading to new bugs being introduced and reported regularly. These bugs come in various flavors: simple buffer overflows to sophisticated semantic bugs. Although bug-specific checkers exist, they generally lack a way to explore file system states thoroughly. More importantly, no turnkey solution exists that unifies the checking effort of various aspects of a file system under one umbrella.",
+    "citation_count": 69,
+    "reference_count": 35,
+    "url": "https://dblp.org/rec/conf/osdi/LouPHYDJK0N025",
+    "dblp_key": "conf/osdi/LouPHYDJK0N025",
+    "source_id": "https://openalex.org/W2981689050"
+  },
+  {
+    "title": "Skybridge: Bounded Staleness for Distributed Caches.",
+    "authors": [
+      "Robert Lyerly",
+      "Scott Pruett",
+      "Kevin Doherty",
+      "Greg Rogers",
+      "Nathan Bronson",
+      "John Hugg"
+    ],
+    "venue": "OSDI",
+    "year": 2025,
+    "abstract": null,
+    "citation_count": null,
+    "reference_count": null,
+    "url": "https://dblp.org/rec/conf/osdi/LyerlyPDRBH25",
+    "dblp_key": "conf/osdi/LyerlyPDRBH25",
+    "source_id": null
+  },
+  {
+    "title": "MettEagle: Costs and Benefits of Implementing Containers on Microkernels.",
+    "authors": [
+      "Till Miemietz",
+      "Viktor Reusch",
+      "Matthias Hille",
+      "Lars Wrenger",
+      "Jana Eisoldt",
+      "Jan Klötzke",
+      "Max Kurze",
+      "Adam Lackorzynski",
+      "Michael Roitzsch",
+      "Hermann Härtig"
+    ],
+    "venue": "OSDI",
+    "year": 2025,
+    "abstract": null,
+    "citation_count": 0,
+    "reference_count": 55,
+    "url": "https://dblp.org/rec/conf/osdi/MiemietzRHWEKKL25",
+    "dblp_key": "conf/osdi/MiemietzRHWEKKL25",
+    "source_id": "97443c6ed4b25616a620a437f87534e3f8feaaae"
+  },
+  {
+    "title": "Quake: Adaptive Indexing for Vector Search.",
+    "authors": [
+      "Jason Mohoney",
+      "Devesh Sarda",
+      "Mengze Tang",
+      "Shihabur Rahman Chowdhury",
+      "Anil Pacaci",
+      "Ihab F. Ilyas",
+      "Theodoros Rekatsinas",
+      "Shivaram Venkataraman"
+    ],
+    "venue": "OSDI",
+    "year": 2025,
+    "abstract": "Vector search, the task of finding the k-nearest neighbors of a query vector against a database of high-dimensional vectors, underpins many machine learning applications, including retrieval-augmented generation, recommendation systems, and information retrieval. However, existing approximate nearest neighbor (ANN) methods perform poorly under dynamic and skewed workloads where data distributions evolve. We introduce Quake, an adaptive indexing system that maintains low latency and high recall in such environments. Quake employs a multi-level partitioning scheme that adjusts to updates and changing access patterns, guided by a cost model that predicts query latency based on partition sizes and access frequencies. Quake also dynamically sets query execution parameters to meet recall targets using a novel recall estimation model. Furthermore, Quake utilizes NUMA-aware intra-query parallelism for improved memory bandwidth utilization during search. To evaluate Quake, we prepare a Wikipedia vector search workload and develop a workload generator to create vector search workloads with configurable access patterns. Our evaluation shows that on dynamic workloads, Quake achieves query latency reductions of 1.5-38x and update latency reductions of 4.5-126x compared to state-of-the-art indexes such as SVS, DiskANN, HNSW, and SCANN.",
+    "citation_count": 0,
+    "reference_count": 0,
+    "url": "https://dblp.org/rec/conf/osdi/MohoneySTCPIRV25",
+    "dblp_key": "conf/osdi/MohoneySTCPIRV25",
+    "source_id": "https://openalex.org/W4416072428"
+  },
+  {
+    "title": "Fast and Synchronous Crash Consistency with Metadata Write-Once File System.",
+    "authors": [
+      "Yanqi Pan",
+      "Wen Xia",
+      "Yifeng Zhang",
+      "Xiangyu Zou",
+      "Hao Huang",
+      "Zhenhua Li 0001",
+      "Chentao Wu"
+    ],
+    "venue": "OSDI",
+    "year": 2025,
+    "abstract": "This paper presents a new technique for disk storage management called a log-structured file system . A log-structured file system writes all modifications to disk sequentially in a log-like structure, thereby speeding up both file writing and crash recovery. The log is the only structure on disk; it contains indexing information so that files can be read back from the log efficiently. In order to maintain large free areas on disk for fast writing, we divide the log into segments and use a segment cleaner to compress the live information from heavily fragmented segments. We present a series of simulations that demonstrate the efficiency of a simple cleaning policy based on cost and benefit. We have implemented a prototype log-structured file system called Sprite LFS; it outperforms current Unix file systems by an order of magnitude for small-file writes while matching or exceeding Unix performance for reads and large writes. Even when the overhead for cleaning is included, Sprite LFS can use 70% of the disk bandwidth for writing, whereas Unix file systems typically can use only 5–10%.",
+    "citation_count": 1247,
+    "reference_count": 27,
+    "url": "https://dblp.org/rec/conf/osdi/PanXZZH0W25",
+    "dblp_key": "conf/osdi/PanXZZH0W25",
+    "source_id": "https://openalex.org/W2108183412"
+  },
+  {
+    "title": "Principles and Methodologies for Serial Performance Optimization.",
+    "authors": [
+      "Sujin Park",
+      "Mingyu Guan",
+      "Xiang Cheng",
+      "Taesoo Kim"
+    ],
+    "venue": "OSDI",
+    "year": 2025,
+    "abstract": "QUANTUM ESPRESSO is an integrated suite of computer codes for electronic-structure calculations and materials modeling, based on density-functional theory, plane waves, and pseudopotentials (norm-conserving, ultrasoft, and projector-augmented wave). The acronym ESPRESSO stands for opEn Source Package for Research in Electronic Structure, Simulation, and Optimization. It is freely available to researchers around the world under the terms of the GNU General Public License. QUANTUM ESPRESSO builds upon newly-restructured electronic-structure codes that have been developed and tested by some of the original authors of novel electronic-structure algorithms and applied in the last twenty years by some of the leading materials modeling groups worldwide. Innovation and efficiency are still its main focus, with special attention paid to massively parallel architectures, and a great effort being devoted to user friendliness. QUANTUM ESPRESSO is evolving towards a distribution of independent and interoperable codes in the spirit of an open-source project, where researchers active in the field of electronic-structure calculations are encouraged to participate in the project by contributing their own codes or by implementing their own ideas into existing codes.",
+    "citation_count": 27543,
+    "reference_count": 184,
+    "url": "https://dblp.org/rec/conf/osdi/ParkGCK25",
+    "dblp_key": "conf/osdi/ParkGCK25",
+    "source_id": "https://openalex.org/W2120145199"
+  },
+  {
+    "title": "DecDEC: A Systems Approach to Advancing Low-Bit LLM Quantization.",
+    "authors": [
+      "Yeonhong Park",
+      "Jake Hyun",
+      "Hojoon Kim",
+      "Jae W. Lee"
+    ],
+    "venue": "OSDI",
+    "year": 2025,
+    "abstract": "Quantization of Large Language Models (LLMs) has recently gained popularity, particularly for on-device settings with limited hardware resources. While efficient, quantization inevitably degrades model quality, especially in aggressive low-bit settings such as 3-bit and 4-bit precision. In this paper, we propose DecDEC, an inference scheme that improves the quality of low-bit LLMs while preserving the key benefits of quantization: GPU memory savings and latency reduction. DecDEC stores the residual matrix -- the difference between full-precision and quantized weights -- in CPU, and dynamically fetches the residuals for only a small portion of the weights. This portion corresponds to the salient channels, marked by activation outliers, with the fetched residuals helping to correct quantization errors in these channels. Salient channels are identified dynamically at each decoding step by analyzing the input activations -- this enables adaptation to the dynamic nature of activation distribution, thus maximizing the effectiveness of error compensation. We demonstrate the effectiveness of DecDEC by augmenting state-of-the-art quantization methods. For example, DecDEC reduces the perplexity of a 3-bit Llama-3-8B-Instruct model from 10.15 to 9.12 -- outperforming its 3.5-bit counterpart -- while adding less than 0.0003\\% to GPU memory usage and incurring only a 1.7\\% inference slowdown on NVIDIA RTX 4050 Mobile.",
+    "citation_count": 0,
+    "reference_count": 0,
+    "url": "https://dblp.org/rec/conf/osdi/ParkHKL25",
+    "dblp_key": "conf/osdi/ParkHKL25",
+    "source_id": "https://openalex.org/W4405955693"
+  },
+  {
+    "title": "Disentangling the Dual Role of NIC Receive Rings.",
+    "authors": [
+      "Boris Pismenny",
+      "Adam Morrison 0001",
+      "Dan Tsafrir"
+    ],
+    "venue": "OSDI",
+    "year": 2025,
+    "abstract": "Electromagnetic (EM) metamaterials are artificially engineered materials with extraordinary EM properties beyond the limit of existing natural materials; thus, they have been widely used to manipulate the amplitude, phase, polarization, frequency, wave vector, waveform, and other degrees of freedom of EM waves in many practical applications. In this review, we will summarize recent advances in this flourishing field of EM metamaterials, first from the perspectives of the classical regime and then the quantum regime. More specifically, in the classical regime, traditional EM metamaterials are based on effective medium theory, and they have limitations of fixed functionalities and an inability to control EM waves in real time. To overcome these restrictions, information metamaterials, including digital coding and field-programmable metamaterials, have recently been proposed to enable real-time manipulation of EM waves based on the theory of information science. By taking advantage of information metamaterials and artificial intelligence, another crucial milestone of intelligent metamaterials has been achieved in the development of classical metamaterials. After overviewing EM metamaterials in the classical regime, we discuss cutting-edge studies of EM metamaterials in the quantum regime, namely, topological metamaterials and quantum metamaterials. These nonclassical metamaterials show excellent ability to flexibly manipulate the quantum states, and they extend the classical information metamaterials into the field of quantum information science. At the end of this review, we will give some conclusions and perspectives on this fast-evolving field.",
+    "citation_count": 49,
+    "reference_count": 176,
+    "url": "https://dblp.org/rec/conf/osdi/Pismenny0T25",
+    "dblp_key": "conf/osdi/Pismenny0T25",
+    "source_id": "https://openalex.org/W4366502757"
+  },
+  {
+    "title": "Enabling Efficient GPU Communication over Multiple NICs with FuseLink.",
+    "authors": [
+      "Zhenghang Ren",
+      "Yuxuan Li",
+      "Zilong Wang 0007",
+      "Xinyang Huang",
+      "Wenxue Li 0004",
+      "Kaiqiang Xu",
+      "Xudong Liao",
+      "Yijun Sun",
+      "Bowen Liu 0002",
+      "Han Tian",
+      "Junxue Zhang 0001",
+      "Mingfei Wang",
+      "Zhizhen Zhong",
+      "Guyue Liu",
+      "Ying Zhang 0022",
+      "Kai Chen 0005"
+    ],
+    "venue": "OSDI",
+    "year": 2025,
+    "abstract": null,
+    "citation_count": 0,
+    "reference_count": 32,
+    "url": "https://dblp.org/rec/conf/osdi/RenL0HLXLSLT0WZ25",
+    "dblp_key": "conf/osdi/RenL0HLXLSLT0WZ25",
+    "source_id": "https://openalex.org/W4413756885"
+  },
+  {
+    "title": "Building Bridges: Safe Interactions with Foreign Languages through Omniglot.",
+    "authors": [
+      "Leon Schuermann",
+      "Jack Toubes",
+      "Tyler Potyondy",
+      "Pat Pannuto",
+      "Mae Milano",
+      "Amit Levy"
+    ],
+    "venue": "OSDI",
+    "year": 2025,
+    "abstract": "This study examined the key experiences and aspects of the life of Rohingya diaspora youth through exploratory Narrative Inquiry. Three semi-structured interviews were held with six participants from the Rohingya community in Malaysia. Responses were analyzed and categorized into three broad sections based on Cultural Historical Activity Theory: environmental impacts on lived experience, the diversity of sociocultural origin within the Rohingya community, and the impact of historical processes on cultural change. It was noted that the Rohingya culture is rich with diverse experiences and origins far beyond its current circumstances. Rohingya youth identify strongly with their experiences of life in Arakan and note that the younger generations missing this experience are less connected with their Rohingya identity. Beyond that, much of the threat to self-perception within the community came from external reductive narratives based only on their plight. In order to establish a constructive framework to support the Rohingya people, it is therefore critical to better understand them as a culture beyond their hardships.",
+    "citation_count": 3,
+    "reference_count": 48,
+    "url": "https://dblp.org/rec/conf/osdi/SchuermannTPPML25",
+    "dblp_key": "conf/osdi/SchuermannTPPML25",
+    "source_id": "https://openalex.org/W4382490421"
+  },
+  {
+    "title": "Mako: Speculative Distributed Transactions with Geo-Replication.",
+    "authors": [
+      "Weihai Shen",
+      "Yang Cui",
+      "Siddhartha Sen 0001",
+      "Sebastian Angel",
+      "Shuai Mu 0001"
+    ],
+    "venue": "OSDI",
+    "year": 2025,
+    "abstract": null,
+    "citation_count": 3,
+    "reference_count": 115,
+    "url": "https://dblp.org/rec/conf/osdi/ShenC0A025",
+    "dblp_key": "conf/osdi/ShenC0A025",
+    "source_id": "d91e513bc3f3c8091a81bfea9508e1cefd67d3f6"
+  },
+  {
+    "title": "XSched: Preemptive Scheduling for Diverse XPUs.",
+    "authors": [
+      "Weihang Shen",
+      "Mingcong Han",
+      "Jialong Liu",
+      "Rong Chen 0001",
+      "Haibo Chen 0001"
+    ],
+    "venue": "OSDI",
+    "year": 2025,
+    "abstract": null,
+    "citation_count": 2,
+    "reference_count": 0,
+    "url": "https://dblp.org/rec/conf/osdi/ShenHL0025",
+    "dblp_key": "conf/osdi/ShenHL0025",
+    "source_id": "54dadbef92070b19113c74e1cbab4dfac85de059"
+  },
+  {
+    "title": "Weave: Efficient and Expressive Oblivious Analytics at Scale.",
+    "authors": [
+      "Mahdi Soleimani",
+      "Grace Jia",
+      "Anurag Khandelwal"
+    ],
+    "venue": "OSDI",
+    "year": 2025,
+    "abstract": "There is no such thing as rest. The world is always on the move. It is made of movement. We find ourselves always in the midst of it, in transformations under way. The basic category for understanding is activity – and only derivatively subject, object, rule, order. What is called for is an ‘activist’ philosophy based on these premises. The Principle of Unrest explores the contemporary implications of an activist philosophy, pivoting on the issue of movement. Movement is understood not simply in spatial terms but as qualitative transformation: becoming, emergence, event. Neoliberal capitalism’s special relation to movement is of central concern. Its powers of mobilization now descend to the emergent level of just-forming potential. This carries them beyond power-over to powers-to-bring-to-be, or what the book terms ‘ontopower’. It is necessary to track capitalist power throughout its expanding field of emergence in order to understand how counter-powers can resist its capture and rival it on its own immanent ground. At the emergent level, at the eventful first flush of their arising, counter-powers are always collective. This even applies to movements of thought. Thought in the making is collective expression. How can we think this transindividuality of thought? What practices can address it? How, politically, can we understand the concept of the event to emergently include events of thought? Only by attuning to the creative unrest always agitating at the infra-individual level, in direct connection with the transindividual level, bypassing the mid-level of what was traditionally taken for a sovereign subject: by embracing our ‘dividuality’.",
+    "citation_count": 112,
+    "reference_count": 22,
+    "url": "https://dblp.org/rec/conf/osdi/SoleimaniJK25",
+    "dblp_key": "conf/osdi/SoleimaniJK25",
+    "source_id": "https://openalex.org/W2743062033"
+  },
+  {
+    "title": "Scalio: Scaling up DPU-based JBOF Key-value Store with NVMe-oF Target Offload.",
+    "authors": [
+      "Xun Sun",
+      "Mingxing Zhang",
+      "Yingdi Shan",
+      "Kang Chen",
+      "Jinlei Jiang",
+      "Yongwei Wu 0001"
+    ],
+    "venue": "OSDI",
+    "year": 2025,
+    "abstract": null,
+    "citation_count": null,
+    "reference_count": null,
+    "url": "https://dblp.org/rec/conf/osdi/SunZSCJ025",
+    "dblp_key": "conf/osdi/SunZSCJ025",
+    "source_id": null
+  },
+  {
+    "title": "Quantum Virtual Machines.",
+    "authors": [
+      "Runzhou Tao 0001",
+      "Hongzheng Zhu",
+      "Jason Nieh",
+      "Jianan Yao",
+      "Ronghui Gu"
+    ],
+    "venue": "OSDI",
+    "year": 2025,
+    "abstract": "The numerical simulation of quantum circuits is an indispensable tool for development, verification, and validation of hybrid quantum-classical algorithms intended for near-term quantum co-processors. The emergence of exascale high-performance computing (HPC) platforms presents new opportunities for pushing the boundaries of quantum circuit simulation. We present a modernized version of the Tensor Network Quantum Virtual Machine (TNQVM) that serves as the quantum circuit simulation backend in the eXtreme-scale ACCelerator (XACC) framework. The new version is based on the scalable tensor network processing library ExaTN (Exascale Tensor Networks). It provides multiple configurable quantum circuit simulators that perform either an exact quantum circuit simulation via the full tensor network contraction or an approximate simulation via a suitably chosen tensor factorization scheme. Upon necessity, stochastic noise modeling from real quantum processors is incorporated into the simulations by modeling quantum channels with Kraus tensors. By combining the portable XACC quantum programming frontend and the scalable ExaTN numerical processing backend, we introduce an end-to-end virtual quantum development environment that can scale from laptops to future exascale platforms. We report initial benchmarks of our framework, which include a demonstration of the distributed execution, incorporation of quantum decoherence models, and simulation of the random quantum circuits used for the certification of quantum supremacy on Google’s Sycamore superconducting architecture.",
+    "citation_count": 28,
+    "reference_count": 47,
+    "url": "https://dblp.org/rec/conf/osdi/TaoZNYG25",
+    "dblp_key": "conf/osdi/TaoZNYG25",
+    "source_id": "https://openalex.org/W3156308080"
+  },
+  {
+    "title": "FineMem: Breaking the Allocation Overhead vs. Memory Waste Dilemma in Fine-Grained Disaggregated Memory Management.",
+    "authors": [
+      "Xiaoyang Wang",
+      "Yongkun Li 0001",
+      "Kan Wu",
+      "Wenzhe Zhu",
+      "Yuqi Li",
+      "Yinlong Xu"
+    ],
+    "venue": "OSDI",
+    "year": 2025,
+    "abstract": null,
+    "citation_count": null,
+    "reference_count": null,
+    "url": "https://dblp.org/rec/conf/osdi/Wang0WZLX25",
+    "dblp_key": "conf/osdi/Wang0WZLX25",
+    "source_id": null
+  },
+  {
+    "title": "To PRI or Not To PRI, That&apos;s the question.",
+    "authors": [
+      "Yun Wang",
+      "Liang Chen",
+      "Jie Ji",
+      "Xianting Tian",
+      "Ben Luo",
+      "Zhixiang Wei",
+      "Zhibai Huang",
+      "Kailiang Xu",
+      "Kaihuan Peng",
+      "Kaijie Guo",
+      "Ning Luo",
+      "Guangjian Wang",
+      "Shengdong Dai",
+      "Yibin Shen",
+      "Jiesheng Wu",
+      "Zhengwei Qi"
+    ],
+    "venue": "OSDI",
+    "year": 2025,
+    "abstract": "Naguère suspecte, voire rejetée, l&apos;histoire du temps présent a pris aujourd&apos;hui une place sans commune mesure dans l&apos;espace public comme à l&apos;Université – avec l&apos;explosion du nombre d&apos;étudiants en cette matière. À cela, plusieurs raisons : la mémoire et le patrimoine ont envahi l&apos;espace public et scientifique ; le témoignage a pris l&apos;allure d&apos;un impératif social et moral ; la justice temporelle s&apos;est muée en tribunal de l&apos;histoire pour juger de crimes politiques vieux de plusieurs décennies mais dont l&apos;après-coup continue de cheminer dans notre présent. Une évidence, dira-t-on. Mais mesure-t-on pour autant le revirement qui se joue ici ? Car le passé n&apos;est plus cet ensemble de traditions à respecter, d&apos;héritages à transmettre, de connaissances à élaborer ni de morts à commémorer ; c&apos;est un constant « travail » de deuil ou de mémoire à entreprendre, tant s&apos;est enracinée l&apos;idée que si le passé doit être arraché des limbes de l&apos;oubli, seuls des dispositifs publics ou privés peuvent l&apos;en exhumer, avec ou sans l&apos;aide de l&apos;historien. Tel est le « présentisme » : devenu un problème à résoudre, et désormais un champ de l&apos;action publique, le passé – et singulièrement le passé proche, celui des dernières catastrophes en date – n&apos;est pas oublié, il est constamment mobilisé et reformulé selon les urgences du jour. L&apos;exigence de vérité propre à la démarche historique s&apos;est muée en exigence sociale de reconnaissance, en politiques de réparation, en discours d&apos;excuses à l&apos;égard des victimes. La question de la contemporanéité n&apos;est pas nouvelle : elle s&apos;est posée à travers les âges, mais Henry Rousso prend la mesure de sa profonde transformation au cours des deux grands après-guerres du XXe siècle et définit ses enjeux fondamentaux : comment écrire une histoire en train de se faire ? Comment mettre à distance la proximité apparente ? Comment se battre sur deux fronts à la fois – celui de l&apos;histoire et celui de la mémoire, celui d&apos;un présent que l&apos;on ne veut pas voir passer et celui d&apos;un passé qui revient hanter le présent ? La nouvelle histoire du contemporain, toute entière inscrite dans cette tension, est plus que jamais marquée par l&apos;incertitude, l&apos;instabilité et l&apos;inachèvement.",
+    "citation_count": 46,
+    "reference_count": 0,
+    "url": "https://dblp.org/rec/conf/osdi/WangCJTLWHXPGLW25",
+    "dblp_key": "conf/osdi/WangCJTLWHXPGLW25",
+    "source_id": "https://openalex.org/W2299596472"
+  },
+  {
+    "title": "Söze: One Network Telemetry Is All You Need for Per-flow Weighted Bandwidth Allocation at Scale.",
+    "authors": [
+      "Weitao Wang",
+      "T. S. Eugene Ng"
+    ],
+    "venue": "OSDI",
+    "year": 2025,
+    "abstract": "Weighted bandwidth allocation is a powerful abstraction that has a wide range of use cases in modern data center networks. However, realizing highly agile and precise weighted bandwidth allocation for large-scale cloud environments is fundamentally challenging. In this paper, we propose Söze, a lightweight decentralized weighted bandwidth allocation system that leverages simple network telemetry features of commodity Ethernet switches. Given the flow weights, Söze can effectively use the telemetry information to compute and enforce the weighted bandwidth allocations without per-flow, topology, or routing knowledge. We demonstrate the effectiveness of Söze through simulations and testbed experiments, improving TPC-H jobs completion time by up to $0.59\\times$ and $0.79\\times$ on average.",
+    "citation_count": 0,
+    "reference_count": 0,
+    "url": "https://dblp.org/rec/conf/osdi/WangN25",
+    "dblp_key": "conf/osdi/WangN25",
+    "source_id": "https://openalex.org/W4416130919"
+  },
+  {
+    "title": "ZEN: Empowering Distributed Training with Sparsity-driven Data Synchronization.",
+    "authors": [
+      "Zhuang Wang",
+      "Zhaozhuo Xu",
+      "Jingyi Xi",
+      "Yuke Wang",
+      "Anshumali Shrivastava",
+      "T. S. Eugene Ng"
+    ],
+    "venue": "OSDI",
+    "year": 2025,
+    "abstract": "We propose a decentralized medical trust management system using blockchain-based federated learning for large-scale Internet of Things (IoT) systems. The proposed system enables health institutions to share data without revealing the privacy of data owners. Health institutions form coalitions and the leader of each coalition is elected based on the proposed proof-of-trust collaboration (PoTC) consensus protocol. The PoTC consensus protocol is based on a weight difference game where trust scores, trust consistency value, and trust deviation are factors used for evaluating nodes in the blockchain. The trust of a node is obtained either through direct trust or recommended trust evaluations. Each leader elects an aggregator who has the most credibility to manage the proposed federated learning system. The leaders become the federated clients as well as validators while the aggregator is the federated server. To ensure the decentralization of nodes, a consortium blockchain is employed. Extensive simulations are performed, which show that the proposed system not only demonstrates scalability and credibility without compromising the accuracy, convergence, and resilience properties against malicious attackers but also outperforms existing trust management systems. A security analysis is also conducted, which shows that the proposed system is robust against trust-related attacks.",
+    "citation_count": 24,
+    "reference_count": 38,
+    "url": "https://dblp.org/rec/conf/osdi/WangXXWSN25",
+    "dblp_key": "conf/osdi/WangXXWSN25",
+    "source_id": "https://openalex.org/W4313260328"
+  },
+  {
+    "title": "Mirage: A Multi-Level Superoptimizer for Tensor Programs.",
+    "authors": [
+      "Mengdi Wu",
+      "Xinhao Cheng",
+      "Shengyu Liu",
+      "Chunan Shi",
+      "Jianan Ji",
+      "Man Kit Ao",
+      "Praveen Velliengiri",
+      "Xupeng Miao",
+      "Oded Padon",
+      "Zhihao Jia"
+    ],
+    "venue": "OSDI",
+    "year": 2025,
+    "abstract": "We introduce Mirage, the first multi-level superoptimizer for tensor programs. A key idea in Mirage is $μ$Graphs, a uniform representation of tensor programs at the kernel, thread block, and thread levels of the GPU compute hierarchy. $μ$Graphs enable Mirage to discover novel optimizations that combine algebraic transformations, schedule transformations, and generation of new custom kernels. To navigate the large search space, Mirage introduces a pruning technique based on abstraction that significantly reduces the search space and provides a certain optimality guarantee. To ensure that the optimized $μ$Graph is equivalent to the input program, Mirage introduces a probabilistic equivalence verification procedure with strong theoretical guarantees. Our evaluation shows that Mirage outperforms existing approaches by up to 3.3$\\times$ even for DNNs that are widely used and heavily optimized. Mirage is publicly available at https://github.com/mirage-project/mirage.",
+    "citation_count": 1,
+    "reference_count": 0,
+    "url": "https://dblp.org/rec/conf/osdi/WuCLSJAVMPJ25",
+    "dblp_key": "conf/osdi/WuCLSJAVMPJ25",
+    "source_id": "https://openalex.org/W4396822345"
+  },
+  {
+    "title": "OS Rendering Service Made Parallel with Out-of-Order Execution and In-Order Commit.",
+    "authors": [
+      "Yuanpei Wu",
+      "Chao Xu",
+      "Yubin Xia",
+      "Yang Yu",
+      "Ming Fu",
+      "Binyu Zang",
+      "Haibo Chen 0001"
+    ],
+    "venue": "OSDI",
+    "year": 2025,
+    "abstract": null,
+    "citation_count": 558,
+    "reference_count": 87,
+    "url": "https://dblp.org/rec/conf/osdi/WuXXYFZ025",
+    "dblp_key": "conf/osdi/WuXXYFZ025",
+    "source_id": "https://openalex.org/W2622236128"
+  },
+  {
+    "title": "Decouple and Decompose: Scaling Resource Allocation with DeDe.",
+    "authors": [
+      "Zhiying Xu",
+      "Minlan Yu",
+      "Francis Y. Yan"
+    ],
+    "venue": "OSDI",
+    "year": 2025,
+    "abstract": "Efficient resource allocation is essential in cloud systems to facilitate resource sharing among tenants. However, the growing scale of these optimization problems have outpaced commercial solvers commonly employed in production. To accelerate resource allocation, prior approaches either customize solutions for narrow domains or impose workload-specific assumptions. In this work, we revisit real-world resource allocation problems and uncover a common underlying structure: the vast majority of these problems are inherently separable, i.e., they optimize the aggregate utility of individual resource and demand allocations, under separate constraints for each resource and each demand. Building on this observation, we develop DeDe, a scalable and theoretically rooted optimization framework for large-scale resource allocation. At the core of DeDe is a decouple-and-decompose approach: it decouples entangled resource and demand constraints and thereby decomposes the overall optimization into alternating per-resource and per-demand subproblems that can be solved efficiently and in parallel. We have implemented and released DeDe as a Python package with a familiar modeling interface. Our experiments on three representative resource allocation tasks -- cluster scheduling, traffic engineering, and load balancing -- demonstrate that DeDe delivers significant speedups while generating higher-quality allocations.",
+    "citation_count": 0,
+    "reference_count": 0,
+    "url": "https://dblp.org/rec/conf/osdi/XuYY25",
+    "dblp_key": "conf/osdi/XuYY25",
+    "source_id": "https://openalex.org/W4405470038"
+  },
+  {
+    "title": "Deterministic Client: Enforcing Determinism on Untrusted Machine Code.",
+    "authors": [
+      "Zachary Yedidia",
+      "Geoffrey Ramseyer",
+      "David Mazières"
+    ],
+    "venue": "OSDI",
+    "year": 2025,
+    "abstract": "The maturation of the Web platform has given rise to sophisticated and demanding Web applications such as interactive 3D visualization, audio and video software, and games. With that, efficiency and security of code on the Web has become more important than ever. Yet JavaScript as the only built-in language of the Web is not well-equipped to meet these requirements, especially as a compilation target.",
+    "citation_count": 474,
+    "reference_count": 39,
+    "url": "https://dblp.org/rec/conf/osdi/YedidiaRM25",
+    "dblp_key": "conf/osdi/YedidiaRM25",
+    "source_id": "https://openalex.org/W2625141509"
+  },
+  {
+    "title": "KRR: Efficient and Scalable Kernel Record Replay.",
+    "authors": [
+      "Tianren Zhang",
+      "Sishuai Gong",
+      "Pedro Fonseca 0001"
+    ],
+    "venue": "OSDI",
+    "year": 2025,
+    "abstract": "Throughout the past several decades, mobile devices have evolved in capability and popularity at growing rates while improvement in security has fallen behind. As smartphones now hold mass quantities of sensitive information from millions of people around the world, addressing this gap in security is crucial. Recently, researchers have experimented with behavioral and physiological biometrics-based authentication to improve mobile device security. Continuing the previous work in this field, this study identifies popular dynamics in behavioral and physiological smartphone authentication and aims to provide a comprehensive review of their performance with various deep learning and machine learning algorithms. We found that utilizing hybrid schemes with deep learning features and deep learning/machine learning classification can improve authentication performance. Throughout this paper, the benefits, limitations, and recommendations for future work will be discussed.",
+    "citation_count": 21,
+    "reference_count": 104,
+    "url": "https://dblp.org/rec/conf/osdi/ZhangG025",
+    "dblp_key": "conf/osdi/ZhangG025",
+    "source_id": "https://openalex.org/W4380682655"
+  },
+  {
+    "title": "Basilisk: Using Provenance Invariants to Automate Proofs of Undecidable Protocols.",
+    "authors": [
+      "Tony Nuda Zhang",
+      "Keshav Singh",
+      "Tej Chajed",
+      "Manos Kapritsos",
+      "Bryan Parno"
+    ],
+    "venue": "OSDI",
+    "year": 2025,
+    "abstract": "Formal verification promises software that is much more robust, and even bug-free, compared to the traditional approach of testing. However, its widespread adoption is hindered by limitations in its practicality. This dissertation addresses two major barriers to applying formal verification to distributed systems software, namely its ease of use and its application to broader non-functional properties. In particular, it demonstrates that verification of functional safety properties can be made significantly easier in the general undecidable setting by leveraging the concept of an invariant taxonomy, and that verification can be extended to non functional safety properties, such as reasoning about the end-to-end latency of distributed systems.",
+    "citation_count": 0,
+    "reference_count": 0,
+    "url": "https://dblp.org/rec/conf/osdi/ZhangSCKP25",
+    "dblp_key": "conf/osdi/ZhangSCKP25",
+    "source_id": "https://openalex.org/W4414588035"
+  },
+  {
+    "title": "BlitzScale: Fast and Live Large Model Autoscaling with O(1) Host Caching.",
+    "authors": [
+      "Dingyan Zhang",
+      "Haotian Wang",
+      "Yang Liu",
+      "Xingda Wei",
+      "Yizhou Shan",
+      "Rong Chen 0001",
+      "Haibo Chen 0001"
+    ],
+    "venue": "OSDI",
+    "year": 2025,
+    "abstract": "Model autoscaling is the key mechanism to achieve serverless model-as-a-service, but it faces a fundamental trade-off between scaling speed and storage/memory usage to cache parameters, and cannot meet frequent scaling requirements across multiple hosts. The key problem is that data plane performance is slow, and scaled instances remain stopped while parameters are loading. In this paper, we first show that the data plane can be made fast with no or O(1) caching by loading parameters through the compute network between GPUs because: (1) its speed is comparable to host cache and is underutilized, and (2) scaling multiple instances requires no or O(1) caching with network-optimized multicast. Second, autoscaling can be made live by breaking the scaling abstraction for inference from a coarse-grained instance-level to a fine-grained layer-level. This allows us to offload the layer computation from the overloaded serving instances to the scaled ones without waiting for the parameters to be fully loaded. Under real-world workloads, our system BLITZSCALE achieves up to 94 % lower tail latency reductions compared to state-of-the-art autoscaling system (ServerlessLLM), and it reduces the GPU time used for serving by 49 % when compared with serving systems that do not support autoscaling like DistServe and vLLM with the same service-level-agreement.",
+    "citation_count": null,
+    "reference_count": null,
+    "url": "https://dblp.org/rec/conf/osdi/ZhangWLWS0025",
+    "dblp_key": "conf/osdi/ZhangWLWS0025",
+    "source_id": "2412.17246v2"
+  },
+  {
+    "title": "Extending Applications Safely and Efficiently.",
+    "authors": [
+      "Yusheng Zheng",
+      "Tong Yu",
+      "Yiwei Yang 0002",
+      "Yanpeng Hu",
+      "Xiaozheng Lai",
+      "Dan Williams 0001",
+      "Andi Quinn"
+    ],
+    "venue": "OSDI",
+    "year": 2025,
+    "abstract": null,
+    "citation_count": 352806,
+    "reference_count": 0,
+    "url": "https://dblp.org/rec/conf/osdi/ZhengY0HL0Q25",
+    "dblp_key": "conf/osdi/ZhengY0HL0Q25",
+    "source_id": "https://openalex.org/W2582743722"
+  },
+  {
+    "title": "NanoFlow: Towards Optimal Large Language Model Serving Throughput.",
+    "authors": [
+      "Kan Zhu",
+      "Yufei Gao",
+      "Yilong Zhao",
+      "Liangyu Zhao",
+      "Gefei Zuo",
+      "Yile Gu",
+      "Dedong Xie",
+      "Zihao Ye 0001",
+      "Keisuke Kamahori",
+      "Chien-Yu Lin",
+      "Ziren Wang",
+      "Stephanie Wang",
+      "Arvind Krishnamurthy",
+      "Baris Kasikci"
+    ],
+    "venue": "OSDI",
+    "year": 2025,
+    "abstract": "Large Language Models (LLMs) have resulted in a surging demand for planet-scale serving systems, where tens of thousands of GPUs continuously serve hundreds of millions of users. Consequently, throughput has emerged as a key metric that determines serving systems' performance. Due to large model sizes and memory-intensive self-attention, LLM serving has been commonly assumed to be memory-bound. Through a detailed analysis, we show that despite having memory-intensive components, end-to-end LLM serving is compute bound for most common workloads and LLMs. Alas, most existing serving engines fall short from optimal compute utilization, because the heterogeneous operations that comprise LLM serving--compute, memory, networking--are executed sequentially within a device. We propose NanoFlow, a novel serving framework that exploits intra-device parallelism, which overlaps the usage of heterogeneous resources within a single device. NanoFlow splits inputs into smaller nano-batches and duplicates operations to operate on each portion independently, enabling overlapping. NanoFlow automatically identifies the number, size, ordering, and GPU resource allocation of nano-batches to minimize the execution time, while considering the interference of concurrent operations. We evaluate NanoFlow's end-to-end serving throughput on several popular models such as LLaMA-2-70B, Mixtral 8x7B, LLaMA-3-8B, etc. With practical workloads, NanoFlow provides 1.91x throughput boost compared to state-of-the-art serving systems achieving 50% to 72% of optimal throughput across popular models.",
+    "citation_count": 0,
+    "reference_count": 0,
+    "url": "https://dblp.org/rec/conf/osdi/ZhuGZZZGX0KLWWK25",
+    "dblp_key": "conf/osdi/ZhuGZZZGX0KLWWK25",
+    "source_id": "https://openalex.org/W4402698921"
+  },
+  {
+    "title": "Compass: Encrypted Semantic Search with High Accuracy.",
+    "authors": [
+      "Jinhao Zhu",
+      "Liana Patel",
+      "Matei Zaharia",
+      "Raluca Ada Popa"
+    ],
+    "venue": "OSDI",
+    "year": 2025,
+    "abstract": "Cutting-edge technologies, with a special emphasis on the Internet of Things (IoT), tend to operate as game changers, generating enormous alterations in both traditional and modern enterprises. Understanding multiple uses of IoT has become vital for effective financial management, given the ever-changing nature of organizations and the technological disruptions that come with this paradigm change. IoT has proven to be a powerful tool for improving operational efficiency, decision-making processes, overall productivity, and data management. As a result of the continuously expanding data volume, there is an increasing demand for a robust IT system capable of adeptly handling all enterprise processes. Consequently, businesses must develop suitable IoT architectures that can efficiently address these continually evolving requirements. This research adopts an incremental explanatory approach, guided by the principles of the Preferred Reporting Items for Systematic Reviews and Meta-Analysis (PRISMA). A rigorous examination of 84 research papers has allowed us to delve deeply into the current landscape of IoT research. This research aims to provide a complete and cohesive overview of the existing body of knowledge on IoT. This is accomplished by combining a rigorous empirical approach to categorization with ideas from specialized literature in the IoT sector. This study actively contributes to the ongoing conversation around IoT by recognizing and critically examining current difficulties. This, consequently, opens new research possibilities and promotes future developments in this ever-changing sector.",
+    "citation_count": 427,
+    "reference_count": 152,
+    "url": "https://dblp.org/rec/conf/osdi/ZhuPZP25",
+    "dblp_key": "conf/osdi/ZhuPZP25",
+    "source_id": "https://openalex.org/W4386961654"
+  },
+  {
+    "title": "19th USENIX Symposium on Operating Systems Design and Implementation, OSDI 2025, Boston, MA, USA, July 7-9, 2025.",
+    "authors": [
+      "Lidong Zhou",
+      "Yuanyuan Zhou 0001"
+    ],
+    "venue": "OSDI",
+    "year": 2025,
+    "abstract": "Smarter applications are making better use of the insights gleaned from data, having an impact on every industry and research discipline. At the core of this revolution lies the tools and the methods that are driving it, from processing the massive piles of data generated each day to learning from and taking useful action. Deep neural networks, along with advancements in classical machine learning and scalable general-purpose graphics processing unit (GPU) computing, have become critical components of artificial intelligence, enabling many of these astounding breakthroughs and lowering the barrier to adoption. Python continues to be the most preferred language for scientific computing, data science, and machine learning, boosting both performance and productivity by enabling the use of low-level libraries and clean high-level APIs. This survey offers insight into the field of machine learning with Python, taking a tour through important topics to identify some of the core hardware and software paradigms that have enabled it. We cover widely-used libraries and concepts, collected together for holistic comparison, with the goal of educating the reader and driving the field of Python machine learning forward.",
+    "citation_count": 57,
+    "reference_count": 254,
+    "url": "https://dblp.org/rec/conf/osdi/2025",
+    "dblp_key": "conf/osdi/2025",
+    "source_id": "https://openalex.org/W3006150655"
+  }
+]

@@ -1,0 +1,502 @@
+[
+  {
+    "title": "Evading Userland API Hooking, Again: Novel Attacks and a Principled Defense Method.",
+    "authors": [
+      "Cristian Assaiante",
+      "Simone Nicchi",
+      "Daniele Cono D&apos;Elia",
+      "Leonardo Querzoni"
+    ],
+    "venue": "DIMVA",
+    "year": 2024,
+    "abstract": null,
+    "citation_count": 2,
+    "reference_count": 17,
+    "url": "https://dblp.org/rec/conf/dimva/AssaianteNDQ24",
+    "dblp_key": "conf/dimva/AssaianteNDQ24",
+    "source_id": "https://openalex.org/W4400498851"
+  },
+  {
+    "title": "Modularizing Directed Greybox Fuzzing for Binaries over Multiple CPU Architectures.",
+    "authors": [
+      "Sofiane Benahmed",
+      "Abdullah Qasem",
+      "Anis Lounis",
+      "Mourad Debbabi"
+    ],
+    "venue": "DIMVA",
+    "year": 2024,
+    "abstract": null,
+    "citation_count": 0,
+    "reference_count": 26,
+    "url": "https://dblp.org/rec/conf/dimva/BenahmedQLD24",
+    "dblp_key": "conf/dimva/BenahmedQLD24",
+    "source_id": "https://openalex.org/W4400499064"
+  },
+  {
+    "title": "Exceptional Interprocedural Control Flow Graphs for x86-64 Binaries.",
+    "authors": [
+      "Joshua A. Bockenek",
+      "Freek Verbeek",
+      "Binoy Ravindran"
+    ],
+    "venue": "DIMVA",
+    "year": 2024,
+    "abstract": null,
+    "citation_count": 1,
+    "reference_count": 8,
+    "url": "https://dblp.org/rec/conf/dimva/BockenekVR24",
+    "dblp_key": "conf/dimva/BockenekVR24",
+    "source_id": "https://openalex.org/W4400499367"
+  },
+  {
+    "title": "Extended Abstract: Assessing GNSS Vulnerabilities in Smart Grids.",
+    "authors": [
+      "Sine Canbolat",
+      "Clemens Fruböse",
+      "Ghada Elbez",
+      "Veit Hagenmeyer"
+    ],
+    "venue": "DIMVA",
+    "year": 2024,
+    "abstract": null,
+    "citation_count": 1,
+    "reference_count": 19,
+    "url": "https://dblp.org/rec/conf/dimva/CanbolatFEH24",
+    "dblp_key": "conf/dimva/CanbolatFEH24",
+    "source_id": "https://openalex.org/W4400499204"
+  },
+  {
+    "title": "Acoustic Side-Channel Attacks on a Computer Mouse.",
+    "authors": [
+      "Mauro Conti",
+      "Marin Duroyon",
+      "Gabriele Orazi",
+      "Gene Tsudik"
+    ],
+    "venue": "DIMVA",
+    "year": 2024,
+    "abstract": "Acoustic Side-Channel Attacks (ASCAs) extract sensitive information by using audio emitted from a computing devices and their peripherals. Attacks targeting keyboards are popular and have been explored in the literature. However, similar attacks targeting other human interface peripherals, such as computer mice, are under-explored. To this end, this paper considers security leakage via acoustic signals emanating from normal mouse usage. We first confirm feasibility of such attacks by showing a proof-of-concept attack that classifies four mouse movements with 97% accuracy in a controlled environment. We then evolve the attack towards discerning twelve unique mouse movements using a smartphone to record the experiment. Using Machine Learning (ML) techniques, the model is trained on an experiment with six participants to be generalizable and discern among twelve movements with 94% accuracy. In addition, we experiment with an attack that detects a user action of closing a full-screen window on a laptop. Achieving an accuracy of 91%, this experiment highlights exploiting audio leakage from computer mouse movements in a realistic scenario.",
+    "citation_count": 0,
+    "reference_count": 22,
+    "url": "https://dblp.org/rec/conf/dimva/ContiDOT24",
+    "dblp_key": "conf/dimva/ContiDOT24",
+    "source_id": "https://openalex.org/W4400499351"
+  },
+  {
+    "title": "Extended Abstract: Evading Packing Detection: Breaking Heuristic-Based Static Detectors.",
+    "authors": [
+      "Alexandre D&apos;Hondt",
+      "Charles-Henry Bertrand Van Ouytsel",
+      "Axel Legay"
+    ],
+    "venue": "DIMVA",
+    "year": 2024,
+    "abstract": null,
+    "citation_count": 1,
+    "reference_count": 15,
+    "url": "https://dblp.org/rec/conf/dimva/DHondtOL24",
+    "dblp_key": "conf/dimva/DHondtOL24",
+    "source_id": "https://openalex.org/W4400498838"
+  },
+  {
+    "title": "Tarallo: Evading Behavioral Malware Detectors in the Problem Space.",
+    "authors": [
+      "Gabriele Digregorio",
+      "Salvatore Maccarrone",
+      "Mario D&apos;Onghia",
+      "Luigi Gallo",
+      "Michele Carminati",
+      "Mario Polino",
+      "Stefano Zanero"
+    ],
+    "venue": "DIMVA",
+    "year": 2024,
+    "abstract": "Machine learning algorithms can effectively classify malware through dynamic behavior but are susceptible to adversarial attacks. Existing attacks, however, often fail to find an effective solution in both the feature and problem spaces. This issue arises from not addressing the intrinsic nondeterministic nature of malware, namely executing the same sample multiple times may yield significantly different behaviors. Hence, the perturbations computed for a specific behavior may be ineffective for others observed in subsequent executions. In this paper, we show how an attacker can augment their chance of success by leveraging a new and more efficient feature space algorithm for sequential data, which we have named PS-FGSM, and by adopting two problem space strategies specially tailored to address nondeterminism in the problem space. We implement our novel algorithm and attack strategies in Tarallo, an end-to-end adversarial framework that significantly outperforms previous works in both white and black-box scenarios. Our preliminary analysis in a sandboxed environment and against two RNN-based malware detectors, shows that Tarallo achieves a success rate up to 99% on both feature and problem space attacks while significantly minimizing the number of modifications required for misclassification.",
+    "citation_count": 1,
+    "reference_count": 46,
+    "url": "https://dblp.org/rec/conf/dimva/DigregorioMDGCPZ24",
+    "dblp_key": "conf/dimva/DigregorioMDGCPZ24",
+    "source_id": "https://openalex.org/W4400499380"
+  },
+  {
+    "title": "Extended Abstract: A Transfer Learning-Based Training Approach for DGA Classification.",
+    "authors": [
+      "Arthur Drichel",
+      "Benedikt von Querfurth",
+      "Ulrike Meyer"
+    ],
+    "venue": "DIMVA",
+    "year": 2024,
+    "abstract": "Simple Summary Histopathological image analysis can be used for the detection of lung and colon cancer by the investigation of microscopic images of tissue samples. Since manual diagnosis takes a long time and is subjected to differing opinions of doctors, automated lung and colon cancer diagnosis becomes necessary. Therefore, the purpose of the study is to develop a transfer learning approach for lung and colon cancer detection on histopathological image analysis. It involves leveraging pre-trained model to analyze histopathological images. In addition, the proposed model uses improved ShuffleNet with deep convolutional recurrent neural network for feature extraction and classification, respectively. Besides, Al-Biruni Earth Radius Optimization and coati optimization algorithm are employed for hyperparameter tuning process. The experimental result analysis of the proposed model on the LC25000 database shows its promising performance on lung and colon cancer diagnosis. Abstract An early diagnosis of lung and colon cancer (LCC) is critical for improved patient outcomes and effective treatment. Histopathological image (HSI) analysis has emerged as a robust tool for cancer diagnosis. HSI analysis for a LCC diagnosis includes the analysis and examination of tissue samples attained from the LCC to recognize lesions or cancerous cells. It has a significant role in the staging and diagnosis of this tumor, which aids in the prognosis and treatment planning, but a manual analysis of the image is subject to human error and is also time-consuming. Therefore, a computer-aided approach is needed for the detection of LCC using HSI. Transfer learning (TL) leverages pretrained deep learning (DL) algorithms that have been trained on a larger dataset for extracting related features from the HIS, which are then used for training a classifier for a tumor diagnosis. This manuscript offers the design of the Al-Biruni Earth Radius Optimization with Transfer Learning-based Histopathological Image Analysis for Lung and Colon Cancer Detection (BERTL-HIALCCD) technique. The purpose of the study is to detect LCC effectually in histopathological images. To execute this, the BERTL-HIALCCD method follows the concepts of computer vision (CV) and transfer learning for accurate LCC detection. When using the BERTL-HIALCCD technique, an improved ShuffleNet model is applied for the feature extraction process, and its hyperparameters are chosen by the BER system. For the effectual recognition of LCC, a deep convolutional recurrent neural network (DCRNN) model is applied. Finally, the coati optimization algorithm (COA) is exploited for the parameter choice of the DCRNN approach. For examining the efficacy of the BERTL-HIALCCD technique, a comprehensive group of experiments was conducted on a large dataset of histopathological images. The experimental outcomes demonstrate that the combination of AER and COA algorithms attain an improved performance in cancer detection over the compared models.",
+    "citation_count": 1,
+    "reference_count": 19,
+    "url": "https://dblp.org/rec/conf/dimva/DrichelQM24",
+    "dblp_key": "conf/dimva/DrichelQM24",
+    "source_id": "https://openalex.org/W4400499044"
+  },
+  {
+    "title": "SecMonS: A Security Monitoring Framework for IEC 61850 Substations Based on Configuration Files and Logs.",
+    "authors": [
+      "Onur Duman",
+      "Mengyuan Zhang 0001",
+      "Lingyu Wang 0001",
+      "Mourad Debbabi"
+    ],
+    "venue": "DIMVA",
+    "year": 2024,
+    "abstract": null,
+    "citation_count": 1,
+    "reference_count": 28,
+    "url": "https://dblp.org/rec/conf/dimva/DumanZWD24",
+    "dblp_key": "conf/dimva/DumanZWD24",
+    "source_id": "https://openalex.org/W4400499364"
+  },
+  {
+    "title": "Pairing Security Advisories with Vulnerable Functions Using Open-Source LLMs.",
+    "authors": [
+      "Trevor Dunlap",
+      "John Speed Meyers",
+      "Bradley Reaves",
+      "William Enck"
+    ],
+    "venue": "DIMVA",
+    "year": 2024,
+    "abstract": null,
+    "citation_count": 1,
+    "reference_count": 18,
+    "url": "https://dblp.org/rec/conf/dimva/DunlapMRE24",
+    "dblp_key": "conf/dimva/DunlapMRE24",
+    "source_id": "https://openalex.org/W4400499041"
+  },
+  {
+    "title": "FaultGuard: A Generative Approach to Resilient Fault Prediction in Smart Electrical Grids.",
+    "authors": [
+      "Emad Efatinasab",
+      "Francesco Marchiori",
+      "Alessandro Brighente",
+      "Mirco Rampazzo",
+      "Mauro Conti"
+    ],
+    "venue": "DIMVA",
+    "year": 2024,
+    "abstract": "Predicting and classifying faults in electricity networks is crucial for uninterrupted provision and keeping maintenance costs at a minimum. Thanks to the advancements in the field provided by the smart grid, several data-driven approaches have been proposed in the literature to tackle fault prediction tasks. Implementing these systems brought several improvements, such as optimal energy consumption and quick restoration. Thus, they have become an essential component of the smart grid. However, the robustness and security of these systems against adversarial attacks have not yet been extensively investigated. These attacks can impair the whole grid and cause additional damage to the infrastructure, deceiving fault detection systems and disrupting restoration. In this paper, we present FaultGuard, the first framework for fault type and zone classification resilient to adversarial attacks. To ensure the security of our system, we employ an Anomaly Detection System (ADS) leveraging a novel Generative Adversarial Network training layer to identify attacks. Furthermore, we propose a low-complexity fault prediction model and an online adversarial training technique to enhance robustness. We comprehensively evaluate the framework's performance against various adversarial attacks using the IEEE13-AdvAttack dataset, which constitutes the state-of-the-art for resilient fault prediction benchmarking. Our model outclasses the state-of-the-art even without considering adversaries, with an accuracy of up to 0.958. Furthermore, our ADS shows attack detection capabilities with an accuracy of up to 1.000. Finally, we demonstrate how our novel training layers drastically increase performances across the whole framework, with a mean increase of 154% in ADS accuracy and 118% in model accuracy.",
+    "citation_count": 6,
+    "reference_count": 45,
+    "url": "https://dblp.org/rec/conf/dimva/EfatinasabMBRC24",
+    "dblp_key": "conf/dimva/EfatinasabMBRC24",
+    "source_id": "https://openalex.org/W4393247932"
+  },
+  {
+    "title": "Wireless Modulation Identification: Filling the Gap in IoT Networks Security Audit.",
+    "authors": [
+      "Florent Galtier",
+      "Guillaume Auriol",
+      "Vincent Nicomette",
+      "Paul L. R. Olivier",
+      "Romain Cayre",
+      "Mohamed Kaâniche"
+    ],
+    "venue": "DIMVA",
+    "year": 2024,
+    "abstract": null,
+    "citation_count": 0,
+    "reference_count": 29,
+    "url": "https://dblp.org/rec/conf/dimva/GaltierANOCK24",
+    "dblp_key": "conf/dimva/GaltierANOCK24",
+    "source_id": "https://openalex.org/W4400498709"
+  },
+  {
+    "title": "Approach for the Optimization of Machine Learning Models for Calculating Binary Function Similarity.",
+    "authors": [
+      "Suguru Horimoto",
+      "Keane Lucas",
+      "Lujo Bauer"
+    ],
+    "venue": "DIMVA",
+    "year": 2024,
+    "abstract": null,
+    "citation_count": 14923,
+    "reference_count": 75,
+    "url": "https://dblp.org/rec/conf/dimva/HorimotoLB24",
+    "dblp_key": "conf/dimva/HorimotoLB24",
+    "source_id": "https://openalex.org/W2593436234"
+  },
+  {
+    "title": "Presshammer: Rowhammer and Rowpress Without Physical Address Information.",
+    "authors": [
+      "Jonas Juffinger",
+      "Sudheendra Raghav Neela",
+      "Martin Heckel",
+      "Lukas Schwarz",
+      "Florian Adamsky",
+      "Daniel Gruss"
+    ],
+    "venue": "DIMVA",
+    "year": 2024,
+    "abstract": null,
+    "citation_count": 3,
+    "reference_count": 39,
+    "url": "https://dblp.org/rec/conf/dimva/JuffingerNHSAG24",
+    "dblp_key": "conf/dimva/JuffingerNHSAG24",
+    "source_id": "https://openalex.org/W4400499063"
+  },
+  {
+    "title": "Using Semgrep OSS to Find OWASP Top 10 Weaknesses in PHP Applications: A Case Study.",
+    "authors": [
+      "Lukas Kree",
+      "René Helmke",
+      "Eugen Winter"
+    ],
+    "venue": "DIMVA",
+    "year": 2024,
+    "abstract": null,
+    "citation_count": 3,
+    "reference_count": 34,
+    "url": "https://dblp.org/rec/conf/dimva/KreeHW24",
+    "dblp_key": "conf/dimva/KreeHW24",
+    "source_id": "https://openalex.org/W4400499121"
+  },
+  {
+    "title": "Inferring Recovery Steps from Cyber Threat Intelligence Reports.",
+    "authors": [
+      "Zsolt Levente Kucsván",
+      "Marco Caselli",
+      "Andreas Peter 0001",
+      "Andrea Continella"
+    ],
+    "venue": "DIMVA",
+    "year": 2024,
+    "abstract": null,
+    "citation_count": 4,
+    "reference_count": 29,
+    "url": "https://dblp.org/rec/conf/dimva/KucsvanCPC24",
+    "dblp_key": "conf/dimva/KucsvanCPC24",
+    "source_id": "https://openalex.org/W4400499510"
+  },
+  {
+    "title": "Seum Spread: Discerning Security Flaws in IoT Firmware via Call Sequence Semantics.",
+    "authors": [
+      "Anis Lounis",
+      "Anthony Andreoli",
+      "Mourad Debbabi",
+      "Aiman Hanna"
+    ],
+    "venue": "DIMVA",
+    "year": 2024,
+    "abstract": null,
+    "citation_count": 0,
+    "reference_count": 24,
+    "url": "https://dblp.org/rec/conf/dimva/LounisADH24",
+    "dblp_key": "conf/dimva/LounisADH24",
+    "source_id": "https://openalex.org/W4400498987"
+  },
+  {
+    "title": "PayRide: Secure Transport e-Ticketing with Untrusted Smartphone Location.",
+    "authors": [
+      "Michele Marazzi",
+      "Patrick Jattke",
+      "Jason Zibung",
+      "Kaveh Razavi"
+    ],
+    "venue": "DIMVA",
+    "year": 2024,
+    "abstract": null,
+    "citation_count": 1,
+    "reference_count": 27,
+    "url": "https://dblp.org/rec/conf/dimva/MarazziJZR24",
+    "dblp_key": "conf/dimva/MarazziJZR24",
+    "source_id": "https://openalex.org/W4400499513"
+  },
+  {
+    "title": "SmmPack: Obfuscation for SMM Modules with TPM Sealed Key.",
+    "authors": [
+      "Kazuki Matsuo",
+      "Satoshi Tanda",
+      "Kuniyasu Suzaki",
+      "Yuhei Kawakoya",
+      "Tatsuya Mori"
+    ],
+    "venue": "DIMVA",
+    "year": 2024,
+    "abstract": "System Management Mode (SMM) is the highest-privileged operating mode of x86 and x86-64 processors. Through SMM exploitation, attackers can tamper with the Unified Extensible Firmware Interface (UEFI) firmware, disabling the security mechanisms implemented by the operating system and hypervisor. Vulnerabilities enabling SMM code execution are often reported as Common Vulnerabilities and Exposures (CVEs); however, no security mechanisms currently exist to prevent attackers from analyzing those vulnerabilities. To increase the cost of vulnerability analysis of SMM modules, we introduced SmmPack. The core concept of SmmPack involves encrypting an SMM module with the key securely stored in a Trusted Platform Module (TPM). We assessed the effectiveness of SmmPack in preventing attackers from obtaining and analyzing SMM modules using various acquisition methods. Our results show that SmmPack significantly increases the cost by narrowing down the means of module acquisition. Furthermore, we demonstrated that SmmPack operates without compromising the performance of the original SMM modules. We also clarified the management and adoption methods of SmmPack, as well as the procedure for applying BIOS updates, and demonstrated that the implementation of SmmPack is realistic.",
+    "citation_count": 1,
+    "reference_count": 5,
+    "url": "https://dblp.org/rec/conf/dimva/MatsuoTSKM24",
+    "dblp_key": "conf/dimva/MatsuoTSKM24",
+    "source_id": "https://openalex.org/W4400499032"
+  },
+  {
+    "title": "GlueZilla: Efficient and Scalable Software to Hardware Binding using Rowhammer.",
+    "authors": [
+      "Ruben Mechelinck",
+      "Daniel Dorfmeister",
+      "Bernhard Fischer",
+      "Stijn Volckaert",
+      "Stefan Brunthaler 0001"
+    ],
+    "venue": "DIMVA",
+    "year": 2024,
+    "abstract": null,
+    "citation_count": 3,
+    "reference_count": 27,
+    "url": "https://dblp.org/rec/conf/dimva/MechelinckDFVB24",
+    "dblp_key": "conf/dimva/MechelinckDFVB24",
+    "source_id": "https://openalex.org/W4400499405"
+  },
+  {
+    "title": "Bringing UFUs Back into the Air with FUEL: A Framework for Evaluating the Effectiveness of Unrestricted File Upload Vulnerability Scanners.",
+    "authors": [
+      "Sebastian Neef",
+      "Maath Oudeh"
+    ],
+    "venue": "DIMVA",
+    "year": 2024,
+    "abstract": "Unrestricted file upload (UFU) is a class of web security vulnerabilities that can have a severe impact on web applications if uploaded files are not sufficiently validated or securely handled. A review of related work shows an increased interest in finding new methods to discover such vulnerabilities. However, each publication evaluates its new vulnerability scanner against a different set of artificial or real-world applications available at the time of writing. Thus, we identify the need for a comprehensive testing framework to allow a reproducible comparison between existing and future UFU vulnerability scanners. Our contributions include the File Upload Exploitation Lab (FUEL), which models 15 distinct UFU vulnerabilities in isolated scenarios to enable a reproducible evaluation of UFU scanners' capabilities. The results of evaluating four black-box UFU scanners against FUEL show that no scanner manages to identify all UFU vulnerabilities, leaving real-world websites at risk of compromise due to false negatives. Our work aims to solve this problem by extending an existing UFU scanner with multiple new detection and exploitation techniques, which we call Fuxploider-NG, to increase its accuracy from ~50% to over 90%, thereby surpassing the capabilities of existing UFU scanners and showcasing the importance of FUEL as a UFU vulnerability evaluation framework. To foster open science and future work in this area, we open-source FUEL and Fuxploider-NG.",
+    "citation_count": 1,
+    "reference_count": 15,
+    "url": "https://dblp.org/rec/conf/dimva/NeefO24",
+    "dblp_key": "conf/dimva/NeefO24",
+    "source_id": "https://openalex.org/W4400499091"
+  },
+  {
+    "title": "SandPuppy: Deep-State Fuzzing Guided by Automatic Detection of State-Representative Variables.",
+    "authors": [
+      "Vivin Paliath",
+      "Erik Trickel",
+      "Tiffany Bao",
+      "Ruoyu Wang 0001",
+      "Adam Doupé",
+      "Yan Shoshitaishvili"
+    ],
+    "venue": "DIMVA",
+    "year": 2024,
+    "abstract": null,
+    "citation_count": 1,
+    "reference_count": 42,
+    "url": "https://dblp.org/rec/conf/dimva/PaliathTBWDS24",
+    "dblp_key": "conf/dimva/PaliathTBWDS24",
+    "source_id": "https://openalex.org/W4400499004"
+  },
+  {
+    "title": "Listening Between the Bits: Privacy Leaks in Audio Fingerprints.",
+    "authors": [
+      "Moritz Pfister",
+      "Robert Michael",
+      "Max Boll",
+      "Cosima Körfer",
+      "Konrad Rieck",
+      "Daniel Arp"
+    ],
+    "venue": "DIMVA",
+    "year": 2024,
+    "abstract": null,
+    "citation_count": 0,
+    "reference_count": 28,
+    "url": "https://dblp.org/rec/conf/dimva/PfisterMBKRA24",
+    "dblp_key": "conf/dimva/PfisterMBKRA24",
+    "source_id": "https://openalex.org/W4400499605"
+  },
+  {
+    "title": "Extended Abstract: Assessing Language Models for Semantic Textual Similarity in Cybersecurity.",
+    "authors": [
+      "Arian Soltani",
+      "D&apos;Jeff K. Nkashama",
+      "Jordan F. Masakuna",
+      "Marc Frappier",
+      "Pierre-Martin Tardif",
+      "Froduald Kabanza"
+    ],
+    "venue": "DIMVA",
+    "year": 2024,
+    "abstract": null,
+    "citation_count": 0,
+    "reference_count": 14,
+    "url": "https://dblp.org/rec/conf/dimva/SoltaniNMFTK24",
+    "dblp_key": "conf/dimva/SoltaniNMFTK24",
+    "source_id": "https://openalex.org/W4400499505"
+  },
+  {
+    "title": "Extended Abstract - Tracking Manifests - Persistent Identifiers in Progressive Web Apps.",
+    "authors": [
+      "Dolière Francis Somé"
+    ],
+    "venue": "DIMVA",
+    "year": 2024,
+    "abstract": null,
+    "citation_count": 0,
+    "reference_count": 3,
+    "url": "https://dblp.org/rec/conf/dimva/Some24",
+    "dblp_key": "conf/dimva/Some24",
+    "source_id": "https://openalex.org/W4400499185"
+  },
+  {
+    "title": "Constructs of Deceit: Exploring Nuances in Modern Social Engineering Attacks.",
+    "authors": [
+      "Mohammad Ali Tofighi",
+      "Behzad Ousat",
+      "Javad Zandi",
+      "Esteban Schafir",
+      "Amin Kharraz"
+    ],
+    "venue": "DIMVA",
+    "year": 2024,
+    "abstract": null,
+    "citation_count": 3,
+    "reference_count": 29,
+    "url": "https://dblp.org/rec/conf/dimva/TofighiOZSK24",
+    "dblp_key": "conf/dimva/TofighiOZSK24",
+    "source_id": "https://openalex.org/W4400498732"
+  },
+  {
+    "title": "Knocking on Admin&apos;s Door: Protecting Critical Web Applications with Deception.",
+    "authors": [
+      "Billy Tsouvalas",
+      "Nick Nikiforakis"
+    ],
+    "venue": "DIMVA",
+    "year": 2024,
+    "abstract": null,
+    "citation_count": 2,
+    "reference_count": 41,
+    "url": "https://dblp.org/rec/conf/dimva/TsouvalasN24",
+    "dblp_key": "conf/dimva/TsouvalasN24",
+    "source_id": "17c104b7073f95ce051a5384dfbe0e8a9034e085"
+  },
+  {
+    "title": "S2malloc: Statistically Secure Allocator for Use-After-Free Protection and More.",
+    "authors": [
+      "Ruizhe Wang 0003",
+      "Meng Xu 0025",
+      "N. Asokan"
+    ],
+    "venue": "DIMVA",
+    "year": 2024,
+    "abstract": "Attacks on heap memory, encompassing memory overflow, double and invalid free, use-after-free (UAF), and various heap spraying techniques are ever-increasing. Existing entropy-based secure memory allocators provide statistical defenses against virtually all of these attack vectors. Although they claim protections against UAF attacks, their designs are not tailored to detect (failed) attempts. Consequently, to beat this entropy-based protection, an attacker can simply launch the same attack repeatedly with the potential use of heap spraying to further improve their chance of success.   We introduce S2malloc, aiming to enhance UAF-attempt detection without compromising other security guarantees or introducing significant performance overhead. To achieve this, we use three innovative constructs in secure allocator design: free block canaries (FBC) to detect UAF attempts, random in-block offset (RIO) to stop the attacker from accurately overwriting the victim object, and random bag layout (RBL) to impede attackers from estimating the block size based on its address.   We show that (a) by reserving 25% of the object size for the RIO offset, an 8-byte canary offers a 69% protection rate if the attacker reuses the same pointer and 96% protection rate if the attacker does not, against UAF exploitation attempts targeting a 64 bytes object, with equal or higher security guarantees against all other attacks; and (b) S2malloc is practical, with only a 2.8% run-time overhead on PARSEC and an 11.5% overhead on SPEC. Compared to state-of-the-art entropy-based allocators, S2malloc improves UAF-protection without incurring additional performance overhead. Compared to UAF-mitigating allocators, S2malloc trades off a minuscule probability of failed protection for significantly lower overhead.",
+    "citation_count": 1,
+    "reference_count": 22,
+    "url": "https://dblp.org/rec/conf/dimva/WangXA24",
+    "dblp_key": "conf/dimva/WangXA24",
+    "source_id": "https://openalex.org/W4400499291"
+  },
+  {
+    "title": "Detection of Intrusions and Malware, and Vulnerability Assessment - 21st International Conference, DIMVA 2024, Lausanne, Switzerland, July 17-19, 2024, Proceedings",
+    "authors": [
+      "Federico Maggi 0001",
+      "Manuel Egele",
+      "Mathias Payer",
+      "Michele Carminati"
+    ],
+    "venue": [
+      "DIMVA",
+      "Lecture Notes in Computer Science"
+    ],
+    "year": 2024,
+    "abstract": null,
+    "citation_count": null,
+    "reference_count": null,
+    "url": "https://dblp.org/rec/conf/dimva/2024",
+    "dblp_key": "conf/dimva/2024",
+    "source_id": null
+  }
+]

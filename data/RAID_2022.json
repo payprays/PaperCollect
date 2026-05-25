@@ -1,0 +1,634 @@
+[
+  {
+    "title": "Threshold EdDSA Signature for Blockchain-based Decentralized Finance Applications.",
+    "authors": [
+      "Yang Shi 0002",
+      "Junqing Liang",
+      "Mianhong Li",
+      "Tianchen Ma",
+      "Guodong Ye",
+      "Jiangfeng Li",
+      "Qinpei Zhao"
+    ],
+    "venue": "RAID",
+    "year": 2022,
+    "abstract": "The threshold digital signature technique is important for decentralized finance (DeFi) applications such as asset custody and cross-chain interoperations. The Edwards-curve digital signature algorithm (EdDSA) is widely used in blockchains, e.g., Libra/Diem; however, no suitable threshold solution exists. Therefore, to bridge this gap, we propose a threshold EdDSA that allows n parties to generate keys in a decentralized and distributed manner. Any t + 1-of-n parties can generate standard EdDSA signatures. This scheme supports an arbitrary threshold (t, n) and has been proven to be secure against at most t malicious adversaries. The theoretical analysis (computation complexity and communication footprints) and experimental results demonstrate that the proposed scheme performs efficiently on cloud servers and embedded devices. Furthermore, the proposed scheme is integrated with Tendermint, a blockchain framework that uses EdDSA, to generate keys and sign transactions in a decentralized manner, which indicates that this scheme is compatible with blockchains for supporting DeFi applications.",
+    "citation_count": 6,
+    "reference_count": 22,
+    "url": "https://dblp.org/rec/conf/raid/0002LLMYLZ22",
+    "dblp_key": "conf/raid/0002LLMYLZ22",
+    "source_id": "https://openalex.org/W4306406267"
+  },
+  {
+    "title": "Systematically Evaluating the Robustness of ML-based IoT Malware Detection Systems.",
+    "authors": [
+      "Ahmed Abusnaina",
+      "Afsah Anwar",
+      "Sultan Alshamrani",
+      "Abdulrahman Alabduljabbar",
+      "RhongHo Jang",
+      "DaeHun Nyang",
+      "David Mohaisen"
+    ],
+    "venue": "RAID",
+    "year": 2022,
+    "abstract": "The rapid growth of the Internet of Things (IoT) devices is paralleled by them being on the front-line of malicious attacks. This has led to an explosion in the number of IoT malware, with continued mutations, evolution, and sophistication. Malware samples are detected using machine learning (ML) algorithms alongside the traditional signature-based methods. Although ML-based detectors improve the detection performance, they are susceptible to malware evolution and sophistication, making them limited to the patterns that they have been trained upon. This continuous trend motivates large body of literature on malware analysis and detection research, with many systems emerging constantly, outperforming their predecessors. In this paper, we systematically examine the state-of-the-art malware detection approaches, that utilize various representation and learning techniques, under a range of adversarial settings. Our analyses highlight the instability of the proposed detectors in learning patterns that distinguish the benign from the malicious software. The results exhibit that software mutations with functionality-preserving operations, such as stripping and padding, significantly deteriorate the accuracy of such detectors. Additionally, our analysis of the industry-standard malware detectors shows their instability to the malware mutations. Through extensive experiments, we highlight the gap between the capabilities of the adversary and that of the existing malware detectors. The evaluations and analyses show that the optimal malware detection system is nowhere near and calls for the community to streamline their efforts towards testing the robustness of malware detectors to different manipulation techniques.",
+    "citation_count": 5,
+    "reference_count": 26,
+    "url": "https://dblp.org/rec/conf/raid/AbusnainaAAAJNM22",
+    "dblp_key": "conf/raid/AbusnainaAAAJNM22",
+    "source_id": "https://openalex.org/W4306406262"
+  },
+  {
+    "title": "HALC: A Real-time In-sensor Defense against the Magnetic Spoofing Attack on Hall Sensors.",
+    "authors": [
+      "Anomadarshi Barua",
+      "Mohammad Abdullah Al Faruque"
+    ],
+    "venue": "RAID",
+    "year": 2022,
+    "abstract": "Several papers have been published over the last ten years to provide a defense against intentional spoofing to sensors. However, these defenses would only work against those spoofing signals, which have a separate frequency from the original signal being measured. These defenses would not work if the spoofing attack signal (i) has a frequency equal to the frequency of original signals, (ii) has zero frequency, and (iii) is strong enough to drive the sensor output close to its saturation region. More specifically, these defenses are not designed for a magnetic spoofing attack on passive Hall sensors.",
+    "citation_count": 5,
+    "reference_count": 20,
+    "url": "https://dblp.org/rec/conf/raid/BaruaF22",
+    "dblp_key": "conf/raid/BaruaF22",
+    "source_id": "https://openalex.org/W4306406219"
+  },
+  {
+    "title": "RiscyROP: Automated Return-Oriented Programming Attacks on RISC-V and ARM64.",
+    "authors": [
+      "Tobias Cloosters",
+      "David Paaßen",
+      "Jianqiang Wang",
+      "Oussama Draissi",
+      "Patrick Jauernig",
+      "Emmanuel Stapf",
+      "Lucas Davi",
+      "Ahmad-Reza Sadeghi"
+    ],
+    "venue": "RAID",
+    "year": 2022,
+    "abstract": "Return-oriented programming (ROP) is a powerful run-time exploitation technique to attack vulnerable software. Modern RISC architectures like RISC-V and ARM64 pose new challenges for ROP execution due to the lack of a stack-based return instruction and strict instruction alignment. Further, the large number of caller-saved argument registers significantly reduces the gadget space available to the attacker. Consequently, existing ROP gadget tools for other processor architectures cannot be applied to these RISC architectures. Previous work on RISC-V provides only manual construction of ROP attacks against specially crafted programs, and no analysis of ROP attacks has been conducted for ARM64 yet.",
+    "citation_count": 13,
+    "reference_count": 8,
+    "url": "https://dblp.org/rec/conf/raid/CloostersPWDJSD22",
+    "dblp_key": "conf/raid/CloostersPWDJSD22",
+    "source_id": "https://openalex.org/W4306406258"
+  },
+  {
+    "title": "CJ-Sniffer: Measurement and Content-Agnostic Detection of Cryptojacking Traffic.",
+    "authors": [
+      "Yebo Feng",
+      "Jun Li 0001",
+      "Devkishen Sisodia"
+    ],
+    "venue": "RAID",
+    "year": 2022,
+    "abstract": "With the continuous appreciation of cryptocurrency, cryptojacking, the act by which computing resources are stolen to mine cryptocurrencies, is becoming more rampant. In this paper, we conduct a measurement study on cryptojacking network traffic and propose CryptoJacking-Sniffer (CJ-Sniffer), an easily deployable, privacy-aware approach to protecting all devices within a network against cryptojacking. Compared with existing approaches that suffer from privacy concerns or high overhead, CJ-Sniffer only needs to access anonymized, content-agnostic metadata of network traffic from the gateway of the network to efficiently detect cryptojacking traffic. In particular, while cryptojacking traffic is also cryptocurrency mining traffic, CJ-Sniffer is the first approach to distinguishing cryptojacking traffic from user-initiated cryptocurrency mining traffic, making it possible to only filter cryptojacking traffic, rather than blindly filtering all cryptocurrency mining traffic as commonly practiced. After constructing a statistical model to identify all the cryptocurrency mining traffic, CJ-Sniffer extracts variation vectors from packet intervals and utilizes a long short-term memory (LSTM) network to further identify cryptojacking traffic. We evaluated CJ-Sniffer with a packet-level cryptomining dataset. Our evaluation results demonstrate that CJ-Sniffer achieves an accuracy of over 99% with reasonable delays.",
+    "citation_count": 14,
+    "reference_count": 19,
+    "url": "https://dblp.org/rec/conf/raid/FengLS22",
+    "dblp_key": "conf/raid/FengLS22",
+    "source_id": "https://openalex.org/W4306406211"
+  },
+  {
+    "title": "Katana: Robust, Automated, Binary-Only Forensic Analysis of Linux Memory Snapshots.",
+    "authors": [
+      "Fabian Franzen",
+      "Tobias Holl",
+      "Manuel Andreas",
+      "Julian Kirsch",
+      "Jens Grossklags"
+    ],
+    "venue": "RAID",
+    "year": 2022,
+    "abstract": "The development and research of tools for forensically analyzing Linux memory snapshots have stalled in recent years as they cannot deal with the high degree of configurability and fail to handle security advances like structure layout randomization. Existing tools such as Volatility and Rekall require a pre-generated profile of the operating system, which is not always available, and can be invalidated by the smallest source code or configuration changes in the kernel.",
+    "citation_count": 5,
+    "reference_count": 20,
+    "url": "https://dblp.org/rec/conf/raid/FranzenHAKG22",
+    "dblp_key": "conf/raid/FranzenHAKG22",
+    "source_id": "https://openalex.org/W4306406293"
+  },
+  {
+    "title": "Encrypted Malware Traffic Detection via Graph-based Network Analysis.",
+    "authors": [
+      "Zhuoqun Fu",
+      "Mingxuan Liu",
+      "Yue Qin",
+      "Jia Zhang 0004",
+      "Yuan Zou",
+      "Qilei Yin",
+      "Qi Li 0002",
+      "Haixin Duan"
+    ],
+    "venue": "RAID",
+    "year": 2022,
+    "abstract": "Malicious activities on the Internet continue to grow in volume and damage, posing a serious risk to society. Malware with remote control capabilities is considered one of the most threatening malicious activities, as it can enable arbitrary types of cyber-attacks. As a countermeasure, many malware detection methods are proposed to identify malicious behaviours based on traffic characteristics. However, the emerging encryption and evasion techniques pose substantial barriers to the full exploitation of network information. This significantly impairs the effectiveness of existing malware detection methods relying on a singular type of characteristics. In this paper, we propose ST-Graph to resolve this issue. In addition to traditional stream attributes, ST-Graph explores spatial and temporal characteristics of network behaviours based on a graph representation learning algorithm and integrates all available information to boost the detection decision. To illustrate the effectiveness of ST-Graph, we evaluate it on two datasets. Experimental results demonstrate that ST-Graph outperforms state-of-the-art malware detection systems and also shows good performance in efficiency, generalizability, and robustness. Specifically, it achieves over 99% precision and recall, and its False Positive Rate is even two orders of magnitude lower than (nearly 0.02 times) that of baseline models. Meanwhile, the deployment of ST-Graph in two real network scenarios for around one year shows an outstanding efficiency with only 160 seconds time cost for 5-minute traffic in 1.7 Gbps bandwidth.",
+    "citation_count": 51,
+    "reference_count": 39,
+    "url": "https://dblp.org/rec/conf/raid/FuLQZZYLD22",
+    "dblp_key": "conf/raid/FuLQZZYLD22",
+    "source_id": "https://openalex.org/W4306406279"
+  },
+  {
+    "title": "Decap: Deprivileging Programs by Reducing Their Capabilities.",
+    "authors": [
+      "Md. Mehedi Hasan 0007",
+      "Seyedhamed Ghavamnia",
+      "Michalis Polychronakis"
+    ],
+    "venue": "RAID",
+    "year": 2022,
+    "abstract": "Linux enables non-root users to perform certain privileged operations through the use of the setuid (\"set user ID\") mechanism. This represents a glaring violation of the principle of least privilege, as setuid programs run with full superuser privileges—with disastrous outcomes when vulnerabilities are found in them. Linux capabilities aim to improve this situation by splitting superuser privileges into distinct units that can be assigned individually. Despite the clear benefits of capabilities in reducing the risk of privilege escalation, their actual use is scarce, and setuid programs are still prevalent in modern Linux distributions. The lack of a systematic way for developers to identify the capabilities needed by a given program is a contributing factor that hinders their applicability.",
+    "citation_count": 9,
+    "reference_count": 20,
+    "url": "https://dblp.org/rec/conf/raid/HasanGP22",
+    "dblp_key": "conf/raid/HasanGP22",
+    "source_id": "https://openalex.org/W4306406275"
+  },
+  {
+    "title": "BinProv: Binary Code Provenance Identification without Disassembly.",
+    "authors": [
+      "Xu He",
+      "Shu Wang 0004",
+      "Yunlong Xing",
+      "Pengbin Feng",
+      "Haining Wang 0001",
+      "Qi Li 0002",
+      "Songqing Chen",
+      "Kun Sun 0001"
+    ],
+    "venue": "RAID",
+    "year": 2022,
+    "abstract": "Provenance identification, which is essential for binary analysis, aims to uncover the specific compiler and configuration used for generating the executable. Traditionally, the existing solutions extract syntactic, structural, and semantic features from disassembled programs and employ machine learning techniques to identify the compilation provenance of binaries. However, their effectiveness heavily relies on disassembly tools (e.g., IDA Pro) and tedious feature engineering, since it is challenging to obtain accurate assembly code, particularly, from the stripped or obfuscated binaries. In addition, the features in machine learning approaches are manually selected based on the domain knowledge of one specific architecture, which cannot be applied to other architectures. In this paper, we develop an end-to-end provenance identification system BinProv, which leverages a BERT (Bidirectional Encoder Representations from Transformers) based embedding model to learn and represent the context semantics and syntax directly from the binary code. Therefore, BinProv avoids the disassembling step and manual feature selection in provenance identification. Moreover, BinProv can distinguish the compilers and the four optimization levels (O0/O1/O2/O3) by fine-tuning the classifier model with the embedding inputs for specific provenance identification tasks. Experimental results show that BinProv achieves 92.14%, 99.4%, and 99.8% accuracy at byte sequence, function, and binary levels, respectively. We further demonstrate that BinProv works well on obfuscated binary code, suggesting that BinProv is a viable approach to remarkably mitigate the disassembler dependence in future provenance identification tasks. Finally, our case studies show that BinProv can better identify compiler helper functions and improve the performance of binary code similarity detection.",
+    "citation_count": 13,
+    "reference_count": 19,
+    "url": "https://dblp.org/rec/conf/raid/HeWXFWLC022",
+    "dblp_key": "conf/raid/HeWXFWLC022",
+    "source_id": "https://openalex.org/W4306406265"
+  },
+  {
+    "title": "Towards Deceptive Defense in Software Security with Chaff Bugs.",
+    "authors": [
+      "Zhenghao Hu",
+      "Yu Hu",
+      "Brendan Dolan-Gavitt"
+    ],
+    "venue": "RAID",
+    "year": 2022,
+    "abstract": "Sophisticated attackers find bugs in software, evaluate their exploitability, and then create and launch exploits for bugs found to be exploitable. Most efforts to secure software attempt either to eliminate bugs or to add mitigations that make exploitation more difficult. In this paper, we propose a new defensive technique called chaff bugs, which instead targets the bug discovery and exploit creation stages of this process. Rather than eliminating bugs, we instead add large numbers of bugs that are non-exploitable. Attackers who attempt to find and exploit bugs in software will, with high probability, find an intentionally placed non-exploitable bug and waste precious resources in trying to build a working exploit. In a prototype, we demonstrate two strategies for ensuring non-exploitability for memory safety bugs in C/C++ programs and use them to automatically add thousands of non-exploitable bugs to real-world software such as nginx and libFLAC; we show that the functionality of the software is not impaired and demonstrate that our bugs look exploitable to current triage tools. We believe that chaff bugs can serve as an effective deterrent against both human attackers and automated bug-finding tools.",
+    "citation_count": 2,
+    "reference_count": 20,
+    "url": "https://dblp.org/rec/conf/raid/HuHD22",
+    "dblp_key": "conf/raid/HuHD22",
+    "source_id": "https://openalex.org/W4306406268"
+  },
+  {
+    "title": "Fuzzing@Home: Distributed Fuzzing on Untrusted Heterogeneous Clients.",
+    "authors": [
+      "Daehee Jang",
+      "Ammar Askar",
+      "Insu Yun",
+      "Stephen Tong",
+      "Yiqin Cai",
+      "Taesoo Kim"
+    ],
+    "venue": "RAID",
+    "year": 2022,
+    "abstract": "Fuzzing is a practical technique to automatically find vulnerabilities in software. It is well-suited to running at scale with distributed computing platforms thanks to its parallelizability. Therefore, individual researchers and companies typically setup fuzzing platforms on multiple servers and run fuzzers in parallel. However, as such resources are private, they suffer from financial and physical limits. In this paper, we propose [email protected]; the first public collaborative fuzzing network, based on heterogeneous machines owned by potentially untrusted users. Using our system, multiple organizations (or individuals) can easily collaborate to fuzz a software of common interest in an efficient way. One can participate and earn economic benefits if the fuzzing network is tied to a bug-bounty program, or simply donate spare computing power as a volunteer.",
+    "citation_count": 2,
+    "reference_count": 25,
+    "url": "https://dblp.org/rec/conf/raid/JangAYTCK22",
+    "dblp_key": "conf/raid/JangAYTCK22",
+    "source_id": "https://openalex.org/W4306406234"
+  },
+  {
+    "title": "Exploiting Metaobjects to Reinforce Data Leakage Attacks.",
+    "authors": [
+      "Hoyong Jeong",
+      "Hodong Kim",
+      "Junbeom Hur"
+    ],
+    "venue": "RAID",
+    "year": 2022,
+    "abstract": "Reflective features in modern programming languages allow programs to introspect and modify their own structures and behavior during runtime. As these self-referential capabilities are frequently adopted in practice, security of the reflective systems becomes crucial. In this paper, we explore an adversary against reflective systems with access to a data leakage channel, which has previously been considered impractical to pose a realistic threat. In particular, we show that a crucial component of reflection, referred to as metaobjects, can be exploited to reinforce these data leakage channels. We introduce a novel attack strategy that exploits certain metaobjects as in-memory gadgets to leak data in a selective and target-oriented manner, consequentially eliminating the unnecessary sampling procedures inevitable in naive data leakage attacks. Such approach significantly optimizes the data space subject to extraction, elevating the practicality of the underlying data leakage channel. As an instantiation of our strategy, we propose and demonstrate SMDL, a framework that exploits reflection to reinforce Meltdown-type attacks to steal valuable data from the victim's memory. To demonstrate the efficacy of our attack, we implement SMDL against two different target applications, cryptographic library and deep learning service, and show that the secret key and neural network can be extracted with high accuracy and efficiency. Finally, we suggest metaobject obfuscation techniques to mitigate such exploitation.",
+    "citation_count": 0,
+    "reference_count": 24,
+    "url": "https://dblp.org/rec/conf/raid/JeongKH22",
+    "dblp_key": "conf/raid/JeongKH22",
+    "source_id": "https://openalex.org/W4306406235"
+  },
+  {
+    "title": "On the Challenges of Detecting Side-Channel Attacks in SGX.",
+    "authors": [
+      "Jianyu Jiang",
+      "Claudio Soriente",
+      "Ghassan Karame"
+    ],
+    "venue": "RAID",
+    "year": 2022,
+    "abstract": "Existing tools to detect side-channel attacks on Intel SGX are grounded on the observation that attacks affect the performance of the victim application. As such, all detection tools monitor the potential victim and raise an alarm if the witnessed performance (in terms of runtime, enclave interruptions, cache misses, etc.) is out of the ordinary.",
+    "citation_count": 8,
+    "reference_count": 11,
+    "url": "https://dblp.org/rec/conf/raid/JiangSK22",
+    "dblp_key": "conf/raid/JiangSK22",
+    "source_id": "https://openalex.org/W4287585808"
+  },
+  {
+    "title": "Context-Auditor: Context-sensitive Content Injection Mitigation.",
+    "authors": [
+      "Faezeh Kalantari",
+      "Mehrnoosh Zaeifi",
+      "Tiffany Bao",
+      "Ruoyu Wang 0001",
+      "Yan Shoshitaishvili",
+      "Adam Doupé"
+    ],
+    "venue": "RAID",
+    "year": 2022,
+    "abstract": "Cross-site scripting (XSS) is the most common vulnerability class in web applications over the last decade. Much research attention has focused on building exploit mitigation defenses for this problem, but no technique provides adequate protection in the face of advanced attacks. One technique that bypasses XSS mitigations is the scriptless attack: a content injection technique that uses (among other options) CSS and HTML injection to infiltrate data. In studying this technique and others, we realized that the common property among the exploitation of all content injection vulnerabilities, including not just XSS and scriptless attacks, but also command injections and several others, is an unintended context switch in the victim program's parsing engine that is caused by untrusted user input.",
+    "citation_count": 2,
+    "reference_count": 27,
+    "url": "https://dblp.org/rec/conf/raid/KalantariZB0SD22",
+    "dblp_key": "conf/raid/KalantariZB0SD22",
+    "source_id": "https://openalex.org/W4306406238"
+  },
+  {
+    "title": "New Cloaking Region Obfuscation for Road Network-Indistinguishability and Location Privacy.",
+    "authors": [
+      "Baihe Ma",
+      "Xiaojie Lin",
+      "Xu Wang 0004",
+      "Bin Liu 0028",
+      "Ying He 0011",
+      "Wei Ni 0001",
+      "Ren Ping Liu 0001"
+    ],
+    "venue": "RAID",
+    "year": 2022,
+    "abstract": "The development of location-based services (LBS) leads to the rapid growth of location data, potentially increasing the threat to location privacy. Existing location obfuscation techniques focus on two-dimensional (2D) planar areas and overlook the features of road networks. In this paper, we leverage differential privacy and propose a new notion of Road Network-Indistinguishability (RN-Indistinguishability) to measure the indistinguishability of locations in road networks. With the RN-Indistinguishability, we design a Cloaking Region Obfuscation (CRO) mechanism to protect the location privacy of vehicles on roads. With the CRO mechanism, vehicle locations in a cloaking region are obfuscated following the same obfuscation distribution. The proposed CRO mechanism is proved to achieve RN-Indistinguishability and can be generalized with road network features holding the triangle inequality. Comprehensive experiments show that the CRO mechanism outperforms existing 2D obfuscation mechanisms in real-world road networks.",
+    "citation_count": 10,
+    "reference_count": 34,
+    "url": "https://dblp.org/rec/conf/raid/MaLW0H0L22",
+    "dblp_key": "conf/raid/MaLW0H0L22",
+    "source_id": "https://openalex.org/W4306406285"
+  },
+  {
+    "title": "Understanding the Behavior Transparency of Voice Assistant Applications Using the ChatterBox Framework.",
+    "authors": [
+      "Atsuko Natatsuka",
+      "Ryo Iijima",
+      "Takuya Watanabe 0001",
+      "Mitsuaki Akiyama",
+      "Tetsuya Sakai",
+      "Tatsuya Mori"
+    ],
+    "venue": "RAID",
+    "year": 2022,
+    "abstract": "A voice assistant (VA) is a platform that provides users with a wide range of services via interaction with a voice application using verbal commands. Since the VA application is deployed in the cloud, its behavior is not transparent to the user, which raises privacy concerns. In this study, we developed a framework called ChatterBox, which attempts to analyze VA applications via extensive continuous interaction, to understand their behavior. ChatterBox is capable of parsing and generating dialogues by utilizing natural language processing approach. It can also parse application-level messages to understand how a VA app acquires personal information. ChatterBox supports English and Japanese, which are completely different languages, and can extract more than twice as many dialogues from VA applications compared to SkillExplorer, a state-of-the-art VA dialogue analysis system. Based on analyses of English and Japanese VA applications using ChatterBox, we revealed that 5–15% of VA applications collect personal information or recorded user identifiers in a non-transparent manner, and 76–94% applications collected personal information without providing appropriate privacy policies. In light of these findings, we discuss the implementation of a highly transparent VA application platform.",
+    "citation_count": 0,
+    "reference_count": 13,
+    "url": "https://dblp.org/rec/conf/raid/NatatsukaI0ASM22",
+    "dblp_key": "conf/raid/NatatsukaI0ASM22",
+    "source_id": "https://openalex.org/W4306406253"
+  },
+  {
+    "title": "Viopolicy-Detector: An Automated Approach to Detecting GDPR Suspected Compliance Violations in Websites.",
+    "authors": [
+      "Haoran Ou",
+      "Yong Fang 0002",
+      "Yongyan Guo",
+      "Wenbo Guo 0011",
+      "Cheng Huang 0003"
+    ],
+    "venue": "RAID",
+    "year": 2022,
+    "abstract": "To provide users with personalized services, the website collects and tracks user's activity data. At the same time, each website uses a privacy policy to ensure the legality of these actions. The purpose of the implementation of the General Data Protection Regulation (GDPR) is to protect the privacy of user data. Because GDPR is a programmatic regulation, there is no specific guidance on what a privacy policy should contain. Therefore, there may still be potential violations on the website, thus cause a risk of leak users' private data. In this paper, we define a violating behavior that data collected by the website without a declaration in the privacy policy is illegal. To complete the violating behavior detection, we first interpret the GDPR and analyze 1000 website privacy policies to present a personal data classification including eight categories. Based on this, we propose a privacy policy annotation scheme including these eight categories and collect 145 related Web APIs. Then we propose an automated method to detect GDPR suspected compliance violations in websites. On the one hand we use the multi-label text classification model to extract data collection stated in the privacy policy, with a precision of 0.9817. For another, we dynamically monitor the JavaScript calls of the website related to personal data collection during user visits. Finally, we compare the two results to determine whether violating behaviors appeared. We use this method to detect the European top 500 websites (actually 451 websites). A total of 159 (35.3%) websites appear in violation of the GDPR. We analyze the detection results from different perspectives, including statistics on the types of data declared in the privacy policy, statistics on data collected by the website, and which data collection is likely to cause violations. Then we classify the violating websites and find that websites in the Social category present the most violations. Finally, we count the rankings of the offending websites. Surprisingly, top-ranking sites are even more prone to breaches. There are even some globally well-known websites with violations, such as BBC, Nokia, Ebay, Google etc.",
+    "citation_count": 4,
+    "reference_count": 43,
+    "url": "https://dblp.org/rec/conf/raid/Ou0G0022",
+    "dblp_key": "conf/raid/Ou0G0022",
+    "source_id": "https://openalex.org/W4306406283"
+  },
+  {
+    "title": "ULTRA: Ultimate Rootkit Detection over the Air.",
+    "authors": [
+      "Duy-Phuc Pham",
+      "Damien Marion 0001",
+      "Annelie Heuser"
+    ],
+    "venue": "RAID",
+    "year": 2022,
+    "abstract": "International audience",
+    "citation_count": 2,
+    "reference_count": 35,
+    "url": "https://dblp.org/rec/conf/raid/Pham0H22",
+    "dblp_key": "conf/raid/Pham0H22",
+    "source_id": "https://openalex.org/W4291467042"
+  },
+  {
+    "title": "OAuch: Exploring Security Compliance in the OAuth 2.0 Ecosystem.",
+    "authors": [
+      "Pieter Philippaerts",
+      "Davy Preuveneers",
+      "Wouter Joosen"
+    ],
+    "venue": "RAID",
+    "year": 2022,
+    "abstract": "The OAuth 2.0 protocol is a popular and widely adopted authorization protocol. It has been proven secure in a comprehensive formal security analysis, yet new vulnerabilities continue to appear in popular OAuth implementations.\\n\\nThis paper sets out to improve the security of the OAuth landscape by measuring how well individual identity providers (IdPs) implement the security specifications defined in the OAuth standard, and by providing detailed and targeted feedback to the operators to improve the compliance of their service. We present a tool, called OAuch, that tests and analyzes IdPs according to the guidelines of the OAuth standards and security best practices.\\n\\nWe evaluate 100 publicly deployed OAuth IdPs using OAuch and aggregate the results to create a unique overview of the current state of practice in the OAuth ecosystem. We determine that, on average, an OAuth IdP does not implement 34% of the security specifications present in the OAuth standards, including 20% of the required specifications.\\n\\nWe then validate the IdPs against the OAuth threat model. The analysis shows that 97 IdPs leave one or more threats completely unmitigated (with an average of 4 unmitigated threats per IdP). No IdPs fully mitigate all threats.\\n\\nWe further validate the results by picking four attack vectors and using the tool's output to determine which IdPs to attack. The results were highly accurate, with a false positive rate of 1.45% and a false negative rate of 1.48% for the four attack vectors combined.",
+    "citation_count": 18,
+    "reference_count": 26,
+    "url": "https://dblp.org/rec/conf/raid/PhilippaertsPJ22",
+    "dblp_key": "conf/raid/PhilippaertsPJ22",
+    "source_id": "https://openalex.org/W4306406241"
+  },
+  {
+    "title": "Content-Agnostic Detection of Phishing Domains using Certificate Transparency and Passive DNS.",
+    "authors": [
+      "Mashael Al Sabah",
+      "Mohamed Nabeel",
+      "Yazan Boshmaf",
+      "Euijin Choo"
+    ],
+    "venue": "RAID",
+    "year": 2022,
+    "abstract": "Existing phishing detection techniques mainly rely on blacklists or content-based analysis, which are not only evadable, but also exhibit considerable detection delays as they are reactive in nature. We observe through our deep dive analysis that artifacts of phishing are manifested in various sources of intelligence related to a domain even before its contents are online. In particular, we study various novel patterns and characteristics computed from viable sources of data including Certificate Transparency Logs, and passive DNS records. To compare benign and phishing domains, we construct thoroughly-verified realistic benign and phishing datasets. Our analysis shows clear differences between benign and phishing domains that can pave the way for content-agnostic approaches to predict phishing domains even before the contents of these webpages are up and running.",
+    "citation_count": 11,
+    "reference_count": 37,
+    "url": "https://dblp.org/rec/conf/raid/SabahNBC22",
+    "dblp_key": "conf/raid/SabahNBC22",
+    "source_id": "https://openalex.org/W4306406255"
+  },
+  {
+    "title": "TrustedGateway: TEE-Assisted Routing and Firewall Enforcement Using ARM TrustZone.",
+    "authors": [
+      "Fabian Schwarz"
+    ],
+    "venue": "RAID",
+    "year": 2022,
+    "abstract": "Gateway routers are at the heart of every network infrastructure, interconnecting subnetworks and enforcing access control policies using firewalls. However, their central position makes them high-value targets for network compromises. Typically, gateways are erroneously assumed to be hardened against software vulnerabilities (``bastion host''). In fact, though, they inherit the attack surface of their underlying commodity OSes which together with the wealth of auxiliary services available on both consumer and enterprise gateways---web and VoIP, file sharing, remote logins, monitoring, etc.---undermines this belief. This is underlined by a plethora of recent CVEs for commodity OSes and services of popular routers which resulted in authentication bypass or remote code execution thus enabling attackers full control over their security policies. We present TrustedGateway (TruGW), a new gateway architecture, which isolates ``core'' networking features---routing and firewall---from error-prone auxiliary services and gateway OSes. TruGW leverages a TEE-assisted design to protect the network path and policies while staying compatible with commodity gateway platforms. TruGW uses ARM TrustZone to protect the NIC and traffic processing from a fully-compromised gateway and permits policy updates only by trusted remote administrators. That way, TruGW can readily guarantee the secure enforcement of trusted policies on commodity gateways. TruGW's small attack surface is a key enabler to regain trust in core network infrastructures.",
+    "citation_count": 7,
+    "reference_count": 19,
+    "url": "https://dblp.org/rec/conf/raid/Schwarz22",
+    "dblp_key": "conf/raid/Schwarz22",
+    "source_id": "https://openalex.org/W4306406272"
+  },
+  {
+    "title": "LiCA: A Fine-grained and Path-sensitive Linux Capability Analysis Framework.",
+    "authors": [
+      "Menghan Sun",
+      "Zirui Song",
+      "Xiaoxi Ren",
+      "Daoyuan Wu",
+      "Kehuan Zhang"
+    ],
+    "venue": "RAID",
+    "year": 2022,
+    "abstract": "The capability mechanism in Linux-based systems is designed for dispersing the root privileges into a set of more refined capabilities, making programs gain no-more-necessary privileges. However, it is challenging to check the necessity and sufficiency of capabilities assigned to programs due to the highly complicated call chains invoked in practice. Inappropriate capability assignment brings threats to the systems. For example, over-privileged programs could allow an attacker to misuse root privileges, while under-privileged programs may incur runtime errors. In this paper, we propose a new Linux capability analysis framework called LiCA to find necessary and sufficient capabilities for programs effectively. LiCA presents fine-grained and path-sensitive code flow analysis based on LLVM to construct accurate mappings between system calls and their capabilities. In particular, we solve the constraint equations along each path from a given system call to individual capabilities and strategically overcome the path explosion problem. Our experiments show that LiCA can correctly find necessary capabilities for the Linux utility programs (e.g., ping and tcpdump) and the public programs from GitHub. By comparing the capabilities claimed by program developers and the results from LiCA, we identify a batch of programs requiring more capabilities than necessary, even root privileges. Therefore, LiCA could help those third-party developers validate their programs' capability setting to achieve the least privilege principle. © 2022 ACM.",
+    "citation_count": 6,
+    "reference_count": 12,
+    "url": "https://dblp.org/rec/conf/raid/SunSRWZ22",
+    "dblp_key": "conf/raid/SunSRWZ22",
+    "source_id": "https://openalex.org/W4306406257"
+  },
+  {
+    "title": "Odile: A scalable tracing tool for non-rooted and on-device Android phones.",
+    "authors": [
+      "Alain Tchana",
+      "Lavoisier Lavoisier Wapet",
+      "Yérom-David Bromberg"
+    ],
+    "venue": "RAID",
+    "year": 2022,
+    "abstract": "International audience",
+    "citation_count": 1,
+    "reference_count": 13,
+    "url": "https://dblp.org/rec/conf/raid/TchanaWB22",
+    "dblp_key": "conf/raid/TchanaWB22",
+    "source_id": "https://openalex.org/W4306406229"
+  },
+  {
+    "title": "Write Me and I&apos;ll Tell You Secrets - Write-After-Write Effects On Intel CPUs.",
+    "authors": [
+      "Jan Philipp Thoma",
+      "Tim Güneysu"
+    ],
+    "venue": "RAID",
+    "year": 2022,
+    "abstract": null,
+    "citation_count": null,
+    "reference_count": null,
+    "url": "https://dblp.org/rec/conf/raid/ThomaG22",
+    "dblp_key": "conf/raid/ThomaG22",
+    "source_id": null
+  },
+  {
+    "title": "Elysium: Context-Aware Bytecode-Level Patching to Automatically Heal Vulnerable Smart Contracts.",
+    "authors": [
+      "Christof Ferreira Torres",
+      "Hugo Jonker",
+      "Radu State"
+    ],
+    "venue": "RAID",
+    "year": 2022,
+    "abstract": "Fixing bugs is easiest by patching source code. However, source code is not always available: only 0.3% of the ∼ 49M smart contracts that are currently deployed on Ethereum have their source code publicly available. Moreover, since contracts may call functions from other contracts, security flaws in closed-source contracts may affect open-source contracts as well. However, current state-of-the-art approaches that operate on closed-source contracts (i.e., EVM bytecode), such as EVMPatch and SmartShield, make use of purely hard-coded templates that leverage fix patching patterns. As a result, they cannot dynamically adapt to the bytecode that is being patched, which severely limits their flexibility and scalability. For instance, when patching integer overflows using hard-coded templates, a particular patch template needs to be employed as the bounds to be checked are different for each integer size (i.e., one template for uint256, another template for uint64, etc.).",
+    "citation_count": 30,
+    "reference_count": 21,
+    "url": "https://dblp.org/rec/conf/raid/TorresJS22",
+    "dblp_key": "conf/raid/TorresJS22",
+    "source_id": "https://openalex.org/W4306406277"
+  },
+  {
+    "title": "Script Tainting Was Doomed From The Start (By Type Conversion): Converting Script Engines into Dynamic Taint Analysis Frameworks.",
+    "authors": [
+      "Toshinori Usui",
+      "Yuto Otsuki",
+      "Yuhei Kawakoya",
+      "Makoto Iwamura",
+      "Kanta Matsuura"
+    ],
+    "venue": "RAID",
+    "year": 2022,
+    "abstract": "Data flow analysis is an essential technique for understanding the complicated behavior of malicious scripts. For tracking the data flow in scripts, dynamic taint analysis has been widely adopted by existing studies. However, the existing taint analysis techniques have a problem that each script engine needs to be separately designed and implemented. Given the diversity of script languages that attackers can choose for their malicious scripts, it is unrealistic to prepare taint analysis tools for the various script languages and engines.",
+    "citation_count": 3,
+    "reference_count": 50,
+    "url": "https://dblp.org/rec/conf/raid/UsuiOKIM22",
+    "dblp_key": "conf/raid/UsuiOKIM22",
+    "source_id": "https://openalex.org/W4306406237"
+  },
+  {
+    "title": "Penny Wise and Pound Foolish: Quantifying the Risk of Unlimited Approval of ERC20 Tokens on Ethereum.",
+    "authors": [
+      "Dabao Wang",
+      "Hang Feng",
+      "Siwei Wu",
+      "Yajin Zhou",
+      "Lei Wu 0012",
+      "Xingliang Yuan"
+    ],
+    "venue": "RAID",
+    "year": 2022,
+    "abstract": "The prosperity of decentralized finance motivates many investors to profit\\nvia trading their crypto assets on decentralized applications (DApps for short)\\nof the Ethereum ecosystem. Apart from Ether (the native cryptocurrency of\\nEthereum), many ERC20 (a widely used token standard on Ethereum) tokens obtain\\nvast market value in the ecosystem. Specifically, the approval mechanism is\\nused to delegate the privilege of spending users' tokens to DApps. By doing so,\\nthe DApps can transfer these tokens to arbitrary receivers on behalf of the\\nusers. To increase the usability, unlimited approval is commonly adopted by\\nDApps to reduce the required interaction between them and their users. However,\\nas shown in existing security incidents, this mechanism can be abused to steal\\nusers' tokens.\\n In this paper, we present the first systematic study to quantify the risk of\\nunlimited approval of ERC20 tokens on Ethereum. Specifically, by evaluating\\nexisting transactions up to 31st July 2021, we find that unlimited approval is\\nprevalent (60%, 15.2M/25.4M) in the ecosystem, and 22% of users have a high\\nrisk of their approved tokens for stealing. After that, we investigate the\\nsecurity issues that are involved in interacting with the UIs of 22\\nrepresentative DApps and 9 famous wallets to prepare the approval transactions.\\nThe result reveals the worrisome fact that all DApps request unlimited approval\\nfrom the front-end users and only 10% (3/31) of UIs provide explanatory\\ninformation for the approval mechanism. Meanwhile, only 16% (5/31) of UIs allow\\nusers to modify their approval amounts. Finally, we take a further step to\\ncharacterize the user behavior into five modes and formalize the good practice,\\ni.e., on-demand approval and timely spending, towards securely spending\\napproved tokens. However, the evaluation result suggests that only 0.2% of\\nusers follow the good practice to mitigate the risk.\\n",
+    "citation_count": 17,
+    "reference_count": 15,
+    "url": "https://dblp.org/rec/conf/raid/WangFWZ0Y22",
+    "dblp_key": "conf/raid/WangFWZ0Y22",
+    "source_id": "https://openalex.org/W4284701118"
+  },
+  {
+    "title": "Zigbee&apos;s Network Rejoin Procedure for IoT Systems: Vulnerabilities and Implications.",
+    "authors": [
+      "Jincheng Wang",
+      "Zhuohua Li 0001",
+      "Mingshen Sun",
+      "John C. S. Lui"
+    ],
+    "venue": "RAID",
+    "year": 2022,
+    "abstract": "Internet of Things (IoT) services are gaining increasing popularity, and IoT devices are widely deployed at many smart homes. Among all the IoT communication protocols, Zigbee is a dominant one used by billions of devices and customers. However, the design of Zigbee has not been carefully evaluated and could be exploited by attackers. In this paper, we focus on Zigbee’s network rejoin procedure, which aims to allow devices to automatically recover their network status when they accidentally go offline. We develop an automated verification tool Verejoin to perform a systematic study on the rejoin procedure. Using this tool, we not only confirm a well-known design flaw, but also reveal two undiscovered design flaws. Moreover, we construct four proof-of-concept (PoC) attacks to exploit these design flaws. These vulnerabilities create new attack surfaces for attackers to manipulate Zigbee devices, and the damage of these vulnerabilities ranges from denial of service to device hijacking. We further design a Zigbee testing tool ZigHomer to confirm these vulnerabilities in real-world devices. Using ZigHomer, we conduct thorough evaluations of off-the-shelf Zigbee devices from leading IoT vendors, and the evaluation result shows the prevalence and severity of these vulnerabilities. Finally, we reported our findings to related parties, and they all acknowledged the significant security impact. We further collaborate with Zigbee Alliance to amend the Zigbee specification, and successfully addressed our reported vulnerabilities.",
+    "citation_count": 6,
+    "reference_count": 63,
+    "url": "https://dblp.org/rec/conf/raid/WangLSL22",
+    "dblp_key": "conf/raid/WangLSL22",
+    "source_id": "6fb5d4966754f3e4fa87eca06f65b4a9b86d4d89"
+  },
+  {
+    "title": "Harm-DoS: Hash Algorithm Replacement for Mitigating Denial-of-Service Vulnerabilities in Binary Executables.",
+    "authors": [
+      "Nicolaas Weideman",
+      "Haoda Wang",
+      "Tyler Kann",
+      "Spencer Zahabizadeh",
+      "Wei-Cheng Wu",
+      "Rajat Tandon",
+      "Jelena Mirkovic",
+      "Christophe Hauser"
+    ],
+    "venue": "RAID",
+    "year": 2022,
+    "abstract": "Programs and services relying on weak hash algorithms as part of their hash table implementations are vulnerable to hash-collision denial-of-service attacks. In the context of such an attack, the attacker sends a series of program inputs leading to hash collisions. In the best case, this slows down the execution and processing for all requests, and in the worst case it renders the program or service unavailable. We propose a new binary program analysis approach to automatically detect weak hash functions and patch vulnerable binary programs, by replacing the weak hash function with a secure alternative. To verify that our mitigation strategy does not break program functionality, we design and leverage multiple stages of static analysis and symbolic execution, which demonstrate that the patched code performs equivalently to the original code, but does not suffer from the same vulnerability. We analyze 105,831 real-world programs and confirm the use of 796 weak hash functions in the same number of programs. We successfully replace 759 of these in a non-disruptive manner. The entire process is automated. Among the real-world programs analyzed, we discovered, disclosed and mitigated a zero-day hash-collision vulnerability in Reddit.",
+    "citation_count": 2,
+    "reference_count": 19,
+    "url": "https://dblp.org/rec/conf/raid/WeidemanWKZWTMH22",
+    "dblp_key": "conf/raid/WeidemanWKZWTMH22",
+    "source_id": "https://openalex.org/W4306406251"
+  },
+  {
+    "title": "IPAL: Breaking up Silos of Protocol-dependent and Domain-specific Industrial Intrusion Detection Systems.",
+    "authors": [
+      "Konrad Wolsing",
+      "Eric Wagner 0003",
+      "Antoine Saillard",
+      "Martin Henze"
+    ],
+    "venue": "RAID",
+    "year": 2022,
+    "abstract": "The increasing interconnection of industrial networks exposes them to an ever-growing risk of cyber attacks. To reveal such attacks early and prevent any damage, industrial intrusion detection searches for anomalies in otherwise predictable communication or process behavior. However, current efforts mostly focus on specific domains and protocols, leading to a research landscape broken up into isolated silos. Thus, existing approaches cannot be applied to other industries that would equally benefit from powerful detection. To better understand this issue, we survey 53 detection systems and find no fundamental reason for their narrow focus. Although they are often coupled to specific industrial protocols in practice, many approaches could generalize to new industrial scenarios in theory. To unlock this potential, we propose IPAL, our industrial protocol abstraction layer, to decouple intrusion detection from domain-specific industrial protocols. After proving IPAL's correctness in a reproducibility study of related work, we showcase its unique benefits by studying the generalizability of existing approaches to new datasets and conclude that they are indeed not restricted to specific domains or protocols and can perform outside their restricted silos.",
+    "citation_count": 2,
+    "reference_count": 109,
+    "url": "https://dblp.org/rec/conf/raid/Wolsing0SH22",
+    "dblp_key": "conf/raid/Wolsing0SH22",
+    "source_id": "https://openalex.org/W3212966870"
+  },
+  {
+    "title": "What You See is Not What You Get: Revealing Hidden Memory Mapping for Peripheral Modeling.",
+    "authors": [
+      "Jun Yeon Won",
+      "Haohuang Wen",
+      "Zhiqiang Lin 0001"
+    ],
+    "venue": "RAID",
+    "year": 2022,
+    "abstract": "Nowadays, there are a massive number of embedded Internet-of-Things (IoT) devices, each of which includes a microcontroller unit (MCU) that can support numerous peripherals. To detect security vulnerabilities of these embedded devices, there are a number of emulation (or rehosting) frameworks that enable scalable dynamic analysis by using only the device firmware code without involving the real hardware. However, we show that using only the firmware code for emulation is insufficient since there exists a special type of hardware-defined property among the peripheral registers that allows the bounded registers to be updated simultaneously without CPU interventions, which is called the hidden memory mapping. In this paper, we demonstrate that existing rehosting frameworks such as P2IM and μEMU have incorrect execution paths as they fail to properly handle hidden memory mapping during emulation. To address this challenge, we propose the first framework AutoMap that uses a differential hardware memory introspection approach to automatically reveal hidden memory mappings among peripheral registers for faithful firmware emulation. We have developed AutoMap atop the Unicorn emulator and evaluated it with 41 embedded device firmware developed based on the Nordic MCU and 9 real-world firmware evaluated by μEMU and P2IM on the two STMicroelectronics MCUs. Among them, AutoMap successfully extracted 2, 359 unique memory mappings in total which can be shared through a knowledge base with the rehosting frameworks. Moreover, by integrating AutoMap with μEMU, AutoMap is able to identify and correct the path of the program that will not run on the actual hardware.",
+    "citation_count": 2,
+    "reference_count": 18,
+    "url": "https://dblp.org/rec/conf/raid/WonWL22",
+    "dblp_key": "conf/raid/WonWL22",
+    "source_id": "https://openalex.org/W4306406243"
+  },
+  {
+    "title": "Transferable Graph Backdoor Attack.",
+    "authors": [
+      "Shuiqiao Yang",
+      "Bao Gia Doan",
+      "Paul Montague",
+      "Olivier Y. de Vel",
+      "Tamas Abraham",
+      "Seyit Camtepe",
+      "Damith C. Ranasinghe",
+      "Salil S. Kanhere"
+    ],
+    "venue": "RAID",
+    "year": 2022,
+    "abstract": "Graph Neural Networks (GNNs) have achieved tremendous success in many graph mining tasks benefitting from the message passing strategy that fuses the local structure and node features for better graph representation learning. Despite the success of GNNs, and similar to other types of deep neural networks, GNNs are found to be vulnerable to unnoticeable perturbations on both graph structure and node features. Many adversarial attacks have been proposed to disclose the fragility of GNNs under different perturbation strategies to create adversarial examples. However, vulnerability of GNNs to successful backdoor attacks was only shown recently. In this paper, we disclose the TRAP attack, a Transferable GRAPh backdoor attack. The core attack principle is to poison the training dataset with perturbation-based triggers that can lead to an effective and transferable backdoor attack. The perturbation trigger for a graph is generated by performing the perturbation actions on the graph structure via a gradient based score matrix from a surrogate model. Compared with prior works, TRAP attack is different in several ways: i) it exploits a surrogate Graph Convolutional Network (GCN) model to generate perturbation triggers for a blackbox based backdoor attack; ii) it generates sample-specific perturbation triggers which do not have a fixed pattern; and iii) the attack transfers, for the first time in the context of GNNs, to different GNN models when trained with the forged poisoned training dataset. Through extensive evaluations on four real-world datasets, we demonstrate the effectiveness of the TRAP attack to build transferable backdoors in four different popular GNNs using four real-world datasets.",
+    "citation_count": 40,
+    "reference_count": 30,
+    "url": "https://dblp.org/rec/conf/raid/YangDMVACRK22",
+    "dblp_key": "conf/raid/YangDMVACRK22",
+    "source_id": "https://openalex.org/W4284682762"
+  },
+  {
+    "title": "Mirrors in the Sky: On the Potential of Clouds in DNS Reflection-based Denial-of-Service Attacks.",
+    "authors": [
+      "Ramin Yazdani",
+      "Alden Hilton",
+      "Jeroen van der Ham",
+      "Roland van Rijswijk-Deij",
+      "Casey T. Deccio",
+      "Anna Sperotto",
+      "Mattijs Jonker"
+    ],
+    "venue": "RAID",
+    "year": 2022,
+    "abstract": "Clouds are likely to be well-provisioned in terms of network capacity by design. The rapid growth of cloud-based services means an increased availability of network infrastructure for all types of customers. However, it could also provide attackers opportunity to misuse cloud infrastructure to bring about attacks, or to target the cloud infrastructure itself. In this paper we study, focusing on DNS-based reflection DDoS attacks, how cloud networks can be misused to carry out attacks, with possible consequences for the internal cloud infrastructure itself. A straightforward way to misuse cloud infrastructure would be to host open DNS resolvers in the cloud – a phenomenon that we quantify in the paper. More importantly, we structurally analyze how the internal DNS infrastructure of a cloud can be misused. The novelty of this paper lies in identifying and formalizing six attack models for how DNS cloud infrastructure can be abused to bring about reflection attacks, and testing these increasingly complex and progressively specific models against real cloud providers. Our findings reveal that a steady average of 12% of open DNS resolvers are hosted in cloud or datacenter networks, which gives them well-provisioned network access. Much more worryingly, our results reveal that a number of providers, several of which among market leaders, expose parts of their DNS infrastructure to outsiders, allowing abuse against a provider’s infrastructure, its customers, as well as hosts in external networks. In the course of our study, we responsibly disclosed our findings to these providers.",
+    "citation_count": 7,
+    "reference_count": 18,
+    "url": "https://dblp.org/rec/conf/raid/YazdaniHHRDSJ22",
+    "dblp_key": "conf/raid/YazdaniHHRDSJ22",
+    "source_id": "https://openalex.org/W4306406207"
+  },
+  {
+    "title": "Automated Runtime Mitigation for Misconfiguration Vulnerabilities in Industrial Control Systems.",
+    "authors": [
+      "Qingzhao Zhang",
+      "Xiao Zhu 0001",
+      "Mu Zhang 0001",
+      "Z. Morley Mao"
+    ],
+    "venue": "RAID",
+    "year": 2022,
+    "abstract": "Cyber-physical industrial control systems (ICS) commonly implement configuration parameters that can be remotely tuned by human-machine interfaces (HMI) at runtime. These parameters directly control the behaviors of ICSs thus they can be exploited by attackers to compromise the safety of ICSs, proved by real-world attacks worldwide. However, existing anomaly detection methods, which mostly focus on the programmable logic controller (PLC) programs or sensor signals, lack a comprehensive analysis of configuration's impact on the entire system and thus cannot effectively detect improper parameters. A tool that automatically analyzes complicated control logic to determine the safety of configuration is absent. To fill this gap, we design SmtConf, a verification-based framework for detecting and mitigating improper parameters in ICSs at runtime. To understand the impact of configuration parameters on complicated control logic, we design a symbolic formal model representing behaviors of the ICS under any possible configuration parameters. Based on the model, SmtConf works as a monitoring system that detects safety violations in real-time when the improper configuration is injected. To further assist developers to determine the safe configuration, SmtConf recommends safe configuration parameters by solving an optimization problem. In 18 test cases collected from two production-level ICS testbeds, SmtConf detects all true violations caused by improper parameters in 0.41 seconds and correctly repairs the ICS with recommended safe parameters in 0.45 seconds.",
+    "citation_count": 4,
+    "reference_count": 41,
+    "url": "https://dblp.org/rec/conf/raid/Zhang00M22",
+    "dblp_key": "conf/raid/Zhang00M22",
+    "source_id": "https://openalex.org/W4306406264"
+  },
+  {
+    "title": "Detection of Electromagnetic Signal Injection Attacks on Actuator Systems.",
+    "authors": [
+      "Youqian Zhang",
+      "Kasper Rasmussen"
+    ],
+    "venue": "RAID",
+    "year": 2022,
+    "abstract": "An actuator is a device that converts electricity into another form of energy, typically physical movement. They are absolutely essential for any system that needs to impact or modify the physical world, and are used in millions of systems of all sizes, all over the world, from cars and spacecraft to factory control systems and critical infrastructure. An actuator is a \"dumb device\" that is entirely controlled by the surrounding electronics, e.g., a microcontroller, and thus cannot authenticate its control signals or do any other form of processing. The problem we look at in this paper is how the wires that connect an actuator to its control electronics can act like antennas, picking up electromagnetic signals from the environment. This makes it possible for a remote attacker to wirelessly inject signals (energy) into these wires to bypass the controller and directly control the actuator.",
+    "citation_count": 9,
+    "reference_count": 30,
+    "url": "https://dblp.org/rec/conf/raid/ZhangR22",
+    "dblp_key": "conf/raid/ZhangR22",
+    "source_id": "https://openalex.org/W4226110960"
+  },
+  {
+    "title": "25th International Symposium on Research in Attacks, Intrusions and Defenses, RAID 2022, Limassol, Cyprus, October 26-28, 2022",
+    "authors": [],
+    "venue": "RAID",
+    "year": 2022,
+    "abstract": null,
+    "citation_count": 1,
+    "reference_count": 12,
+    "url": "https://dblp.org/rec/conf/raid/2022",
+    "dblp_key": "conf/raid/2022",
+    "source_id": "https://openalex.org/W4404515057"
+  }
+]

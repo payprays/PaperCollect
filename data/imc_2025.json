@@ -1,0 +1,1776 @@
+[
+  {
+    "title": "Unraveling the Complexities of MTA-STS Deployment and Management in Securing Email.",
+    "authors": [
+      "Md. Ishtiaq Ashiq",
+      "Tobias Fiebig",
+      "Taejoong Chung"
+    ],
+    "venue": "IMC",
+    "year": 2025,
+    "abstract": "Email has been a cornerstone of online communication for decades, but its lack of built-in confidentiality has left it vulnerable to various attacks. To address this issue, two key protocols are being used: MTA-STS (Mail Transfer Agent Strict Transport Security) and DANE (DNS-based Authentication of Named Entities). While DANE was introduced first, MTA-STS has been actively adopted by major email providers like Google and Microsoft, as it does not require the complex DNSSEC chain that poses a significant challenge in deploying and managing DANE. However, despite its significance, there has been limited research on how MTA-STS is deployed and managed in practice. In this study, we present a thorough, longitudinal investigation of the MTA-STS ecosystem. We base our analysis on a dataset capturing over 87 million domains from DNS scans collected across four TLDs over 31 months, along with 10 months of additional component scanning such as TLS certificates, thereby offering a broad perspective on MTA-STS adoption and its management. Our analysis uncovers a concerning trend of misconfigurations and inconsistencies in MTA-STS setups. In our most recent snapshot, out of ~68K domains with MTA-STS record, 29.6% of domains were incorrectly configured, while 3.2% of these should encounter email delivery failure from MTA-STS supporting senders. To gain insights into the challenges faced by email administrators, we surveyed 117 operators. While awareness of MTA-STS was high (94.7%), many cited operational complexity (48.8%) and a preference for DANE (45.4%) as reasons for not deploying the protocol. Our study not only highlights the growing importance of MTA-STS but also reveals the significant challenges in its deployment and management.",
+    "citation_count": 0,
+    "reference_count": 2,
+    "url": "https://doi.org/10.1145/3730567.3732916",
+    "dblp_key": "conf/imc/AshiqFC25",
+    "source_id": "https://openalex.org/W4415222205"
+  },
+  {
+    "title": "5G Metamorphosis: A Longitudinal Study of 5G Performance from the Beginning.",
+    "authors": [
+      "Omar Basit",
+      "Imran Khan 0021",
+      "Moinak Ghoshal",
+      "Y. Charlie Hu",
+      "Dimitrios Koutsonikolas"
+    ],
+    "venue": "IMC",
+    "year": 2025,
+    "abstract": "The cellular network has undergone rapid progress since its inception in 1980s. While rapid iteration of newer generations of cellular technology plays a key role in this evolution, the incremental and eventually wide deployment of every new technology generation also plays a vital role in delivering the promised performance improvement. In this work, we conduct the first metamorphosis study of a cellular network generation, 5G, by measuring the user-experienced 5G performance from 5G network's birth (initial deployment) to maturity (steady state). By analyzing a 4-year 5G performance trace of 2.65M+ Ookla® ~Speedtest Intelligence® ~measurements collected in 9 cities in the United States and Europe from January 2020 to December 2023, we unveil the detailed evolution of 5G coverage, throughput, and latency at the quarterly granularity, compare the performance diversity across the 9 representative cities, and gain insights into compounding factors that affect user-experienced 5G performance, such as adoption of 5G devices and the load on the 5G network. Our study uncovers the typical life-cycle of a new cellular technology generation as it undergoes its ''growing pain'' towards delivering its promised QoE over the previous technology generation.",
+    "citation_count": 2,
+    "reference_count": 5,
+    "url": "https://doi.org/10.1145/3730567.3732914",
+    "dblp_key": "conf/imc/Basit0GHK25",
+    "source_id": "https://openalex.org/W4415222438"
+  },
+  {
+    "title": "Exploration of the Dynamics of Buy and Sale of Social Media Accounts.",
+    "authors": [
+      "Mario Beluri",
+      "Bhupendra Acharya",
+      "Soheil Khodayari",
+      "Giada Stivala",
+      "Giancarlo Pellegrino",
+      "Thorsten Holz"
+    ],
+    "venue": "IMC",
+    "year": 2025,
+    "abstract": "There has been a rise in online platforms facilitating the buying and selling of social media accounts. While the trade of social media profiles is not inherently illegal, these platforms view such transactions as violations of their policies. They often take action against accounts involved in the misuse of platforms for financial gain. In this, we conduct a comprehensive analysis of marketplaces that enable the buying and selling of social media accounts.",
+    "citation_count": 0,
+    "reference_count": 7,
+    "url": "https://doi.org/10.1145/3730567.3732927",
+    "dblp_key": "conf/imc/BeluriAKSPH25",
+    "source_id": "https://openalex.org/W4415222264"
+  },
+  {
+    "title": "Fantastic Joules and Where to Find Them. Modeling and Optimizing Router Energy Demand.",
+    "authors": [
+      "Romain Jacob",
+      "Lukas Röllin",
+      "Jackie Lim",
+      "Jonathan Chung 0006",
+      "Maurice Béhanzin",
+      "Weiran Wang 0006",
+      "Andreas Hunziker",
+      "Theodor Moroianu",
+      "Seyedali Tabaeiaghdaei",
+      "Adrian Perrig",
+      "Laurent Vanbever"
+    ],
+    "venue": "IMC",
+    "year": 2025,
+    "abstract": "Reducing our society's energy demand is critical to address the sustainability challenge. While the Internet currently accounts for 1–-1.5% of global electricity consumption and continues to grow, the energy demands of one of its core components---routers---remain poorly understood. The available power data is limited and not fine-grained enough, offering little actionable insight into strategies for effectively reducing the Internet's energy consumption.",
+    "citation_count": 2,
+    "reference_count": 16,
+    "url": "https://doi.org/10.1145/3730567.3732920",
+    "dblp_key": "conf/imc/JacobRL0B0HMTPV25",
+    "source_id": "https://openalex.org/W4415222525"
+  },
+  {
+    "title": "Dive into the Cloud: Unveiling the (Ab)Usage of Serverless Cloud Function in the Wild.",
+    "authors": [
+      "Yijing Liu",
+      "Mingxuan Liu 0006",
+      "Yiming Zhang 0009",
+      "Baojun Liu 0002",
+      "Jia Zhang 0004",
+      "Geng Hong",
+      "Haixin Duan",
+      "Min Yang 0002"
+    ],
+    "venue": "IMC",
+    "year": 2025,
+    "abstract": "Serverless cloud functions transfer server management responsibilities to service providers, offering scalability and cost-efficiency. This convenience not only facilitates normal activities but also raises abuse concerns. So far, public understanding of real-world cloud functions remains limited. To fill this gap, we conducted an in-depth measurement study to uncover their practical usage and abuse. Through empirical analysis of nine leading providers (e.g., AWS, Tencent), we identified 531,089 function domains from a passive DNS dataset spanning April 2022 to March 2024. We first investigated the usage status of serverless cloud functions, showing the different practices between providers. Additionally, based on active requests to these functions, we pointed out privacy risks of unauthorized access and identified four abuse types, including covert C2 communication, hosting malicious websites, promoting illicit services, and abusing egress nodes as IP proxies. Alarmingly, 4.89% of cloud functions are being abused, with over 614k invocations recorded. Only four abused functions were flagged by existing threat intelligence systems, indicating critical gaps in security monitoring for serverless environments. Our work offers insights into the serverless cloud ecosystem and provides recommendations for better management. With responsible disclosure, we hope to raise awareness and improve protective measures against abuses among cloud function providers.",
+    "citation_count": 0,
+    "reference_count": 17,
+    "url": "https://doi.org/10.1145/3730567.3732915",
+    "dblp_key": "conf/imc/Liu00L0HD025",
+    "source_id": "https://openalex.org/W4415222223"
+  },
+  {
+    "title": "Somesite I Used To Crawl: Awareness, Agency and Efficacy in Protecting Content Creators From AI Crawlers.",
+    "authors": [
+      "Enze Liu 0001",
+      "Elisa Luo",
+      "Shawn Shan",
+      "Geoffrey M. Voelker",
+      "Ben Y. Zhao",
+      "Stefan Savage"
+    ],
+    "venue": "IMC",
+    "year": 2025,
+    "abstract": "The success of generative AI relies heavily on training on data scraped through extensive crawling of the Internet, a practice that has raised significant copyright, privacy, and ethical concerns. While few measures are designed to resist a resource-rich adversary determined to scrape a site, crawlers can be impacted by a range of existing tools such as robots.txt, NoAI meta tags, and active crawler blocking by reverse proxies. In this work, we seek to understand the ability and efficacy of today's networking tools to protect content creators against AI-related crawling. For targeted populations like human artists, do they have the technical knowledge and agency to utilize crawler-blocking tools such as robots.txt, and can such tools be effective? Using large scale measurements and a targeted user study of 203 professional artists, we find strong demand for tools like robots.txt, but significantly constrained by critical hurdles in technical awareness, agency in deploying them, and limited efficacy against unresponsive crawlers. We further test and evaluate network-level crawler blockers provided by reverse proxies. Despite relatively limited deployment today, they offer stronger protections against AI crawlers, but still come with their own set of limitations.",
+    "citation_count": 0,
+    "reference_count": 0,
+    "url": "https://doi.org/10.1145/3730567.3732913",
+    "dblp_key": "conf/imc/0001LSVZS25",
+    "source_id": "https://openalex.org/W4404987707"
+  },
+  {
+    "title": "Sibling Prefixes: Identifying Similarities in IPv4 and IPv6 Prefixes.",
+    "authors": [
+      "Fariba Osali",
+      "Khwaja Zubair Sediqi",
+      "Oliver Gasser"
+    ],
+    "venue": "IMC",
+    "year": 2025,
+    "abstract": "Since the standardization of IPv6 in 1998, both versions of the Internet Protocol have coexisted in the Internet. Clients usually run algorithms such as Happy Eyeballs, to decide whether to connect to an IPv4 or IPv6 endpoint for dual-stack domains. To identify whether two addresses belong to the same device or service, researchers have proposed different forms of alias resolution techniques. Similarly, one can also form siblings of IPv4 and IPv6 addresses belonging to the same device. Traditionally, all of these approaches have focused on individual IP addresses. In this work, we propose the concept of ''sibling prefixes'', where we extend the definition of an IPv4-IPv6 sibling to two IP prefixes---one IPv4 prefix and its sibling IPv6 prefix. We present a technique based on large-scale DNS resolution data to identify 76k IPv4-IPv6 sibling prefixes. We find sibling prefixes to be relatively stable over time. We present SP-Tuner algorithm to tune the CIDR size of sibling prefixes and improve the perfect match siblings from 52% to 82%. For more than half of sibling prefixes, the organization names for their IPv4 and IPv6 origin ASes are identical, and 60% of all sibling prefixes have at least one of the prefixes with a valid ROV status in RPKI. Furthermore, we identify sibling prefixes in 24 hypergiant and CDN networks. Finally, we plan to regularly publish a list of sibling prefixes to be used by network operators and fellow researchers in dual-stack studies.",
+    "citation_count": 1,
+    "reference_count": 16,
+    "url": "https://doi.org/10.1145/3730567.3732917",
+    "dblp_key": "conf/imc/OsaliSG25",
+    "source_id": "https://openalex.org/W4415022849"
+  },
+  {
+    "title": "Learning AS-to-Organization Mappings with Borges.",
+    "authors": [
+      "Carlos Selmo",
+      "Esteban Carisimo",
+      "Fabián E. Bustamante",
+      "J. Ignacio Alvarez-Hamelin"
+    ],
+    "venue": "IMC",
+    "year": 2025,
+    "abstract": "We introduce Borges (Better ORGanizations Entities mappingS), a novel framework for improving AS-to-Organization mappings using Large Language Models (LLMs). Existing approaches, such as AS2Org and its extensions, rely on static WHOIS data and rule-based extraction from PeeringDB records, limiting their ability to capture complex, dynamic organizational structures. Borges overcomes these limitations by combining traditional sources with few-shot LLM prompting to extract sibling relationships from free-text fields in PeeringDB, and by introducing website-based inference using redirect chains, domain similarity, and favicon analysis. Our evaluation shows that Borges outperforms prior methods, achieving a 7% improvement in sibling ASN identification and an Organization Factor score of 0.3576. It also expands the recognized user base of large Internet conglomerates by 192 million users (≈ 5% of the global Internet population) and improves geographic footprint estimates across multiple regions.",
+    "citation_count": 0,
+    "reference_count": 4,
+    "url": "https://doi.org/10.1145/3730567.3732918",
+    "dblp_key": "conf/imc/SelmoCBA25",
+    "source_id": "https://openalex.org/W4415222244"
+  },
+  {
+    "title": "FP-Inconsistent: Measurement and Analysis of Fingerprint Inconsistencies in Evasive Bot Traffic.",
+    "authors": [
+      "Hari Venugopalan",
+      "Shaoor Munir",
+      "Shuaib Ahmed",
+      "Tangbaihe Wang",
+      "Samuel T. King",
+      "Zubair Shafiq"
+    ],
+    "venue": "IMC",
+    "year": 2025,
+    "abstract": "As browser fingerprinting is increasingly being used for bot detection, bots have started altering their fingerprints for evasion. We conduct the first large-scale evaluation of evasive bots to investigate whether and how altering fingerprints helps bots evade detection. To systematically investigate evasive bots, we deploy a honey site incorporating two anti-bot services (DataDome and BotD) and solicit bot traffic from 20 different bot services that purport to sell \"realistic and undetectable traffic\". Across half a million requests from 20 different bot services on our honey site, we find an average evasion rate of 52.93% against DataDome and 44.56% evasion rate against BotD. Our comparison of fingerprint attributes from bot services that evade each anti-bot service individually as well as bot services that evade both shows that bot services indeed alter different browser fingerprint attributes for evasion. Further, our analysis reveals the presence of inconsistent fingerprint attributes in evasive bots. Given evasive bots seem to have difficulty in ensuring consistency in their fingerprint attributes, we propose a data-driven approach to discover rules to detect such inconsistencies across space (two attributes in a given browser fingerprint) and time (a single attribute at two different points in time). These rules, which can be readily deployed by anti-bot services, reduce the evasion rate of evasive bots against DataDome and BotD by 48.11% and 44.95% respectively.",
+    "citation_count": 3,
+    "reference_count": 0,
+    "url": "https://doi.org/10.1145/3730567.3732919",
+    "dblp_key": "conf/imc/VenugopalanMAWK25",
+    "source_id": "https://openalex.org/W4399694355"
+  },
+  {
+    "title": "An In-Depth Investigation of Data Collection in LLM App Ecosystems.",
+    "authors": [
+      "Yuhao Wu 0006",
+      "Evin Jaff",
+      "Ke Yang",
+      "Ning Zhang 0017",
+      "Umar Iqbal 0002"
+    ],
+    "venue": "IMC",
+    "year": 2025,
+    "abstract": "LLM app (tool) ecosystems are rapidly evolving to support sophisticated use cases that often require extensive user data collection. Given that LLM apps are developed by third parties and anecdotal evidence indicating inconsistent enforcement of policies by LLM platforms, sharing user data with these apps presents significant privacy risks. In this paper, we aim to bring transparency in data practices of LLM app ecosystems. We examine OpenAI's GPT app ecosystem as a case study. We propose an LLM-based framework to analyze the natural language specifications of GPT Actions (custom tools) and assess their data collection practices. Our analysis reveals that Actions collect excessive data across 24 categories and 145 data types, with third-party Actions collecting 6.03% more data on average. We find that several Actions violate OpenAI's policies by collecting sensitive information, such as passwords, which is explicitly prohibited by OpenAI. Lastly, we develop an LLM-based privacy policy analysis framework to automatically check the consistency of data collection by Actions with disclosures in their privacy policies. Our measurements indicate that the disclosures for most of the collected data types are omitted, with only 5.8% of Actions clearly disclosing their data collection practices.",
+    "citation_count": 1,
+    "reference_count": 5,
+    "url": "https://doi.org/10.1145/3730567.3732912",
+    "dblp_key": "conf/imc/WuJYZ025",
+    "source_id": "https://openalex.org/W4415222863"
+  },
+  {
+    "title": "Chaos in the Chain: Evaluate Deployment and Construction Compliance of Web PKI Certificate Chain.",
+    "authors": [
+      "Jia Yao",
+      "Yiming Zhang 0009",
+      "Baojun Liu 0002",
+      "Zhan Liu",
+      "Mingming Zhang 0010",
+      "Haixin Duan"
+    ],
+    "venue": "IMC",
+    "year": 2025,
+    "abstract": "Transport Layer Security (TLS) is a cornerstone to secure Internet communications. It requires proper deployment and validation of certificate chains. During validation, clients must first construct the chain from server-provided certificates. However, existing research often integrates chain construction into the broader validation process, lacking independent analysis of this crucial step. This paper presents the first systematic assessment of certificate chain construction, covering server-side deployment compliance and client-side capabilities. On the server side, we summarized structural requirements from RFC standards and evaluated real-world website compliance. We found that approximately 3% of Tranco Top 1M domains have deployed non-compliant chains, with common issues including reversed sequences and incomplete chains. The compliance would be influenced by HTTP server and Certificate Authority checks and guidance during the configuration process. On the client side, we evaluated 9 types of chain-building capabilities across 8 mainstream TLS implementations, uncovering prevalent deficiencies like inadequate backtracking and difficulties with long chains. These deficiencies could compromise TLS security, causing a fallback to insecure HTTP or making the service unavailable. Our findings highlight critical gaps in current certificate chain practices. Based on our findings, we also propose recommendations for improving the deployment and construction of certificate chains.",
+    "citation_count": 0,
+    "reference_count": 8,
+    "url": "https://doi.org/10.1145/3730567.3732921",
+    "dblp_key": "conf/imc/Yao0LLZD25",
+    "source_id": "https://openalex.org/W4415222299"
+  },
+  {
+    "title": "RemapRoute: Local Remapping of Internet Path Changes.",
+    "authors": [
+      "Elverton C. Fazzion",
+      "Giancarlo Oliveira Teixeira",
+      "Darryl Veitch",
+      "Christophe Diot",
+      "Renata Teixeira",
+      "Ítalo Cunha"
+    ],
+    "venue": "IMC",
+    "year": 2025,
+    "abstract": "Several systems rely on traceroute to track a large number of Internet paths as they change over time. Monitoring systems perform this task by remapping paths periodically or whenever a change is detected. This paper shows that such complete remapping is inefficient, because most path changes are localized to a few hops of a path. We develop RemapRoute, a tool to remap a path locally given the previously known path and a change point. RemapRoute sends targeted probes to locate and remap the often few hops that have changed. Our evaluation with trace-driven simulations and in a real deployment shows that local remapping reduces the average number of probes issued during remapping by 63% and 79%, respectively, when compared with complete remapping. At the same time, our results show that local remapping has little impact on the accuracy of inferred paths.",
+    "citation_count": 0,
+    "reference_count": 4,
+    "url": "https://doi.org/10.1145/3730567.3732923",
+    "dblp_key": "conf/imc/FazzionTVDTC25",
+    "source_id": "https://openalex.org/W4415222263"
+  },
+  {
+    "title": "Do Spammers Dream of Electric Sheep? Characterizing the Prevalence of LLM-Generated Malicious Emails.",
+    "authors": [
+      "Wei Hao",
+      "Van Tran",
+      "Vincent Rideout",
+      "Zixi Wang",
+      "AnMei Dasbach-Prisk",
+      "M. H. Afifi",
+      "Junfeng Yang",
+      "Ethan Katz-Bassett",
+      "Grant Ho",
+      "Asaf Cidon"
+    ],
+    "venue": "IMC",
+    "year": 2025,
+    "abstract": null,
+    "citation_count": 1,
+    "reference_count": 9,
+    "url": "https://doi.org/10.1145/3730567.3732922",
+    "dblp_key": "conf/imc/HaoTRWDAYKHC25",
+    "source_id": "https://openalex.org/W4415222234"
+  },
+  {
+    "title": "InternetSim: A Fast and Memory-Efficient Internet-Scale Inter-Domain Routing Simulator.",
+    "authors": [
+      "Jiahong Lai",
+      "Jessie Hui Wang",
+      "Yunhao Liu 0001",
+      "Jilong Wang 0001"
+    ],
+    "venue": "IMC",
+    "year": 2025,
+    "abstract": "Existing inter-domain routing simulators often suffer from low simulation accuracy, slow processing speeds, and high memory consumption, hindering their ability to perform large-scale Internet simulations. In this paper, we present InternetSim, a multi-threaded simulator for Internet-scale inter-domain routing. InternetSim enables incremental computation to deal with policy changes by some ASes, thus significantly accelerating multi-iteration context-continuous routing simulations. The memory efficiency is also improved by designing compact data structures for routing tables and out-of-memory errors are prevented by offloading the data to disk when necessary. Our simulator can complete an iteration of Internet-scale simulation within 13 hours (21× speedup compared to C-BGP) and can complete an ''incremental computation'' iteration within 15 seconds. The memory requirement is only 45% of C-BGP (without offloading) and the simulator can work well for Internet-scale simulations on a server with only 64GB if offloading is always enabled.",
+    "citation_count": 0,
+    "reference_count": 19,
+    "url": "https://doi.org/10.1145/3730567.3732924",
+    "dblp_key": "conf/imc/LaiW0025",
+    "source_id": "https://openalex.org/W4415222243"
+  },
+  {
+    "title": "Lazy Eye Inspection: Capturing the State of Happy Eyeballs Implementations.",
+    "authors": [
+      "Patrick Sattler",
+      "Matthias Kirstein",
+      "Lars Wüstrich",
+      "Johannes Zirngibl",
+      "Georg Carle"
+    ],
+    "venue": "IMC",
+    "year": 2025,
+    "abstract": "While transitioning to an IPv6-only communication, many devices settled on a dual-stack setup. IPv4 and IPv6 are available to these hosts for new connections. Happy Eyeballs (HE) describes a mechanism to prefer IPv6 for such hosts while ensuring a fast fallback to IPv4 when IPv6 fails. The IETF is currently working on the third version of HE. While the standards include recommendations for HE parameter choices, it is up to the client and OS to implement HE. In this paper, we investigate the state of HE in various clients, particularly web browsers and recursive resolvers. We introduce a framework to analyze and measure clients' HE implementations and parameter choices. According to our evaluation, only Safari supports all HE features. Safari is also the only client implementation in our study that uses a dynamic IPv4 connection attempt delay, a resolution delay, and interlaces addresses. We further show that problems with the DNS A record lookup can even delay and interrupt the network connectivity despite a fully functional IPv6 setup with Chrome and Firefox. We operate a publicly available website ( www.happy-eyeballs.net ) which measures the browser's HE behavior, and we publish our testbed measurement framework.",
+    "citation_count": 1,
+    "reference_count": 9,
+    "url": "https://doi.org/10.1145/3730567.3732925",
+    "dblp_key": "conf/imc/SattlerKWZC25",
+    "source_id": "https://openalex.org/W4415222300"
+  },
+  {
+    "title": "Why Measure.",
+    "authors": [
+      "Ellen Zegura"
+    ],
+    "venue": "IMC",
+    "year": 2025,
+    "abstract": "Performance measurement is not an end in itself. So why should public managers measure performance? Because they may find such measures helpful in achieving eight specific managerial purposes. As part of their overall management strategy, public managers can use performance measures to evaluate, control, budget, motivate, promote, celebrate, learn, and improve. Unfortunately, no single performance measure is appropriate for all eight purposes. Consequently, public managers should not seek the one magic performance measure. Instead, they need to think seriously about the managerial purposes to which performance measurement might contribute and how they might deploy these measures. Only then can they select measures with the characteristics necessary to help achieve each purpose. Without at least a tentative theory about how performance measures can be employed to foster improvement (which is the core purpose behind the other seven), public managers will be unable to decide what should be measured.",
+    "citation_count": 1368,
+    "reference_count": 70,
+    "url": "https://doi.org/10.1145/3730567.3735547",
+    "dblp_key": "conf/imc/Zegura25",
+    "source_id": "https://openalex.org/W2119040723"
+  },
+  {
+    "title": "Fishing for Smishing: Understanding SMS Phishing Infrastructure and Strategies by Mining Public User Reports.",
+    "authors": [
+      "Sharad Agarwal",
+      "Antonis Papasavva",
+      "Guillermo Suarez-Tangil",
+      "Marie Vasek"
+    ],
+    "venue": "IMC",
+    "year": 2025,
+    "abstract": "Recently, there has been a worldwide surge in SMS phishing, aka smishing. However, the lack of open-access updated datasets makes it challenging for researchers to study this global issue. Mobile network operators and government agencies provide users special SMS spam reporting services. Though, these services are regional and users are largely unaware. So, users often turn to public forums such as Twitter or Reddit to report and discuss smishing. This paper presents a novel methodological approach to collect an updated smishing dataset and measure the infrastructure, targets, and strategies employed by attackers to lure victims. We programmatically collect users' smishing reports from five public forums, collating over 64.5k smishing image attachments and reports, which include 28.6k sender IDs and 25.9k URLs criminals abuse to conduct smishing campaigns across 66 languages. We unveil the exploited infrastructure ranging from mobile network operators to domains. We categorize smishing texts into seven scam types and explain lures criminals use to deceive victims into providing sensitive/financial information. Through a case study using real time measurements on a random sample of Twitter posts, we showcase how to uncover Android malware spread via smishing. We suggest effective mitigation approaches to curb this widespread cybercrime.",
+    "citation_count": 0,
+    "reference_count": 24,
+    "url": "https://doi.org/10.1145/3730567.3764431",
+    "dblp_key": "conf/imc/AgarwalPSV25",
+    "source_id": "https://openalex.org/W7106336604"
+  },
+  {
+    "title": "Decoding DNSSEC Errors at Scale: An Automated DNSSEC Error Resolution Framework using Insights from DNSViz Logs.",
+    "authors": [
+      "Md. Ishtiaq Ashiq",
+      "Olivier Hureau",
+      "Casey T. Deccio",
+      "Tijay Chung"
+    ],
+    "venue": "IMC",
+    "year": 2025,
+    "abstract": "Low adoption and high misconfiguration rates continue to blunt the security benefits of DNSSEC. Drawing on 1.1M historical diagnostic snapshots covering 319K second-level and their subdomains between 2020 and 2024 from the DNSViz service, this paper delivers the first longitudinal, data-driven taxonomy of real-world DNSSEC failures. The study shows that NSEC3 misconfigurations, delegation failures and missing/expired signatures account for more than 70% of all bogus states, and that 18% of such domains remain broken.",
+    "citation_count": 0,
+    "reference_count": 3,
+    "url": "https://doi.org/10.1145/3730567.3764428",
+    "dblp_key": "conf/imc/AshiqHDC25",
+    "source_id": "https://openalex.org/W4416502101"
+  },
+  {
+    "title": "The Developer, the RFC, and the Middlebox: An HTTP/2 Compliance Story.",
+    "authors": [
+      "Mahmoud Attia",
+      "Iliès Benhabbour",
+      "Marc Dacier"
+    ],
+    "venue": "IMC",
+    "year": 2025,
+    "abstract": "The current Internet landscape is shaped by intermediate elements, known as middleboxes, which disrupt the end-to-end principle the Internet was originally designed around. In [5], the authors examine the HTTP/1.1 ~protocol and demonstrate that assessing the compliance of a remote implementation with respect to its RFC ~is challenging, as middleboxes on the network path can alter application-layer content. This paper builds on their work by focusing on HTTP/2, a more efficient yet more complex protocol that is known to be vulnerable to denial-of-service attacks. We create a suite of 156 tests, more than three times the number conducted on HTTP/1.1, and analyze 12 popular proxies as well as 3 cloud proxies. This work not only investigates the current landscape of proxy implementations with respect to RFCs, but also examines the evolution of compliance over time in local proxies. We show that while there is an improvement compared to previous results in HTTP/1.1, none of the proxies are yet fully compliant.",
+    "citation_count": 1,
+    "reference_count": 25,
+    "url": "https://doi.org/10.1145/3730567.3764447",
+    "dblp_key": "conf/imc/AttiaBD25",
+    "source_id": "https://openalex.org/W7106215498"
+  },
+  {
+    "title": "Assessing LEO Satellite Networks for National Emergency Failover.",
+    "authors": [
+      "Vaibhav Bhosale",
+      "Ying Zhang",
+      "Sameer S. Kapoor",
+      "Robin Kim",
+      "Miguel T. Schlicht",
+      "Muskaan Gupta",
+      "Ekaterina Tumanova",
+      "Zachary S. Bischof",
+      "Fabián E. Bustamante",
+      "Alberto Dainotti",
+      "Ahmed Saeed 0001"
+    ],
+    "venue": "IMC",
+    "year": 2025,
+    "abstract": "In this paper, we study the viability of LEO networks as a failover network. We contextualize our analysis by framing the capacity of satellite networks relative to lost capacity due to submarine cable failure. Specifically, we focus on scenarios where LEO networks act as failovers for submarine cables, providing a concrete target capacity to be fulfilled by the satellite network. We introduce a new model and simulator that help us estimate the failover capacity. We identify key factors determining the actual capacity available on the satellite network: the total area of the country, the terminal distribution policy used by the government, the spectrum allocation and traffic engineering policies used by the LEO network operator. Based on our findings, we make policy recommendations to governments that can result in an increase of up to 1.8× in the failover capacity without requiring additional infrastructure. However, we find after implementing all our recommendations, with 200k terminals deployed and no competing traffic in the network, a satellite network can only satisfy 0.9-14.7% of the capacity lost due to submarine cable failure in four out of six case studies.",
+    "citation_count": 0,
+    "reference_count": 23,
+    "url": "https://doi.org/10.1145/3730567.3764482",
+    "dblp_key": "conf/imc/BhosaleZKKSGTBB25",
+    "source_id": "https://openalex.org/W7106271745"
+  },
+  {
+    "title": "Protocol Compliance in Popular RTC Applications.",
+    "authors": [
+      "Peiqing Chen",
+      "Peng Qiu",
+      "Lambda",
+      "Zaoxing Liu"
+    ],
+    "venue": "IMC",
+    "year": 2025,
+    "abstract": null,
+    "citation_count": 1,
+    "reference_count": 10,
+    "url": "https://doi.org/10.1145/3730567.3764438",
+    "dblp_key": "conf/imc/ChenQLL25",
+    "source_id": "https://openalex.org/W7106396352"
+  },
+  {
+    "title": "Hello, GenAI? Dissecting Human to Generative AI Calling.",
+    "authors": [
+      "Ruizhi Cheng",
+      "Surendra Pathak",
+      "Guowu Xie",
+      "Matteo Varvello",
+      "Songqing Chen",
+      "Bo Han 0001"
+    ],
+    "venue": "IMC",
+    "year": 2025,
+    "abstract": "The rise of generative artificial intelligence (GenAI), powered by large language models, has led to the emergence of real-time, voice-based conversational applications that enable dynamic, multi-modal interactions for everyday tasks such as checking the weather or planning a trip. These human-to-GenAI calling applications blend speech processing, generative intelligence, and real-time communication, presenting new challenges in latency optimization, network infrastructure design, and resilience under load. Despite their growing popularity, little is known about the operational characteristics and performance of these applications. This paper conducts an empirical measurement of six human-to-GenAI calling applications from Google, Meta, Microsoft, and OpenAI, focusing on their input/output modalities, network behavior, latency metrics, and robustness. Our findings reveal key design choices and performance bottlenecks in these emerging applications. For example, the conversational latency often reaches several seconds, far exceeding the typical sub-second delays of human-to-human voice communication and potentially impairing interactivity. Moreover, voice-based GenAI traffic is inherently asymmetric: the uplink, carrying real-time human speech, benefits from streaming-based transmission, while the typically large downlink GenAI responses are better served through batch-based delivery.",
+    "citation_count": 0,
+    "reference_count": 39,
+    "url": "https://doi.org/10.1145/3730567.3764441",
+    "dblp_key": "conf/imc/ChengPXVC025",
+    "source_id": "https://openalex.org/W4416501801"
+  },
+  {
+    "title": "Autonomous Systems under AReST: Advanced Revelation of Segment Routing Tunnels.",
+    "authors": [
+      "Florian Dekinder",
+      "Kevin Vermeulen",
+      "Benoit Donnet"
+    ],
+    "venue": "IMC",
+    "year": 2025,
+    "abstract": "Segment Routing (Sr), an advanced source routing mechanism, is a promising technology with a wide range of applications that has already gained traction from hardware vendors, network operators, and researchers alike. However, despite the abundance of activity surrounding Sr, little is known about how to gauge Sr deployment and its usage by operators.",
+    "citation_count": 0,
+    "reference_count": 20,
+    "url": "https://doi.org/10.1145/3730567.3764436",
+    "dblp_key": "conf/imc/DekinderVD25",
+    "source_id": "https://openalex.org/W7106341038"
+  },
+  {
+    "title": "A Permissions Odyssey: A Systematic Study of Browser Permissions on Modern Websites.",
+    "authors": [
+      "Alberto Fernández de Retana",
+      "Jannis Rautenstrauch",
+      "Igor Santos-Grueiro",
+      "Ben Stock"
+    ],
+    "venue": "IMC",
+    "year": 2025,
+    "abstract": null,
+    "citation_count": 0,
+    "reference_count": 0,
+    "url": "https://doi.org/10.1145/3730567.3764489",
+    "dblp_key": "conf/imc/RetanaRSS25",
+    "source_id": "https://openalex.org/W7106210107"
+  },
+  {
+    "title": "'How I learned to stop worrying and love IPv6': Measuring the Internet's Readiness for DNS over IPv6.",
+    "authors": [
+      "Tobias Fiebig",
+      "Anja Feldmann"
+    ],
+    "venue": "IMC",
+    "year": 2025,
+    "abstract": "In this paper, we revisit a fundamental discussion in the context of the Internet's future from the past decade: Is IPv6 harmful for DNS or not? As simple as this question may sound, until now, there is no clear recommendation to support DNS for authoritative and recursive name servers. RFC3901 is unchanged since 2004. We revisit the decades long history of this discussion, how it relates to choices regarding fragmentation (end-to-end in IPv6 vs. on-path in IPv4), limitations to Path MTU Discovery (PMTUD), and diverging security policies which suggest dropping IPv6 fragments. To address this question we gather an extensive dataset to capture zones' resolvability (for the top 10 million domains in the Google Chrome User Experience report) over time for different MTU and PMTUD scenarios. To scale our experiments we introduce 'unique name server sets', since fragmentation avoidance (RFC9715) and EDNS0 and TCP fallback capabilities are name server specific. Our results challenge prior work, demonstrating that: i) The negative impact of DNS resolution via IPv6 is negligible, even for DNSSEC enabled zones in a worst-case MTU/PMTUD scenario, ii) NS-Sets supporting DNSSEC are more likely to also support DNS resolution via IPv6, iii) Dropping or not dropping of fragments has negligible impact on IPv6 DNS resolution, and iv) Prior work missed the notable role of a single Tier-1 when determining how wide-spread IPv6 fragment dropping is. From our results, we argue that it is time to recommend that IPv6 SHOULD be used in the DNS.",
+    "citation_count": 0,
+    "reference_count": 15,
+    "url": "https://doi.org/10.1145/3730567.3764439",
+    "dblp_key": "conf/imc/FiebigF25",
+    "source_id": "https://openalex.org/W7106210032"
+  },
+  {
+    "title": "Replication: Performance of Cellular Networks on the Wheels.",
+    "authors": [
+      "Moinak Ghoshal",
+      "Omar Basit",
+      "Imran Khan 0021",
+      "Z. Jonny Kong",
+      "Sizhe Wang",
+      "Yufei Feng 0003",
+      "Phuc Dinh",
+      "Y. Charlie Hu",
+      "Dimitrios Koutsonikolas"
+    ],
+    "venue": "IMC",
+    "year": 2025,
+    "abstract": "In 2022, 3 years after the initial 5G rollout, through a cross-country US driving trip (from Los Angeles to Boston), the authors of [28] conducted an in-depth measurement study of user-perceived experience (network coverage, performance, and QoE of a set of major 5G ''killer'' apps) over all three major US carriers. The study revealed disappointingly low 5G coverage and suboptimal network performance -- falling short of the expectations needed to support the new generation of 5G ''killer apps. Now, five years into the 5G era, widely considered its midlife, 5G networks are expected to deliver stable and mature performance. In this work, we replicate the 2022 study along the same coast-to-coast route, evaluating the current state of cellular coverage and network and application performance across all three major US operators. While we observe a substantial increase in 5G coverage and a corresponding boost in network performance, two out of three operators still exhibit less than 50% 5G coverage along the driving route even five years after the initial 5G rollout. We expand the scope of the previous work by analyzing key lower-layer KPIs that directly influence the network performance. Finally, we introduce a head-to-head comparison with Starlink's LEO satellite network to assess whether emerging non-terrestrial networks (NTNs) can complement the terrestrial cellular infrastructure in the next generation of wireless connectivity.",
+    "citation_count": 3,
+    "reference_count": 31,
+    "url": "https://doi.org/10.1145/3730567.3764486",
+    "dblp_key": "conf/imc/GhoshalBKKW0DHK25",
+    "source_id": "https://openalex.org/W7106231778"
+  },
+  {
+    "title": "Prefix2Org: Mapping BGP Prefixes to Organizations.",
+    "authors": [
+      "Deepak Gouda",
+      "Alberto Dainotti",
+      "Cecilia Testart"
+    ],
+    "venue": "IMC",
+    "year": 2025,
+    "abstract": "Accurately mapping Internet address space to organizations is critical to understanding the Internet's organizational ecosystem. Traditional approaches, which rely on individual WHOIS queries often suffer from unclear ownership structure of IP addresses and inconsistent organization names, resulting in ambiguous inferences. Alternative methods that map BGP prefixes to Autonomous Systems Numbers (ASNs) and ASNs to organizations are also inaccurate since ASes often originate prefixes on behalf of their customers. This paper introduces Prefix2Org, a comprehensive prefix-to-organization mapping framework. We introduce a taxonomy for the holders of IP addresses and a methodology to map IP addresses to organizations, based on the operational rights over them. We develop string processing heuristics and leverage RPKI Certificates and routing data to address inconsistencies in organizational names and aggregate prefixes under unified management. Our public dataset covers 99.96% (99.99%) of IPv4 (IPv6) prefixes. We validate 9.3% of routed IPv4 addresses with a 99% recall, and 5.6% of IPv6 prefixes with a 99.34% recall. For the two large organizations where we obtained complete ground truth, Prefix2Org produced no false positives. Finally, in two case studies, (i) we characterize organizations that hold address space without an ASN and (ii) demonstrate how RPKI adoption measured through Prefix2Org differs from the previously used AS-centric view.",
+    "citation_count": 0,
+    "reference_count": 7,
+    "url": "https://doi.org/10.1145/3730567.3764485",
+    "dblp_key": "conf/imc/GoudaDT25",
+    "source_id": "https://openalex.org/W7106229303"
+  },
+  {
+    "title": "ru-RPKI-ready: the Road Left to Full ROA Adoption.",
+    "authors": [
+      "Deepak Gouda",
+      "Romain Fontugne",
+      "Cecilia Testart"
+    ],
+    "venue": "IMC",
+    "year": 2025,
+    "abstract": "Resource Public Key Infrastructure (RPKI) has emerged as a standard for enhancing the security of Internet routing. Currently, more than 50% BGP prefixes are covered by RPKI Route Origin Authorizations (ROAs), enabling networks to validate the origin of prefix advertisements in BGP. Despite this progress, ROA adoption remains non-uniform, with key stakeholders encountering significant barriers in the adoption process. In this paper, we combine a product adoption framework with data-driven analysis of global RPKI adoption to identify persistent disparities and pinpoint the stages of the adoption process that hinder broader growth. Our study reveals that, although RPKI awareness has grown, the complexity of planning and deploying ROAs remains a significant challenge. Since no unified workflow and documentation exist for ROA planning, many organizations are left without clear operational guidance. To address this challenge, we propose a systematic framework for ROA planning and introduce ru-RPKI-ready, a platform designed to provide data and insights to facilitate ROA planning. Using ru-RPKI-ready, we characterize the routed address space not covered by RPKI ROAs. We find that 47% IPv4 and 71% IPv6 prefixes not in RPKI could be covered with minimal technical effort. Our analysis also reveals that if as few as ten organizations were to take the necessary actions, the global ROA coverage could increase by 7% for IPv4 and 19% for IPv6.",
+    "citation_count": 0,
+    "reference_count": 16,
+    "url": "https://doi.org/10.1145/3730567.3764452",
+    "dblp_key": "conf/imc/GoudaFT25",
+    "source_id": "https://openalex.org/W7106328061"
+  },
+  {
+    "title": "Unmasking the Shadow Economy: A Deep Dive into Drainer-as-a-Service Phishing on Ethereum.",
+    "authors": [
+      "Bowen He",
+      "Yufeng Hu",
+      "Zhuo Chen 0023",
+      "Yuan Chen",
+      "Ting Yu 0001",
+      "Rui Chang",
+      "Lei Wu 0012",
+      "Yajin Zhou"
+    ],
+    "venue": "IMC",
+    "year": 2025,
+    "abstract": "The prosperity of Ethereum gives rise to a new type of transaction-based phishing scam. Specifically, users are tempted to visit phishing websites and sign phishing transactions that allow scammers to withdraw their tokens. Meanwhile, to accelerate the deployment of phishing websites, scammers have introduced a business model, Drainer-as-a-Service (DaaS). In this model, drainer operators focus on crafting specialized phishing toolkits, named ''wallet drainers'', while drainer affiliates handle the deployment and promotion of phishing websites. After stealing victims' tokens, they will distribute profits. In this paper, we present the first systematic study of DaaS on Ethereum. To begin with, we propose a snowball sampling approach to build the first large-scale DaaS dataset, including 1,910 profit sharing contracts, 56 operator accounts, 6,087 affiliate accounts, and 87,077 profit-sharing transactions. Then, we analyze the scale of DaaS from the perspectives of victims, operators, and affiliates, and perform clustering analysis to uncover dominant DaaS families. Finally, we reported DaaS accounts in the dataset and 32,819 phishing websites deployed with DaaS toolkits to the community. Our work aims to serve as a guide for Ethereum service providers to enhance user protection against DaaS.",
+    "citation_count": 0,
+    "reference_count": 13,
+    "url": "https://doi.org/10.1145/3730567.3764476",
+    "dblp_key": "conf/imc/HeHCC0C0Z25",
+    "source_id": "https://openalex.org/W4416502104"
+  },
+  {
+    "title": "LACeS: An Open, Fast, Responsible and Efficient Longitudinal Anycast Census System.",
+    "authors": [
+      "Remi Hendriks",
+      "Matthew Luckie",
+      "Mattijs Jonker",
+      "Raffaele Sommese",
+      "Roland van Rijswijk-Deij"
+    ],
+    "venue": "IMC",
+    "year": 2025,
+    "abstract": "IP anycast replicates an address at multiple locations to reduce latency and enhance resilience.Due to anycast's crucial role in the modern Internet, earlier research introduced tools to perform anycast censuses.The first, iGreedy, uses latency measurements from geographically dispersed locations to map anycast deployments.The second, MAnycast 2 , uses anycast to perform a census of other anycast networks.MAnycast 2 's advantage is speed and coverage but suffers from problems with accuracy, while iGreedy is highly accurate but slower using author-defined probing rates and costlier.In this paper we address the shortcomings of both systems and present LACeS (Longitudinal Anycast Census System).Taking MAnycast 2 as a basis, we completely redesign its measurement pipeline, and add support for distributed probing, additional protocols (DNS over UDP, TCP SYN/ACK, and IPv6) and latency measurements similar to iGreedy.We validate LACeS on an anycast testbed with 32 globally distributed nodes, compare against an external anycast production deployment, extensive latency measurements with RIPE Atlas and cross-check over 60% of detected anycast using operator ground truth that shows LACeS achieves high accuracy.Finally, we provide a longitudinal analysis of anycast, covering 17+months, showing LACeS achieves high precision.We make continual daily LACeS censuses available to the community and release the source code of the tool under a permissive open source license.",
+    "citation_count": 1,
+    "reference_count": 21,
+    "url": "https://doi.org/10.1145/3730567.3764484",
+    "dblp_key": "conf/imc/HendriksLJSR25",
+    "source_id": "https://openalex.org/W4416501799"
+  },
+  {
+    "title": "Unlocking Crowdsourced Propagation Measurements: Accuracy Guarantees for Mobile Phones.",
+    "authors": [
+      "Max Hollingsworth",
+      "Michael G. Cotton",
+      "Sangtae Ha",
+      "Dirk Grunwald"
+    ],
+    "venue": "IMC",
+    "year": 2025,
+    "abstract": "Reference signals from cellular networks present an untapped and abundant signal of opportunity for high quality radio frequency (RF) propagation measurements. Commercial-off-the-shelf mobile phones continuously capture and report Reference Signal Received Power (RSRP) measurements, making them an easily crowdsource-able data source for RF propagation modeling in path geometries and frequencies relevant to cellular communications, broadcast, and short-range outdoor communications systems. However, it remains unclear whether crowdsourced mobile phone RSRP measurements can meet the stringent accuracy requirements of measured propagation data in support of RF propagation model validation and improvement.",
+    "citation_count": 0,
+    "reference_count": 26,
+    "url": "https://doi.org/10.1145/3730567.3764477",
+    "dblp_key": "conf/imc/HollingsworthCH25",
+    "source_id": "https://openalex.org/W7106209484"
+  },
+  {
+    "title": "Tracking Internet Disruptions in Ukraine: Insights from Three Years of Active Full Block Scans.",
+    "authors": [
+      "Florian Holzbauer",
+      "Sebastian Strobl",
+      "Johanna Ullrich"
+    ],
+    "venue": "IMC",
+    "year": 2025,
+    "abstract": "Numerous disruptions to Internet access have been reported during the war in Ukraine, including large-scale outages, damage to network infrastructure, surveillance, and censorship measures. However, most observations rely on local reports or monitoring systems within Ukraine. In this paper, we investigate whether the conflict's impact on Internet connectivity can be observed externally, from a vantage point outside Ukraine. Focusing on the Kherson region, which has remained on the frontline for over three years, we conduct an active measurement campaign probing the Ukrainian address space at two-hour intervals since March 2, 2022, the 7th day of the invasion, resulting in a country-wide dataset that spans the full duration of the conflict. Extending existing outage detection approaches, we infer three signals to detect Internet disruptions and refine the mapping of ASes and address blocks to specific regions. This allows us to assign disruptions to oblasts with greater confidence. Our results demonstrate that Internet disruptions caused by the war can be measured remotely by any host connected to the Internet. Our analysis provides new insights into the resilience of small regional providers and identifies periods when Ukraine's Internet infrastructure was under significant strain.",
+    "citation_count": 1,
+    "reference_count": 8,
+    "url": "https://doi.org/10.1145/3730567.3764449",
+    "dblp_key": "conf/imc/HolzbauerSU25",
+    "source_id": "https://openalex.org/W7106231205"
+  },
+  {
+    "title": "Measuring the Time Source Vulnerabilities in the NTP Ecosystem.",
+    "authors": [
+      "Zhentian Huang",
+      "Shuai Wang 0028",
+      "Li Chen 0008",
+      "Dan Li 0001",
+      "Yilun Liu"
+    ],
+    "venue": "IMC",
+    "year": 2025,
+    "abstract": "Precise timekeeping is crucial for the dependable functioning and security of multiple Internet infrastructures, such as TLS certificates. Although the Network Time Protocol (NTP) is widely used for time synchronization across devices, it has several security vulnerabilities. Network Time Security (NTS) offers server authentication and integrity verification to protect against man-in-the-middle attacks. However, NTS does not address issues related to erroneous time sources.",
+    "citation_count": 1,
+    "reference_count": 21,
+    "url": "https://doi.org/10.1145/3730567.3764478",
+    "dblp_key": "conf/imc/HuangW00L25",
+    "source_id": "https://openalex.org/W7106305849"
+  },
+  {
+    "title": "Replication: Characterizing MPLS Tunnels over Internet Paths.",
+    "authors": [
+      "Jarrett Huddleston",
+      "Matthew Luckie",
+      "Alexander Marder"
+    ],
+    "venue": "IMC",
+    "year": 2025,
+    "abstract": "Traceroute is a critical tool in the Internet measurement toolbox, but its output can be misleading. One problem for traceroute analysis is that certain types of Multiprotocol Label Switching (MPLS) tunnels hide routers from traceroute output. Worse still, there is no simple way to detect or reveal missing routers. Any analysis that expects comprehensive topology discovery—including identifying performance bottlenecks, analyzing traffic engineering approaches, and evaluating traffic sovereignty—needs to account for MPLS. In this paper, we replicate previous work by Vanaubel et al. [18, 21] to characterize and provide a snapshot of the current deployment of MPLS tunnels. We also release a sustainable and easily deployed tool for MPLS detection, called PyTNT. Using PyTNT, we find that the problematic types of MPLS tunnels remain prevalent, though we inferred a general decrease in MPLS usage across the Internet. We also inferred that public clouds accounted for 3 of the top 10 networks with the most routers observed to be in MPLS tunnels. Finally, we observed more MPLS routers in Europe than any in other continent, and more MPLS routers in the U.S. than any other country.",
+    "citation_count": 0,
+    "reference_count": 13,
+    "url": "https://doi.org/10.1145/3730567.3764457",
+    "dblp_key": "conf/imc/HuddlestonLM25",
+    "source_id": "https://openalex.org/W4416502106"
+  },
+  {
+    "title": "Roam Without a Home: Unraveling the Airalo Ecosystem.",
+    "authors": [
+      "Hyunseok Daniel Jang",
+      "Matteo Varvello",
+      "Andra Lutu",
+      "Yasir Zaki"
+    ],
+    "venue": "IMC",
+    "year": 2025,
+    "abstract": "Recently, various Mobile Network Aggregators (MNAs) have emerged, leveraging the coverage of a few base operators to offer global connectivity. These MNAs reap the benefits of network softwarization and virtualization, such as eSIM technology or control/data-plane separation. This paper explores a new type of MNA — a thick MNA — that uses multiple base operators from different regions to provide eSIM profiles and employs public internet gateways outside the base operators' home countries. Specifically, we analyze Airalo, a thick MNA operating in 219 countries. Unlike other MNAs that our community has scrutinized, we show that Airalo often decouples the geographical location of the public internet gateway from the native country of the base operator via IPX Hub Breakout (IHBO). To map Airalo's underlying infrastructure, we ran web-based measurements that 14 volunteers performed while traveling and using an Airalo eSIM on their personal devices. We further dive into Airalo's performance by running device-based measurements (speedtest, traceroute, etc.) in 10 countries. We find that IHBO, despite offering some latency benefits over traditional Home-Routed Roaming, still results in inflated latency and degraded bandwidth compared to non-roaming traffic, introducing new challenges for user experience, content access, and privacy.",
+    "citation_count": 0,
+    "reference_count": 13,
+    "url": "https://doi.org/10.1145/3730567.3764473",
+    "dblp_key": "conf/imc/JangVLZ25",
+    "source_id": "https://openalex.org/W7106224850"
+  },
+  {
+    "title": "Scrapers Selectively Respect robots.txt Directives: Evidence From a Large-Scale Empirical Study.",
+    "authors": [
+      "Taein Kim",
+      "Karstan Bock",
+      "Claire Luo",
+      "Amanda Liswood",
+      "Chloe Poroslay",
+      "Emily Wenger"
+    ],
+    "venue": "IMC",
+    "year": 2025,
+    "abstract": "Online data scraping has taken on new dimensions in recent years, as traditional scrapers have been joined by new AI-specific bots. To counteract unwanted scraping, many sites use tools like the Robots Exclusion Protocol (REP), which places a robots.txt file at the site root to dictate scraper behavior. Yet, the efficacy of the REP is not well-understood. Anecdotal evidence suggests some bots comply poorly with it, but no rigorous study exists to support (or refute) this claim. To understand the merits and limits of the REP, we conduct the first large-scale study of web scraper compliance with robots.txt directives using anonymized web logs from our institution. We analyze the behavior of 130 self-declared bots (and many anonymous ones) over 40 days, using a series of controlled robots.txt experiments. We find that bots are less likely to comply with stricter robots.txt directives, and that certain categories of bots, including AI search crawlers, rarely check robots.txt at all. Our findings suggest that relying on robots.txt to prevent unwanted scraping is risky and highlight the need for alternatives.",
+    "citation_count": 1,
+    "reference_count": 1,
+    "url": "https://doi.org/10.1145/3730567.3764471",
+    "dblp_key": "conf/imc/KimBLLPW25",
+    "source_id": "https://openalex.org/W7106250948"
+  },
+  {
+    "title": "From Voice to Ads: Auditing Commercial Smart Speakers for Targeted Advertising based on Voice Characteristics.",
+    "authors": [
+      "Tu Le",
+      "Luca Baldesi",
+      "Athina Markopoulou",
+      "Carter T. Butts",
+      "Zubair Shafiq"
+    ],
+    "venue": "IMC",
+    "year": 2025,
+    "abstract": "Many devices are accessed and controlled through voice assistants today, a representative example being Echo smart speakers and other Amazon devices controlled by Alexa. These offer the convenience of accessing services through voice interactions, but also raise privacy concerns, as data can be stored and used for personalization, and voice biometric information is sensitive. Unfortunately, there remains a lack of transparency and control over the collection and use of this data. Although prior work has shown evidence of ad targeting based on data derived from voice interactions and user profiles/interests, it has so far been an open question whether voice biometric information itself is utilized for targeting. In this paper, (i) we build a general auditing methodology to answer this question for off-the-shelf commercial smart speakers, and (ii) we apply it specifically to Amazon Echo Dot. Our findings suggest that Amazon Music ad content is more strongly associated with attributes (gender and age) related to voice characteristics than would be expected by chance. This has important implications for compliance, since voice contains sensitive biometric information that is protected by several privacy regulations.",
+    "citation_count": 0,
+    "reference_count": 19,
+    "url": "https://doi.org/10.1145/3730567.3764444",
+    "dblp_key": "conf/imc/LeBMBS25",
+    "source_id": "https://openalex.org/W7106305375"
+  },
+  {
+    "title": "Understanding and Characterizing Intermediate Paths of Email Delivery: The Hidden Dependencies.",
+    "authors": [
+      "Ruixuan Li 0008",
+      "Chaoyi Lu",
+      "Baojun Liu 0002",
+      "Yanzhong Lin",
+      "Haixin Duan",
+      "Qingfeng Pan",
+      "Jun Shao 0001"
+    ],
+    "venue": "IMC",
+    "year": 2025,
+    "abstract": "In the cloud era, hosting-based email services have become a common business model. Various entities can participate in the email delivery process. However, the intermediate paths of email delivery have received little attention. In particular, the vulnerabilities and centralization of email intermediate paths have already posed real-world security threats. This paper conducts the first systematic analysis of intermediate paths of email delivery, aiming to understand dependence patterns and characterize the centralization. In collaboration with a large email service provider, we collected Received headers from email reception logs spanning nine months and reconstructed the complete intermediate paths of 105M clean emails. Our results reveal that Microsoft is the dominant provider of intermediate paths, participating in 66.4% of emails. We find that 86.9M (82.7%) emails rely on third-party providers in intermediate paths, and 9.1M (8.7%) paths involve multiple providers. Email signature providers frequently appear in cross-vendor intermediate paths. In addition, we reveal significant differences in the regional dependencies and centralization of email intermediate paths across countries and continents. The centralization observed in email intermediate paths also differs from incoming and outgoing servers. We hope our work prompts more attention to email intermediate paths to enhance the security of the email ecosystem.",
+    "citation_count": 0,
+    "reference_count": 15,
+    "url": "https://doi.org/10.1145/3730567.3764488",
+    "dblp_key": "conf/imc/0008LLLDP025",
+    "source_id": "https://openalex.org/W7106297458"
+  },
+  {
+    "title": "An In-Depth Look into 5G ON-OFF Loops in the Wild.",
+    "authors": [
+      "Yanbing Liu 0002",
+      "Jingqi Huang",
+      "Sonia Fahmy",
+      "Chunyi Peng 0001"
+    ],
+    "venue": "IMC",
+    "year": 2025,
+    "abstract": "5G is much faster than 4G, offering faster data transfer and better user experience overall. Intuitively, 5G should be used as much as possible. However, in this study, we unveil a surprising finding in operational 5G networks: 5G radio access may be in a persistent ON-OFF loop which repeatedly turns 5G on and then off. We conduct extensive measurement experiments with three US operators (T-Mobile, AT&T, and Verizon) in two US cities to characterize and analyze 5G ON-OFF loop instances in the wild. Surprisingly, we find that such 5G ON-OFF loops are not rare. They are widely observed at many places, significantly hurting data performance (from several hundreds of Mbps to tens of or even zero Mbps). We further dive into their causes and uncover that inconsistent triggers to turn 5G on and off co-exist in real-world settings, repeatedly releasing 5G radio access after getting 5G back. We identify three loop types each with distinct triggering events/causes (sub-types). Inconsistent policies and mechanisms on both network and device sides, as well as ''improper'' use of certain frequency channels, are responsible for the loops observed in this study. Our datasets and artifacts have been released on Github and MI-LAB.",
+    "citation_count": 0,
+    "reference_count": 18,
+    "url": "https://doi.org/10.1145/3730567.3764479",
+    "dblp_key": "conf/imc/0002HF025",
+    "source_id": "https://openalex.org/W7106346389"
+  },
+  {
+    "title": "Demystifying the Mobile Control Plane Characteristics for Ubiquitous Connectivity.",
+    "authors": [
+      "Shiyi Liu 0007",
+      "Yanbiao Li 0001",
+      "Xin Wang 0001",
+      "Xinyi Zhang 0004",
+      "Zhuoran Ma 0001",
+      "Haitao Liu 0006",
+      "Gaogang Xie"
+    ],
+    "venue": "IMC",
+    "year": 2025,
+    "abstract": "The evolution of mobile networks toward ubiquitous connectivity envisioned by International Mobile Telecommunications-2030 has caused a surge in control plane traffic. A deep understanding of the control plane's internal characteristics and mechanisms is crucial for delivering optimal services. However, existing measurements often neglect the control plane or treat it as an opaque box, focusing on overall performance instead of its intrinsic characteristics.",
+    "citation_count": 0,
+    "reference_count": 14,
+    "url": "https://doi.org/10.1145/3730567.3764463",
+    "dblp_key": "conf/imc/0007000M0X25",
+    "source_id": "https://openalex.org/W7106282681"
+  },
+  {
+    "title": "Attacks Come to Those Who Wait: Long-Term Observations in an SSH Honeynet.",
+    "authors": [
+      "Cristian Munteanu 0001",
+      "Yogesh Bhargav Suriyanarayanan",
+      "Georgios Smaragdakis",
+      "Anja Feldmann",
+      "Tobias Fiebig"
+    ],
+    "venue": "IMC",
+    "year": 2025,
+    "abstract": "Numerous studies have explored SSH attacks, often focusing on specific botnet activities or providing short-term analyses of particular honeynets. In this paper, we present an analysis of data collected from a large-scale honeynet over a three-year period, shedding light on gradual shifts in attacker behavior. Our findings suggest a trend toward more exploratory attacks, with indications that attackers are increasingly moving beyond the blind execution of scripts.",
+    "citation_count": 0,
+    "reference_count": 24,
+    "url": "https://doi.org/10.1145/3730567.3764475",
+    "dblp_key": "conf/imc/0001SSFF25",
+    "source_id": "https://openalex.org/W4416502074"
+  },
+  {
+    "title": "$CookieGuard: $ Characterizing and Isolating the First-Party Cookie Jar.",
+    "authors": [
+      "Pouneh Nikkhah Bahrami",
+      "Aurore Fass",
+      "Zubair Shafiq"
+    ],
+    "venue": "IMC",
+    "year": 2025,
+    "abstract": "As third-party cookies are being phased out or restricted by major browsers, first-party cookies are increasingly repurposed for tracking. Prior work has shown that third-party scripts embedded in the main frame can access and exfiltrate first-party cookies, including those set by other third-party scripts. However, existing browser security mechanisms, such as the Same-Origin Policy, Content Security Policy, and third-party storage partitioning, do not prevent this type of cross-domain interaction within the main frame. While recent studies have begun to highlight this issue, there remains a lack of comprehensive measurement and practical defenses. In this work, we conduct the first large-scale measurement of cross-domain access to first-party cookies across 20,000 websites. We find that 56 percent of websites include third-party scripts that exfiltrate cookies they did not set, and 32 percent allow unauthorized overwriting or deletion, revealing significant confidentiality and integrity risks. To mitigate this, we propose CookieGuard, a browser-based runtime enforcement mechanism that isolates first-party cookies on a per-script-origin basis. CookieGuard blocks all unauthorized cross-domain cookie operations while preserving site functionality in most cases, with Single Sign-On disruption observed on 11 percent of sites. Our results expose critical flaws in current browser models and offer a deployable path toward stronger cookie isolation.",
+    "citation_count": 0,
+    "reference_count": 0,
+    "url": "https://doi.org/10.1145/3730567.3764490",
+    "dblp_key": "conf/imc/BahramiFS25",
+    "source_id": "https://openalex.org/W4399554681"
+  },
+  {
+    "title": "The Decentralization Dilemma: Performance Trade-Offs in IPFS and Breakpoints.",
+    "authors": [
+      "Ruizhe Shi",
+      "Yuqi Fu",
+      "Ruizhi Cheng",
+      "Bo Han 0001",
+      "Yue Cheng 0001",
+      "Songqing Chen"
+    ],
+    "venue": "IMC",
+    "year": 2025,
+    "abstract": "Web 3.0 is redefining the current Web (Web 2.0) with a focus on data and governance decentralization. The InterPlanetary File System (IPFS) exemplifies this shift. However, it faces a trade-off between decentralization and performance: prior studies have shown IPFS's performance degradations but fail to diagnose root causes or deliver actionable fixes.",
+    "citation_count": 0,
+    "reference_count": 37,
+    "url": "https://doi.org/10.1145/3730567.3764453",
+    "dblp_key": "conf/imc/ShiFC00C25",
+    "source_id": "https://openalex.org/W4416502135"
+  },
+  {
+    "title": "Patchwork: A Traffic Capture and Analysis Platform for Network Experiments on a Federated Testbed.",
+    "authors": [
+      "Nishanth Shyamkumar",
+      "Hyunsuk Bang",
+      "Bjoern Sagstad",
+      "Prajwal Somendyapanahalli Venkateshmurthy",
+      "Sean Cummings",
+      "Nik Sultana"
+    ],
+    "venue": "IMC",
+    "year": 2025,
+    "abstract": null,
+    "citation_count": 0,
+    "reference_count": 22,
+    "url": "https://doi.org/10.1145/3730567.3764462",
+    "dblp_key": "conf/imc/ShyamkumarBSVCS25",
+    "source_id": "https://openalex.org/W7106212786"
+  },
+  {
+    "title": "Where in the World Are My Trackers? Mapping Web Tracking Flow Across Diverse Geographic Regions.",
+    "authors": [
+      "Sachin Kumar Singh",
+      "Robert Ricci",
+      "Alexander Gamero-Garrido"
+    ],
+    "venue": "IMC",
+    "year": 2025,
+    "abstract": "Web trackers are pervasive on the Internet, collecting user data as it flows from the end user's devices to servers. Understanding the physical location of these servers and trackers data flow is essential for assessing privacy risks and ensuring control over user data. While much of the existing research focuses on the Global North, especially the EU where regulations such as the General Data Protection Regulation (GDPR) are in place, the Global South, where most Internet users reside, remains under-studied. We address this gap by collecting measurements from the web browser and the data-plane (IP of responding server & latency) on the same device. A challenge to apply this approach in the Global South is the lower density of observation points in measurement infrastructure. To address this, we build a software suite that automatically collects measurements in various countries from a volunteer's computer. Our suite is interoperable with all major OSes and requires limited user intervention. We apply our method across 23 geographically diverse countries, offering in-depth insights into tracker data flow.",
+    "citation_count": 0,
+    "reference_count": 47,
+    "url": "https://doi.org/10.1145/3730567.3764427",
+    "dblp_key": "conf/imc/SinghRG25",
+    "source_id": "https://openalex.org/W7106288113"
+  },
+  {
+    "title": "Decoy Databases: Analyzing Attacks on Public Facing Databases.",
+    "authors": [
+      "Yuqian Song",
+      "Georgios Smaragdakis",
+      "Harm Griffioen"
+    ],
+    "venue": "IMC",
+    "year": 2025,
+    "abstract": "Databases often store sensitive organizational data but may be exposed to the Internet through misconfiguration or vulnerabilities. However, such databases may be unintentionally exposed to the Internet, e.g., due to misconfiguration or be vulnerable. To study real-world attacks on public-facing database management systems (DBMS), we deployed 278 honeypots over 20 days in March–April 2024. Our 220 low-interaction honeypots emulate MySQL, MSSQL, PostgreSQL, and Redis, revealing that scanning activity is relatively low (?3,000 IPs), but brute-force attempts are persistent. We also deploy 58 medium/high-interaction honeypots, which reveal three distinct types of exploitation: (i) direct attacks on the database management system to manipulate the database, (ii) ransom-driven attacks that copy and delete the targeted data, and (iii) use the database as an attack vector to take over the underlying system. Our findings highlight that DBMS-targeted attacks are distinct from those on other Internet-facing systems and deserve focused attention.",
+    "citation_count": 0,
+    "reference_count": 15,
+    "url": "https://doi.org/10.1145/3730567.3764481",
+    "dblp_key": "conf/imc/SongSG25",
+    "source_id": "https://openalex.org/W7106234496"
+  },
+  {
+    "title": "Towards a Non-Binary View of IPv6 Adoption.",
+    "authors": [
+      "Sulyab Thottungal Valapu",
+      "John S. Heidemann"
+    ],
+    "venue": "IMC",
+    "year": 2025,
+    "abstract": "Twelve years have passed since World IPv6 Launch Day, but what is the current state of IPv6 deployment? Prior work has examined IPv6 status as a binary: can a user do any IPv6? As deployment increases, we must consider a more nuanced, non-binary perspective on IPv6: how much and often can a user or a service use IPv6? We consider this question as a client, server, and cloud provider. Considering the client's perspective, we observe user traffic. We see that the fraction of IPv6 traffic a user sends varies greatly, both across users and day-by-day, with a standard deviation of over 15%. We show this variation occurs for two main reasons. First, IPv6 traffic is primarily human-generated, thus showing diurnal patterns. Second, some services lead with full IPv6 adoption, while others lag with partial or no support, so as users do different things their fraction of IPv6 varies. We look at server-side IPv6 adoption in two ways. First, we expand analysis of web services to examine how many are only partially IPv6 enabled due to their reliance on IPv4-only resources. Our findings reveal that only 12.6% of top 100k websites qualify as fully IPv6-ready. Finally, we examine cloud support for IPv6. Although all clouds and CDNs support IPv6, we find that tenant deployment rates vary significantly across providers. We find that ease of enabling IPv6 in the cloud is correlated with tenant IPv6 adoption rates, and recommend best practices for cloud providers to improve IPv6 adoption. Our results suggest IPv6 deployment is growing, but many services lag, presenting a potential for improvement.",
+    "citation_count": 0,
+    "reference_count": 0,
+    "url": "https://doi.org/10.1145/3730567.3764467",
+    "dblp_key": "conf/imc/ValapuH25",
+    "source_id": "https://openalex.org/W4415139320"
+  },
+  {
+    "title": "The SAP Cloud Infrastructure Dataset: A Reality Check of Scheduling and Placement of VMs in Cloud Computing.",
+    "authors": [
+      "Arno Uhlig",
+      "Iris Braun",
+      "Matthias Wählisch"
+    ],
+    "venue": "IMC",
+    "year": 2025,
+    "abstract": "Cloud computing and network slicing are essential concepts of forthcoming 5G mobile systems. Network slices are essentially chunks of virtual computing and connectivity resources, configured and provisioned for particular services according to their characteristics and requirements. The success of cloud computing and network slicing hinges on the efficient allocation of virtual resources (e.g., VCPU and VMDISK) and the optimal placement of virtualized network functions (VNFs) composing the network slices. In this context, this paper elaborates issues that may disrupt the placement of VNFs and virtual machines (VMs). This paper classifies the existing solutions for VM placement based on their nature, whether the placement is dynamic or static, their objectives, and their metrics. This paper then proposes a classification of VNF placement approaches, first, regarding the general placement and management issues of VNFs, and second, based on the target VNF type.",
+    "citation_count": 287,
+    "reference_count": 182,
+    "url": "https://doi.org/10.1145/3730567.3764480",
+    "dblp_key": "conf/imc/UhligBW25",
+    "source_id": "https://openalex.org/W2903252781"
+  },
+  {
+    "title": "Games Are Not Equal: Classifying Cloud Gaming Contexts for Effective User Experience Measurement.",
+    "authors": [
+      "Yifan Wang",
+      "Minzhao Lyu",
+      "Vijay Sivaraman"
+    ],
+    "venue": "IMC",
+    "year": 2025,
+    "abstract": "To tap into the growing market of cloud gaming, whereby game graphics is rendered in the cloud and streamed back to the user as a video feed, network operators are creating monetizable assurance services that dynamically provision network resources. However, without accurately measuring cloud gaming user experience, they cannot assess the effectiveness of their provisioning methods. Basic measures such as bandwidth and frame rate by themselves do not suffice, and can only be interpreted in the context of the game played and the player activity within the game. This paper equips the network operator with a method to obtain a real-time measure of cloud gaming experience by analyzing network traffic, including contextual factors such as the game title and player activity stage. Our method is able to classify the game title within the first five seconds of game launch, and continuously assess the player activity stage as being active, passive, or idle. We deploy it in an ISP hosting NVIDIA cloud gaming servers for the region. We provide insights from hundreds of thousands of cloud game streaming sessions over a three-month period into the dependence of bandwidth consumption and experience level on the gameplay contexts.",
+    "citation_count": 1,
+    "reference_count": 42,
+    "url": "https://doi.org/10.1145/3730567.3764455",
+    "dblp_key": "conf/imc/WangLS25",
+    "source_id": "https://openalex.org/W4416502121"
+  },
+  {
+    "title": "Replication: A Two Decade Review of Policy Atoms - Tracing the Evolution of AS Path Sharing Prefixes.",
+    "authors": [
+      "Weili Wu 0004",
+      "Zachary S. Bischof",
+      "Cecilia Testart",
+      "Alberto Dainotti"
+    ],
+    "venue": "IMC",
+    "year": 2025,
+    "abstract": "Afek et al. characterized the formation and stability of policy atoms, groups of prefixes that share the same Autonomous System (AS) paths as observed by BGP collectors, a concept initially defined by Broido and Claffy in 2001. Policy atoms provide a valuable perspective on the inter-domain routing policies in the Internet. With the rapid growth and increasing complexity of the Internet since these studies, we believe it is important to reassess the implications and applicability of policy atoms. In this paper, we revisit the policy atom concept after two decades and replicate the study performed by Afek et al. to assess the current state of AS path sharing and shed light on the evolution of policy atoms. We demonstrate that the Internet still operates on the level of policy atoms rather than individual ASes, as prefixes within the same atom tend to experience changes in AS path simultaneously. We apply the concept of policy atoms in IPv6 and find that this observation also holds true for IPv6 prefixes. We also relate trends in the characteristics of policy atoms with the development of inter-domain routing policies. We highlight new insights generated by the perspective of policy atoms and their potential for further applications. Our code is publicly available to support reproducibility and to encourage future research on this topic.",
+    "citation_count": 0,
+    "reference_count": 12,
+    "url": "https://doi.org/10.1145/3730567.3764432",
+    "dblp_key": "conf/imc/0004BTD25",
+    "source_id": "https://openalex.org/W4416502082"
+  },
+  {
+    "title": "PipHeap: Approximate Heap in the Pipeline Empowering Network Measurement.",
+    "authors": [
+      "Yuhan Wu 0001",
+      "Fenghao Dong",
+      "Qizhi Chen",
+      "Aomufei Yuan",
+      "Kaicheng Yang 0001",
+      "Hanglong Lv",
+      "Tong Yang 0003",
+      "Wenrui Liu 0006",
+      "Gaogang Xie"
+    ],
+    "venue": "IMC",
+    "year": 2025,
+    "abstract": null,
+    "citation_count": 0,
+    "reference_count": 38,
+    "url": "https://doi.org/10.1145/3730567.3764487",
+    "dblp_key": "conf/imc/0001DCY0L00X25",
+    "source_id": "https://openalex.org/W7106221347"
+  },
+  {
+    "title": "Approaching 100% Confidence in Stream Summary through ReliableSketch.",
+    "authors": [
+      "Yuhan Wu 0001",
+      "Hanbo Wu",
+      "Xilai Liu",
+      "Yuxuan Tian",
+      "Yikai Zhao 0001",
+      "Tong Yang 0003",
+      "Rui Qiu",
+      "Kaicheng Yang 0001",
+      "Sha Wang",
+      "Tao Li 0008",
+      "Lihua Miao",
+      "Gaogang Xie"
+    ],
+    "venue": "IMC",
+    "year": 2025,
+    "abstract": "To approximate sums of values in key-value data streams, sketches are widely used in databases and networking systems. They offer high-confidence approximations for any given key while ensuring low time and space overhead. While existing sketches are proficient in estimating individual keys, they struggle to maintain this high confidence across all keys collectively, an objective that is critically important in both algorithm theory and its practical applications. We propose ReliableSketch, the first to control the error of all keys to less than $Λ$ with a small failure probability $Δ$, requiring only $O(1 + Δ\\ln\\ln(\\frac{N}Λ))$ amortized time and $O(\\frac{N}Λ + \\ln(\\frac{1}Δ))$ space. Furthermore, its simplicity makes it hardware-friendly, and we implement it on CPU servers, FPGAs, and programmable switches. Our experiments show that under the same small space, ReliableSketch not only keeps all keys' errors below $Λ$ but also achieves near-optimal throughput, outperforming competitors with thousands of uncontrolled estimations. We have made our source code publicly available.",
+    "citation_count": 0,
+    "reference_count": 0,
+    "url": "https://doi.org/10.1145/3730567.3764459",
+    "dblp_key": "conf/imc/0001WLT00Q0WLMX25",
+    "source_id": "https://openalex.org/W4399355663"
+  },
+  {
+    "title": "A First Look into Long-lived BGP Zombies.",
+    "authors": [
+      "Iliana Xygkou",
+      "Antonis Chariton",
+      "Xenofontas A. Dimitropoulos",
+      "Alberto Dainotti"
+    ],
+    "venue": "IMC",
+    "year": 2025,
+    "abstract": "BGP is the de facto protocol used to manage a network's reachability on the Internet. Network operators announce and withdraw their prefixes on BGP to enable or to prevent communication towards their origin network, respectively. However, the withdrawal of a prefix could fail to propagate totally in the Internet and routes towards withdrawn prefixes could remain in the routing tables of routers. These routes are called stuck or zombie BGP routes, and their persistence can lead to performance degradation, or even partial or complete outage. In this paper, we first revisit existing work on BGP zombies using RIPE RIS beacons, identify the double-counting discrepancy, and revise the methodology to address this problem and detect zombies more accurately. Second, we point out limitations of the RIPE RIS beacons with respect to their periodicity, lack of diversity, and noise, and introduce and deploy our own beacons, which address these limitations. Using our beacons and the revised methodology, we analyze the lifespan of BGP zombies. We show that zombie routes can persist in RIBs for days, weeks, or even months. Furthermore, we document that BGP zombies can be announced months after their original withdrawal, affecting new ASes. Finally, we discuss interesting cases of long-lived zombie outbreaks that affected large ISPs with hundreds of ASes in their customer cones.",
+    "citation_count": 0,
+    "reference_count": 9,
+    "url": "https://doi.org/10.1145/3730567.3764469",
+    "dblp_key": "conf/imc/XygkouCDD25",
+    "source_id": "https://openalex.org/W7106294685"
+  },
+  {
+    "title": "Automated, Cross-Layer Root Cause Analysis of 5G Video-Conferencing Quality Degradation.",
+    "authors": [
+      "Fan Yi",
+      "Haoran Wan",
+      "Kyle Jamieson",
+      "Oliver Michel"
+    ],
+    "venue": "IMC",
+    "year": 2025,
+    "abstract": "5G wireless networks leverage complex scheduling, retransmission, and adaptation mechanisms to maximize their efficiency. These mechanisms interact to produce significant fluctuations in uplink and downlink capacity and latency, markedly impacting the the performance of real-time communication and multimedia applications, such as video conferencing. These applications are particularly sensitive to such fluctuations, resulting in lag, stuttering, distorted audio, and low video quality. In this paper, we present a cross-layer view of 5G networks and their impact on and interaction with video-conferencing applications. We conduct novel, detailed measurements of both private CBRS and commercial carrier cellular network dynamics, capturing physical- and link-layer events and correlating them with their effects at the network and transport layers, and the video-conferencing application itself. Our two datasets comprise days of low-rate campus-wide Zoom telemetry data, and hours of high-rate, correlated WebRTC-network-5G telemetry data. Based on these data, we trace performance anomalies back to root causes, identifying 24 previously unknown causal event chains that degrade 5G video conferencing. Armed with this knowledge, we build Domino, a tool that automates this process and is user-extensible to future wireless networks and interactive applications.",
+    "citation_count": 1,
+    "reference_count": 24,
+    "url": "https://doi.org/10.1145/3730567.3764434",
+    "dblp_key": "conf/imc/YiWJM25",
+    "source_id": "https://openalex.org/W7106283515"
+  },
+  {
+    "title": "Analyzing Compliance and Complications of Integrating Internationalized X.509 Certificates.",
+    "authors": [
+      "Mingming Zhang 0010",
+      "Jinfeng Guo",
+      "Yiming Zhang 0009",
+      "Shenglin Zhang",
+      "Baojun Liu 0002",
+      "Hanqing Zhao",
+      "Xiang Li 0108",
+      "Haixin Duan"
+    ],
+    "venue": "IMC",
+    "year": 2025,
+    "abstract": "The global PKI supports the issuance of Unicerts, which are X.509 certificates that integrate internationalized content such as IDNs and multilingual text. This integration introduces complexity in Unicert issuance and usage. Past incidents showed that poor Unicode handling can cause security risks, including spoofing and remote code execution, yet threats specific to PKI and Unicerts remain underexplored. This paper presents the first large-scale study of Unicerts, examining both issuance and parsing compliance. By analyzing 34.8 million Unicerts from CT logs and 9 mainstream TLS libraries, we found the PKI ecosystem struggles with adopting Unicode. On the issuing side, 373 issuers produced 249.3K (0.72%) noncompliant Unicerts due to weak validation on character ranges, normalization, and formatting, of which 65.3% arise from publicly trusted CAs. These issues arise from overly complex standard requirements. On the parsing side, TLS libraries like GnuTLS and PyOpenSSL exhibited issues in decoding and handling special characters, such as incompatible decoding and improper escaping, which could lead to incorrect entity extraction or subfield forgery. We further empirically identified threat surfaces, including user spoofing, CT monitor misleading, and traffic obfuscation. Finally, we analyzed root causes and proposed recommendations to enhance Unicert compliance in the global PKI ecosystem.",
+    "citation_count": 0,
+    "reference_count": 37,
+    "url": "https://doi.org/10.1145/3730567.3764483",
+    "dblp_key": "conf/imc/ZhangG0ZLZLD25",
+    "source_id": "https://openalex.org/W7106286410"
+  },
+  {
+    "title": "Not All Visitors are Bilingual: A Measurement Study of the Multilingual Web from an Accessibility Perspective.",
+    "authors": [
+      "Masudul Hasan Masud Bhuiyan",
+      "Matteo Varvello",
+      "Yasir Zaki",
+      "Cristian-Alexandru Staicu"
+    ],
+    "venue": "IMC",
+    "year": 2025,
+    "abstract": "English is the predominant language on the web, powering nearly half of the world's top ten million websites. Support for multilingual content is nevertheless growing, with many websites increasingly combining English with regional or native languages in both visible content and hidden metadata. This multilingualism introduces significant barriers for users with visual impairments, as assistive technologies like screen readers frequently lack robust support for non-Latin scripts and misrender or mispronounce non-English text, compounding accessibility challenges across diverse linguistic contexts. Yet, large-scale studies of this issue have been limited by the lack of comprehensive datasets on multilingual web content. To address this gap, we introduce LangCrUX, the first large-scale dataset of 120,000 popular websites across 12 languages that primarily use non-Latin scripts. Leveraging this dataset, we conduct a systematic analysis of multilingual web accessibility and uncover widespread neglect of accessibility hints. We find that these hints often fail to reflect the language diversity of visible content, reducing the effectiveness of screen readers and limiting web accessibility. We finally propose Kizuki, a language-aware automated accessibility testing extension to account for the limited utility of language-inconsistent accessibility hints.",
+    "citation_count": 0,
+    "reference_count": 16,
+    "url": "https://doi.org/10.1145/3730567.3764505",
+    "dblp_key": "conf/imc/BhuiyanVZS25",
+    "source_id": "https://openalex.org/W7106340384"
+  },
+  {
+    "title": "A Framework to Evaluate MPIC Security using Real-World BGP Announcements.",
+    "authors": [
+      "Henry Birge-Lee",
+      "Ari Brown",
+      "Christine Guo",
+      "Cyrill Krähenbühl",
+      "Sohom Pal",
+      "Liang Wang 0054",
+      "Prateek Mittal"
+    ],
+    "venue": "IMC",
+    "year": 2025,
+    "abstract": "Multiple Perspective Issuance Corroboration (MPIC) is a defense that strengthens the Domain Control Validation protocol run by Certificate Authorities (CAs) against network attacks (e.g., routing hijacks). Despite its recent adoption as a requirement by the CA/Browser Forum, the quantitative security benefits of MPIC in light of real-world routing behaviors are not well understood. We seek to address this challenge by creating a framework to test the effects of real-world BGP hijacks on millions of potential MPIC perspective deployments. Our framework launches around 1500 ethical BGP hijacks on IP prefixes we own and analyzes how potential MPIC perspectives route under these attacks. We consider over 100 global MPIC perspective locations spread across 3 major cloud providers. We find that optimal MPIC deployments can prevent certificate misissuance for over 87% of our evaluated real-world BGP hijacks. We further show that different routing behaviors by cloud providers, such as cold potato routing, have a substantial effect on MPIC's ability to limit the impact of BGP attacks. Finally, our framework computes optimized sets of MPIC perspective locations for CAs to use given their preference of cloud provider and perspective count. Our recommendations have already impacted the MPIC deployment at Google Trust Services, and have been adopted as the default recommendation by the Open MPIC project.",
+    "citation_count": 0,
+    "reference_count": 6,
+    "url": "https://doi.org/10.1145/3730567.3764495",
+    "dblp_key": "conf/imc/Birge-LeeBGKP0M25",
+    "source_id": "https://openalex.org/W7106238601"
+  },
+  {
+    "title": "Satellite IoT in Practice: A First Measurement Study on Network Availability, Performance, and Costs.",
+    "authors": [
+      "Wenchang Chai",
+      "Jinhong Liu",
+      "Ziyue Zhang",
+      "Xianjin Xia",
+      "Yuanqing Zheng",
+      "Ningning Hou",
+      "Qiang Yang 0018",
+      "Weiwei Chen 0004",
+      "Tao Gu 0001"
+    ],
+    "venue": "IMC",
+    "year": 2025,
+    "abstract": "Low Earth Orbit (LEO) satellites have emerged as a space-based infrastructure to offer networking services anywhere on Earth. Satellite IoTs enable novel Direct-to-Satellite (DtS) connectivity, allowing IoT devices in remote areas to connect to the Internet via LEO satellites using existing terrestrial technologies like LoRa. This paper presents the first-of-its-kind measurement study on satellite IoTs, investigating the practical characteristics of DtS communications and their suitability for IoT applications. We deployed 27 low-cost ground stations across eight locations worldwide to passively measure the network availability of multiple constellations. Our findings reveal a significant gap between the effective durations of DtS connectivity and their theoretical durations, leading to intermittent connections for satellite IoTs. Additionally, we examine the performance of the Tianqi constellation in supporting real-world IoT traffic (agriculture application). We observed longer delays and higher power consumption in satellite IoTs compared to terrestrial IoTs. Our study identifies the bottlenecks and sheds light on potential optimizations for satellite IoTs.",
+    "citation_count": 1,
+    "reference_count": 17,
+    "url": "https://doi.org/10.1145/3730567.3764496",
+    "dblp_key": "conf/imc/ChaiLZXZH00025",
+    "source_id": "https://openalex.org/W7106331394"
+  },
+  {
+    "title": "The Reality of Chasing Shannon's Limit in Optical Wide-Area Networks.",
+    "authors": [
+      "Arjun Devraj",
+      "Bill Owens",
+      "Rachee Singh"
+    ],
+    "venue": "IMC",
+    "year": 2025,
+    "abstract": "Wide-area network operators are pushing optical channels toward their theoretical capacity limits, i.e., Shannon's limit, by dynamically adjusting data rates as signal quality fluctuates. This rate-adaptive approach promises to maximize the utilization of expensive fiber infrastructure, yet it introduces a key challenge: each adjustment in the data rate risks temporary wavelength failures that compromise network reliability. Through a six-month empirical study of a production ISP network in the United States, we quantify the fundamental trade-off between capacity efficiency and operational reliability in rate-adaptive optical networks. Our analysis highlights two contributors to this trade-off. First, wider spectral channels, while offering higher peak capacity, can experience up to 4x more frequent capacity fluctuations than narrower channels despite identical signal quality. Second, the precise signal-to-noise ratio (SNR) at which wavelengths operate creates distinct reliability profiles, with certain SNR values located in stability ''sweet spots'' while others could trigger frequent and disruptive rate adaptations. Our findings highlight how operators can strategically approach Shannon's limit by jointly considering the allocation of optical spectral widths, SNR distributions of wavelengths, and transponder capabilities.",
+    "citation_count": 0,
+    "reference_count": 45,
+    "url": "https://doi.org/10.1145/3730567.3764508",
+    "dblp_key": "conf/imc/DevrajOS25",
+    "source_id": "https://openalex.org/W4416502085"
+  },
+  {
+    "title": "Inside Certificate Chains Beyond Public Issuers: Structure and Usage Analysis from a Campus Network.",
+    "authors": [
+      "Hongying Dong",
+      "Yizhe Zhang 0006",
+      "Hyeonmin Lee",
+      "Yixin Sun"
+    ],
+    "venue": "IMC",
+    "year": 2025,
+    "abstract": "Digital certificates are crucial for securing Internet communications. Certificates issued by trusted Certificate Authorities (CAs) can be validated by following the chain of trust, consisting of leaf, intermediate, and root certificates. However, such certificate chain structure may not be followed by issuers who are not subject to public monitoring and auditing. This paper takes a first look at certificate chains involving certificates issued by issuers that do not appear in public databases (e.g., major browsers' root stores and CCADB). Utilizing a year's worth of TLS traffic collected from a campus network, we dissect the certificate chain structures and analyze their usage in TLS connections. While we observe positive acts such as the logging of certificates that are issued by issuers outside public databases and anchored to trust roots into Certificate Transparency (CT) logs, we also identify potential misconfigurations by servers where unnecessary certificates are included in the certificate chains, which may lead to validation and connection failures.",
+    "citation_count": 0,
+    "reference_count": 14,
+    "url": "https://doi.org/10.1145/3730567.3764503",
+    "dblp_key": "conf/imc/Dong0LS25",
+    "source_id": "https://openalex.org/W7106288429"
+  },
+  {
+    "title": "On YouTube Search API Use in Research.",
+    "authors": [
+      "Alexandros Efstratiou"
+    ],
+    "venue": "IMC",
+    "year": 2025,
+    "abstract": "YouTube is among the most widely-used platforms worldwide, and has seen a lot of recent academic attention. Despite its popularity and the number of studies conducted on it, much less is understood about the way in which YouTube's Data API, and especially the Search endpoint, operates. In this paper, we analyze the API's behavior by running identical queries across a period of 12 weeks. Our findings show that the search endpoint returns highly variable results between queries. Specifically, the API seems to randomize returned videos based on the relative popularity of the respective topic during the query period, making it nearly impossible to obtain representative historical video samples, especially during non-peak topical periods. Our results also suggest that the API may prioritize shorter, more popular videos, although the role of channel popularity is not as clear. We conclude with suggested strategies for researchers using the API for data collection, as well as future research directions on expanding the API's use-cases.",
+    "citation_count": 1,
+    "reference_count": 0,
+    "url": "https://doi.org/10.1145/3730567.3764492",
+    "dblp_key": "conf/imc/Efstratiou25",
+    "source_id": "https://openalex.org/W4414757479"
+  },
+  {
+    "title": "Have you SYN What I See? Analyzing TCP SYN Payloads in the Wild.",
+    "authors": [
+      "Dario Ferrero",
+      "Enrico Bassetti",
+      "Harm Griffioen",
+      "Georgios Smaragdakis"
+    ],
+    "venue": "IMC",
+    "year": 2025,
+    "abstract": "TCP SYN packets are typically meant to initiate a three-way handshake for new connections and do not carry a payload. The only exception, according to the standards, is TCP Fast Open, where data is transmitted as TCP SYN payload.",
+    "citation_count": 0,
+    "reference_count": 17,
+    "url": "https://doi.org/10.1145/3730567.3764498",
+    "dblp_key": "conf/imc/FerreroBGS25",
+    "source_id": "https://openalex.org/W4416502131"
+  },
+  {
+    "title": "Quantifying the Threat of Sandwiching MEV on Jito: A Measurement of Solana's Leading Validator Client.",
+    "authors": [
+      "Nicole Gerzon",
+      "Ben Weintraub",
+      "Junbeom In",
+      "Alan Mislove",
+      "Cristina Nita-Rotaru"
+    ],
+    "venue": "IMC",
+    "year": 2025,
+    "abstract": "Solana has emerged as a major blockchain platform providing high throughput and low fees. Like other blockchains, Solana can be attacked via so-called ''Sandwiching'' attacks, where an attacker observes a pending transaction, quickly buys the target cryptocurrency, lets the transaction go through, and then immediately sells it for a profit, skimming that profit from the user who submitted the transaction. While such attacks have been observed by users, they remain underexplored in academic literature due to technical difficulties studying Solana at scale.",
+    "citation_count": 0,
+    "reference_count": 8,
+    "url": "https://doi.org/10.1145/3730567.3764493",
+    "dblp_key": "conf/imc/GerzonWIMN25",
+    "source_id": "https://openalex.org/W7106303124"
+  },
+  {
+    "title": "Congestion Patterns in a Large-scale RDMA Datacenter.",
+    "authors": [
+      "Soudeh Ghorbani",
+      "Yimeng Zhao",
+      "Srikanth Sundaresan",
+      "Ying Zhang 0022",
+      "Yijing Zeng",
+      "Abhigyan Sharma",
+      "Prashanth Kannan",
+      "Cristian Lumezanu"
+    ],
+    "venue": "IMC",
+    "year": 2025,
+    "abstract": "RDMA datacenters are proliferating to meet the demand of emerging workloads such as AI training and inference as well as distributed storage. This trend has opened up a critical knowledge gap: the traffic characteristics of congestion in these networks remain unknown. We do not know, for example, which layers of the network are the most congested, if the network is load balanced effectively, how long congestion events last, and how accurate existing telemetry systems are in capturing congestion. This paper bridges this gap by investigating congestion in a large-scale RDMA datacenter dedicated to distributed AI training. We provide insights into three specific congestion patterns: (a) location and distribution in the network, (b) burstiness, e.g., the duration and synchrony of bursts, and (c) observability using existing telemetry methods. We show, for instance, that the deployment of Priority Flow Control (PFC) in RDMA networks has shifted the location of congestion one level up: from the edge-host in legacy TCP/IP datacenters to the network core in RDMA datacenters. At the same time, we show that the same protocol enables us to observe and understand congestion better, even bursty events. The findings of this research reveal open challenges for measuring, characterizing, and managing congestion in RDMA networks, paving the way for future research.",
+    "citation_count": 0,
+    "reference_count": 24,
+    "url": "https://doi.org/10.1145/3730567.3764494",
+    "dblp_key": "conf/imc/GhorbaniZSZZSKL25",
+    "source_id": "https://openalex.org/W7106301016"
+  },
+  {
+    "title": "From GEO to LEO: First Look Into Starlink In-Flight Connectivity.",
+    "authors": [
+      "Hyunseok Daniel Jang",
+      "Matteo Varvello",
+      "Aravindh Raman",
+      "Yasir Zaki"
+    ],
+    "venue": "IMC",
+    "year": 2025,
+    "abstract": "The growing demand for reliable Internet access during air travel has made in-flight connectivity (IFC) a critical service for commercial airlines. Traditional IFC systems rely on geostationary (GEO) satellites, but their high latency and limited bandwidth hinder user experience. Emerging Low Earth Orbit (LEO) constellations, such as Starlink, promise better network performance. This paper presents the first empirical comparison of IFC performance across GEO and LEO networks, using data from 25 flights operated by 7 airlines. Measurements collected via instrumented Android devices cover key metrics including latency, throughput, and CDN responsiveness. We observe that while GEO systems rely on static and often distant Internet gateways, Starlink clients connect to different gateways that align more closely with flight trajectories, enhancing end-to-end performance through shorter satellite paths. However, DNS-based content filtering on Starlink-equipped flights often affects user geolocation, introducing unnecessary terrestrial delays. Finally, our case study of TCP performance from 2 Starlink flights shows that the BBR congestion control algorithm delivers up to 35× higher throughput than Cubic and Vegas, but with significantly higher retransmissions due to aggressive bandwidth probing.",
+    "citation_count": 1,
+    "reference_count": 15,
+    "url": "https://doi.org/10.1145/3730567.3764491",
+    "dblp_key": "conf/imc/JangVRZ25",
+    "source_id": "https://openalex.org/W7106305028"
+  },
+  {
+    "title": "Mirror Mirror on the Wall, which APK Mirror Site is the Largest of Them All?",
+    "authors": [
+      "Neal Keating",
+      "Wellington Esposito Barbosa",
+      "Leo Phan",
+      "Viraj Prakash",
+      "Gianluca Stringhini",
+      "Adam J. Aviv"
+    ],
+    "venue": "IMC",
+    "year": 2025,
+    "abstract": null,
+    "citation_count": 0,
+    "reference_count": 7,
+    "url": "https://doi.org/10.1145/3730567.3764499",
+    "dblp_key": "conf/imc/KeatingBPPSA25",
+    "source_id": "https://openalex.org/W4416502133"
+  },
+  {
+    "title": "Time To Scan: Digging into NTP-based IPv6 Scanning.",
+    "authors": [
+      "Michael Klopsch",
+      "Constantin Sander",
+      "Klaus Wehrle",
+      "Markus Dahlmanns"
+    ],
+    "venue": "IMC",
+    "year": 2025,
+    "abstract": "Due to its large address space, IPv6 remains a challenge for Internet measurements. Thus, IPv6 scans often resort to hitlists that, however, mainly cover core Internet infrastructure and servers. Contrarily, a recent approach to source addresses leveraging NTP servers promises to discover more user-related hosts. Yet, an in-depth analysis of hosts found by this approach is missing and its impact remains unclear.",
+    "citation_count": 0,
+    "reference_count": 35,
+    "url": "https://doi.org/10.1145/3730567.3764502",
+    "dblp_key": "conf/imc/KlopschSWD25",
+    "source_id": "https://openalex.org/W7106253397"
+  },
+  {
+    "title": "R&E Routing Policy: Inference and Implication.",
+    "authors": [
+      "Matthew Luckie",
+      "Steven Wallace",
+      "Karl Newell",
+      "Jeff Bartig",
+      "Sadi Koçak",
+      "Niels den Otter",
+      "Kaj Koole",
+      "James Deaton",
+      "K. C. Claffy"
+    ],
+    "venue": "IMC",
+    "year": 2025,
+    "abstract": "BGP hides information that is crucial for building accurate routing models. In this paper, we combine BGP and active probing to infer relative route preference policies of research and education R&E connected ASes. We inferred that systems in ≈88% of <12K prefixes that 2,578 ASes announced in the R&E ecosystem were insensitive to AS path length when selecting provider routes -- only ≈8-9% appeared to assign the same local preference to available R&E and commodity routes. We validate our method, and discuss broader application of the method to infer relative route preference, a crucial step in being able to accurately model routing policies.",
+    "citation_count": 1,
+    "reference_count": 13,
+    "url": "https://doi.org/10.1145/3730567.3764781",
+    "dblp_key": "conf/imc/LuckieWNBKOKDC25",
+    "source_id": "https://openalex.org/W7106332043"
+  },
+  {
+    "title": "Canvassing the Fingerprinters: Characterizing Canvas Fingerprinting Use Across the Web.",
+    "authors": [
+      "Elisa Luo",
+      "Tom Ritter",
+      "Stefan Savage",
+      "Geoffrey M. Voelker"
+    ],
+    "venue": "IMC",
+    "year": 2025,
+    "abstract": "Canvas fingerprinting is an effective technique for implicitly re-identifying visitors to a Web site based on subtle variations in the graphical rendering of specific \"test canvases\". Different fingerprinting actors make use of distinct canvases for this purpose and thus, as we show, it is possible to ''fingerprint the fingerprinters'' by grouping together identical canvases that are employed for these tests. In this paper, we document the prevalence of canvas fingerprinting (finding that 12.7% of the top 20K sites engage in it), use this grouping technique to measure and characterize the online footprint of widely-used fingerprinting services, and finally analyze the context in which these services are used to shine light on their intended purpose.",
+    "citation_count": 0,
+    "reference_count": 13,
+    "url": "https://doi.org/10.1145/3730567.3764500",
+    "dblp_key": "conf/imc/LuoRSV25",
+    "source_id": "https://openalex.org/W7106421104"
+  },
+  {
+    "title": "Measuring the deployment of DNSSEC Bootstrapping Using Authenticated Signals.",
+    "authors": [
+      "Q. Misell",
+      "Florian Steurer",
+      "Johannes Zirngibl",
+      "Anja Feldmann",
+      "Tobias Fiebig"
+    ],
+    "venue": "IMC",
+    "year": 2025,
+    "abstract": "The DNS, the Internet's address book, traditionally does not guarantee authenticity of data. The DNS Security Extensions (DNSSEC) exist to add cryptographic authenticity checks to the DNS. In spite of DNSSEC being over 30 years old, its widespread deployment has not yet come to fruition. Current work in the IETF tries automating the setup of DNSSEC, in the hopes of furthering its deployment.",
+    "citation_count": 1,
+    "reference_count": 24,
+    "url": "https://doi.org/10.1145/3730567.3764501",
+    "dblp_key": "conf/imc/MisellSZFF25",
+    "source_id": "https://openalex.org/W7106329175"
+  },
+  {
+    "title": "The Anatomy of Olympic Games: a Mobile Traffic Demand Perspective.",
+    "authors": [
+      "Máximo Pirri",
+      "Diego Madariaga",
+      "Zbigniew Smoreda",
+      "Marco Fiore 0001"
+    ],
+    "venue": "IMC",
+    "year": 2025,
+    "abstract": null,
+    "citation_count": 0,
+    "reference_count": 17,
+    "url": "https://doi.org/10.1145/3730567.3764497",
+    "dblp_key": "conf/imc/PirriMS025",
+    "source_id": "https://openalex.org/W4416502144"
+  },
+  {
+    "title": "From WebGL to WebGPU: A Reality Check of Browser-Based GPU Acceleration.",
+    "authors": [
+      "Sthitadhi Sengupta",
+      "Nan Wu 0012",
+      "Matteo Varvello",
+      "Krish Jana",
+      "Songqing Chen",
+      "Bo Han 0001"
+    ],
+    "venue": "IMC",
+    "year": 2025,
+    "abstract": "With the rising demand for cost-effective and privacy-preserving deep learning and visualization services, service providers are increasingly turning to in-browser solutions. General-purpose computations, leveraging the graphics processing unit (GPU), are foundational to executing algorithms that power these services. Web graphics library (WebGL) is a widely adopted GPU-access application programming interface (API) designed for multidimensional rendering in browsers, while WebGPU is a newer API developed with compute-specific capabilities. Although WebGPU is a promising standard, its performance has not been systematically evaluated for general-purpose computation. This paper investigates WebGPU and WebGL for accelerating client-side computation in web browsers. By benchmarking key computational GPU kernels for 16 PolyBench and 2 CHStone functions, we measure the performance of WebGPU and WebGL across varying input sizes and algorithmic complexities. Our results show that: 1) both WebGPU and WebGL exhibit poorer performance than central processing unit (CPU)-based execution for small input data due to setup and CPU-GPU synchronization overheads, but they outperform CPU execution as the input data size increases; 2) WebGL performs better than WebGPU for small inputs, except for CPU-driven loop functions, due to its lower initial setup overhead; and 3) WebGPU outperforms WebGL for large inputs through optimized GPU thread utilization and achieves better performance for loop-driven algorithms across all input sizes by minimizing CPU-GPU data exchange. Overall, our results indicate that WebGPU is a competitive option for enhancing the execution performance of large-scale web applications.",
+    "citation_count": 0,
+    "reference_count": 28,
+    "url": "https://doi.org/10.1145/3730567.3764504",
+    "dblp_key": "conf/imc/Sengupta0VJC025",
+    "source_id": "https://openalex.org/W7106324192"
+  },
+  {
+    "title": "Toward Better Efficiency vs. Fidelity Tradeoffs in Web Archives.",
+    "authors": [
+      "Jingyuan Zhu",
+      "Huanchen Sun",
+      "Harsha V. Madhyastha"
+    ],
+    "venue": "IMC",
+    "year": 2025,
+    "abstract": "Operators of web archives have two options for how to crawl pages from the web. Browser-based dynamic crawlers capture all of the resources on every page, but incur high compute overheads. Static browserless crawlers are more lightweight, but miss page resources which are fetched only when scripts are executed.",
+    "citation_count": 0,
+    "reference_count": 14,
+    "url": "https://doi.org/10.1145/3730567.3764507",
+    "dblp_key": "conf/imc/ZhuSM25",
+    "source_id": "https://openalex.org/W4416502100"
+  },
+  {
+    "title": "Poster: Power Out, Internet Down? Measuring Internet Resilience in South Africa.",
+    "authors": [
+      "Yasin Alhamwy",
+      "Abdalmohimn Alshebane",
+      "Oliver Hohlfeld"
+    ],
+    "venue": "IMC",
+    "year": 2025,
+    "abstract": "South Africa's frequent electricity outages—both planned and unplanned—not only disrupt daily life but also impact Internet infrastructure in this critical regional connectivity hub. This study analyses the relationship between power outages and Internet resilience by correlating end-user performance metrics, amateur radio activity, and BGP routing data with detailed outage records. We find that network performance degrades only during unplanned outages, revealing heightened vulnerability during unexpected events. Amateur radio activity shows a weak negative correlation with both planned and unplanned outages, while BGP announcement patterns vary, showing both positive and negative correlations depending on the month. These results show how outage types shape connectivity and give us a deeper insight into the resilience of the Internet in South Africa.",
+    "citation_count": 0,
+    "reference_count": 3,
+    "url": "https://doi.org/10.1145/3730567.3768611",
+    "dblp_key": "conf/imc/AlhamwyAH25",
+    "source_id": "https://openalex.org/W4416502127"
+  },
+  {
+    "title": "Poster: Beyond IP: Amateur Radio PSKReporter as a Crisis Measurement Tool.",
+    "authors": [
+      "Yasin Alhamwy",
+      "Oliver Hohlfeld"
+    ],
+    "venue": "IMC",
+    "year": 2025,
+    "abstract": "Traditional Internet measurements rely heavily on IP-based vantage points to assess large-scale disruptions, overlooking less conventional but informative data sources. This leaves critical gaps in our understanding of how crises affect specific regions and alternative communication systems. Using PSKReporter's amateur radio data, we present two case studies where distinct signals of crisis events were captured, even when IP-based measurements alone may fall short. During the LA wildfires, PSKReporter spots dropped by 36%, with no comparable decline in IP-based data. For Hurricanes Milton and Helene, spot declines appeared several days earlier than IP-based indicators. These insights open new avenues for studying the resilience of diverse infrastructures during emergencies.",
+    "citation_count": 0,
+    "reference_count": 4,
+    "url": "https://doi.org/10.1145/3730567.3768606",
+    "dblp_key": "conf/imc/AlhamwyH25",
+    "source_id": "https://openalex.org/W7106360499"
+  },
+  {
+    "title": "Poster: ChatIYP: Enabling Natural Language Access to the Internet Yellow Pages Database.",
+    "authors": [
+      "Vasilis Andritsoudis",
+      "Pavlos Sermpezis",
+      "Ilias Dimitriadis",
+      "Athena Vakali"
+    ],
+    "venue": "IMC",
+    "year": 2025,
+    "abstract": "The Internet Yellow Pages (IYP) aggregates information from multiple sources about Internet routing into a unified, graph-based knowledge base. However, querying it requires knowledge of the Cypher language and the exact IYP schema, thus limiting usability for non-experts. In this paper, we propose ChatIYP, a domain-specific Retrieval-Augmented Generation (RAG) system that enables users to query IYP through natural language questions. Our evaluation demonstrates solid performance on simple queries, as well as directions for improvement, and provides insights for selecting evaluation metrics that are better fit for IYP querying AI agents.",
+    "citation_count": 0,
+    "reference_count": 0,
+    "url": "https://doi.org/10.1145/3730567.3768601",
+    "dblp_key": "conf/imc/AndritsoudisSDV25",
+    "source_id": "https://openalex.org/W7106379029"
+  },
+  {
+    "title": "Poster: ECN-based Congestion Control for WebRTC.",
+    "authors": [
+      "Md. Mahir Ashhab",
+      "Hyojoon Kim"
+    ],
+    "venue": "IMC",
+    "year": 2025,
+    "abstract": "Real-time communication (RTC) applications require low packet delay and loss while maintaining a stable throughput. WebRTC, a widely used framework, relies on Google Congestion Control (GCC). Meanwhile, newer methods like L4S (Low Latency, Low Loss, Scalable Throughput) provide opportunities with early congestion signaling. In this work, we extend client-side WebRTC to support L4S by adding ECN-based rate control and ECN feedback handling. Our results show that L4S improves real-time performance while remaining compatible with current WebRTC infrastructure.",
+    "citation_count": 0,
+    "reference_count": 6,
+    "url": "https://doi.org/10.1145/3730567.3768595",
+    "dblp_key": "conf/imc/AshhabK25",
+    "source_id": "https://openalex.org/W7106335070"
+  },
+  {
+    "title": "Poster: Forwarding Score: A New Metric for Assessing the Quality of Internet Route Surveys.",
+    "authors": [
+      "Ufuk Bombar",
+      "Kevin Vermeulen",
+      "Olivier Fourmaux",
+      "Timur Friedman"
+    ],
+    "venue": "IMC",
+    "year": 2025,
+    "abstract": "Internet route survey systems such as Ark and IPRS have typically been evaluated on how well they uncover internet topology (nodes and links from consecutive traceroutehops). We present a new metric, the forwarding score, better adapted to assessing how these systems capture routing behavior, and compare this metric over eight days' data.",
+    "citation_count": 0,
+    "reference_count": 3,
+    "url": "https://doi.org/10.1145/3730567.3768596",
+    "dblp_key": "conf/imc/BombarVFF25",
+    "source_id": "https://openalex.org/W7106285576"
+  },
+  {
+    "title": "Poster: Is 5G a Hit? A Look into 5G Adoption in France.",
+    "authors": [
+      "Antonio Boiano",
+      "Máximo Pirri",
+      "Diego Madariaga",
+      "Nadezda Chukhno",
+      "Cezary Ziemlicki",
+      "Zbigniew Smoreda",
+      "Alessandro E. C. Redondi",
+      "Marco Fiore 0001"
+    ],
+    "venue": "IMC",
+    "year": 2025,
+    "abstract": "The rollout of 5G promises major improvements in speed, latency, and connectivity over previous-generation radio access technologies. Our study analyzes Orange's nationwide 5G network in France, combining longitudinal data on infrastructure deployment with data traffic patterns. Early results show that while 5G coverage has steadily expanded and is presently reaching the vast majority of the user population, adoption by mobile subscribers remains limited, leaving much of the new capacity underutilized.",
+    "citation_count": 0,
+    "reference_count": 2,
+    "url": "https://doi.org/10.1145/3730567.3768589",
+    "dblp_key": "conf/imc/BoianoPMCZSR025",
+    "source_id": "https://openalex.org/W7106333464"
+  },
+  {
+    "title": "Poster: Uncovering Lesser-Studied RTC Applications using RTP.",
+    "authors": [
+      "Sanjay Chandrasekaran",
+      "Jaber Daneshamooz",
+      "Oliver Michel",
+      "Arpit Gupta"
+    ],
+    "venue": "IMC",
+    "year": 2025,
+    "abstract": "Video conferencing and, more generally, real-time communications (RTC) applications have become indispensable across domains such as remote work or telemedicine, with new platforms competing for performance and market share. Much of the research to date has focused on understanding how these systems operate and perform under varying network conditions. However, the scale of the ecosystem for RTC applications beyond a handful of key players remains largely understudied and unquantified. Frameworks such as WebRTC have democratized the ability to easily extend an application to support RTC capabilities, resulting in a diverse ecosystem beyond the most commonly studied applications.",
+    "citation_count": 0,
+    "reference_count": 4,
+    "url": "https://doi.org/10.1145/3730567.3768614",
+    "dblp_key": "conf/imc/ChandrasekaranD25",
+    "source_id": "https://openalex.org/W4416502139"
+  },
+  {
+    "title": "Poster: A First Look at Large Language Model Applications in the Wild from Dual Perspectives.",
+    "authors": [
+      "Deliang Chang",
+      "Duowen Chen",
+      "Xuedong Wu",
+      "Xiang Li 0108",
+      "Chenyang Li",
+      "Zhengpeng Yang",
+      "Rui Luo",
+      "Asiya",
+      "Zhicheng Wang",
+      "Shujun Tang",
+      "Xiaofeng Zheng"
+    ],
+    "venue": "IMC",
+    "year": 2025,
+    "abstract": null,
+    "citation_count": 0,
+    "reference_count": 0,
+    "url": "https://doi.org/10.1145/3730567.3768607",
+    "dblp_key": "conf/imc/ChangCW0LYLAWTZ25",
+    "source_id": "https://openalex.org/W7106244011"
+  },
+  {
+    "title": "Poster: Rough Edges for IPv6 in VPNs.",
+    "authors": [
+      "Yejin Cho",
+      "John S. Heidemann"
+    ],
+    "venue": "IMC",
+    "year": 2025,
+    "abstract": "How do VPNs interact with IPv6? Our poster shows that VPNs often leak IPv6 traffic, failing to provide the promised privacy, and VPNs often prefer IPv4, even though IPv6 is available and working. These results use new data from a website for IP identification, coupled with experiments on specific VPN software. We identify the fraction of v6 traffic leaked, and find the root-cause of IPv6 de-preferencing in interactions between address selection in OSes and VPNs",
+    "citation_count": 0,
+    "reference_count": 6,
+    "url": "https://doi.org/10.1145/3730567.3768612",
+    "dblp_key": "conf/imc/ChoH25",
+    "source_id": "https://openalex.org/W4416502119"
+  },
+  {
+    "title": "Poster: Measurements of Residential Broadband in a Midwest Town: Discerning Wi-Fi Performance Factors.",
+    "authors": [
+      "Francis A. Gatsi",
+      "Muhammad Iqbal Rochman",
+      "Saeid Mehrdad",
+      "Aaron D. Striegel",
+      "Monisha Ghosh"
+    ],
+    "venue": "IMC",
+    "year": 2025,
+    "abstract": "Understanding the real-world end-to-end performance of residential Wi-Fi and broadband networks is essential for consumers, service providers, and policy makers in an increasingly connected society to determine how connectivity can be improved, through better technology or appropriate spectrum decisions. While previous research has studied such performance, the focus has primarily been on the wired Internet, pointing to Wi-Fi as a bottleneck without investigating the reasons thereof. We believe that the preliminary results presented in this paper, from in-depth studies of residential Wi-Fi deployments in a small Midwestern town, offer a first look into how the Wi-Fi environment may impact the user experience. Over a period of six months, we deployed single-board computers to measure the throughput and latency of Wi-Fi and the backhaul broadband network in a number of different residential environments, as well as capture the Wi-Fi signal environment. Our analyses show: (i) interoperability issues between AP and client supporting different Wi-Fi amendments (e.g., 802.11ac, 802.11ax); (ii) a lack of smart interference management and Dynamic Frequency Selection (DFS) support, resulting in over-usage of channels in the U-NII-1 and U-NII-3 bands when other, less congested bands may be available.",
+    "citation_count": 0,
+    "reference_count": 3,
+    "url": "https://doi.org/10.1145/3730567.3768610",
+    "dblp_key": "conf/imc/GatsiRMSG25",
+    "source_id": "https://openalex.org/W7106269296"
+  },
+  {
+    "title": "Poster: TopoHunter: Enabling Efficient and High-Coverage Active IPv6 Topology Discovery.",
+    "authors": [
+      "Wenwen Gong",
+      "Lin He 0004",
+      "Hongwei Li 0021",
+      "Guanglei Song",
+      "Wentong Wang",
+      "Daguo Cheng",
+      "Enhuan Dong",
+      "Chenglong Li 0006",
+      "Hui Zhang 0141",
+      "Zhiliang Wang",
+      "Jinlong E",
+      "Ying Liu 0024",
+      "Jiahai Yang 0001"
+    ],
+    "venue": "IMC",
+    "year": 2025,
+    "abstract": "We introduce TopoHunter, an efficient IPv6 Internet topology discovery system. The central concept of TopoHunter is to allocate more probing resources to target prefix spaces that yield greater topological benefits, as well as to their surrounding areas. To achieve this, we design a feedback-based target generation module comprised of a Target Prefix Probing Value Forest that maintains the estimated probing values of hierarchical target prefix spaces. Our system has successfully discovered the most extensive and complete IPv6 topology map to date, comprising over 144 million router interfaces and 251 million edges, covering 72.83% of autonomous systems and 43.36% of routing prefixes announced by the BGP system.",
+    "citation_count": 0,
+    "reference_count": 4,
+    "url": "https://doi.org/10.1145/3730567.3768591",
+    "dblp_key": "conf/imc/Gong00SWCD00WE025",
+    "source_id": "https://openalex.org/W7106264631"
+  },
+  {
+    "title": "Poster: Measuring Algorithmic Systems' Resilience Against Generative AI-Powered Attacks - Case Study on Exploiting a Code Search Platform.",
+    "authors": [
+      "Nathaniel Hahn",
+      "Tu Ouyang",
+      "An Wang 0002"
+    ],
+    "venue": "IMC",
+    "year": 2025,
+    "abstract": "Generative AI applications have boomed since the GPT-3-powered ChatGPT release in 2022. Miscreants also see the opportunities of leveraging these frontier GenAI technologies to facilitate cyberattacks, from planning to execution.",
+    "citation_count": 0,
+    "reference_count": 2,
+    "url": "https://doi.org/10.1145/3730567.3768590",
+    "dblp_key": "conf/imc/HahnO025",
+    "source_id": "https://openalex.org/W7106324792"
+  },
+  {
+    "title": "Poster: Did I Just Browse A Website Written by LLMs?",
+    "authors": [
+      "Sichang Steven He",
+      "Ramesh Govindan",
+      "Harsha V. Madhyastha"
+    ],
+    "venue": "IMC",
+    "year": 2025,
+    "abstract": "Increasingly, web content is automatically generated by large language models (LLMs) with little human input. We call this ''LLM-dominant'' content. Since LLMs plagiarize and hallucinate, LLM-dominant content can be unreliable and unethical. Yet, websites rarely disclose such content, and human readers struggle to distinguish it. Thus, we must develop reliable detectors for LLM-dominant content. However, state-of-the-art LLM detectors are inaccurate on web content, because web content has low positive rates, complex markup, and diverse genres, instead of clean, prose-like benchmark data SoTA detectors are optimized for.",
+    "citation_count": 0,
+    "reference_count": 0,
+    "url": "https://doi.org/10.1145/3730567.3768603",
+    "dblp_key": "conf/imc/HeGM25",
+    "source_id": "https://openalex.org/W7106229781"
+  },
+  {
+    "title": "Poster: How Do You Know My Name? Investigating The Role of Domain Names for Target Reconnaissance among Web and IPv6 Scanners.",
+    "authors": [
+      "Sebastian Kappes"
+    ],
+    "venue": "IMC",
+    "year": 2025,
+    "abstract": "Not all traffic on the Internet is from ordinary users: Internet hosts also receive a myriad of traffic from automated scanners---both malicious and benign. There are many ways how one can conduct such scans---certain Internet scanners, particularly those scanners interested in performing web crawls or scanning IPv6, rely on public sources of domain names to find targets.",
+    "citation_count": 0,
+    "reference_count": 0,
+    "url": "https://doi.org/10.1145/3730567.3768600",
+    "dblp_key": "conf/imc/Kappes25",
+    "source_id": "https://openalex.org/W7106343247"
+  },
+  {
+    "title": "Poster: Enabling Data-Driven Policymaking using the Broadband-Plan Querying Tool (BQT+).",
+    "authors": [
+      "Laasya Koduru",
+      "Tejas N. Narechania",
+      "Elizabeth Belding",
+      "Arpit Gupta"
+    ],
+    "venue": "IMC",
+    "year": 2025,
+    "abstract": "Poor broadband access undermines civic and economic life, a challenge exacerbated by the fact that millions of Americans still lack access to reliable high-speed broadband connectivity. Federal broadband funding initiatives such as the Connect America Fund (CAF), the Rural Digital Opportunity Fund (RDOF), and the Broadband Equity, Access, and Deployment (BEAD) seek to address these gaps, but their success relies on the accuracy of broadband availability and affordability data. This data is often based on self-reported ISP information that overstates coverage and speeds. Such inaccuracies risk misallocating funds, leaving unserved and underserved communities without high-speed Internet. In this work, we present BQT+, an ML-based data collection platform that queries ISP web interfaces by inputting residential street addresses and extracting the returned data on service availability, quality, and pricing. BQT+ has been applied in policy evaluation studies, including an independent assessment of the state of broadband availability, quality (available speed tiers), and affordability in areas expected to benefit from the $42.45 billion BEAD program.",
+    "citation_count": 0,
+    "reference_count": 3,
+    "url": "https://doi.org/10.1145/3730567.3768609",
+    "dblp_key": "conf/imc/KoduruNBG25",
+    "source_id": "https://openalex.org/W4416502136"
+  },
+  {
+    "title": "Poster: RMap: Uncovering Risky DNS Resolution Chains and Misconfigurations.",
+    "authors": [
+      "Fasheng Miao",
+      "Shuying Zhuang",
+      "Xiang Li 0108",
+      "Changqing An",
+      "Deliang Chang",
+      "Baojun Liu 0002",
+      "Jia Zhang 0004",
+      "Jilong Wang 0001"
+    ],
+    "venue": "IMC",
+    "year": 2025,
+    "abstract": "In recent years, large-scale network outages caused by DNS misconfigurations have become increasingly common. The intricate inter-domain dependencies, along with emerging mechanisms (Such as DNSSEC, EDNS, and 0x20), have made DNS resolution increasingly complex and fault localization more challenging. We present RMap, a tool that rapidly probes all potential resolution chains of a domain, reveals its resolution dependency topology, and detects security risks. We experimentally demonstrate the effectiveness of RMap and its broad applicability. Our findings reveal that domain configurations in real-world environments remain concerning, with potential issues observed even in several well-known top-level domains. RMap is avaliable in https://github.com/ahlien/rmap.",
+    "citation_count": 0,
+    "reference_count": 2,
+    "url": "https://doi.org/10.1145/3730567.3768605",
+    "dblp_key": "conf/imc/MiaoZLACL0W25",
+    "source_id": "https://openalex.org/W7106224403"
+  },
+  {
+    "title": "Poster: The Internet Quality Barometer Framework.",
+    "authors": [
+      "Lai Yi Ohlsen",
+      "Pavlos Sermpezis",
+      "Melissa Newcomb"
+    ],
+    "venue": "IMC",
+    "year": 2025,
+    "abstract": "In this paper, we introduce the Internet Quality Barometer (IQB), a framework aiming to redefine Internet quality beyond ``speed''. IQB (i) defines Internet quality in a user-centric way by considering popular use cases, (ii) maps network requirements to use cases through a set of weights and quality thresholds, and (iii) leverages publicly available Internet performance datasets, to calculate the IQB score, a composite metric that reflects the quality of Internet experience.",
+    "citation_count": 0,
+    "reference_count": 0,
+    "url": "https://doi.org/10.1145/3730567.3768593",
+    "dblp_key": "conf/imc/OhlsenSN25",
+    "source_id": "https://openalex.org/W7106332657"
+  },
+  {
+    "title": "Poster: A Case for Modeling Video Conferencing Applications.",
+    "authors": [
+      "Akhil Prasad",
+      "Nathaniel Cherian",
+      "Sonia Fahmy"
+    ],
+    "venue": "IMC",
+    "year": 2025,
+    "abstract": "Video Conferencing Applications (VCAs) are widely used in education and remote work. Realistic modeling of VCAs, especially proprietary VCAs, enables simulation of VCA behaviors under network conditions that are different from those where the VCAs are deployed. Models of VCAs can be useful for both network operators and VCA developers who can assess how sensitive a VCA is to changes in the network. For instance, if VCA A begins to suffer video quality degradation when end-to-end delay exceeds 100 ms, while VCA B's corresponding threshold is 200 ms, operators can decide to give priority to A's traffic for better overall user experience. Additionally, modeling helps VCA designers select parameter values to navigate inherent performance trade-offs. If a model can quantify, for instance, how increasing a certain threshold to enhance video quality stability may increase frame latency, designers can make informed choices.",
+    "citation_count": 1,
+    "reference_count": 4,
+    "url": "https://doi.org/10.1145/3730567.3768598",
+    "dblp_key": "conf/imc/PrasadCF25",
+    "source_id": "https://openalex.org/W7106269033"
+  },
+  {
+    "title": "Poster: Global Measurements of the Availability and Response Times of Public Encrypted DNS Resolvers.",
+    "authors": [
+      "Ranya Sharma",
+      "Nick Feamster"
+    ],
+    "venue": "IMC",
+    "year": 2025,
+    "abstract": "Previous studies have measured encrypted DNS performance, but they have mostly focused on mainstream DNS resolvers [4, 6, 7]. We expand on previous studies, exploring the performance of all encrypted DNS resolvers—from a variety of global vantage points, as opposed to simply characterizing the mainstream DoH providers from well-connected vantage points. Our goal is to compare the performance of encrypted DNS resolvers to each other to understand the extent to which this larger set of DNS resolvers could be used by clients and applications in different regions.",
+    "citation_count": 0,
+    "reference_count": 2,
+    "url": "https://doi.org/10.1145/3730567.3768608",
+    "dblp_key": "conf/imc/SharmaF25",
+    "source_id": "https://openalex.org/W4416502146"
+  },
+  {
+    "title": "Poster: Unveiling the Nexus - Harnessing IoT Ecosystems for Internet Censorship Evasion.",
+    "authors": [
+      "Yining Shi",
+      "Wyatt Ashley",
+      "Patrick Tser Jern Kon"
+    ],
+    "venue": "IMC",
+    "year": 2025,
+    "abstract": null,
+    "citation_count": 0,
+    "reference_count": 4,
+    "url": "https://doi.org/10.1145/3730567.3768592",
+    "dblp_key": "conf/imc/ShiAK25",
+    "source_id": "https://openalex.org/W7106344461"
+  },
+  {
+    "title": "Poster: When Blocks Go Missing: The Timeliness and Trustworthiness of Blockchain RPC Providers.",
+    "authors": [
+      "Ye Shu",
+      "Deian Stefan",
+      "Stefan Savage",
+      "Geoffrey M. Voelker",
+      "Enze Liu 0001"
+    ],
+    "venue": "IMC",
+    "year": 2025,
+    "abstract": "Contrary to blockchain's trustless vision, most applications built atop blockchain require trust in third-party Remote Procedure Call (RPC) providers. Applications rely on these RPC providers to be performant (announce new blocks timely) and reliable (no missing blocks/transactions) to provide good user experience and security guarantees. In this paper, we perform the first large-scale, longitudinal study to evaluate the timeliness and trustworthiness of 16 RPC providers for BNB Smart Chain (BSC) across 6 223 blocks and 123 773 transactions. We identify significant variability: some providers are inconsistent, miss valid blocks/transactions, or are seconds slower than others. Our findings suggest that the implicit trust assumptions are often violated, which may leave users confused and even vulnerable to attacks.",
+    "citation_count": 0,
+    "reference_count": 1,
+    "url": "https://doi.org/10.1145/3730567.3768594",
+    "dblp_key": "conf/imc/ShuSSV025",
+    "source_id": "https://openalex.org/W7106224827"
+  },
+  {
+    "title": "Poster: Rediscovering Recurring Routing Results.",
+    "authors": [
+      "Xiao Song 0005",
+      "John S. Heidemann"
+    ],
+    "venue": "IMC",
+    "year": 2025,
+    "abstract": "Network operators need to understand how routing affects their customers, and to quickly detect routing changes. Despite its importance, today, there is no good way to summarize routing for a service, nor to differentiate between tiny changes and huge shifts. It is challenging to understand routing, even for a single destination, because no one organization has a global view of routing —routing emerges from combining the Internet's diverse routing policies as determined by business and policy constraints. We present Fenrir, a new tool that can rediscover recurring routing results. It can help operators detect routing modes (stable periods) and spot changes that need a performance check. We use Fenrir to evaluate B-Root's anycast service to show routing dynamics over five years. Fenrir shows that the routing of B Root is relatively stable except when sites are removed or added to B Root DNS service.",
+    "citation_count": 0,
+    "reference_count": 1,
+    "url": "https://doi.org/10.1145/3730567.3768604",
+    "dblp_key": "conf/imc/0005H25",
+    "source_id": "https://openalex.org/W7106246332"
+  },
+  {
+    "title": "Poster: Voltadomar: A Traceroute Library for Anycasted IPs.",
+    "authors": [
+      "David Song",
+      "Innocent Ndubuisi-Obi",
+      "Kurtis Heimerl"
+    ],
+    "venue": "IMC",
+    "year": 2025,
+    "abstract": "No abstract available.",
+    "citation_count": 0,
+    "reference_count": 3,
+    "url": "https://doi.org/10.1145/3730567.3768602",
+    "dblp_key": "conf/imc/SongNH25",
+    "source_id": "https://openalex.org/W7106392918"
+  },
+  {
+    "title": "Poster: The Potential of Erroneous Outbound Traffic Analysis to Unveil Silent Internal Anomalies.",
+    "authors": [
+      "Andrea Sordello",
+      "Zhihao Wang 0001",
+      "Kai Huang",
+      "Alessandro Cornacchia",
+      "Marco Mellia"
+    ],
+    "venue": "IMC",
+    "year": 2025,
+    "abstract": "Network administrators have long relied on passive measurement to detect malicious activity, diagnose misconfigurations, and ensure network health. Under the assumption that threats and issues originate externally, prior studies [1] have predominantly focused on the analysis of inbound traffic — i.e., traffic initiated by external hosts and targeting internal destinations. Conversely, outbound traffic — i.e., originating from internal hosts toward external destinations — has received comparatively less attention, despite carrying strong indicators of security-relevant anomalies [2].",
+    "citation_count": 0,
+    "reference_count": 2,
+    "url": "https://doi.org/10.1145/3730567.3768599",
+    "dblp_key": "conf/imc/SordelloWHCM25",
+    "source_id": "https://openalex.org/W7106346241"
+  },
+  {
+    "title": "Poster: Investigating the Survivability of the Experimental TCP Option.",
+    "authors": [
+      "Zahra Yazdani",
+      "Fahad Hilal",
+      "Cecilia Testart",
+      "Alberto Dainotti",
+      "Kevin Vermeulen",
+      "Tiago Heinrich",
+      "Taha Albakour"
+    ],
+    "venue": "IMC",
+    "year": 2025,
+    "abstract": "In this work, we extend Yarrpbox to assess the survivability of the TCP experimental option across paths toward the Tranco Top-100k domains. Our findings highlight middlebox interference and motivate broader Internet-wide studies. This study represents an initial step toward understanding the feasibility of extending TCP in today's Internet, while highlighting potential pitfalls that must be considered by future protocol designers.",
+    "citation_count": 0,
+    "reference_count": 5,
+    "url": "https://doi.org/10.1145/3730567.3768588",
+    "dblp_key": "conf/imc/YazdaniHTDVHA25",
+    "source_id": "https://openalex.org/W7106321505"
+  },
+  {
+    "title": "Poster: Collection and Sharing of A Residential Dataset.",
+    "authors": [
+      "Shuyue Yu",
+      "Thomas Koch",
+      "Ilgar Mammadov",
+      "Hangpu Cao",
+      "Gil Zussman",
+      "Ethan Katz-Bassett"
+    ],
+    "venue": "IMC",
+    "year": 2025,
+    "abstract": "Given the increasing residential Internet use, a thorough understanding of what services are used and how they are delivered to residential networks is crucial. However, access to residential traces is limited due to their proprietary nature. Most prior work used campus datasets from academic buildings and undergraduate dorms, and the few studies with residential traces are often outdated or use data unavailable to other researchers. In our SIGMETRICS 2025 publication, we introduced a new residential dataset---we have been collecting traffic from ~1000 off-campus residences that house faculty, postdocs, graduate students, and their families. Although our residents are university affiliates, our dataset captures their activity at home, and we show that this dataset offers a distinct perspective from the campus and dorm traffic. We also investigate the serving infrastructures and services accessed by the residences. Extending this published work, since May 2025, we have improved our pipeline efficiency to enable continuous 24/7 data collection and scale up to approximately 1500 residences, providing a more complete view of the residential network. We also make the dataset available for research use upon request, with the goal of motivating and supporting future research.",
+    "citation_count": 0,
+    "reference_count": 4,
+    "url": "https://doi.org/10.1145/3730567.3768615",
+    "dblp_key": "conf/imc/YuKMCZK25",
+    "source_id": "https://openalex.org/W4416502111"
+  }
+]

@@ -1,0 +1,1810 @@
+[
+  {
+    "title": "3in1: Multi-Tone Joint Powering, Clocking, and Communication for Passive IoT.",
+    "authors": [
+      "Ruirong Huang",
+      "Renjie Zhao 0001"
+    ],
+    "venue": "SenSys",
+    "year": 2026,
+    "abstract": null,
+    "citation_count": null,
+    "reference_count": null,
+    "url": "https://doi.org/10.1145/3774906.3800458",
+    "dblp_key": "conf/sensys/HuangZ26",
+    "source_id": null
+  },
+  {
+    "title": "B³: Bistatic Backscatter Beamforming for mmWave IoTs.",
+    "authors": [
+      "Zhenzhe Lin",
+      "Yoon Chae",
+      "Mingyo Jeong",
+      "Parth Pathak 0001"
+    ],
+    "venue": "SenSys",
+    "year": 2026,
+    "abstract": null,
+    "citation_count": null,
+    "reference_count": null,
+    "url": "https://doi.org/10.1145/3774906.3800461",
+    "dblp_key": "conf/sensys/LinCJP26",
+    "source_id": null
+  },
+  {
+    "title": "SharpPeak: Unlocking the True Potential of Tunnel Diodes for Low-Power Long-Range Communication.",
+    "authors": [
+      "Madhushanka Padmal",
+      "Dilushi Piumwardane",
+      "Thiemo Voigt"
+    ],
+    "venue": "SenSys",
+    "year": 2026,
+    "abstract": null,
+    "citation_count": null,
+    "reference_count": null,
+    "url": "https://doi.org/10.1145/3774906.3800468",
+    "dblp_key": "conf/sensys/PadmalPV26",
+    "source_id": null
+  },
+  {
+    "title": "Bringing All Modulations to Underwater Backscatter via PDM-Synthesis.",
+    "authors": [
+      "Waleed Akbar",
+      "Ahmed Allam",
+      "Nazish Naeem",
+      "Fadel Adib"
+    ],
+    "venue": "SenSys",
+    "year": 2026,
+    "abstract": null,
+    "citation_count": null,
+    "reference_count": null,
+    "url": "https://doi.org/10.1145/3774906.3800496",
+    "dblp_key": "conf/sensys/AkbarANA26",
+    "source_id": null
+  },
+  {
+    "title": "Piezo-Ultrasonic Backscatter: Low-Power High Throughput Underwater Networking.",
+    "authors": [
+      "Purui Wang",
+      "Weitung Chen",
+      "Waleed Akbar",
+      "Fadel Adib"
+    ],
+    "venue": "SenSys",
+    "year": 2026,
+    "abstract": null,
+    "citation_count": null,
+    "reference_count": null,
+    "url": "https://doi.org/10.1145/3774906.3802754",
+    "dblp_key": "conf/sensys/WangCAA26",
+    "source_id": null
+  },
+  {
+    "title": "A Single-Chain Analog Backscatter Tag for Multi-Sensor Multiplexing.",
+    "authors": [
+      "Yijie Li 0002",
+      "Weichong Ling",
+      "Taiting Lu",
+      "Bao Dao",
+      "Yi-Chao Chen 0001",
+      "Vaishnavi Ranganathan",
+      "Lili Qiu",
+      "Jingxian Wang"
+    ],
+    "venue": "SenSys",
+    "year": 2026,
+    "abstract": null,
+    "citation_count": null,
+    "reference_count": null,
+    "url": "https://doi.org/10.1145/3774906.3802756",
+    "dblp_key": "conf/sensys/LiLLDCRQW26",
+    "source_id": null
+  },
+  {
+    "title": "Longan: Ultra-Low-Power, Long-Range LoRa Receiver for LPWANs.",
+    "authors": [
+      "Mingzhe Li",
+      "Tao Chen",
+      "Zhenjiang Li"
+    ],
+    "venue": "SenSys",
+    "year": 2026,
+    "abstract": null,
+    "citation_count": null,
+    "reference_count": null,
+    "url": "https://doi.org/10.1145/3774906.3802753",
+    "dblp_key": "conf/sensys/LiCL26",
+    "source_id": null
+  },
+  {
+    "title": "Enabling Cross Technology Communication from LR-FHSS to LoRa.",
+    "authors": [
+      "Md Ashikul Haque",
+      "Aakriti Jain",
+      "Prashant P. Modekurthy",
+      "Abusayeed Saifullah"
+    ],
+    "venue": "SenSys",
+    "year": 2026,
+    "abstract": null,
+    "citation_count": null,
+    "reference_count": null,
+    "url": "https://doi.org/10.1145/3774906.3802771",
+    "dblp_key": "conf/sensys/HaqueJMS26",
+    "source_id": null
+  },
+  {
+    "title": "μMan: Towards Device-Agnostic Power Management for Battery-free IoT.",
+    "authors": [
+      "Chong Zhang",
+      "Han Wang 0032",
+      "Qianhe Meng",
+      "Yize Zhao",
+      "Shengyu Li",
+      "Songfan Li",
+      "Zetao Gao",
+      "Li Lu 0001",
+      "Hongzi Zhu"
+    ],
+    "venue": "SenSys",
+    "year": 2026,
+    "abstract": null,
+    "citation_count": null,
+    "reference_count": null,
+    "url": "https://doi.org/10.1145/3774906.3800478",
+    "dblp_key": "conf/sensys/ZhangWMZLLGLZ26",
+    "source_id": null
+  },
+  {
+    "title": "Deform to Inform: Persistent Batteryless Sensing via Antenna Deformation and RFID Impedance Adaptation.",
+    "authors": [
+      "Haochen Zhao",
+      "Vishnu Naidu",
+      "Shanmu Wang",
+      "Kenneth J. Loh",
+      "Omid Abari"
+    ],
+    "venue": "SenSys",
+    "year": 2026,
+    "abstract": null,
+    "citation_count": null,
+    "reference_count": null,
+    "url": "https://doi.org/10.1145/3774906.3800482",
+    "dblp_key": "conf/sensys/ZhaoNWLA26",
+    "source_id": null
+  },
+  {
+    "title": "Cheetah: A New Paradigm for Battery-free Wearable Devices.",
+    "authors": [
+      "Vivian Dsouza",
+      "Przemyslaw Pawelczak",
+      "Alessandro Montanari",
+      "Ashok Samraj Thangarajan"
+    ],
+    "venue": "SenSys",
+    "year": 2026,
+    "abstract": null,
+    "citation_count": null,
+    "reference_count": null,
+    "url": "https://doi.org/10.1145/3774906.3802775",
+    "dblp_key": "conf/sensys/DsouzaPMT26",
+    "source_id": null
+  },
+  {
+    "title": "Enabling Active Sensing with Zero-Power Components.",
+    "authors": [
+      "Mingqi Xie",
+      "Qinyu Wang 0003",
+      "Meng Jin 0002",
+      "Fengyuan Zhu 0001",
+      "Jiaxin Ding 0001",
+      "Xinbing Wang",
+      "Chenghu Zhou"
+    ],
+    "venue": "SenSys",
+    "year": 2026,
+    "abstract": null,
+    "citation_count": null,
+    "reference_count": null,
+    "url": "https://doi.org/10.1145/3774906.3800462",
+    "dblp_key": "conf/sensys/XieWJZDWZ26",
+    "source_id": null
+  },
+  {
+    "title": "Towards Practical Bi-Static Polarimetric Imaging Using Commodity mmWave Radars for Material Sensing.",
+    "authors": [
+      "Xinghua Sun",
+      "Akshay Gadre"
+    ],
+    "venue": "SenSys",
+    "year": 2026,
+    "abstract": null,
+    "citation_count": null,
+    "reference_count": null,
+    "url": "https://doi.org/10.1145/3774906.3800470",
+    "dblp_key": "conf/sensys/SunG26",
+    "source_id": null
+  },
+  {
+    "title": "Surface Material and Roughness Sensing Using mmWave via Surface Scattering and Ambient Vibrations.",
+    "authors": [
+      "Yawen Liu",
+      "Bert Shan",
+      "Swarun Kumar"
+    ],
+    "venue": "SenSys",
+    "year": 2026,
+    "abstract": null,
+    "citation_count": null,
+    "reference_count": null,
+    "url": "https://doi.org/10.1145/3774906.3800459",
+    "dblp_key": "conf/sensys/LiuSK26",
+    "source_id": null
+  },
+  {
+    "title": "MetaPolar: A Low-Cost, Passive, mmWave Radar-Readable Metasurface Road Sign.",
+    "authors": [
+      "Kai Zheng 0003",
+      "Wuqiong Zhao",
+      "Xinyu Zhang 0003"
+    ],
+    "venue": "SenSys",
+    "year": 2026,
+    "abstract": null,
+    "citation_count": null,
+    "reference_count": null,
+    "url": "https://doi.org/10.1145/3774906.3800464",
+    "dblp_key": "conf/sensys/ZhengZZ26",
+    "source_id": null
+  },
+  {
+    "title": "Sense with Polyface Mirror: Enhancing Wi-Fi Sensing Diversity via Programmable Metasurfaces.",
+    "authors": [
+      "Long Fan",
+      "Yinghui He",
+      "Lei Xie 0004",
+      "Serene Zhang",
+      "Jun Luo 0001"
+    ],
+    "venue": "SenSys",
+    "year": 2026,
+    "abstract": null,
+    "citation_count": null,
+    "reference_count": null,
+    "url": "https://doi.org/10.1145/3774906.3800469",
+    "dblp_key": "conf/sensys/FanHXZL26",
+    "source_id": null
+  },
+  {
+    "title": "Millimeter-Scale Absolute Carrier Phase-Based Localization in Multi-Band Systems.",
+    "authors": [
+      "Andrea Bedin",
+      "Joerg Widmer",
+      "Melanny Davila",
+      "Marco Canil",
+      "Rafael Ruiz 0001"
+    ],
+    "venue": "SenSys",
+    "year": 2026,
+    "abstract": null,
+    "citation_count": null,
+    "reference_count": null,
+    "url": "https://doi.org/10.1145/3774906.3800494",
+    "dblp_key": "conf/sensys/BedinWDCR26",
+    "source_id": null
+  },
+  {
+    "title": "0cal: Zero-Cost Calibration for mmWave Networks.",
+    "authors": [
+      "Xin Liu 045",
+      "Wei-Han Chen",
+      "Kannan Srinivasan 0001"
+    ],
+    "venue": "SenSys",
+    "year": 2026,
+    "abstract": null,
+    "citation_count": null,
+    "reference_count": null,
+    "url": "https://doi.org/10.1145/3774906.3802748",
+    "dblp_key": "conf/sensys/045CS26",
+    "source_id": null
+  },
+  {
+    "title": "mmAnomaly: Leveraging Visual Context for Robust Anomaly Detection in the Non-Visual World with mmWave Radar.",
+    "authors": [
+      "Tarik Reza Toha",
+      "Shao-Jung (Louie) Lu",
+      "Mahathir Monjur",
+      "Shahriar Nirjon"
+    ],
+    "venue": "SenSys",
+    "year": 2026,
+    "abstract": null,
+    "citation_count": null,
+    "reference_count": null,
+    "url": "https://doi.org/10.1145/3774906.3802773",
+    "dblp_key": "conf/sensys/TohaLMN26",
+    "source_id": null
+  },
+  {
+    "title": "GigaFlex: Contactless Monitoring of Muscle Vibrations During Exercise with a Chaos-Inspired Radar.",
+    "authors": [
+      "Jiangyifei Zhu",
+      "Yuzhe Wang",
+      "Tao Qiang",
+      "Vu Phan",
+      "Zhixiong Li",
+      "Evy Meinders",
+      "Eni Halilaj",
+      "Justin Chan",
+      "Swarun Kumar"
+    ],
+    "venue": "SenSys",
+    "year": 2026,
+    "abstract": null,
+    "citation_count": null,
+    "reference_count": null,
+    "url": "https://doi.org/10.1145/3774906.3802776",
+    "dblp_key": "conf/sensys/ZhuWQPLMHCK26",
+    "source_id": null
+  },
+  {
+    "title": "OmniPC: A Generalizable Point Cloud Generation Pipeline for mmWave Radar.",
+    "authors": [
+      "Hongliu Yang",
+      "Zizhou Fan",
+      "Jie Xiong 0001",
+      "Duo Zhang",
+      "Xusheng Zhang",
+      "Zijun Han",
+      "Fusang Zhang",
+      "Daqing Zhang 0001"
+    ],
+    "venue": "SenSys",
+    "year": 2026,
+    "abstract": null,
+    "citation_count": null,
+    "reference_count": null,
+    "url": "https://doi.org/10.1145/3774906.3802797",
+    "dblp_key": "conf/sensys/YangFXZZHZZ26",
+    "source_id": null
+  },
+  {
+    "title": "MIRO: Multi-Radar Identity and Ranging for Occupational Safety.",
+    "authors": [
+      "Tirthankar Halder",
+      "Argha Sen",
+      "Swadhin Pradhan",
+      "Rijurekha Sen",
+      "Sandip Chakraborty 0001"
+    ],
+    "venue": "SenSys",
+    "year": 2026,
+    "abstract": null,
+    "citation_count": null,
+    "reference_count": null,
+    "url": "https://doi.org/10.1145/3774906.3802761",
+    "dblp_key": "conf/sensys/HalderSPSC26",
+    "source_id": null
+  },
+  {
+    "title": "Motion Capture with Millimeter-Wave Tags.",
+    "authors": [
+      "Xin Yang",
+      "Freddy Yifei Liu",
+      "Yunshuang Li",
+      "Yao Gong",
+      "Dinesh Jayaraman",
+      "Omid Abari",
+      "Mingmin Zhao"
+    ],
+    "venue": "SenSys",
+    "year": 2026,
+    "abstract": null,
+    "citation_count": null,
+    "reference_count": null,
+    "url": "https://doi.org/10.1145/3774906.3800488",
+    "dblp_key": "conf/sensys/YangLLGJAZ26",
+    "source_id": null
+  },
+  {
+    "title": "Stereo-Fi: Free-Form 3D Reconstruction via Generatively Co-Trained Inverse RF Rendering.",
+    "authors": [
+      "Xueqiang Han",
+      "Tianyue Zheng",
+      "Jun Luo 0001"
+    ],
+    "venue": "SenSys",
+    "year": 2026,
+    "abstract": null,
+    "citation_count": null,
+    "reference_count": null,
+    "url": "https://doi.org/10.1145/3774906.3802762",
+    "dblp_key": "conf/sensys/HanZL26",
+    "source_id": null
+  },
+  {
+    "title": "MagLens: Bringing Mobile, Fine-Grained Imaging to Ferrous Building Structures.",
+    "authors": [
+      "Jike Wang",
+      "Yasha Iravantchi",
+      "Mingke Wang",
+      "Alanson Sample",
+      "Kang Geun Shin",
+      "Xinbing Wang",
+      "Dongyao Chen"
+    ],
+    "venue": "SenSys",
+    "year": 2026,
+    "abstract": null,
+    "citation_count": null,
+    "reference_count": null,
+    "url": "https://doi.org/10.1145/3774906.3802749",
+    "dblp_key": "conf/sensys/WangIWSSWC26",
+    "source_id": null
+  },
+  {
+    "title": "AutoEmbed: LLM-driven Automated Software Development for Generic Embedded IoT Systems.",
+    "authors": [
+      "Huanqi Yang",
+      "Mingzhe Li",
+      "Mingda Han",
+      "Zhenjiang Li",
+      "Weitao Xu"
+    ],
+    "venue": "SenSys",
+    "year": 2026,
+    "abstract": null,
+    "citation_count": null,
+    "reference_count": null,
+    "url": "https://doi.org/10.1145/3774906.3800466",
+    "dblp_key": "conf/sensys/YangLHLX26",
+    "source_id": null
+  },
+  {
+    "title": "An Efficient Context Management System for On-Device LLMaaS.",
+    "authors": [
+      "Wangsong Yin",
+      "Mengwei Xu 0001",
+      "Yuanchun Li 0003",
+      "Xuanzhe Liu"
+    ],
+    "venue": "SenSys",
+    "year": 2026,
+    "abstract": null,
+    "citation_count": null,
+    "reference_count": null,
+    "url": "https://doi.org/10.1145/3774906.3800479",
+    "dblp_key": "conf/sensys/YinXLL26",
+    "source_id": null
+  },
+  {
+    "title": "MMEdge: Accelerating On-device Multimodal Inference via Pipelined Sensing and Encoding.",
+    "authors": [
+      "Runxi Huang",
+      "Mingxuan Yu",
+      "Mingyu Tsoi",
+      "Xiaomin Ouyang"
+    ],
+    "venue": "SenSys",
+    "year": 2026,
+    "abstract": null,
+    "citation_count": null,
+    "reference_count": null,
+    "url": "https://doi.org/10.1145/3774906.3800485",
+    "dblp_key": "conf/sensys/HuangYTO26",
+    "source_id": null
+  },
+  {
+    "title": "Optimizing Feature Extraction for On-device Model Inference with User Behavior Sequences.",
+    "authors": [
+      "Chen Gong 0006",
+      "Zhenzhe Zheng 0001",
+      "Yiliu Chen",
+      "Sheng Wang 0011",
+      "Fan Wu 0006",
+      "Guihai Chen"
+    ],
+    "venue": "SenSys",
+    "year": 2026,
+    "abstract": null,
+    "citation_count": null,
+    "reference_count": null,
+    "url": "https://doi.org/10.1145/3774906.3800493",
+    "dblp_key": "conf/sensys/GongZCWWC26",
+    "source_id": null
+  },
+  {
+    "title": "EdgeTune: Efficient On-Device LLM Personalization at the Edge.",
+    "authors": [
+      "Zhenyu Wang",
+      "Rana Muhammad Shahroz Khan",
+      "Tianlong Chen 0001",
+      "Shahriar Nirjon"
+    ],
+    "venue": "SenSys",
+    "year": 2026,
+    "abstract": null,
+    "citation_count": null,
+    "reference_count": null,
+    "url": "https://doi.org/10.1145/3774906.3802769",
+    "dblp_key": "conf/sensys/WangKCN26",
+    "source_id": null
+  },
+  {
+    "title": "PELM: Power Efficient On-Device LLM Inference with Speculative Decoding and Dynamic Voltage Frequency Scaling.",
+    "authors": [
+      "Weisi Yang",
+      "Stephen Xia"
+    ],
+    "venue": "SenSys",
+    "year": 2026,
+    "abstract": null,
+    "citation_count": null,
+    "reference_count": null,
+    "url": "https://doi.org/10.1145/3774906.3802783",
+    "dblp_key": "conf/sensys/YangX26",
+    "source_id": null
+  },
+  {
+    "title": "ConvReflex: Efficient Ultra-Low-Power CNN Inference via Clamping Prediction.",
+    "authors": [
+      "Shiming Li",
+      "Luca Mottola",
+      "Yuan Yao 0009",
+      "Stefanos Kaxiras"
+    ],
+    "venue": "SenSys",
+    "year": 2026,
+    "abstract": null,
+    "citation_count": null,
+    "reference_count": null,
+    "url": "https://doi.org/10.1145/3774906.3802781",
+    "dblp_key": "conf/sensys/LiMYK26",
+    "source_id": null
+  },
+  {
+    "title": "BoTTA: Benchmarking On-device Test Time Adaptation.",
+    "authors": [
+      "Michal Danilowski",
+      "Soumyajit Chatterjee",
+      "Abhirup Ghosh"
+    ],
+    "venue": "SenSys",
+    "year": 2026,
+    "abstract": null,
+    "citation_count": null,
+    "reference_count": null,
+    "url": "https://doi.org/10.1145/3774906.3800498",
+    "dblp_key": "conf/sensys/DanilowskiCG26",
+    "source_id": null
+  },
+  {
+    "title": "Short Paper: Towards Algorithmically Grounded Embedded AI Models.",
+    "authors": [
+      "Zhenyu Wang",
+      "Md. Yusuf Sarwar Uddin",
+      "Shahriar Nirjon"
+    ],
+    "venue": "SenSys",
+    "year": 2026,
+    "abstract": null,
+    "citation_count": null,
+    "reference_count": null,
+    "url": "https://doi.org/10.1145/3774906.3800495",
+    "dblp_key": "conf/sensys/WangUN26",
+    "source_id": null
+  },
+  {
+    "title": "Towards Generalizable Wireless Sensing Models via Pre-training on Multi-Source Datasets.",
+    "authors": [
+      "Chen Gong",
+      "Bo Liang 0003",
+      "Qihao Zhu",
+      "Wei Gao 0006",
+      "Yin Chen 0001",
+      "Jin Nakazawa",
+      "Chenren Xu"
+    ],
+    "venue": "SenSys",
+    "year": 2026,
+    "abstract": null,
+    "citation_count": null,
+    "reference_count": null,
+    "url": "https://doi.org/10.1145/3774906.3802759",
+    "dblp_key": "conf/sensys/GongLZGCNX26",
+    "source_id": null
+  },
+  {
+    "title": "SynchroNB: Toward Robust Timing for 5G NB-IoT Networks.",
+    "authors": [
+      "Muhammad Abdullah Soomro",
+      "Muhammad Shayan Nazeer",
+      "Collin DelSignore",
+      "Yasra Chandio",
+      "Muhammad Taqi Raza",
+      "Fatima Muhammad Anwar 0001"
+    ],
+    "venue": "SenSys",
+    "year": 2026,
+    "abstract": null,
+    "citation_count": null,
+    "reference_count": null,
+    "url": "https://doi.org/10.1145/3774906.3800502",
+    "dblp_key": "conf/sensys/SoomroNDCRA26",
+    "source_id": null
+  },
+  {
+    "title": "WildFiT: Autonomous In-Situ Model Adaptation for Resource-Constrained IoT Systems.",
+    "authors": [
+      "Mohammad Mehdi Rastikerdar",
+      "Jin Huang",
+      "Hui Guan 0001",
+      "Deepak Ganesan"
+    ],
+    "venue": "SenSys",
+    "year": 2026,
+    "abstract": null,
+    "citation_count": null,
+    "reference_count": null,
+    "url": "https://doi.org/10.1145/3774906.3800481",
+    "dblp_key": "conf/sensys/RastikerdarHGG26",
+    "source_id": null
+  },
+  {
+    "title": "WISP: Printable Graphene-Based Wearables for Force-Based Micro-Gesture Recognition.",
+    "authors": [
+      "Zhenyu Lei 0005",
+      "Xiaomeng Liu",
+      "Quan Zhang",
+      "VP Nguyen",
+      "Jun Yao",
+      "Deepak Ganesan"
+    ],
+    "venue": "SenSys",
+    "year": 2026,
+    "abstract": null,
+    "citation_count": null,
+    "reference_count": null,
+    "url": "https://doi.org/10.1145/3774906.3800486",
+    "dblp_key": "conf/sensys/LeiLZNYG26",
+    "source_id": null
+  },
+  {
+    "title": "VYRE: Low-Burden and Robust Oscillometric Ring-Based System for Frequent Blood Pressure Monitoring.",
+    "authors": [
+      "Amirmohammad Radmehr",
+      "Shamanth Kuthpadi Seethakantha",
+      "Abdul Aziz 0009",
+      "Quang Trung Tran",
+      "Aryan Nair",
+      "William Saulnier",
+      "Deepak Ganesan",
+      "Phuc Nguyen 0002"
+    ],
+    "venue": "SenSys",
+    "year": 2026,
+    "abstract": null,
+    "citation_count": null,
+    "reference_count": null,
+    "url": "https://doi.org/10.1145/3774906.3802789",
+    "dblp_key": "conf/sensys/RadmehrSATNSGN26",
+    "source_id": null
+  },
+  {
+    "title": "Med2ECG: Medical-Guided BCG-To-ECG Reconstruction for Diverse Populations.",
+    "authors": [
+      "Lin Chen 0020",
+      "Yandao Huang",
+      "Chenggao Li",
+      "Jun Chen",
+      "Shuxin Zhong",
+      "Minghui Qiu",
+      "Chunzhen Guo",
+      "Yi Wang",
+      "Qian Zhang 0001",
+      "Kaishun Wu"
+    ],
+    "venue": "SenSys",
+    "year": 2026,
+    "abstract": null,
+    "citation_count": null,
+    "reference_count": null,
+    "url": "https://doi.org/10.1145/3774906.3800463",
+    "dblp_key": "conf/sensys/ChenHLCZQGWZW26",
+    "source_id": null
+  },
+  {
+    "title": "EarPCG: Recovering Heart Sounds from in-Ear Audio via Physics-Informed Neural Network.",
+    "authors": [
+      "Junyi Zhou",
+      "Yiyi Zhang",
+      "Henglin Pu",
+      "Peng Guo 0001",
+      "Tianyue Zheng",
+      "Chao Cai 0001",
+      "Jun Luo 0001"
+    ],
+    "venue": "SenSys",
+    "year": 2026,
+    "abstract": null,
+    "citation_count": null,
+    "reference_count": null,
+    "url": "https://doi.org/10.1145/3774906.3800491",
+    "dblp_key": "conf/sensys/ZhouZPGZCL26",
+    "source_id": null
+  },
+  {
+    "title": "NutriEar: Robust Nutrition-Aware Food Classification from In-Ear Acoustic Signals.",
+    "authors": [
+      "Zoey Xiaochen Tan",
+      "Yang Liu 0101",
+      "Kayla-Jade Butkow",
+      "Cecilia Mascolo"
+    ],
+    "venue": "SenSys",
+    "year": 2026,
+    "abstract": null,
+    "citation_count": null,
+    "reference_count": null,
+    "url": "https://doi.org/10.1145/3774906.3802763",
+    "dblp_key": "conf/sensys/TanLBM26",
+    "source_id": null
+  },
+  {
+    "title": "MRI-Grade Photoplethysmography Using Bundled Fiber Optics for Contactless Heart Rate Monitoring and Real-Time Gating.",
+    "authors": [
+      "Tommaso Polonelli",
+      "Sébastien Emery",
+      "Bianca Müller",
+      "Ivan Simeonov",
+      "Marco Giordano",
+      "Michele Magno",
+      "Sebastian Kozerke"
+    ],
+    "venue": "SenSys",
+    "year": 2026,
+    "abstract": null,
+    "citation_count": null,
+    "reference_count": null,
+    "url": "https://doi.org/10.1145/3774906.3802767",
+    "dblp_key": "conf/sensys/PolonelliEMSGMK26",
+    "source_id": null
+  },
+  {
+    "title": "Short Paper: EarSleeve: Transforming Everyday Earphones into a 12-Lead ECG Sensing Platform.",
+    "authors": [
+      "Junxi Xia",
+      "Dogaç Eldenk",
+      "Hongjun Xu",
+      "Yang Liu",
+      "Stephen Xia"
+    ],
+    "venue": "SenSys",
+    "year": 2026,
+    "abstract": null,
+    "citation_count": null,
+    "reference_count": null,
+    "url": "https://doi.org/10.1145/3774906.3802785",
+    "dblp_key": "conf/sensys/XiaEXLX26",
+    "source_id": null
+  },
+  {
+    "title": "WristSense: Sensing Hidden Wrist Strain in Routine Activities via Inertial Tokenization and LLM-Based Feedback.",
+    "authors": [
+      "Garvit Chugh",
+      "Ananya Mondal",
+      "Sandip Chakraborty 0001",
+      "Suchetana Chakraborty"
+    ],
+    "venue": "SenSys",
+    "year": 2026,
+    "abstract": null,
+    "citation_count": null,
+    "reference_count": null,
+    "url": "https://doi.org/10.1145/3774906.3800489",
+    "dblp_key": "conf/sensys/ChughMCC26",
+    "source_id": null
+  },
+  {
+    "title": "Short Paper: Towards Real-Time ECG and EMG Modeling on μNPUs.",
+    "authors": [
+      "Josh Millar",
+      "Ashok Samraj Thangarajan",
+      "Soumyajit Chatterjee",
+      "Hamed Haddadi 0001"
+    ],
+    "venue": "SenSys",
+    "year": 2026,
+    "abstract": null,
+    "citation_count": null,
+    "reference_count": null,
+    "url": "https://doi.org/10.1145/3774906.3802787",
+    "dblp_key": "conf/sensys/MillarTCH26",
+    "source_id": null
+  },
+  {
+    "title": "From a Point to Hundreds: Embracing LiDAR on Commodity Smartphones for Fine-Grained Pulmonary Function Sensing.",
+    "authors": [
+      "Xuefu Dong",
+      "Wenwei Li",
+      "Minhao Cui",
+      "Zilong Wang 0006",
+      "Lupeng Zhang",
+      "Akihito Taya",
+      "Yuuki Nishiyama",
+      "Kaoru Sezaki",
+      "Lili Qiu",
+      "Jie Xiong 0001"
+    ],
+    "venue": "SenSys",
+    "year": 2026,
+    "abstract": null,
+    "citation_count": null,
+    "reference_count": null,
+    "url": "https://doi.org/10.1145/3774906.3802752",
+    "dblp_key": "conf/sensys/DongLCWZTNSQX26",
+    "source_id": null
+  },
+  {
+    "title": "NeuroPath: Practically Adopting Motor Imagery Decoding through EEG Signals.",
+    "authors": [
+      "Jiani Cao",
+      "Kun Wang",
+      "Yang Liu",
+      "Zhenjiang Li"
+    ],
+    "venue": "SenSys",
+    "year": 2026,
+    "abstract": null,
+    "citation_count": null,
+    "reference_count": null,
+    "url": "https://doi.org/10.1145/3774906.3802770",
+    "dblp_key": "conf/sensys/CaoWLL26",
+    "source_id": null
+  },
+  {
+    "title": "Short Paper: WearBCI Dataset: Understanding and Benchmarking Real-World Wearable Brain-Computer Interfaces Signals.",
+    "authors": [
+      "Haoxian Liu",
+      "Hengle Jiang",
+      "Lanxuan Hong",
+      "Xiaomin Ouyang"
+    ],
+    "venue": "SenSys",
+    "year": 2026,
+    "abstract": null,
+    "citation_count": null,
+    "reference_count": null,
+    "url": "https://doi.org/10.1145/3774906.3802782",
+    "dblp_key": "conf/sensys/LiuJHO26",
+    "source_id": null
+  },
+  {
+    "title": "Short Paper: The Starlink Robot: A Platform and Dataset for Mobile Satellite Communication.",
+    "authors": [
+      "Boyi Liu",
+      "Qianyi Zhang",
+      "Qiang Yang",
+      "Jianhao Jiao",
+      "Jagmohan Chauhan",
+      "Dimitrios Kanoulas"
+    ],
+    "venue": "SenSys",
+    "year": 2026,
+    "abstract": null,
+    "citation_count": null,
+    "reference_count": null,
+    "url": "https://doi.org/10.1145/3774906.3800503",
+    "dblp_key": "conf/sensys/LiuZYJCK26",
+    "source_id": null
+  },
+  {
+    "title": "Exploring LEO Satellite Networks for Continuous Monitoring and Dynamic Tracking.",
+    "authors": [
+      "Lang Wei",
+      "Ruichen Li",
+      "Baodong Chen",
+      "Qifan Yang",
+      "Yufan Wu",
+      "Ting Zhu"
+    ],
+    "venue": "SenSys",
+    "year": 2026,
+    "abstract": null,
+    "citation_count": null,
+    "reference_count": null,
+    "url": "https://doi.org/10.1145/3774906.3802766",
+    "dblp_key": "conf/sensys/WeiLCYWZ26",
+    "source_id": null
+  },
+  {
+    "title": "SERENADE: A Digital Twin Emulator for LEO Satellite Networking At-Scale.",
+    "authors": [
+      "Roberto Chamorro Martinez",
+      "N. Cameron Matson",
+      "Karthikeyan Sundaresan"
+    ],
+    "venue": "SenSys",
+    "year": 2026,
+    "abstract": null,
+    "citation_count": null,
+    "reference_count": null,
+    "url": "https://doi.org/10.1145/3774906.3802777",
+    "dblp_key": "conf/sensys/MartinezMS26",
+    "source_id": null
+  },
+  {
+    "title": "Enabling Near-realtime Remote Sensing via Satellite-Ground Collaboration of Large Vision-Language Models.",
+    "authors": [
+      "Zihan Li",
+      "Jiahao Yang",
+      "Yuxin Zhang",
+      "Zhe Chen 0015",
+      "Yue Gao 0001"
+    ],
+    "venue": "SenSys",
+    "year": 2026,
+    "abstract": null,
+    "citation_count": null,
+    "reference_count": null,
+    "url": "https://doi.org/10.1145/3774906.3800497",
+    "dblp_key": "conf/sensys/LiYZCG26",
+    "source_id": null
+  },
+  {
+    "title": "LaSen: Low-Altitude Drone Sensing with 5G-NR Signals.",
+    "authors": [
+      "Qian Yang",
+      "Yongtao Dai",
+      "Mingrui Li",
+      "Qianyi Huang",
+      "Xu Chen 0004",
+      "Jin Zhang 0001",
+      "Guochao Song",
+      "Qian Zhang 0001",
+      "Xiaofeng Tao 0001"
+    ],
+    "venue": "SenSys",
+    "year": 2026,
+    "abstract": null,
+    "citation_count": null,
+    "reference_count": null,
+    "url": "https://doi.org/10.1145/3774906.3800504",
+    "dblp_key": "conf/sensys/YangDLHCZSZT26",
+    "source_id": null
+  },
+  {
+    "title": "Count Every Rotation and Every Rotation Counts: Exploring Drone Dynamics via Propeller Sensing.",
+    "authors": [
+      "Xuecheng Chen",
+      "Jingao Xu",
+      "Wenhua Ding",
+      "Haoyang Wang 0012",
+      "Xinyu Luo",
+      "Ruiyang Duan",
+      "Jialong Chen",
+      "Xueqian Wang",
+      "Yunhao Liu 0001",
+      "Xinlei Chen"
+    ],
+    "venue": "SenSys",
+    "year": 2026,
+    "abstract": null,
+    "citation_count": null,
+    "reference_count": null,
+    "url": "https://doi.org/10.1145/3774906.3800477",
+    "dblp_key": "conf/sensys/ChenXDWLDCWLC26",
+    "source_id": null
+  },
+  {
+    "title": "GreenScatter: Through-Canopy Soil Moisture Sensing with UAV-Mounted Radar.",
+    "authors": [
+      "Luke Jacobs",
+      "Ishfaq Aziz",
+      "Benhao Lu",
+      "Alireza Tabatabaeenejad",
+      "Mohamad Alipour",
+      "Elahe Soltanaghai"
+    ],
+    "venue": "SenSys",
+    "year": 2026,
+    "abstract": null,
+    "citation_count": null,
+    "reference_count": null,
+    "url": "https://doi.org/10.1145/3774906.3802792",
+    "dblp_key": "conf/sensys/JacobsALTAS26",
+    "source_id": null
+  },
+  {
+    "title": "ARC: Accurate, Real-Time, and Scalable Multi-Vehicle Cooperative Perception.",
+    "authors": [
+      "Kaleem Nawaz Khan",
+      "Fawad Ahmad 0002"
+    ],
+    "venue": "SenSys",
+    "year": 2026,
+    "abstract": null,
+    "citation_count": null,
+    "reference_count": null,
+    "url": "https://doi.org/10.1145/3774906.3800484",
+    "dblp_key": "conf/sensys/KhanA26",
+    "source_id": null
+  },
+  {
+    "title": "CARTS: Cooperative and Adaptive Resource Triggering and Stitching for 5G ISAC.",
+    "authors": [
+      "Cheng Jiang",
+      "Yihe Yan",
+      "Yanxiang Wang",
+      "Jiawei Hu",
+      "Chun Tung Chou",
+      "Wen Hu 0001"
+    ],
+    "venue": "SenSys",
+    "year": 2026,
+    "abstract": null,
+    "citation_count": null,
+    "reference_count": null,
+    "url": "https://doi.org/10.1145/3774906.3800460",
+    "dblp_key": "conf/sensys/JiangYWHCH26",
+    "source_id": null
+  },
+  {
+    "title": "EventEye: Towards High-Frequency Perception Enhancement for Autonomous Vehicles Using Infrastructure-Mounted Event Cameras.",
+    "authors": [
+      "Jingfei Xia",
+      "Yuze He",
+      "Chen Bian",
+      "Zhenyu Yan 0002",
+      "Guoliang Xing"
+    ],
+    "venue": "SenSys",
+    "year": 2026,
+    "abstract": null,
+    "citation_count": null,
+    "reference_count": null,
+    "url": "https://doi.org/10.1145/3774906.3800471",
+    "dblp_key": "conf/sensys/XiaHBYX26",
+    "source_id": null
+  },
+  {
+    "title": "COACH: Adaptive Robust Human-Robot Collaboration for Efficient Smart Manufacturing.",
+    "authors": [
+      "Hui Wang 0011",
+      "Liekang Zeng",
+      "Zhiwen Yu 0001",
+      "Yao Zhang 0005",
+      "Di Duan",
+      "Mu Yuan",
+      "Bin Guo 0001",
+      "Guoliang Xing"
+    ],
+    "venue": "SenSys",
+    "year": 2026,
+    "abstract": null,
+    "citation_count": null,
+    "reference_count": null,
+    "url": "https://doi.org/10.1145/3774906.3800501",
+    "dblp_key": "conf/sensys/WangZYZDYGX26",
+    "source_id": null
+  },
+  {
+    "title": "Defending Autonomous Driving Perception against Adversarial Object-Based Attacks via Motion Planning.",
+    "authors": [
+      "Zihao Liu 0001",
+      "Yan Zhang 0133",
+      "Yi Zhu 0012",
+      "Lu Su 0001",
+      "Chunming Qiao",
+      "Chenglin Miao"
+    ],
+    "venue": "SenSys",
+    "year": 2026,
+    "abstract": null,
+    "citation_count": null,
+    "reference_count": null,
+    "url": "https://doi.org/10.1145/3774906.3800480",
+    "dblp_key": "conf/sensys/LiuZZSQM26",
+    "source_id": null
+  },
+  {
+    "title": "Been There, Scanned That: Nostalgia-Driven Point Cloud Compression for Self-Driving Cars.",
+    "authors": [
+      "Ali Khalid",
+      "Jaiaid Mobin",
+      "Sumanth Rao Appala",
+      "Avinash Maurya",
+      "Stephany Berrio Perez",
+      "M. Mustafa Rafique",
+      "Fawad Ahmad"
+    ],
+    "venue": "SenSys",
+    "year": 2026,
+    "abstract": null,
+    "citation_count": null,
+    "reference_count": null,
+    "url": "https://doi.org/10.1145/3774906.3800467",
+    "dblp_key": "conf/sensys/KhalidMAMPRA26",
+    "source_id": null
+  },
+  {
+    "title": "WiRainbow: Single-Antenna Direction-Aware Wi-Fi Sensing via Dispersion Effect.",
+    "authors": [
+      "Zhaoxin Chang 0001",
+      "Shuguang Xiao",
+      "Fusang Zhang",
+      "Xujun Ma",
+      "Badii Jouaber",
+      "Qingfeng Zhang",
+      "Daqing Zhang 0001"
+    ],
+    "venue": "SenSys",
+    "year": 2026,
+    "abstract": null,
+    "citation_count": null,
+    "reference_count": null,
+    "url": "https://doi.org/10.1145/3774906.3800474",
+    "dblp_key": "conf/sensys/ChangXZMJZZ26",
+    "source_id": null
+  },
+  {
+    "title": "Zero-Effort Cross-Domain Wireless Respiration Monitoring Under Free Movements With Commercial UWB Devices.",
+    "authors": [
+      "Ge Wang 0003",
+      "Jiazheng Chen",
+      "Zhe Chen 0015",
+      "Fei Wang 0037",
+      "Cong Zhao 0006",
+      "Jianan Wang",
+      "Han Ding 0002",
+      "Cui Zhao",
+      "Wei Xi 0003",
+      "Jinsong Han"
+    ],
+    "venue": "SenSys",
+    "year": 2026,
+    "abstract": null,
+    "citation_count": null,
+    "reference_count": null,
+    "url": "https://doi.org/10.1145/3774906.3800465",
+    "dblp_key": "conf/sensys/WangCCWZWDZXH26",
+    "source_id": null
+  },
+  {
+    "title": "UWB-Based Localization of Smartphones inside a Vehicle to Prevent Distracted Driving.",
+    "authors": [
+      "Kailai Cui",
+      "Ke Sun",
+      "Kang Geun Shin"
+    ],
+    "venue": "SenSys",
+    "year": 2026,
+    "abstract": null,
+    "citation_count": null,
+    "reference_count": null,
+    "url": "https://doi.org/10.1145/3774906.3800472",
+    "dblp_key": "conf/sensys/CuiSS26",
+    "source_id": null
+  },
+  {
+    "title": "NeRC: Neural Ranging Correction through Differentiable Moving Horizon Location Estimation.",
+    "authors": [
+      "Xu Weng",
+      "Keck Voon Ling",
+      "Haochen Liu",
+      "Bingheng Wang",
+      "Kun Cao"
+    ],
+    "venue": "SenSys",
+    "year": 2026,
+    "abstract": null,
+    "citation_count": null,
+    "reference_count": null,
+    "url": "https://doi.org/10.1145/3774906.3800475",
+    "dblp_key": "conf/sensys/WengLLWC26",
+    "source_id": null
+  },
+  {
+    "title": "AMULET: Acoustic Metastructure for Direction-of-Arrival Estimation Underwater Using a Single Hydrophone.",
+    "authors": [
+      "Andrew Bergey",
+      "Nakul Garg",
+      "Akshay Gadre"
+    ],
+    "venue": "SenSys",
+    "year": 2026,
+    "abstract": null,
+    "citation_count": null,
+    "reference_count": null,
+    "url": "https://doi.org/10.1145/3774906.3802750",
+    "dblp_key": "conf/sensys/BergeyGG26",
+    "source_id": null
+  },
+  {
+    "title": "SingSprite: Non-Tactile Appliance Interaction for the Blind through Power-Supply Acoustic Signatures.",
+    "authors": [
+      "Lanqing Yang",
+      "Weiyi Wang",
+      "Yongzhao Zhang",
+      "Yixin Liu",
+      "Yi-Chao Chen 0001",
+      "Guangtao Xue",
+      "Ahmad Ali"
+    ],
+    "venue": "SenSys",
+    "year": 2026,
+    "abstract": null,
+    "citation_count": null,
+    "reference_count": null,
+    "url": "https://doi.org/10.1145/3774906.3800505",
+    "dblp_key": "conf/sensys/YangWZLCXA26",
+    "source_id": null
+  },
+  {
+    "title": "MoiréEar: Moiré Can See What You Cannot Hear.",
+    "authors": [
+      "Hongqiang Zhang",
+      "Lupeng Zhang",
+      "Chengcheng Zhao",
+      "Yuanchao Shu",
+      "Peng Cheng 0001",
+      "Jiming Chen 0001",
+      "Jie Xiong 0001"
+    ],
+    "venue": "SenSys",
+    "year": 2026,
+    "abstract": null,
+    "citation_count": null,
+    "reference_count": null,
+    "url": "https://doi.org/10.1145/3774906.3802760",
+    "dblp_key": "conf/sensys/ZhangZZSCCX26",
+    "source_id": null
+  },
+  {
+    "title": "LightTells: Lights Reveal What You Are Doing.",
+    "authors": [
+      "Yue Zhang",
+      "Nan Cen",
+      "Peijun Hou"
+    ],
+    "venue": "SenSys",
+    "year": 2026,
+    "abstract": null,
+    "citation_count": null,
+    "reference_count": null,
+    "url": "https://doi.org/10.1145/3774906.3800483",
+    "dblp_key": "conf/sensys/ZhangCH26",
+    "source_id": null
+  },
+  {
+    "title": "LuxTag: Ambient Light Sensing and Localization via Passive RFID.",
+    "authors": [
+      "Xingyu Chen",
+      "Jia Liu 0008",
+      "Chengxuan Fu",
+      "Lei Xie 0004",
+      "Yanchao Zhao",
+      "Baoliu Ye",
+      "Chen Tian 0001",
+      "Guihai Chen"
+    ],
+    "venue": "SenSys",
+    "year": 2026,
+    "abstract": null,
+    "citation_count": null,
+    "reference_count": null,
+    "url": "https://doi.org/10.1145/3774906.3802778",
+    "dblp_key": "conf/sensys/ChenLFXZYTC26",
+    "source_id": null
+  },
+  {
+    "title": "mTrack: Enabling Long-Term Mouse Social Behavior Analysis through RFID-Vision Hybrid Tracking.",
+    "authors": [
+      "Xingyuming Liu",
+      "Bo Liang 0003",
+      "Haobo Wang",
+      "Zhonghao Li",
+      "Qirui Liu",
+      "Yan-Xue Xue",
+      "Yunhuai Liu",
+      "Chenren Xu"
+    ],
+    "venue": "SenSys",
+    "year": 2026,
+    "abstract": null,
+    "citation_count": null,
+    "reference_count": null,
+    "url": "https://doi.org/10.1145/3774906.3800473",
+    "dblp_key": "conf/sensys/LiuLWLLXLX26",
+    "source_id": null
+  },
+  {
+    "title": "FusionBridge: Enhancing Multi-View Multi-Modal Sensing and Perception for Edge Intelligence.",
+    "authors": [
+      "Dhanuja Wanniarachchige",
+      "Kasthuri Jayarajah",
+      "Tarek F. Abdelzaher",
+      "Archan Misra"
+    ],
+    "venue": "SenSys",
+    "year": 2026,
+    "abstract": null,
+    "citation_count": null,
+    "reference_count": null,
+    "url": "https://doi.org/10.1145/3774906.3802747",
+    "dblp_key": "conf/sensys/Wanniarachchige26",
+    "source_id": null
+  },
+  {
+    "title": "LLMSEG: Semantic Segmentation and Few-Shot Recognition of Human Activity Recognition Data Using Large Language Models.",
+    "authors": [
+      "Jiashu Liu",
+      "Kevin Post",
+      "Reo Kuchida",
+      "Agustin Zuniga",
+      "Fatemeh Sarhaddi",
+      "Huber Flores",
+      "Petteri Nurmi",
+      "Ngoc Thi Nguyen"
+    ],
+    "venue": "SenSys",
+    "year": 2026,
+    "abstract": null,
+    "citation_count": null,
+    "reference_count": null,
+    "url": "https://doi.org/10.1145/3774906.3802768",
+    "dblp_key": "conf/sensys/LiuPKZSFNN26",
+    "source_id": null
+  },
+  {
+    "title": "ADLGen: Synthesizing Symbolic, Event-Triggered Sensor Sequences for Smart-Home Human Activity Modeling.",
+    "authors": [
+      "Weihang You",
+      "Hanqi Jiang",
+      "Jiahui Li",
+      "Zishuai Liu",
+      "Tianming Liu 0001",
+      "Jin Lu 0001",
+      "Fei Dou"
+    ],
+    "venue": "SenSys",
+    "year": 2026,
+    "abstract": null,
+    "citation_count": null,
+    "reference_count": null,
+    "url": "https://doi.org/10.1145/3774906.3802796",
+    "dblp_key": "conf/sensys/YouJLLLLD26",
+    "source_id": null
+  },
+  {
+    "title": "EMPalm: Exfiltrating Palm Biometric Data via Electromagnetic Side-Channel.",
+    "authors": [
+      "Haowen Xu",
+      "Tianya Zhao",
+      "Xuyu Wang",
+      "Lei Ma",
+      "Jun Dai 0001",
+      "Alexander M. Wyglinski",
+      "Xiaoyan Sun 0003"
+    ],
+    "venue": "SenSys",
+    "year": 2026,
+    "abstract": null,
+    "citation_count": null,
+    "reference_count": null,
+    "url": "https://doi.org/10.1145/3774906.3802764",
+    "dblp_key": "conf/sensys/XuZWMDWS26",
+    "source_id": null
+  },
+  {
+    "title": "Jailbreaking Embodied LLMs via Action-Level Manipulation.",
+    "authors": [
+      "Xinyu Huang",
+      "Qiang Yang 0018",
+      "Leming Shen",
+      "Zijing Ma",
+      "Yuanqing Zheng"
+    ],
+    "venue": "SenSys",
+    "year": 2026,
+    "abstract": null,
+    "citation_count": null,
+    "reference_count": null,
+    "url": "https://doi.org/10.1145/3774906.3802758",
+    "dblp_key": "conf/sensys/HuangYSMZ26",
+    "source_id": null
+  },
+  {
+    "title": "On Securing the Software Development Lifecycle in IoT RISC-V Trusted Execution Environments.",
+    "authors": [
+      "Annika Wilde",
+      "Samira Briongos",
+      "Claudio Soriente",
+      "Ghassan Karame"
+    ],
+    "venue": "SenSys",
+    "year": 2026,
+    "abstract": null,
+    "citation_count": null,
+    "reference_count": null,
+    "url": "https://doi.org/10.1145/3774906.3802779",
+    "dblp_key": "conf/sensys/WildeBSK26",
+    "source_id": null
+  },
+  {
+    "title": "TIRA: Task-Based Intermittent Remote Attestation.",
+    "authors": [
+      "Fatemeh Arkannezhad",
+      "Nader Sehatbakhsh"
+    ],
+    "venue": "SenSys",
+    "year": 2026,
+    "abstract": null,
+    "citation_count": null,
+    "reference_count": null,
+    "url": "https://doi.org/10.1145/3774906.3802751",
+    "dblp_key": "conf/sensys/ArkannezhadS26",
+    "source_id": null
+  },
+  {
+    "title": "Resolving Energy Storage for Intermittent Inference.",
+    "authors": [
+      "Rei Barjami",
+      "Antonio Miele",
+      "Luca Mottola"
+    ],
+    "venue": "SenSys",
+    "year": 2026,
+    "abstract": null,
+    "citation_count": null,
+    "reference_count": null,
+    "url": "https://doi.org/10.1145/3774906.3800500",
+    "dblp_key": "conf/sensys/BarjamiMM26",
+    "source_id": null
+  },
+  {
+    "title": "R2DShield: Robust Object Detection in Real-Time via Bayesian Input Shielding.",
+    "authors": [
+      "Shuo Huai",
+      "Zhixin Xie",
+      "Jun Luo 0001"
+    ],
+    "venue": "SenSys",
+    "year": 2026,
+    "abstract": null,
+    "citation_count": null,
+    "reference_count": null,
+    "url": "https://doi.org/10.1145/3774906.3802755",
+    "dblp_key": "conf/sensys/HuaiXL26",
+    "source_id": null
+  },
+  {
+    "title": "Characterizing Security and Privacy Risks in Smart Home IoT Device Access Sharing.",
+    "authors": [
+      "Yinxin Wan",
+      "Ting Xu",
+      "Tran Ngoc Bao Huynh",
+      "Jun Dai 0001",
+      "Xiaoyan Sun 0003",
+      "Kuai Xu",
+      "Guoliang Xue"
+    ],
+    "venue": "SenSys",
+    "year": 2026,
+    "abstract": null,
+    "citation_count": null,
+    "reference_count": null,
+    "url": "https://doi.org/10.1145/3774906.3802795",
+    "dblp_key": "conf/sensys/WanXHDSXX26",
+    "source_id": null
+  },
+  {
+    "title": "On the Energy Cost of Post-Quantum Key Establishment in Wireless Low-Power Personal Area Networks.",
+    "authors": [
+      "Tao Liu",
+      "Gowri Sankar Ramachandran",
+      "Raja Jurdak"
+    ],
+    "venue": "SenSys",
+    "year": 2026,
+    "abstract": null,
+    "citation_count": null,
+    "reference_count": null,
+    "url": "https://doi.org/10.1145/3774906.3802784",
+    "dblp_key": "conf/sensys/LiuRJ26",
+    "source_id": null
+  },
+  {
+    "title": "RAN-Aware Delay Compensation for Delay-Sensitive Protocols in Cellular Networks.",
+    "authors": [
+      "Yuxin Liu",
+      "Tianyang Zhang",
+      "Qiang Wu",
+      "Ju Ren 0001",
+      "Kyle Jamieson",
+      "Yaxiong Xie"
+    ],
+    "venue": "SenSys",
+    "year": 2026,
+    "abstract": null,
+    "citation_count": null,
+    "reference_count": null,
+    "url": "https://doi.org/10.1145/3774906.3802791",
+    "dblp_key": "conf/sensys/LiuZWRJX26",
+    "source_id": null
+  },
+  {
+    "title": "Decoupling Timing Estimation and Convergence for Efficient and Accurate Exploration of Configurations in Edge DDL Training.",
+    "authors": [
+      "Joshua Daley",
+      "Pengzhan Hao",
+      "Yifan Zhang 0002"
+    ],
+    "venue": "SenSys",
+    "year": 2026,
+    "abstract": null,
+    "citation_count": null,
+    "reference_count": null,
+    "url": "https://doi.org/10.1145/3774906.3802790",
+    "dblp_key": "conf/sensys/DaleyHZ26",
+    "source_id": null
+  },
+  {
+    "title": "Short Paper: Simulation-Based Performance Characterization of Common NOR Flash File Systems.",
+    "authors": [
+      "Yannick Loeck",
+      "Christian Dietrich 0001",
+      "Ulf Kulau"
+    ],
+    "venue": "SenSys",
+    "year": 2026,
+    "abstract": null,
+    "citation_count": null,
+    "reference_count": null,
+    "url": "https://doi.org/10.1145/3774906.3802793",
+    "dblp_key": "conf/sensys/LoeckDK26",
+    "source_id": null
+  },
+  {
+    "title": "ApproxBit: Efficient Video Analytics through Latency-Aware Offloading with Learned Binary Codes.",
+    "authors": [
+      "Hyunseung Kim",
+      "Sheetal Prasanna",
+      "Yin Li 0003",
+      "Somali Chaterji",
+      "Saurabh Bagchi"
+    ],
+    "venue": "SenSys",
+    "year": 2026,
+    "abstract": null,
+    "citation_count": null,
+    "reference_count": null,
+    "url": "https://doi.org/10.1145/3774906.3802757",
+    "dblp_key": "conf/sensys/KimPLCB26",
+    "source_id": null
+  },
+  {
+    "title": "MoViD: View-Invariant 3D Human Pose Estimation via Motion-View Disentanglement.",
+    "authors": [
+      "Yejia Liu",
+      "Hengle Jiang",
+      "Haoxian Liu",
+      "Runxi Huang",
+      "Xiaomin Ouyang"
+    ],
+    "venue": "SenSys",
+    "year": 2026,
+    "abstract": null,
+    "citation_count": null,
+    "reference_count": null,
+    "url": "https://doi.org/10.1145/3774906.3802786",
+    "dblp_key": "conf/sensys/LiuJLHO26",
+    "source_id": null
+  },
+  {
+    "title": "SoilX: Calibration-Free Comprehensive Soil Sensing through Contrastive Cross-Component Learning.",
+    "authors": [
+      "Kang Yang 0005",
+      "Yuanlin Yang 0006",
+      "Yuning Chen",
+      "Sikai Yang",
+      "Xinyu Zhang 0003",
+      "Wan Du"
+    ],
+    "venue": "SenSys",
+    "year": 2026,
+    "abstract": null,
+    "citation_count": null,
+    "reference_count": null,
+    "url": "https://doi.org/10.1145/3774906.3800499",
+    "dblp_key": "conf/sensys/YangYCYZD26",
+    "source_id": null
+  },
+  {
+    "title": "FlourSpec: Cost-Effective Spectral Analysis for Trace-Level Detection of Flour Adulteration.",
+    "authors": [
+      "Shanwen Chen",
+      "Haiyan Hu",
+      "Yinan Zhu",
+      "Qian Zhang 0001"
+    ],
+    "venue": "SenSys",
+    "year": 2026,
+    "abstract": null,
+    "citation_count": null,
+    "reference_count": null,
+    "url": "https://doi.org/10.1145/3774906.3800490",
+    "dblp_key": "conf/sensys/ChenHZZ26",
+    "source_id": null
+  },
+  {
+    "title": "FruitScope: A Non-Invasive Fruit Ripeness Sensing System via Multi-Resolution FMCW Design and Acoustic Sensing.",
+    "authors": [
+      "Shanmu Wang",
+      "Omid Abari"
+    ],
+    "venue": "SenSys",
+    "year": 2026,
+    "abstract": null,
+    "citation_count": null,
+    "reference_count": null,
+    "url": "https://doi.org/10.1145/3774906.3802794",
+    "dblp_key": "conf/sensys/WangA26",
+    "source_id": null
+  },
+  {
+    "title": "Short Paper: Counting Parked Bicycles on the Edge - A TinyML Smart City Application.",
+    "authors": [
+      "Jan Stenkamp",
+      "Mathis Hunke",
+      "Cem Karatas",
+      "Steffen Kirchhoff",
+      "Christoph Knaden",
+      "Paul Naebers",
+      "Lige Zhao",
+      "Benjamin Karic",
+      "Fabian Gieseke",
+      "Nina Herrmann"
+    ],
+    "venue": "SenSys",
+    "year": 2026,
+    "abstract": null,
+    "citation_count": null,
+    "reference_count": null,
+    "url": "https://doi.org/10.1145/3774906.3802788",
+    "dblp_key": "conf/sensys/StenkampHKKKNZK26",
+    "source_id": null
+  },
+  {
+    "title": "ENTS: Experiences in Co-Designed Environmental Sensing.",
+    "authors": [
+      "John Madden",
+      "Stephen Taylor",
+      "Laura Jaliff",
+      "Aaron Wu",
+      "Alec Levy",
+      "Jack Lin",
+      "Ahmed Falah",
+      "Tyler Potyondy",
+      "Josiah D. Hester",
+      "George Wells",
+      "Yaman Sangar",
+      "Pat Pannuto",
+      "Colleen Josephson"
+    ],
+    "venue": "SenSys",
+    "year": 2026,
+    "abstract": null,
+    "citation_count": null,
+    "reference_count": null,
+    "url": "https://doi.org/10.1145/3774906.3802780",
+    "dblp_key": "conf/sensys/MaddenTJWLLFPHW26",
+    "source_id": null
+  },
+  {
+    "title": "MoiréLens: Bringing Schlieren Imaging into Real-World Environments Using Moiré Patterns.",
+    "authors": [
+      "Linzhen Zhu",
+      "Runqiu Wang",
+      "Yi Rong",
+      "Ke Sun"
+    ],
+    "venue": "SenSys",
+    "year": 2026,
+    "abstract": null,
+    "citation_count": null,
+    "reference_count": null,
+    "url": "https://doi.org/10.1145/3774906.3802765",
+    "dblp_key": "conf/sensys/ZhuWRS26",
+    "source_id": null
+  },
+  {
+    "title": "MagTach: Non-Intrusive Long-Range Magnetic Tachometry via Harmonic-Aware Inductive Sensing.",
+    "authors": [
+      "Rahul Sidramappa Hoskeri",
+      "Hua Huang 0003"
+    ],
+    "venue": "SenSys",
+    "year": 2026,
+    "abstract": null,
+    "citation_count": null,
+    "reference_count": null,
+    "url": "https://doi.org/10.1145/3774906.3802772",
+    "dblp_key": "conf/sensys/HoskeriH26",
+    "source_id": null
+  },
+  {
+    "title": "VehicleSense: Adaptive Sensor-Video Learning for Vehicle Type Identification and Overload Detection.",
+    "authors": [
+      "Ashutosh Kumar Sinha",
+      "Sushant Dagaji Desale",
+      "Nirjay Kumar",
+      "Rahul Mishra"
+    ],
+    "venue": "SenSys",
+    "year": 2026,
+    "abstract": null,
+    "citation_count": null,
+    "reference_count": null,
+    "url": "https://doi.org/10.1145/3774906.3802774",
+    "dblp_key": "conf/sensys/SinhaDKM26",
+    "source_id": null
+  },
+  {
+    "title": "SPIDER: Lightweight Speaker Identification on Resource-Constrained Embedded Devices.",
+    "authors": [
+      "Markus Gallacher",
+      "Carlo Alberto Boano",
+      "Arun Sankar Muttathu Sivasankara Pillai 0001",
+      "Utz Roedig",
+      "Willian T. Lunardi",
+      "Michael Baddeley"
+    ],
+    "venue": "SenSys",
+    "year": 2026,
+    "abstract": null,
+    "citation_count": null,
+    "reference_count": null,
+    "url": "https://doi.org/10.1145/3774906.3800492",
+    "dblp_key": "conf/sensys/GallacherBPRLB26",
+    "source_id": null
+  },
+  {
+    "title": "RippleSense: Scalable and Efficient Wideband Spectrum Sensing.",
+    "authors": [
+      "Andreas Kuster",
+      "Yanbo Zhang",
+      "Mo Li 0001"
+    ],
+    "venue": "SenSys",
+    "year": 2026,
+    "abstract": null,
+    "citation_count": null,
+    "reference_count": null,
+    "url": "https://doi.org/10.1145/3774906.3800487",
+    "dblp_key": "conf/sensys/KusterZL26",
+    "source_id": null
+  },
+  {
+    "title": "From Cheap to Chic: Enhancing Music Playback Quality of Budget Earphones via Hardware-Aware Learning.",
+    "authors": [
+      "Changshuo Hu",
+      "Hung Manh Pham",
+      "Ting Dang",
+      "Jiannan Li",
+      "Rajesh Balan",
+      "Dong Ma 0001"
+    ],
+    "venue": "SenSys",
+    "year": 2026,
+    "abstract": null,
+    "citation_count": null,
+    "reference_count": null,
+    "url": "https://doi.org/10.1145/3774906.3800476",
+    "dblp_key": "conf/sensys/HuPDLBM26",
+    "source_id": null
+  }
+]

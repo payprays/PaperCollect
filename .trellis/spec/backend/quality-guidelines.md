@@ -107,6 +107,9 @@ Questions to answer:
   - `uv run pc-search` must call the same `search_saved_papers` implementation as the Web API.
   - Default CLI mode is `concept`; it must not require embeddings, `data/embeddings.pkl`, or `OPENAI_API_KEY`.
   - Legacy CLI mode values `search` and `ask` are accepted as aliases for `concept` to avoid breaking older commands, but they must not use the old OpenAI RAG path.
+- Saved data tracking:
+  - Track collected paper data as `data/*.json` so RSS/search state can be synchronized with git.
+  - Do not track `data/embeddings.pkl`, temporary files, or other generated caches; concept search must not depend on them.
 - Collection response:
   - Success: HTTP 202 with `job_id` and `status_url`.
   - Validation failure: HTTP 400 with `error`.

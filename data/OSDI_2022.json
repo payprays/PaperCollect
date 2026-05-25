@@ -1,0 +1,988 @@
+[
+  {
+    "title": "Efficient and Scalable Graph Pattern Mining on GPUs.",
+    "authors": [
+      "Xuhao Chen 0001",
+      "Arvind 0001"
+    ],
+    "venue": "OSDI",
+    "year": 2022,
+    "abstract": "Graph Pattern Mining (GPM) extracts higher-order information in a large graph by searching for small patterns of interest. GPM applications are computationally expensive, and thus attractive for GPU acceleration. Unfortunately, due to the complexity of GPM algorithms and parallel hardware, hand optimizing GPM applications suffers programming complexity, while existing GPM frameworks sacrifice efficiency for programmability. Moreover, little work has been done on GPU to scale GPM computation to large problem sizes. We describe G2Miner, the first Graph Pattern Mining (GPM) framework that runs on multiple GPUs. G2Miner uses pattern-aware, input-aware and architecture-aware search strategies to achieve high efficiency on GPUs. To simplify programming, it provides a code generator that automatically generates pattern-aware CUDA code. G2Miner flexibly supports both breadth-first search (BFS) and depth-first search (DFS) to maximize memory utilization and generate sufficient parallelism for GPUs. For the scalability of G2Miner, we use a customized scheduling policy to balance work among multiple GPUs. Experiments on a V100 GPU show that G2Miner achieves average speedups of 5.4x and 7.2x over two state-of-the-art single-GPU systems, Pangolin and PBE, respectively. In the multi-GPU setting, G2Miner achieves linear speedups from 1 to 8 GPUs, for various patterns and data graphs. We also show that G2Miner on a V100 GPU is 48.3x and 15.2x faster than the state-of-the-art CPU-based system, Peregrine and GraphZero, on a 56-core CPU machine.",
+    "citation_count": 9,
+    "reference_count": 0,
+    "url": "https://dblp.org/rec/conf/osdi/0001A22",
+    "dblp_key": "conf/osdi/0001A22",
+    "source_id": "https://openalex.org/W4226353498"
+  },
+  {
+    "title": "Debugging the OmniTable Way.",
+    "authors": [
+      "Andrew Quinn 0001",
+      "Jason Flinn",
+      "Michael J. Cafarella",
+      "Baris Kasikci"
+    ],
+    "venue": "OSDI",
+    "year": 2022,
+    "abstract": "Serverless computing separates function execution from state management. Simple retry-based fault tolerance might corrupt the shared state with duplicate updates. Existing solutions employ log-based fault tolerance to achieve exactlyonce semantics, where every single read or write to the external state is associated with a log for deterministic replay. However, logging is not a free lunch, which introduces considerable overhead to stateful serverless applications.",
+    "citation_count": 14,
+    "reference_count": 49,
+    "url": "https://dblp.org/rec/conf/osdi/0001FCK22",
+    "dblp_key": "conf/osdi/0001FCK22",
+    "source_id": "https://openalex.org/W4387321633"
+  },
+  {
+    "title": "Carbink: Fault-Tolerant Far Memory.",
+    "authors": [
+      "Yang Zhou 0008",
+      "Hassan M. G. Wassel",
+      "Sihang Liu 0001",
+      "Jiaqi Gao",
+      "James Mickens",
+      "Minlan Yu",
+      "Chris Kennelly",
+      "Paul Turner",
+      "David E. Culler",
+      "Henry M. Levy",
+      "Amin Vahdat"
+    ],
+    "venue": "OSDI",
+    "year": 2022,
+    "abstract": "The efficiency of distributed shared memory (DSM) has been greatly improved by recent hardware technologies. But, the difficulty of distributed memory management can still be a major obstacle to the democratization of DSM, especially when a partial failure of the participating clients (e.g., due to crashed processes or machines) should be tolerated.",
+    "citation_count": 24,
+    "reference_count": 56,
+    "url": "https://dblp.org/rec/conf/osdi/0008WLGMYKTCLV22",
+    "dblp_key": "conf/osdi/0008WLGMYKTCLV22",
+    "source_id": "https://openalex.org/W4387302703"
+  },
+  {
+    "title": "Automatic Reliability Testing For Cluster Management Controllers.",
+    "authors": [
+      "Xudong Sun 0013",
+      "Wenqing Luo",
+      "Jiawei Tyler Gu",
+      "Aishwarya Ganesan",
+      "Ramnatthan Alagappan",
+      "Michael Gasch",
+      "Lalith Suresh 0001",
+      "Tianyin Xu"
+    ],
+    "venue": "OSDI",
+    "year": 2022,
+    "abstract": "This paper provides an overview of the Internet of Things (IoT) with emphasis on enabling technologies, protocols, and application issues. The IoT is enabled by the latest developments in RFID, smart sensors, communication technologies, and Internet protocols. The basic premise is to have smart sensors collaborate directly without human involvement to deliver a new class of applications. The current revolution in Internet, mobile, and machine-to-machine (M2M) technologies can be seen as the first phase of the IoT. In the coming years, the IoT is expected to bridge diverse technologies to enable new applications by connecting physical objects together in support of intelligent decision making. This paper starts by providing a horizontal overview of the IoT. Then, we give an overview of some technical details that pertain to the IoT enabling technologies, protocols, and applications. Compared to other survey papers in the field, our objective is to provide a more thorough summary of the most relevant protocols and application issues to enable researchers and application developers to get up to speed quickly on how the different protocols fit together to deliver desired functionalities without having to go through RFCs and the standards specifications. We also provide an overview of some of the key IoT challenges presented in the recent literature and provide a summary of related research work. Moreover, we explore the relation between the IoT and other emerging technologies including big data analytics and cloud and fog computing. We also present the need for better horizontal integration among IoT services. Finally, we present detailed service use-cases to illustrate how the different protocols presented in the paper fit together to deliver desired IoT services.",
+    "citation_count": 7903,
+    "reference_count": 178,
+    "url": "https://dblp.org/rec/conf/osdi/0013LGGAGSX22",
+    "dblp_key": "conf/osdi/0013LGGAGSX22",
+    "source_id": "https://openalex.org/W2134295053"
+  },
+  {
+    "title": "Verifying Hardware Security Modules with Information-Preserving Refinement.",
+    "authors": [
+      "Anish Athalye",
+      "M. Frans Kaashoek",
+      "Nickolai Zeldovich"
+    ],
+    "venue": "OSDI",
+    "year": 2022,
+    "abstract": "Recent advances in Deep Neural Networks (DNNs) have led to the development of DNN-driven autonomous cars that, using sensors like camera, LiDAR, etc., can drive without any human intervention. Most major manufacturers including Tesla, GM, Ford, BMW, and Waymo/Google are working on building and testing different types of autonomous vehicles. The lawmakers of several US states including California, Texas, and New York have passed new legislation to fast-track the process of testing and deployment of autonomous vehicles on their roads.",
+    "citation_count": 1177,
+    "reference_count": 62,
+    "url": "https://dblp.org/rec/conf/osdi/AthalyeKZ22",
+    "dblp_key": "conf/osdi/AthalyeKZ22",
+    "source_id": "https://openalex.org/W2963327228"
+  },
+  {
+    "title": "Groove: Flexible Metadata-Private Messaging.",
+    "authors": [
+      "Ludovic Barman",
+      "Moshe Kol",
+      "David Lazar",
+      "Yossi Gilad",
+      "Nickolai Zeldovich"
+    ],
+    "venue": "OSDI",
+    "year": 2022,
+    "abstract": "Significant documents of record recently produced and dealing with cultural property, heritage and related issues will be printed annually in the final issue (No. 4) of each numbered volume. Documents considered for publication may be national, regional, or international instruments and codes. Inquiries or suggestions regarding documentary materials may be addressed to the Chronicles Editor, Kurt Siehr, at 〈siehr@mpipriv-hh.mpg.de〉 or the Editor, Alexander Bauer, at 〈culturalproperty@cambridge.org〉.",
+    "citation_count": 266,
+    "reference_count": 259,
+    "url": "https://dblp.org/rec/conf/osdi/BarmanKLGZ22",
+    "dblp_key": "conf/osdi/BarmanKLGZ22",
+    "source_id": "https://openalex.org/W4299636043"
+  },
+  {
+    "title": "Verifying the DaisyNFS concurrent and crash-safe file system with sequential reasoning.",
+    "authors": [
+      "Tej Chajed",
+      "Joseph Tassarotti",
+      "Mark Theng",
+      "M. Frans Kaashoek",
+      "Nickolai Zeldovich"
+    ],
+    "venue": "OSDI",
+    "year": 2022,
+    "abstract": null,
+    "citation_count": 1,
+    "reference_count": 13,
+    "url": "https://dblp.org/rec/conf/osdi/ChajedTTKZ22",
+    "dblp_key": "conf/osdi/ChajedTTKZ22",
+    "source_id": "https://openalex.org/W4411091462"
+  },
+  {
+    "title": "UPGRADVISOR: Early Adopting Dependency Updates Using Hybrid Program Analysis and Hardware Tracing.",
+    "authors": [
+      "Yaniv David",
+      "Xudong Sun 0019",
+      "Raphael J. Sofaer",
+      "Aditya Senthilnathan",
+      "Junfeng Yang",
+      "Zhiqiang Zuo 0002",
+      "Guoqing Harry Xu",
+      "Jason Nieh",
+      "Ronghui Gu"
+    ],
+    "venue": "OSDI",
+    "year": 2022,
+    "abstract": "In the real life world, the multi-criteria group decision-making (MCGDM) is very important in the decision process. The intelligent decision process for deep learning is playing a very vital role in the selection of deep learning technique for health care. The main aim of the present work is develop an intelligent based three way decision models for analyzing and ranking the deep learning techniques for health care under the double hierarchy linguistic information. The double hierarchy linguistic term set (DHLTS), which enables more adaptable representation of uncertainty and fuzziness, is made up of the first and second hierarchy linguistic term sets. The Yager operational laws for double hierarchy linguistic term set has considered and defined to develop the Yager aggregation operators for DHLTS. We defined double hierarchy linguistic Yager weighted averaging (DHLYWA) operators, double hierarchy linguistic Yager hybrid aggregation (DHLYHA) operators, double hierarchy linguistic Yager geometric aggregation (DHLYWG) operator, double hierarchy linguistic Yager geometric aggregation (DHLYHG) operator. Next, three way intelligent decision model developed by using the proposed aggregation operators with the help of EDAS decision making. The three way decision making is based on the loose function. The proposed three way intelligent decision making model apply to deep learning techniques to ranking and analyze the K-nearest neighbor, support vector machines, decision tree, naive Bayes, linear regression, and k-means clustering. The unknown weights of decision expert and criteria are calculated by the entropy methods. Then, we find the conditional probability using the EDAS method. The expected losses are then calculated by combining the loss functions using the double hierarchy linguistic Yager aggregation operators. The proposed models compare with already developed models and also provide the sensitivity analysis of the proposed models.",
+    "citation_count": 38,
+    "reference_count": 42,
+    "url": "https://dblp.org/rec/conf/osdi/David0SSY0XNG22",
+    "dblp_key": "conf/osdi/David0SSY0XNG22",
+    "source_id": "https://openalex.org/W4384080838"
+  },
+  {
+    "title": "TriCache: A User-Transparent Block Cache Enabling High-Performance Out-of-Core Processing with In-Memory Programs.",
+    "authors": [
+      "Guanyu Feng",
+      "Huanqi Cao",
+      "Xiaowei Zhu 0001",
+      "Bowen Yu 0003",
+      "Yuanwei Wang",
+      "Zixuan Ma",
+      "Shengqi Chen 0001",
+      "Wenguang Chen"
+    ],
+    "venue": "OSDI",
+    "year": 2022,
+    "abstract": "Out-of-core systems rely on high-performance cache sub-systems to reduce the number of I/O operations. Although the page cache in modern operating systems enables transparent access to memory and storage devices, it suffers from efficiency and scalability issues on cache misses, forcing out-of-core systems to design and implement their own cache components, which is a non-trivial task. This study proposes TriCache, a cache mechanism that enables in-memory programs to efficiently process out-of-core datasets without requiring any code rewrite. It provides a virtual memory interface on top of the conventional block interface to simultaneously achieve user transparency and sufficient out-of-core performance. A multi-level block cache design is proposed to address the challenge of per-access address translations required by a memory interface. It can exploit spatial and temporal localities in memory or storage accesses to render storage-to-memory address translation and page-level concurrency control adequately efficient for the virtual memory interface. Our evaluation shows that in-memory systems operating on top of TriCache can outperform Linux OS page cache by more than one order of magnitude, and can deliver performance comparable to or even better than that of corresponding counterparts designed specifically for out-of-core scenarios.",
+    "citation_count": 4,
+    "reference_count": 35,
+    "url": "https://dblp.org/rec/conf/osdi/FengCZ0WM0C22",
+    "dblp_key": "conf/osdi/FengCZ0WM0C22",
+    "source_id": "https://openalex.org/W4320490937"
+  },
+  {
+    "title": "Owl: Scale and Flexibility in Distribution of Hot Content.",
+    "authors": [
+      "Jason Flinn",
+      "Xianzheng Dou",
+      "Arushi Aggarwal",
+      "Alex Boyko",
+      "Francois Richard",
+      "Eric Sun",
+      "Wendy Tobagus",
+      "Nick Wolchko",
+      "Fang Zhou"
+    ],
+    "venue": "OSDI",
+    "year": 2022,
+    "abstract": "We introduce the Virgo Consortium's Evolution and Assembly of GaLaxies and their Environments (EAGLE) project, a suite of hydrodynamical simulations that follow the formation of galaxies and supermassive black holes in cosmologically representative volumes of a standard Lambda cold dark matter universe. We discuss the limitations of such simulations in light of their finite resolution and poorly constrained subgrid physics, and how these affect their predictive power. One major improvement is our treatment of feedback from massive stars and active galactic nuclei (AGN) in which thermal energy is injected into the gas without the need to turn off cooling or decouple hydrodynamical forces, allowing winds to develop without predetermined speed or mass loading factors. Because the feedback efficiencies cannot be predicted from first principles, we calibrate them to the present-day galaxy stellar mass function and the amplitude of the galaxy-central black hole mass relation, also taking galaxy sizes into account. The observed galaxy stellar mass function is reproduced to less than or similar to 0.2 dex over the full resolved mass range, 10(8) &lt; M-*/M-circle dot less than or similar to 10(11), a level of agreement close to that attained by semi-analytic models, and unprecedented for hydrodynamical simulations. We compare our results to a representative set of low-redshift observables not considered in the calibration, and find good agreement with the observed galaxy specific star formation rates, passive fractions, Tully-Fisher relation, total stellar luminosities of galaxy clusters, and column density distributions of intergalactic C IV and O VI. While the mass-metallicity relations for gas and stars are consistent with observations for M-* greater than or similar to 10(9) M-circle dot (M-* greater than or similar to 10(10) M-circle dot at intermediate resolution), they are insufficiently steep at lower masses. For the reference model, the gas fractions and temperatures are too high for clusters of galaxies, but for galaxy groups these discrepancies can be resolved by adopting a higher heating temperature in the subgrid prescription for AGN feedback. The EAGLE simulation suite, which also includes physics variations and higher resolution zoomed-in volumes described elsewhere, constitutes a valuable new resource for studies of galaxy formation.",
+    "citation_count": 3369,
+    "reference_count": 237,
+    "url": "https://dblp.org/rec/conf/osdi/FlinnDABRSTWZ22",
+    "dblp_key": "conf/osdi/FlinnDABRSTWZ22",
+    "source_id": "https://openalex.org/W2119131940"
+  },
+  {
+    "title": "DURINN: Adversarial Memory and Thread Interleaving for Detecting Durable Linearizability Bugs.",
+    "authors": [
+      "Xinwei Fu",
+      "Dongyoon Lee",
+      "Changwoo Min"
+    ],
+    "venue": "OSDI",
+    "year": 2022,
+    "abstract": "Serverless computing separates function execution from state management. Simple retry-based fault tolerance might corrupt the shared state with duplicate updates. Existing solutions employ log-based fault tolerance to achieve exactlyonce semantics, where every single read or write to the external state is associated with a log for deterministic replay. However, logging is not a free lunch, which introduces considerable overhead to stateful serverless applications.",
+    "citation_count": 14,
+    "reference_count": 49,
+    "url": "https://dblp.org/rec/conf/osdi/FuLM22",
+    "dblp_key": "conf/osdi/FuLM22",
+    "source_id": "https://openalex.org/W4387321633"
+  },
+  {
+    "title": "Trinity: High-Performance Mobile Emulation through Graphics Projection.",
+    "authors": [
+      "Di Gao",
+      "Hao Lin 0005",
+      "Zhenhua Li 0001",
+      "Chengen Huang",
+      "Yunhao Liu 0001",
+      "Feng Qian 0001",
+      "Liangyi Gong",
+      "Tianyin Xu"
+    ],
+    "venue": "OSDI",
+    "year": 2022,
+    "abstract": "Mobile emulation, which creates full-fledged software mobile devices on a physical PC/server, is pivotal to the mobile ecosystem. Unfortunately, existing mobile emulators perform poorly on graphics-intensive apps in terms of efficiency and compatibility. To address this, we introduce graphics projection , a novel graphics virtualization mechanism that adds a small-size projection space inside the guest memory, which processes graphics operations involving control contexts and resource handles without host interactions. While enhancing performance, the decoupled and asynchronous guest/host control flows introduced by graphics projection can significantly complicate emulators’ reliability issue diagnosis when faced with a variety of uncommon or non-standard app behaviors in the wild, hindering practical deployment in production. To overcome this drawback, we develop an automatic reliability issue analysis pipeline that distills the critical code paths across the guest and host control flows by runtime quarantine and state introspection. The resulting new Android emulator, dubbed Trinity, exhibits an average of 97% native hardware performance and 99.3% reliable app support, in some cases outperforming other emulators by more than an order of magnitude.",
+    "citation_count": 1,
+    "reference_count": 31,
+    "url": "https://dblp.org/rec/conf/osdi/Gao00HL0GX22",
+    "dblp_key": "conf/osdi/Gao00HL0GX22",
+    "source_id": "https://openalex.org/W4391169437"
+  },
+  {
+    "title": "Jawa: Web Archival in the Era of JavaScript.",
+    "authors": [
+      "Ayush Goel",
+      "Jingyuan Zhu",
+      "Ravi Netravali",
+      "Harsha V. Madhyastha"
+    ],
+    "venue": "OSDI",
+    "year": 2022,
+    "abstract": "Uncontrolled urban expansion resulting from urbanization has a disastrous impact on agricultural land. This situation is being experienced by the densely populated and fertile island Java in Indonesia. Remote sensing technologies have developed rapidly in recent years, including the creation of Google Earth Engine (GEE). Intensity analysis (IA) is increasingly being used to systematically and substantially analyze land-use/land-cover (LULC) change. As yet, however, no study of land conversion from agriculture to urban areas in Indonesia has adopted GEE and IA approaches simultaneously. Therefore, this study aims to monitor urban penetration to agricultural land in the north coastal region of West Java Province by applying both methods to two time intervals: 2003–2013 and 2013–2020. Landsat data and a robust random forest (RF) classifier available in GEE were chosen for producing LULC maps. Monitoring LULC change using GEE and IA has demonstrated reliable findings. The overall accuracy of Landsat image classification results for 2003, 2013, and 2020 were 88%, 87%, and 88%, respectively. IA outputs at interval levels for all categories showed that the annual change-of-area rate was higher during 2013–2020 than during 2003–2013. At the category level, IA results showed that the area of agricultural land experienced net losses in both periods, with net loss in 2013–2020 being 2.3 times greater than that in 2003–2013 (∼1,850 ha per year). In contrast, the built-up area made net gains in both periods, reaching almost twice as much in the second period as in the first (∼2,030 ha per year). The transition-level IA performed proved that agricultural land had been the primary target for the expansion of built-up areas. The most extensive spatial distribution of land conversion from agriculture to built-up area was concentrated in the regencies of Bekasi, Karawang, and Cirebon. These findings are intended to provide stakeholders with enrichment in terms of available literature and with valuable inputs useful for identifying better urban and regional planning policies in Indonesia and similar regions.",
+    "citation_count": 42,
+    "reference_count": 33,
+    "url": "https://dblp.org/rec/conf/osdi/GoelZNM22",
+    "dblp_key": "conf/osdi/GoelZNM22",
+    "source_id": "https://openalex.org/W4206018668"
+  },
+  {
+    "title": "Microsecond-scale Preemption for Concurrent GPU-accelerated DNN Inferences.",
+    "authors": [
+      "Mingcong Han",
+      "Hanze Zhang",
+      "Rong Chen 0001",
+      "Haibo Chen 0001"
+    ],
+    "venue": "OSDI",
+    "year": 2022,
+    "abstract": "High throughput serving of large language models (LLMs) requires batching sufficiently many requests at a time. However, existing systems struggle because the key-value cache (KV cache) memory for each request is huge and grows and shrinks dynamically. When managed inefficiently, this memory can be significantly wasted by fragmentation and redundant duplication, limiting the batch size. To address this problem, we propose PagedAttention, an attention algorithm inspired by the classical virtual memory and paging techniques in operating systems. On top of it, we build vLLM, an LLM serving system that achieves (1) near-zero waste in KV cache memory and (2) flexible sharing of KV cache within and across requests to further reduce memory usage. Our evaluations show that vLLM improves the throughput of popular LLMs by 2--4× with the same level of latency compared to the state-of-the-art systems, such as FasterTransformer and Orca. The improvement is more pronounced with longer sequences, larger models, and more complex decoding algorithms. vLLM's source code is publicly available at https://github.com/vllm-project/vllm.",
+    "citation_count": 604,
+    "reference_count": 19,
+    "url": "https://dblp.org/rec/conf/osdi/HanZ0022",
+    "dblp_key": "conf/osdi/HanZ0022",
+    "source_id": "https://openalex.org/W4387321091"
+  },
+  {
+    "title": "BlackBox: A Container Security Monitor for Protecting Containers on Untrusted Operating Systems.",
+    "authors": [
+      "Alexander Van&apos;t Hof",
+      "Jason Nieh"
+    ],
+    "venue": "OSDI",
+    "year": 2022,
+    "abstract": "Confidential virtual machines (CVMs) enabled by AMD SEV provide a protected environment for sensitive computations on an untrusted cloud. Unfortunately, CVMs are typically deployed with huge and vulnerable operating system kernels, exposing the CVMs to attacks that exploit kernel vulnerabilities. Veil is a versatile CVM framework that efficiently protects critical system services like shielding sensitive programs, which cannot be entrusted to the buggy kernel. Veil leverages a new hardware primitive, virtual machine privilege levels (VMPL), to install a privileged security monitor inside the CVM. We overcome several challenges in designing Veil, including (a) creating unlimited secure domains with a limited number of VMPLs, (b) establishing resource-efficient domain switches, and (c) maintaining commodity kernel backwards-compatibility with only minor changes. Our evaluation shows that Veil incurs no discernible performance slowdown during normal CVM execution while incurring a modest overhead (2 -- 64%) when running its protected services across real-world use cases.",
+    "citation_count": 7,
+    "reference_count": 70,
+    "url": "https://dblp.org/rec/conf/osdi/HofN22",
+    "dblp_key": "conf/osdi/HofN22",
+    "source_id": "https://openalex.org/W4391623933"
+  },
+  {
+    "title": "Metastable Failures in the Wild.",
+    "authors": [
+      "Lexiang Huang",
+      "Matthew Magnusson",
+      "Abishek Bangalore Muralikrishna",
+      "Salman Estyak",
+      "Rebecca Isaacs",
+      "Abutalib Aghayev",
+      "Timothy Zhu",
+      "Aleksey Charapko"
+    ],
+    "venue": "OSDI",
+    "year": 2022,
+    "abstract": "The calcium bridge between the pentamers of polyoma viruses maintains capsid metastability. It has been shown that viral infection is profoundly inhibited by the substitution of lysine for glutamate in one calcium-binding residue of the SV40 capsid protein, VP1. However, it is unclear how the calcium bridge affects SV40 infectivity. In this in vitro study, we analyzed the influence of host cell components on SV40 capsid stability. We used an SV40 mutant capsid (E330K) in which lysine had been substituted for glutamate 330 in protein VP1. The mutant capsid retained the ability to interact with the SV40 cellular receptor GM1, and the internalized mutant capsid accumulated in caveolin-1-mediated endocytic vesicles and was then translocated to the endoplasmic reticulum (ER) region. However, when placed in ER-rich microsome, the mutant capsid retained its spherical structure in contrast to the wild type, which disassembled. Structural analysis of the mutant capsid with cryo-electron microscopy and image reconstruction revealed altered pentamer coordination, possibly as a result of electrostatic interaction, although its overall structure resembled that of the wild type. These results indicate that the calcium ion serves as a trigger at the pentamer interface, which switches on capsid disassembly, and that the failure of the E330K mutant capsid to disassemble is attributable to an inadequate triggering system. Our data also indicate that calcium depletion-induced SV40 capsid disassembly may occur in the ER region and that this is essential for successful SV40 infection.",
+    "citation_count": 31,
+    "reference_count": 52,
+    "url": "https://dblp.org/rec/conf/osdi/HuangMMEIAZC22",
+    "dblp_key": "conf/osdi/HuangMMEIAZC22",
+    "source_id": "https://openalex.org/W2087772139"
+  },
+  {
+    "title": "KSplit: Automating Device Driver Isolation.",
+    "authors": [
+      "Yongzhe Huang",
+      "Vikram Narayanan",
+      "David Detweiler",
+      "Kaiming Huang",
+      "Gang Tan",
+      "Trent Jaeger",
+      "Anton Burtsev"
+    ],
+    "venue": "OSDI",
+    "year": 2022,
+    "abstract": "Confidential cloud computing enables cloud tenants to distrust their service provider. Achieving confidential computing solutions that provide concrete security guarantees requires not only strong mechanisms, but also carefully designed software interfaces. In this paper, we make the observation that confidential I/O interfaces, caught in the tug-of-war between performance and security, fail to address both at a time when confronted to interface vulnerabilities and observability by the untrusted host. We discuss the problem of safe I/O interfaces in confidential computing, its implications and challenges, and devise research paths to achieve confidential I/O interfaces that are both safe and fast.",
+    "citation_count": 5,
+    "reference_count": 36,
+    "url": "https://dblp.org/rec/conf/osdi/HuangNDHTJB22",
+    "dblp_key": "conf/osdi/HuangNDHTJB22",
+    "source_id": "https://openalex.org/W4381611580"
+  },
+  {
+    "title": "Operating System Support for Safe and Efficient Auxiliary Execution.",
+    "authors": [
+      "Yuzhuo Jing",
+      "Peng Huang 0005"
+    ],
+    "venue": "OSDI",
+    "year": 2022,
+    "abstract": null,
+    "citation_count": 8066,
+    "reference_count": 81,
+    "url": "https://dblp.org/rec/conf/osdi/Jing022",
+    "dblp_key": "conf/osdi/Jing022",
+    "source_id": "https://openalex.org/W2026616100"
+  },
+  {
+    "title": "Tiger: Disk-Adaptive Redundancy Without Placement Restrictions.",
+    "authors": [
+      "Saurabh Kadekodi",
+      "Francisco Maturana",
+      "Sanjith Athlur",
+      "Arif Merchant",
+      "K. V. Rashmi",
+      "Gregory R. Ganger"
+    ],
+    "venue": "OSDI",
+    "year": 2022,
+    "abstract": "Most of the data in large-scale storage clusters is erasure coded. At exascale, optimizing erasure codes for low storage overhead, efficient reconstruction, and easy deployment is of critical importance. Locally recoverable codes (LRCs) have deservedly gained central importance in this field, because they can balance many of these requirements. In our work, we study wide LRCs; LRCs with large number of blocks per stripe and low storage overhead. These codes are a natural next step for practitioners to unlock higher storage savings, but they come with their own challenges. Of particular interest is their reliability , since wider stripes are prone to more simultaneous failures. We conduct a practically minded analysis of several popular and novel LRCs. We find that wide LRC reliability is a subtle phenomenon that is sensitive to several design choices, some of which are overlooked by theoreticians, and others by practitioners. Based on these insights, we construct novel LRCs called Uniform Cauchy LRCs , which show excellent performance in simulations and a 33% improvement in reliability on unavailability events observed by a wide LRC deployed in a Google storage cluster. We also show that these codes are easy to deploy in a manner that improves their robustness to common maintenance events. Along the way, we also give a remarkably simple and novel construction of distance-optimal LRCs (other constructions are also known), which may be of interest to theory-minded readers.",
+    "citation_count": 30,
+    "reference_count": 33,
+    "url": "https://dblp.org/rec/conf/osdi/KadekodiMAMRG22",
+    "dblp_key": "conf/osdi/KadekodiMAMRG22",
+    "source_id": "https://openalex.org/W4387377969"
+  },
+  {
+    "title": "Practically Correct, Just-in-Time Shell Script Parallelization.",
+    "authors": [
+      "Konstantinos Kallas",
+      "Tammam Mustafa",
+      "Jan Bielak",
+      "Dimitris Karnikis",
+      "Thurston H. Y. Dang",
+      "Michael Greenberg 0002",
+      "Nikos Vasilakis"
+    ],
+    "venue": "OSDI",
+    "year": 2022,
+    "abstract": "A theory of superconductivity is presented, based on the fact that the interaction between electrons resulting from virtual exchange of phonons is attractive when the energy difference between the electrons states involved is less than the phonon energy, $\\ensuremath{\\hbar}\\ensuremath{\\omega}$. It is favorable to form a superconducting phase when this attractive interaction dominates the repulsive screened Coulomb interaction. The normal phase is described by the Bloch individual-particle model. The ground state of a superconductor, formed from a linear combination of normal state configurations in which electrons are virtually excited in pairs of opposite spin and momentum, is lower in energy than the normal state by amount proportional to an average ${(\\ensuremath{\\hbar}\\ensuremath{\\omega})}^{2}$, consistent with the isotope effect. A mutually orthogonal set of excited states in one-to-one correspondence with those of the normal phase is obtained by specifying occupation of certain Bloch states and by using the rest to form a linear combination of virtual pair configurations. The theory yields a second-order phase transition and a Meissner effect in the form suggested by Pippard. Calculated values of specific heats and penetration depths and their temperature variation are in good agreement with experiment. There is an energy gap for individual-particle excitations which decreases from about $3.5k{T}_{c}$ at $T=0\\ifmmode^\\circ\\else\\textdegree\\fi{}$K to zero at ${T}_{c}$. Tables of matrix elements of single-particle operators between the excited-state superconducting wave functions, useful for perturbation expansions and calculations of transition probabilities, are given.",
+    "citation_count": 12656,
+    "reference_count": 34,
+    "url": "https://dblp.org/rec/conf/osdi/KallasMBKD0V22",
+    "dblp_key": "conf/osdi/KallasMBKD0V22",
+    "source_id": "https://openalex.org/W2014437371"
+  },
+  {
+    "title": "ListDB: Union of Write-Ahead Logs and Persistent SkipLists for Incremental Checkpointing on Persistent Memory.",
+    "authors": [
+      "Wonbae Kim",
+      "Chanyeol Park",
+      "Dongui Kim",
+      "Hyeongjun Park",
+      "Young-ri Choi",
+      "Alan Sussman",
+      "Beomseok Nam"
+    ],
+    "venue": "OSDI",
+    "year": 2022,
+    "abstract": "This code release includes testings scripts for some figures, our benchmark Memo, and our tuning scheme Caption.",
+    "citation_count": 90,
+    "reference_count": 60,
+    "url": "https://dblp.org/rec/conf/osdi/KimPKPCSN22",
+    "dblp_key": "conf/osdi/KimPKPCSN22",
+    "source_id": "https://openalex.org/W4361194512"
+  },
+  {
+    "title": "Design and Verification of the Arm Confidential Compute Architecture.",
+    "authors": [
+      "Xupeng Li",
+      "Xuheng Li",
+      "Christoffer Dall",
+      "Ronghui Gu",
+      "Jason Nieh",
+      "Yousuf Sait",
+      "Gareth Stockwell"
+    ],
+    "venue": "OSDI",
+    "year": 2022,
+    "abstract": "This paper provides an overview of the Internet of Things (IoT) with emphasis on enabling technologies, protocols, and application issues. The IoT is enabled by the latest developments in RFID, smart sensors, communication technologies, and Internet protocols. The basic premise is to have smart sensors collaborate directly without human involvement to deliver a new class of applications. The current revolution in Internet, mobile, and machine-to-machine (M2M) technologies can be seen as the first phase of the IoT. In the coming years, the IoT is expected to bridge diverse technologies to enable new applications by connecting physical objects together in support of intelligent decision making. This paper starts by providing a horizontal overview of the IoT. Then, we give an overview of some technical details that pertain to the IoT enabling technologies, protocols, and applications. Compared to other survey papers in the field, our objective is to provide a more thorough summary of the most relevant protocols and application issues to enable researchers and application developers to get up to speed quickly on how the different protocols fit together to deliver desired functionalities without having to go through RFCs and the standards specifications. We also provide an overview of some of the key IoT challenges presented in the recent literature and provide a summary of related research work. Moreover, we explore the relation between the IoT and other emerging technologies including big data analytics and cloud and fog computing. We also present the need for better horizontal integration among IoT services. Finally, we present detailed service use-cases to illustrate how the different protocols presented in the paper fit together to deliver desired IoT services.",
+    "citation_count": 7903,
+    "reference_count": 178,
+    "url": "https://dblp.org/rec/conf/osdi/LiLDGNSS22",
+    "dblp_key": "conf/osdi/LiLDGNSS22",
+    "source_id": "https://openalex.org/W2134295053"
+  },
+  {
+    "title": "RESIN: A Holistic Service for Dealing with Memory Leaks in Production Cloud Infrastructure.",
+    "authors": [
+      "Chang Lou",
+      "Cong Chen",
+      "Peng Huang 0005",
+      "Yingnong Dang",
+      "Si Qin",
+      "Xinsheng Yang",
+      "Xukun Li",
+      "Qingwei Lin",
+      "Murali Chintalapati"
+    ],
+    "venue": "OSDI",
+    "year": 2022,
+    "abstract": "With the flourish of flexible and wearable electronics gadgets, the need for flexible power sources has become essential. The growth of this increasingly diverse range of devices boosted the necessity to develop materials for such flexible power sources such as secondary batteries, fuel cells, supercapacitors, sensors, dye-sensitized solar cells, etc. In that context, comprehensives studies on flexible conversion and energy storage devices have been released for other technologies such Li-ion standing out the importance of the research done lately in GPEs (gel polymer electrolytes) for energy conversion and storage. However, flexible zinc batteries have not received the attention they deserve within the flexible batteries field, which are destined to be one of the high rank players in the wearable devices future market. This review presents an extensive overview of the most notable or prominent gel polymeric materials, including biobased polymers, and zinc chemistries as well as its practical or functional implementation in flexible wearable devices. The ultimate aim is to highlight zinc-based batteries as power sources to fill a segment of the world flexible batteries future market.",
+    "citation_count": 58,
+    "reference_count": 328,
+    "url": "https://dblp.org/rec/conf/osdi/LouC0DQYLLC22",
+    "dblp_key": "conf/osdi/LouC0DQYLLC22",
+    "source_id": "https://openalex.org/W3109993202"
+  },
+  {
+    "title": "Demystifying and Checking Silent Semantic Violations in Large Distributed Systems.",
+    "authors": [
+      "Chang Lou",
+      "Yuzhuo Jing",
+      "Peng Huang 0005"
+    ],
+    "venue": "OSDI",
+    "year": 2022,
+    "abstract": "Silent Data Corruption (SDC) in processors can lead to various application-level issues, such as incorrect calculations and even data loss. Since traditional techniques are not effective in detecting processor SDCs, it is very hard to address problems caused by SDCs. For the same reason, knowledge about SDCs in the wild is limited.",
+    "citation_count": 44,
+    "reference_count": 51,
+    "url": "https://dblp.org/rec/conf/osdi/LouJ022",
+    "dblp_key": "conf/osdi/LouJ022",
+    "source_id": "https://openalex.org/W4387321084"
+  },
+  {
+    "title": "Hubble: Performance Debugging with In-Production, Just-In-Time Method Tracing on Android.",
+    "authors": [
+      "Yu Luo 0006",
+      "Kirk Rodrigues",
+      "Cuiqin Li",
+      "Feng Zhang",
+      "Lijin Jiang",
+      "Bing Xia",
+      "David Lion",
+      "Ding Yuan 0004"
+    ],
+    "venue": "OSDI",
+    "year": 2022,
+    "abstract": "Mobile emulation, which creates full-fledged software mobile devices on a physical PC/server, is pivotal to the mobile ecosystem. Unfortunately, existing mobile emulators perform poorly on graphics-intensive apps in terms of efficiency and compatibility. To address this, we introduce graphics projection , a novel graphics virtualization mechanism that adds a small-size projection space inside the guest memory, which processes graphics operations involving control contexts and resource handles without host interactions. While enhancing performance, the decoupled and asynchronous guest/host control flows introduced by graphics projection can significantly complicate emulators’ reliability issue diagnosis when faced with a variety of uncommon or non-standard app behaviors in the wild, hindering practical deployment in production. To overcome this drawback, we develop an automatic reliability issue analysis pipeline that distills the critical code paths across the guest and host control flows by runtime quarantine and state introspection. The resulting new Android emulator, dubbed Trinity, exhibits an average of 97% native hardware performance and 99.3% reliable app support, in some cases outperforming other emulators by more than an order of magnitude.",
+    "citation_count": 1,
+    "reference_count": 31,
+    "url": "https://dblp.org/rec/conf/osdi/LuoRLZJXLY22",
+    "dblp_key": "conf/osdi/LuoRLZJXLY22",
+    "source_id": "https://openalex.org/W4391169437"
+  },
+  {
+    "title": "Walle: An End-to-End, General-Purpose, and Large-Scale Production System for Device-Cloud Collaborative Machine Learning.",
+    "authors": [
+      "Chengfei Lv",
+      "Chaoyue Niu",
+      "Renjie Gu",
+      "Xiaotang Jiang",
+      "Zhaode Wang",
+      "Bin Liu",
+      "Ziqi Wu",
+      "Qiulin Yao",
+      "Congyu Huang",
+      "Panos Huang",
+      "Tao Huang",
+      "Hui Shu",
+      "Jinde Song",
+      "Bin Zou",
+      "Peng Lan",
+      "Guohuan Xu",
+      "Fei Wu 0001",
+      "Shaojie Tang 0001",
+      "Fan Wu 0006",
+      "Guihai Chen"
+    ],
+    "venue": "OSDI",
+    "year": 2022,
+    "abstract": "To break the bottlenecks of mainstream cloud-based machine learning (ML) paradigm, we adopt device-cloud collaborative ML and build the first end-to-end and general-purpose system, called Walle, as the foundation. Walle consists of a deployment platform, distributing ML tasks to billion-scale devices in time; a data pipeline, efficiently preparing task input; and a compute container, providing a cross-platform and high-performance execution environment, while facilitating daily task iteration. Specifically, the compute container is based on Mobile Neural Network (MNN), a tensor compute engine along with the data processing and model execution libraries, which are exposed through a refined Python thread-level virtual machine (VM) to support diverse ML tasks and concurrent task execution. The core of MNN is the novel mechanisms of operator decomposition and semi-auto search, sharply reducing the workload in manually optimizing hundreds of operators for tens of hardware backends and further quickly identifying the best backend with runtime optimization for a computation graph. The data pipeline introduces an on-device stream processing framework to enable processing user behavior data at source. The deployment platform releases ML tasks with an efficient push-then-pull method and supports multi-granularity deployment policies. We evaluate Walle in practical e-commerce application scenarios to demonstrate its effectiveness, efficiency, and scalability. Extensive micro-benchmarks also highlight the superior performance of MNN and the Python thread-level VM. Walle has been in large-scale production use in Alibaba, while MNN has been open source with a broad impact in the community.",
+    "citation_count": 10,
+    "reference_count": 0,
+    "url": "https://dblp.org/rec/conf/osdi/LvNGJWLWYHHHSSZ22",
+    "dblp_key": "conf/osdi/LvNGJWLWYHHHSSZ22",
+    "source_id": "https://openalex.org/W4281641544"
+  },
+  {
+    "title": "ORION and the Three Rights: Sizing, Bundling, and Prewarming for Serverless DAGs.",
+    "authors": [
+      "Ashraf Mahgoub",
+      "Edgardo Barsallo Yi",
+      "Karthick Shankar",
+      "Sameh Elnikety",
+      "Somali Chaterji",
+      "Saurabh Bagchi"
+    ],
+    "venue": "OSDI",
+    "year": 2022,
+    "abstract": "Serverless computing has grown rapidly as a new cloud computing paradigm that promises ease-of-management, cost-efficiency, and auto-scaling by shipping functions via self-contained virtualized containers. Unfortunately, serverless computing suffers from severe cold-start problems---starting containers incurs non-trivial latency. Full container caching is widely applied to mitigate cold-starts, yet has recently been outperformed by two lines of research: partial container caching and container sharing. However, either partial container caching or container sharing techniques exhibit their drawbacks. Partial container caching effectively deals with burstiness while leaving cold-start mitigation halfway; container sharing reduces cold-starts by enabling containers to serve multiple functions while suffering from excessive memory waste due to over-packed containers.",
+    "citation_count": 31,
+    "reference_count": 32,
+    "url": "https://dblp.org/rec/conf/osdi/MahgoubYSECB22",
+    "dblp_key": "conf/osdi/MahgoubYSECB22",
+    "source_id": "https://openalex.org/W4394871711"
+  },
+  {
+    "title": "Looking Beyond GPUs for DNN Scheduling on Multi-Tenant Clusters.",
+    "authors": [
+      "Jayashree Mohan",
+      "Amar Phanishayee",
+      "Janardhan Kulkarni",
+      "Vijay Chidambaram"
+    ],
+    "venue": "OSDI",
+    "year": 2022,
+    "abstract": "With the breakthroughs in deep learning, the recent years have witnessed a booming of artificial intelligence (AI) applications and services, spanning from personal assistant to recommendation systems to video/audio surveillance. More recently, with the proliferation of mobile computing and Internet of Things (IoT), billions of mobile and IoT devices are connected to the Internet, generating zillions bytes of data at the network edge. Driving by this trend, there is an urgent need to push the AI frontiers to the network edge so as to fully unleash the potential of the edge big data. To meet this demand, edge computing, an emerging paradigm that pushes computing tasks and services from the network core to the network edge, has been widely recognized as a promising solution. The resulted new interdiscipline, edge AI or edge intelligence (EI), is beginning to receive a tremendous amount of interest. However, research on EI is still in its infancy stage, and a dedicated venue for exchanging the recent advances of EI is highly desired by both the computer system and AI communities. To this end, we conduct a comprehensive survey of the recent research efforts on EI. Specifically, we first review the background and motivation for AI running at the network edge. We then provide an overview of the overarching architectures, frameworks, and emerging key technologies for deep learning model toward training/inference at the network edge. Finally, we discuss future research opportunities on EI. We believe that this survey will elicit escalating attentions, stimulate fruitful discussions, and inspire further research ideas on EI.",
+    "citation_count": 1915,
+    "reference_count": 168,
+    "url": "https://dblp.org/rec/conf/osdi/MohanPKC22",
+    "dblp_key": "conf/osdi/MohanPKC22",
+    "source_id": "https://openalex.org/W2950865323"
+  },
+  {
+    "title": "Application-Informed Kernel Synchronization Primitives.",
+    "authors": [
+      "Sujin Park",
+      "Diyu Zhou",
+      "Yuchen Qian",
+      "Irina Calciu",
+      "Taesoo Kim",
+      "Sanidhya Kashyap"
+    ],
+    "venue": "OSDI",
+    "year": 2022,
+    "abstract": null,
+    "citation_count": 5876,
+    "reference_count": 62,
+    "url": "https://dblp.org/rec/conf/osdi/ParkZQCKK22",
+    "dblp_key": "conf/osdi/ParkZQCKK22",
+    "source_id": "https://openalex.org/W2580035316"
+  },
+  {
+    "title": "BlockFlex: Enabling Storage Harvesting with Software-Defined Flash in Modern Cloud Platforms.",
+    "authors": [
+      "Benjamin Reidys",
+      "Jinghan Sun",
+      "Anirudh Badam",
+      "Shadi A. Noghabi",
+      "Jian Huang 0006"
+    ],
+    "venue": "OSDI",
+    "year": 2022,
+    "abstract": "Thanks to the mature manufacturing techniques, flash-based solid-state drives (SSDs) are highly customizable for applications today, which brings opportunities to further improve their storage performance and resource utilization. However, the SSD efficiency is usually determined by many hardware parameters, making it hard for developers to manually tune them and determine the optimized SSD hardware configurations.",
+    "citation_count": 3,
+    "reference_count": 22,
+    "url": "https://dblp.org/rec/conf/osdi/ReidysSBN022",
+    "dblp_key": "conf/osdi/ReidysSBN022",
+    "source_id": "https://openalex.org/W4389500476"
+  },
+  {
+    "title": "From Dynamic Loading to Extensible Transformation: An Infrastructure for Dynamic Library Transformation.",
+    "authors": [
+      "Yuxin Ren 0001",
+      "Kang Zhou",
+      "Jianhai Luan",
+      "Yunfeng Ye",
+      "Shiyuan Hu",
+      "Xu Wu",
+      "Wenqin Zheng",
+      "Wenfeng Zhang",
+      "Xinwei Hu"
+    ],
+    "venue": "OSDI",
+    "year": 2022,
+    "abstract": "QUANTUM ESPRESSO is an integrated suite of computer codes for electronic-structure calculations and materials modeling, based on density-functional theory, plane waves, and pseudopotentials (norm-conserving, ultrasoft, and projector-augmented wave). The acronym ESPRESSO stands for opEn Source Package for Research in Electronic Structure, Simulation, and Optimization. It is freely available to researchers around the world under the terms of the GNU General Public License. QUANTUM ESPRESSO builds upon newly-restructured electronic-structure codes that have been developed and tested by some of the original authors of novel electronic-structure algorithms and applied in the last twenty years by some of the leading materials modeling groups worldwide. Innovation and efficiency are still its main focus, with special attention paid to massively parallel architectures, and a great effort being devoted to user friendliness. QUANTUM ESPRESSO is evolving towards a distribution of independent and interoperable codes in the spirit of an open-source project, where researchers active in the field of electronic-structure calculations are encouraged to participate in the project by contributing their own codes or by implementing their own ideas into existing codes.",
+    "citation_count": 27543,
+    "reference_count": 184,
+    "url": "https://dblp.org/rec/conf/osdi/RenZLYHWZZH22",
+    "dblp_key": "conf/osdi/RenZLYHWZZH22",
+    "source_id": "https://openalex.org/W2120145199"
+  },
+  {
+    "title": "CAP-VMs: Capability-Based Isolation and Sharing in the Cloud.",
+    "authors": [
+      "Vasily A. Sartakov",
+      "Lluís Vilanova",
+      "David M. Eyers",
+      "Takahiro Shinagawa",
+      "Peter R. Pietzuch"
+    ],
+    "venue": "OSDI",
+    "year": 2022,
+    "abstract": "Abstract Cloud computing is a recent advancement wherein IT infrastructure and applications are provided as ‘services’ to end‐users under a usage‐based payment model. It can leverage virtualized services even on the fly based on requirements (workload patterns and QoS) varying with time. The application services hosted under Cloud computing model have complex provisioning, composition, configuration, and deployment requirements. Evaluating the performance of Cloud provisioning policies, application workload models, and resources performance models in a repeatable manner under varying system and user configurations and requirements is difficult to achieve. To overcome this challenge, we propose CloudSim: an extensible simulation toolkit that enables modeling and simulation of Cloud computing systems and application provisioning environments. The CloudSim toolkit supports both system and behavior modeling of Cloud system components such as data centers, virtual machines (VMs) and resource provisioning policies. It implements generic application provisioning techniques that can be extended with ease and limited effort. Currently, it supports modeling and simulation of Cloud computing environments consisting of both single and inter‐networked clouds (federation of clouds). Moreover, it exposes custom interfaces for implementing policies and provisioning techniques for allocation of VMs under inter‐networked Cloud computing scenarios. Several researchers from organizations, such as HP Labs in U.S.A., are using CloudSim in their investigation on Cloud resource provisioning and energy‐efficient management of data center resources. The usefulness of CloudSim is demonstrated by a case study involving dynamic provisioning of application services in the hybrid federated clouds environment. The result of this case study proves that the federated Cloud computing model significantly improves the application QoS requirements under fluctuating resource and service demand patterns. Copyright © 2010 John Wiley &amp; Sons, Ltd.",
+    "citation_count": 4841,
+    "reference_count": 21,
+    "url": "https://dblp.org/rec/conf/osdi/SartakovVESP22",
+    "dblp_key": "conf/osdi/SartakovVESP22",
+    "source_id": "https://openalex.org/W2045287414"
+  },
+  {
+    "title": "Cancellation in Systems: An Empirical Study of Task Cancellation Patterns and Failures.",
+    "authors": [
+      "Utsav Sethi",
+      "Haochen Pan",
+      "Shan Lu 0001",
+      "Madanlal Musuvathi",
+      "Suman Nath"
+    ],
+    "venue": "OSDI",
+    "year": 2022,
+    "abstract": "How do consumers choose from a menu of contracts? We analyze a novel dataset from three U.S. health clubs with information on both the contractual choice and the day-to-day attendance decisions of 7,752 members over three years. The observed consumer behavior is difficult to reconcile with standard preferences and beliefs. First, members who choose a contract with a flat monthly fee of over $70 attend on average 4.3 times per month. They pay a price per expected visit of more than $17, even though they could pay $10 per visit using a 10-visit pass. On average, these users forgo savings of $600 during their membership. Second, consumers who choose a monthly contract are 17 percent more likely to stay enrolled beyond one year than users committing for a year. This is surprising because monthly members pay higher fees for the option to cancel each month. We also document cancellation delays and attendance expectations, among other findings. Leading explanations for our findings are overconfidence about future self-control or about future efficiency. Overconfident agents overestimate attendance as well as the cancellation probability of automatically renewed contracts. Our results suggest that making inferences from observed contract choice under the rational expectation hypothesis can lead to biases in the estimation of consumer preferences.",
+    "citation_count": 1112,
+    "reference_count": 52,
+    "url": "https://dblp.org/rec/conf/osdi/SethiP0MN22",
+    "dblp_key": "conf/osdi/SethiP0MN22",
+    "source_id": "https://openalex.org/W2026559010"
+  },
+  {
+    "title": "Occualizer: Optimistic Concurrent Search Trees From Sequential Code.",
+    "authors": [
+      "Tomer Shanny",
+      "Adam Morrison 0001"
+    ],
+    "venue": "OSDI",
+    "year": 2022,
+    "abstract": "Abstract We present Locksynth , a tool that automatically derives synchronization needed for destructive updates to concurrent data structures that involve a constant number of shared heap memory write operations. Locksynth serves as the implementation of our prior work on deriving abstract synchronization code. Designing concurrent data structures involves inferring correct synchronization code starting with a prior understanding of the sequential data structure’s operations. Further, an understanding of shared memory model and the synchronization primitives is also required. The reasoning involved transforming a sequential data structure into its concurrent version can be performed using Answer Set Programming, and we mechanized our approach in previous work. The reasoning involves deduction and abduction that can be succinctly modeled in ASP. We assume that the abstract sequential code of the data structure’s operations is provided, alongside axioms that describe concurrent behavior. This information is used to automatically derive concurrent code for that data structure, such as dictionary operations for linked lists and binary search trees that involve a constant number of destructive update operations. We also are able to infer the correct set of locks (but not code synthesis) for external height-balanced binary search trees that involve left/right tree rotations. Locksynth performs the analyses required to infer correct sets of locks and as a final step, also derives the C++ synchronization code for the synthesized data structures. We also provide a performance analysis of the C++ code synthesized by Locksynth with the hand-crafted versions available from the Synchrobench microbenchmark suite. To the best of our knowledge, our tool is the first to employ ASP as a backend reasoner to perform concurrent data structure synthesis.",
+    "citation_count": 0,
+    "reference_count": 28,
+    "url": "https://dblp.org/rec/conf/osdi/Shanny022",
+    "dblp_key": "conf/osdi/Shanny022",
+    "source_id": "https://openalex.org/W4386372839"
+  },
+  {
+    "title": "Ekko: A Large-Scale Deep Learning Recommender System with Low-Latency Model Update.",
+    "authors": [
+      "Chijun Sima",
+      "Yao Fu 0013",
+      "Man-Kit Sit",
+      "Liyi Guo",
+      "Xuri Gong",
+      "Feng Lin",
+      "Junyu Wu",
+      "Yongsheng Li",
+      "Haidong Rong",
+      "Pierre-Louis Aublin",
+      "Luo Mai"
+    ],
+    "venue": "OSDI",
+    "year": 2022,
+    "abstract": "The recommender system which gets higher in practical use in applying the Apriori algorithm in the early 2000s has revolutionized our daily life as it currently is widely used by big-tech platform companies. In the early stages of the development of recommender systems, services that can be provided to users were simply derived to the extent that only related products were recommended. However, the new research wave like deep learning-based recommender systems due to the development of information technology and the complexity of users&#x2019; online behavior extensively grabs researchers&#x2019; and academia&#x2019;s attention in the field of recommender systems. This paper describes the algorithms and characteristics of the recent popular deep learning-based representative models such as recurrent neural networks (RNNs), convolutional neural networks (CNNs), generative adversarial networks (GANs), and graph neural networks (GNNs) in the view of the sequential recommendation. The sequential recommendation of understanding user preferences in chronological order is useful for analyzing user-item interaction more accurately and flexibly. Therefore, the models specialized in sequential recommendation take advantage of understanding user behavior through temporal factors and improving recommendation quality by easily realizing the correlation between user and items. Also, the transformer-based model was developed to improve the problem of long-term dependency between users and items through factors, such as points, lines, and nodes, experienced in the early models of RNN and CNN and self-supervised learning (SSL)-based models, which are originally purposed to solve the data sparsity issues of recommender systems, will be discussed in this paper.",
+    "citation_count": 17,
+    "reference_count": 96,
+    "url": "https://dblp.org/rec/conf/osdi/SimaFSGGLWLRAM22",
+    "dblp_key": "conf/osdi/SimaFSGGLWLRAM22",
+    "source_id": "https://openalex.org/W4379053239"
+  },
+  {
+    "title": "zIO: Accelerating IO-Intensive Applications with Transparent Zero-Copy IO.",
+    "authors": [
+      "Timothy Stamler",
+      "Deukyeon Hwang",
+      "Amanda Raybuck",
+      "Wei Zhang",
+      "Simon Peter 0001"
+    ],
+    "venue": "OSDI",
+    "year": 2022,
+    "abstract": "Linux storage stack offers a variety of storage I/O stacks and APIs such as POSIX I/O, asynchronous I/O (libaio), high-performance asynchronous I/O (emerging io_uring) or SPDK, the last of which completely bypasses the kernel. Despite their availability, there has not been a systematic study of their performance and overheads. In order to aid our understanding, in this work we systematically characterize performance, scalability and microarchitectural properties of popular Linux I/O APIs on high-performance storage hardware (Intel Optane SSDs). Our characterization reveals that: (1) at low I/O loads, all APIs perform competitively with each other, with polling helping the performance by 1.7X, but consuming 2.3X CPU instructions; (2) at high-loads and scale, io_uring is more than an order of magnitude slower than SPDK; (3) at high-loads and scale, the benchmarking tool (fio) itself becomes a bottleneck; (4) state-of-practice Linux block I/O schedulers (BFQ, mq-deadline, and Kyber) introduce significant (up to 50%) overheads, and their use of global locks hinder their scalability. All artifacts from this work are available at https://github.com/atlarge-research/Performance-Characterization-Storage-Stacks.",
+    "citation_count": 13,
+    "reference_count": 26,
+    "url": "https://dblp.org/rec/conf/osdi/StamlerHRZP22",
+    "dblp_key": "conf/osdi/StamlerHRZP22",
+    "source_id": "https://openalex.org/W4368408236"
+  },
+  {
+    "title": "Unity: Accelerating DNN Training Through Joint Optimization of Algebraic Transformations and Parallelization.",
+    "authors": [
+      "Colin Unger",
+      "Zhihao Jia",
+      "Wei Wu 0016",
+      "Sina Lin",
+      "Mandeep Baines",
+      "Carlos Efrain Quintero Narvaez",
+      "Vinay Ramakrishnaiah",
+      "Nirmal Prajapati",
+      "Patrick S. McCormick",
+      "Jamaludin Mohd-Yusof",
+      "Xi Luo",
+      "Dheevatsa Mudigere",
+      "Jongsoo Park",
+      "Misha Smelyanskiy",
+      "Alex Aiken"
+    ],
+    "venue": "OSDI",
+    "year": 2022,
+    "abstract": "In recent years, deep learning (DL), a re-branding of neural networks (NNs), has risen to the top in numerous areas, namely computer vision (CV), speech recognition, natural language processing, etc. Whereas remote sensing (RS) possesses a number of unique challenges, primarily related to sensors and applications, inevitably RS draws from many of the same theories as CV; e.g., statistics, fusion, and machine learning, to name a few. This means that the RS community should be aware of, if not at the leading edge of, of advancements like DL. Herein, we provide the most comprehensive survey of state-of-the-art RS DL research. We also review recent new developments in the DL field that can be used in DL for RS. Namely, we focus on theories, tools and challenges for the RS community. Specifically, we focus on unsolved challenges and opportunities as it relates to (i) inadequate data sets, (ii) human-understandable solutions for modelling physical phenomena, (iii) Big Data, (iv) non-traditional heterogeneous data sources, (v) DL architectures and learning algorithms for spectral, spatial and temporal data, (vi) transfer learning, (vii) an improved theoretical understanding of DL systems, (viii) high barriers to entry, and (ix) training and optimizing the DL.",
+    "citation_count": 560,
+    "reference_count": 395,
+    "url": "https://dblp.org/rec/conf/osdi/UngerJ0LBNRPMML22",
+    "dblp_key": "conf/osdi/UngerJ0LBNRPMML22",
+    "source_id": "https://openalex.org/W2751694392"
+  },
+  {
+    "title": "SHORTSTACK: Distributed, Fault-tolerant, Oblivious Data Access.",
+    "authors": [
+      "Midhul Vuppalapati",
+      "Kushal Babel",
+      "Anurag Khandelwal",
+      "Rachit Agarwal 0001"
+    ],
+    "venue": "OSDI",
+    "year": 2022,
+    "abstract": "Many applications that benefit from data offload to cloud services operate on private data. A now-long line of work has shown that, even when data is offloaded in an encrypted form, an adversary can learn sensitive information by analyzing data access patterns. Existing techniques for oblivious data access-that protect against access pattern attacks-require a centralized and stateful trusted proxy to orchestrate data accesses from applications to cloud services. We show that, in failure-prone deployments, such a centralized and stateful proxy results in violation of oblivious data access security guarantees and/or system unavailability. We thus initiate the study of distributed, fault-tolerant, oblivious data access. We present SHORTSTACK, a distributed proxy architecture for oblivious data access in failure-prone deployments. SHORTSTACK achieves the classical obliviousness guarantee--access patterns observed by the adversary being independent of the input--even under a powerful passive persistent adversary that can force failure of arbitrary (bounded-sized) subset of proxy servers at arbitrary times. We also introduce a security model that enables studying oblivious data access with distributed, failure-prone, servers. We provide a formal proof that SHORTSTACK enables oblivious data access under this model, and show empirically that SHORTSTACK performance scales near-linearly with number of distributed proxy servers.",
+    "citation_count": 2,
+    "reference_count": 0,
+    "url": "https://dblp.org/rec/conf/osdi/VuppalapatiBK022",
+    "dblp_key": "conf/osdi/VuppalapatiBK022",
+    "source_id": "https://openalex.org/W4281679410"
+  },
+  {
+    "title": "MemLiner: Lining up Tracing and Application for a Far-Memory-Friendly Runtime.",
+    "authors": [
+      "Chenxi Wang 0005",
+      "Haoran Ma",
+      "Shi Liu",
+      "Yifan Qiao",
+      "Jonathan Eyolfson",
+      "Christian Navasca",
+      "Shan Lu 0001",
+      "Guoqing Harry Xu"
+    ],
+    "venue": "OSDI",
+    "year": 2022,
+    "abstract": "Datacenters of today have maintained the same architecture for decades. The building block of the datacenter remains the server, which tightly couples the necessary compute resources, memory, and storage to run its tasks. However, this traditional approach suffers from under-utilization of its resources, often caused by the over-provisioning of these resources when deploying applications. Datacenter operators allocate the worst-case amount of memory required for each deployed application, which lasts for the entirety of the application&#x2019;s lifetime, even when not actually used. This causes servers to quickly, and falsely, run out of memory before their CPUs have been fully utilized. To address these problems, a new shift in the way datacenters are being built has been gaining more traction. Namely, memory disaggregation. Memory disaggregation can address these problems by decoupling the computational elements from the memory resources, allowing each to be provisioned and utilized separately. While the idea of memory disaggregation is not new, an increasing number of different proposals of memory disaggregation have seen the light in recent years. In this paper, we review many of these recent proposals, and study their architectures, implementations, and requirements. We also categorize them based on their features, and attempt to identify their strengths and shortcomings in an effort to highlight possible directions for future work and provide a reference for the research community.",
+    "citation_count": 32,
+    "reference_count": 91,
+    "url": "https://dblp.org/rec/conf/osdi/WangMLQEN0X22",
+    "dblp_key": "conf/osdi/WangMLQEN0X22",
+    "source_id": "https://openalex.org/W4323338773"
+  },
+  {
+    "title": "DuoAI: Fast, Automated Inference of Inductive Invariants for Verifying Distributed Protocols.",
+    "authors": [
+      "Jianan Yao",
+      "Runzhou Tao 0001",
+      "Ronghui Gu",
+      "Jason Nieh"
+    ],
+    "venue": "OSDI",
+    "year": 2022,
+    "abstract": "Distributed protocols have long been formulated in terms of their safety and liveness properties. Much recent work has focused on automatically verifying the safety properties of distributed protocols, but doing so for liveness properties has remained a challenging, unsolved problem. We present LVR, the first framework that can mostly automatically verify liveness properties for distributed protocols. Our key insight is that most liveness properties for distributed protocols can be reduced to a set of safety properties with the help of ranking functions. Such ranking functions for practical distributed protocols have certain properties that make them straightforward to synthesize, contrary to conventional wisdom. We prove that verifying a liveness property can then be reduced to a simpler problem of verifying a set of safety properties, namely that the ranking function is strictly decreasing and nonnegative for any protocol state transition, and there is no deadlock. LVR automatically synthesizes ranking functions by formulating a parameterized function of integer protocol variables, statically analyzing the lower and upper bounds of the variables as well as how much they can change on each state transition, then feeding the constraints to an SMT solver to determine the coefficients of the ranking function. It then uses an off-the-shelf verification tool to find inductive invariants to verify safety properties for both ranking functions and deadlock freedom. We show that LVR can mostly automatically verify the liveness properties of several distributed protocols, including various versions of Paxos, with limited user guidance.",
+    "citation_count": 7,
+    "reference_count": 39,
+    "url": "https://dblp.org/rec/conf/osdi/YaoTGN22",
+    "dblp_key": "conf/osdi/YaoTGN22",
+    "source_id": "https://openalex.org/W4390605422"
+  },
+  {
+    "title": "Immortal Threads: Multithreaded Event-driven Intermittent Computing on Ultra-Low-Power Microcontrollers.",
+    "authors": [
+      "Eren Yildiz",
+      "Lijun Chen",
+      "Kasim Sinan Yildirim"
+    ],
+    "venue": "OSDI",
+    "year": 2022,
+    "abstract": "Backing up the intermediate results of hardware-accelerated deep inference is crucial to ensure the progress of execution on batteryless computing platforms. However, hardware accelerators in low-power AI platforms only support the one-shot atomic execution of one neural network inference without any backups. This article introduces a new toolchain for MAX78000, which is a brand-new microcontroller with a hardware-based convolutional neural network (CNN) accelerator. Our toolchain converts any MAX78000-compatible neural network into an intermittently executable form. The toolchain enables finer checkpoint granularity on the MAX78000 CNN accelerator, allowing for backups of any intermediate neural network layer output. Based on the layer-by-layer CNN execution, we propose a new backup technique that performs only necessary (urgent) checkpoints. The method involves the batteryless system switching to ultra-low-power mode while charging, saving intermediate results only when input power is lower than ultra-low-power mode energy consumption. By avoiding unnecessary memory transfer, the proposed solution increases the inference throughput by 1.9× for simulation and by 1.2× for real-world setup compared to the coarse-grained baseline execution.",
+    "citation_count": 17,
+    "reference_count": 37,
+    "url": "https://dblp.org/rec/conf/osdi/YildizCY22",
+    "dblp_key": "conf/osdi/YildizCY22",
+    "source_id": "https://openalex.org/W4383816923"
+  },
+  {
+    "title": "Orca: A Distributed Serving System for Transformer-Based Generative Models.",
+    "authors": [
+      "Gyeong-In Yu",
+      "Joo Seong Jeong",
+      "Geon-Woo Kim",
+      "Soojeong Kim",
+      "Byung-Gon Chun"
+    ],
+    "venue": "OSDI",
+    "year": 2022,
+    "abstract": "High throughput serving of large language models (LLMs) requires batching sufficiently many requests at a time. However, existing systems struggle because the key-value cache (KV cache) memory for each request is huge and grows and shrinks dynamically. When managed inefficiently, this memory can be significantly wasted by fragmentation and redundant duplication, limiting the batch size. To address this problem, we propose PagedAttention, an attention algorithm inspired by the classical virtual memory and paging techniques in operating systems. On top of it, we build vLLM, an LLM serving system that achieves (1) near-zero waste in KV cache memory and (2) flexible sharing of KV cache within and across requests to further reduce memory usage. Our evaluations show that vLLM improves the throughput of popular LLMs by 2--4× with the same level of latency compared to the state-of-the-art systems, such as FasterTransformer and Orca. The improvement is more pronounced with longer sequences, larger models, and more complex decoding algorithms. vLLM's source code is publicly available at https://github.com/vllm-project/vllm.",
+    "citation_count": 604,
+    "reference_count": 19,
+    "url": "https://dblp.org/rec/conf/osdi/YuJKKC22",
+    "dblp_key": "conf/osdi/YuJKKC22",
+    "source_id": "https://openalex.org/W4387321091"
+  },
+  {
+    "title": "FAERY: An FPGA-accelerated Embedding-based Retrieval System.",
+    "authors": [
+      "Chaoliang Zeng",
+      "Layong Luo",
+      "Qingsong Ning",
+      "Yaodong Han",
+      "Yuhang Jiang",
+      "Ding Tang",
+      "Zilong Wang 0007",
+      "Kai Chen 0005",
+      "Chuanxiong Guo"
+    ],
+    "venue": "OSDI",
+    "year": 2022,
+    "abstract": "This code release includes testings scripts for some figures, our benchmark Memo, and our tuning scheme Caption.",
+    "citation_count": 90,
+    "reference_count": 60,
+    "url": "https://dblp.org/rec/conf/osdi/ZengLNHJTW0G22",
+    "dblp_key": "conf/osdi/ZengLNHJTW0G22",
+    "source_id": "https://openalex.org/W4361194512"
+  },
+  {
+    "title": "Blockaid: Data Access Policy Enforcement for Web Applications.",
+    "authors": [
+      "Wen Zhang",
+      "Eric Sheng",
+      "Michael Alan Chang",
+      "Aurojit Panda",
+      "Mooly Sagiv",
+      "Scott Shenker"
+    ],
+    "venue": "OSDI",
+    "year": 2022,
+    "abstract": "Modern web applications serve large amounts of sensitive user data, access to which is typically governed by data-access policies. Enforcing such policies is crucial to preventing improper data access, and prior work has proposed many enforcement mechanisms. However, these prior methods either alter application semantics or require adopting a new programming model; the former can result in unexpected application behavior, while the latter cannot be used with existing web frameworks. Blockaid is an access-policy enforcement system that preserves application semantics and is compatible with existing web frameworks. It intercepts database queries from the application, attempts to verify that each query is policy-compliant, and blocks queries that are not. It verifies policy compliance using SMT solvers and generalizes and caches previous compliance decisions for better performance. We show that Blockaid supports existing web applications while requiring minimal code changes and adding only modest overheads.",
+    "citation_count": 3,
+    "reference_count": 0,
+    "url": "https://dblp.org/rec/conf/osdi/ZhangSCPSS22",
+    "dblp_key": "conf/osdi/ZhangSCPSS22",
+    "source_id": "https://openalex.org/W4280563401"
+  },
+  {
+    "title": "SparTA: Deep-Learning Model Sparsity via Tensor-with-Sparsity-Attribute.",
+    "authors": [
+      "Ningxin Zheng",
+      "Bin Lin",
+      "Quanlu Zhang",
+      "Lingxiao Ma",
+      "Yuqing Yang 0001",
+      "Fan Yang 0024",
+      "Yang Wang 0053",
+      "Mao Yang 0004",
+      "Lidong Zhou"
+    ],
+    "venue": "OSDI",
+    "year": 2022,
+    "abstract": "Sparse tensors are rapidly becoming critical components of modern deep learning workloads. However, developing high-performance sparse operators can be difficult and tedious, and existing vendor libraries cannot satisfy the escalating demands from new operators. Sparse tensor compilers simplify the development of operators, but efficient sparse compilation for deep learning remains challenging because a single sparse format cannot maximize hardware efficiency, and single-shot compilers cannot keep up with latest hardware and system advances. In this paper, we observe that the key to addressing both these challenges is to leverage composable formats and composable transformations. We propose SparseTIR, a sparse tensor compilation abstraction that offers composable formats and composable transformations for deep learning workloads. SparseTIR constructs a search space over these composable components for performance tuning. With these improvements, SparseTIR obtains consistent performance speedups vs vendor libraries on GPUs for single operators: 1.20-2.34x for GNN operators, 1.05-2.98x for sparse attention operators, and 0.56-7.45x for sparse convolution operators. SparseTIR also accelerates end-to-end GNNs by 1.08-1.52x for GraphSAGE training, and 4.20-40.18x for RGCN inference.",
+    "citation_count": 69,
+    "reference_count": 74,
+    "url": "https://dblp.org/rec/conf/osdi/ZhengLZMY0WYZ22",
+    "dblp_key": "conf/osdi/ZhengLZMY0WYZ22",
+    "source_id": "https://openalex.org/W4327911434"
+  },
+  {
+    "title": "Alpa: Automating Inter- and Intra-Operator Parallelism for Distributed Deep Learning.",
+    "authors": [
+      "Lianmin Zheng",
+      "Zhuohan Li 0001",
+      "Hao Zhang 0025",
+      "Yonghao Zhuang 0001",
+      "Zhifeng Chen",
+      "Yanping Huang",
+      "Yida Wang 0003",
+      "Yuanzhong Xu",
+      "Danyang Zhuo",
+      "Eric P. Xing",
+      "Joseph E. Gonzalez",
+      "Ion Stoica"
+    ],
+    "venue": "OSDI",
+    "year": 2022,
+    "abstract": "Alpa automates model-parallel training of large deep learning (DL) models by generating execution plans that unify data, operator, and pipeline parallelism. Existing model-parallel training systems either require users to manually create a parallelization plan or automatically generate one from a limited space of model parallelism configurations. They do not suffice to scale out complex DL models on distributed compute devices. Alpa distributes the training of large DL models by viewing parallelisms as two hierarchical levels: inter-operator and intra-operator parallelisms. Based on it, Alpa constructs a new hierarchical space for massive model-parallel execution plans. Alpa designs a number of compilation passes to automatically derive efficient parallel execution plans at each parallelism level. Alpa implements an efficient runtime to orchestrate the two-level parallel execution on distributed compute devices. Our evaluation shows Alpa generates parallelization plans that match or outperform hand-tuned model-parallel training systems even on models they are designed for. Unlike specialized systems, Alpa also generalizes to models with heterogeneous architectures and models without manually-designed plans. Alpa's source code is publicly available at https://github.com/alpa-projects/alpa",
+    "citation_count": 75,
+    "reference_count": 0,
+    "url": "https://dblp.org/rec/conf/osdi/ZhengLZZCHWXZXG22",
+    "dblp_key": "conf/osdi/ZhengLZZCHWXZXG22",
+    "source_id": "https://openalex.org/W4226479682"
+  },
+  {
+    "title": "XRP: In-Kernel Storage Functions with eBPF.",
+    "authors": [
+      "Yuhong Zhong",
+      "Haoyu Li",
+      "Yu Jian Wu",
+      "Ioannis Zarkadas",
+      "Jeffrey Tao",
+      "Evan Mesterhazy",
+      "Michael Makris",
+      "Junfeng Yang",
+      "Amy Tai",
+      "Ryan Stutsman",
+      "Asaf Cidon"
+    ],
+    "venue": "OSDI",
+    "year": 2022,
+    "abstract": "The emergence of verified eBPF bytecode is ushering in a new era of safe kernel extensions. In this paper, we argue that eBPF’s verifier—the source of its safety guarantees—has become a liability. In addition to the well-known bugs and vulnerabilities stemming from the complexity and ad hoc nature of the in-kernel verifier, we highlight a concerning trend in which escape hatches to unsafe kernel functions (in the form of helper functions) are being introduced to bypass verifier-imposed limitations on expressiveness, unfortunately also bypassing its safety guarantees. We propose safe kernel extension frameworks using a balance of not just static but also lightweight runtime techniques. We describe a design centered around kernel extensions in safe Rust that will eliminate the need of the in-kernel verifier, improve expressiveness, allow for reduced escape hatches, and ultimately improve the safety of kernel extensions.",
+    "citation_count": 20,
+    "reference_count": 9,
+    "url": "https://dblp.org/rec/conf/osdi/ZhongLWZTMMYTSC22",
+    "dblp_key": "conf/osdi/ZhongLWZTMMYTSC22",
+    "source_id": "https://openalex.org/W4381611552"
+  },
+  {
+    "title": "ODINFS: Scaling PM Performance with Opportunistic Delegation.",
+    "authors": [
+      "Diyu Zhou",
+      "Yuchen Qian",
+      "Vishal Gupta 0006",
+      "Zhifei Yang",
+      "Changwoo Min",
+      "Sanidhya Kashyap"
+    ],
+    "venue": "OSDI",
+    "year": 2022,
+    "abstract": "Non-volatile memory(NVM) has the properties of both byte addressable and persistence, which provides new opportunities for building on-line transaction processing (OLTP) engines. Recently, a new feature called eADR puts CPU cache also in the persistence domain. Existing OLTP engines are based on volatile cache and now have the opportunity to improve performance further and reduce programming complexity with persistent cache.",
+    "citation_count": 9,
+    "reference_count": 43,
+    "url": "https://dblp.org/rec/conf/osdi/ZhouQGYMK22",
+    "dblp_key": "conf/osdi/ZhouQGYMK22",
+    "source_id": "https://openalex.org/W4387321495"
+  },
+  {
+    "title": "ROLLER: Fast and Efficient Tensor Compilation for Deep Learning.",
+    "authors": [
+      "Hongyu Zhu 0003",
+      "Ruofan Wu",
+      "Yijia Diao",
+      "Shanbin Ke",
+      "Haoyu Li",
+      "Chen Zhang 0001",
+      "Jilong Xue",
+      "Lingxiao Ma",
+      "Yuqing Xia",
+      "Wei Cui",
+      "Fan Yang 0024",
+      "Mao Yang 0004",
+      "Lidong Zhou",
+      "Asaf Cidon",
+      "Gennady Pekhimenko"
+    ],
+    "venue": "OSDI",
+    "year": 2022,
+    "abstract": "As deep learning models nowadays are widely adopted by both cloud services and edge devices, reducing the latency of deep learning model inferences becomes crucial to provide efficient model serving. However, it is challenging to develop efficient tensor programs for deep learning operators due to the high complexity of modern accelerators and the rapidly growing number of operators. Deep learning compilers, such as Apache TVM, adopt declarative scheduling primitives to lower the bar of developing tensor programs. However, we show that this approach is insufficient to cover state-of-the-art tensor program optimizations. In this paper, we propose to embed the scheduling process into tensor programs and use dedicated mappings, called task mappings, to define the computation assignment and ordering. This new approach greatly enriches the expressible optimizations by allowing developers to manipulate tensor programs at a much finer granularity. We call the proposed method the task-mapping programming paradigm. In addition, we propose a new post-scheduling fusion optimization that allows developers to focus on scheduling every single operator and automates the fusion after scheduling. It greatly reduces the engineering efforts for operator fusion. Our proposed paradigm also constructs an efficient hardware-centric schedule space, which is agnostic to the program input size and greatly reduces the tuning time. With the proposed paradigm, we implement a deep learning compiler Hidet. Extensive experiments on modern convolution and transformer models show that Hidet outperforms state-of-the-art DNN inference framework, ONNX Runtime, and compiler, TVM equipped with scheduler AutoTVM and Ansor, by up to 1.48x (1.22x on average). It also reduces the tuning time by 20x and 11x compared with AutoTVM and Ansor, respectively. We open-sourced hidet at https://www.github.com/hidet-org/hidet.",
+    "citation_count": 21,
+    "reference_count": 35,
+    "url": "https://dblp.org/rec/conf/osdi/ZhuWDKLZXMXC0YZ22",
+    "dblp_key": "conf/osdi/ZhuWDKLZXMXC0YZ22",
+    "source_id": "https://openalex.org/W4318541647"
+  },
+  {
+    "title": "16th USENIX Symposium on Operating Systems Design and Implementation, OSDI 2022, Carlsbad, CA, USA, July 11-13, 2022",
+    "authors": [
+      "Marcos K. Aguilera",
+      "Hakim Weatherspoon"
+    ],
+    "venue": "OSDI",
+    "year": 2022,
+    "abstract": "Serverless computing that runs functions with auto-scaling is a popular task execution pattern in the cloud-native era. By connecting serverless functions into workflows, tenants can achieve complex functionality. Prior research adopts the control-flow paradigm to orchestrate a serverless workflow. However, the control-flow paradigm inherently results in long response latency, due to the heavy data persistence overhead, sequential resource usage, and late function triggering.",
+    "citation_count": 16,
+    "reference_count": 39,
+    "url": "https://dblp.org/rec/conf/osdi/2022",
+    "dblp_key": "conf/osdi/2022",
+    "source_id": "https://openalex.org/W4391623927"
+  }
+]

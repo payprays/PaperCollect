@@ -1,0 +1,490 @@
+[
+  {
+    "title": "Assessing the Limits of the Distributional Hypothesis in Semantic Spaces: Trait-based Relational Knowledge and the Impact of Co-occurrences.",
+    "authors": [
+      "Mark Anderson",
+      "José Camacho-Collados"
+    ],
+    "venue": "NAACL",
+    "year": 2022,
+    "abstract": "The increase in performance in NLP due to the prevalence of distributional models and deep learning has brought with it a reciprocal decrease in interpretability. This has spurred a focus on what neural networks learn about natural language with less of a focus on how. Some work has focused on the data used to develop data-driven models, but typically this line of work aims to highlight issues with the data, e.g. highlighting and offsetting harmful biases. This work contributes to the relatively untrodden path of what is required in data for models to capture meaningful representations of natural language. This is entails evaluating how well English and Spanish semantic spaces capture a particular type of relational knowledge, namely the traits associated with concepts (e.g. bananas-yellow), and exploring the role of co-occurrences in this context.",
+    "citation_count": 1,
+    "reference_count": 45,
+    "url": "https://dblp.org/rec/conf/starsem/AndersonC22",
+    "dblp_key": "conf/starsem/AndersonC22",
+    "source_id": "https://openalex.org/W4287855121"
+  },
+  {
+    "title": "Multilingual Extraction and Categorization of Lexical Collocations with Graph-aware Transformers.",
+    "authors": [
+      "Luis Espinosa Anke",
+      "Alexander V. Shvets",
+      "Alireza Mohammadshahi",
+      "James Henderson 0001",
+      "Leo Wanner"
+    ],
+    "venue": "NAACL",
+    "year": 2022,
+    "abstract": "Comunicació presentada a 11th Joint Conference on Lexical and Computational Semantics (SEM 2022), celebrat del 14 al 15 de juliol de 2022 a Seattle, Estats Units.",
+    "citation_count": 5,
+    "reference_count": 59,
+    "url": "https://dblp.org/rec/conf/starsem/AnkeSM0W22",
+    "dblp_key": "conf/starsem/AnkeSM0W22",
+    "source_id": "https://openalex.org/W4287888119"
+  },
+  {
+    "title": "A Generative Approach for Mitigating Structural Biases in Natural Language Inference.",
+    "authors": [
+      "Dimion Asael",
+      "Zachary M. Ziegler",
+      "Yonatan Belinkov"
+    ],
+    "venue": "NAACL",
+    "year": 2022,
+    "abstract": "Many natural language inference (NLI) datasets contain biases that allow models to perform well by only using a biased subset of the input, without considering the remainder features. For instance, models are able to classify samples by only using the hypothesis, without learning the true relationship between it and the premise. These structural biases lead discriminative models to learn unintended superficial features and generalize poorly out of the training distribution. In this work, we reformulate the NLI task as a generative task, where a model is conditioned on the biased subset of the input and the label and generates the remaining subset of the input. We show that by imposing a uniform prior, we obtain a provably unbiased model. Through synthetic experiments, we find that this approach is highly robust to large amounts of bias. We then demonstrate empirically on two types of natural bias that this approach leads to fully unbiased models in practice. However, we find that generative models are difficult to train and generally perform worse than discriminative baselines. We highlight the difficulty of the generative modeling task in the context of NLI as a cause for this worse performance. Finally, by fine-tuning the generative model with a discriminative objective, we reduce the performance gap between the generative model and the discriminative baseline, while allowing for a small amount of bias.",
+    "citation_count": 3,
+    "reference_count": 35,
+    "url": "https://dblp.org/rec/conf/starsem/AsaelZB22",
+    "dblp_key": "conf/starsem/AsaelZB22",
+    "source_id": "https://openalex.org/W3197317199"
+  },
+  {
+    "title": "DeepA2: A Modular Framework for Deep Argument Analysis with Pretrained Neural Text2Text Language Models.",
+    "authors": [
+      "Gregor Betz",
+      "Kyle Richardson 0001"
+    ],
+    "venue": "NAACL",
+    "year": 2022,
+    "abstract": "In this paper, we present and implement a multi-dimensional, modular framework for performing deep argument analysis (DeepA2) using current pre-trained language models (PTLMs). ArgumentAnalyst – a T5 model [Raffel et al. 2020] set up and trained within DeepA2 – reconstructs argumentative texts, which advance an informal argumentation, as valid arguments: It inserts, e.g., missing premises and conclusions, formalizes inferences, and coherently links the logical reconstruction to the source text. We create a synthetic corpus for deep argument analysis, and evaluate ArgumentAnalyst on this new dataset as well as on existing data, specifically EntailmentBank [Dalvi et al. 2021]. Our empirical findings vindicate the overall framework and highlight the advantages of a modular design, in particular its ability to emulate established heuristics (such as hermeneutic cycles), to explore the model’s uncertainty, to cope with the plurality of correct solutions (underdetermination), and to exploit higher-order evidence.",
+    "citation_count": 6,
+    "reference_count": 58,
+    "url": "https://dblp.org/rec/conf/starsem/Betz022",
+    "dblp_key": "conf/starsem/Betz022",
+    "source_id": "https://openalex.org/W3204886703"
+  },
+  {
+    "title": "Improved Induction of Narrative Chains via Cross-Document Relations.",
+    "authors": [
+      "Andrew Blair-Stanek",
+      "Benjamin Van Durme"
+    ],
+    "venue": "NAACL",
+    "year": 2022,
+    "abstract": "The standard approach for inducing narrative chains considers statistics gathered per individual document. We consider whether statistics gathered using cross-document relations can lead to improved chain induction. Our study is motivated by legal narratives, where cases typically cite thematically similar cases. We consider four novel variations on pointwise mutual information (PMI), each accounting for cross-document relations in a different way. One proposed PMI variation performs 58% better relative to standard PMI on recall@50 and induces qualitatively better narrative chains.",
+    "citation_count": 0,
+    "reference_count": 10,
+    "url": "https://dblp.org/rec/conf/starsem/Blair-StanekD22",
+    "dblp_key": "conf/starsem/Blair-StanekD22",
+    "source_id": "https://openalex.org/W4287888688"
+  },
+  {
+    "title": "Speech acts and Communicative Intentions for Urgency Detection.",
+    "authors": [
+      "Enzo Laurenti",
+      "Nils Bourgon",
+      "Farah Benamara",
+      "Alda Mari",
+      "Véronique Moriceau",
+      "Camille Courgeon"
+    ],
+    "venue": "NAACL",
+    "year": 2022,
+    "abstract": "International audience",
+    "citation_count": 2,
+    "reference_count": 33,
+    "url": "https://dblp.org/rec/conf/starsem/EnzoNBMMC22",
+    "dblp_key": "conf/starsem/EnzoNBMMC22",
+    "source_id": "https://openalex.org/W4287890959"
+  },
+  {
+    "title": "&quot;What makes a question inquisitive?&quot; A Study on Type-Controlled Inquisitive Question Generation.",
+    "authors": [
+      "Lingyu Gao 0001",
+      "Debanjan Ghosh",
+      "Kevin Gimpel"
+    ],
+    "venue": "NAACL",
+    "year": 2022,
+    "abstract": "We propose a type-controlled framework for inquisitive question generation. We annotate an inquisitive question dataset with question types, train question type classifiers, and finetune models for type-controlled question generation. Empirical results demonstrate that we can generate a variety of questions that adhere to specific types while drawing from the source texts. We also investigate strategies for selecting a single question from a generated set, considering both an informative vs.~inquisitive question classifier and a pairwise ranker trained from a small set of expert annotations. Question selection using the pairwise ranker yields strong results in automatic and manual evaluation. Our human evaluation assesses multiple aspects of the generated questions, finding that the ranker chooses questions with the best syntax (4.59), semantics (4.37), and inquisitiveness (3.92) on a scale of 1-5, even rivaling the performance of human-written questions.",
+    "citation_count": 3,
+    "reference_count": 0,
+    "url": "https://dblp.org/rec/conf/starsem/GaoGG22",
+    "dblp_key": "conf/starsem/GaoGG22",
+    "source_id": "https://openalex.org/W613164841"
+  },
+  {
+    "title": "Distilling Hypernymy Relations from Language Models: On the Effectiveness of Zero-Shot Taxonomy Induction.",
+    "authors": [
+      "Devansh Jain 0002",
+      "Luis Espinosa Anke"
+    ],
+    "venue": "NAACL",
+    "year": 2022,
+    "abstract": "In this paper, we analyze zero-shot taxonomy learning methods which are based on distilling knowledge from language models via prompting and sentence scoring. We show that, despite their simplicity, these methods outperform some supervised strategies and are competitive with the current state-of-the-art under adequate conditions. We also show that statistical and linguistic properties of prompts dictate downstream performance.",
+    "citation_count": 9,
+    "reference_count": 42,
+    "url": "https://dblp.org/rec/conf/starsem/JainA22",
+    "dblp_key": "conf/starsem/JainA22",
+    "source_id": "https://openalex.org/W4287854596"
+  },
+  {
+    "title": "Measuring Alignment Bias in Neural Seq2seq Semantic Parsers.",
+    "authors": [
+      "Davide Locatelli",
+      "Ariadna Quattoni"
+    ],
+    "venue": "NAACL",
+    "year": 2022,
+    "abstract": "Prior to deep learning the semantic parsing community has been interested in understanding and modeling the range of possible word alignments between natural language sentences and their corresponding meaning representations. Sequence-to-sequence models changed the research landscape suggesting that we no longer need to worry about alignments since they can be learned automatically by means of an attention mechanism. More recently, researchers have started to question such premise. In this work we investigate whether seq2seq models can handle both simple and complex alignments. To answer this question we augment the popular Geo semantic parsing dataset with alignment annotations and create Geo-Aligned. We then study the performance of standard seq2seq models on the examples that can be aligned monotonically versus examples that require more complex alignments. Our empirical study shows that performance is significantly better over monotonic alignments.",
+    "citation_count": 0,
+    "reference_count": 0,
+    "url": "https://dblp.org/rec/conf/starsem/LocatelliQ22",
+    "dblp_key": "conf/starsem/LocatelliQ22",
+    "source_id": "https://openalex.org/W4280552707"
+  },
+  {
+    "title": "Event Causality Identification via Generation of Important Context Words.",
+    "authors": [
+      "Hieu Man",
+      "Minh Nguyen",
+      "Thien Huu Nguyen"
+    ],
+    "venue": "NAACL",
+    "year": 2022,
+    "abstract": "An important problem of Information Extraction involves Event Causality Identification (ECI) that seeks to identify causal relation between pairs of event mentions. Prior models for ECI have mainly solved the problem using the classification framework that does not explore prediction/generation of important context words from input sentences for causal recognition. In this work, we consider the words along the dependency path between the two event mentions in the dependency tree as the important context words for ECI. We introduce dependency path generation as a complementary task for ECI, which can be solved jointly with causal label prediction to improve the performance. To facilitate the multi-task learning, we cast ECI into a generation problem that aims to generate both causal relation and dependency path words from input sentence. In addition, we propose to use the REINFORCE algorithm to train our generative model where novel reward functions are designed to capture both causal prediction accuracy and generation quality. The experiments on two benchmark datasets demonstrate state-of-the-art performance of the proposed model for ECI.",
+    "citation_count": 23,
+    "reference_count": 35,
+    "url": "https://dblp.org/rec/conf/starsem/ManNN22",
+    "dblp_key": "conf/starsem/ManNN22",
+    "source_id": "https://openalex.org/W4287887310"
+  },
+  {
+    "title": "Pretraining on Interactions for Learning Grounded Affordance Representations.",
+    "authors": [
+      "Jack Merullo",
+      "Dylan Ebert",
+      "Carsten Eickhoff",
+      "Ellie Pavlick"
+    ],
+    "venue": "NAACL",
+    "year": 2022,
+    "abstract": "Lexical semantics and cognitive science point to affordances (i.e. the actions that objects support) as critical for understanding and representing nouns and verbs. However, study of these semantic features has not yet been integrated with the ?foundation? models that currently dominate language representation research. We hypothesize that predictive modeling of object state over time will result in representations that encode object affordance information ?for free?. We train a neural network to predict objects? trajectories in a simulated interaction and show that our network?s latent representations differentiate between both observed and unobserved affordances. We find that models trained using 3D simulations outperform conventional 2D computer vision models trained on a similar task, and, on initial inspection, that differences between concepts correspond to expected features (e.g., roll entails rotation) . Our results suggest a way in which modern deep learning approaches to grounded language learning can be integrated with traditional formal semantic notions of lexical representations.",
+    "citation_count": 1,
+    "reference_count": 58,
+    "url": "https://dblp.org/rec/conf/starsem/MerulloEEP22",
+    "dblp_key": "conf/starsem/MerulloEEP22",
+    "source_id": "https://openalex.org/W4284883775"
+  },
+  {
+    "title": "What Drives the Use of Metaphorical Language? Negative Insights from Abstractness, Affect, Discourse Coherence and Contextualized Word Representations.",
+    "authors": [
+      "Prisca Piccirilli",
+      "Sabine Schulte im Walde"
+    ],
+    "venue": "NAACL",
+    "year": 2022,
+    "abstract": "Given a specific discourse, which discourse properties trigger the use of metaphorical language, rather than using literal alternatives? For example, what drives people to say grasp the meaning rather than understand the meaning within a specific context? Many NLP approaches to metaphorical language rely on cognitive and (psycho-)linguistic insights and have successfully defined models of discourse coherence, abstractness and affect. In this work, we build five simple models relying on established cognitive and linguistic properties ? frequency, abstractness, affect, discourse coherence and contextualized word representations ? to predict the use of a metaphorical vs. synonymous literal expression in context. By comparing the models? outputs to human judgments, our study indicates that our selected properties are not sufficient to systematically explain metaphorical vs. literal language choices.",
+    "citation_count": 4,
+    "reference_count": 55,
+    "url": "https://dblp.org/rec/conf/starsem/PiccirilliW22",
+    "dblp_key": "conf/starsem/PiccirilliW22",
+    "source_id": "https://openalex.org/W4287855014"
+  },
+  {
+    "title": "PropBank Comes of Age - Larger, Smarter, and more Diverse.",
+    "authors": [
+      "Sameer Pradhan",
+      "Julia Bonn",
+      "Skatje Myers",
+      "Kathryn Conger",
+      "Tim O&apos;Gorman",
+      "James Gung",
+      "Kristin Wright-Bettner",
+      "Martha Palmer"
+    ],
+    "venue": "NAACL",
+    "year": 2022,
+    "abstract": "Sameer Pradhan, Julia Bonn, Skatje Myers, Kathryn Conger, Tim O'gorman, James Gung, Kristin Wright-bettner, Martha Palmer. Proceedings of the 11th Joint Conference on Lexical and Computational Semantics. 2022.",
+    "citation_count": 17,
+    "reference_count": 38,
+    "url": "https://dblp.org/rec/conf/starsem/PradhanBMCOGWP22",
+    "dblp_key": "conf/starsem/PradhanBMCOGWP22",
+    "source_id": "https://openalex.org/W4287888121"
+  },
+  {
+    "title": "Capturing the Content of a Document through Complex Event Identification.",
+    "authors": [
+      "Zheng Qi",
+      "Elior Sulem",
+      "Haoyu Wang 0005",
+      "Xiaodong Yu 0003",
+      "Dan Roth 0001"
+    ],
+    "venue": "NAACL",
+    "year": 2022,
+    "abstract": "Granular events, instantiated in a document by predicates, can usually be grouped into more general events, called complex events. Together, they capture the major content of the document. Recent work grouped granular events by defining event regions, filtering out sentences that are irrelevant to the main content. However, this approach assumes that a given complex event is always described in consecutive sentences, which does not always hold in practice. In this paper, we introduce the task of complex event identification. We address this task as a pipeline, first predicting whether two granular events mentioned in the text belong to the same complex event, independently of their position in the text, and then using this to cluster them into complex events. Due to the difficulty of predicting whether two granular events belong to the same complex event in isolation, we propose a context-augmented representation learning approach CONTEXTRL that adds additional context to better model the pairwise relation between granular events. We show that our approach outperforms strong baselines on the complex event identification task and further present a promising case study exploring the effectiveness of using complex events as input for document-level argument extraction.",
+    "citation_count": 2,
+    "reference_count": 22,
+    "url": "https://dblp.org/rec/conf/starsem/QiSWYR22",
+    "dblp_key": "conf/starsem/QiSWYR22",
+    "source_id": "https://openalex.org/W4287854363"
+  },
+  {
+    "title": "AnaLog: Testing Analytical and Deductive Logic Learnability in Language Models.",
+    "authors": [
+      "Samuel Ryb",
+      "Mario Giulianelli",
+      "Arabella Sinclair",
+      "Raquel Fernández"
+    ],
+    "venue": "NAACL",
+    "year": 2022,
+    "abstract": "We investigate the extent to which pre-trained language models acquire analytical and deductive logical reasoning capabilities as a side effect of learning word prediction. We present AnaLog, a natural language inference task designed to probe models for these capabilities, controlling for different invalid heuristics the models may adopt instead of learning the desired generalisations. We test four languagemodels on AnaLog, finding that they have all learned, to a different extent, to encode information that is predictive of entailment beyond shallow heuristics such as lexical overlap and grammaticality. We closely analyse the best performing language model and show that while it performs more consistently than other language models across logical connectives and reasoning domains, it still is sensitive to lexical and syntactic variations in the realisation of logical statements.",
+    "citation_count": 1,
+    "reference_count": 54,
+    "url": "https://dblp.org/rec/conf/starsem/RybGSF22",
+    "dblp_key": "conf/starsem/RybGSF22",
+    "source_id": "https://openalex.org/W4287888090"
+  },
+  {
+    "title": "What do Large Language Models Learn about Scripts?",
+    "authors": [
+      "Abhilasha Sancheti",
+      "Rachel Rudinger"
+    ],
+    "venue": "NAACL",
+    "year": 2022,
+    "abstract": "Multilayer neural networks trained with the back-propagation algorithm constitute the best example of a successful gradient based learning technique. Given an appropriate network architecture, gradient-based learning algorithms can be used to synthesize a complex decision surface that can classify high-dimensional patterns, such as handwritten characters, with minimal preprocessing. This paper reviews various methods applied to handwritten character recognition and compares them on a standard handwritten digit recognition task. Convolutional neural networks, which are specifically designed to deal with the variability of 2D shapes, are shown to outperform all other techniques. Real-life document recognition systems are composed of multiple modules including field extraction, segmentation recognition, and language modeling. A new learning paradigm, called graph transformer networks (GTN), allows such multimodule systems to be trained globally using gradient-based methods so as to minimize an overall performance measure. Two systems for online handwriting recognition are described. Experiments demonstrate the advantage of global training, and the flexibility of graph transformer networks. A graph transformer network for reading a bank cheque is also described. It uses convolutional neural network character recognizers combined with global training techniques to provide record accuracy on business and personal cheques. It is deployed commercially and reads several million cheques per day.",
+    "citation_count": 55694,
+    "reference_count": 135,
+    "url": "https://dblp.org/rec/conf/starsem/SanchetiR22",
+    "dblp_key": "conf/starsem/SanchetiR22",
+    "source_id": "https://openalex.org/W2112796928"
+  },
+  {
+    "title": "DRS Parsing as Sequence Labeling.",
+    "authors": [
+      "Minxing Shen",
+      "Kilian Evang"
+    ],
+    "venue": "NAACL",
+    "year": 2022,
+    "abstract": "We present the first fully trainable semantic parser for English, German, Italian, and Dutch discourse representation structures (DRSs) that is competitive in accuracy with recent sequence-to-sequence models and at the same time {emph{compositional} in the sense that the output maps each token to one of a finite set of meaning {emph{fragments}, and the meaning of the utterance is a function of the meanings of its parts. We argue that this property makes the system more transparent and more useful for human-in-the-loop annotation. We achieve this simply by casting DRS parsing as a sequence labeling task, where tokens are labeled with both fragments (lists of abstracted clauses with relative referent indices indicating unification) and {emph{symbols} like word senses or names. We give a comprehensive error analysis that highlights areas for future work.",
+    "citation_count": 1,
+    "reference_count": 23,
+    "url": "https://dblp.org/rec/conf/starsem/ShenE22",
+    "dblp_key": "conf/starsem/ShenE22",
+    "source_id": "https://openalex.org/W4287854698"
+  },
+  {
+    "title": "Semantics-aware Attention Improves Neural Machine Translation.",
+    "authors": [
+      "Aviv Slobodkin",
+      "Leshem Choshen",
+      "Omri Abend"
+    ],
+    "venue": "NAACL",
+    "year": 2022,
+    "abstract": "The integration of syntactic structures into Transformer machine translation\\nhas shown positive results, but to our knowledge, no work has attempted to do\\nso with semantic structures. In this work we propose two novel parameter-free\\nmethods for injecting semantic information into Transformers, both rely on\\nsemantics-aware masking of (some of) the attention heads. One such method\\noperates on the encoder, through a Scene-Aware Self-Attention (SASA) head.\\nAnother on the decoder, through a Scene-Aware Cross-Attention (SACrA) head. We\\nshow a consistent improvement over the vanilla Transformer and syntax-aware\\nmodels for four language pairs. We further show an additional gain when using\\nboth semantic and syntactic structures in some language pairs.\\n",
+    "citation_count": 9,
+    "reference_count": 43,
+    "url": "https://dblp.org/rec/conf/starsem/SlobodkinCA22",
+    "dblp_key": "conf/starsem/SlobodkinCA22",
+    "source_id": "https://openalex.org/W3205374364"
+  },
+  {
+    "title": "When Polysemy Matters: Modeling Semantic Categorization with Word Embeddings.",
+    "authors": [
+      "Elizabeth Soper",
+      "Jean-Pierre Koenig"
+    ],
+    "venue": "NAACL",
+    "year": 2022,
+    "abstract": "Recent work using word embeddings to model semantic categorization have indicated that static models outperform the more recent contextual class of models (Majewska et al, 2021). In this paper, we consider polysemy as a possible confounding factor, comparing sense-level embeddings with previously studied static embeddings on both coarse- and fine-grained categorization tasks. We find that the effect of polysemy depends on how one defines semantic categorization; while sense-level embeddings dramatically outperform static embeddings in predicting coarse-grained categories derived from a word sorting task, they perform approximately equally in predicting fine-grained categories derived from context-free similarity judgments. Our findings highlight the different processes underlying human behavior on different types of semantic tasks.",
+    "citation_count": 0,
+    "reference_count": 25,
+    "url": "https://dblp.org/rec/conf/starsem/SoperK22",
+    "dblp_key": "conf/starsem/SoperK22",
+    "source_id": "https://openalex.org/W4287888645"
+  },
+  {
+    "title": "A Simple Unsupervised Approach for Coreference Resolution using Rule-based Weak Supervision.",
+    "authors": [
+      "Alessandro Stolfo",
+      "Chris Tanner",
+      "Vikram Gupta",
+      "Mrinmaya Sachan"
+    ],
+    "venue": "NAACL",
+    "year": 2022,
+    "abstract": "Labeled data for the task of Coreference Resolution is a scarce resource, requiring significant human effort. While state-of-the-art coreference models rely on such data, we propose an approach that leverages an end-to-end neural model in settings where labeled data is unavailable. Specifically, using weak supervision, we transfer the linguistic knowledge encoded by Stanford?s rule-based coreference system to the end-to-end model, which jointly learns rich, contextualized span representations and coreference chains. Our experiments on the English OntoNotes corpus demonstrate that our approach effectively benefits from the noisy coreference supervision, producing an improvement over Stanford?s rule-based system (+3.7 F1) and outperforming the previous best unsupervised model (+0.9 F1). Additionally, we validate the efficacy of our method on two other datasets: PreCo and Litbank (+2.5 and +5 F1 on Stanford's system, respectively).",
+    "citation_count": 6,
+    "reference_count": 0,
+    "url": "https://dblp.org/rec/conf/starsem/StolfoTGS22",
+    "dblp_key": "conf/starsem/StolfoTGS22",
+    "source_id": "https://openalex.org/W4287854994"
+  },
+  {
+    "title": "Leveraging Three Types of Embeddings from Masked Language Models in Idiom Token Classification.",
+    "authors": [
+      "Ryosuke Takahashi",
+      "Ryohei Sasano",
+      "Koichi Takeda 0003"
+    ],
+    "venue": "NAACL",
+    "year": 2022,
+    "abstract": "Many linguistic expressions have idiomatic and literal interpretations, and the automatic distinction of these two interpretations has been studied for decades. Recent research has shown that contextualized word embeddings derived from masked language models (MLMs) can give promising results for idiom token classification. This indicates that contextualized word embedding alone contains information about whether the word is being used in a literal sense or not. However, we believe that more types of information can be derived from MLMs and that leveraging such information can improve idiom token classification. In this paper, we leverage three types of embeddings from MLMs; uncontextualized token embeddings and masked token embeddings in addition to the standard contextualized word embeddings and show that the newly added embeddings significantly improve idiom token classification for both English and Japanese datasets.",
+    "citation_count": 1,
+    "reference_count": 19,
+    "url": "https://dblp.org/rec/conf/starsem/TakahashiS022",
+    "dblp_key": "conf/starsem/TakahashiS022",
+    "source_id": "https://openalex.org/W4287891466"
+  },
+  {
+    "title": "How Does Data Corruption Affect Natural Language Understanding Models? A Study on GLUE datasets.",
+    "authors": [
+      "Aarne Talman",
+      "Marianna Apidianaki",
+      "Stergios Chatzikyriakidis",
+      "Jörg Tiedemann"
+    ],
+    "venue": "NAACL",
+    "year": 2022,
+    "abstract": "A central question in natural language understanding (NLU) research is whether high performance demonstrates the models’ strong reasoning capabilities. We present an extensive series of controlled experiments where pre-trained language models are exposed to data that have undergone specific corruption transformations. These involve removing instances of specific word classes and often lead to non-sensical sentences. Our results show that performance remains high on most GLUE tasks when the models are fine-tuned or tested on corrupted data, suggesting that they leverage other cues for prediction even in non-sensical contexts. Our proposed data transformations can be used to assess the extent to which a specific dataset constitutes a proper testbed for evaluating models’ language understanding capabilities.",
+    "citation_count": 2,
+    "reference_count": 38,
+    "url": "https://dblp.org/rec/conf/starsem/TalmanACT22",
+    "dblp_key": "conf/starsem/TalmanACT22",
+    "source_id": "https://openalex.org/W4287887761"
+  },
+  {
+    "title": "Dyna-bAbI: unlocking bAbI&apos;s potential with dynamic synthetic benchmarking.",
+    "authors": [
+      "Ronen Tamari",
+      "Kyle Richardson 0001",
+      "Noam Kahlon",
+      "Aviad Sar-Shalom",
+      "Nelson F. Liu",
+      "Reut Tsarfaty",
+      "Dafna Shahaf"
+    ],
+    "venue": "NAACL",
+    "year": 2022,
+    "abstract": null,
+    "citation_count": null,
+    "reference_count": null,
+    "url": "https://dblp.org/rec/conf/starsem/Tamari0KSLTS22",
+    "dblp_key": "conf/starsem/Tamari0KSLTS22",
+    "source_id": null
+  },
+  {
+    "title": "Comparison and Combination of Sentence Embeddings Derived from Different Supervision Signals.",
+    "authors": [
+      "Hayato Tsukagoshi",
+      "Ryohei Sasano",
+      "Koichi Takeda 0003"
+    ],
+    "venue": "NAACL",
+    "year": 2022,
+    "abstract": "There have been many successful applications of sentence embedding methods.However, it has not been well understood what properties are captured in the resulting sentence embeddings depending on the supervision signals.In this paper, we focus on two types of sentence embedding methods with similar architectures and tasks: one fine-tunes pre-trained language models on the natural language inference task, and the other fine-tunes pre-trained language models on word prediction task from its definition sentence, and investigate their properties.Specifically, we compare their performances on semantic textual similarity (STS) tasks using STS datasets partitioned from two perspectives: 1) sentence source and 2) superficial similarity of the sentence pairs, and compare their performances on the downstream and probing tasks.Furthermore, we attempt to combine the two methods and demonstrate that combining the two methods yields substantially better performance than the respective methods on unsupervised STS tasks and downstream tasks.",
+    "citation_count": 8,
+    "reference_count": 28,
+    "url": "https://dblp.org/rec/conf/starsem/TsukagoshiS022",
+    "dblp_key": "conf/starsem/TsukagoshiS022",
+    "source_id": "https://openalex.org/W4225793084"
+  },
+  {
+    "title": "Word-Label Alignment for Event Detection: A New Perspective via Optimal Transport.",
+    "authors": [
+      "Amir Pouran Ben Veyseh",
+      "Thien Huu Nguyen"
+    ],
+    "venue": "NAACL",
+    "year": 2022,
+    "abstract": "Event Detection (ED) aims to identify mentions/triggers of real world events in text. In the literature, this task is modeled as a sequence-labeling or word-prediction problem. In this work, we present a novel formulation in which ED is modeled as a word-label alignment task. In particular, given the words in a sentence and possible event types, the objective is to infer an alignment matrix in which event trigger words are aligned with the most likely event types. Moreover, we show that this new perspective facilitates the incorporation of word-label alignment biases to improve alignment matrix for ED. Novel alignment biases and Optimal Transport are introduced to solve our alignment problem for ED. We conduct experiments on a benchmark dataset to demonstrate the effectiveness of the proposed model for ED.",
+    "citation_count": 4,
+    "reference_count": 30,
+    "url": "https://dblp.org/rec/conf/starsem/VeysehN22",
+    "dblp_key": "conf/starsem/VeysehN22",
+    "source_id": "https://openalex.org/W4287888435"
+  },
+  {
+    "title": "Compositional generalization with a broad-coverage semantic parser.",
+    "authors": [
+      "Pia Weißenhorn",
+      "Lucia Donatelli",
+      "Alexander Koller"
+    ],
+    "venue": "NAACL",
+    "year": 2022,
+    "abstract": "We show how the AM parser, a compositional semantic parser (Groschwitz et al., 2018) can solve compositional generalization on the COGS dataset. It is the first semantic parser that achieves high accuracy on both naturally occurring language and the synthetic COGS dataset. We discuss implications for corpus and model design for learning human-like generalization. Our results suggest that compositional generalization can be best achieved by building compositionality into semantic parsers.",
+    "citation_count": 12,
+    "reference_count": 26,
+    "url": "https://dblp.org/rec/conf/starsem/WeissenhornDK22",
+    "dblp_key": "conf/starsem/WeissenhornDK22",
+    "source_id": "https://openalex.org/W4287887794"
+  },
+  {
+    "title": "Unsupervised Reinforcement Adaptation for Class-Imbalanced Text Classification.",
+    "authors": [
+      "Yuexin Wu",
+      "Xiaolei Huang 0002"
+    ],
+    "venue": "NAACL",
+    "year": 2022,
+    "abstract": "Class imbalance naturally exists when label distributions are not aligned across source and target domains. However, existing state-of-the-art UDA models learn domain-invariant representations across domains and evaluate primarily on class-balanced data. In this work, we propose an unsupervised domain adaptation approach via reinforcement learning that jointly leverages feature variants and imbalanced labels across domains. We experiment with the text classification task for its easily accessible datasets and compare the proposed method with five baselines. Experiments on three datasets prove that our proposed method can effectively learn robust domain-invariant representations and successfully adapt text classifiers on imbalanced classes over domains.",
+    "citation_count": 2,
+    "reference_count": 39,
+    "url": "https://dblp.org/rec/conf/starsem/WuH22",
+    "dblp_key": "conf/starsem/WuH22",
+    "source_id": "https://openalex.org/W4281703341"
+  },
+  {
+    "title": "Online Coreference Resolution for Dialogue Processing: Improving Mention-Linking on Real-Time Conversations.",
+    "authors": [
+      "Liyan Xu",
+      "Jinho D. Choi"
+    ],
+    "venue": "NAACL",
+    "year": 2022,
+    "abstract": "This paper suggests a direction of coreference resolution for online decoding on actively generated input such as dialogue, where the model accepts an utterance and its past context, then finds mentions in the current utterance as well as their referents, upon each dialogue turn. A baseline and four incremental updated models adapted from the mention linking paradigm are proposed for this new setting, which address different aspects including the singletons, speaker-grounded encoding and cross-turn mention contextualization. Our approach is assessed on three datasets: Friends, OntoNotes, and BOLT. Results show that each aspect brings out steady improvement, and our best models outperform the baseline by over 10%, presenting an effective system for this setting. Further analysis highlights the task characteristics, such as the significance of addressing the mention recall.",
+    "citation_count": 1,
+    "reference_count": 24,
+    "url": "https://dblp.org/rec/conf/starsem/XuC22",
+    "dblp_key": "conf/starsem/XuC22",
+    "source_id": "https://openalex.org/W4281480316"
+  },
+  {
+    "title": "Pairwise Representation Learning for Event Coreference.",
+    "authors": [
+      "Xiaodong Yu 0003",
+      "Wenpeng Yin 0001",
+      "Dan Roth 0001"
+    ],
+    "venue": "NAACL",
+    "year": 2022,
+    "abstract": "Natural Language Processing tasks such as resolving the coreference of events require understanding the relations between two text snippets. These tasks are typically formulated as (binary) classification problems over independently induced representations of the text snippets. In this work, we develop a Pairwise Representation Learning (PairwiseRL) scheme for the event mention pairs, in which we jointly encode a pair of text snippets so that the representation of each mention in the pair is induced in the context of the other one. Furthermore, our representation supports a finer, structured representation of the text snippet to facilitate encoding events and their arguments. We show that PairwiseRL, despite its simplicity, outperforms the prior state-of-the-art event coreference systems on both cross-document and within-document event coreference benchmarks. We also conduct in-depth analysis in terms of the improvement and the limitation of pairwise representation so as to provide insights for future work.",
+    "citation_count": 10,
+    "reference_count": 24,
+    "url": "https://dblp.org/rec/conf/starsem/Yu0R22",
+    "dblp_key": "conf/starsem/Yu0R22",
+    "source_id": "https://openalex.org/W4287891013"
+  },
+  {
+    "title": "A Dynamic, Interpreted CheckList for Meaning-oriented NLG Metric Evaluation - through the Lens of Semantic Similarity Rating.",
+    "authors": [
+      "Laura Zeidler",
+      "Juri Opitz",
+      "Anette Frank"
+    ],
+    "venue": "NAACL",
+    "year": 2022,
+    "abstract": "Evaluating the quality of generated text is difficult, since traditional NLG evaluation metrics, focusing more on surface form than meaning, often fail to assign appropriate scores.This is especially problematic for AMR-to-text evaluation, given the abstract nature of AMR.Our work aims to support the development and improvement of NLG evaluation metrics that focus on meaning by developing a dynamic CheckList for NLG metrics that is interpreted by being organized around meaning-relevant linguistic phenomena. Each test instance consists of a pair of sentences with their AMR graphs and a human-produced textual semantic similarity or relatedness score. Our CheckList facilitates comparative evaluation of metrics and reveals strengths and weaknesses of novel and traditional metrics. We demonstrate the usefulness of CheckList by designing a new metric GraCo that computes lexical cohesion graphs over AMR concepts. Our analysis suggests that GraCo presents an interesting NLG metric worth future investigation and that meaning-oriented NLG metrics can profit from graph-based metric components using AMR.",
+    "citation_count": 1,
+    "reference_count": 38,
+    "url": "https://dblp.org/rec/conf/starsem/ZeidlerOF22",
+    "dblp_key": "conf/starsem/ZeidlerOF22",
+    "source_id": "https://openalex.org/W4287888320"
+  }
+]

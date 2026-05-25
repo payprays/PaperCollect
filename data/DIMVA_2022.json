@@ -1,0 +1,210 @@
+[
+  {
+    "title": "A Human in Every APE: Delineating and Evaluating the Human Analysis Systems of Anti-Phishing Entities.",
+    "authors": [
+      "Bhupendra Acharya",
+      "Phani Vadrevu"
+    ],
+    "venue": "DIMVA",
+    "year": 2022,
+    "abstract": null,
+    "citation_count": 3,
+    "reference_count": 11,
+    "url": "https://dblp.org/rec/conf/dimva/AcharyaV22",
+    "dblp_key": "conf/dimva/AcharyaV22",
+    "source_id": "https://openalex.org/W4285292071"
+  },
+  {
+    "title": "MPKAlloc: Efficient Heap Meta-data Integrity Through Hardware Memory Protection Keys.",
+    "authors": [
+      "William Blair",
+      "William K. Robertson",
+      "Manuel Egele"
+    ],
+    "venue": "DIMVA",
+    "year": 2022,
+    "abstract": null,
+    "citation_count": 2,
+    "reference_count": 16,
+    "url": "https://dblp.org/rec/conf/dimva/BlairRE22",
+    "dblp_key": "conf/dimva/BlairRE22",
+    "source_id": "https://openalex.org/W4285127171"
+  },
+  {
+    "title": "Hybrid Pruning: Towards Precise Pointer and Taint Analysis.",
+    "authors": [
+      "Dipanjan Das 0002",
+      "Priyanka Bose",
+      "Aravind Machiry",
+      "Sebastiano Mariani",
+      "Yan Shoshitaishvili",
+      "Giovanni Vigna",
+      "Christopher Kruegel"
+    ],
+    "venue": "DIMVA",
+    "year": 2022,
+    "abstract": null,
+    "citation_count": 2,
+    "reference_count": 33,
+    "url": "https://dblp.org/rec/conf/dimva/DasBMMSVK22",
+    "dblp_key": "conf/dimva/DasBMMSVK22",
+    "source_id": "https://openalex.org/W4285246745"
+  },
+  {
+    "title": "Establishing the Contaminating Effect of Metadata Feature Inclusion in Machine-Learned Network Intrusion Detection Models.",
+    "authors": [
+      "Laurens D&apos;hooge",
+      "Miel Verkerken",
+      "Bruno Volckaert",
+      "Tim Wauters",
+      "Filip De Turck"
+    ],
+    "venue": "DIMVA",
+    "year": 2022,
+    "abstract": null,
+    "citation_count": 22,
+    "reference_count": 39,
+    "url": "https://dblp.org/rec/conf/dimva/DhoogeVVWT22",
+    "dblp_key": "conf/dimva/DhoogeVVWT22",
+    "source_id": "https://openalex.org/W4285145603"
+  },
+  {
+    "title": "Branch Different - Spectre Attacks on Apple Silicon.",
+    "authors": [
+      "Lorenz Hetterich",
+      "Michael Schwarz 0001"
+    ],
+    "venue": "DIMVA",
+    "year": 2022,
+    "abstract": ". Since the disclosure of Spectre, extensive research has been conducted on both new attacks, attack variants, and mitigations. However, most research focuses on x86 CPUs, with only very few insights on ARM CPUs, despite their huge market share. In this paper, we focus on the ARMv8-based Apple CPUs and demonstrate a reliable Spectre attack. For this, we solve several challenges specific to Apple CPUs and their operating system. We systematically evaluate alternative high-resolution timing primitives, as timers used for microarchitectural attacks on other ARM CPUs are unavailable. As cache-maintenance instructions are ineffective, we demonstrate a reliable eviction-set generation from an unprivileged application. Based on these building blocks, we demonstrate a fast Evict+Reload cross-core covert channel, and a Spectre-PHT attack leaking more than 1500 B / s on an iPhone. Without mitigations for all Spectre variants and the rising market share of ARM CPUs, more research on ARM CPUs is required.",
+    "citation_count": 12,
+    "reference_count": 19,
+    "url": "https://dblp.org/rec/conf/dimva/HetterichS22",
+    "dblp_key": "conf/dimva/HetterichS22",
+    "source_id": "https://openalex.org/W4285236231"
+  },
+  {
+    "title": "Amplification Chamber: Dissecting the Attack Infrastructure of Memcached DRDoS Attacks.",
+    "authors": [
+      "Mizuki Kondo",
+      "Rui Tanabe",
+      "Natsuo Shintani",
+      "Daisuke Makita",
+      "Katsunari Yoshioka",
+      "Tsutomu Matsumoto"
+    ],
+    "venue": "DIMVA",
+    "year": 2022,
+    "abstract": null,
+    "citation_count": 1,
+    "reference_count": 15,
+    "url": "https://dblp.org/rec/conf/dimva/KondoTSMYM22",
+    "dblp_key": "conf/dimva/KondoTSMYM22",
+    "source_id": "https://openalex.org/W4285251642"
+  },
+  {
+    "title": "Consistency is All I Ask: Attacks and Countermeasures on the Network Context of Distributed Honeypots.",
+    "authors": [
+      "Songsong Liu",
+      "Pengbin Feng",
+      "Jiahao Cao 0001",
+      "Xu He",
+      "Tommy Chin",
+      "Kun Sun 0001",
+      "Qi Li 0002"
+    ],
+    "venue": "DIMVA",
+    "year": 2022,
+    "abstract": null,
+    "citation_count": 1,
+    "reference_count": 24,
+    "url": "https://dblp.org/rec/conf/dimva/LiuFCHCSL22",
+    "dblp_key": "conf/dimva/LiuFCHCSL22",
+    "source_id": "https://openalex.org/W4285240522"
+  },
+  {
+    "title": "Extended Abstract: Effective Call Graph Fingerprinting for the Analysis and Classification of Windows Malware.",
+    "authors": [
+      "Francesco Meloni",
+      "Alessandro Sanna",
+      "Davide Maiorca",
+      "Giorgio Giacinto"
+    ],
+    "venue": "DIMVA",
+    "year": 2022,
+    "abstract": null,
+    "citation_count": 0,
+    "reference_count": 16,
+    "url": "https://dblp.org/rec/conf/dimva/MeloniSMG22",
+    "dblp_key": "conf/dimva/MeloniSMG22",
+    "source_id": "https://openalex.org/W4285255975"
+  },
+  {
+    "title": "Prioritizing Antivirus Alerts on Internal Enterprise Machines.",
+    "authors": [
+      "Shay Sakazi",
+      "Yuval Elovici",
+      "Asaf Shabtai"
+    ],
+    "venue": "DIMVA",
+    "year": 2022,
+    "abstract": null,
+    "citation_count": 1,
+    "reference_count": 30,
+    "url": "https://dblp.org/rec/conf/dimva/SakaziES22",
+    "dblp_key": "conf/dimva/SakaziES22",
+    "source_id": "https://openalex.org/W4285278651"
+  },
+  {
+    "title": "VANDALIR: Vulnerability Analyses Based on Datalog and LLVM-IR.",
+    "authors": [
+      "Joschua Schilling",
+      "Tilo Müller"
+    ],
+    "venue": "DIMVA",
+    "year": 2022,
+    "abstract": null,
+    "citation_count": 3,
+    "reference_count": 19,
+    "url": "https://dblp.org/rec/conf/dimva/SchillingM22",
+    "dblp_key": "conf/dimva/SchillingM22",
+    "source_id": "https://openalex.org/W4285134373"
+  },
+  {
+    "title": "COBRA-GCN: Contrastive Learning to Optimize Binary Representation Analysis with Graph Convolutional Networks.",
+    "authors": [
+      "Michael Wang",
+      "Alex Interrante-Grant",
+      "Ryan Whelan",
+      "Tim Leek"
+    ],
+    "venue": "DIMVA",
+    "year": 2022,
+    "abstract": null,
+    "citation_count": 1,
+    "reference_count": 26,
+    "url": "https://dblp.org/rec/conf/dimva/WangIWL22",
+    "dblp_key": "conf/dimva/WangIWL22",
+    "source_id": "https://openalex.org/W4285235199"
+  },
+  {
+    "title": "Detection of Intrusions and Malware, and Vulnerability Assessment - 19th International Conference, DIMVA 2022, Cagliari, Italy, June 29 - July 1, 2022, Proceedings",
+    "authors": [
+      "Lorenzo Cavallaro",
+      "Daniel Gruss",
+      "Giancarlo Pellegrino",
+      "Giorgio Giacinto"
+    ],
+    "venue": [
+      "DIMVA",
+      "Lecture Notes in Computer Science"
+    ],
+    "year": 2022,
+    "abstract": "Explainable Artificial Intelligence (XAI) aims to improve the transparency of machine learning (ML) pipelines. We systematize the increasingly growing (but fragmented) microcosm of studies that develop and utilize XAI methods for defensive and offensive cybersecurity tasks. We identify 3 cybersecurity stakeholders, i.e., model users, designers, and adversaries, who utilize XAI for 4 distinct objectives within an ML pipeline, namely 1) XAI-enabled user assistance, 2) XAI-enabled model verification, 3) explanation verification &amp;amp; robustness, and 4) offensive use of explanations. Our analysis of the literature indicates that many of the XAI applications are designed with little understanding of how they might be integrated into analyst workflows – user studies for explanation evaluation are conducted in only 14% of the cases. The security literature sometimes also fails to disentangle the role of the various stakeholders, e.g., by providing explanations to model users and designers while also exposing them to adversaries. Additionally, the role of model designers is particularly minimized in the security literature. To this end, we present an illustrative tutorial for model designers, demonstrating how XAI can help with model verification. We also discuss scenarios where interpretability by design may be a better alternative. The systematization and the tutorial enable us to challenge several assumptions, and present open problems that can help shape the future of XAI research within cybersecurity.",
+    "citation_count": 42,
+    "reference_count": 157,
+    "url": "https://dblp.org/rec/conf/dimva/2022",
+    "dblp_key": "conf/dimva/2022",
+    "source_id": "https://openalex.org/W4385412351"
+  }
+]

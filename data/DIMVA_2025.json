@@ -1,0 +1,654 @@
+[
+  {
+    "title": "Poster: Extracting Cryptographic Keys from Windows Live Processes.",
+    "authors": [
+      "León Abascal",
+      "Ricardo J. Rodríguez"
+    ],
+    "venue": "DIMVA",
+    "year": 2025,
+    "abstract": null,
+    "citation_count": 0,
+    "reference_count": 8,
+    "url": "https://dblp.org/rec/conf/dimva/AbascalR25",
+    "dblp_key": "conf/dimva/AbascalR25",
+    "source_id": "https://openalex.org/W4412176548"
+  },
+  {
+    "title": "Overlapping Data in Network Protocols: Bridging OS and NIDS Reassembly Gap.",
+    "authors": [
+      "Lucas Aubard",
+      "Johan Mazel",
+      "Gilles Guette",
+      "Pierre Chifflier"
+    ],
+    "venue": "DIMVA",
+    "year": 2025,
+    "abstract": "IPv4, IPv6, and TCP have a common mechanism allowing one to split an original data packet into several chunks. Such chunked packets may have overlapping data portions and, OS network stack implementations may reassemble these overlaps differently. A Network Intrusion Detection System (NIDS) that tries to reassemble a given flow data has to use the same reassembly policy as the monitored host OS; otherwise, the NIDS or the host may be subject to attack. In this paper, we provide several contributions that enable us to analyze NIDS resistance to overlapping data chunks-based attacks. First, we extend state-of-the-art insertion and evasion attack characterizations to address their limitations in an overlap-based context. Second, we propose a new way to model overlap types using Allen's interval algebra, a spatio-temporal reasoning. This new modeling allows us to formalize overlap test cases, which ensures exhaustiveness in overlap coverage and eases the reasoning about and use of reassembly policies. Third, we analyze the reassembly behavior of several OSes and NIDSes when processing the modeled overlap test cases. We show that 1) OS reassembly policies evolve over time and 2) all the tested NIDSes are (still) vulnerable to overlap-based evasion and insertion attacks.",
+    "citation_count": 0,
+    "reference_count": 19,
+    "url": "https://dblp.org/rec/conf/dimva/AubardMGC25",
+    "dblp_key": "conf/dimva/AubardMGC25",
+    "source_id": "https://openalex.org/W4412176800"
+  },
+  {
+    "title": "Sourcerer: Channeling the void.",
+    "authors": [
+      "Nicolas Badoux",
+      "Flavio Toffalini",
+      "Mathias Payer"
+    ],
+    "venue": "DIMVA",
+    "year": 2025,
+    "abstract": null,
+    "citation_count": 0,
+    "reference_count": 13,
+    "url": "https://dblp.org/rec/conf/dimva/BadouxTP25",
+    "dblp_key": "conf/dimva/BadouxTP25",
+    "source_id": "https://openalex.org/W4412176464"
+  },
+  {
+    "title": "Exploring the Potential of LLMs for Code Deobfuscation.",
+    "authors": [
+      "David Beste",
+      "Grégoire Menguy",
+      "Hossein Hajipour",
+      "Mario Fritz",
+      "Antonio Emanuele Cinà",
+      "Sébastien Bardin",
+      "Thorsten Holz",
+      "Thorsten Eisenhofer",
+      "Lea Schönherr"
+    ],
+    "venue": "DIMVA",
+    "year": 2025,
+    "abstract": null,
+    "citation_count": 1,
+    "reference_count": 33,
+    "url": "https://dblp.org/rec/conf/dimva/BesteMHFCBHES25",
+    "dblp_key": "conf/dimva/BesteMHFCBHES25",
+    "source_id": "https://openalex.org/W4412153861"
+  },
+  {
+    "title": "Poster: Building Confidence in Hardware-Based Ransomware Detection Through Hardware Performance Counter Event Correlation.",
+    "authors": [
+      "Ryan Binder",
+      "Joshua Byun",
+      "Dane Brown",
+      "T. Owens Walker",
+      "Jennie Hill"
+    ],
+    "venue": "DIMVA",
+    "year": 2025,
+    "abstract": null,
+    "citation_count": 0,
+    "reference_count": 12,
+    "url": "https://dblp.org/rec/conf/dimva/BinderBBWH25",
+    "dblp_key": "conf/dimva/BinderBBWH25",
+    "source_id": "https://openalex.org/W4412176879"
+  },
+  {
+    "title": "Linux Hurt Itself in Its Confusion! Exploiting Out-of-Memory Killer for Confusion Attacks via Heuristic Manipulation.",
+    "authors": [
+      "Lorenzo Bossi",
+      "Daniele Mammone",
+      "Michele Carminati",
+      "Stefano Zanero",
+      "Stefano Longari"
+    ],
+    "venue": "DIMVA",
+    "year": 2025,
+    "abstract": null,
+    "citation_count": 0,
+    "reference_count": 12,
+    "url": "https://dblp.org/rec/conf/dimva/BossiMCZL25",
+    "dblp_key": "conf/dimva/BossiMCZL25",
+    "source_id": "https://openalex.org/W4412176787"
+  },
+  {
+    "title": "Poster: All Right Then, (Don&apos;t) Keep Your Secrets: Exposing API Hashing in Malware.",
+    "authors": [
+      "Nicola Bottura",
+      "Giorgia Di Pietro",
+      "Yuya Yamada",
+      "Daniele Cono D&apos;Elia",
+      "Leonardo Querzoni"
+    ],
+    "venue": "DIMVA",
+    "year": 2025,
+    "abstract": null,
+    "citation_count": null,
+    "reference_count": null,
+    "url": "https://dblp.org/rec/conf/dimva/BotturaPYDQ25",
+    "dblp_key": "conf/dimva/BotturaPYDQ25",
+    "source_id": null
+  },
+  {
+    "title": "Poster: On the Usage of Kernel Shadow Stacks for User-Level Programs.",
+    "authors": [
+      "Marco Calavaro",
+      "Pasquale Caporaso",
+      "Luca Capotombolo",
+      "Giuseppe Bianchi 0001",
+      "Francesco Quaglia"
+    ],
+    "venue": "DIMVA",
+    "year": 2025,
+    "abstract": null,
+    "citation_count": 0,
+    "reference_count": 8,
+    "url": "https://dblp.org/rec/conf/dimva/CalavaroCCBQ25",
+    "dblp_key": "conf/dimva/CalavaroCCBQ25",
+    "source_id": "https://openalex.org/W4412176772"
+  },
+  {
+    "title": "Poster: Machine Learning for Vulnerability Detection as Target Oracle in Automated Fuzz Driver Generation.",
+    "authors": [
+      "Gianpietro Castiglione",
+      "Marcello Maugeri",
+      "Giampaolo Bella"
+    ],
+    "venue": "DIMVA",
+    "year": 2025,
+    "abstract": "In vulnerability detection, machine learning has been used as an effective static analysis technique, although it suffers from a significant rate of false positives. Contextually, in vulnerability discovery, fuzzing has been used as an effective dynamic analysis technique, although it requires manually writing fuzz drivers. Fuzz drivers usually target a limited subset of functions in a library that must be chosen according to certain criteria, e.g., the depth of a function, the number of paths. These criteria are verified by components called target oracles. In this work, we propose an automated fuzz driver generation workflow composed of: (1) identifying a likely vulnerable function by leveraging a machine learning for vulnerability detection model as a target oracle, (2) automatically generating fuzz drivers, (3) fuzzing the target function to find bugs which could confirm the vulnerability inferred by the target oracle. We show our method on an existing vulnerability in libgd, with a plan for large-scale evaluation.",
+    "citation_count": 0,
+    "reference_count": 0,
+    "url": "https://dblp.org/rec/conf/dimva/CastiglioneMB25",
+    "dblp_key": "conf/dimva/CastiglioneMB25",
+    "source_id": "https://openalex.org/W4414770330"
+  },
+  {
+    "title": "Experimental Study of Binary Diffing Resilience on Obfuscated Programs.",
+    "authors": [
+      "Roxane Cohen",
+      "Robin David",
+      "Riccardo Mori",
+      "Florian Yger",
+      "Fabrice Rossi"
+    ],
+    "venue": "DIMVA",
+    "year": 2025,
+    "abstract": null,
+    "citation_count": 1,
+    "reference_count": 29,
+    "url": "https://dblp.org/rec/conf/dimva/CohenDMYR25",
+    "dblp_key": "conf/dimva/CohenDMYR25",
+    "source_id": "https://openalex.org/W4412177437"
+  },
+  {
+    "title": "Poster: FedBlockParadox - A Framework for Simulating and Securing Decentralized Federated Learning.",
+    "authors": [
+      "Gabriele Digregorio",
+      "Francesco Bleggi",
+      "Federico Caroli",
+      "Michele Carminati",
+      "Stefano Zanero",
+      "Stefano Longari"
+    ],
+    "venue": "DIMVA",
+    "year": 2025,
+    "abstract": "A significant body of research in decentralized federated learning focuses on combining the privacy-preserving properties of federated learning with the resilience and transparency offered by blockchain-based systems. While these approaches are promising, they often lack flexible tools to evaluate system robustness under adversarial conditions. To fill this gap, we present FedBlockParadox, a modular framework for modeling and evaluating decentralized federated learning systems built on blockchain technologies, with a focus on resilience against a broad spectrum of adversarial attack scenarios. It supports multiple consensus protocols, validation methods, aggregation strategies, and configurable attack models. By enabling controlled experiments, FedBlockParadox provides a valuable resource for researchers developing secure, decentralized learning solutions. The framework is open-source and built to be extensible by the community.",
+    "citation_count": 0,
+    "reference_count": 14,
+    "url": "https://dblp.org/rec/conf/dimva/DigregorioBCCZL25",
+    "dblp_key": "conf/dimva/DigregorioBCCZL25",
+    "source_id": "https://openalex.org/W4412153666"
+  },
+  {
+    "title": "Quantifying and Mitigating the Impact of Obfuscations on Machine-Learning-Based Decompilation Improvement.",
+    "authors": [
+      "Luke Dramko",
+      "Deniz Bölöni-Turgut",
+      "Claire Le Goues",
+      "Edward J. Schwartz"
+    ],
+    "venue": "DIMVA",
+    "year": 2025,
+    "abstract": null,
+    "citation_count": 0,
+    "reference_count": 35,
+    "url": "https://dblp.org/rec/conf/dimva/DramkoBGS25",
+    "dblp_key": "conf/dimva/DramkoBGS25",
+    "source_id": "https://openalex.org/W4412153027"
+  },
+  {
+    "title": "Reverse-Engineering the Address Translation Caches.",
+    "authors": [
+      "Philipp Ertmer",
+      "Robbie Dumitru",
+      "Yuval Yarom"
+    ],
+    "venue": "DIMVA",
+    "year": 2025,
+    "abstract": "We present Rogue In-flight Data Load (RIDL), a new class of speculative unprivileged and constrained attacks to leak arbitrary data across address spaces and privilege boundaries (e.g., process, kernel, SGX, and even CPU-internal operations). Our reverse engineering efforts show such vulnerabilities originate from a variety of micro-optimizations pervasive in commodity (Intel) processors, which cause the CPU to speculatively serve loads using extraneous CPU-internal in-flight data (e.g., in the line fill buffers). Contrary to other state-of-the-art speculative execution attacks, such as Spectre, Meltdown and Foreshadow, RIDL can leak this arbitrary in-flight data with no assumptions on the state of the caches or translation data structures controlled by privileged software. The implications are worrisome. First, RIDL attacks can be implemented even from linear execution with no invalid page faults, eliminating the need for exception suppression mechanisms and enabling system-wide attacks from arbitrary unprivileged code (including JavaScript in the browser). To exemplify such attacks, we build a number of practical exploits that leak sensitive information from victim processes, virtual machines, kernel, SGX and CPU-internal components. Second, and perhaps more importantly, RIDL bypasses all existing 'spot' mitigations in software (e.g., KPTI, PTE inversion) and hardware (e.g., speculative store bypass disable) and cannot easily be mitigated even by more heavyweight defenses (e.g., L1D flushing or disabling SMT). RIDL questions the sustainability of a per-variant, spot mitigation strategy and suggests more fundamental mitigations are needed to contain ever-emerging speculative execution attacks.",
+    "citation_count": 285,
+    "reference_count": 72,
+    "url": "https://dblp.org/rec/conf/dimva/ErtmerDY25",
+    "dblp_key": "conf/dimva/ErtmerDY25",
+    "source_id": "https://openalex.org/W2954241526"
+  },
+  {
+    "title": "PackHero: A Scalable Graph-Based Approach for Efficient Packer Identification.",
+    "authors": [
+      "Marco Di Gennaro",
+      "Mario D&apos;Onghia",
+      "Mario Polino",
+      "Stefano Zanero",
+      "Michele Carminati"
+    ],
+    "venue": "DIMVA",
+    "year": 2025,
+    "abstract": "Anti-analysis techniques, particularly packing, challenge malware analysts, making packer identification fundamental. Existing packer identifiers have significant limitations: signature-based methods lack flexibility and struggle against dynamic evasion, while Machine Learning approaches require extensive training data, limiting scalability and adaptability. Consequently, achieving accurate and adaptable packer identification remains an open problem. This paper presents PackHero, a scalable and efficient methodology for identifying packers using a novel static approach. PackHero employs a Graph Matching Network and clustering to match and group Call Graphs from programs packed with known packers. We evaluate our approach on a public dataset of malware and benign samples packed with various packers, demonstrating its effectiveness and scalability across varying sample sizes. PackHero achieves a macro-average F1-score of 93.7% with just 10 samples per packer, improving to 98.3% with 100 samples. Notably, PackHero requires fewer samples to achieve stable performance compared to other Machine Learning-based tools. Overall, PackHero matches the performance of State-of-the-art signature-based tools, outperforming them in handling Virtualization-based packers such as Themida/Winlicense, with a recall of 100%.",
+    "citation_count": 1,
+    "reference_count": 28,
+    "url": "https://dblp.org/rec/conf/dimva/GennaroDPZC25",
+    "dblp_key": "conf/dimva/GennaroDPZC25",
+    "source_id": "https://openalex.org/W4412176530"
+  },
+  {
+    "title": "Cohere+Reload: Re-enabling High-Resolution Cache Attacks on AMD SEV-SNP.",
+    "authors": [
+      "Lukas Giner",
+      "Sudheendra Raghav Neela",
+      "Daniel Gruss"
+    ],
+    "venue": "DIMVA",
+    "year": 2025,
+    "abstract": null,
+    "citation_count": 1,
+    "reference_count": 36,
+    "url": "https://dblp.org/rec/conf/dimva/GinerNG25",
+    "dblp_key": "conf/dimva/GinerNG25",
+    "source_id": "https://openalex.org/W4412176388"
+  },
+  {
+    "title": "CodeGrafter: Unifying Source and Binary Graphs for Robust Vulnerability Detection.",
+    "authors": [
+      "Saquib Irtiza",
+      "Mahmoud Zamani",
+      "Shamila Wickramasuriya",
+      "Kevin W. Hamlen",
+      "Latifur Khan"
+    ],
+    "venue": "DIMVA",
+    "year": 2025,
+    "abstract": null,
+    "citation_count": 0,
+    "reference_count": 28,
+    "url": "https://dblp.org/rec/conf/dimva/IrtizaZWHK25",
+    "dblp_key": "conf/dimva/IrtizaZWHK25",
+    "source_id": "https://openalex.org/W4412153181"
+  },
+  {
+    "title": "The HMB Timing Side Channel: Exploiting the SSD&apos;s Host Memory Buffer.",
+    "authors": [
+      "Jonas Juffinger",
+      "Hannes Weissteiner",
+      "Thomas Steinbauer",
+      "Daniel Gruss"
+    ],
+    "venue": "DIMVA",
+    "year": 2025,
+    "abstract": null,
+    "citation_count": 1,
+    "reference_count": 0,
+    "url": "https://dblp.org/rec/conf/dimva/JuffingerWSG25",
+    "dblp_key": "conf/dimva/JuffingerWSG25",
+    "source_id": "a3326da8e47f81ab52f6eee2a2479747d4df0a53"
+  },
+  {
+    "title": "Red Light for Security: Uncovering Auto Feature Check and Access Control Gaps in AAOS.",
+    "authors": [
+      "Jumana",
+      "Parjanya Vyas",
+      "Yousra Aafer"
+    ],
+    "venue": "DIMVA",
+    "year": 2025,
+    "abstract": null,
+    "citation_count": 0,
+    "reference_count": 17,
+    "url": "https://dblp.org/rec/conf/dimva/JumanaVA25",
+    "dblp_key": "conf/dimva/JumanaVA25",
+    "source_id": "https://openalex.org/W4412176745"
+  },
+  {
+    "title": "Poster: Using Machine Learning to Infer Network Structure from Security Metadata.",
+    "authors": [
+      "Asfa Khalid",
+      "Seán Óg Murphy",
+      "Cormac J. Sreenan",
+      "Utz Roedig"
+    ],
+    "venue": "DIMVA",
+    "year": 2025,
+    "abstract": null,
+    "citation_count": 0,
+    "reference_count": 9,
+    "url": "https://dblp.org/rec/conf/dimva/KhalidMSR25",
+    "dblp_key": "conf/dimva/KhalidMSR25",
+    "source_id": "https://openalex.org/W4412177045"
+  },
+  {
+    "title": "Poster: Generating the WEB-IDS23 Dataset.",
+    "authors": [
+      "Eric Lanfer",
+      "Dominik Brockmann",
+      "Nils Aschenbruck"
+    ],
+    "venue": "DIMVA",
+    "year": 2025,
+    "abstract": null,
+    "citation_count": 2,
+    "reference_count": 5,
+    "url": "https://dblp.org/rec/conf/dimva/LanferBA25",
+    "dblp_key": "conf/dimva/LanferBA25",
+    "source_id": "https://openalex.org/W4412153497"
+  },
+  {
+    "title": "Making (Only) the Right Calls: Preventing Remote Code Execution Attacks in PHP Applications with Contextual, State-Sensitive System Call Filtering.",
+    "authors": [
+      "Yunsen Lei",
+      "Craig A. Shue"
+    ],
+    "venue": "DIMVA",
+    "year": 2025,
+    "abstract": null,
+    "citation_count": 0,
+    "reference_count": 8,
+    "url": "https://dblp.org/rec/conf/dimva/LeiS25",
+    "dblp_key": "conf/dimva/LeiS25",
+    "source_id": "https://openalex.org/W4412153411"
+  },
+  {
+    "title": "Domain Name Encryption Does Not Ensure Privacy: Website Fingerprinting Attack With Only a Few Samples Using Siamese Network.",
+    "authors": [
+      "Neriya Mazzuz",
+      "Asaf Shabtai"
+    ],
+    "venue": "DIMVA",
+    "year": 2025,
+    "abstract": null,
+    "citation_count": 0,
+    "reference_count": 33,
+    "url": "https://dblp.org/rec/conf/dimva/MazzuzS25",
+    "dblp_key": "conf/dimva/MazzuzS25",
+    "source_id": "https://openalex.org/W4412153575"
+  },
+  {
+    "title": "ScamFerret: Detecting Scam Websites Autonomously with Large Language Models.",
+    "authors": [
+      "Hiroki Nakano",
+      "Takashi Koide",
+      "Daiki Chiba 0001"
+    ],
+    "venue": "DIMVA",
+    "year": 2025,
+    "abstract": "With the rise of sophisticated scam websites that exploit human psychological vulnerabilities, distinguishing between legitimate and scam websites has become increasingly challenging. This paper presents ScamFerret, an innovative agent system employing a large language model (LLM) to autonomously collect and analyze data from a given URL to determine whether it is a scam. Unlike traditional machine learning models that require large datasets and feature engineering, ScamFerret leverages LLMs' natural language understanding to accurately identify scam websites of various types and languages without requiring additional training or fine-tuning. Our evaluation demonstrated that ScamFerret achieves 0.972 accuracy in classifying four scam types in English and 0.993 accuracy in classifying online shopping websites across three different languages, particularly when using GPT-4. Furthermore, we confirmed that ScamFerret collects and analyzes external information such as web content, DNS records, and user reviews as necessary, providing a basis for identifying scam websites from multiple perspectives. These results suggest that LLMs have significant potential in enhancing cybersecurity measures against sophisticated scam websites.",
+    "citation_count": 0,
+    "reference_count": 0,
+    "url": "https://dblp.org/rec/conf/dimva/NakanoKC25",
+    "dblp_key": "conf/dimva/NakanoKC25",
+    "source_id": "https://openalex.org/W4407632621"
+  },
+  {
+    "title": "InferONNX: Practical and Privacy-Preserving Machine Learning Inference Using Trusted Execution Environments.",
+    "authors": [
+      "Konstantina Papafragkaki",
+      "Giorgos Vasiliadis"
+    ],
+    "venue": "DIMVA",
+    "year": 2025,
+    "abstract": null,
+    "citation_count": 0,
+    "reference_count": 32,
+    "url": "https://dblp.org/rec/conf/dimva/PapafragkakiV25",
+    "dblp_key": "conf/dimva/PapafragkakiV25",
+    "source_id": "https://openalex.org/W4412177091"
+  },
+  {
+    "title": "Poster: Exploring the Zero-Shot Potential of Large Language Models for Detecting Algorithmically Generated Domains.",
+    "authors": [
+      "Tomás Pelayo-Benedet",
+      "Ricardo J. Rodríguez",
+      "Carlos Hernandez Gañán"
+    ],
+    "venue": "DIMVA",
+    "year": 2025,
+    "abstract": null,
+    "citation_count": 0,
+    "reference_count": 1,
+    "url": "https://dblp.org/rec/conf/dimva/PelayoBenedetRG25",
+    "dblp_key": "conf/dimva/PelayoBenedetRG25",
+    "source_id": "https://openalex.org/W4412176976"
+  },
+  {
+    "title": "Hiding in Plain Sight: On the Robustness of AI-Generated Code Detection.",
+    "authors": [
+      "Saman Pordanesh",
+      "Sufiyan Bukhari",
+      "Benjamin Tan 0001",
+      "Lorenzo De Carli"
+    ],
+    "venue": "DIMVA",
+    "year": 2025,
+    "abstract": null,
+    "citation_count": 0,
+    "reference_count": 19,
+    "url": "https://dblp.org/rec/conf/dimva/PordaneshBTC25",
+    "dblp_key": "conf/dimva/PordaneshBTC25",
+    "source_id": "https://openalex.org/W4412153876"
+  },
+  {
+    "title": "More Than You Signed Up For: Exposing Gaps in the Validation of Android&apos;s App Signing.",
+    "authors": [
+      "Norah Ridley",
+      "Enrico Branca",
+      "Natalia Stakhanova"
+    ],
+    "venue": "DIMVA",
+    "year": 2025,
+    "abstract": "The internet of things (IoT) is rapidly expanding and improving operations in a wide range of real-world applications, from consumer IoT and enterprise IoT to manufacturing and industrial IoT (IIoT). Consumer markets, wearable devices, healthcare, smart buildings, agriculture, and smart cities are just a few examples. This paper discusses the current state of the IoT ecosystem, its primary applications and benefits, important architectural stages, some of the problems and challenges it faces, and its future. This paper explains how an appropriate IoT architecture that saves data, analyzes it, and recommends corrective action improves the process's ground reality. The IoT system architecture is divided into three layers: device, gateway, and platform. This then cascades into the four stages of the IoT architectural layout: sensors and actuators; gateways and data acquisition systems; edge IT data processing; and datacenter and cloud, which use high-end apps to collect data, evaluate it, process it, and provide remedial solutions. This elegant combination provides excellent value in automatic action. In the future, IoT will continue to serve as the foundation for many technologies. Machine learning will become more popular in the coming years as IoT networks take center stage in a variety of industries.",
+    "citation_count": 22,
+    "reference_count": 379,
+    "url": "https://dblp.org/rec/conf/dimva/RidleyBS25",
+    "dblp_key": "conf/dimva/RidleyBS25",
+    "source_id": "https://openalex.org/W4304084377"
+  },
+  {
+    "title": "Poster: SPECK: From Google Textual Guidelines to Automatic Detection of Android Apps Vulnerabilities.",
+    "authors": [
+      "Roberto Rossini",
+      "Simeone Pizzi",
+      "Samuele Doria",
+      "Mauro Conti",
+      "Eleonora Losiouk"
+    ],
+    "venue": "DIMVA",
+    "year": 2025,
+    "abstract": null,
+    "citation_count": 0,
+    "reference_count": 4,
+    "url": "https://dblp.org/rec/conf/dimva/RossiniPDCL25",
+    "dblp_key": "conf/dimva/RossiniPDCL25",
+    "source_id": "https://openalex.org/W4412153159"
+  },
+  {
+    "title": "A History of Greed: Practical Symbolic Execution for Ethereum Smart Contracts.",
+    "authors": [
+      "Nicola Ruaro",
+      "Fabio Gritti",
+      "Robert McLaughlin",
+      "Dongyu Meng",
+      "Ilya Grishchenko",
+      "Christopher Kruegel",
+      "Giovanni Vigna"
+    ],
+    "venue": "DIMVA",
+    "year": 2025,
+    "abstract": null,
+    "citation_count": 0,
+    "reference_count": 24,
+    "url": "https://dblp.org/rec/conf/dimva/RuaroGMMGKV25",
+    "dblp_key": "conf/dimva/RuaroGMMGKV25",
+    "source_id": "https://openalex.org/W4412177286"
+  },
+  {
+    "title": "Poster: Referencing Your Privileges - A Data-Only Exploit Technique for the Windows Kernel.",
+    "authors": [
+      "Nicola Stauffer",
+      "Gürkan Gür"
+    ],
+    "venue": "DIMVA",
+    "year": 2025,
+    "abstract": null,
+    "citation_count": 0,
+    "reference_count": 0,
+    "url": "https://dblp.org/rec/conf/dimva/StaufferG25",
+    "dblp_key": "conf/dimva/StaufferG25",
+    "source_id": "https://openalex.org/W4412176901"
+  },
+  {
+    "title": "An Empirical Study of Multi-language Security Patches in Open Source Software.",
+    "authors": [
+      "Shiyu Sun",
+      "Yunlong Xing",
+      "Grant Zou",
+      "Xinda Wang 0001",
+      "Kun Sun 0001"
+    ],
+    "venue": "DIMVA",
+    "year": 2025,
+    "abstract": null,
+    "citation_count": 0,
+    "reference_count": 23,
+    "url": "https://dblp.org/rec/conf/dimva/SunXZWS25",
+    "dblp_key": "conf/dimva/SunXZWS25",
+    "source_id": "https://openalex.org/W4412177098"
+  },
+  {
+    "title": "SyzForge: An Automated System Call Specification Generation Process for Efficient Kernel Fuzzing.",
+    "authors": [
+      "ZhiZhuo Tang",
+      "Jian Lin",
+      "Weiyu Dong",
+      "Hang Ma",
+      "Tieming Liu"
+    ],
+    "venue": "DIMVA",
+    "year": 2025,
+    "abstract": null,
+    "citation_count": 0,
+    "reference_count": 9,
+    "url": "https://dblp.org/rec/conf/dimva/TangLDML25",
+    "dblp_key": "conf/dimva/TangLDML25",
+    "source_id": "https://openalex.org/W4412176794"
+  },
+  {
+    "title": "Towards Explainable Drift Detection and Early Retrain in ML-Based Malware Detection Pipelines.",
+    "authors": [
+      "Jayesh Tripathi",
+      "Heitor Murilo Gomes",
+      "Marcus Botacin"
+    ],
+    "venue": "DIMVA",
+    "year": 2025,
+    "abstract": null,
+    "citation_count": 1,
+    "reference_count": 24,
+    "url": "https://dblp.org/rec/conf/dimva/TripathiGB25",
+    "dblp_key": "conf/dimva/TripathiGB25",
+    "source_id": "https://openalex.org/W4412152854"
+  },
+  {
+    "title": "FAULTLESS: Flexible and Transparent Fault Protection for Superscalar RISC-V Processors.",
+    "authors": [
+      "Moritz Waser",
+      "David Schrammel",
+      "Robert Schilling",
+      "Stefan Mangard"
+    ],
+    "venue": "DIMVA",
+    "year": 2025,
+    "abstract": null,
+    "citation_count": 0,
+    "reference_count": 33,
+    "url": "https://dblp.org/rec/conf/dimva/WaserSSM25",
+    "dblp_key": "conf/dimva/WaserSSM25",
+    "source_id": "https://openalex.org/W4412153659"
+  },
+  {
+    "title": "FlexGE: Towards Secure and Flexible Model Partition for Deep Neural Networks.",
+    "authors": [
+      "Xiaolong Wu",
+      "Aravind Kumar Machiry",
+      "Yung-Hsiang Lu",
+      "Dave Jing Tian"
+    ],
+    "venue": "DIMVA",
+    "year": 2025,
+    "abstract": null,
+    "citation_count": 0,
+    "reference_count": 38,
+    "url": "https://dblp.org/rec/conf/dimva/WuMLT25",
+    "dblp_key": "conf/dimva/WuMLT25",
+    "source_id": "https://openalex.org/W4412176484"
+  },
+  {
+    "title": "Taming the Linux Memory Allocator for Rapid Prototyping.",
+    "authors": [
+      "Ruiyi Zhang 0001",
+      "Tristan Hornetz",
+      "Lukas Gerlach 0001",
+      "Michael Schwarz 0001"
+    ],
+    "venue": "DIMVA",
+    "year": 2025,
+    "abstract": null,
+    "citation_count": 1,
+    "reference_count": 37,
+    "url": "https://dblp.org/rec/conf/dimva/ZhangHGS25",
+    "dblp_key": "conf/dimva/ZhangHGS25",
+    "source_id": "https://openalex.org/W4412152681"
+  },
+  {
+    "title": "Detection of Intrusions and Malware, and Vulnerability Assessment - 22nd International Conference, DIMVA 2025, Graz, Austria, July 9-11, 2025, Proceedings, Part I",
+    "authors": [
+      "Manuel Egele",
+      "Veelasha Moonsamy",
+      "Daniel Gruss",
+      "Michele Carminati"
+    ],
+    "venue": [
+      "DIMVA",
+      "Lecture Notes in Computer Science"
+    ],
+    "year": 2025,
+    "abstract": "Side-channel attacks on memory (SCAM) exploit unintended data leaks from memory subsystems to infer sensitive information, posing significant threats to system security. These attacks exploit vulnerabilities in memory access patterns, cache behaviors, and other microarchitectural features to bypass traditional security measures. The purpose of this research is to examine SCAM, classify various attack techniques, and evaluate existing defense mechanisms. It guides researchers and industry professionals in improving memory security and mitigating emerging threats. We begin by identifying the major vulnerabilities in the memory system that are frequently exploited in SCAM, such as cache timing, speculative execution, \\textit{Rowhammer}, and other sophisticated approaches. Next, we outline a comprehensive taxonomy that systematically classifies these attacks based on their types, target systems, attack vectors, and adversarial capabilities required to execute them. In addition, we review the current landscape of mitigation strategies, emphasizing their strengths and limitations. This work aims to provide a comprehensive overview of memory-based side-channel attacks with the goal of providing significant insights for researchers and practitioners to better understand, detect, and mitigate SCAM risks.",
+    "citation_count": 0,
+    "reference_count": 0,
+    "url": "https://dblp.org/rec/conf/dimva/2025-1",
+    "dblp_key": "conf/dimva/2025-1",
+    "source_id": "https://openalex.org/W4416097347"
+  },
+  {
+    "title": "Detection of Intrusions and Malware, and Vulnerability Assessment - 22nd International Conference, DIMVA 2025, Graz, Austria, July 9-11, 2025, Proceedings, Part II",
+    "authors": [
+      "Manuel Egele",
+      "Veelasha Moonsamy",
+      "Daniel Gruss",
+      "Michele Carminati"
+    ],
+    "venue": [
+      "DIMVA",
+      "Lecture Notes in Computer Science"
+    ],
+    "year": 2025,
+    "abstract": null,
+    "citation_count": 0,
+    "reference_count": 0,
+    "url": "https://dblp.org/rec/conf/dimva/2025-2",
+    "dblp_key": "conf/dimva/2025-2",
+    "source_id": "c44d3b13dede87a5ae7c11cf59fb6d4fac143558"
+  }
+]

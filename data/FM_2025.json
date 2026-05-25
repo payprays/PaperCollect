@@ -1,0 +1,42 @@
+[
+  {
+    "title": "Formal Methods - 26th International Symposium, FM 2024, Milan, Italy, September 9-13, 2024, Proceedings, Part I",
+    "authors": [
+      "André Platzer",
+      "Kristin Yvonne Rozier",
+      "Matteo Pradella",
+      "Matteo Rossi 0001"
+    ],
+    "venue": [
+      "FM",
+      "Lecture Notes in Computer Science"
+    ],
+    "year": 2025,
+    "abstract": "Physiological signals are the most reliable form of signals for emotion recognition, as they cannot be controlled deliberately by the subject. Existing review papers on emotion recognition based on physiological signals surveyed only the regular steps involved in the workflow of emotion recognition such as pre-processing, feature extraction, and classification. While these are important steps, such steps are required for any signal processing application. Emotion recognition poses its own set of challenges that are very important to address for a robust system. Thus, to bridge the gap in the existing literature, in this paper, we review the effect of inter-subject data variance on emotion recognition, important data annotation techniques for emotion recognition and their comparison, data pre-processing techniques for each physiological signal, data splitting techniques for improving the generalization of emotion recognition models and different multimodal fusion techniques and their comparison. Finally, we discuss key challenges and future directions in this field.",
+    "citation_count": 57,
+    "reference_count": 120,
+    "url": "https://dblp.org/rec/conf/fm/2024-1",
+    "dblp_key": "conf/fm/2024-1",
+    "source_id": "https://openalex.org/W4309214211"
+  },
+  {
+    "title": "Formal Methods - 26th International Symposium, FM 2024, Milan, Italy, September 9-13, 2024, Proceedings, Part II",
+    "authors": [
+      "André Platzer",
+      "Kristin Yvonne Rozier",
+      "Matteo Pradella",
+      "Matteo Rossi 0001"
+    ],
+    "venue": [
+      "FM",
+      "Lecture Notes in Computer Science"
+    ],
+    "year": 2025,
+    "abstract": "Abstract Automatic decision and prediction systems are increasingly deployed in applications where they significantly impact the livelihood of people, such as for predicting the creditworthiness of loan applicants or the recidivism risk of defendants. These applications have given rise to a new class of algorithmic-fairness specifications that require the systems to decide and predict without bias against social groups. Verifying these specifications statically is often out of reach for realistic systems, since the systems may, e.g., employ complex learning components, and reason over a large input space. In this paper, we therefore propose stream-based monitoring as a solution for verifying the algorithmic fairness of decision and prediction systems at runtime. Concretely, we present a principled way to formalize algorithmic fairness over temporal data streams in the specification language RTLola and demonstrate the efficacy of this approach on a number of benchmarks. Besides synthetic scenarios that particularly highlight its efficiency on streams with a scaling amount of data, we notably evaluate the monitor on real-world data from the recidivism prediction tool COMPAS.",
+    "citation_count": 2,
+    "reference_count": 35,
+    "url": "https://dblp.org/rec/conf/fm/2024-2",
+    "dblp_key": "conf/fm/2024-2",
+    "source_id": "https://openalex.org/W4409974483"
+  }
+]

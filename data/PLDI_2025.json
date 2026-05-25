@@ -1,0 +1,19 @@
+[
+  {
+    "title": "Making Concurrent Hardware Verification Sequential.",
+    "authors": [
+      "Thomas Bourgeat",
+      "Jiazheng Liu",
+      "Adam Chlipala",
+      "Arvind 0001"
+    ],
+    "venue": "PLDI",
+    "year": 2025,
+    "abstract": "We describe the Kiwi parallel programming library and its associated synthesis system which is used to transform C# parallel programs into circuits for realization on FPGAs. The Kiwi system is targeted at making reconfigurable computing technology accessible to software engineers that are willing to express their computations as parallel programs. Although there has been much work on compiling sequential C-like programs to hardware by automatically `discovering¿ parallelism, we work by exploiting the parallel architecture communicated by the designer through the choice of parallel and concurrent programming language constructs. Specifically, we describe a system that takes .NET assembly language with suitable custom attributes as input and produces Verilog output which is mapped to FPGAs. We can then choose to apply analysis and verification techniques to either the highlevel representation in C# or other .NET languages or to the generated RTL netlists. A distinctive aspect of our approach is the exploitation of existing language constructs for concurrent programming and synchronization which contrasts with other schemes which introduce specialized concurrency control constructs to extend a sequential language.",
+    "citation_count": 97,
+    "reference_count": 14,
+    "url": "https://dblp.org/rec/journals/pacmpl/BourgeatLCA25",
+    "dblp_key": "journals/pacmpl/BourgeatLCA25",
+    "source_id": "https://openalex.org/W2103798154"
+  }
+]
