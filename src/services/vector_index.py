@@ -17,7 +17,7 @@ from src.core.conference_catalog import ConferenceEntry, find_conference, normal
 DEFAULT_COLLECTION = "papercollect_papers"
 DEFAULT_INDEX_PATH = "data/qdrant"
 DEFAULT_DENSE_MODEL = "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
-DEFAULT_SPARSE_MODEL = "prithivida/Splade_PP_en_v1"
+DEFAULT_SPARSE_MODEL = "hash"
 DEFAULT_DENSE_SIZE = 1024
 DENSE_VECTOR_NAME = "dense"
 SPARSE_VECTOR_NAME = "sparse"
@@ -298,9 +298,16 @@ def _embedding_provider(index_config: dict[str, Any]) -> HybridEmbeddingProvider
     if provider == "hash":
         return HashHybridEmbeddingProvider(dense_size=int(index_config.get("dense_size") or 128))
     if provider == "fastembed":
+        sparse_model = str(index_config.get("sparse_model") or DEFAULT_SPARSE_MODEL)
+        if sparse_model.lower() == "hash":
+            return FastEmbedDenseHashSparseProvider(
+                dense_model=str(index_config.get("dense_model") or DEFAULT_DENSE_MODEL),
+                cache_dir=index_config.get("cache_dir"),
+                threads=index_config.get("threads"),
+            )
         return FastEmbedHybridEmbeddingProvider(
             dense_model=str(index_config.get("dense_model") or DEFAULT_DENSE_MODEL),
-            sparse_model=str(index_config.get("sparse_model") or DEFAULT_SPARSE_MODEL),
+            sparse_model=sparse_model,
             cache_dir=index_config.get("cache_dir"),
             threads=index_config.get("threads"),
         )
@@ -347,6 +354,44 @@ class FastEmbedHybridEmbeddingProvider:
     def embed_query(self, text: str) -> HybridEmbedding:
         dense = list(next(self._dense.query_embed(text)).tolist())
         sparse = _sparse_from_fastembed(next(self._sparse.query_embed(text)))
+        return HybridEmbedding(dense=dense, sparse=sparse)
+
+
+class FastEmbedDenseHashSparseProvider:
+    def __init__(
+        self,
+        *,
+        dense_model: str,
+        cache_dir: str | None = None,
+        threads: int | None = None,
+    ) -> None:
+        try:
+            from fastembed import TextEmbedding
+        except ImportError as exc:
+            raise VectorIndexError(
+                "FastEmbed is not installed. Install qdrant-client[fastembed] or use embedding_provider=hash."
+            ) from exc
+
+        self.name = f"fastembed:{dense_model}+hash_sparse"
+        self._dense = TextEmbedding(
+            model_name=dense_model,
+            cache_dir=cache_dir,
+            threads=threads,
+        )
+        self._hash_sparse = HashHybridEmbeddingProvider(dense_size=8)
+        self.dense_size = _fastembed_dense_size(dense_model)
+
+    def embed_documents(self, texts: Sequence[str]) -> list[HybridEmbedding]:
+        dense_values = [list(vector.tolist()) for vector in self._dense.embed(texts)]
+        sparse_values = [self._hash_sparse.embed_query(text).sparse for text in texts]
+        return [
+            HybridEmbedding(dense=dense, sparse=sparse)
+            for dense, sparse in zip(dense_values, sparse_values, strict=True)
+        ]
+
+    def embed_query(self, text: str) -> HybridEmbedding:
+        dense = list(next(self._dense.query_embed(text)).tolist())
+        sparse = self._hash_sparse.embed_query(text).sparse
         return HybridEmbedding(dense=dense, sparse=sparse)
 
 

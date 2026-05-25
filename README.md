@@ -57,7 +57,7 @@ vector_index:
   collection: papercollect_papers
   embedding_provider: fastembed
   dense_model: sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2
-  sparse_model: prithivida/Splade_PP_en_v1
+  sparse_model: hash
   on_disk_vectors: true
   timeout: 120
 url_base: ""             # 可选，例如反代到 /papercollect 时设为 "/papercollect"

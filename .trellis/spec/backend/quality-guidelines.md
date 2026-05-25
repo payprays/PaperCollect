@@ -115,6 +115,7 @@ Questions to answer:
   - The default local index path is `data/qdrant/`; it must be ignored by git.
   - Index payloads must preserve stable paper IDs, conference, display name, year, category, CCF tier, focus tags, DBLP key, URL, source file, and source index.
   - Qdrant HTTP/server mode should use a configurable request timeout because collection creation and large upserts can exceed short client defaults.
+  - `sparse_model: hash` means dense embeddings come from FastEmbed while the sparse side is a local lexical hash vector; use this as the production-safe default on small CPU hosts.
   - Unit tests must use deterministic hash embeddings or a mocked provider, never download FastEmbed/HuggingFace models.
 - CLI search:
   - `uv run pc-search` must call the same `search_saved_papers` implementation as the Web API.
