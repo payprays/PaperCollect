@@ -44,7 +44,7 @@ The user asked for the most advanced path, so the MVP should use Qdrant rather t
 * Keep `concept` search as lexical fallback/reranker.
 * Keep Qdrant config flexible enough to use embedded local mode or an external Qdrant service.
 
-The default embedding path is FastEmbed with `jinaai/jina-embeddings-v2-base-zh` dense embeddings and SPLADE sparse embeddings. This keeps the advanced Qdrant hybrid/RRF architecture while fitting the current CPU host better than the much heavier Jina v3 model. Tests use deterministic hash embeddings to avoid model downloads.
+The default embedding path is FastEmbed with `sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2` dense embeddings and SPLADE sparse embeddings. This keeps the advanced Qdrant hybrid/RRF architecture while fitting the current CPU host better than the much heavier Jina models. Tests use deterministic hash embeddings to avoid model downloads.
 
 ## Source Notes
 

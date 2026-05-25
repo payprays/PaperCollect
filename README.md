@@ -56,7 +56,7 @@ vector_index:
   path: data/qdrant
   collection: papercollect_papers
   embedding_provider: fastembed
-  dense_model: jinaai/jina-embeddings-v2-base-zh
+  dense_model: sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2
   sparse_model: prithivida/Splade_PP_en_v1
   on_disk_vectors: true
   timeout: 120
