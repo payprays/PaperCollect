@@ -72,7 +72,7 @@ Questions to answer:
 - Catalog lookup: `find_conference(config, value) -> ConferenceEntry | None`
 - Catalog categories: `catalog_categories(config) -> list[dict]`
 - Focus options: `focus_tag_options(config) -> list[dict]`
-- Search API: `GET /api/search?q=<query>&mode=<keyword|concept>&category=<sub>&focus=<tag>&conference=<id>&year=<year>&limit=<n>`
+- Search API: `GET /api/search?q=<query>&mode=<keyword|concept>&category=<sub>&focus=<tag>&ccf=<A|B|C|N>&conference=<id>&conference=<id>&year=<year>&limit=<n>`
 - Config: `url_base` optional path prefix such as `/papercollect`.
 
 ### 3. Contracts
@@ -95,11 +95,13 @@ Questions to answer:
   - Local `config.yaml` entries override bundled entries by `id`/alias, but missing rank/category metadata should be merged from the bundled entry.
 - Search response:
   - `results`: list of saved paper matches with `title`, `authors`, `venue`, `year`, `abstract`, `url`, `score`, `conference`, `display_name`, and `category`.
-  - Results should include `focus_tags` when the conference has them.
+  - Results should include `tier` and `focus_tags` when the conference has them.
   - `mode=keyword` uses local exact/token scoring over saved JSON.
   - `mode=concept` uses local expanded BM25 over saved JSON plus SemRank-lite concept reranking; it must not require embeddings, external vector stores, or `OPENAI_API_KEY`.
   - Concept results include `matched_concepts`, `concept_score`, `lexical_score`, and `search_mode`.
   - Search uses saved JSON files only; it must not require embeddings or `OPENAI_API_KEY`.
+  - Search may receive repeated `conference` parameters or comma-separated `conference`/`conferences` values; all provided conferences must resolve through `find_conference`.
+  - Search supports `ccf`/`tier` filtering against `ConferenceEntry.tier["ccf"]`, including non-CCF `N` entries from the CCFDDL catalog.
   - Search should suppress non-paper metadata entries such as proceedings, poster records, chair messages, keynote/front-matter entries, and student/dissertation abstracts.
   - Concept search must treat title/topic matches as stronger than incidental abstract mentions; a paper that only mentions a query concept once in an abstract example should not rank as a topic match.
   - Four-digit years typed in the query, such as `kubernetes 2026`, should be treated as a year filter and removed from scoring tokens.
@@ -114,6 +116,9 @@ Questions to answer:
   - Success: HTTP 202 with `job_id` and `status_url`.
   - Validation failure: HTTP 400 with `error`.
   - Existing running job: HTTP 409 with `error`.
+- DBLP search collection:
+  - DBLP search requests use `h=1000` as the page size and must paginate with `f` until all hits are read.
+  - Do not treat the DBLP single-page size as the total per-conference paper limit.
 - Job response fields:
   - `id`, `status`, `conference`, `display_name`, `year`, `limit`, `logs`, `feed_url`.
   - Batch jobs also include `conferences`, `display_names`, `conference_count`, `completed_count`, `failed_count`, `results`, `errors`, and `feed_urls`.
@@ -142,6 +147,7 @@ Questions to answer:
 - DBLP network/API failure during collection -> job status `failed`; never convert the failure into an empty paper list.
 - Missing saved JSON for RSS -> 404.
 - Invalid search conference -> 400.
+- Invalid search CCF tier -> 400.
 - Search mode other than `keyword` or `concept` -> 400.
 - Search limit outside 1..100 -> 400.
 - Full URL in `url_base` -> app construction error; use a path prefix such as `/papercollect`.
@@ -154,6 +160,8 @@ Questions to answer:
 - Legacy: string-only `conferences: ["ICSE"]` still normalizes to `id="icse"` and `dblp_stream="conf/icse"`.
 - Search: query `fuzzing` with category `SE` returns matching saved ICSE papers when present.
 - Search: focus `cloud_native` only returns conferences tagged with `cloud_native`.
+- Search: repeated `conference=icse&conference=fse` limits saved-paper search to those conferences.
+- Search: `ccf=A` filters results to CCF-A conference entries.
 - Search: `mode=concept` maps Chinese/natural-language cloud-native security queries to English paper concepts such as Kubernetes, SBOM, provenance, and container images.
 
 ### 6. Tests Required
@@ -172,6 +180,7 @@ Questions to answer:
 - Catalog tests cover object configs, aliases, and legacy string defaults.
 - Search tests cover keyword scoring and category filters without network calls.
 - Search tests cover `mode=concept`, `matched_concepts`, and rejection of unknown search modes without network calls.
+- Search tests cover repeated conference filters and CCF tier filters without network calls.
 - CLI search tests cover `pc-search` concept results without `OPENAI_API_KEY` or embeddings.
 - Search tests cover underscore/hyphen query normalization, local BM25 expansion for paraphrased concept queries, and suppression of proceedings/poster metadata.
 - Search tests cover incidental abstract-only concept mentions and query-embedded year filters.

@@ -63,7 +63,7 @@ Web 前端 / RSS
 ```bash
 uv run pc-web --config config.yaml --host 0.0.0.0 --port 5000
 ```
-本机打开 `http://127.0.0.1:5000`；局域网设备用这台机器的 IP 加端口访问。Web UI 可以按 CCFDDL 分类筛选会议，并输入要采集的年份。`config.yaml` 中的 `years` 只作为 UI 建议值，不限制实际输入；后端允许合理年份，便于采集最新 proceedings。会议配置使用统一 catalog：`id` 作为文件/RSS slug，`display_name` 用于界面展示，`dblp_stream` 用于权威 DBLP stream 查询。默认会合并 `src/data/ccf_conferences.yaml` 中来自 CCFDDL 的 300+ 会议；如只想使用本地 `config.yaml`，可设置 `include_ccfddl_catalog: false`。采集完成后会生成对应 RSS 链接，例如：
+本机打开 `http://127.0.0.1:5000`；局域网设备用这台机器的 IP 加端口访问。Web UI 可以按 CCFDDL 分类、CCF 等级和 Focus 标签筛选会议，并输入要采集的年份。`config.yaml` 中的 `years` 只作为 UI 建议值，不限制实际输入；后端允许合理年份，便于采集最新 proceedings。会议配置使用统一 catalog：`id` 作为文件/RSS slug，`display_name` 用于界面展示，`dblp_stream` 用于权威 DBLP stream 查询。默认会合并 `src/data/ccf_conferences.yaml` 中来自 CCFDDL 的 300+ 会议；如只想使用本地 `config.yaml`，可设置 `include_ccfddl_catalog: false`。采集完成后会生成对应 RSS 链接，例如：
 ```text
 http://127.0.0.1:5000/feed/icse/2025.xml
 ```
@@ -75,7 +75,9 @@ url_base: "/papercollect"
 ```
 此时前端 API 请求、静态资源、任务状态 URL 和 RSS 链接都会带上 `/papercollect` 前缀。
 
-前端的搜索框会在已保存的 JSON 论文库中做本地搜索，默认使用概念语义搜索，也可切换为关键词搜索；可按 CCFDDL 分类、会议和年份过滤，不需要 OpenAI API key。概念语义搜索使用本地 expanded BM25 + 概念词表重排，并会过滤 proceedings、poster、chair message 等非正式论文条目。
+前端的搜索框会在已保存的 JSON 论文库中做本地搜索，默认使用概念语义搜索，也可切换为关键词搜索；可按 CCFDDL 分类、CCF 等级、Focus 标签、多个会议和年份过滤，不需要 OpenAI API key。概念语义搜索使用本地 expanded BM25 + 概念词表重排，并会过滤 proceedings、poster、chair message 等非正式论文条目。
+
+DBLP search API 单次请求最多返回 1000 条结果；PaperCollect 会用 `f`/`h` 分页继续拉取，所以 `limit_per_conference: 0` 表示项目侧不限制总量。`limit_per_conference` 只用于你主动限制保存数量，和 DBLP 单页大小不是一回事。
 
 会议分类资源来自 `ccfddl/ccf-deadlines` 的公开 conference YAML，已生成到 `src/data/ccf_conferences.yaml` 作为本地只读 catalog，运行时不依赖外网。
 

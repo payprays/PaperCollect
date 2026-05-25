@@ -20,6 +20,19 @@ def _mock_text_response(payload: str, status_code=200):
     return response
 
 
+def _search_hit(index: int, venue: str = "ICSE"):
+    return {
+        "info": {
+            "title": f"Paper {index}.",
+            "authors": {"author": [{"text": f"Author {index}"}]},
+            "year": "2025",
+            "venue": venue,
+            "key": f"conf/icse/paper{index}",
+            "url": f"https://dblp.org/rec/conf/icse/paper{index}",
+        }
+    }
+
+
 class TestDBLPClientSP(unittest.TestCase):
     def setUp(self):
         self.client = DBLPClient()
@@ -94,6 +107,39 @@ class TestDBLPClientSP(unittest.TestCase):
         self.assertEqual(papers, [])
         mock_get.assert_called_once()
         self.assertEqual(mock_get.call_args.args[0], "https://dblp.org/db/conf/esorics/esorics2026.xml")
+
+    @patch('src.clients.dblp_client.requests.Session.get')
+    def test_search_paginates_beyond_dblp_page_size(self, mock_get):
+        first_page = {
+            "result": {
+                "hits": {
+                    "@total": "1001",
+                    "@sent": "1000",
+                    "@first": "0",
+                    "hit": [_search_hit(index) for index in range(1000)],
+                }
+            }
+        }
+        second_page = {
+            "result": {
+                "hits": {
+                    "@total": "1001",
+                    "@sent": "1",
+                    "@first": "1000",
+                    "hit": [_search_hit(1000)],
+                }
+            }
+        }
+        mock_get.side_effect = [
+            _mock_json_response(first_page),
+            _mock_json_response(second_page),
+        ]
+
+        papers = self.client._fetch_from_search("ICSE", 2025, dblp_stream="conf/icse", venue_aliases=["ICSE"])
+
+        self.assertEqual(len(papers), 1001)
+        self.assertEqual([call.kwargs["params"]["f"] for call in mock_get.call_args_list], [0, 1000])
+        self.assertTrue(all(call.kwargs["params"]["h"] == 1000 for call in mock_get.call_args_list))
 
     @patch('src.clients.dblp_client.requests.Session.get')
     def test_fetch_papers_raises_when_search_request_fails(self, mock_get):

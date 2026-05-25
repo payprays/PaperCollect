@@ -499,6 +499,55 @@ def test_search_endpoint_supports_concept_mode(tmp_path):
     assert "Software Supply Chain" in payload["results"][0]["matched_concepts"]
 
 
+def test_search_endpoint_accepts_multiple_conferences_and_ccf_filter(tmp_path):
+    data_dir = tmp_path / "data"
+    data_dir.mkdir()
+    for filename, title, venue in [
+        ("icse_2025.json", "Fuzzing Runtime APIs", "ICSE"),
+        ("fse_2025.json", "Fuzzing Compiler Pipelines", "FSE"),
+        ("ndss_2025.json", "Fuzzing Malware Sandboxes", "NDSS"),
+    ]:
+        (data_dir / filename).write_text(
+            json.dumps(
+                [
+                    {
+                        "title": title,
+                        "authors": ["A. Researcher"],
+                        "venue": venue,
+                        "year": 2025,
+                        "abstract": "A fuzzing paper.",
+                    }
+                ]
+            ),
+            encoding="utf-8",
+        )
+    config_path = tmp_path / "config.yaml"
+    config_path.write_text(
+        yaml.safe_dump(
+            {
+                "include_ccfddl_catalog": False,
+                "conferences": [
+                    {"id": "icse", "display_name": "ICSE", "category": "SE", "tier": {"ccf": "A"}},
+                    {"id": "fse", "display_name": "FSE", "category": "SE", "tier": {"ccf": "B"}},
+                    {"id": "ndss", "display_name": "NDSS", "category": "SC", "tier": {"ccf": "A"}},
+                ],
+                "years": [2025],
+                "output_dir": str(data_dir),
+            }
+        ),
+        encoding="utf-8",
+    )
+
+    client = create_app(str(config_path)).test_client()
+    response = client.get("/api/search?q=fuzzing&conference=icse&conference=fse&ccf=A")
+
+    assert response.status_code == 200
+    payload = response.get_json()
+    assert payload["conferences"] == ["icse", "fse"]
+    assert payload["ccf"] == "A"
+    assert [result["conference"] for result in payload["results"]] == ["icse"]
+
+
 def test_search_endpoint_rejects_unknown_mode(tmp_path):
     config_path = tmp_path / "config.yaml"
     config_path.write_text(

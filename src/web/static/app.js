@@ -4,6 +4,7 @@ const state = {
   categories: [],
   focusTags: [],
   selectedCollectConferences: new Set(),
+  selectedSearchConferences: new Set(),
 };
 
 const $ = (selector) => document.querySelector(selector);
@@ -41,11 +42,13 @@ async function loadOptions() {
   fillCategorySelect($("#search-category"), state.categories, true);
   fillFocusSelect($("#collect-focus"), state.focusTags, true);
   fillFocusSelect($("#search-focus"), state.focusTags, true);
+  fillCcfSelect($("#collect-ccf"), deriveCcfTiers(state.conferences), true);
+  fillCcfSelect($("#search-ccf"), deriveCcfTiers(state.conferences), true);
   if (!state.selectedCollectConferences.size && state.conferences.length) {
     state.selectedCollectConferences.add(state.conferences[0].id);
   }
   renderCollectConferencePicker();
-  fillConferenceSelect($("#search-conference"), state.conferences, null, null, true);
+  renderSearchConferencePicker();
   fillYearSuggestions($("#year-options"), data.years);
   $("#year").value = guessDefaultYear(data.years);
   $("#limit").value = data.limit_per_conference || 0;
@@ -102,58 +105,76 @@ function fillFocusSelect(select, focusTags, includeAll = false) {
   }
 }
 
-function fillConferenceSelect(select, conferences, category = null, focus = null, includeAll = false) {
+function fillCcfSelect(select, tiers, includeAll = false) {
   select.innerHTML = "";
   if (includeAll) {
-    const all = document.createElement("option");
-    all.value = "";
-    all.textContent = "All conferences";
-    select.appendChild(all);
+    const option = document.createElement("option");
+    option.value = "";
+    option.textContent = "All CCF tiers";
+    select.appendChild(option);
   }
-
-  const grouped = new Map();
-  for (const conference of conferences) {
-    if (category && conference.category !== category) {
-      continue;
-    }
-    if (focus && !(conference.focus_tags || []).includes(focus)) {
-      continue;
-    }
-    const group = conference.category || "Other";
-    if (!grouped.has(group)) {
-      grouped.set(group, []);
-    }
-    grouped.get(group).push(conference);
-  }
-
-  for (const [group, items] of grouped) {
-    const optgroup = document.createElement("optgroup");
-    optgroup.label = categoryLabel(group);
-    for (const conference of items) {
-      const option = document.createElement("option");
-      option.value = conference.id;
-      option.textContent = conference.display_name;
-      if (conference.full_name) {
-        option.title = conference.full_name;
-      }
-      optgroup.appendChild(option);
-    }
-    select.appendChild(optgroup);
+  for (const tier of tiers) {
+    const option = document.createElement("option");
+    option.value = tier;
+    option.textContent = `CCF ${tier}`;
+    select.appendChild(option);
   }
 }
 
-function visibleCollectConferences() {
-  const category = $("#collect-category").value || null;
-  const focus = $("#collect-focus").value || null;
-  return state.conferences.filter((conference) => {
-    if (category && conference.category !== category) {
-      return false;
+function deriveCcfTiers(conferences) {
+  const order = ["A", "B", "C", "N"];
+  const tiers = new Set(
+    conferences
+      .map((conference) => conferenceCcf(conference))
+      .filter(Boolean),
+  );
+  return [...tiers].sort((left, right) => {
+    const leftIndex = order.indexOf(left);
+    const rightIndex = order.indexOf(right);
+    if (leftIndex === -1 && rightIndex === -1) {
+      return left.localeCompare(right);
     }
-    if (focus && !(conference.focus_tags || []).includes(focus)) {
-      return false;
+    if (leftIndex === -1) {
+      return 1;
     }
-    return true;
+    if (rightIndex === -1) {
+      return -1;
+    }
+    return leftIndex - rightIndex;
   });
+}
+
+function visibleCollectConferences() {
+  return visibleConferences({
+    category: $("#collect-category").value || null,
+    focus: $("#collect-focus").value || null,
+    ccf: $("#collect-ccf").value || null,
+  });
+}
+
+function visibleSearchConferences() {
+  return visibleConferences({
+    category: $("#search-category").value || null,
+    focus: $("#search-focus").value || null,
+    ccf: $("#search-ccf").value || null,
+  });
+}
+
+function visibleConferences(filters) {
+  return state.conferences.filter((conference) => conferenceMatchesFilters(conference, filters));
+}
+
+function conferenceMatchesFilters(conference, filters) {
+  if (filters.category && conference.category !== filters.category) {
+    return false;
+  }
+  if (filters.focus && !(conference.focus_tags || []).includes(filters.focus)) {
+    return false;
+  }
+  if (filters.ccf && conferenceCcf(conference) !== filters.ccf) {
+    return false;
+  }
+  return true;
 }
 
 function renderCollectConferencePicker() {
@@ -167,47 +188,22 @@ function renderCollectConferencePicker() {
     return;
   }
 
-  const grouped = new Map();
-  for (const conference of visible) {
-    const group = conference.category || "Other";
-    if (!grouped.has(group)) {
-      grouped.set(group, []);
-    }
-    grouped.get(group).push(conference);
-  }
-
-  for (const [group, conferences] of grouped) {
+  for (const group of groupConferences(visible)) {
     const groupNode = document.createElement("section");
     groupNode.className = "conference-group";
 
     const title = document.createElement("h3");
-    title.textContent = categoryLabel(group);
+    title.textContent = group.label;
     groupNode.appendChild(title);
 
     const list = document.createElement("div");
     list.className = "conference-list";
-    for (const conference of conferences) {
-      const option = document.createElement("label");
-      option.className = "conference-option";
-      option.title = conference.full_name || conference.display_name;
-
-      const checkbox = document.createElement("input");
-      checkbox.type = "checkbox";
-      checkbox.value = conference.id;
-      checkbox.checked = state.selectedCollectConferences.has(conference.id);
-      checkbox.addEventListener("change", () => {
-        if (checkbox.checked) {
-          state.selectedCollectConferences.add(conference.id);
-        } else {
-          state.selectedCollectConferences.delete(conference.id);
-        }
-        updateCollectConferenceCount(visible.length);
-      });
-
-      const text = document.createElement("span");
-      text.textContent = conference.display_name;
-      option.append(checkbox, text);
-      list.appendChild(option);
+    for (const conference of group.conferences) {
+      list.appendChild(
+        conferenceCheckbox(conference, state.selectedCollectConferences, () => {
+          updateCollectConferenceCount(visible.length);
+        }),
+      );
     }
     groupNode.appendChild(list);
     picker.appendChild(groupNode);
@@ -240,6 +236,126 @@ function updateCollectConferenceCount(visibleCount) {
     `${state.selectedCollectConferences.size} selected · ${visibleCount} visible`;
 }
 
+function renderSearchConferencePicker() {
+  const picker = $("#search-conference-picker");
+  const visible = visibleSearchConferences();
+  picker.innerHTML = "";
+
+  if (!visible.length) {
+    picker.innerHTML = '<p class="muted">No conferences match the current filters.</p>';
+    updateSearchConferenceCount(0);
+    return;
+  }
+
+  for (const group of groupConferences(visible)) {
+    const groupNode = document.createElement("section");
+    groupNode.className = "conference-group";
+
+    const title = document.createElement("h3");
+    title.textContent = group.label;
+    groupNode.appendChild(title);
+
+    const list = document.createElement("div");
+    list.className = "conference-list";
+    for (const conference of group.conferences) {
+      list.appendChild(
+        conferenceCheckbox(conference, state.selectedSearchConferences, () => {
+          updateSearchConferenceCount(visible.length);
+        }),
+      );
+    }
+    groupNode.appendChild(list);
+    picker.appendChild(groupNode);
+  }
+
+  updateSearchConferenceCount(visible.length);
+}
+
+function selectVisibleSearchConferences() {
+  for (const conference of visibleSearchConferences()) {
+    state.selectedSearchConferences.add(conference.id);
+  }
+  renderSearchConferencePicker();
+}
+
+function clearVisibleSearchConferences() {
+  for (const conference of visibleSearchConferences()) {
+    state.selectedSearchConferences.delete(conference.id);
+  }
+  renderSearchConferencePicker();
+}
+
+function clearAllSearchConferences() {
+  state.selectedSearchConferences.clear();
+  renderSearchConferencePicker();
+}
+
+function updateSearchConferenceCount(visibleCount) {
+  const selected = state.selectedSearchConferences.size;
+  $("#search-conference-count").textContent = selected
+    ? `${selected} selected · ${visibleCount} visible`
+    : `All conferences · ${visibleCount} visible`;
+}
+
+function groupConferences(conferences) {
+  const grouped = new Map();
+  for (const conference of conferences) {
+    const category = conference.category || "Other";
+    const ccf = conferenceCcf(conference) || "N";
+    const key = `${category}|${ccf}`;
+    if (!grouped.has(key)) {
+      grouped.set(key, {
+        label: `${categoryLabel(category)} · CCF ${ccf}`,
+        conferences: [],
+      });
+    }
+    grouped.get(key).conferences.push(conference);
+  }
+  return [...grouped.values()];
+}
+
+function conferenceCheckbox(conference, selection, onChange) {
+  const option = document.createElement("label");
+  option.className = "conference-option";
+  option.title = conference.full_name || conference.display_name;
+
+  const checkbox = document.createElement("input");
+  checkbox.type = "checkbox";
+  checkbox.value = conference.id;
+  checkbox.checked = selection.has(conference.id);
+  checkbox.addEventListener("change", () => {
+    if (checkbox.checked) {
+      selection.add(conference.id);
+    } else {
+      selection.delete(conference.id);
+    }
+    onChange();
+  });
+
+  const text = document.createElement("span");
+  text.className = "conference-option-text";
+  text.textContent = conference.display_name;
+
+  const meta = document.createElement("span");
+  meta.className = "conference-option-meta";
+  meta.textContent = conferenceSummary(conference);
+
+  option.append(checkbox, text, meta);
+  return option;
+}
+
+function conferenceSummary(conference) {
+  const parts = [`CCF ${conferenceCcf(conference) || "N"}`];
+  if ((conference.focus_tags || []).length) {
+    parts.push(conference.focus_tags.join(", "));
+  }
+  return parts.join(" · ");
+}
+
+function conferenceCcf(conference) {
+  return String((conference.tier || {}).ccf || "").trim().toUpperCase();
+}
+
 function categoryLabel(categoryId) {
   const category = state.categories.find((item) => item.id === categoryId);
   return category ? formatCategoryLabel(category) : categoryId;
@@ -253,16 +369,6 @@ function formatCategoryLabel(category) {
       ? `${localName} / ${englishName}`
       : localName || englishName || category.id;
   return `${category.id} · ${label}`;
-}
-
-function filterConferences(categorySelect, focusSelect, conferenceSelect, includeAll = false) {
-  fillConferenceSelect(
-    conferenceSelect,
-    state.conferences,
-    categorySelect.value || null,
-    focusSelect.value || null,
-    includeAll,
-  );
 }
 
 async function loadFeeds() {
@@ -330,7 +436,7 @@ async function searchPapers(event) {
   const query = $("#search-query").value.trim();
   const category = $("#search-category").value;
   const focus = $("#search-focus").value;
-  const conference = $("#search-conference").value;
+  const ccf = $("#search-ccf").value;
   const year = $("#search-year").value;
   const mode = $("#search-mode").value;
 
@@ -338,7 +444,10 @@ async function searchPapers(event) {
   if (mode) params.set("mode", mode);
   if (category) params.set("category", category);
   if (focus) params.set("focus", focus);
-  if (conference) params.set("conference", conference);
+  if (ccf) params.set("ccf", ccf);
+  for (const conference of state.selectedSearchConferences) {
+    params.append("conference", conference);
+  }
   if (year) params.set("year", year);
   params.set("limit", "30");
 
@@ -380,6 +489,7 @@ function renderSearchResults(results) {
       paper.display_name || paper.venue,
       paper.year,
       paper.category ? categoryLabel(paper.category) : null,
+      paper.tier && paper.tier.ccf ? `CCF ${paper.tier.ccf}` : null,
       paper.focus_tags && paper.focus_tags.length ? paper.focus_tags.join(", ") : null,
       paper.matched_concepts && paper.matched_concepts.length ? `concepts: ${paper.matched_concepts.join(", ")}` : null,
     ].filter(Boolean).join(" · ");
@@ -467,15 +577,24 @@ $("#collect-category").addEventListener("change", () => {
 $("#collect-focus").addEventListener("change", () => {
   renderCollectConferencePicker();
 });
+$("#collect-ccf").addEventListener("change", () => {
+  renderCollectConferencePicker();
+});
 $("#collect-select-visible").addEventListener("click", selectVisibleCollectConferences);
 $("#collect-clear-visible").addEventListener("click", clearVisibleCollectConferences);
 $("#collect-clear-all").addEventListener("click", clearAllCollectConferences);
 $("#search-category").addEventListener("change", () => {
-  filterConferences($("#search-category"), $("#search-focus"), $("#search-conference"), true);
+  renderSearchConferencePicker();
 });
 $("#search-focus").addEventListener("change", () => {
-  filterConferences($("#search-category"), $("#search-focus"), $("#search-conference"), true);
+  renderSearchConferencePicker();
 });
+$("#search-ccf").addEventListener("change", () => {
+  renderSearchConferencePicker();
+});
+$("#search-select-visible").addEventListener("click", selectVisibleSearchConferences);
+$("#search-clear-visible").addEventListener("click", clearVisibleSearchConferences);
+$("#search-clear-all").addEventListener("click", clearAllSearchConferences);
 loadOptions().catch((error) => {
   setStatus(`Failed to load app options: ${error}`, "failed");
 });

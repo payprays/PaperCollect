@@ -98,6 +98,51 @@ def test_search_saved_papers_filters_by_focus_tag(tmp_path):
     assert "cloud_native" in results[0]["focus_tags"]
 
 
+def test_search_saved_papers_filters_by_multiple_conferences_and_ccf(tmp_path):
+    data_dir = tmp_path / "data"
+    data_dir.mkdir()
+    for filename, title, venue in [
+        ("icse_2025.json", "Fuzzing Runtime APIs", "ICSE"),
+        ("fse_2025.json", "Fuzzing Compiler Pipelines", "FSE"),
+        ("ndss_2025.json", "Fuzzing Malware Sandboxes", "NDSS"),
+    ]:
+        (data_dir / filename).write_text(
+            json.dumps(
+                [
+                    {
+                        "title": title,
+                        "authors": ["A. Researcher"],
+                        "venue": venue,
+                        "year": 2025,
+                        "abstract": "A fuzzing paper.",
+                    }
+                ]
+            ),
+            encoding="utf-8",
+        )
+
+    config = {
+        "include_ccfddl_catalog": False,
+        "conferences": [
+            {"id": "icse", "display_name": "ICSE", "category": "SE", "tier": {"ccf": "A"}},
+            {"id": "fse", "display_name": "FSE", "category": "SE", "tier": {"ccf": "B"}},
+            {"id": "ndss", "display_name": "NDSS", "category": "SC", "tier": {"ccf": "A"}},
+        ],
+    }
+
+    results = search_saved_papers(
+        config,
+        str(data_dir),
+        "fuzzing",
+        conferences=["icse", "fse"],
+        ccf="A",
+        limit=10,
+    )
+
+    assert [result["conference"] for result in results] == ["icse"]
+    assert results[0]["tier"] == {"ccf": "A"}
+
+
 def test_search_saved_papers_keyword_mode_matches_conference_metadata(tmp_path):
     data_dir = tmp_path / "data"
     data_dir.mkdir()

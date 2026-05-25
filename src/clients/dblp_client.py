@@ -20,6 +20,7 @@ class DBLPClient(PaperSource):
     BASE_URL = "https://dblp.org/search/publ/api"
     DB_URL = "https://dblp.org/db"
     DEFAULT_TIMEOUT = (10, 30)
+    SEARCH_PAGE_SIZE = 1000
 
     def __init__(self, timeout: float | tuple[float, float] = DEFAULT_TIMEOUT):
         # Configure retry strategy for robustness
@@ -141,50 +142,81 @@ class DBLPClient(PaperSource):
         else:
             query = f"venue:{conference} year:{year}"
 
-        params = {
-            "q": query,
-            "h": 1000,  # Max results
-            "format": "json"
-        }
-
         try:
-            response = self.session.get(self.BASE_URL, params=params, timeout=self.timeout)
-            response.raise_for_status()
-            data = response.json()
-
             papers = []
-            hits = data.get("result", {}).get("hits", {}).get("hit", [])
+            first = 0
+            while True:
+                params = {
+                    "q": query,
+                    "h": self.SEARCH_PAGE_SIZE,
+                    "f": first,
+                    "format": "json",
+                }
+                response = self.session.get(self.BASE_URL, params=params, timeout=self.timeout)
+                response.raise_for_status()
+                data = response.json()
+                hits_root = data.get("result", {}).get("hits", {})
+                hits = self._as_hit_list(hits_root.get("hit", []))
 
-            for hit in hits:
-                info = hit.get("info", {})
+                for hit in hits:
+                    info = hit.get("info", {})
+                    paper = self._paper_from_search_info(info, conference)
 
-                # Extract authors
-                authors_data = info.get("authors", {}).get("author", [])
-                if isinstance(authors_data, dict):
-                    authors = [authors_data.get("text", "")]
-                elif isinstance(authors_data, list):
-                    authors = [a.get("text", "") for a in authors_data]
-                else:
-                    authors = []
+                    # Filter out workshops and other pollution
+                    if self._is_valid_venue(paper.venue, conference, venue_aliases):
+                        papers.append(paper)
 
-                # Create Paper object
-                paper = Paper(
-                    title=info.get("title", ""),
-                    authors=authors,
-                    year=int(info.get("year", 0)),
-                    venue=info.get("venue", conference),
-                    dblp_key=info.get("key"),
-                    url=info.get("url")
-                )
-                
-                # Filter out workshops and other pollution
-                if self._is_valid_venue(paper.venue, conference, venue_aliases):
-                    papers.append(paper)
+                if not hits:
+                    break
+
+                sent = self._safe_int(hits_root.get("@sent"), len(hits))
+                page_first = self._safe_int(hits_root.get("@first"), first)
+                total = self._safe_int(hits_root.get("@total"), None)
+                next_first = page_first + sent
+
+                if sent <= 0 or (total is not None and next_first >= total):
+                    break
+                if sent < self.SEARCH_PAGE_SIZE:
+                    break
+                first = next_first
 
             return papers
 
         except (requests.RequestException, ValueError) as e:
             raise DBLPFetchError(f"Could not fetch DBLP search data for {conference} {year}: {e}") from e
+
+    def _as_hit_list(self, hits: list[dict] | dict | None) -> list[dict]:
+        if hits is None:
+            return []
+        if isinstance(hits, dict):
+            return [hits]
+        if isinstance(hits, list):
+            return hits
+        return []
+
+    def _paper_from_search_info(self, info: dict, conference: str) -> Paper:
+        authors_data = info.get("authors", {}).get("author", [])
+        if isinstance(authors_data, dict):
+            authors = [authors_data.get("text", "")]
+        elif isinstance(authors_data, list):
+            authors = [a.get("text", "") for a in authors_data]
+        else:
+            authors = []
+
+        return Paper(
+            title=info.get("title", ""),
+            authors=authors,
+            year=int(info.get("year", 0)),
+            venue=info.get("venue", conference),
+            dblp_key=info.get("key"),
+            url=info.get("url"),
+        )
+
+    def _safe_int(self, value: object, default: int | None) -> int | None:
+        try:
+            return int(value)
+        except (TypeError, ValueError):
+            return default
 
     def _fetch_from_toc(
         self,

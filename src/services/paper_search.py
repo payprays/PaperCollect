@@ -4,6 +4,7 @@ import os
 import re
 import threading
 from collections import Counter
+from collections.abc import Sequence
 from difflib import SequenceMatcher
 from functools import lru_cache
 from glob import glob
@@ -253,6 +254,8 @@ def search_saved_papers(
     category: str | None = None,
     focus: str | None = None,
     conference: str | None = None,
+    conferences: Sequence[str] | None = None,
+    ccf: str | None = None,
     year: int | None = None,
     limit: int = 25,
     mode: str = "keyword",
@@ -269,7 +272,8 @@ def search_saved_papers(
         query = _strip_query_years(query, query_years)
     tokens = _tokenize(query)
     query_concepts = _extract_concepts(query, allow_fuzzy=True) if mode == "concept" else {}
-    conference_filter = find_conference(config, conference) if conference else None
+    conference_filters = _conference_filter_ids(config, conference, conferences)
+    ccf_filter = _normalize_ccf_filter(ccf)
     conference_lookup = _conference_lookup(config)
     entry_concepts_cache: dict[str, dict[str, set[str]]] = {}
     candidates = []
@@ -284,9 +288,11 @@ def search_saved_papers(
             continue
 
         entry = conference_lookup.get(_normalize_key(file_conference))
-        if conference_filter and (not entry or entry.id != conference_filter.id):
+        if conference_filters and (not entry or entry.id not in conference_filters):
             continue
         if category and (not entry or entry.category != category):
+            continue
+        if ccf_filter and (not entry or _normalize_ccf_filter(entry.tier.get("ccf")) != ccf_filter):
             continue
         if focus and (not entry or focus not in entry.focus_tags):
             continue
@@ -352,6 +358,7 @@ def search_saved_papers(
             "display_name": entry.display_name if entry else file_conference,
             "category": entry.category if entry else None,
             "category_name": entry.category_name if entry else None,
+            "tier": entry.tier if entry else {},
             "focus_tags": list(entry.focus_tags) if entry else [],
             "search_mode": mode,
             "matched_concepts": matched_concepts,
@@ -362,6 +369,30 @@ def search_saved_papers(
 
     results.sort(key=lambda item: (item["score"], item.get("year") or 0), reverse=True)
     return results[:limit]
+
+
+def _conference_filter_ids(
+    config: dict[str, Any],
+    conference: str | None,
+    conferences: Sequence[str] | None,
+) -> set[str]:
+    values = []
+    if conference:
+        values.append(conference)
+    if conferences:
+        values.extend(conferences)
+
+    ids = set()
+    for value in values:
+        entry = find_conference(config, value)
+        if entry:
+            ids.add(entry.id)
+    return ids
+
+
+def _normalize_ccf_filter(value: object) -> str | None:
+    text = str(value or "").strip().upper()
+    return text or None
 
 
 def _conference_lookup(config: dict[str, Any]) -> dict[str, ConferenceEntry]:

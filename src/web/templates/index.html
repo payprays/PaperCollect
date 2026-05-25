@@ -29,6 +29,10 @@
                   <select id="collect-focus" name="focus"></select>
                 </label>
                 <label>
+                  CCF
+                  <select id="collect-ccf" name="ccf"></select>
+                </label>
+                <label>
                   Year
                   <input id="year" name="year" type="number" min="1900" max="2099" step="1" list="year-options">
                   <datalist id="year-options"></datalist>
@@ -78,14 +82,21 @@
                 <select id="search-focus" name="focus"></select>
               </label>
               <label>
-                Conference
-                <select id="search-conference" name="conference"></select>
+                CCF
+                <select id="search-ccf" name="ccf"></select>
                 </label>
                 <label>
                   Year
                   <input id="search-year" name="year" type="number" min="1900" max="2099" step="1" list="year-options">
                 </label>
               </div>
+              <div class="conference-tools">
+                <span id="search-conference-count">All conferences</span>
+                <button id="search-select-visible" type="button" class="secondary">Select visible</button>
+                <button id="search-clear-visible" type="button" class="secondary">Clear visible</button>
+                <button id="search-clear-all" type="button" class="secondary">Search all</button>
+              </div>
+              <div id="search-conference-picker" class="conference-picker compact" aria-label="Conferences to search"></div>
               <div class="actions">
                 <button type="submit">Search</button>
               </div>

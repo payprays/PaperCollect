@@ -68,13 +68,13 @@ h1 {
 
 .form-grid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   gap: 14px;
 }
 
 .search-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   gap: 14px;
 }
 
@@ -162,6 +162,10 @@ button.secondary:hover {
   background: #fbfcfe;
 }
 
+.conference-picker.compact {
+  max-height: 240px;
+}
+
 .conference-group {
   display: grid;
   gap: 6px;
@@ -181,15 +185,15 @@ button.secondary:hover {
 
 .conference-list {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
   gap: 4px 12px;
 }
 
 .conference-option {
-  display: flex;
-  align-items: center;
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
   min-height: 30px;
-  gap: 7px;
+  gap: 2px 7px;
   color: var(--text);
   font-size: 13px;
   font-weight: 600;
@@ -200,8 +204,18 @@ button.secondary:hover {
   margin: 0;
 }
 
-.conference-option span {
+.conference-option-text {
   overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.conference-option-meta {
+  grid-column: 2;
+  overflow: hidden;
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 600;
   text-overflow: ellipsis;
   white-space: nowrap;
 }

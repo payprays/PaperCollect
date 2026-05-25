@@ -227,13 +227,21 @@ def create_app(config_path: str = "config.yaml") -> Flask:
         query = request.args.get("q", "").strip()
         category = request.args.get("category") or None
         focus = request.args.get("focus") or None
-        conference = request.args.get("conference") or None
+        conferences = _request_list_args("conference", "conferences")
+        ccf = _normalize_optional_text(request.args.get("ccf") or request.args.get("tier"))
         year = _optional_int(request.args.get("year"))
         limit = _optional_int(request.args.get("limit")) or 25
         mode = request.args.get("mode") or "keyword"
 
-        if conference and find_conference(config, conference) is None:
-            return jsonify({"error": "Choose a conference from config.yaml."}), 400
+        for conference in conferences:
+            if find_conference(config, conference) is None:
+                return jsonify({"error": "Choose conferences from config.yaml."}), 400
+        if ccf and ccf not in _known_ccf_tiers(config):
+            return jsonify({"error": "Choose a known CCF tier."}), 400
+        if category and category not in {item["id"] for item in catalog_categories(config)}:
+            return jsonify({"error": "Choose a known category."}), 400
+        if focus and focus not in {item["id"] for item in focus_tag_options(config)}:
+            return jsonify({"error": "Choose a known focus area."}), 400
         if limit < 1 or limit > 100:
             return jsonify({"error": "Limit must be between 1 and 100."}), 400
         if year is not None and not valid_collection_year(year):
@@ -247,12 +255,13 @@ def create_app(config_path: str = "config.yaml") -> Flask:
             query,
             category=category,
             focus=focus,
-            conference=conference,
+            conferences=conferences,
+            ccf=ccf,
             year=year,
             limit=limit,
             mode=mode,
         )
-        return jsonify({"results": results, "mode": mode})
+        return jsonify({"results": results, "mode": mode, "conferences": conferences, "ccf": ccf})
 
     @route("/feed/<path:conference>/<int:year>.xml", methods=["GET"])
     def feed(conference: str, year: int) -> tuple[Response, int] | Response:
@@ -549,6 +558,34 @@ def _optional_int(value: Any) -> int | None:
         return int(value)
     except (TypeError, ValueError):
         return None
+
+
+def _request_list_args(*names: str) -> list[str]:
+    values = []
+    seen = set()
+    for name in names:
+        for raw_value in request.args.getlist(name):
+            for value in str(raw_value).split(","):
+                text = value.strip()
+                key = text.lower()
+                if text and key not in seen:
+                    values.append(text)
+                    seen.add(key)
+    return values
+
+
+def _normalize_optional_text(value: Any) -> str | None:
+    text = str(value or "").strip().upper()
+    return text or None
+
+
+def _known_ccf_tiers(config: dict[str, Any]) -> set[str]:
+    tiers = set()
+    for entry in normalize_conferences(config):
+        value = _normalize_optional_text(entry.tier.get("ccf"))
+        if value:
+            tiers.add(value)
+    return tiers
 
 
 def _find_saved_output(output_dir: str, conference: ConferenceEntry, year: int) -> str | None:
