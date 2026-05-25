@@ -14,6 +14,37 @@ dependencies = [
     "tqdm>=4.67.3",
 ]
 
+[project.scripts]
+papercollect-collect = "main:main"
+papercollect-search = "search_papers:main"
+papercollect-web = "web:main"
+pc-collect = "main:main"
+pc-search = "search_papers:main"
+pc-web = "web:main"
+
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+py-modules = ["main", "search_papers", "web"]
+packages = [
+    "src",
+    "src.clients",
+    "src.core",
+    "src.data",
+    "src.services",
+    "src.web",
+    "src.web.static",
+    "src.web.templates",
+]
+include-package-data = true
+
+[tool.setuptools.package-data]
+"src.data" = ["*.yaml"]
+"src.web.static" = ["*.css", "*.js"]
+"src.web.templates" = ["*.html"]
+
 [dependency-groups]
 dev = [
     "pytest>=9.0.3",

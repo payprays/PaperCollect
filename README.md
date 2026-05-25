@@ -17,6 +17,15 @@ uv sync                                         # 基于 pyproject.toml / uv.loc
 source .venv/bin/activate
 ```
 
+快速入口
+```bash
+uv run pc-web                                  # 启动 Web UI，默认 http://127.0.0.1:5000
+uv run pc-collect                              # 按 config.yaml 批量采集论文
+uv run pc-search "kubernetes security" --mode search --top_k 5
+```
+
+等价的长命令是 `papercollect-web`、`papercollect-collect`、`papercollect-search`。
+
 配置
 - 修改 `config.yaml` 选择会议、年份、并发数、输出目录等。
 - 不要把密钥写入仓库：推荐 `export OPENAI_API_KEY=<your-key>`；`config.yaml` 中的 `openai_api_key` 为空占位。
@@ -49,13 +58,13 @@ url_base: ""             # 可选，例如反代到 /papercollect 时设为 "/pa
 
 采集与补全论文
 ```bash
-uv run python main.py --config config.yaml
+uv run pc-collect --config config.yaml
 ```
 按会议/年份增量获取并补全论文，写入 `data/` 目录（每个会议-年份一个 JSON）。重复运行只补全缺失的元数据。
 
 Web 前端 / RSS
 ```bash
-uv run python web.py --config config.yaml --host 127.0.0.1 --port 5000
+uv run pc-web --config config.yaml --host 127.0.0.1 --port 5000
 ```
 打开 `http://127.0.0.1:5000` 后，可以按 CCFDDL 分类筛选会议，并输入要采集的年份。`config.yaml` 中的 `years` 只作为 UI 建议值，不限制实际输入；后端允许合理年份，便于采集最新 proceedings。会议配置使用统一 catalog：`id` 作为文件/RSS slug，`display_name` 用于界面展示，`dblp_stream` 用于权威 DBLP stream 查询。默认会合并 `src/data/ccf_conferences.yaml` 中来自 CCFDDL 的 300+ 会议；如只想使用本地 `config.yaml`，可设置 `include_ccfddl_catalog: false`。采集完成后会生成对应 RSS 链接，例如：
 ```text
@@ -79,11 +88,11 @@ RAG 检索 / 问答
 - 先确保已有 `data/` 下的 JSON 数据，并设置密钥：`export OPENAI_API_KEY=<your-key>`。
 - 检索模式（返回排序结果，自动中译标题/摘要）：
 ```bash
-uv run python search_papers.py "LLM-based fuzzing for systems software" --top_k 5 --mode search --year 2024 --exclude Workshop Poster
+uv run pc-search "LLM-based fuzzing for systems software" --top_k 5 --mode search --year 2024 --exclude Workshop Poster
 ```
 - 问答模式（基于 top K 论文生成答案）：
 ```bash
-uv run python search_papers.py "What defenses work against prompt injection?" --top_k 10 --mode ask --venue NDSS
+uv run pc-search "What defenses work against prompt injection?" --top_k 10 --mode ask --venue NDSS
 ```
 
 提示

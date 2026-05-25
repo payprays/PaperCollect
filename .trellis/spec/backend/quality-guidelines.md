@@ -60,6 +60,9 @@ Questions to answer:
 
 ### 2. Signatures
 - Command: `uv run python web.py --config config.yaml --host 127.0.0.1 --port 5000`
+- Command alias: `uv run pc-web --config config.yaml --host 127.0.0.1 --port 5000`
+- Command alias: `uv run pc-collect --config config.yaml`
+- Command alias: `uv run pc-search "<query>" --mode <search|ask> --top_k <n>`
 - API: `GET /api/options`
 - API: `POST /api/collect`
 - API: `GET /api/jobs/<job_id>`
