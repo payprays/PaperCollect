@@ -19,7 +19,7 @@ source .venv/bin/activate
 
 快速入口
 ```bash
-uv run pc-web                                  # 启动 Web UI，默认 http://127.0.0.1:5000
+uv run pc-web                                  # 启动 Web UI，默认绑定 0.0.0.0:5000
 uv run pc-collect                              # 按 config.yaml 批量采集论文
 uv run pc-search "kubernetes security" --mode search --top_k 5
 ```
@@ -64,9 +64,9 @@ uv run pc-collect --config config.yaml
 
 Web 前端 / RSS
 ```bash
-uv run pc-web --config config.yaml --host 127.0.0.1 --port 5000
+uv run pc-web --config config.yaml --host 0.0.0.0 --port 5000
 ```
-打开 `http://127.0.0.1:5000` 后，可以按 CCFDDL 分类筛选会议，并输入要采集的年份。`config.yaml` 中的 `years` 只作为 UI 建议值，不限制实际输入；后端允许合理年份，便于采集最新 proceedings。会议配置使用统一 catalog：`id` 作为文件/RSS slug，`display_name` 用于界面展示，`dblp_stream` 用于权威 DBLP stream 查询。默认会合并 `src/data/ccf_conferences.yaml` 中来自 CCFDDL 的 300+ 会议；如只想使用本地 `config.yaml`，可设置 `include_ccfddl_catalog: false`。采集完成后会生成对应 RSS 链接，例如：
+本机打开 `http://127.0.0.1:5000`；局域网设备用这台机器的 IP 加端口访问。Web UI 可以按 CCFDDL 分类筛选会议，并输入要采集的年份。`config.yaml` 中的 `years` 只作为 UI 建议值，不限制实际输入；后端允许合理年份，便于采集最新 proceedings。会议配置使用统一 catalog：`id` 作为文件/RSS slug，`display_name` 用于界面展示，`dblp_stream` 用于权威 DBLP stream 查询。默认会合并 `src/data/ccf_conferences.yaml` 中来自 CCFDDL 的 300+ 会议；如只想使用本地 `config.yaml`，可设置 `include_ccfddl_catalog: false`。采集完成后会生成对应 RSS 链接，例如：
 ```text
 http://127.0.0.1:5000/feed/icse/2025.xml
 ```

@@ -59,8 +59,8 @@ Questions to answer:
 - Applies to `web.py`, `src/web/`, `src/services/rss_service.py`, and `src/core/conference_catalog.py`.
 
 ### 2. Signatures
-- Command: `uv run python web.py --config config.yaml --host 127.0.0.1 --port 5000`
-- Command alias: `uv run pc-web --config config.yaml --host 127.0.0.1 --port 5000`
+- Command: `uv run python web.py --config config.yaml --host 0.0.0.0 --port 5000`
+- Command alias: `uv run pc-web --config config.yaml --host 0.0.0.0 --port 5000`
 - Command alias: `uv run pc-collect --config config.yaml`
 - Command alias: `uv run pc-search "<query>" --mode <search|ask> --top_k <n>`
 - API: `GET /api/options`
