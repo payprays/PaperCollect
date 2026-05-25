@@ -1,0 +1,2 @@
+{"file": ".trellis/spec/backend/quality-guidelines.md", "reason": "Validate new vector API and CLI behavior against existing search contracts."}
+{"file": ".trellis/tasks/05-26-agentic-vector-kb/prd.md", "reason": "Check implementation scope against the agreed agentic vector MVP."}

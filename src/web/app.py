@@ -22,6 +22,7 @@ from src.core.conference_catalog import (
 from src.services.metadata_manager import MetadataManager
 from src.services.paper_search import search_saved_papers
 from src.services.rss_service import build_rss_xml, load_papers
+from src.services.vector_index import VectorIndexError, vector_index_status
 
 MAX_JOB_LOG_LINES = 500
 
@@ -231,7 +232,9 @@ def create_app(config_path: str = "config.yaml") -> Flask:
         ccf = _normalize_optional_text(request.args.get("ccf") or request.args.get("tier"))
         year = _optional_int(request.args.get("year"))
         limit = _optional_int(request.args.get("limit")) or 25
-        mode = request.args.get("mode") or "keyword"
+        mode = request.args.get("mode") or "agentic"
+        if mode == "vector":
+            mode = "agentic"
 
         for conference in conferences:
             if find_conference(config, conference) is None:
@@ -246,8 +249,8 @@ def create_app(config_path: str = "config.yaml") -> Flask:
             return jsonify({"error": "Limit must be between 1 and 100."}), 400
         if year is not None and not valid_collection_year(year):
             return jsonify({"error": "Choose a valid year."}), 400
-        if mode not in {"keyword", "concept"}:
-            return jsonify({"error": "Search mode must be keyword or concept."}), 400
+        if mode not in {"keyword", "concept", "agentic"}:
+            return jsonify({"error": "Search mode must be keyword, concept, or agentic."}), 400
 
         results = search_saved_papers(
             config,
@@ -261,7 +264,21 @@ def create_app(config_path: str = "config.yaml") -> Flask:
             limit=limit,
             mode=mode,
         )
-        return jsonify({"results": results, "mode": mode, "conferences": conferences, "ccf": ccf})
+        payload = {"results": results, "mode": mode, "conferences": conferences, "ccf": ccf}
+        if mode == "agentic":
+            try:
+                payload["index_status"] = vector_index_status(config)
+            except (VectorIndexError, OSError, ValueError) as exc:
+                payload["index_status"] = {"indexed": False, "error": str(exc)}
+        return jsonify(payload)
+
+    @route("/api/index/status", methods=["GET"])
+    def index_status() -> tuple[Response, int] | Response:
+        config = _load_config(config_path)
+        try:
+            return jsonify(vector_index_status(config))
+        except (VectorIndexError, OSError, ValueError) as exc:
+            return jsonify({"error": str(exc), "indexed": False}), 503
 
     @route("/feed/<path:conference>/<int:year>.xml", methods=["GET"])
     def feed(conference: str, year: int) -> tuple[Response, int] | Response:

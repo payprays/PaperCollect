@@ -62,7 +62,8 @@ Questions to answer:
 - Command: `uv run python web.py --config config.yaml --host 0.0.0.0 --port 5000`
 - Command alias: `uv run pc-web --config config.yaml --host 0.0.0.0 --port 5000`
 - Command alias: `uv run pc-collect --config config.yaml`
-- Command alias: `uv run pc-search "<query>" --mode <concept|keyword> --top_k <n>`
+- Command alias: `uv run pc-index --config config.yaml`
+- Command alias: `uv run pc-search "<query>" --mode <agentic|concept|keyword> --top_k <n>`
 - API: `GET /api/options`
 - API: `POST /api/collect`
 - API: `GET /api/jobs/<job_id>`
@@ -72,7 +73,8 @@ Questions to answer:
 - Catalog lookup: `find_conference(config, value) -> ConferenceEntry | None`
 - Catalog categories: `catalog_categories(config) -> list[dict]`
 - Focus options: `focus_tag_options(config) -> list[dict]`
-- Search API: `GET /api/search?q=<query>&mode=<keyword|concept>&category=<sub>&focus=<tag>&ccf=<A|B|C|N>&conference=<id>&conference=<id>&year=<year>&limit=<n>`
+- Search API: `GET /api/search?q=<query>&mode=<agentic|keyword|concept>&category=<sub>&focus=<tag>&ccf=<A|B|C|N>&conference=<id>&conference=<id>&year=<year>&limit=<n>`
+- Vector status API: `GET /api/index/status`
 - Config: `url_base` optional path prefix such as `/papercollect`.
 
 ### 3. Contracts
@@ -98,20 +100,28 @@ Questions to answer:
   - Results should include `tier` and `focus_tags` when the conference has them.
   - `mode=keyword` uses local exact/token scoring over saved JSON.
   - `mode=concept` uses local expanded BM25 over saved JSON plus SemRank-lite concept reranking; it must not require embeddings, external vector stores, or `OPENAI_API_KEY`.
+  - `mode=agentic` uses the Qdrant hybrid vector index when available: named dense and sparse vectors are queried independently, then fused with reciprocal-rank fusion. If the index is missing or unavailable, it must fall back to `mode=concept` and include `fallback_reason`/`score_details` in each result.
+  - `mode=vector` is accepted by the Web API/CLI as an alias for `agentic`.
   - Concept results include `matched_concepts`, `concept_score`, `lexical_score`, and `search_mode`.
-  - Search uses saved JSON files only; it must not require embeddings or `OPENAI_API_KEY`.
+  - Agentic results include `retrieval_backend`, `score_details`, `provenance`, and `snippet`.
+  - Search uses saved JSON files and rebuildable local indexes only; it must not require `OPENAI_API_KEY`.
   - Search may receive repeated `conference` parameters or comma-separated `conference`/`conferences` values; all provided conferences must resolve through `find_conference`.
   - Search supports `ccf`/`tier` filtering against `ConferenceEntry.tier["ccf"]`, including non-CCF `N` entries from the CCFDDL catalog.
   - Search should suppress non-paper metadata entries such as proceedings, poster records, chair messages, keynote/front-matter entries, and student/dissertation abstracts.
   - Concept search must treat title/topic matches as stronger than incidental abstract mentions; a paper that only mentions a query concept once in an abstract example should not rank as a topic match.
   - Four-digit years typed in the query, such as `kubernetes 2026`, should be treated as a year filter and removed from scoring tokens.
+- Vector index:
+  - `uv run pc-index` builds a rebuildable Qdrant index from `data/*.json`; JSON files remain the source of truth.
+  - The default local index path is `data/qdrant/`; it must be ignored by git.
+  - Index payloads must preserve stable paper IDs, conference, display name, year, category, CCF tier, focus tags, DBLP key, URL, source file, and source index.
+  - Unit tests must use deterministic hash embeddings or a mocked provider, never download FastEmbed/HuggingFace models.
 - CLI search:
   - `uv run pc-search` must call the same `search_saved_papers` implementation as the Web API.
-  - Default CLI mode is `concept`; it must not require embeddings, `data/embeddings.pkl`, or `OPENAI_API_KEY`.
+  - Default CLI mode is `agentic`; it must not require `OPENAI_API_KEY` and must fall back to concept search if no vector index exists.
   - Legacy CLI mode values `search` and `ask` are accepted as aliases for `concept` to avoid breaking older commands, but they must not use the old OpenAI RAG path.
 - Saved data tracking:
   - Track collected paper data as `data/*.json` so RSS/search state can be synchronized with git.
-  - Do not track `data/embeddings.pkl`, temporary files, or other generated caches; concept search must not depend on them.
+  - Do not track `data/qdrant/`, `data/vector/`, `data/embeddings.pkl`, temporary files, or other generated caches; concept search must not depend on them.
 - Collection response:
   - Success: HTTP 202 with `job_id` and `status_url`.
   - Validation failure: HTTP 400 with `error`.
@@ -148,7 +158,7 @@ Questions to answer:
 - Missing saved JSON for RSS -> 404.
 - Invalid search conference -> 400.
 - Invalid search CCF tier -> 400.
-- Search mode other than `keyword` or `concept` -> 400.
+- Search mode other than `keyword`, `concept`, `agentic`, or alias `vector` -> 400.
 - Search limit outside 1..100 -> 400.
 - Full URL in `url_base` -> app construction error; use a path prefix such as `/papercollect`.
 
@@ -163,6 +173,7 @@ Questions to answer:
 - Search: repeated `conference=icse&conference=fse` limits saved-paper search to those conferences.
 - Search: `ccf=A` filters results to CCF-A conference entries.
 - Search: `mode=concept` maps Chinese/natural-language cloud-native security queries to English paper concepts such as Kubernetes, SBOM, provenance, and container images.
+- Search: `mode=agentic` returns Qdrant hybrid matches with provenance when `pc-index` has been built, and returns concept fallback results with a clear fallback reason when the index is missing.
 
 ### 6. Tests Required
 - RSS builder escapes XML and includes title/link/authors/abstract.
@@ -181,6 +192,7 @@ Questions to answer:
 - Search tests cover keyword scoring and category filters without network calls.
 - Search tests cover `mode=concept`, `matched_concepts`, and rejection of unknown search modes without network calls.
 - Search tests cover repeated conference filters and CCF tier filters without network calls.
+- Vector index tests cover Qdrant local build/search with deterministic hash embeddings, filter payloads, provenance, and fallback when the collection is missing.
 - CLI search tests cover `pc-search` concept results without `OPENAI_API_KEY` or embeddings.
 - Search tests cover underscore/hyphen query normalization, local BM25 expansion for paraphrased concept queries, and suppression of proceedings/poster metadata.
 - Search tests cover incidental abstract-only concept mentions and query-embedded year filters.

@@ -5,7 +5,7 @@ PaperCollect 是一个小型流程，负责：
 - 从 DBLP 拉取指定会议论文；
 - 用 OpenAlex、Arxiv、Crossref、EuropePMC、Semantic Scholar 等多源补全摘要和引用信息；
 - 将结果存成 JSON 便于复用；
-- 用本地 Concept semantic 搜索检索已保存论文。
+- 用 agentic hybrid retrieval 或本地 Concept semantic 搜索检索已保存论文。
 
 依赖
 - Python 3.12+
@@ -20,10 +20,11 @@ source .venv/bin/activate
 ```bash
 uv run pc-web                                  # 启动 Web UI，默认绑定 0.0.0.0:5000
 uv run pc-collect                              # 按 config.yaml 批量采集论文
+uv run pc-index                                # 构建 agentic Qdrant hybrid 向量索引
 uv run pc-search "kubernetes security" --top_k 5
 ```
 
-等价的长命令是 `papercollect-web`、`papercollect-collect`、`papercollect-search`。
+等价的长命令是 `papercollect-web`、`papercollect-collect`、`papercollect-index`、`papercollect-search`。
 
 配置
 - 修改 `config.yaml` 选择会议、年份、并发数、输出目录等。
@@ -50,6 +51,13 @@ concurrency:
   threads: 5
 limit_per_conference: 0   # 0 表示不限制
 output_dir: "data"
+vector_index:
+  backend: qdrant
+  path: data/qdrant
+  collection: papercollect_papers
+  embedding_provider: fastembed
+  dense_model: jinaai/jina-embeddings-v3
+  sparse_model: prithivida/Splade_PP_en_v1
 url_base: ""             # 可选，例如反代到 /papercollect 时设为 "/papercollect"
 ```
 
@@ -75,7 +83,7 @@ url_base: "/papercollect"
 ```
 此时前端 API 请求、静态资源、任务状态 URL 和 RSS 链接都会带上 `/papercollect` 前缀。
 
-前端的搜索框会在已保存的 JSON 论文库中做本地搜索，默认使用概念语义搜索，也可切换为关键词搜索；可按 CCFDDL 分类、CCF 等级、Focus 标签、多个会议和年份过滤，不需要 OpenAI API key。概念语义搜索使用本地 expanded BM25 + 概念词表重排，并会过滤 proceedings、poster、chair message 等非正式论文条目。
+前端的搜索框会在已保存的 JSON 论文库中做本地搜索，默认使用 Agentic hybrid：优先查询 Qdrant dense+sparse hybrid 索引并用 RRF 融合，索引不存在时回退到 Concept semantic；也可切换为概念语义搜索或关键词搜索。搜索可按 CCFDDL 分类、CCF 等级、Focus 标签、多个会议和年份过滤，不需要 OpenAI API key。Concept semantic 使用本地 expanded BM25 + 概念词表重排，并会过滤 proceedings、poster、chair message 等非正式论文条目。
 
 DBLP search API 单次请求最多返回 1000 条结果；PaperCollect 会用 `f`/`h` 分页继续拉取，所以 `limit_per_conference: 0` 表示项目侧不限制总量。`limit_per_conference` 只用于你主动限制保存数量，和 DBLP 单页大小不是一回事。
 
@@ -83,20 +91,25 @@ DBLP search API 单次请求最多返回 1000 条结果；PaperCollect 会用 `f
 
 在 CCFDDL 分类之外，前端还提供面向本项目研究方向的 Focus 过滤：Cloud Security、Cloud Native、Distributed Systems、Software Engineering、Security。Focus 标签由会议元数据和本地规则推断，也可在 `config.yaml` 的会议条目中用 `focus_tags` 覆盖或补充。
 
-本地概念语义搜索
+Agentic hybrid / 本地概念语义搜索
 - 先确保已有 `data/` 下的 JSON 数据。
-- `pc-search` 和 Web UI 使用同一套 Concept semantic 搜索：本地 expanded BM25 + 概念词表重排，不需要 `OPENAI_API_KEY`，也不依赖 `data/embeddings.pkl`。
-- 默认使用概念语义搜索；需要纯关键词时可加 `--mode keyword`。
+- `pc-index` 会从 `data/*.json` 构建 Qdrant hybrid 索引，默认放在 `data/qdrant/`，这是可删除重建的缓存，不进入 git。
+- 默认 `pc-search` 和 Web UI 使用 `--mode agentic`：dense 向量 + sparse 向量 + RRF 融合，结果包含 `provenance`、`score_details`、会议元数据和 snippet，适合给 agent 调用。
+- 如果还没运行 `pc-index`，`agentic` 会自动回退到 Concept semantic，保证搜索可用。
+- 需要纯概念词表/BM25 时可加 `--mode concept`；需要纯关键词时可加 `--mode keyword`。
+```bash
+uv run pc-index --config config.yaml
+```
 ```bash
 uv run pc-search "kubernetes security" --top_k 5 --year 2026
 ```
 ```bash
-uv run pc-search "云原生供应链攻击检测" --focus cloud_native --category SC
+uv run pc-search "云原生供应链攻击检测" --focus cloud_native --category SC --ccf A
 ```
 
 数据同步
 - 仓库会跟踪 `data/*.json`，因此爬取后的论文数据可以随 `git push` 同步。
-- `data/embeddings.pkl`、临时文件和其它非 JSON 缓存不会进入仓库；当前搜索不需要它们。
+- `data/qdrant/`、`data/vector/`、`data/embeddings.pkl`、临时文件和其它非 JSON 缓存不会进入仓库；向量索引可通过 `pc-index` 从 JSON 重新生成。
 - 爬取后同步数据：
 ```bash
 git add data/*.json

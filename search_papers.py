@@ -9,7 +9,7 @@ from src.services.paper_search import search_saved_papers
 
 def main() -> None:
     parser = argparse.ArgumentParser(
-        description="Search saved PaperCollect JSON files with local concept semantic search.",
+        description="Search saved PaperCollect JSON files with agentic hybrid retrieval.",
         formatter_class=argparse.ArgumentDefaultsHelpFormatter,
     )
     parser.add_argument("query", type=str, help="The search query.")
@@ -18,12 +18,19 @@ def main() -> None:
     parser.add_argument("--top_k", "--limit", dest="limit", type=int, default=20, help="Number of papers to return")
     parser.add_argument(
         "--mode",
-        choices=["concept", "keyword", "search", "ask"],
-        default="concept",
-        help="'concept' is the default local semantic mode; 'search' and 'ask' are kept as concept aliases",
+        choices=["agentic", "vector", "concept", "keyword", "search", "ask"],
+        default="agentic",
+        help="'agentic' uses the Qdrant hybrid vector index with concept fallback; 'search' and 'ask' are kept as concept aliases",
     )
     parser.add_argument("--year", type=int, help="Filter by year, e.g. 2026")
-    parser.add_argument("--conference", "--venue", dest="conference", help="Filter by conference id, display name, or alias")
+    parser.add_argument(
+        "--conference",
+        "--venue",
+        dest="conferences",
+        action="append",
+        help="Filter by conference id, display name, or alias; can be repeated",
+    )
+    parser.add_argument("--ccf", "--tier", dest="ccf", help="Filter by CCF tier, e.g. A, B, C, or N")
     parser.add_argument("--category", help="Filter by CCFDDL category, e.g. SC, SE, DS")
     parser.add_argument("--focus", help="Filter by focus tag, e.g. cloud_native or cloud_security")
     parser.add_argument("--json", action="store_true", help="Print machine-readable JSON")
@@ -40,7 +47,8 @@ def main() -> None:
         args.query,
         category=args.category,
         focus=args.focus,
-        conference=args.conference,
+        conferences=args.conferences,
+        ccf=args.ccf,
         year=args.year,
         limit=args.limit,
         mode=mode,
@@ -59,9 +67,13 @@ def _load_config(config_path: str) -> dict[str, Any]:
 
 
 def _normalize_mode(value: str) -> str:
-    if value == "keyword":
-        return "keyword"
-    return "concept"
+    if value == "vector":
+        return "agentic"
+    if value in {"agentic", "keyword"}:
+        return value
+    if value in {"search", "ask"}:
+        return "concept"
+    return value
 
 
 def _print_results(query: str, mode: str, results: list[dict[str, Any]], abstract_chars: int) -> None:

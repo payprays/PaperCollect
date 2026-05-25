@@ -499,6 +499,58 @@ def test_search_endpoint_supports_concept_mode(tmp_path):
     assert "Software Supply Chain" in payload["results"][0]["matched_concepts"]
 
 
+def test_search_endpoint_supports_agentic_mode_with_index_status(tmp_path):
+    data_dir = tmp_path / "data"
+    data_dir.mkdir()
+    (data_dir / "NDSS_2026.json").write_text(
+        json.dumps(
+            [
+                {
+                    "title": "Image Provenance Policies for Kubernetes Deployments",
+                    "authors": ["A. Researcher"],
+                    "venue": "NDSS",
+                    "year": 2026,
+                    "abstract": "We detect malicious container image supply chain attacks with SBOM evidence.",
+                }
+            ]
+        ),
+        encoding="utf-8",
+    )
+    config_path = tmp_path / "config.yaml"
+    config_path.write_text(
+        yaml.safe_dump(
+            {
+                "include_ccfddl_catalog": False,
+                "vector_index": {
+                    "path": str(tmp_path / "qdrant"),
+                    "collection": "missing_collection",
+                    "embedding_provider": "hash",
+                },
+                "conferences": [
+                    {
+                        "id": "ndss",
+                        "display_name": "NDSS",
+                        "category": "SC",
+                        "focus_tags": ["security", "cloud_native"],
+                    }
+                ],
+                "years": [2026],
+                "output_dir": str(data_dir),
+            }
+        ),
+        encoding="utf-8",
+    )
+
+    client = create_app(str(config_path)).test_client()
+    response = client.get("/api/search?q=云原生供应链攻击检测&mode=agentic")
+
+    assert response.status_code == 200
+    payload = response.get_json()
+    assert payload["mode"] == "agentic"
+    assert payload["index_status"]["indexed"] is False
+    assert payload["results"][0]["search_mode"] == "agentic_fallback"
+
+
 def test_search_endpoint_accepts_multiple_conferences_and_ccf_filter(tmp_path):
     data_dir = tmp_path / "data"
     data_dir.mkdir()
@@ -563,7 +615,7 @@ def test_search_endpoint_rejects_unknown_mode(tmp_path):
     )
 
     client = create_app(str(config_path)).test_client()
-    response = client.get("/api/search?q=test&mode=vector")
+    response = client.get("/api/search?q=test&mode=unknown")
 
     assert response.status_code == 400
     assert "mode" in response.get_json()["error"]

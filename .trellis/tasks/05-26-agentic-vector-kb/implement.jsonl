@@ -1,0 +1,2 @@
+{"file": ".trellis/spec/backend/quality-guidelines.md", "reason": "Existing PaperCollect web/search/RSS contracts and tests to preserve while adding vector search."}
+{"file": ".trellis/tasks/05-26-agentic-vector-kb/research/vector-backend-options.md", "reason": "Backend choice and MVP boundary for the agentic vector knowledge base."}

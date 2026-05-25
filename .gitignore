@@ -14,6 +14,8 @@ wheels/
 !/data/
 !/data/*.json
 /data/embeddings.pkl
+/data/qdrant/
+/data/vector/
 /data/*.tmp
 
 # IDEs and editors

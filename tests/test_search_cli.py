@@ -60,7 +60,7 @@ def test_pc_search_uses_local_concept_search_without_openai_or_embeddings(tmp_pa
     main()
 
     output = capsys.readouterr().out
-    assert "Top 1 concept results" in output
+    assert "Top 1 agentic results" in output
     assert "Image Provenance Policies for Kubernetes Deployments" in output
     assert "concepts:" in output
     assert not (data_dir / "embeddings.pkl").exists()

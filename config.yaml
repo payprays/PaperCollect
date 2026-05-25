@@ -317,5 +317,15 @@ limit_per_conference: 0
 
 output_dir: "data"
 
+vector_index:
+  backend: qdrant
+  path: data/qdrant
+  collection: papercollect_papers
+  embedding_provider: fastembed
+  dense_model: jinaai/jina-embeddings-v3
+  sparse_model: prithivida/Splade_PP_en_v1
+  batch_size: 64
+  prefetch_multiplier: 4
+
 # Optional path prefix for reverse proxies, for example "/papercollect".
 url_base: ""

@@ -12,7 +12,7 @@ from typing import Any
 
 from src.core.conference_catalog import ConferenceEntry, find_conference, normalize_conferences
 
-SEARCH_MODES = {"keyword", "concept"}
+SEARCH_MODES = {"keyword", "concept", "agentic"}
 MIN_CONCEPT_TOPIC_SCORE = 8.0
 _INDEX_CACHE: dict[str, tuple[tuple[tuple[str, float, int], ...], list[dict[str, Any]]]] = {}
 _INDEX_LOCK = threading.Lock()
@@ -262,7 +262,21 @@ def search_saved_papers(
 ) -> list[dict[str, Any]]:
     """Search saved JSON paper files without requiring embeddings or API keys."""
     if mode not in SEARCH_MODES:
-        raise ValueError("Search mode must be keyword or concept.")
+        raise ValueError("Search mode must be keyword, concept, or agentic.")
+
+    if mode == "agentic":
+        return _search_agentic_or_fallback(
+            config,
+            output_dir,
+            query,
+            category=category,
+            focus=focus,
+            conference=conference,
+            conferences=conferences,
+            ccf=ccf,
+            year=year,
+            limit=limit,
+        )
 
     query = _normalize_query_text(query)
     query_years = _extract_query_years(query)
@@ -369,6 +383,138 @@ def search_saved_papers(
 
     results.sort(key=lambda item: (item["score"], item.get("year") or 0), reverse=True)
     return results[:limit]
+
+
+def _search_agentic_or_fallback(
+    config: dict[str, Any],
+    output_dir: str,
+    query: str,
+    *,
+    category: str | None,
+    focus: str | None,
+    conference: str | None,
+    conferences: Sequence[str] | None,
+    ccf: str | None,
+    year: int | None,
+    limit: int,
+) -> list[dict[str, Any]]:
+    try:
+        from src.services.vector_index import VectorIndexError, search_vector_index
+    except ImportError as exc:
+        fallback_reason = str(exc)
+    else:
+        try:
+            results = search_vector_index(
+                config,
+                output_dir,
+                query,
+                category=category,
+                focus=focus,
+                conference=conference,
+                conferences=conferences,
+                ccf=ccf,
+                year=year,
+                limit=limit,
+            )
+            if results:
+                return _blend_agentic_with_concept_scores(
+                    config,
+                    output_dir,
+                    query,
+                    results,
+                    category=category,
+                    focus=focus,
+                    conference=conference,
+                    conferences=conferences,
+                    ccf=ccf,
+                    year=year,
+                    limit=limit,
+                )
+            fallback_reason = "vector search returned no matches"
+        except (VectorIndexError, OSError, ValueError) as exc:
+            fallback_reason = str(exc)
+
+    fallback_results = search_saved_papers(
+        config,
+        output_dir,
+        query,
+        category=category,
+        focus=focus,
+        conference=conference,
+        conferences=conferences,
+        ccf=ccf,
+        year=year,
+        limit=limit,
+        mode="concept",
+    )
+    for result in fallback_results:
+        result["search_mode"] = "agentic_fallback"
+        result["retrieval_backend"] = "concept_semantic"
+        result["fallback_reason"] = fallback_reason
+        result["score_details"] = {
+            "fallback": "concept",
+            "reason": fallback_reason,
+        }
+        result["provenance"] = {
+            "dblp_key": result.get("dblp_key"),
+            "url": result.get("url"),
+            "conference": result.get("conference"),
+            "year": result.get("year"),
+        }
+    return fallback_results
+
+
+def _blend_agentic_with_concept_scores(
+    config: dict[str, Any],
+    output_dir: str,
+    query: str,
+    agentic_results: list[dict[str, Any]],
+    *,
+    category: str | None,
+    focus: str | None,
+    conference: str | None,
+    conferences: Sequence[str] | None,
+    ccf: str | None,
+    year: int | None,
+    limit: int,
+) -> list[dict[str, Any]]:
+    concept_results = search_saved_papers(
+        config,
+        output_dir,
+        query,
+        category=category,
+        focus=focus,
+        conference=conference,
+        conferences=conferences,
+        ccf=ccf,
+        year=year,
+        limit=max(limit * 2, limit),
+        mode="concept",
+    )
+    concept_scores = {
+        _result_identity(result): float(result.get("score") or 0.0)
+        for result in concept_results
+    }
+    max_concept_score = max(concept_scores.values(), default=0.0) or 1.0
+    for result in agentic_results:
+        identity = _result_identity(result)
+        lexical_boost = concept_scores.get(identity, 0.0) / max_concept_score
+        vector_score = float(result.get("score") or 0.0)
+        result["score"] = vector_score + (lexical_boost * 0.08)
+        details = dict(result.get("score_details") or {})
+        details["lexical_rerank_boost"] = lexical_boost
+        result["score_details"] = details
+    agentic_results.sort(key=lambda item: (item["score"], item.get("year") or 0), reverse=True)
+    return agentic_results[:limit]
+
+
+def _result_identity(result: dict[str, Any]) -> tuple[object, object, object, object]:
+    return (
+        result.get("dblp_key"),
+        result.get("source_id"),
+        result.get("conference"),
+        result.get("title"),
+    )
 
 
 def _conference_filter_ids(

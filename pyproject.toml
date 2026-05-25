@@ -9,15 +9,18 @@ dependencies = [
     "numpy>=2.4.4",
     "python-dotenv>=1.2.2",
     "pyyaml>=6.0.3",
+    "qdrant-client[fastembed]>=1.14.0",
     "requests>=2.32.5",
     "tqdm>=4.67.3",
 ]
 
 [project.scripts]
 papercollect-collect = "main:main"
+papercollect-index = "index_papers:main"
 papercollect-search = "search_papers:main"
 papercollect-web = "web:main"
 pc-collect = "main:main"
+pc-index = "index_papers:main"
 pc-search = "search_papers:main"
 pc-web = "web:main"
 
@@ -26,7 +29,7 @@ requires = ["setuptools>=69"]
 build-backend = "setuptools.build_meta"
 
 [tool.setuptools]
-py-modules = ["main", "search_papers", "web"]
+py-modules = ["index_papers", "main", "search_papers", "web"]
 packages = [
     "src",
     "src.clients",

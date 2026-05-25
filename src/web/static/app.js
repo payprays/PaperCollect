@@ -491,11 +491,12 @@ function renderSearchResults(results) {
       paper.category ? categoryLabel(paper.category) : null,
       paper.tier && paper.tier.ccf ? `CCF ${paper.tier.ccf}` : null,
       paper.focus_tags && paper.focus_tags.length ? paper.focus_tags.join(", ") : null,
+      paper.retrieval_backend ? paper.retrieval_backend : null,
       paper.matched_concepts && paper.matched_concepts.length ? `concepts: ${paper.matched_concepts.join(", ")}` : null,
     ].filter(Boolean).join(" · ");
 
     const abstract = document.createElement("p");
-    abstract.textContent = truncate(paper.abstract || "No abstract available.", 360);
+    abstract.textContent = truncate(paper.snippet || paper.abstract || "No abstract available.", 360);
 
     item.append(title, meta, abstract);
     root.appendChild(item);
@@ -503,6 +504,9 @@ function renderSearchResults(results) {
 }
 
 function searchModeLabel(mode) {
+  if (mode === "agentic") {
+    return "agentic hybrid search";
+  }
   return mode === "concept" ? "concept semantic search" : "keyword search";
 }
 
