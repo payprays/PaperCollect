@@ -62,7 +62,7 @@ Questions to answer:
 - Command: `uv run python web.py --config config.yaml --host 0.0.0.0 --port 5000`
 - Command alias: `uv run pc-web --config config.yaml --host 0.0.0.0 --port 5000`
 - Command alias: `uv run pc-collect --config config.yaml`
-- Command alias: `uv run pc-search "<query>" --mode <search|ask> --top_k <n>`
+- Command alias: `uv run pc-search "<query>" --mode <concept|keyword> --top_k <n>`
 - API: `GET /api/options`
 - API: `POST /api/collect`
 - API: `GET /api/jobs/<job_id>`
@@ -103,6 +103,10 @@ Questions to answer:
   - Search should suppress non-paper metadata entries such as proceedings, poster records, chair messages, keynote/front-matter entries, and student/dissertation abstracts.
   - Concept search must treat title/topic matches as stronger than incidental abstract mentions; a paper that only mentions a query concept once in an abstract example should not rank as a topic match.
   - Four-digit years typed in the query, such as `kubernetes 2026`, should be treated as a year filter and removed from scoring tokens.
+- CLI search:
+  - `uv run pc-search` must call the same `search_saved_papers` implementation as the Web API.
+  - Default CLI mode is `concept`; it must not require embeddings, `data/embeddings.pkl`, or `OPENAI_API_KEY`.
+  - Legacy CLI mode values `search` and `ask` are accepted as aliases for `concept` to avoid breaking older commands, but they must not use the old OpenAI RAG path.
 - Collection response:
   - Success: HTTP 202 with `job_id` and `status_url`.
   - Validation failure: HTTP 400 with `error`.
@@ -165,6 +169,7 @@ Questions to answer:
 - Catalog tests cover object configs, aliases, and legacy string defaults.
 - Search tests cover keyword scoring and category filters without network calls.
 - Search tests cover `mode=concept`, `matched_concepts`, and rejection of unknown search modes without network calls.
+- CLI search tests cover `pc-search` concept results without `OPENAI_API_KEY` or embeddings.
 - Search tests cover underscore/hyphen query normalization, local BM25 expansion for paraphrased concept queries, and suppression of proceedings/poster metadata.
 - Search tests cover incidental abstract-only concept mentions and query-embedded year filters.
 

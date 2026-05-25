@@ -5,11 +5,10 @@ PaperCollect 是一个小型流程，负责：
 - 从 DBLP 拉取指定会议论文；
 - 用 OpenAlex、Arxiv、Crossref、EuropePMC、Semantic Scholar 等多源补全摘要和引用信息；
 - 将结果存成 JSON 便于复用；
-- 用 OpenAI 做轻量 RAG 检索 / 问答（ask）。
+- 用本地 Concept semantic 搜索检索已保存论文。
 
 依赖
 - Python 3.12+
-- OpenAI API Key：设置为环境变量 `OPENAI_API_KEY`（RAG 搜索/问答必需，采集阶段可选）
 
 环境准备
 ```bash
@@ -21,14 +20,13 @@ source .venv/bin/activate
 ```bash
 uv run pc-web                                  # 启动 Web UI，默认绑定 0.0.0.0:5000
 uv run pc-collect                              # 按 config.yaml 批量采集论文
-uv run pc-search "kubernetes security" --mode search --top_k 5
+uv run pc-search "kubernetes security" --top_k 5
 ```
 
 等价的长命令是 `papercollect-web`、`papercollect-collect`、`papercollect-search`。
 
 配置
 - 修改 `config.yaml` 选择会议、年份、并发数、输出目录等。
-- 不要把密钥写入仓库：推荐 `export OPENAI_API_KEY=<your-key>`；`config.yaml` 中的 `openai_api_key` 为空占位。
 
 `config.yaml` 示例片段：
 ```yaml
@@ -51,7 +49,6 @@ years:
 concurrency:
   threads: 5
 limit_per_conference: 0   # 0 表示不限制
-openai_api_key: ""        # 建议用环境变量
 output_dir: "data"
 url_base: ""             # 可选，例如反代到 /papercollect 时设为 "/papercollect"
 ```
@@ -84,15 +81,15 @@ url_base: "/papercollect"
 
 在 CCFDDL 分类之外，前端还提供面向本项目研究方向的 Focus 过滤：Cloud Security、Cloud Native、Distributed Systems、Software Engineering、Security。Focus 标签由会议元数据和本地规则推断，也可在 `config.yaml` 的会议条目中用 `focus_tags` 覆盖或补充。
 
-RAG 检索 / 问答
-- 先确保已有 `data/` 下的 JSON 数据，并设置密钥：`export OPENAI_API_KEY=<your-key>`。
-- 检索模式（返回排序结果，自动中译标题/摘要）：
+本地概念语义搜索
+- 先确保已有 `data/` 下的 JSON 数据。
+- `pc-search` 和 Web UI 使用同一套 Concept semantic 搜索：本地 expanded BM25 + 概念词表重排，不需要 `OPENAI_API_KEY`，也不依赖 `data/embeddings.pkl`。
+- 默认使用概念语义搜索；需要纯关键词时可加 `--mode keyword`。
 ```bash
-uv run pc-search "LLM-based fuzzing for systems software" --top_k 5 --mode search --year 2024 --exclude Workshop Poster
+uv run pc-search "kubernetes security" --top_k 5 --year 2026
 ```
-- 问答模式（基于 top K 论文生成答案）：
 ```bash
-uv run pc-search "What defenses work against prompt injection?" --top_k 10 --mode ask --venue NDSS
+uv run pc-search "云原生供应链攻击检测" --focus cloud_native --category SC
 ```
 
 提示
