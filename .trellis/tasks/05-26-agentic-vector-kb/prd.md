@@ -31,6 +31,7 @@ Upgrade PaperCollect from a conference-paper RSS/search tool into an agent-frien
 * Avoid indexing empty/non-paper noise entries.
 * Use dense+sparse hybrid retrieval with reciprocal-rank fusion rather than single-vector nearest-neighbor search.
 * Default user-facing search mode should be `agentic`, with `vector` accepted as an alias.
+* Use a dense model that can actually finish on `k8sv6`; Jina v3 was too memory-heavy during full indexing, so the practical default is `jinaai/jina-embeddings-v2-base-zh` plus SPLADE.
 
 ## Acceptance Criteria (evolving)
 

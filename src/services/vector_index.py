@@ -16,7 +16,7 @@ from src.core.conference_catalog import ConferenceEntry, find_conference, normal
 
 DEFAULT_COLLECTION = "papercollect_papers"
 DEFAULT_INDEX_PATH = "data/qdrant"
-DEFAULT_DENSE_MODEL = "jinaai/jina-embeddings-v3"
+DEFAULT_DENSE_MODEL = "jinaai/jina-embeddings-v2-base-zh"
 DEFAULT_SPARSE_MODEL = "prithivida/Splade_PP_en_v1"
 DEFAULT_DENSE_SIZE = 1024
 DENSE_VECTOR_NAME = "dense"

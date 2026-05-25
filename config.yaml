@@ -322,8 +322,9 @@ vector_index:
   path: data/qdrant
   collection: papercollect_papers
   embedding_provider: fastembed
-  dense_model: jinaai/jina-embeddings-v3
+  dense_model: jinaai/jina-embeddings-v2-base-zh
   sparse_model: prithivida/Splade_PP_en_v1
+  on_disk_vectors: true
   batch_size: 64
   prefetch_multiplier: 4
   timeout: 120
