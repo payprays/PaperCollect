@@ -114,6 +114,7 @@ Questions to answer:
   - `uv run pc-index` builds a rebuildable Qdrant index from `data/*.json`; JSON files remain the source of truth.
   - The default local index path is `data/qdrant/`; it must be ignored by git.
   - Index payloads must preserve stable paper IDs, conference, display name, year, category, CCF tier, focus tags, DBLP key, URL, source file, and source index.
+  - Qdrant HTTP/server mode should use a configurable request timeout because collection creation and large upserts can exceed short client defaults.
   - Unit tests must use deterministic hash embeddings or a mocked provider, never download FastEmbed/HuggingFace models.
 - CLI search:
   - `uv run pc-search` must call the same `search_saved_papers` implementation as the Web API.

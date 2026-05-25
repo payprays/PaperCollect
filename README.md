@@ -58,6 +58,7 @@ vector_index:
   embedding_provider: fastembed
   dense_model: jinaai/jina-embeddings-v3
   sparse_model: prithivida/Splade_PP_en_v1
+  timeout: 120
 url_base: ""             # 可选，例如反代到 /papercollect 时设为 "/papercollect"
 ```
 

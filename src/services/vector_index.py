@@ -243,14 +243,16 @@ def _vector_config(config: dict[str, Any]) -> dict[str, Any]:
     values.setdefault("sparse_model", DEFAULT_SPARSE_MODEL)
     values.setdefault("dense_size", DEFAULT_DENSE_SIZE)
     values.setdefault("prefetch_multiplier", 4)
+    values.setdefault("timeout", 120)
     return values
 
 
 def _qdrant_client(index_config: dict[str, Any]) -> QdrantClient:
     url = str(index_config.get("url") or "").strip()
     api_key = str(index_config.get("api_key") or "").strip() or None
+    timeout = int(index_config.get("timeout") or 120)
     if url:
-        return QdrantClient(url=url, api_key=api_key)
+        return QdrantClient(url=url, api_key=api_key, timeout=timeout)
     path = str(index_config.get("path") or DEFAULT_INDEX_PATH)
     os.makedirs(path, exist_ok=True)
     return QdrantClient(path=path)

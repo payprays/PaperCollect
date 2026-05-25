@@ -326,6 +326,7 @@ vector_index:
   sparse_model: prithivida/Splade_PP_en_v1
   batch_size: 64
   prefetch_multiplier: 4
+  timeout: 120
 
 # Optional path prefix for reverse proxies, for example "/papercollect".
 url_base: ""
