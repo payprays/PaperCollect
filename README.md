@@ -91,11 +91,11 @@ url_base: "/papercollect"
 PAPERCOLLECT_CONFIG=/etc/papercollect/config.yaml \
   uv run gunicorn 'web:create_wsgi_app()' \
   --bind 0.0.0.0:5000 \
-  --workers 2 \
-  --threads 4 \
-  --timeout 180
+  --workers 1 \
+  --threads 8 \
+  --timeout 600
 ```
-Web 后台任务状态会写入 `job_store_dir`，collection 和 vector index job 使用文件锁互斥，因此多 worker 下 `/api/jobs/<id>` 仍能查询到任务进度。向量索引也可以通过 Web API 后台触发：
+小内存机器优先用 1 个 worker 加多线程，避免每个 worker 重复加载一份 embedding 模型；内存充足时再提高 worker 数。Web 后台任务状态会写入 `job_store_dir`，collection 和 vector index job 使用文件锁互斥，因此多 worker 下 `/api/jobs/<id>` 仍能查询到任务进度。向量索引也可以通过 Web API 后台触发：
 ```bash
 curl -X POST http://127.0.0.1:5000/api/index -H 'content-type: application/json' -d '{"force": true}'
 ```
