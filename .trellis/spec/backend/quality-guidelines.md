@@ -103,6 +103,7 @@ Questions to answer:
   - `mode=keyword` uses local exact/token scoring over saved JSON.
   - `mode=concept` uses local expanded BM25 over saved JSON plus SemRank-lite concept reranking; it must not require embeddings, external vector stores, or `OPENAI_API_KEY`.
   - `mode=agentic` uses the Qdrant hybrid vector index when available: named dense and sparse vectors are queried independently, then fused with reciprocal-rank fusion. If the index is missing or unavailable, it must fall back to `mode=concept` and include `fallback_reason`/`score_details` in each result.
+  - Agentic search must merge strong concept-search candidates into the final reranked result set, not only boost Qdrant-returned candidates, so a relevant title/topic match is not lost when vector prefetch misses it.
   - `mode=vector` is accepted by the Web API/CLI as an alias for `agentic`.
   - Concept results include `matched_concepts`, `concept_score`, `lexical_score`, and `search_mode`.
   - Agentic results include `retrieval_backend`, `score_details`, `provenance`, and `snippet`.
@@ -203,6 +204,7 @@ Questions to answer:
 - Search tests cover `mode=concept`, `matched_concepts`, and rejection of unknown search modes without network calls.
 - Search tests cover repeated conference filters and CCF tier filters without network calls.
 - Vector index tests cover Qdrant local build/search with deterministic hash embeddings, filter payloads, provenance, and fallback when the collection is missing.
+- Agentic search tests cover merging concept candidates into vector results when Qdrant prefetch misses a strong title/topic match.
 - Web index job tests cover `POST /api/index`, duplicate-job 409, file-backed status polling, and completed stats with the build function mocked.
 - Vector provider tests cover FastEmbed provider caching without downloading models.
 - CLI search tests cover `pc-search` concept results without `OPENAI_API_KEY` or embeddings.

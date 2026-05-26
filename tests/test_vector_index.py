@@ -169,6 +169,86 @@ def test_agentic_search_falls_back_when_qdrant_local_path_is_locked(tmp_path, mo
     assert "already accessed" in results[0]["fallback_reason"]
 
 
+def test_agentic_search_merges_concept_candidates_when_vector_prefetch_misses(
+    tmp_path, monkeypatch
+):
+    data_dir = tmp_path / "data"
+    data_dir.mkdir()
+    (data_dir / "eurosys_2026.json").write_text(
+        json.dumps(
+            [
+                {
+                    "title": "Pyramid: A Secure, Resource-Efficient, and Pluggable Kubernetes for Multi-Tenancy",
+                    "authors": ["A. Researcher"],
+                    "venue": "EuroSys",
+                    "year": 2026,
+                    "abstract": "We secure Kubernetes clusters for cloud-native multi-tenant workloads.",
+                    "dblp_key": "conf/eurosys/Pyramid26",
+                },
+                {
+                    "title": "Token Time Bomb: Evaluating JWT Implementations for Vulnerability Discovery",
+                    "authors": ["B. Researcher"],
+                    "venue": "EuroSys",
+                    "year": 2026,
+                    "abstract": "We evaluate JWT libraries and mention Kubernetes as one deployment example.",
+                    "dblp_key": "conf/eurosys/JWT26",
+                },
+            ]
+        ),
+        encoding="utf-8",
+    )
+    config = {
+        "include_ccfddl_catalog": False,
+        "conferences": [
+            {
+                "id": "eurosys",
+                "display_name": "EuroSys",
+                "category": "DS",
+                "focus_tags": ["cloud_native", "distributed_systems"],
+            }
+        ],
+    }
+
+    import src.services.vector_index as vector_index
+
+    def vector_miss(*_args, **_kwargs):
+        return [
+            {
+                "id": "vector-jwt",
+                "title": "Token Time Bomb: Evaluating JWT Implementations for Vulnerability Discovery",
+                "authors": ["B. Researcher"],
+                "venue": "EuroSys",
+                "year": 2026,
+                "abstract": "We evaluate JWT libraries and mention Kubernetes as one deployment example.",
+                "dblp_key": "conf/eurosys/JWT26",
+                "score": 1.0,
+                "conference": "eurosys",
+                "display_name": "EuroSys",
+                "category": "DS",
+                "focus_tags": ["cloud_native", "distributed_systems"],
+                "search_mode": "agentic",
+                "retrieval_backend": "qdrant_hybrid_rrf",
+                "score_details": {"fusion": "rrf"},
+                "provenance": {"dblp_key": "conf/eurosys/JWT26"},
+            }
+        ]
+
+    monkeypatch.setattr(vector_index, "search_vector_index", vector_miss)
+
+    results = search_saved_papers(
+        config,
+        str(data_dir),
+        "kubernetes security",
+        mode="agentic",
+        limit=1,
+    )
+
+    assert results[0]["title"].startswith("Pyramid:")
+    assert results[0]["search_mode"] == "agentic"
+    assert results[0]["retrieval_backend"] == "concept_semantic_merge"
+    assert results[0]["score_details"]["fusion"] == "vector_concept_merge"
+
+
 def test_fastembed_provider_is_cached_for_repeated_searches(monkeypatch):
     import src.services.vector_index as vector_index
 

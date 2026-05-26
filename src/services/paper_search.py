@@ -488,24 +488,77 @@ def _blend_agentic_with_concept_scores(
         conferences=conferences,
         ccf=ccf,
         year=year,
-        limit=max(limit * 2, limit),
+        limit=max(limit * 4, 30),
         mode="concept",
     )
+    concept_by_identity = {_result_identity(result): result for result in concept_results}
     concept_scores = {
-        _result_identity(result): float(result.get("score") or 0.0)
-        for result in concept_results
+        identity: float(result.get("score") or 0.0)
+        for identity, result in concept_by_identity.items()
     }
+    max_vector_score = max(
+        (float(result.get("score") or 0.0) for result in agentic_results),
+        default=0.0,
+    ) or 1.0
     max_concept_score = max(concept_scores.values(), default=0.0) or 1.0
+    vector_weight = 0.45 if concept_results else 1.0
+    concept_weight = 0.55 if concept_results else 0.0
+    merged: dict[tuple[object, object, object, object], dict[str, Any]] = {}
+
     for result in agentic_results:
+        result = dict(result)
         identity = _result_identity(result)
-        lexical_boost = concept_scores.get(identity, 0.0) / max_concept_score
         vector_score = float(result.get("score") or 0.0)
-        result["score"] = vector_score + (lexical_boost * 0.08)
+        vector_norm = vector_score / max_vector_score
+        concept_result = concept_by_identity.get(identity)
+        concept_score = concept_scores.get(identity, 0.0)
+        concept_norm = concept_score / max_concept_score
+        result["score"] = (vector_weight * vector_norm) + (concept_weight * concept_norm)
+        if concept_result:
+            result["matched_concepts"] = concept_result.get("matched_concepts", [])
+            result["concept_score"] = concept_result.get("concept_score", 0.0)
+            result["lexical_score"] = concept_result.get("lexical_score", 0.0)
         details = dict(result.get("score_details") or {})
-        details["lexical_rerank_boost"] = lexical_boost
+        details.update(
+            {
+                "fusion": "rrf+concept",
+                "vector_score": vector_score,
+                "vector_norm": vector_norm,
+                "concept_rerank_score": concept_score,
+                "concept_norm": concept_norm,
+            }
+        )
         result["score_details"] = details
-    agentic_results.sort(key=lambda item: (item["score"], item.get("year") or 0), reverse=True)
-    return agentic_results[:limit]
+        merged[identity] = result
+
+    for identity, concept_result in concept_by_identity.items():
+        if identity in merged:
+            continue
+        concept_score = concept_scores.get(identity, 0.0)
+        concept_norm = concept_score / max_concept_score
+        result = dict(concept_result)
+        result["score"] = concept_weight * concept_norm
+        result["search_mode"] = "agentic"
+        result["retrieval_backend"] = "concept_semantic_merge"
+        result["snippet"] = _result_snippet(result, query)
+        result["score_details"] = {
+            "fusion": "vector_concept_merge",
+            "vector_score": 0.0,
+            "vector_norm": 0.0,
+            "concept_rerank_score": concept_score,
+            "concept_norm": concept_norm,
+        }
+        result["provenance"] = {
+            "dblp_key": result.get("dblp_key"),
+            "url": result.get("url"),
+            "conference": result.get("conference"),
+            "year": result.get("year"),
+        }
+        merged[identity] = result
+
+    results = list(merged.values())
+    results.sort(key=lambda item: (item["score"], item.get("year") or 0), reverse=True)
+    return results[:limit]
 
 
 def _result_identity(result: dict[str, Any]) -> tuple[object, object, object, object]:
@@ -515,6 +568,27 @@ def _result_identity(result: dict[str, Any]) -> tuple[object, object, object, ob
         result.get("conference"),
         result.get("title"),
     )
+
+
+def _result_snippet(result: dict[str, Any], query: str, length: int = 360) -> str:
+    text = " ".join(
+        str(value)
+        for value in [result.get("title"), result.get("abstract")]
+        if value
+    ).strip()
+    if not text:
+        return ""
+
+    tokens = _tokenize(query)
+    lowered = text.lower()
+    start = 0
+    for token in tokens:
+        index = lowered.find(token.lower())
+        if index >= 0:
+            start = max(index - 80, 0)
+            break
+    snippet = text[start : start + length].strip()
+    return snippet
 
 
 def _conference_filter_ids(
