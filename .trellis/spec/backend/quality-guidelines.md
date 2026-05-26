@@ -121,6 +121,7 @@ Questions to answer:
   - `sparse_model: hash` means dense embeddings come from FastEmbed while the sparse side is a local lexical hash vector; use this as the production-safe default on small CPU hosts.
   - FastEmbed providers should be cached per process by model/cache/thread config so Web search does not reload embedding models on every request.
   - Web background jobs must store status in `job_store_dir` and use file locks for collection/index mutual exclusion so gunicorn workers can read each other's job status and avoid duplicate heavy jobs.
+  - Web-triggered index rebuilds should run `pc-index` in a subprocess instead of calling the index builder inside the request worker process; the Web process records subprocess output to the job log and refreshes status after completion.
   - Unit tests must use deterministic hash embeddings or a mocked provider, never download FastEmbed/HuggingFace models.
 - CLI search:
   - `uv run pc-search` must call the same `search_saved_papers` implementation as the Web API.

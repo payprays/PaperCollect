@@ -1,4 +1,6 @@
 import os
+import subprocess
+import sys
 import threading
 from contextlib import redirect_stdout
 from typing import Any, Callable
@@ -18,11 +20,11 @@ from src.core.conference_catalog import (
     normalize_conferences,
     valid_collection_year,
 )
-from src.services.metadata_manager import MetadataManager
 from src.services.job_store import FileJobLock, JobStore
+from src.services.metadata_manager import MetadataManager
 from src.services.paper_search import search_saved_papers
 from src.services.rss_service import build_rss_xml, load_papers
-from src.services.vector_index import VectorIndexError, build_vector_index, vector_index_status
+from src.services.vector_index import VectorIndexError, vector_index_status
 
 MAX_JOB_LOG_LINES = 500
 
@@ -310,7 +312,7 @@ def create_app(config_path: str = "config.yaml") -> Flask:
         )
         thread = threading.Thread(
             target=_run_index_job,
-            args=(job["id"], config, output_dir, force, index_lock),
+            args=(job["id"], config, config_path, force, index_lock),
             daemon=True,
         )
         thread.start()
@@ -483,22 +485,29 @@ def create_app(config_path: str = "config.yaml") -> Flask:
     def _run_index_job(
         job_id: str,
         config: dict[str, Any],
-        output_dir: str,
+        config_path: str,
         force: bool,
         active_lock: FileJobLock,
     ) -> None:
         try:
             _update_job(job_id, status="running")
-            _append_job_log(job_id, "Building Qdrant hybrid vector index.")
-            stats = build_vector_index(config, output_dir, force=force)
+            command = _index_command(config_path, force=force)
+            _append_job_log(job_id, f"Starting index subprocess: {' '.join(command)}")
+            returncode = _run_index_subprocess(
+                command,
+                cwd=os.getcwd(),
+                append_log=lambda line: _append_job_log(job_id, line),
+            )
+            if returncode != 0:
+                raise RuntimeError(f"pc-index exited with status {returncode}")
+            stats = vector_index_status(config)
             _append_job_log(job_id, f"Indexed {stats['paper_count']} papers into {stats['collection']}.")
             _update_job(
                 job_id,
                 status="completed",
                 paper_count=stats["paper_count"],
-                source_count=stats["source_count"],
+                source_count=stats.get("source_count"),
                 backend=stats["backend"],
-                provider=stats["provider"],
                 collection=stats["collection"],
                 result=stats,
             )
@@ -526,6 +535,35 @@ def _load_config(config_path: str) -> dict[str, Any]:
         return {}
     with open(config_path, "r", encoding="utf-8") as f:
         return yaml.safe_load(f) or {}
+
+
+def _index_command(config_path: str, *, force: bool) -> list[str]:
+    command = [sys.executable, "-m", "index_papers", "--config", config_path]
+    if not force:
+        command.append("--no-force")
+    return command
+
+
+def _run_index_subprocess(
+    command: list[str],
+    *,
+    cwd: str,
+    append_log: Callable[[str], None],
+) -> int:
+    process = subprocess.Popen(
+        command,
+        cwd=cwd,
+        stdout=subprocess.PIPE,
+        stderr=subprocess.STDOUT,
+        text=True,
+        bufsize=1,
+    )
+    assert process.stdout is not None
+    for line in process.stdout:
+        text = line.rstrip()
+        if text:
+            append_log(text)
+    return process.wait()
 
 
 def _job_store_dir(config: dict[str, Any]) -> str:

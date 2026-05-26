@@ -654,20 +654,26 @@ def test_index_endpoint_runs_background_job_and_rejects_duplicate(tmp_path, monk
     )
     release = threading.Event()
 
-    def fake_build_vector_index(config, output_dir, force=True):
-        assert config["vector_index"]["collection"] == "test_collection"
-        assert output_dir == str(data_dir)
-        assert force is True
+    def fake_run_index_subprocess(command, cwd, append_log):
+        assert command[-2:] == ["--config", str(config_path)]
+        assert cwd
+        append_log("mock pc-index completed")
         assert release.wait(timeout=2)
+        return 0
+
+    def fake_vector_index_status(config):
+        assert config["vector_index"]["collection"] == "test_collection"
         return {
             "backend": "qdrant",
             "collection": "test_collection",
-            "provider": "hash:64",
+            "indexed": True,
             "paper_count": 3,
-            "source_count": 3,
+            "url": None,
+            "index_path": None,
         }
 
-    monkeypatch.setattr("src.web.app.build_vector_index", fake_build_vector_index)
+    monkeypatch.setattr("src.web.app._run_index_subprocess", fake_run_index_subprocess)
+    monkeypatch.setattr("src.web.app.vector_index_status", fake_vector_index_status)
 
     client = create_app(str(config_path)).test_client()
     response = client.post("/api/index", json={"force": True})
@@ -691,7 +697,8 @@ def test_index_endpoint_runs_background_job_and_rejects_duplicate(tmp_path, monk
 
     assert completed_status["status"] == "completed"
     assert completed_status["paper_count"] == 3
-    assert completed_status["provider"] == "hash:64"
+    assert completed_status["result"]["indexed"] is True
+    assert "mock pc-index completed" in completed_status["logs"]
 
 
 def test_collect_endpoint_runs_job_and_exposes_feed(tmp_path, monkeypatch):
