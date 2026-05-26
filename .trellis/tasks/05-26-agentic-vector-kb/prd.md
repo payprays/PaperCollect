@@ -25,6 +25,7 @@ Upgrade PaperCollect from a conference-paper RSS/search tool into an agent-frien
 ## Requirements (evolving)
 
 * Add a vector index build/sync path from saved JSON papers.
+* Allow the Web API to trigger vector index rebuilds as background jobs instead of blocking the request thread.
 * Preserve conference metadata as filterable payload: conference, display name, year, category, CCF tier, focus tags, DBLP key, URL.
 * Expose a search mode suitable for agents, returning stable IDs, scores, provenance, and source snippets.
 * Keep current concept search available as fallback or lexical reranker.
@@ -32,10 +33,12 @@ Upgrade PaperCollect from a conference-paper RSS/search tool into an agent-frien
 * Use dense+sparse hybrid retrieval with reciprocal-rank fusion rather than single-vector nearest-neighbor search.
 * Default user-facing search mode should be `agentic`, with `vector` accepted as an alias.
 * Use models that can actually finish on `k8sv6`; Jina v3/Jina v2 and SPLADE were too heavy/slow during full indexing, so the practical default is `sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2` plus hash lexical sparse vectors.
+* Cache FastEmbed providers per worker process and persist Web job status to JSON files so production gunicorn workers can keep serving status/search requests while collection or indexing runs.
 
 ## Acceptance Criteria (evolving)
 
 * [x] A command can build or refresh the vector index from `data/*.json`.
+* [x] A Web API background job can build or refresh the vector index without making the caller wait for completion.
 * [x] A Web/API search can query the vector index with the existing filters.
 * [x] Search results include stable IDs, source fields, score details, and enough text for citation.
 * [x] The feature works without `OPENAI_API_KEY` by default.

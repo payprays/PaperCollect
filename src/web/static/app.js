@@ -463,6 +463,26 @@ async function searchPapers(event) {
   setSearchStatus(`Found ${data.results.length} papers with ${searchModeLabel(data.mode || mode)}.`, "completed");
 }
 
+async function startIndexBuild() {
+  setIndexStatus("Starting vector index rebuild...", "running");
+  $("#index-logs").textContent = "Waiting for index logs...";
+
+  const response = await fetch(appUrl("/api/index"), {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ force: true }),
+  });
+  const data = await response.json();
+
+  if (!response.ok) {
+    setIndexStatus(data.error || "Failed to start vector index rebuild.", "failed");
+    $("#index-logs").textContent = data.error || "";
+    return;
+  }
+
+  pollIndexJob(data.status_url || data.job_id);
+}
+
 function renderSearchResults(results) {
   const root = $("#search-results");
   root.innerHTML = "";
@@ -545,6 +565,20 @@ async function pollJob(jobId) {
   window.setTimeout(() => pollJob(jobId), 1500);
 }
 
+async function pollIndexJob(jobId) {
+  const response = await fetch(jobStatusUrl(jobId));
+  const job = await response.json();
+
+  setIndexStatus(renderIndexJobStatus(job), job.status);
+  $("#index-logs").textContent = (job.logs || []).join("\n") || "Waiting for index logs...";
+
+  if (job.status === "completed" || job.status === "failed") {
+    return;
+  }
+
+  window.setTimeout(() => pollIndexJob(jobId), 1500);
+}
+
 function renderJobStatus(job) {
   if (job.status === "completed") {
     if (job.conference_count > 1) {
@@ -561,6 +595,16 @@ function renderJobStatus(job) {
   return `Running collection for ${job.display_name || job.conference} ${job.year}...`;
 }
 
+function renderIndexJobStatus(job) {
+  if (job.status === "completed") {
+    return `Index ready: ${job.paper_count || 0} papers in ${job.collection}.`;
+  }
+  if (job.status === "failed") {
+    return `Index failed: ${job.error || "unknown error"}`;
+  }
+  return `Building vector index for ${job.collection || "papers"}...`;
+}
+
 function setStatus(message, status) {
   const statusNode = $("#status");
   statusNode.textContent = message;
@@ -573,8 +617,15 @@ function setSearchStatus(message, status) {
   statusNode.dataset.status = status;
 }
 
+function setIndexStatus(message, status) {
+  const statusNode = $("#index-status");
+  statusNode.textContent = message;
+  statusNode.dataset.status = status;
+}
+
 $("#collect-form").addEventListener("submit", startCollection);
 $("#search-form").addEventListener("submit", searchPapers);
+$("#index-button").addEventListener("click", startIndexBuild);
 $("#collect-category").addEventListener("change", () => {
   renderCollectConferencePicker();
 });

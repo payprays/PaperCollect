@@ -75,7 +75,9 @@ Questions to answer:
 - Focus options: `focus_tag_options(config) -> list[dict]`
 - Search API: `GET /api/search?q=<query>&mode=<agentic|keyword|concept>&category=<sub>&focus=<tag>&ccf=<A|B|C|N>&conference=<id>&conference=<id>&year=<year>&limit=<n>`
 - Vector status API: `GET /api/index/status`
+- Vector build API: `POST /api/index`
 - Config: `url_base` optional path prefix such as `/papercollect`.
+- Config: `job_store_dir` optional path for JSON-backed web job status and lock files; default is `<output_dir>/jobs`.
 
 ### 3. Contracts
 - `POST /api/collect` request fields:
@@ -112,10 +114,13 @@ Questions to answer:
   - Four-digit years typed in the query, such as `kubernetes 2026`, should be treated as a year filter and removed from scoring tokens.
 - Vector index:
   - `uv run pc-index` builds a rebuildable Qdrant index from `data/*.json`; JSON files remain the source of truth.
+  - `POST /api/index` starts a background vector rebuild job and returns `job_id` plus `status_url`; job status is read through `GET /api/jobs/<job_id>`.
   - The default local index path is `data/qdrant/`; it must be ignored by git.
   - Index payloads must preserve stable paper IDs, conference, display name, year, category, CCF tier, focus tags, DBLP key, URL, source file, and source index.
   - Qdrant HTTP/server mode should use a configurable request timeout because collection creation and large upserts can exceed short client defaults.
   - `sparse_model: hash` means dense embeddings come from FastEmbed while the sparse side is a local lexical hash vector; use this as the production-safe default on small CPU hosts.
+  - FastEmbed providers should be cached per process by model/cache/thread config so Web search does not reload embedding models on every request.
+  - Web background jobs must store status in `job_store_dir` and use file locks for collection/index mutual exclusion so gunicorn workers can read each other's job status and avoid duplicate heavy jobs.
   - Unit tests must use deterministic hash embeddings or a mocked provider, never download FastEmbed/HuggingFace models.
 - CLI search:
   - `uv run pc-search` must call the same `search_saved_papers` implementation as the Web API.
@@ -156,6 +161,7 @@ Questions to answer:
 - Year missing, non-integer, before 1900, or more than two years ahead of the current year -> 400.
 - Limit non-integer or negative -> 400.
 - Second collection request while one is running -> 409.
+- Second vector index request while one is running -> 409.
 - DBLP network/API failure during collection -> job status `failed`; never convert the failure into an empty paper list.
 - Missing saved JSON for RSS -> 404.
 - Invalid search conference -> 400.
@@ -176,6 +182,7 @@ Questions to answer:
 - Search: `ccf=A` filters results to CCF-A conference entries.
 - Search: `mode=concept` maps Chinese/natural-language cloud-native security queries to English paper concepts such as Kubernetes, SBOM, provenance, and container images.
 - Search: `mode=agentic` returns Qdrant hybrid matches with provenance when `pc-index` has been built, and returns concept fallback results with a clear fallback reason when the index is missing.
+- Index: `POST /api/index` returns immediately while `GET /api/jobs/<job_id>` shows queued/running/completed/failed state.
 
 ### 6. Tests Required
 - RSS builder escapes XML and includes title/link/authors/abstract.
@@ -195,6 +202,8 @@ Questions to answer:
 - Search tests cover `mode=concept`, `matched_concepts`, and rejection of unknown search modes without network calls.
 - Search tests cover repeated conference filters and CCF tier filters without network calls.
 - Vector index tests cover Qdrant local build/search with deterministic hash embeddings, filter payloads, provenance, and fallback when the collection is missing.
+- Web index job tests cover `POST /api/index`, duplicate-job 409, file-backed status polling, and completed stats with the build function mocked.
+- Vector provider tests cover FastEmbed provider caching without downloading models.
 - CLI search tests cover `pc-search` concept results without `OPENAI_API_KEY` or embeddings.
 - Search tests cover underscore/hyphen query normalization, local BM25 expansion for paraphrased concept queries, and suppression of proceedings/poster metadata.
 - Search tests cover incidental abstract-only concept mentions and query-embedded year filters.

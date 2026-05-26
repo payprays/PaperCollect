@@ -230,7 +230,8 @@ button.secondary:hover {
 }
 
 #status,
-#search-status {
+#search-status,
+#index-status {
   margin: 18px 0 0;
   border-left: 4px solid var(--line);
   background: #f9fafb;
@@ -239,17 +240,20 @@ button.secondary:hover {
 }
 
 #status[data-status="running"],
-#search-status[data-status="running"] {
+#search-status[data-status="running"],
+#index-status[data-status="running"] {
   border-color: var(--blue);
 }
 
 #status[data-status="completed"],
-#search-status[data-status="completed"] {
+#search-status[data-status="completed"],
+#index-status[data-status="completed"] {
   border-color: var(--green);
 }
 
 #status[data-status="failed"],
-#search-status[data-status="failed"] {
+#search-status[data-status="failed"],
+#index-status[data-status="failed"] {
   border-color: var(--red);
 }
 
@@ -263,6 +267,10 @@ pre {
   color: #d1d5db;
   font-size: 13px;
   white-space: pre-wrap;
+}
+
+pre.compact-log {
+  min-height: 120px;
 }
 
 h2 {

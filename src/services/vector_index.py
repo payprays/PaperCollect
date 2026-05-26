@@ -3,6 +3,7 @@ import json
 import math
 import os
 import re
+import threading
 import uuid
 from collections import Counter
 from collections.abc import Iterable, Sequence
@@ -23,6 +24,8 @@ DENSE_VECTOR_NAME = "dense"
 SPARSE_VECTOR_NAME = "sparse"
 TOKEN_RE = re.compile(r"[\u4e00-\u9fff]+|[a-z0-9][a-z0-9+#.]*")
 POINT_NAMESPACE = uuid.UUID("7f04652c-e52e-4ef0-b356-6a33e217457f")
+_PROVIDER_CACHE: dict[tuple[Any, ...], "HybridEmbeddingProvider"] = {}
+_PROVIDER_LOCK = threading.Lock()
 
 
 class VectorIndexError(RuntimeError):
@@ -294,6 +297,31 @@ def _create_collection(
 
 
 def _embedding_provider(index_config: dict[str, Any]) -> HybridEmbeddingProvider:
+    cache_key = _embedding_provider_cache_key(index_config)
+    if cache_key and bool(index_config.get("cache_provider", True)):
+        with _PROVIDER_LOCK:
+            provider = _PROVIDER_CACHE.get(cache_key)
+            if provider is None:
+                provider = _create_embedding_provider(index_config)
+                _PROVIDER_CACHE[cache_key] = provider
+            return provider
+    return _create_embedding_provider(index_config)
+
+
+def _embedding_provider_cache_key(index_config: dict[str, Any]) -> tuple[Any, ...] | None:
+    provider = str(index_config.get("embedding_provider") or "fastembed").lower()
+    if provider == "fastembed":
+        return (
+            provider,
+            str(index_config.get("dense_model") or DEFAULT_DENSE_MODEL),
+            str(index_config.get("sparse_model") or DEFAULT_SPARSE_MODEL),
+            index_config.get("cache_dir"),
+            index_config.get("threads"),
+        )
+    return None
+
+
+def _create_embedding_provider(index_config: dict[str, Any]) -> HybridEmbeddingProvider:
     provider = str(index_config.get("embedding_provider") or "fastembed").lower()
     if provider == "hash":
         return HashHybridEmbeddingProvider(dense_size=int(index_config.get("dense_size") or 128))

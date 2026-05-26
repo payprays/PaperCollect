@@ -316,6 +316,7 @@ limit_per_conference: 0
 # 改为输出目录
 
 output_dir: "data"
+job_store_dir: "data/jobs"
 
 vector_index:
   backend: qdrant

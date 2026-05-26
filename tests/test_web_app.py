@@ -249,7 +249,15 @@ def test_url_base_prefixes_routes_assets_and_generated_urls(tmp_path, monkeypatc
         json={"conference": "icse", "year": 2025, "limit": 1},
     )
     assert collect_response.status_code == 202
-    assert collect_response.get_json()["status_url"] == "/papercollect/api/jobs/1"
+    collect_payload = collect_response.get_json()
+    assert collect_payload["status_url"].startswith("/papercollect/api/jobs/")
+    assert collect_payload["job_id"] in collect_payload["status_url"]
+    for _ in range(20):
+        status = client.get(collect_payload["status_url"]).get_json()
+        if status["status"] == "completed":
+            break
+        time.sleep(0.05)
+    assert status["status"] == "completed"
 
 
 def test_collect_rejects_conference_not_in_config(tmp_path):
@@ -338,6 +346,13 @@ def test_collect_accepts_year_not_listed_in_config(tmp_path, monkeypatch):
     response = client.post("/api/collect", json={"conference": "icse", "year": 2026, "limit": 1})
 
     assert response.status_code == 202
+    status_url = response.get_json()["status_url"]
+    for _ in range(20):
+        status = client.get(status_url).get_json()
+        if status["status"] == "completed":
+            break
+        time.sleep(0.05)
+    assert status["status"] == "completed"
 
 
 def test_collect_endpoint_runs_batch_and_records_partial_failures(tmp_path, monkeypatch):
@@ -619,6 +634,64 @@ def test_search_endpoint_rejects_unknown_mode(tmp_path):
 
     assert response.status_code == 400
     assert "mode" in response.get_json()["error"]
+
+
+def test_index_endpoint_runs_background_job_and_rejects_duplicate(tmp_path, monkeypatch):
+    data_dir = tmp_path / "data"
+    data_dir.mkdir()
+    config_path = tmp_path / "config.yaml"
+    config_path.write_text(
+        yaml.safe_dump(
+            {
+                "include_ccfddl_catalog": False,
+                "conferences": [{"id": "ndss", "display_name": "NDSS"}],
+                "years": [2026],
+                "output_dir": str(data_dir),
+                "vector_index": {"collection": "test_collection"},
+            }
+        ),
+        encoding="utf-8",
+    )
+    release = threading.Event()
+
+    def fake_build_vector_index(config, output_dir, force=True):
+        assert config["vector_index"]["collection"] == "test_collection"
+        assert output_dir == str(data_dir)
+        assert force is True
+        assert release.wait(timeout=2)
+        return {
+            "backend": "qdrant",
+            "collection": "test_collection",
+            "provider": "hash:64",
+            "paper_count": 3,
+            "source_count": 3,
+        }
+
+    monkeypatch.setattr("src.web.app.build_vector_index", fake_build_vector_index)
+
+    client = create_app(str(config_path)).test_client()
+    response = client.post("/api/index", json={"force": True})
+
+    assert response.status_code == 202
+    status_url = response.get_json()["status_url"]
+
+    duplicate = client.post("/api/index", json={"force": True})
+    assert duplicate.status_code == 409
+
+    running_status = client.get(status_url).get_json()
+    assert running_status["type"] == "index"
+    assert running_status["status"] in {"queued", "running"}
+
+    release.set()
+    for _ in range(20):
+        completed_status = client.get(status_url).get_json()
+        if completed_status["status"] == "completed":
+            break
+        time.sleep(0.05)
+
+    assert completed_status["status"] == "completed"
+    assert completed_status["paper_count"] == 3
+    assert completed_status["provider"] == "hash:64"
 
 
 def test_collect_endpoint_runs_job_and_exposes_feed(tmp_path, monkeypatch):

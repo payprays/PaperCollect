@@ -100,10 +100,13 @@
               <div id="search-conference-picker" class="conference-picker compact" aria-label="Conferences to search"></div>
               <div class="actions">
                 <button type="submit">Search</button>
+                <button id="index-button" type="button" class="secondary">Rebuild index</button>
               </div>
             </form>
             <div id="search-status" data-status="idle">Search saved paper JSON files.</div>
             <div id="search-results"></div>
+            <div id="index-status" data-status="idle">Vector index idle.</div>
+            <pre id="index-logs" class="compact-log" aria-live="polite"></pre>
           </div>
         </div>
 

@@ -46,6 +46,8 @@ The user asked for the most advanced path, so the MVP should use Qdrant rather t
 
 The default embedding path is FastEmbed with `sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2` dense embeddings plus hash lexical sparse vectors. This keeps the advanced Qdrant hybrid/RRF architecture while fitting the current CPU host better than the much heavier Jina/SPLADE models. Tests use deterministic hash embeddings to avoid model downloads.
 
+Operational hardening: Web-triggered index rebuilds run as background jobs with JSON-backed status files and file locks, so multiple gunicorn workers can read job progress and avoid duplicate heavy rebuilds. FastEmbed providers are cached per process by model/cache/thread config so repeated agentic searches do not reload embedding models.
+
 ## Source Notes
 
 * LanceDB docs describe vector and hybrid search as first-class search patterns.

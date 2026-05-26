@@ -51,6 +51,7 @@ concurrency:
   threads: 5
 limit_per_conference: 0   # 0 表示不限制
 output_dir: "data"
+job_store_dir: "data/jobs"  # Web 后台任务状态；可删除，不进入 git
 vector_index:
   backend: qdrant
   path: data/qdrant
@@ -84,6 +85,20 @@ RSS 内容来自已保存的 JSON 结果；如果某个会议/年份还没有采
 url_base: "/papercollect"
 ```
 此时前端 API 请求、静态资源、任务状态 URL 和 RSS 链接都会带上 `/papercollect` 前缀。
+
+生产部署不要用 Flask dev server 承载公网流量。建议用 gunicorn 多 worker/threads，并通过 `PAPERCOLLECT_CONFIG` 指定配置：
+```bash
+PAPERCOLLECT_CONFIG=/etc/papercollect/config.yaml \
+  uv run gunicorn 'web:create_wsgi_app()' \
+  --bind 0.0.0.0:5000 \
+  --workers 2 \
+  --threads 4 \
+  --timeout 180
+```
+Web 后台任务状态会写入 `job_store_dir`，collection 和 vector index job 使用文件锁互斥，因此多 worker 下 `/api/jobs/<id>` 仍能查询到任务进度。向量索引也可以通过 Web API 后台触发：
+```bash
+curl -X POST http://127.0.0.1:5000/api/index -H 'content-type: application/json' -d '{"force": true}'
+```
 
 前端的搜索框会在已保存的 JSON 论文库中做本地搜索，默认使用 Agentic hybrid：优先查询 Qdrant dense+sparse hybrid 索引并用 RRF 融合，索引不存在时回退到 Concept semantic；也可切换为概念语义搜索或关键词搜索。搜索可按 CCFDDL 分类、CCF 等级、Focus 标签、多个会议和年份过滤，不需要 OpenAI API key。Concept semantic 使用本地 expanded BM25 + 概念词表重排，并会过滤 proceedings、poster、chair message 等非正式论文条目。
 

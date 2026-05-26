@@ -1,4 +1,6 @@
 import json
+import sys
+import types
 
 from src.services.paper_search import search_saved_papers
 from src.services.vector_index import build_vector_index, search_vector_index, vector_index_status
@@ -165,3 +167,48 @@ def test_agentic_search_falls_back_when_qdrant_local_path_is_locked(tmp_path, mo
     assert results[0]["title"] == "Kubernetes Policy Verification"
     assert results[0]["search_mode"] == "agentic_fallback"
     assert "already accessed" in results[0]["fallback_reason"]
+
+
+def test_fastembed_provider_is_cached_for_repeated_searches(monkeypatch):
+    import src.services.vector_index as vector_index
+
+    vector_index._PROVIDER_CACHE.clear()
+    init_calls = []
+
+    class FakeVector:
+        def __init__(self, values):
+            self._values = values
+
+        def tolist(self):
+            return self._values
+
+    class FakeTextEmbedding:
+        def __init__(self, model_name, cache_dir=None, threads=None):
+            init_calls.append((model_name, cache_dir, threads))
+
+        @staticmethod
+        def list_supported_models():
+            return [{"model": "dense-test", "dim": 4}]
+
+        def embed(self, texts):
+            for _text in texts:
+                yield FakeVector([1.0, 0.0, 0.0, 0.0])
+
+        def query_embed(self, _text):
+            yield FakeVector([1.0, 0.0, 0.0, 0.0])
+
+    fake_fastembed = types.ModuleType("fastembed")
+    fake_fastembed.TextEmbedding = FakeTextEmbedding
+    monkeypatch.setitem(sys.modules, "fastembed", fake_fastembed)
+
+    config = {
+        "embedding_provider": "fastembed",
+        "dense_model": "dense-test",
+        "sparse_model": "hash",
+    }
+    provider = vector_index._embedding_provider(config)
+    cached_provider = vector_index._embedding_provider(config)
+
+    assert provider is cached_provider
+    assert init_calls == [("dense-test", None, None)]
+    vector_index._PROVIDER_CACHE.clear()
