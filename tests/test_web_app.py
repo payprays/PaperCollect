@@ -422,6 +422,84 @@ def test_collect_endpoint_runs_batch_and_records_partial_failures(tmp_path, monk
     assert "Collection failed for FSE: FSE timed out" in status["logs"]
 
 
+def test_collect_stop_endpoint_cancels_batch_before_next_conference(tmp_path, monkeypatch):
+    data_dir = tmp_path / "data"
+    config_path = tmp_path / "config.yaml"
+    config_path.write_text(
+        yaml.safe_dump(
+            {
+                "include_ccfddl_catalog": False,
+                "conferences": [
+                    {"id": "icse", "display_name": "ICSE", "dblp_stream": "conf/icse"},
+                    {"id": "fse", "display_name": "FSE", "dblp_stream": "conf/sigsoft"},
+                ],
+                "years": [2025],
+                "output_dir": str(data_dir),
+                "concurrency": {"threads": 1},
+            }
+        ),
+        encoding="utf-8",
+    )
+    calls = []
+    started = threading.Event()
+    release = threading.Event()
+
+    def fake_process_conference_year(conf, year, dblp_client, metadata_manager, output_dir, limit):
+        calls.append(conf.id)
+        print(f"Mock collector reached {conf.display_name}.")
+        if conf.id == "icse":
+            started.set()
+            assert release.wait(timeout=2)
+        output_path = get_output_path(output_dir, conf, year)
+        data_dir.mkdir(exist_ok=True)
+        with open(output_path, "w", encoding="utf-8") as f:
+            json.dump(
+                [
+                    {
+                        "title": f"{conf.display_name} Paper",
+                        "authors": [],
+                        "venue": conf.display_name,
+                        "year": year,
+                    }
+                ],
+                f,
+            )
+
+    monkeypatch.setattr("src.web.app.process_conference_year", fake_process_conference_year)
+
+    client = create_app(str(config_path)).test_client()
+    response = client.post(
+        "/api/collect",
+        json={"conferences": ["icse", "fse"], "year": 2025, "limit": 1},
+    )
+
+    assert response.status_code == 202
+    assert started.wait(timeout=2)
+    status_url = response.get_json()["status_url"]
+
+    stop_response = client.post(f"{status_url}/stop")
+    assert stop_response.status_code == 202
+    assert stop_response.get_json()["cancel_requested"] is True
+    release.set()
+
+    status = None
+    for _ in range(40):
+        status = client.get(status_url).get_json()
+        if status["status"] == "cancelled":
+            break
+        time.sleep(0.05)
+
+    assert calls == ["icse"]
+    assert status["status"] == "cancelled"
+    assert status["completed_count"] == 1
+    assert status["failed_count"] == 0
+    assert status["stopped_count"] == 1
+    assert status["paper_count"] == 1
+    assert status["feed_urls"] == ["/feed/icse/2025.xml"]
+    assert "Stop requested; collection will stop after the current conference." in status["logs"]
+    assert "Collection stopped by user; 1 conferences were not started." in status["logs"]
+
+
 def test_search_endpoint_returns_saved_papers(tmp_path):
     data_dir = tmp_path / "data"
     data_dir.mkdir()

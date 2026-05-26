@@ -67,6 +67,7 @@ Questions to answer:
 - API: `GET /api/options`
 - API: `POST /api/collect`
 - API: `GET /api/jobs/<job_id>`
+- API: `POST /api/jobs/<job_id>/stop`
 - API: `GET /api/feeds`
 - RSS: `GET /feed/<conference>/<year>.xml`
 - Catalog parser: `normalize_conferences(config) -> list[ConferenceEntry]`
@@ -135,12 +136,14 @@ Questions to answer:
   - Success: HTTP 202 with `job_id` and `status_url`.
   - Validation failure: HTTP 400 with `error`.
   - Existing running job: HTTP 409 with `error`.
+  - Stop: `POST /api/jobs/<job_id>/stop` marks a queued/running collection job with `cancel_requested=true`; the worker stops cooperatively before starting the next conference and marks the job `cancelled`.
 - DBLP search collection:
   - DBLP search requests use `h=1000` as the page size and must paginate with `f` until all hits are read.
   - Do not treat the DBLP single-page size as the total per-conference paper limit.
 - Job response fields:
   - `id`, `status`, `conference`, `display_name`, `year`, `limit`, `logs`, `feed_url`.
   - Batch jobs also include `conferences`, `display_names`, `conference_count`, `completed_count`, `failed_count`, `results`, `errors`, and `feed_urls`.
+  - Cancelled collection jobs include `cancel_requested: true`, `status: cancelled`, `stopped_count`, and any partial `results`/`feed_urls` already saved before the stop request took effect.
   - `logs` must be incrementally visible while a job is still `queued` or `running`; do not buffer all stdout until completion.
   - Completed single-conference jobs include `paper_count` and `output_path`; completed batch jobs include total `paper_count` plus per-conference `results` and `output_paths`.
   - Batch collection should run selected conferences sequentially inside one background job. If one conference fails, record it in `errors`, continue the remaining conferences, and complete the job when at least one selected conference produced saved output.
@@ -195,6 +198,7 @@ Questions to answer:
 - Collection endpoint accepts a batch `conferences` array, de-duplicates repeated ids, streams per-conference logs, records partial failures, and keeps successful feeds visible.
 - Collection endpoint success path is tested with the collection function mocked; do not hit DBLP in unit tests.
 - Collection endpoint log streaming is tested with a mocked long-running collection function; assert `/api/jobs/<job_id>` includes captured output before the job completes.
+- Collection stop endpoint is tested with a mocked long-running batch collection; assert the current conference can finish and later conferences are not started.
 - Collection endpoint failure path is tested with the collection function mocked to raise; assert `/api/jobs/<job_id>` becomes `failed` and includes the captured DBLP-stage log.
 - Feed endpoint serves saved JSON as RSS and returns 404 for missing saved data.
 - Feeds endpoint skips saved empty JSON files and never returns `paper_count: 0` entries.

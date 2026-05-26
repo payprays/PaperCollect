@@ -5,6 +5,8 @@ const state = {
   focusTags: [],
   selectedCollectConferences: new Set(),
   selectedSearchConferences: new Set(),
+  currentCollectJobRef: null,
+  collectPollTimer: null,
 };
 
 const $ = (selector) => document.querySelector(selector);
@@ -397,6 +399,7 @@ async function loadFeeds() {
 async function startCollection(event) {
   event.preventDefault();
   setStatus("Starting collection...", "running");
+  setCollectRunning(true);
   $("#logs").textContent = "Waiting for collection logs...";
   $("#rss-link").classList.add("hidden");
   const selectedConferences = state.conferences
@@ -404,6 +407,7 @@ async function startCollection(event) {
     .map((conference) => conference.id);
   if (!selectedConferences.length) {
     setStatus("Choose at least one conference to collect.", "failed");
+    setCollectRunning(false);
     $("#logs").textContent = "";
     return;
   }
@@ -423,11 +427,38 @@ async function startCollection(event) {
 
   if (!response.ok) {
     setStatus(data.error || "Failed to start collection.", "failed");
+    setCollectRunning(false);
     $("#logs").textContent = data.error || "";
     return;
   }
 
-  pollJob(data.status_url || data.job_id);
+  state.currentCollectJobRef = data.status_url || data.job_id;
+  pollJob(state.currentCollectJobRef);
+}
+
+async function stopCollection() {
+  if (!state.currentCollectJobRef) {
+    return;
+  }
+
+  const stopButton = $("#collect-stop-button");
+  stopButton.disabled = true;
+  stopButton.textContent = "Stopping...";
+  setStatus("Stopping collection after the current conference...", "running");
+
+  const response = await fetch(`${jobStatusUrl(state.currentCollectJobRef)}/stop`, {
+    method: "POST",
+  });
+  const data = await response.json();
+  if (!response.ok) {
+    stopButton.disabled = false;
+    stopButton.textContent = "Stop";
+    setStatus(data.error || "Failed to stop collection.", "failed");
+    return;
+  }
+
+  setStatus(renderJobStatus(data), data.status);
+  $("#logs").textContent = (data.logs || []).join("\n") || "Waiting for collection logs...";
 }
 
 async function searchPapers(event) {
@@ -538,6 +569,11 @@ function truncate(value, length) {
 }
 
 async function pollJob(jobId) {
+  const expectedUrl = jobStatusUrl(jobId);
+  if (state.currentCollectJobRef && expectedUrl !== jobStatusUrl(state.currentCollectJobRef)) {
+    return;
+  }
+
   const response = await fetch(jobStatusUrl(jobId));
   const job = await response.json();
 
@@ -555,14 +591,21 @@ async function pollJob(jobId) {
       link.classList.remove("hidden");
     }
     await loadFeeds();
+    state.currentCollectJobRef = null;
+    setCollectRunning(false);
     return;
   }
 
-  if (job.status === "failed") {
+  if (job.status === "failed" || job.status === "cancelled") {
+    state.currentCollectJobRef = null;
+    setCollectRunning(false);
+    if (job.status === "cancelled") {
+      await loadFeeds();
+    }
     return;
   }
 
-  window.setTimeout(() => pollJob(jobId), 1500);
+  state.collectPollTimer = window.setTimeout(() => pollJob(jobId), 1500);
 }
 
 async function pollIndexJob(jobId) {
@@ -589,6 +632,9 @@ function renderJobStatus(job) {
   if (job.status === "failed") {
     return `Failed: ${job.error || "unknown error"}`;
   }
+  if (job.status === "cancelled") {
+    return `Stopped: saved ${job.paper_count || 0} papers across ${job.completed_count || 0} conferences; ${job.stopped_count || 0} not started.`;
+  }
   if (job.conference_count > 1) {
     return `Running batch collection for ${job.conference_count} conferences in ${job.year}...`;
   }
@@ -611,6 +657,18 @@ function setStatus(message, status) {
   statusNode.dataset.status = status;
 }
 
+function setCollectRunning(isRunning) {
+  $("#collect-button").disabled = isRunning;
+  const stopButton = $("#collect-stop-button");
+  stopButton.disabled = false;
+  stopButton.textContent = "Stop";
+  stopButton.classList.toggle("hidden", !isRunning);
+  if (!isRunning && state.collectPollTimer) {
+    window.clearTimeout(state.collectPollTimer);
+    state.collectPollTimer = null;
+  }
+}
+
 function setSearchStatus(message, status) {
   const statusNode = $("#search-status");
   statusNode.textContent = message;
@@ -624,6 +682,7 @@ function setIndexStatus(message, status) {
 }
 
 $("#collect-form").addEventListener("submit", startCollection);
+$("#collect-stop-button").addEventListener("click", stopCollection);
 $("#search-form").addEventListener("submit", searchPapers);
 $("#index-button").addEventListener("click", startIndexBuild);
 $("#collect-category").addEventListener("change", () => {

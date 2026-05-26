@@ -160,6 +160,8 @@ def create_app(config_path: str = "config.yaml") -> Flask:
                 "paper_count": None,
                 "feed_url": feed_urls[0] if single_conference else None,
                 "feed_urls": feed_urls,
+                "cancel_requested": False,
+                "stopped_count": 0,
             }
         )
 
@@ -186,6 +188,25 @@ def create_app(config_path: str = "config.yaml") -> Flask:
         if not job:
             return jsonify({"error": "Job not found."}), 404
         return jsonify(job)
+
+    @route("/api/jobs/<job_id>/stop", methods=["POST"])
+    def job_stop(job_id: str) -> tuple[Response, int] | Response:
+        job = job_store.get(job_id)
+        if not job:
+            return jsonify({"error": "Job not found."}), 404
+        if job.get("type") != "collection":
+            return jsonify({"error": "Only collection jobs can be stopped."}), 400
+        if job.get("status") not in {"queued", "running"}:
+            return jsonify({"error": "Collection job is not running.", "job": job}), 409
+
+        if not job.get("cancel_requested"):
+            job_store.update(job_id, cancel_requested=True)
+            job_store.append_log(
+                job_id,
+                "Stop requested; collection will stop after the current conference.",
+                max_lines=MAX_JOB_LOG_LINES,
+            )
+        return jsonify(job_store.get(job_id) or job), 202
 
     @route("/api/feeds", methods=["GET"])
     def feeds() -> Response:
@@ -369,6 +390,10 @@ def create_app(config_path: str = "config.yaml") -> Flask:
             os.makedirs(output_dir, exist_ok=True)
 
             for index, conference in enumerate(conferences, start=1):
+                if _collection_cancel_requested(job_id):
+                    _mark_collection_cancelled(job_id, results, errors, total)
+                    return
+
                 progress = f" ({index}/{total})" if total > 1 else ""
                 _append_job_log(job_id, f"Started collection for {conference.display_name} {year}{progress}.")
                 _append_job_log(
@@ -420,6 +445,9 @@ def create_app(config_path: str = "config.yaml") -> Flask:
                         paper_count=sum(result["paper_count"] for result in results),
                         output_paths=[result["output_path"] for result in results],
                     )
+                    if _collection_cancel_requested(job_id) and index < total:
+                        _mark_collection_cancelled(job_id, results, errors, total)
+                        return
                 except Exception as exc:
                     log_writer.flush()
                     error = {
@@ -445,6 +473,9 @@ def create_app(config_path: str = "config.yaml") -> Flask:
                         failed_count=len(errors),
                         errors=list(errors),
                     )
+                    if _collection_cancel_requested(job_id):
+                        _mark_collection_cancelled(job_id, results, errors, total)
+                        return
 
             if results:
                 if total > 1:
@@ -522,6 +553,37 @@ def create_app(config_path: str = "config.yaml") -> Flask:
 
     def _append_job_log(job_id: str, message: str) -> None:
         job_store.append_log(job_id, message, max_lines=MAX_JOB_LOG_LINES)
+
+    def _collection_cancel_requested(job_id: str) -> bool:
+        job = job_store.get(job_id) or {}
+        return bool(job.get("cancel_requested"))
+
+    def _mark_collection_cancelled(
+        job_id: str,
+        results: list[dict[str, Any]],
+        errors: list[dict[str, str]],
+        total: int,
+    ) -> None:
+        stopped_count = max(total - len(results) - len(errors), 0)
+        _append_job_log(
+            job_id,
+            f"Collection stopped by user; {stopped_count} conferences were not started.",
+        )
+        _update_job(
+            job_id,
+            status="cancelled",
+            cancel_requested=True,
+            paper_count=sum(result["paper_count"] for result in results),
+            output_path=results[0]["output_path"] if len(results) == 1 else None,
+            output_paths=[result["output_path"] for result in results],
+            feed_url=results[0]["feed_url"] if len(results) == 1 else None,
+            feed_urls=[result["feed_url"] for result in results],
+            results=list(results),
+            errors=list(errors),
+            completed_count=len(results),
+            failed_count=len(errors),
+            stopped_count=stopped_count,
+        )
 
     def _feed_url(conference: ConferenceEntry, year: int) -> str:
         encoded = quote(conference.id, safe="")
