@@ -83,7 +83,11 @@ class DBLPClient(PaperSource):
         target = target_conference.lower()
         
         # Get allowed venues for this target
-        allowed_venues = self.VENUE_WHITELIST.get(target, [])
+        allowed_venues = [
+            target_conference,
+            target_conference.upper(),
+            *self.VENUE_WHITELIST.get(target, []),
+        ]
         
         if venue_aliases:
             allowed_venues = [*allowed_venues, *venue_aliases]
@@ -116,8 +120,21 @@ class DBLPClient(PaperSource):
         Note: conference name usually matches the DBLP venue short name (e.g., "ICSE", "NeurIPS", "CVPR").
         """
         if dblp_stream and not dblp_query:
-            papers = self._fetch_from_toc(conference, year, dblp_stream, venue_aliases)
-            return papers or []
+            toc_error = None
+            try:
+                papers = self._fetch_from_toc(conference, year, dblp_stream, venue_aliases)
+            except DBLPFetchError as exc:
+                toc_error = exc
+            else:
+                if papers is not None:
+                    return papers
+
+            try:
+                return self._fetch_from_search(conference, year, venue_aliases=venue_aliases)
+            except DBLPFetchError as exc:
+                if toc_error is not None:
+                    raise DBLPFetchError(f"{toc_error}; venue-search fallback also failed: {exc}") from exc
+                raise
 
         return self._fetch_from_search(
             conference,

@@ -99,14 +99,38 @@ class TestDBLPClientSP(unittest.TestCase):
         self.assertEqual(mock_get.call_args.args[0], "https://dblp.org/db/conf/ndss/ndss2026.xml")
 
     @patch('src.clients.dblp_client.requests.Session.get')
-    def test_fetch_papers_does_not_search_when_stream_toc_missing(self, mock_get):
-        mock_get.return_value = _mock_text_response("", status_code=404)
+    def test_fetch_papers_falls_back_to_venue_search_when_stream_toc_missing(self, mock_get):
+        mock_get.side_effect = [
+            _mock_text_response("", status_code=404),
+            _mock_json_response(
+                {
+                    "result": {
+                        "hits": {
+                            "hit": [
+                                {
+                                    "info": {
+                                        "title": "NeurIPS Fallback Paper.",
+                                        "authors": {"author": [{"text": "A. Researcher"}]},
+                                        "year": "2025",
+                                        "venue": "NeurIPS",
+                                        "key": "conf/nips/example25",
+                                        "url": "https://dblp.org/rec/conf/nips/example25",
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                }
+            ),
+        ]
 
-        papers = self.client.fetch_papers("ESORICS", 2026, dblp_stream="conf/esorics", venue_aliases=["ESORICS"])
+        papers = self.client.fetch_papers("NeurIPS", 2025, dblp_stream="conf/nips", venue_aliases=["NIPS"])
 
-        self.assertEqual(papers, [])
-        mock_get.assert_called_once()
-        self.assertEqual(mock_get.call_args.args[0], "https://dblp.org/db/conf/esorics/esorics2026.xml")
+        self.assertEqual(len(papers), 1)
+        self.assertEqual(papers[0].title, "NeurIPS Fallback Paper.")
+        self.assertEqual(mock_get.call_args_list[0].args[0], "https://dblp.org/db/conf/nips/nips2025.xml")
+        self.assertEqual(mock_get.call_args_list[1].args[0], "https://dblp.org/search/publ/api")
+        self.assertEqual(mock_get.call_args_list[1].kwargs["params"]["q"], "venue:NeurIPS year:2025")
 
     @patch('src.clients.dblp_client.requests.Session.get')
     def test_search_paginates_beyond_dblp_page_size(self, mock_get):
