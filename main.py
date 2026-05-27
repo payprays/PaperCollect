@@ -4,7 +4,7 @@ import yaml
 import os
 import threading
 from typing import List, Dict
-from src.clients.dblp_client import DBLPClient
+from src.clients.dblp_client import DBLPClient, DBLPFetchError
 from src.clients.official_source_client import OfficialSourceClient
 from src.services.metadata_manager import MetadataManager
 from src.core.models import Paper
@@ -99,13 +99,19 @@ def fetch_papers_with_fallback(
     official_source_client: OfficialSourceClient | None = None,
 ) -> list[Paper]:
     print(f"  Fetching from DBLP...")
-    papers = dblp_client.fetch_papers(
-        conference.display_name,
-        year,
-        dblp_stream=conference.dblp_stream,
-        dblp_query=conference.dblp_query,
-        venue_aliases=list(conference.aliases),
-    )
+    try:
+        papers = dblp_client.fetch_papers(
+            conference.display_name,
+            year,
+            dblp_stream=conference.dblp_stream,
+            dblp_query=conference.dblp_query,
+            venue_aliases=list(conference.aliases),
+        )
+    except DBLPFetchError as exc:
+        if not conference.official_source:
+            raise
+        print(f"  DBLP failed: {exc}")
+        papers = []
     print(f"  Found {len(papers)} papers on DBLP.")
 
     if papers or not conference.official_source:

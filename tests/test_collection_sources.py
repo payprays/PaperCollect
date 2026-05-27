@@ -1,4 +1,5 @@
 from main import fetch_papers_with_fallback, paper_key
+from src.clients.dblp_client import DBLPFetchError
 from src.core.conference_catalog import ConferenceEntry
 from src.core.models import Paper
 
@@ -65,3 +66,25 @@ def test_fetch_papers_with_fallback_does_not_use_official_source_when_dblp_has_d
 
     assert len(papers) == 1
     assert papers[0].dblp_key == "conf/mlsys/x"
+
+
+def test_fetch_papers_with_fallback_uses_official_source_when_dblp_fails():
+    class FailingDBLPClient:
+        def fetch_papers(self, *args, **kwargs):
+            raise DBLPFetchError("DBLP search failed")
+
+    conference = ConferenceEntry(
+        id="neurips",
+        display_name="NeurIPS",
+        official_source={"type": "neurips_proceedings"},
+    )
+
+    papers = fetch_papers_with_fallback(
+        conference,
+        2025,
+        FailingDBLPClient(),
+        official_source_client=OnePaperOfficialClient(),
+    )
+
+    assert len(papers) == 1
+    assert papers[0].source == "official:miniconf"

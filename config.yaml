@@ -5,6 +5,9 @@ conferences:
     dblp_stream: conf/nips
     aliases: [NIPS]
     category: AI
+    official_source:
+      type: neurips_proceedings
+      page_url: https://proceedings.neurips.cc/paper_files/paper/{year}
     enabled: true
   - id: icml
     display_name: ICML

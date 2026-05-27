@@ -128,7 +128,7 @@ class TestDBLPClientSP(unittest.TestCase):
 
         self.assertEqual(len(papers), 1)
         self.assertEqual(papers[0].title, "NeurIPS Fallback Paper.")
-        self.assertEqual(mock_get.call_args_list[0].args[0], "https://dblp.org/db/conf/nips/nips2025.xml")
+        self.assertEqual(mock_get.call_args_list[0].args[0], "https://dblp.org/db/conf/nips/neurips2025.xml")
         self.assertEqual(mock_get.call_args_list[1].args[0], "https://dblp.org/search/publ/api")
         self.assertEqual(mock_get.call_args_list[1].kwargs["params"]["q"], "venue:NeurIPS year:2025")
 

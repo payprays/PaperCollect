@@ -145,6 +145,53 @@ def test_ieee_sp_accepted_source_missing_page_returns_empty_list():
         assert OfficialSourceClient().fetch_papers(conference, 2026) == []
 
 
+def test_neurips_proceedings_source_parses_official_listing():
+    conference = ConferenceEntry(
+        id="neurips",
+        display_name="NeurIPS",
+        official_source={
+            "type": "neurips_proceedings",
+            "page_url": "https://proceedings.neurips.cc/paper_files/paper/{year}",
+        },
+    )
+    html = """
+    <li class="conference" data-track="conference">
+      <div class="paper-content">
+        <a title="paper title" href="/paper_files/paper/2025/hash/0010031a-Abstract-Conference.html">
+          NeuralPLexer3: Accurate Biomolecular Complex Structure Prediction with Flow Models
+        </a>
+        <span class="paper-authors">Ada Lovelace, Alan Turing</span>
+      </div>
+      <span class="paper-track-badge">Main Conference Track</span>
+    </li>
+    <li class="datasets_and_benchmarks_track" data-track="datasets_and_benchmarks_track">
+      <div class="paper-content">
+        <a title="paper title" href="/paper_files/paper/2025/hash/0013efa-Abstract-Datasets_and_Benchmarks_Track.html">
+          EngiBench: A Framework for Data-Driven Engineering Design Research
+        </a>
+        <span class="paper-authors">Grace Hopper</span>
+      </div>
+      <span class="paper-track-badge">Datasets and Benchmarks Track</span>
+    </li>
+    """
+
+    with patch("src.clients.official_source_client.requests.Session.get") as mock_get:
+        mock_get.return_value = _text_response(html)
+
+        papers = OfficialSourceClient().fetch_papers(conference, 2025)
+
+    assert len(papers) == 2
+    assert papers[0].title.startswith("NeuralPLexer3")
+    assert papers[0].authors == ["Ada Lovelace", "Alan Turing"]
+    assert papers[0].url == (
+        "https://proceedings.neurips.cc/paper_files/paper/2025/hash/"
+        "0010031a-Abstract-Conference.html"
+    )
+    assert papers[0].paper_id == "official:neurips:2025:0010031a-Abstract-Conference"
+    assert papers[0].source == "official:neurips_proceedings"
+    assert papers[1].title.startswith("EngiBench")
+
+
 def test_researchr_accepted_source_parses_event_overview_table():
     conference = ConferenceEntry(
         id="fse",

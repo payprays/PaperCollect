@@ -42,6 +42,8 @@ class OfficialSourceClient:
             return self._fetch_miniconf(conference, year, source)
         if source_type == "ieee_sp_accepted":
             return self._fetch_ieee_sp_accepted(conference, year, source)
+        if source_type == "neurips_proceedings":
+            return self._fetch_neurips_proceedings(conference, year, source)
         if source_type == "researchr_accepted":
             return self._fetch_researchr_accepted(conference, year, source)
         raise OfficialSourceFetchError(
@@ -197,6 +199,57 @@ class OfficialSourceClient:
                     venue=conference.display_name,
                     url=item.get("url") or page_url,
                     paper_id=f"official:{conference.id}:{year}:{event_id}",
+                    source=f"official:{source.get('type')}",
+                    source_url=page_url,
+                )
+            )
+
+        return papers
+
+    def _fetch_neurips_proceedings(
+        self,
+        conference: ConferenceEntry,
+        year: int,
+        source: dict[str, Any],
+    ) -> list[Paper]:
+        page_url = self._format_url(source.get("page_url"), year)
+        if not page_url:
+            return []
+
+        html = self._get_text(page_url)
+        if html is None:
+            return []
+
+        parser = _NeurIPSProceedingsParser(page_url)
+        parser.feed(html)
+        parser.close()
+
+        allowed_tracks = {
+            str(track).strip()
+            for track in source.get("tracks", [])
+            if str(track).strip()
+        }
+        papers = []
+        seen = set()
+        for index, item in enumerate(parser.items):
+            track = str(item.get("track") or "")
+            if allowed_tracks and track not in allowed_tracks:
+                continue
+            title = str(item.get("title") or "").strip()
+            if not title:
+                continue
+            key = str(item.get("key") or index)
+            if key in seen:
+                continue
+            seen.add(key)
+            papers.append(
+                Paper(
+                    title=title,
+                    authors=item.get("authors", []),
+                    year=year,
+                    venue=conference.display_name,
+                    url=item.get("url") or page_url,
+                    paper_id=f"official:{conference.id}:{year}:{key}",
                     source=f"official:{source.get('type')}",
                     source_url=page_url,
                 )
@@ -372,6 +425,118 @@ class _IEEESPAcceptedPapersParser(HTMLParser):
         self._capture_title = False
         self._capture_authors = False
         self._author_line_done = False
+
+
+class _NeurIPSProceedingsParser(HTMLParser):
+    """Parses proceedings.neurips.cc paper listing pages."""
+
+    def __init__(self, page_url: str):
+        super().__init__(convert_charrefs=True)
+        self.page_url = page_url
+        self.items: list[dict[str, Any]] = []
+        self._current: dict[str, Any] | None = None
+        self._capture_title = False
+        self._capture_authors = False
+        self._capture_track_label = False
+        self._title_parts: list[str] = []
+        self._author_parts: list[str] = []
+        self._track_label_parts: list[str] = []
+
+    def handle_starttag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
+        attrs_map = {name: value or "" for name, value in attrs}
+        classes = set(attrs_map.get("class", "").split())
+
+        if tag == "li" and attrs_map.get("data-track"):
+            self._finish_current()
+            self._current = {
+                "track": attrs_map.get("data-track", ""),
+                "url": None,
+                "key": None,
+            }
+            return
+
+        if self._current is None:
+            return
+
+        if tag == "a":
+            href = attrs_map.get("href", "")
+            if "/paper_files/paper/" in href and "/hash/" in href:
+                self._capture_title = True
+                self._title_parts = []
+                self._current["url"] = urljoin(self.page_url, href)
+                self._current["key"] = href.rsplit("/", 1)[-1].removesuffix(".html")
+            return
+
+        if tag == "span" and "paper-authors" in classes:
+            self._capture_authors = True
+            self._author_parts = []
+            return
+
+        if tag == "span" and "paper-track-badge" in classes:
+            self._capture_track_label = True
+            self._track_label_parts = []
+
+    def handle_endtag(self, tag: str) -> None:
+        if self._current is None:
+            return
+
+        if tag == "a" and self._capture_title:
+            self._current["title"] = _normalize_text(" ".join(self._title_parts))
+            self._capture_title = False
+            self._title_parts = []
+            return
+
+        if tag == "span" and self._capture_authors:
+            self._current["authors"] = _split_authors(" ".join(self._author_parts))
+            self._capture_authors = False
+            self._author_parts = []
+            return
+
+        if tag == "span" and self._capture_track_label:
+            self._current["track_label"] = _normalize_text(" ".join(self._track_label_parts))
+            self._capture_track_label = False
+            self._track_label_parts = []
+            return
+
+        if tag == "li":
+            self._finish_current()
+
+    def handle_data(self, data: str) -> None:
+        if self._capture_title:
+            self._title_parts.append(data)
+        elif self._capture_authors:
+            self._author_parts.append(data)
+        elif self._capture_track_label:
+            self._track_label_parts.append(data)
+
+    def close(self) -> None:
+        self._finish_current()
+        super().close()
+
+    def _finish_current(self) -> None:
+        if self._current is None:
+            return
+
+        title = str(self._current.get("title") or "").strip()
+        if title:
+            self.items.append(
+                {
+                    "title": title,
+                    "authors": self._current.get("authors", []),
+                    "track": self._current.get("track", ""),
+                    "track_label": self._current.get("track_label", ""),
+                    "url": self._current.get("url") or self.page_url,
+                    "key": self._current.get("key"),
+                }
+            )
+
+        self._current = None
+        self._capture_title = False
+        self._capture_authors = False
+        self._capture_track_label = False
+        self._title_parts = []
+        self._author_parts = []
+        self._track_label_parts = []
 
 
 def _normalize_text(value: str) -> str:

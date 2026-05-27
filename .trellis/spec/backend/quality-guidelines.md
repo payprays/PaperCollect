@@ -141,6 +141,8 @@ Questions to answer:
   - DBLP search requests use `h=1000` as the page size and must paginate with `f` until all hits are read.
   - Do not treat the DBLP single-page size as the total per-conference paper limit.
   - If a configured DBLP stream has no TOC XML yet or the TOC request fails, collection should try a venue-name DBLP search fallback before giving up.
+  - DBLP `conf/nips` TOC volumes use `neurips<year>.xml` for modern NeurIPS years; do not derive `nips<year>.xml` blindly.
+  - NeurIPS should use the official proceedings page as a fallback source because DBLP can lag or omit current-year main-conference TOC data.
 - Job response fields:
   - `id`, `status`, `conference`, `display_name`, `year`, `limit`, `logs`, `feed_url`.
   - Batch jobs also include `conferences`, `display_names`, `conference_count`, `completed_count`, `failed_count`, `results`, `errors`, and `feed_urls`.

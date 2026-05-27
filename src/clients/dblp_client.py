@@ -289,8 +289,13 @@ class DBLPClient(PaperSource):
         parts = [part for part in dblp_stream.strip("/").split("/") if part]
         if len(parts) < 2:
             return None
-        volume = f"{parts[-1]}{year}"
+        volume = self._toc_volume(parts[-1], year)
         return f"{self.DB_URL}/{'/'.join(parts)}/{volume}.xml"
+
+    def _toc_volume(self, stream_name: str, year: int) -> str:
+        if stream_name == "nips" and year >= 2018:
+            return f"neurips{year}"
+        return f"{stream_name}{year}"
 
     def _venue_values(self, item: ElementTree.Element) -> list[str]:
         return [
