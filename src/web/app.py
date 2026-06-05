@@ -2,6 +2,7 @@ import os
 import subprocess
 import sys
 import threading
+import time
 from contextlib import redirect_stdout
 from typing import Any, Callable
 from urllib.parse import quote
@@ -20,11 +21,28 @@ from src.core.conference_catalog import (
     normalize_conferences,
     valid_collection_year,
 )
-from src.services.job_store import FileJobLock, JobStore
+from src.services.job_store import (
+    FileJobLock,
+    JobStore,
+    build_queue_items,
+    has_resumable_tasks,
+    has_retryable_tasks,
+    mark_pending_tasks_skipped,
+    queue_task_summary,
+    reset_failed_and_skipped_tasks,
+    reset_skipped_tasks,
+)
 from src.services.metadata_manager import MetadataManager
 from src.services.paper_search import search_saved_papers
-from src.services.rss_service import build_rss_xml, load_papers
+from src.services.rss_service import build_rss_xml, count_papers, load_papers
 from src.services.vector_index import VectorIndexError, vector_index_status
+from src.services.webdav_sync import (
+    WebDAVClient,
+    load_webdav_config,
+    sync_download,
+    sync_status,
+    sync_upload,
+)
 
 MAX_JOB_LOG_LINES = 500
 
@@ -63,6 +81,7 @@ def create_app(config_path: str = "config.yaml") -> Flask:
     job_store = JobStore(_job_store_dir(initial_config))
     collection_lock = FileJobLock(os.path.join(job_store.path, "collection.lock"), "collection")
     index_lock = FileJobLock(os.path.join(job_store.path, "index.lock"), "index")
+    sync_lock = FileJobLock(os.path.join(job_store.path, "sync.lock"), "sync")
 
     def route(rule: str, **options: Any) -> Callable[[Callable[..., Any]], Callable[..., Any]]:
         def decorator(func: Callable[..., Any]) -> Callable[..., Any]:
@@ -111,6 +130,38 @@ def create_app(config_path: str = "config.yaml") -> Flask:
             }
         )
 
+    @route("/api/year-progress", methods=["GET"])
+    def year_progress() -> Response:
+        config = _load_config(config_path)
+        output_dir = str(config.get("output_dir", "data"))
+        cache_key = f"yp:{output_dir}"
+        now = time.time()
+        cached = _FEEDS_CACHE.get(cache_key)
+        if cached and now - cached[0] < _CACHE_TTL:
+            return jsonify(cached[1])
+        default_years = [int(y) for y in config.get("years", [])]
+        progress = []
+        for conference in normalize_conferences(config):
+            conf_years = list(conference.years) if conference.years else default_years
+            saved = _saved_years_for_conference(output_dir, conference)
+            conf_years_int = [int(y) for y in conf_years]
+            saved_int = sorted(saved)
+            missing = sorted(set(conf_years_int) - saved)
+            progress.append(
+                {
+                    "conference_id": conference.id,
+                    "display_name": conference.display_name,
+                    "category": conference.category,
+                    "ccf": (conference.tier.get("ccf") or "").strip().upper() or None,
+                    "configured_years": conf_years_int,
+                    "saved_years": saved_int,
+                    "missing_years": missing,
+                }
+            )
+        result = {"progress": progress}
+        _FEEDS_CACHE[cache_key] = (time.time(), result)
+        return jsonify(result)
+
     @route("/api/collect", methods=["POST"])
     def collect() -> tuple[Response, int] | Response:
         payload = request.get_json(silent=True) or {}
@@ -119,12 +170,21 @@ def create_app(config_path: str = "config.yaml") -> Flask:
         if validation_error:
             return jsonify({"error": validation_error}), 400
 
-        try:
-            year = int(payload["year"])
-        except (KeyError, TypeError, ValueError):
-            return jsonify({"error": "Choose a valid year from config.yaml."}), 400
-        if not valid_collection_year(year):
-            return jsonify({"error": "Choose a year between 1900 and two years from now."}), 400
+        # Accept years array or single year (backward compatible).
+        raw_years = payload.get("years")
+        if isinstance(raw_years, list) and raw_years:
+            try:
+                years = [int(y) for y in raw_years]
+            except (TypeError, ValueError):
+                return jsonify({"error": "Choose valid years."}), 400
+        else:
+            try:
+                years = [int(payload["year"])]
+            except (KeyError, TypeError, ValueError):
+                return jsonify({"error": "Choose a valid year from config.yaml."}), 400
+        for year in years:
+            if not valid_collection_year(year):
+                return jsonify({"error": "Choose a year between 1900 and two years from now."}), 400
 
         try:
             limit = _resolve_limit(payload.get("limit"), config)
@@ -137,40 +197,40 @@ def create_app(config_path: str = "config.yaml") -> Flask:
         output_dir = str(config.get("output_dir", "data"))
         threads = int(config.get("concurrency", {}).get("threads", 4))
 
-        feed_urls = [_feed_url(conference, year) for conference in conferences]
-        single_conference = len(conferences) == 1
+        queue = build_queue_items(conferences, years)
+        total_tasks = len(queue)
+        feed_urls = [item["feed_url"] or "" for item in queue if item.get("feed_url")]
+        single_task = total_tasks == 1
+        first = queue[0] if queue else {}
         job = job_store.create(
             {
                 "type": "collection",
                 "status": "queued",
-                "conference": conferences[0].id,
-                "display_name": conferences[0].display_name
-                if single_conference
-                else f"{len(conferences)} conferences",
+                "conference": first.get("conference_id", conferences[0].id),
+                "display_name": first.get("display_name", conferences[0].display_name)
+                if single_task
+                else f"{total_tasks} tasks",
                 "conferences": [conference.id for conference in conferences],
                 "display_names": [conference.display_name for conference in conferences],
                 "conference_count": len(conferences),
+                "years": years,
+                "year": years[0],
                 "completed_count": 0,
                 "failed_count": 0,
                 "results": [],
                 "errors": [],
-                "year": year,
                 "limit": limit,
-                "logs": _queued_collection_logs(conferences, year, feed_urls),
+                "logs": _queued_collection_logs_multi(conferences, years, total_tasks),
                 "paper_count": None,
-                "feed_url": feed_urls[0] if single_conference else None,
-                "feed_urls": feed_urls,
+                "feed_url": None,
+                "feed_urls": [],
                 "cancel_requested": False,
                 "stopped_count": 0,
+                "queue": queue,
             }
         )
 
-        thread = threading.Thread(
-            target=_run_collection_job,
-            args=(job["id"], conferences, output_dir, threads, collection_lock),
-            daemon=True,
-        )
-        thread.start()
+        _spawn_collection_worker(job["id"], output_dir, threads, collection_lock)
 
         return jsonify(
             {
@@ -187,6 +247,9 @@ def create_app(config_path: str = "config.yaml") -> Flask:
         job = job_store.get(job_id)
         if not job:
             return jsonify({"error": "Job not found."}), 404
+        queue = job.get("queue")
+        if queue:
+            job["task_summary"] = queue_task_summary(queue)
         return jsonify(job)
 
     @route("/api/jobs/<job_id>/stop", methods=["POST"])
@@ -206,12 +269,153 @@ def create_app(config_path: str = "config.yaml") -> Flask:
                 "Stop requested; collection will stop after the current conference.",
                 max_lines=MAX_JOB_LOG_LINES,
             )
-        return jsonify(job_store.get(job_id) or job), 202
+        updated = job_store.get(job_id) or job
+        queue = updated.get("queue")
+        if queue:
+            updated["task_summary"] = queue_task_summary(queue)
+        return jsonify(updated), 202
+
+    @route("/api/jobs/<job_id>/resume", methods=["POST"])
+    def job_resume(job_id: str) -> tuple[Response, int] | Response:
+        job = job_store.get(job_id)
+        if not job:
+            return jsonify({"error": "Job not found."}), 404
+        if job.get("type") != "collection":
+            return jsonify({"error": "Only collection jobs can be resumed."}), 400
+        if job.get("status") == "running":
+            return jsonify({"error": "Job is already running."}), 409
+        if job.get("status") not in {"stopped", "failed"}:
+            return jsonify({"error": "Job cannot be resumed from its current state."}), 400
+
+        queue = job.get("queue") or []
+        if not has_resumable_tasks(queue):
+            return jsonify({"error": "No tasks to resume."}), 400
+
+        if not collection_lock.acquire(blocking=False):
+            return jsonify({"error": "A collection job is already running."}), 409
+
+        reset_skipped_tasks(queue)
+        job_store.update(
+            job_id,
+            status="running",
+            cancel_requested=False,
+            queue=queue,
+            error=None,
+        )
+        job_store.append_log(job_id, "Resuming collection.", max_lines=MAX_JOB_LOG_LINES)
+
+        config = _load_config(config_path)
+        output_dir = str(config.get("output_dir", "data"))
+        threads = int(config.get("concurrency", {}).get("threads", 4))
+        _spawn_collection_worker(job_id, output_dir, threads, collection_lock)
+
+        return jsonify(
+            {
+                "job_id": job_id,
+                "status_url": _with_url_base(
+                    url_for("job_status", job_id=job_id),
+                    url_base,
+                ),
+            }
+        ), 202
+
+    @route("/api/jobs/<job_id>/retry", methods=["POST"])
+    def job_retry(job_id: str) -> tuple[Response, int] | Response:
+        job = job_store.get(job_id)
+        if not job:
+            return jsonify({"error": "Job not found."}), 404
+        if job.get("type") != "collection":
+            return jsonify({"error": "Only collection jobs can be retried."}), 400
+        if job.get("status") not in {"stopped", "failed", "completed"}:
+            return jsonify({"error": "Job cannot be retried from its current state."}), 400
+
+        queue = job.get("queue") or []
+        if not has_retryable_tasks(queue):
+            return jsonify({"error": "No failed tasks to retry."}), 400
+
+        if not collection_lock.acquire(blocking=False):
+            return jsonify({"error": "A collection job is already running."}), 409
+
+        reset_failed_and_skipped_tasks(queue)
+        job_store.update(
+            job_id,
+            status="running",
+            cancel_requested=False,
+            queue=queue,
+            error=None,
+        )
+        job_store.append_log(job_id, "Retrying failed tasks.", max_lines=MAX_JOB_LOG_LINES)
+
+        config = _load_config(config_path)
+        output_dir = str(config.get("output_dir", "data"))
+        threads = int(config.get("concurrency", {}).get("threads", 4))
+        _spawn_collection_worker(job_id, output_dir, threads, collection_lock)
+
+        return jsonify(
+            {
+                "job_id": job_id,
+                "status_url": _with_url_base(
+                    url_for("job_status", job_id=job_id),
+                    url_base,
+                ),
+            }
+        ), 202
+
+    @route("/api/jobs/<job_id>/queue/<task_id>/retry", methods=["POST"])
+    def task_retry(job_id: str, task_id: str) -> tuple[Response, int] | Response:
+        job = job_store.get(job_id)
+        if not job:
+            return jsonify({"error": "Job not found."}), 404
+        if job.get("type") != "collection":
+            return jsonify({"error": "Only collection jobs support task retry."}), 400
+
+        queue = job.get("queue") or []
+        target = None
+        for item in queue:
+            if item.get("task_id") == task_id:
+                target = item
+                break
+        if target is None:
+            return jsonify({"error": "Task not found."}), 404
+        if target["status"] not in {"failed", "skipped"}:
+            return jsonify({"error": "Task cannot be retried in its current state."}), 400
+
+        target["status"] = "pending"
+        target["error"] = None
+        target["started_at"] = None
+        target["finished_at"] = None
+        job_store.update(job_id, queue=queue)
+        job_store.append_log(
+            job_id,
+            f"Retrying task {task_id} ({target['display_name']}).",
+            max_lines=MAX_JOB_LOG_LINES,
+        )
+
+        needs_worker = job.get("status") not in {"running", "queued"}
+        if needs_worker:
+            if not collection_lock.acquire(blocking=False):
+                return jsonify({"error": "A collection job is already running."}), 409
+            job_store.update(job_id, status="running", cancel_requested=False)
+            config = _load_config(config_path)
+            output_dir = str(config.get("output_dir", "data"))
+            threads = int(config.get("concurrency", {}).get("threads", 4))
+            _spawn_collection_worker(job_id, output_dir, threads, collection_lock)
+
+        updated = job_store.get(job_id) or job
+        queue = updated.get("queue")
+        if queue:
+            updated["task_summary"] = queue_task_summary(queue)
+        return jsonify(updated), 202
 
     @route("/api/feeds", methods=["GET"])
     def feeds() -> Response:
         config = _load_config(config_path)
         output_dir = str(config.get("output_dir", "data"))
+        cache_key = output_dir
+        now = time.time()
+        cached = _FEEDS_CACHE.get(cache_key)
+        if cached and now - cached[0] < _CACHE_TTL:
+            return jsonify(cached[1])
         feeds = []
         for conference in normalize_conferences(config):
             years = sorted(
@@ -222,26 +426,26 @@ def create_app(config_path: str = "config.yaml") -> Flask:
                 | _saved_years_for_conference(output_dir, conference)
             )
             for year in years:
-                output_path = _find_saved_output(output_dir, conference, int(year))
-                if output_path:
-                    papers = load_papers(
-                        output_dir,
-                        conference.id,
-                        int(year),
-                        aliases=[conference.display_name, *conference.aliases],
-                    )
-                    if not papers:
-                        continue
-                    feeds.append(
-                        {
-                            "conference": conference.id,
-                            "display_name": conference.display_name,
-                            "year": int(year),
-                            "paper_count": len(papers),
-                            "feed_url": _feed_url(conference, int(year)),
-                        }
-                    )
-        return jsonify({"feeds": feeds})
+                paper_count = count_papers(
+                    output_dir,
+                    conference.id,
+                    int(year),
+                    aliases=[conference.display_name, *conference.aliases],
+                )
+                if paper_count == 0:
+                    continue
+                feeds.append(
+                    {
+                        "conference": conference.id,
+                        "display_name": conference.display_name,
+                        "year": int(year),
+                        "paper_count": paper_count,
+                        "feed_url": _feed_url(conference, int(year)),
+                    }
+                )
+        result = {"feeds": feeds}
+        _FEEDS_CACHE[cache_key] = (time.time(), result)
+        return jsonify(result)
 
     @route("/api/search", methods=["GET"])
     def search() -> tuple[Response, int] | Response:
@@ -347,6 +551,209 @@ def create_app(config_path: str = "config.yaml") -> Flask:
             }
         ), 202
 
+    @route("/api/sync/status", methods=["GET"])
+    def sync_status_endpoint() -> tuple[Response, int] | Response:
+        config = _load_config(config_path)
+        webdav_config = load_webdav_config(config)
+        if not webdav_config:
+            return jsonify({"error": "WebDAV is not configured."}), 503
+        output_dir = str(config.get("output_dir", "data"))
+        client = WebDAVClient(
+            webdav_config["url"],
+            webdav_config["username"],
+            webdav_config["password"],
+            verify_ssl=webdav_config.get("verify_ssl", True),
+        )
+        remote_path = webdav_config.get("remote_path", "/")
+        try:
+            result = sync_status(client, output_dir, remote_path, timeout=10)
+        except Exception as exc:
+            return jsonify({"error": str(exc)}), 502
+        result["remote_path"] = remote_path
+        result["remote_url"] = webdav_config["url"]
+        return jsonify(result)
+
+    @route("/api/sync/upload", methods=["POST"])
+    def sync_upload_endpoint() -> tuple[Response, int] | Response:
+        config = _load_config(config_path)
+        webdav_config = load_webdav_config(config)
+        if not webdav_config:
+            return jsonify({"error": "WebDAV is not configured."}), 503
+        if not sync_lock.acquire(blocking=False):
+            return jsonify({"error": "A sync job is already running."}), 409
+        output_dir = str(config.get("output_dir", "data"))
+        remote_path = webdav_config.get("remote_path", "/")
+        job = job_store.create(
+            {
+                "type": "sync",
+                "direction": "upload",
+                "status": "queued",
+                "remote_url": webdav_config["url"],
+                "remote_path": remote_path,
+                "logs": ["Queued sync upload to remote."],
+                "result": None,
+            }
+        )
+        thread = threading.Thread(
+            target=_run_sync_upload_job,
+            args=(job["id"], webdav_config, output_dir, remote_path, sync_lock),
+            daemon=True,
+        )
+        thread.start()
+        return jsonify(
+            {
+                "job_id": job["id"],
+                "status_url": _with_url_base(
+                    url_for("job_status", job_id=job["id"]),
+                    url_base,
+                ),
+            }
+        ), 202
+
+    @route("/api/sync/download", methods=["POST"])
+    def sync_download_endpoint() -> tuple[Response, int] | Response:
+        config = _load_config(config_path)
+        webdav_config = load_webdav_config(config)
+        if not webdav_config:
+            return jsonify({"error": "WebDAV is not configured."}), 503
+        if not sync_lock.acquire(blocking=False):
+            return jsonify({"error": "A sync job is already running."}), 409
+        output_dir = str(config.get("output_dir", "data"))
+        remote_path = webdav_config.get("remote_path", "/")
+        job = job_store.create(
+            {
+                "type": "sync",
+                "direction": "download",
+                "status": "queued",
+                "remote_url": webdav_config["url"],
+                "remote_path": remote_path,
+                "logs": ["Queued sync download from remote."],
+                "result": None,
+            }
+        )
+        thread = threading.Thread(
+            target=_run_sync_download_job,
+            args=(job["id"], webdav_config, output_dir, remote_path, sync_lock),
+            daemon=True,
+        )
+        thread.start()
+        return jsonify(
+            {
+                "job_id": job["id"],
+                "status_url": _with_url_base(
+                    url_for("job_status", job_id=job["id"]),
+                    url_base,
+                ),
+            }
+        ), 202
+
+    def _run_sync_upload_job(
+        job_id: str,
+        webdav_config: dict[str, str],
+        output_dir: str,
+        remote_path: str,
+        active_lock: FileJobLock,
+    ) -> None:
+        try:
+            _update_job(job_id, status="running")
+            client = WebDAVClient(
+                webdav_config["url"],
+                webdav_config["username"],
+                webdav_config["password"],
+            )
+            _append_job_log(job_id, "Starting sync upload...")
+            result = sync_upload(client, output_dir, remote_path)
+            _append_job_log(
+                job_id,
+                f"Upload complete: {len(result['uploaded'])} uploaded, "
+                f"{len(result['skipped'])} skipped, {len(result['errors'])} errors.",
+            )
+            if result["errors"]:
+                for err in result["errors"]:
+                    _append_job_log(job_id, f"Error uploading {err['file']}: {err['error']}")
+            _update_job(job_id, status="completed", result=result)
+        except Exception as exc:
+            _append_job_log(job_id, f"Sync upload failed: {exc}")
+            _update_job(job_id, status="failed", error=str(exc))
+        finally:
+            active_lock.release()
+
+    def _run_sync_download_job(
+        job_id: str,
+        webdav_config: dict[str, str],
+        output_dir: str,
+        remote_path: str,
+        active_lock: FileJobLock,
+    ) -> None:
+        try:
+            _update_job(job_id, status="running")
+            client = WebDAVClient(
+                webdav_config["url"],
+                webdav_config["username"],
+                webdav_config["password"],
+            )
+            _append_job_log(job_id, "Starting sync download...")
+            result = sync_download(client, output_dir, remote_path)
+            _append_job_log(
+                job_id,
+                f"Download complete: {len(result['downloaded'])} downloaded, "
+                f"{len(result['skipped'])} skipped, {len(result['errors'])} errors.",
+            )
+            if result["errors"]:
+                for err in result["errors"]:
+                    _append_job_log(job_id, f"Error downloading {err['file']}: {err['error']}")
+            _update_job(job_id, status="completed", result=result)
+        except Exception as exc:
+            _append_job_log(job_id, f"Sync download failed: {exc}")
+            _update_job(job_id, status="failed", error=str(exc))
+        finally:
+            active_lock.release()
+
+    # Pre-warm caches in background on startup.
+    def _prewarm() -> None:
+        import threading as _threading
+        def _do() -> None:
+            try:
+                time.sleep(0.5)
+                cfg = _load_config(config_path)
+                out = str(cfg.get("output_dir", "data"))
+                # Warm feeds cache
+                all_feeds = []
+                for conf in normalize_conferences(cfg):
+                    yrs = sorted(
+                        {int(y) for y in configured_years(cfg, conf)}
+                        | _saved_years_for_conference(out, conf)
+                    )
+                    for yr in yrs:
+                        pc = count_papers(out, conf.id, yr, aliases=[conf.display_name, *conf.aliases])
+                        if pc:
+                            all_feeds.append({
+                                "conference": conf.id, "display_name": conf.display_name,
+                                "year": yr, "paper_count": pc,
+                                "feed_url": _feed_url(conf, yr),
+                            })
+                _FEEDS_CACHE[out] = (time.time(), {"feeds": all_feeds})
+                # Warm year-progress cache
+                default_years = [int(y) for y in cfg.get("years", [])]
+                progress = []
+                for conf in normalize_conferences(cfg):
+                    conf_years = list(conf.years) if conf.years else default_years
+                    saved = _saved_years_for_conference(out, conf)
+                    progress.append({
+                        "conference_id": conf.id, "display_name": conf.display_name,
+                        "category": conf.category,
+                        "ccf": (conf.tier.get("ccf") or "").strip().upper() or None,
+                        "configured_years": [int(y) for y in conf_years],
+                        "saved_years": sorted(saved),
+                        "missing_years": sorted(set(int(y) for y in conf_years) - saved),
+                    })
+                _FEEDS_CACHE[f"yp:{out}"] = (time.time(), {"progress": progress})
+            except Exception:
+                pass
+        _threading.Thread(target=_do, daemon=True).start()
+
+    _prewarm()
+
     @route("/feed/<path:conference>/<int:year>.xml", methods=["GET"])
     def feed(conference: str, year: int) -> tuple[Response, int] | Response:
         config = _load_config(config_path)
@@ -372,30 +779,64 @@ def create_app(config_path: str = "config.yaml") -> Flask:
         )
         return Response(xml, mimetype="application/rss+xml; charset=utf-8")
 
+    def _spawn_collection_worker(
+        job_id: str,
+        output_dir: str,
+        threads: int,
+        active_lock: FileJobLock,
+    ) -> None:
+        thread = threading.Thread(
+            target=_run_collection_job,
+            args=(job_id, output_dir, threads, active_lock),
+            daemon=True,
+        )
+        thread.start()
+
     def _run_collection_job(
         job_id: str,
-        conferences: list[ConferenceEntry],
         output_dir: str,
         threads: int,
         active_lock: FileJobLock,
     ) -> None:
         job = job_store.get(job_id) or {}
-        year = int(job["year"])
         limit = int(job["limit"])
+        conference_ids = job.get("conferences") or []
         _update_job(job_id, status="running")
-        total = len(conferences)
-        results: list[dict[str, Any]] = []
-        errors: list[dict[str, str]] = []
+        queue: list[dict[str, Any]] = job.get("queue") or []
+        total = len(queue)
         try:
             os.makedirs(output_dir, exist_ok=True)
 
-            for index, conference in enumerate(conferences, start=1):
+            config = _load_config(config_path)
+            conference_map: dict[str, ConferenceEntry] = {}
+            for cid in conference_ids:
+                entry = find_conference(config, cid)
+                if entry is not None:
+                    conference_map[cid] = entry
+
+            for index, task in enumerate(queue):
+                if task["status"] != "pending":
+                    continue
+
                 if _collection_cancel_requested(job_id):
-                    _mark_collection_cancelled(job_id, results, errors, total)
+                    _mark_collection_stopped(job_id, queue)
                     return
 
-                progress = f" ({index}/{total})" if total > 1 else ""
-                _append_job_log(job_id, f"Started collection for {conference.display_name} {year}{progress}.")
+                task_year = int(task.get("year") or job.get("year"))
+                conference = conference_map.get(task["conference_id"])
+                if conference is None:
+                    task["status"] = "failed"
+                    task["error"] = f"Conference {task['conference_id']} not found in config."
+                    task["finished_at"] = time.time()
+                    _sync_queue_to_job(job_id, queue)
+                    continue
+
+                task["status"] = "running"
+                task["started_at"] = time.time()
+                _sync_queue_to_job(job_id, queue)
+
+                progress = f" ({index + 1}/{total})" if total > 1 else ""
+                _append_job_log(job_id, f"Started collection for {conference.display_name} {task_year}{progress}.")
                 _append_job_log(
                     job_id,
                     "Using "
@@ -408,7 +849,7 @@ def create_app(config_path: str = "config.yaml") -> Flask:
                     with redirect_stdout(log_writer):
                         process_conference_year(
                             conference,
-                            year,
+                            task_year,
                             DBLPClient(),
                             MetadataManager(threads=threads),
                             output_dir,
@@ -419,99 +860,144 @@ def create_app(config_path: str = "config.yaml") -> Flask:
                     papers = load_papers(
                         output_dir,
                         conference.id,
-                        year,
+                        task_year,
                         aliases=[conference.display_name, *conference.aliases],
                     )
-                    output_path = get_output_path(output_dir, conference, year)
-                    result = {
-                        "conference": conference.id,
-                        "display_name": conference.display_name,
-                        "paper_count": len(papers),
-                        "output_path": output_path,
-                        "feed_url": _feed_url(conference, year),
-                    }
-                    results.append(result)
+                    output_path = get_output_path(output_dir, conference, task_year)
+                    task["status"] = "completed"
+                    task["paper_count"] = len(papers)
+                    task["output_path"] = output_path
+                    task["feed_url"] = _feed_url(conference, task_year)
+                    task["finished_at"] = time.time()
+
                     if total == 1:
                         _append_job_log(job_id, f"Completed collection with {len(papers)} saved papers.")
                     else:
                         _append_job_log(job_id, f"Completed {conference.display_name} with {len(papers)} saved papers.")
                     _append_job_log(job_id, f"Saved JSON output to {output_path}.")
-                    _update_job(
-                        job_id,
-                        completed_count=len(results),
-                        failed_count=len(errors),
-                        results=list(results),
-                        errors=list(errors),
-                        paper_count=sum(result["paper_count"] for result in results),
-                        output_paths=[result["output_path"] for result in results],
-                    )
-                    if _collection_cancel_requested(job_id) and index < total:
-                        _mark_collection_cancelled(job_id, results, errors, total)
+
+                    _sync_queue_to_job(job_id, queue)
+                    if _collection_cancel_requested(job_id):
+                        _mark_collection_stopped(job_id, queue)
                         return
                 except Exception as exc:
                     log_writer.flush()
-                    error = {
-                        "conference": conference.id,
-                        "display_name": conference.display_name,
-                        "error": str(exc),
-                    }
-                    errors.append(error)
+                    task["status"] = "failed"
+                    task["error"] = str(exc)
+                    task["finished_at"] = time.time()
                     if total == 1:
                         _append_job_log(job_id, f"Collection failed: {exc}")
-                        _update_job(
-                            job_id,
-                            status="failed",
-                            error=str(exc),
-                            failed_count=1,
-                            errors=list(errors),
-                        )
-                        return
-                    _append_job_log(job_id, f"Collection failed for {conference.display_name}: {exc}")
-                    _update_job(
-                        job_id,
-                        completed_count=len(results),
-                        failed_count=len(errors),
-                        errors=list(errors),
-                    )
+                    else:
+                        _append_job_log(job_id, f"Collection failed for {conference.display_name}: {exc}")
+                    _sync_queue_to_job(job_id, queue)
                     if _collection_cancel_requested(job_id):
-                        _mark_collection_cancelled(job_id, results, errors, total)
+                        _mark_collection_stopped(job_id, queue)
                         return
+
+            summary = queue_task_summary(queue)
+            results = [
+                {
+                    "conference": item["conference_id"],
+                    "display_name": item["display_name"],
+                    "year": item.get("year"),
+                    "paper_count": item["paper_count"] or 0,
+                    "output_path": item["output_path"],
+                    "feed_url": item["feed_url"],
+                }
+                for item in queue
+                if item["status"] == "completed"
+            ]
+            errors = [
+                {
+                    "conference": item["conference_id"],
+                    "display_name": item["display_name"],
+                    "year": item.get("year"),
+                    "error": item["error"],
+                }
+                for item in queue
+                if item["status"] == "failed"
+            ]
 
             if results:
                 if total > 1:
                     _append_job_log(
                         job_id,
-                        f"Batch completed: {len(results)} succeeded, {len(errors)} failed.",
+                        f"Batch completed: {summary['completed']} succeeded, {summary['failed']} failed.",
                     )
                 _update_job(
                     job_id,
                     status="completed",
-                    paper_count=sum(result["paper_count"] for result in results),
+                    paper_count=sum(r["paper_count"] for r in results),
                     output_path=results[0]["output_path"] if total == 1 else None,
-                    output_paths=[result["output_path"] for result in results],
+                    output_paths=[r["output_path"] for r in results],
                     feed_url=results[0]["feed_url"] if total == 1 else None,
-                    feed_urls=[result["feed_url"] for result in results],
-                    results=list(results),
-                    errors=list(errors),
-                    completed_count=len(results),
-                    failed_count=len(errors),
+                    feed_urls=[r["feed_url"] for r in results],
+                    results=results,
+                    errors=errors,
+                    completed_count=summary["completed"],
+                    failed_count=summary["failed"],
+                    stopped_count=summary["skipped"],
+                    queue=queue,
                 )
                 return
 
             error_message = "All selected conferences failed."
             if errors:
-                error_message = "; ".join(
-                    f"{error['display_name']}: {error['error']}" for error in errors
-                )
+                if total == 1:
+                    error_message = errors[0]["error"]
+                else:
+                    error_message = "; ".join(
+                        f"{error['display_name']}: {error['error']}" for error in errors
+                    )
             _update_job(
                 job_id,
                 status="failed",
                 error=error_message,
-                errors=list(errors),
-                failed_count=len(errors),
+                errors=errors,
+                failed_count=summary["failed"],
+                stopped_count=summary["skipped"],
+                queue=queue,
             )
         finally:
             active_lock.release()
+
+    def _sync_queue_to_job(job_id: str, queue: list[dict[str, Any]]) -> None:
+        """Update job with current queue state and derived fields."""
+        summary = queue_task_summary(queue)
+        results = [
+            {
+                "conference": item["conference_id"],
+                "display_name": item["display_name"],
+                "year": item.get("year"),
+                "paper_count": item["paper_count"] or 0,
+                "output_path": item["output_path"],
+                "feed_url": item["feed_url"],
+            }
+            for item in queue
+            if item["status"] == "completed"
+        ]
+        errors = [
+            {
+                "conference": item["conference_id"],
+                "display_name": item["display_name"],
+                "year": item.get("year"),
+                "error": item["error"],
+            }
+            for item in queue
+            if item["status"] == "failed"
+        ]
+        _update_job(
+            job_id,
+            queue=list(queue),
+            results=results,
+            errors=errors,
+            completed_count=summary["completed"],
+            failed_count=summary["failed"],
+            stopped_count=summary["skipped"],
+            paper_count=sum(r["paper_count"] for r in results),
+            output_paths=[r["output_path"] for r in results],
+            feed_urls=[r["feed_url"] for r in results],
+        )
 
     def _run_index_job(
         job_id: str,
@@ -558,31 +1044,53 @@ def create_app(config_path: str = "config.yaml") -> Flask:
         job = job_store.get(job_id) or {}
         return bool(job.get("cancel_requested"))
 
-    def _mark_collection_cancelled(
+    def _mark_collection_stopped(
         job_id: str,
-        results: list[dict[str, Any]],
-        errors: list[dict[str, str]],
-        total: int,
+        queue: list[dict[str, Any]],
     ) -> None:
-        stopped_count = max(total - len(results) - len(errors), 0)
+        mark_pending_tasks_skipped(queue)
+        summary = queue_task_summary(queue)
+        results = [
+            {
+                "conference": item["conference_id"],
+                "display_name": item["display_name"],
+                "year": item.get("year"),
+                "paper_count": item["paper_count"] or 0,
+                "output_path": item["output_path"],
+                "feed_url": item["feed_url"],
+            }
+            for item in queue
+            if item["status"] == "completed"
+        ]
+        errors = [
+            {
+                "conference": item["conference_id"],
+                "display_name": item["display_name"],
+                "year": item.get("year"),
+                "error": item["error"],
+            }
+            for item in queue
+            if item["status"] == "failed"
+        ]
         _append_job_log(
             job_id,
-            f"Collection stopped by user; {stopped_count} conferences were not started.",
+            f"Collection stopped by user; {summary['skipped']} tasks were not started.",
         )
         _update_job(
             job_id,
-            status="cancelled",
+            status="stopped",
             cancel_requested=True,
-            paper_count=sum(result["paper_count"] for result in results),
+            paper_count=sum(r["paper_count"] for r in results),
             output_path=results[0]["output_path"] if len(results) == 1 else None,
-            output_paths=[result["output_path"] for result in results],
+            output_paths=[r["output_path"] for r in results],
             feed_url=results[0]["feed_url"] if len(results) == 1 else None,
-            feed_urls=[result["feed_url"] for result in results],
-            results=list(results),
-            errors=list(errors),
-            completed_count=len(results),
-            failed_count=len(errors),
-            stopped_count=stopped_count,
+            feed_urls=[r["feed_url"] for r in results],
+            results=results,
+            errors=errors,
+            completed_count=summary["completed"],
+            failed_count=summary["failed"],
+            stopped_count=summary["skipped"],
+            queue=queue,
         )
 
     def _feed_url(conference: ConferenceEntry, year: int) -> str:
@@ -592,11 +1100,22 @@ def create_app(config_path: str = "config.yaml") -> Flask:
     return app
 
 
+_CONFIG_CACHE: dict[str, tuple[float, dict[str, Any]]] = {}
+_FEEDS_CACHE: dict[str, tuple[float, dict[str, Any]]] = {}
+_CACHE_TTL = 5  # seconds
+
+
 def _load_config(config_path: str) -> dict[str, Any]:
+    now = time.time()
+    cached = _CONFIG_CACHE.get(config_path)
+    if cached and now - cached[0] < _CACHE_TTL:
+        return cached[1]
     if not os.path.exists(config_path):
         return {}
     with open(config_path, "r", encoding="utf-8") as f:
-        return yaml.safe_load(f) or {}
+        config = yaml.safe_load(f) or {}
+    _CONFIG_CACHE[config_path] = (now, config)
+    return config
 
 
 def _index_command(config_path: str, *, force: bool) -> list[str]:
@@ -676,6 +1195,18 @@ def _queued_collection_logs(conferences: list[ConferenceEntry], year: int, feed_
     return [
         f"Queued collection for {len(conferences)} conferences in {year}.",
         "RSS feeds will be available as each conference completes.",
+    ]
+
+
+def _queued_collection_logs_multi(
+    conferences: list[ConferenceEntry],
+    years: list[int],
+    total_tasks: int,
+) -> list[str]:
+    year_str = ", ".join(str(y) for y in years)
+    return [
+        f"Queued {total_tasks} collection tasks for {len(conferences)} conferences across {len(years)} year(s) ({year_str}).",
+        "RSS feeds will be available as each task completes.",
     ]
 
 

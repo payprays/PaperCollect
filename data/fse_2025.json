@@ -1,0 +1,65 @@
+[
+  {
+    "title": "10 years later: revisiting how developers search for code",
+    "authors": [
+      "Kathryn Stolee",
+      "Tobias Welp",
+      "Caitlin Sadowski",
+      "Sebastian Elbaum"
+    ],
+    "venue": "FSE",
+    "year": 2025,
+    "abstract": "Code search is an integral part of a developer’s workflow. In 2015, researchers published a paper reflecting on the code search practices at Google of 27 developers who used the internal Code Search tool. That paper had first-hand accounts for why those developers were using code search and highlighted how often and in what situations developers were searching for code. In the past decade, much has changed in the landscape of developer support. New languages have emerged, artificial intelligence (AI) for code generation has gained traction, auto-complete in the IDE has gotten better, Q&amp;A forums have increased in popularity, and code repositories are larger than ever. It is worth considering whether those observations from almost a decade ago have stood the test of time. In this work, inspired by the prior survey about the Code Search tool, we run a series of three surveys with 1,945 total responses and report overall Code Search usage statistics for over 100,000 users. Unlike the prior work, in our surveys, we include explicit success criteria to understand when code search is meeting their needs, and when it is not. We dive further into two common sub-categories of code search effort: when its users are looking for examples and when they are using code search alongside code review. We find that Code Search users continue to use the tool frequently and the frequency has not changed despite the introduction of AI-enhanced development support. Users continue to turn to Code Search to find examples, but the frequency of example-seeking behavior has decreased. More often than before, users access the tool to learn about and explore code. This has implications for future Code Search support in software development.",
+    "citation_count": 3,
+    "reference_count": 37,
+    "url": "https://doi.org/10.1145/3715774 ",
+    "dblp_key": null,
+    "source_id": "official:fse:2025:61478592-26b4-4141-ad3d-866bd0c3a187",
+    "source": "official:researchr_accepted",
+    "source_url": "https://conf.researchr.org/track/fse-2025/fse-2025-research-papers"
+  },
+  {
+    "title": "A Causal Learning Framework for Enhancing Robustness of Source Code Models",
+    "authors": [
+      "Junyao Ye",
+      "Zhen Li",
+      "Xi Tang",
+      "Deqing Zou",
+      "Shouhuai Xu",
+      "Qiang Weizhong",
+      "Hai Jin"
+    ],
+    "venue": "FSE",
+    "year": 2025,
+    "abstract": "Deep Learning (DL) models are useful for many software engineering tasks. However, these models are susceptible to adversarial attacks, partly because they learn spurious features that incur spurious correlations between these features and model predictions. In this paper, we tackle the problem with a novel causal learning framework, dubbed CausalCode, which leverages causal inference principles to mitigate spurious correlations. At a high level, CausalCode can be characterized as follows: (i) it uses causal data augmentation to generate intervention examples to disrupt spurious correlations; (ii) it leverages regularization to learn invariant representations that prefer causal features to spurious features; (iii) it can enhance the robustness of multiple DL models for source code-based software engineering tasks because it is task-agnostic and model-agnostic. To evaluate its effectiveness, we conduct comprehensive experiments on two models (i.e., CodeBERT and GraphCodeBERT), with respect to four software engineering tasks (i.e., defect detection, functionality classification, code translation, and code repair). Experimental results show that CausalCode outperforms the state-of-the-art approaches in enhancing the robustness of these models.",
+    "citation_count": 0,
+    "reference_count": 50,
+    "url": "https://doi.org/10.1145/3729387 ",
+    "dblp_key": null,
+    "source_id": "official:fse:2025:dc538111-d6ad-476b-9be7-9cc3fc6865e4",
+    "source": "official:researchr_accepted",
+    "source_url": "https://conf.researchr.org/track/fse-2025/fse-2025-research-papers"
+  },
+  {
+    "title": "A Comprehensive Study of Bug-Fix Patterns in Autonomous Driving Systems",
+    "authors": [
+      "Yuntianyi Chen",
+      "Yuqi Huai",
+      "Yirui He",
+      "Shilong Li",
+      "Changnam Hong",
+      "Alfred Chen",
+      "Joshua Garcia"
+    ],
+    "venue": "FSE",
+    "year": 2025,
+    "abstract": "As autonomous driving systems (ADSes) become increasingly complex and integral to daily life, the importance of understanding the nature and mitigation of software bugs in these systems has grown correspondingly. Addressing the challenges of software maintenance in autonomous driving systems (e.g., handling real-time system decisions and ensuring safety-critical reliability) is crucial due to the unique combination of real-time decision-making requirements and the high stakes of operational failures in ADSes. The potential of automated tools in this domain is promising, yet there remains a gap in our comprehension of the challenges faced and the strategies employed during manual debugging and repair of such systems. In this paper, we present an empirical study that investigates bug-fix patterns in ADSes, with the aim of improving reliability and safety. We have analyzed the commit histories and bug reports of two major autonomous driving projects, Apollo and Autoware, from 1,331 bug fixes with the study of bug symptoms, root causes, and bug-fix patterns. Our study reveals several dominant bug-fix patterns, including those related to path planning, data flow, and configuration management. Additionally, we find that the frequency distribution of bug-fix patterns varies significantly depending on their nature and types and that certain categories of bugs are recurrent and more challenging to exterminate. Based on our findings, we propose a hierarchy of ADS bugs and two taxonomies of 15 syntactic bug-fix patterns and 27 semantic bug-fix patterns that offer guidance for bug identification and resolution. We also contribute a benchmark of 1,331 ADS bug-fix instances.",
+    "citation_count": 1,
+    "reference_count": 43,
+    "url": "https://doi.org/10.1145/3715733 ",
+    "dblp_key": null,
+    "source_id": "official:fse:2025:65ed1796-df04-423f-aebb-8e6ec9ef5742",
+    "source": "official:researchr_accepted",
+    "source_url": "https://conf.researchr.org/track/fse-2025/fse-2025-research-papers"
+  }
+]

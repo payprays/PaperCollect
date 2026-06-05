@@ -1,0 +1,58 @@
+[
+  {
+    "title": "Real-Time Calibration Model for Low-Cost Sensor in Fine-Grained Time Series.",
+    "authors": [
+      "Seokho Ahn",
+      "Hyungjin Kim 0004",
+      "Sungbok Shin",
+      "Young-Duk Seo"
+    ],
+    "venue": "AAAI",
+    "year": 2025,
+    "abstract": "Precise measurements from sensors are crucial, but data is usually collected from low-cost, low-tech systems, which are often inaccurate. Thus, they require further calibrations. To that end, we first identify three requirements for effective calibration under practical low-tech sensor conditions. Based on the requirements, we develop a model called TESLA, Transformer for effective sensor calibration utilizing logarithmic-binned attention. TESLA uses a high-performance deep learning model, Transformers, to calibrate and capture non-linear components. At its core, it employs logarithmic binning, to minimize attention complexity. TESLA achieves consistent real-time calibration, even with longer sequences and finer-grained time series in hardware-constrained systems. Experiments show that TESLA outperforms existing novel deep learning and newly crafted linear models in accuracy, calibration speed, and energy efficiency.",
+    "citation_count": 0,
+    "reference_count": 0,
+    "url": "https://doi.org/10.1609/aaai.v39i1.31974",
+    "dblp_key": "conf/aaai/Ahn0SS25",
+    "source_id": "https://openalex.org/W4405955661",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "BayesCNS: A Unified Bayesian Approach to Address Cold Start and Non-Stationarity in Search Systems at Scale.",
+    "authors": [
+      "Randy Ardywibowo",
+      "Rakesh Sunki",
+      "Shin Tsz Lucy Kuo",
+      "Sankalp Nayak"
+    ],
+    "venue": "AAAI",
+    "year": 2025,
+    "abstract": "Information Retrieval (IR) systems used in search and recommendation platforms frequently employ Learning-to-Rank (LTR) models to rank items in response to user queries. These models heavily rely on features derived from user interactions, such as clicks and engagement data. This dependence introduces cold start issues for items lacking user engagement and poses challenges in adapting to non-stationary shifts in user behavior over time. We address both challenges holistically as an online learning problem and propose BayesCNS, a Bayesian approach designed to handle cold start and non-stationary distribution shifts in search systems at scale. BayesCNS achieves this by estimating prior distributions for user-item interactions, which are continuously updated with new user interactions gathered online. This online learning procedure is guided by a ranker model, enabling efficient exploration of relevant items using contextual information provided by the ranker. We successfully deployed BayesCNS in a large-scale search system and demonstrated its efficacy through comprehensive offline and online experiments. Notably, an online A/B experiment showed a 10.60% increase in new item interactions and a 1.05% improvement in overall success metrics over the existing production baseline.",
+    "citation_count": 0,
+    "reference_count": 39,
+    "url": "https://doi.org/10.1609/aaai.v39i1.31975",
+    "dblp_key": "conf/aaai/ArdywibowoSKN25",
+    "source_id": "https://openalex.org/W4409369501",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Scalable Surrogate Verification of Image-Based Neural Network Control Systems Using Composition and Unrolling.",
+    "authors": [
+      "Feiyang Cai",
+      "Chuchu Fan",
+      "Stanley Bak"
+    ],
+    "venue": "AAAI",
+    "year": 2025,
+    "abstract": "Verifying safety of neural network control systems that use images as input is a difficult problem because, from a given system state, there is no known way to mathematically model what images are possible in the real-world. We build upon recent work that considers a surrogate verification approach, training a conditional generative adversarial network (cGAN) as an image generator in place of the real world. This setup enables set-based formal analysis of the closed-loop system, providing analysis beyond simulation and testing. While existing work is effective on small examples, excessive overapproximation both within a single control period (one-step error) and across multiple periods (multi-step error) limits its scalability. We propose approaches to overcome these errors. First, we address one-step error by composing the system's dynamics along with the cGAN and neural network controller, without losing the dependencies between input states and the control outputs as in the monotonic analysis of the system dynamics. Second, we reduce multi-step error by repeating the single-step composition, essentially unrolling multiple steps of the control loop into a large neural network. We then leverage existing network verification algorithms to compute accurate reachable sets for multiple steps, avoiding the accumulation of abstraction error at each step.We demonstrate the effectiveness of our approach in terms of both accuracy and scalability using two case studies. On the aircraft taxiing system, the converged reachable set is 175% larger using the prior baseline method compared with our proposed approach. On the emergency braking system, with 24x the number of image output variables from the cGAN, the baseline method fails to prove any states are safe, whereas our improvements enable set-based safety analysis.",
+    "citation_count": 1,
+    "reference_count": 0,
+    "url": "https://doi.org/10.1609/aaai.v39i1.31976",
+    "dblp_key": "conf/aaai/CaiFB25",
+    "source_id": "https://openalex.org/W4409346536",
+    "source": null,
+    "source_url": null
+  }
+]

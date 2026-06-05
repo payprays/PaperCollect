@@ -17,6 +17,11 @@ def main() -> None:
     parser.add_argument("--host", default="0.0.0.0", help="Host to bind")
     parser.add_argument("--port", type=int, default=5000, help="Port to bind")
     parser.add_argument(
+        "--debug",
+        action="store_true",
+        help="Enable Flask debug mode (auto-reload on code changes).",
+    )
+    parser.add_argument(
         "--no-threaded",
         action="store_true",
         help="Disable Flask dev server threading.",
@@ -24,7 +29,7 @@ def main() -> None:
     args = parser.parse_args()
 
     app = create_app(args.config)
-    app.run(host=args.host, port=args.port, threaded=not args.no_threaded)
+    app.run(host=args.host, port=args.port, debug=args.debug, threaded=not args.no_threaded)
 
 
 if __name__ == "__main__":

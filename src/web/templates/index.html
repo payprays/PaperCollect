@@ -33,15 +33,11 @@
                   <select id="collect-ccf" name="ccf"></select>
                 </label>
                 <label>
-                  Year
-                  <input id="year" name="year" type="number" min="1900" max="2099" step="1" list="year-options">
-                  <datalist id="year-options"></datalist>
-                </label>
-                <label>
                   Limit
                   <input id="limit" name="limit" type="number" min="0" step="1">
                 </label>
               </div>
+              <div id="year-progress" class="year-progress hidden"></div>
               <div class="conference-tools">
                 <span id="conference-count">0 selected</span>
                 <button id="collect-select-visible" type="button" class="secondary">Select visible</button>
@@ -49,6 +45,14 @@
                 <button id="collect-clear-all" type="button" class="secondary">Clear all</button>
               </div>
               <div id="conference-picker" class="conference-picker" aria-label="Conferences to collect"></div>
+              <div id="year-picker-section" class="year-picker-section hidden">
+                <div class="year-picker-header">
+                  <span class="year-picker-title">Years</span>
+                  <button id="year-select-all" type="button" class="secondary">Select all</button>
+                  <button id="year-clear-all" type="button" class="secondary">Clear all</button>
+                </div>
+                <div id="year-picker" class="year-picker"></div>
+              </div>
               <div class="actions">
                 <button id="collect-button" type="submit">Collect</button>
                 <button id="collect-stop-button" type="button" class="secondary danger hidden">Stop</button>
@@ -57,6 +61,7 @@
             </form>
 
             <div id="status" data-status="idle">Ready.</div>
+            <div id="task-queue" class="task-queue hidden"></div>
             <pre id="logs" aria-live="polite"></pre>
           </div>
 
@@ -90,6 +95,7 @@
                 <label>
                   Year
                   <input id="search-year" name="year" type="number" min="1900" max="2099" step="1" list="year-options">
+                  <datalist id="year-options"></datalist>
                 </label>
               </div>
               <div class="conference-tools">
@@ -108,6 +114,16 @@
             <div id="search-results"></div>
             <div id="index-status" data-status="idle">Vector index idle.</div>
             <pre id="index-logs" class="compact-log" aria-live="polite"></pre>
+          </div>
+
+          <div class="panel" id="sync-section">
+            <h2>WebDAV Sync</h2>
+            <div id="sync-status">Loading...</div>
+            <div class="sync-actions">
+              <button id="sync-upload-button" type="button">Upload to remote</button>
+              <button id="sync-download-button" type="button" class="secondary">Download from remote</button>
+            </div>
+            <pre id="sync-logs" class="compact-log" aria-live="polite"></pre>
           </div>
         </div>
 

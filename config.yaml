@@ -321,6 +321,12 @@ limit_per_conference: 0
 output_dir: "data"
 job_store_dir: "data/jobs"
 
+webdav:
+  url: ""
+  username: ""
+  password: ""
+  remote_path: "/"
+
 vector_index:
   backend: qdrant
   path: data/qdrant

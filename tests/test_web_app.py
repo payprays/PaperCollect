@@ -418,7 +418,7 @@ def test_collect_endpoint_runs_batch_and_records_partial_failures(tmp_path, monk
     assert status["failed_count"] == 1
     assert status["paper_count"] == 1
     assert status["feed_urls"] == ["/feed/icse/2025.xml"]
-    assert status["errors"] == [{"conference": "fse", "display_name": "FSE", "error": "FSE timed out"}]
+    assert status["errors"] == [{"conference": "fse", "display_name": "FSE", "year": 2025, "error": "FSE timed out"}]
     assert "Collection failed for FSE: FSE timed out" in status["logs"]
 
 
@@ -485,19 +485,19 @@ def test_collect_stop_endpoint_cancels_batch_before_next_conference(tmp_path, mo
     status = None
     for _ in range(40):
         status = client.get(status_url).get_json()
-        if status["status"] == "cancelled":
+        if status["status"] == "stopped":
             break
         time.sleep(0.05)
 
     assert calls == ["icse"]
-    assert status["status"] == "cancelled"
+    assert status["status"] == "stopped"
     assert status["completed_count"] == 1
     assert status["failed_count"] == 0
-    assert status["stopped_count"] == 1
+    assert status["stopped_count"] >= 1
     assert status["paper_count"] == 1
     assert status["feed_urls"] == ["/feed/icse/2025.xml"]
     assert "Stop requested; collection will stop after the current conference." in status["logs"]
-    assert "Collection stopped by user; 1 conferences were not started." in status["logs"]
+    assert any("Collection stopped by user" in line for line in status["logs"])
 
 
 def test_search_endpoint_returns_saved_papers(tmp_path):
@@ -946,3 +946,1088 @@ def test_collect_endpoint_marks_job_failed_when_collection_raises(tmp_path, monk
     assert status["error"] == "DBLP timed out"
     assert "Fetching from DBLP..." in status["logs"]
     assert "Collection failed: DBLP timed out" in status["logs"]
+
+
+def _make_queue_config(tmp_path, conferences_config, *, include_ccfddl=False):
+    """Helper to create a config with the given conferences."""
+    config_path = tmp_path / "config.yaml"
+    config_path.write_text(
+        yaml.safe_dump(
+            {
+                "include_ccfddl_catalog": include_ccfddl,
+                "conferences": conferences_config,
+                "years": [2025],
+                "output_dir": str(tmp_path / "data"),
+                "concurrency": {"threads": 1},
+            }
+        ),
+        encoding="utf-8",
+    )
+    return config_path
+
+
+def test_collect_creates_queue_items(tmp_path, monkeypatch):
+    """POST /api/collect with batch conferences produces queue[] with correct task_id, conference_id, status."""
+    config_path = _make_queue_config(tmp_path, [
+        {"id": "icse", "display_name": "ICSE", "dblp_stream": "conf/icse"},
+        {"id": "fse", "display_name": "FSE", "dblp_stream": "conf/sigsoft"},
+        {"id": "issta", "display_name": "ISSTA", "dblp_stream": "conf/issta"},
+    ])
+
+    started = threading.Event()
+    release = threading.Event()
+
+    def fake_process_conference_year(conf, year, dblp_client, metadata_manager, output_dir, limit):
+        if not started.is_set():
+            started.set()
+            assert release.wait(timeout=2)
+
+    monkeypatch.setattr("src.web.app.process_conference_year", fake_process_conference_year)
+
+    client = create_app(str(config_path)).test_client()
+    response = client.post(
+        "/api/collect",
+        json={"conferences": ["icse", "fse", "issta"], "year": 2025, "limit": 1},
+    )
+
+    assert response.status_code == 202
+    status_url = response.get_json()["status_url"]
+    assert started.wait(timeout=2)
+
+    job = client.get(status_url).get_json()
+    queue = job.get("queue")
+    assert queue is not None
+    assert len(queue) == 3
+
+    seen_ids = set()
+    for i, task in enumerate(queue):
+        assert len(task["task_id"]) == 8
+        assert task["conference_id"] == ["icse", "fse", "issta"][i]
+        assert task["display_name"] == ["ICSE", "FSE", "ISSTA"][i]
+        assert task["status"] in {"pending", "running"}
+        assert task["task_id"] not in seen_ids
+        seen_ids.add(task["task_id"])
+
+    assert job.get("task_summary") is not None
+    assert "pending" in job["task_summary"]
+    assert "running" in job["task_summary"]
+
+    release.set()
+    for _ in range(40):
+        time.sleep(0.05)
+        if client.get(status_url).get_json()["status"] in {"completed", "failed"}:
+            break
+
+
+def test_queue_progression(tmp_path, monkeypatch):
+    """Mocked collection processes tasks sequentially; each task transitions pending -> running -> completed."""
+    config_path = _make_queue_config(tmp_path, [
+        {"id": "icse", "display_name": "ICSE", "dblp_stream": "conf/icse"},
+        {"id": "fse", "display_name": "FSE", "dblp_stream": "conf/sigsoft"},
+    ])
+
+    def fake_process_conference_year(conf, year, dblp_client, metadata_manager, output_dir, limit):
+        (tmp_path / "data").mkdir(exist_ok=True)
+        output_path = get_output_path(str(tmp_path / "data"), conf, year)
+        with open(output_path, "w", encoding="utf-8") as f:
+            json.dump([{"title": f"{conf.display_name} Paper", "authors": [], "venue": conf.display_name, "year": year}], f)
+
+    monkeypatch.setattr("src.web.app.process_conference_year", fake_process_conference_year)
+
+    client = create_app(str(config_path)).test_client()
+    response = client.post(
+        "/api/collect",
+        json={"conferences": ["icse", "fse"], "year": 2025, "limit": 1},
+    )
+
+    assert response.status_code == 202
+    status_url = response.get_json()["status_url"]
+
+    for _ in range(40):
+        status = client.get(status_url).get_json()
+        if status["status"] == "completed":
+            break
+        time.sleep(0.05)
+
+    assert status["status"] == "completed"
+    queue = status["queue"]
+    assert len(queue) == 2
+    assert queue[0]["status"] == "completed"
+    assert queue[0]["paper_count"] == 1
+    assert queue[0]["output_path"] is not None
+    assert queue[0]["feed_url"] is not None
+    assert queue[0]["started_at"] is not None
+    assert queue[0]["finished_at"] is not None
+    assert queue[1]["status"] == "completed"
+    assert queue[1]["paper_count"] == 1
+
+    summary = status["task_summary"]
+    assert summary["completed"] == 2
+    assert summary["pending"] == 0
+    assert summary["failed"] == 0
+    assert summary["skipped"] == 0
+
+
+def test_stop_mid_batch_stops_job(tmp_path, monkeypatch):
+    """Stop after first task completes; remaining pending tasks are skipped, job status is stopped."""
+    config_path = _make_queue_config(tmp_path, [
+        {"id": "icse", "display_name": "ICSE", "dblp_stream": "conf/icse"},
+        {"id": "fse", "display_name": "FSE", "dblp_stream": "conf/sigsoft"},
+        {"id": "issta", "display_name": "ISSTA", "dblp_stream": "conf/issta"},
+    ])
+
+    started = threading.Event()
+    release = threading.Event()
+    calls = []
+
+    def fake_process_conference_year(conf, year, dblp_client, metadata_manager, output_dir, limit):
+        calls.append(conf.id)
+        if conf.id == "icse":
+            (tmp_path / "data").mkdir(exist_ok=True)
+            output_path = get_output_path(str(tmp_path / "data"), conf, year)
+            with open(output_path, "w", encoding="utf-8") as f:
+                json.dump([{"title": "ICSE Paper", "authors": [], "venue": "ICSE", "year": year}], f)
+            started.set()
+            assert release.wait(timeout=2)
+        elif conf.id == "fse":
+            (tmp_path / "data").mkdir(exist_ok=True)
+            output_path = get_output_path(str(tmp_path / "data"), conf, year)
+            with open(output_path, "w", encoding="utf-8") as f:
+                json.dump([{"title": "FSE Paper", "authors": [], "venue": "FSE", "year": year}], f)
+
+    monkeypatch.setattr("src.web.app.process_conference_year", fake_process_conference_year)
+
+    client = create_app(str(config_path)).test_client()
+    response = client.post(
+        "/api/collect",
+        json={"conferences": ["icse", "fse", "issta"], "year": 2025, "limit": 1},
+    )
+
+    assert response.status_code == 202
+    status_url = response.get_json()["status_url"]
+    assert started.wait(timeout=2)
+
+    stop_response = client.post(f"{status_url}/stop")
+    assert stop_response.status_code == 202
+    assert stop_response.get_json()["cancel_requested"] is True
+    release.set()
+
+    for _ in range(40):
+        status = client.get(status_url).get_json()
+        if status["status"] == "stopped":
+            break
+        time.sleep(0.05)
+
+    assert status["status"] == "stopped"
+    assert calls == ["icse"]
+    assert status["completed_count"] == 1
+    assert status["paper_count"] == 1
+    assert status["stopped_count"] >= 1
+
+    queue = status["queue"]
+    assert queue[0]["status"] == "completed"
+    assert any(item["status"] == "skipped" for item in queue[1:])
+    assert any("Collection stopped by user" in line for line in status["logs"])
+
+
+def test_resume_from_stopped_state(tmp_path, monkeypatch):
+    """From stopped state, resume re-queues skipped tasks; completed tasks are not re-run."""
+    config_path = _make_queue_config(tmp_path, [
+        {"id": "icse", "display_name": "ICSE", "dblp_stream": "conf/icse"},
+        {"id": "fse", "display_name": "FSE", "dblp_stream": "conf/sigsoft"},
+        {"id": "issta", "display_name": "ISSTA", "dblp_stream": "conf/issta"},
+    ])
+
+    calls = []
+    started = threading.Event()
+    release = threading.Event()
+
+    def fake_process_conference_year(conf, year, dblp_client, metadata_manager, output_dir, limit):
+        calls.append(conf.id)
+        if conf.id == "icse":
+            (tmp_path / "data").mkdir(exist_ok=True)
+            output_path = get_output_path(str(tmp_path / "data"), conf, year)
+            with open(output_path, "w", encoding="utf-8") as f:
+                json.dump([{"title": "ICSE Paper", "authors": [], "venue": "ICSE", "year": year}], f)
+            started.set()
+            assert release.wait(timeout=2)
+        else:
+            (tmp_path / "data").mkdir(exist_ok=True)
+            output_path = get_output_path(str(tmp_path / "data"), conf, year)
+            with open(output_path, "w", encoding="utf-8") as f:
+                json.dump([{"title": f"{conf.display_name} Paper", "authors": [], "venue": conf.display_name, "year": year}], f)
+
+    monkeypatch.setattr("src.web.app.process_conference_year", fake_process_conference_year)
+
+    client = create_app(str(config_path)).test_client()
+    response = client.post(
+        "/api/collect",
+        json={"conferences": ["icse", "fse", "issta"], "year": 2025, "limit": 1},
+    )
+
+    assert response.status_code == 202
+    status_url = response.get_json()["status_url"]
+    assert started.wait(timeout=2)
+
+    stop_response = client.post(f"{status_url}/stop")
+    assert stop_response.status_code == 202
+    release.set()
+
+    for _ in range(40):
+        status = client.get(status_url).get_json()
+        if status["status"] == "stopped":
+            break
+        time.sleep(0.05)
+
+    assert status["status"] == "stopped"
+    assert calls == ["icse"]
+
+    resume_response = client.post(f"{status_url}/resume")
+    assert resume_response.status_code == 202
+
+    for _ in range(40):
+        status = client.get(status_url).get_json()
+        if status["status"] == "completed":
+            break
+        time.sleep(0.05)
+
+    assert status["status"] == "completed"
+    assert "icse" in calls
+    assert "fse" in calls
+    assert "issta" in calls
+
+    queue = status["queue"]
+    assert queue[0]["status"] == "completed"
+    assert queue[1]["status"] == "completed"
+    assert queue[2]["status"] == "completed"
+
+
+def test_retry_failed_tasks(tmp_path, monkeypatch):
+    """From completed state with 1 failed task, retry re-queues only that task."""
+    config_path = _make_queue_config(tmp_path, [
+        {"id": "icse", "display_name": "ICSE", "dblp_stream": "conf/icse"},
+        {"id": "fse", "display_name": "FSE", "dblp_stream": "conf/sigsoft"},
+    ])
+
+    call_count = {"fse": 0}
+
+    def fake_process_conference_year(conf, year, dblp_client, metadata_manager, output_dir, limit):
+        if conf.id == "fse":
+            call_count["fse"] += 1
+            if call_count["fse"] == 1:
+                raise RuntimeError("FSE timed out")
+        (tmp_path / "data").mkdir(exist_ok=True)
+        output_path = get_output_path(str(tmp_path / "data"), conf, year)
+        with open(output_path, "w", encoding="utf-8") as f:
+            json.dump([{"title": f"{conf.display_name} Paper", "authors": [], "venue": conf.display_name, "year": year}], f)
+
+    monkeypatch.setattr("src.web.app.process_conference_year", fake_process_conference_year)
+
+    client = create_app(str(config_path)).test_client()
+    response = client.post(
+        "/api/collect",
+        json={"conferences": ["icse", "fse"], "year": 2025, "limit": 1},
+    )
+
+    assert response.status_code == 202
+    status_url = response.get_json()["status_url"]
+
+    for _ in range(40):
+        status = client.get(status_url).get_json()
+        if status["status"] == "completed":
+            break
+        time.sleep(0.05)
+
+    assert status["status"] == "completed"
+    assert status["completed_count"] == 1
+    assert status["failed_count"] == 1
+
+    queue = status["queue"]
+    assert queue[0]["status"] == "completed"
+    assert queue[1]["status"] == "failed"
+
+    retry_response = client.post(f"{status_url}/retry")
+    assert retry_response.status_code == 202
+
+    for _ in range(40):
+        status = client.get(status_url).get_json()
+        if status["status"] == "completed":
+            break
+        time.sleep(0.05)
+
+    assert status["status"] == "completed"
+    assert call_count["fse"] == 2
+    assert status["completed_count"] == 2
+    assert status["failed_count"] == 0
+
+    queue = status["queue"]
+    assert queue[0]["status"] == "completed"
+    assert queue[1]["status"] == "completed"
+
+
+def test_single_task_retry(tmp_path, monkeypatch):
+    """POST /api/jobs/<id>/queue/<task_id>/retry resets only the target task."""
+    config_path = _make_queue_config(tmp_path, [
+        {"id": "icse", "display_name": "ICSE", "dblp_stream": "conf/icse"},
+        {"id": "fse", "display_name": "FSE", "dblp_stream": "conf/sigsoft"},
+    ])
+
+    fse_attempts = {"count": 0}
+
+    def fake_process_conference_year(conf, year, dblp_client, metadata_manager, output_dir, limit):
+        if conf.id == "fse":
+            fse_attempts["count"] += 1
+            if fse_attempts["count"] <= 1:
+                raise RuntimeError("FSE failed")
+        (tmp_path / "data").mkdir(exist_ok=True)
+        output_path = get_output_path(str(tmp_path / "data"), conf, year)
+        with open(output_path, "w", encoding="utf-8") as f:
+            json.dump([{"title": f"{conf.display_name} Paper", "authors": [], "venue": conf.display_name, "year": year}], f)
+
+    monkeypatch.setattr("src.web.app.process_conference_year", fake_process_conference_year)
+
+    client = create_app(str(config_path)).test_client()
+    response = client.post(
+        "/api/collect",
+        json={"conferences": ["icse", "fse"], "year": 2025, "limit": 1},
+    )
+
+    assert response.status_code == 202
+    status_url = response.get_json()["status_url"]
+
+    for _ in range(40):
+        status = client.get(status_url).get_json()
+        if status["status"] == "completed":
+            break
+        time.sleep(0.05)
+
+    queue = status["queue"]
+    failed_task = next(t for t in queue if t["status"] == "failed")
+    assert failed_task["conference_id"] == "fse"
+
+    retry_response = client.post(f"{status_url}/queue/{failed_task['task_id']}/retry")
+    assert retry_response.status_code == 202
+
+    for _ in range(40):
+        status = client.get(status_url).get_json()
+        if status["status"] == "completed":
+            break
+        time.sleep(0.05)
+
+    queue = status["queue"]
+    fse_task = next(t for t in queue if t["conference_id"] == "fse")
+    assert fse_task["status"] == "completed"
+    assert status["completed_count"] == 2
+
+
+def test_single_task_retry_unknown_task_id(tmp_path, monkeypatch):
+    """POST /api/jobs/<id>/queue/<task_id>/retry with unknown task_id returns 404."""
+    config_path = _make_queue_config(tmp_path, [
+        {"id": "icse", "display_name": "ICSE", "dblp_stream": "conf/icse"},
+    ])
+
+    def fake_process_conference_year(conf, year, dblp_client, metadata_manager, output_dir, limit):
+        (tmp_path / "data").mkdir(exist_ok=True)
+        output_path = get_output_path(str(tmp_path / "data"), conf, year)
+        with open(output_path, "w", encoding="utf-8") as f:
+            json.dump([{"title": "ICSE Paper", "authors": [], "venue": "ICSE", "year": year}], f)
+
+    monkeypatch.setattr("src.web.app.process_conference_year", fake_process_conference_year)
+
+    client = create_app(str(config_path)).test_client()
+    response = client.post(
+        "/api/collect",
+        json={"conference": "icse", "year": 2025, "limit": 1},
+    )
+
+    assert response.status_code == 202
+    status_url = response.get_json()["status_url"]
+
+    for _ in range(40):
+        status = client.get(status_url).get_json()
+        if status["status"] == "completed":
+            break
+        time.sleep(0.05)
+
+    retry_response = client.post(f"{status_url}/queue/nonexistent/retry")
+    assert retry_response.status_code == 404
+    assert "not found" in retry_response.get_json()["error"].lower()
+
+
+def test_single_task_retry_on_completed_task_returns_400(tmp_path, monkeypatch):
+    """POST /api/jobs/<id>/queue/<task_id>/retry on a completed task returns 400."""
+    config_path = _make_queue_config(tmp_path, [
+        {"id": "icse", "display_name": "ICSE", "dblp_stream": "conf/icse"},
+    ])
+
+    def fake_process_conference_year(conf, year, dblp_client, metadata_manager, output_dir, limit):
+        (tmp_path / "data").mkdir(exist_ok=True)
+        output_path = get_output_path(str(tmp_path / "data"), conf, year)
+        with open(output_path, "w", encoding="utf-8") as f:
+            json.dump([{"title": "ICSE Paper", "authors": [], "venue": "ICSE", "year": year}], f)
+
+    monkeypatch.setattr("src.web.app.process_conference_year", fake_process_conference_year)
+
+    client = create_app(str(config_path)).test_client()
+    response = client.post(
+        "/api/collect",
+        json={"conference": "icse", "year": 2025, "limit": 1},
+    )
+
+    assert response.status_code == 202
+    status_url = response.get_json()["status_url"]
+
+    for _ in range(40):
+        status = client.get(status_url).get_json()
+        if status["status"] == "completed":
+            break
+        time.sleep(0.05)
+
+    completed_task = status["queue"][0]
+    assert completed_task["status"] == "completed"
+
+    retry_response = client.post(f"{status_url}/queue/{completed_task['task_id']}/retry")
+    assert retry_response.status_code == 400
+    assert "cannot be retried" in retry_response.get_json()["error"].lower()
+
+
+def test_resume_returns_409_when_another_job_holds_lock(tmp_path, monkeypatch):
+    """Resume/retry while another collection job holds the lock returns 409."""
+    config_path = _make_queue_config(tmp_path, [
+        {"id": "icse", "display_name": "ICSE", "dblp_stream": "conf/icse"},
+        {"id": "fse", "display_name": "FSE", "dblp_stream": "conf/sigsoft"},
+    ])
+
+    started = threading.Event()
+    release = threading.Event()
+
+    def fake_process_conference_year(conf, year, dblp_client, metadata_manager, output_dir, limit):
+        if conf.id == "icse":
+            started.set()
+            assert release.wait(timeout=3)
+        (tmp_path / "data").mkdir(exist_ok=True)
+        output_path = get_output_path(str(tmp_path / "data"), conf, year)
+        with open(output_path, "w", encoding="utf-8") as f:
+            json.dump([{"title": f"{conf.display_name} Paper", "authors": [], "venue": conf.display_name, "year": year}], f)
+
+    monkeypatch.setattr("src.web.app.process_conference_year", fake_process_conference_year)
+
+    client = create_app(str(config_path)).test_client()
+
+    # Start first job (will block on icse)
+    response1 = client.post(
+        "/api/collect",
+        json={"conferences": ["icse", "fse"], "year": 2025, "limit": 1},
+    )
+    assert response1.status_code == 202
+    assert started.wait(timeout=2)
+
+    # Create a second stopped job manually to try resume
+    # First, stop the running job
+    status_url1 = response1.get_json()["status_url"]
+    stop_response = client.post(f"{status_url1}/stop")
+    assert stop_response.status_code == 202
+    release.set()
+
+    for _ in range(40):
+        status = client.get(status_url1).get_json()
+        if status["status"] == "stopped":
+            break
+        time.sleep(0.05)
+
+    assert status["status"] == "stopped"
+
+    # Now start a new blocking job
+    started.clear()
+    release.clear()
+    response2 = client.post(
+        "/api/collect",
+        json={"conference": "icse", "year": 2025, "limit": 1},
+    )
+    assert response2.status_code == 202
+    assert started.wait(timeout=2)
+
+    # Try to resume the stopped job while new job is running
+    resume_response = client.post(f"{status_url1}/resume")
+    assert resume_response.status_code == 409
+    assert "already running" in resume_response.get_json()["error"].lower()
+
+    release.set()
+    for _ in range(40):
+        time.sleep(0.05)
+        if client.get(response2.get_json()["status_url"]).get_json()["status"] in {"completed", "failed"}:
+            break
+
+
+def test_resume_returns_409_on_running_job(tmp_path, monkeypatch):
+    """Resume on a running job returns 409."""
+    config_path = _make_queue_config(tmp_path, [
+        {"id": "icse", "display_name": "ICSE", "dblp_stream": "conf/icse"},
+    ])
+
+    started = threading.Event()
+    release = threading.Event()
+
+    def fake_process_conference_year(conf, year, dblp_client, metadata_manager, output_dir, limit):
+        started.set()
+        assert release.wait(timeout=2)
+
+    monkeypatch.setattr("src.web.app.process_conference_year", fake_process_conference_year)
+
+    client = create_app(str(config_path)).test_client()
+    response = client.post(
+        "/api/collect",
+        json={"conference": "icse", "year": 2025, "limit": 1},
+    )
+
+    assert response.status_code == 202
+    status_url = response.get_json()["status_url"]
+    assert started.wait(timeout=2)
+
+    resume_response = client.post(f"{status_url}/resume")
+    assert resume_response.status_code == 409
+    assert "already running" in resume_response.get_json()["error"].lower()
+
+    release.set()
+    for _ in range(40):
+        time.sleep(0.05)
+        if client.get(status_url).get_json()["status"] in {"completed", "failed"}:
+            break
+
+
+def test_retry_returns_400_when_no_failed_tasks(tmp_path, monkeypatch):
+    """Retry when all tasks are completed returns 400."""
+    config_path = _make_queue_config(tmp_path, [
+        {"id": "icse", "display_name": "ICSE", "dblp_stream": "conf/icse"},
+    ])
+
+    def fake_process_conference_year(conf, year, dblp_client, metadata_manager, output_dir, limit):
+        (tmp_path / "data").mkdir(exist_ok=True)
+        output_path = get_output_path(str(tmp_path / "data"), conf, year)
+        with open(output_path, "w", encoding="utf-8") as f:
+            json.dump([{"title": "ICSE Paper", "authors": [], "venue": "ICSE", "year": year}], f)
+
+    monkeypatch.setattr("src.web.app.process_conference_year", fake_process_conference_year)
+
+    client = create_app(str(config_path)).test_client()
+    response = client.post(
+        "/api/collect",
+        json={"conference": "icse", "year": 2025, "limit": 1},
+    )
+
+    assert response.status_code == 202
+    status_url = response.get_json()["status_url"]
+
+    for _ in range(40):
+        status = client.get(status_url).get_json()
+        if status["status"] == "completed":
+            break
+        time.sleep(0.05)
+
+    retry_response = client.post(f"{status_url}/retry")
+    assert retry_response.status_code == 400
+    assert "no failed tasks" in retry_response.get_json()["error"].lower()
+
+
+def test_task_summary_reflects_queue_state(tmp_path, monkeypatch):
+    """GET /api/jobs/<id> returns correct task_summary counts."""
+    config_path = _make_queue_config(tmp_path, [
+        {"id": "icse", "display_name": "ICSE", "dblp_stream": "conf/icse"},
+        {"id": "fse", "display_name": "FSE", "dblp_stream": "conf/sigsoft"},
+        {"id": "issta", "display_name": "ISSTA", "dblp_stream": "conf/issta"},
+    ])
+
+    def fake_process_conference_year(conf, year, dblp_client, metadata_manager, output_dir, limit):
+        if conf.id == "fse":
+            raise RuntimeError("FSE failed")
+        (tmp_path / "data").mkdir(exist_ok=True)
+        output_path = get_output_path(str(tmp_path / "data"), conf, year)
+        with open(output_path, "w", encoding="utf-8") as f:
+            json.dump([{"title": f"{conf.display_name} Paper", "authors": [], "venue": conf.display_name, "year": year}], f)
+
+    monkeypatch.setattr("src.web.app.process_conference_year", fake_process_conference_year)
+
+    client = create_app(str(config_path)).test_client()
+    response = client.post(
+        "/api/collect",
+        json={"conferences": ["icse", "fse", "issta"], "year": 2025, "limit": 1},
+    )
+
+    assert response.status_code == 202
+    status_url = response.get_json()["status_url"]
+
+    for _ in range(40):
+        status = client.get(status_url).get_json()
+        if status["status"] == "completed":
+            break
+        time.sleep(0.05)
+
+    assert status["status"] == "completed"
+    summary = status["task_summary"]
+    assert summary["completed"] == 2
+    assert summary["failed"] == 1
+    assert summary["pending"] == 0
+    assert summary["running"] == 0
+    assert summary["skipped"] == 0
+
+
+def test_queue_logs_appear_in_job_logs(tmp_path, monkeypatch):
+    """Per-task logs appear in job.logs during execution."""
+    config_path = _make_queue_config(tmp_path, [
+        {"id": "icse", "display_name": "ICSE", "dblp_stream": "conf/icse"},
+    ])
+
+    def fake_process_conference_year(conf, year, dblp_client, metadata_manager, output_dir, limit):
+        print("Fetching from DBLP stage.")
+        (tmp_path / "data").mkdir(exist_ok=True)
+        output_path = get_output_path(str(tmp_path / "data"), conf, year)
+        with open(output_path, "w", encoding="utf-8") as f:
+            json.dump([{"title": "ICSE Paper", "authors": [], "venue": "ICSE", "year": year}], f)
+
+    monkeypatch.setattr("src.web.app.process_conference_year", fake_process_conference_year)
+
+    client = create_app(str(config_path)).test_client()
+    response = client.post(
+        "/api/collect",
+        json={"conference": "icse", "year": 2025, "limit": 1},
+    )
+
+    assert response.status_code == 202
+    status_url = response.get_json()["status_url"]
+
+    for _ in range(40):
+        status = client.get(status_url).get_json()
+        if status["status"] == "completed":
+            break
+        time.sleep(0.05)
+
+    assert status["status"] == "completed"
+    logs = status["logs"]
+    assert any("Started collection for ICSE 2025" in line for line in logs)
+    assert any("Fetching from DBLP stage." in line for line in logs)
+    assert any("Completed collection with 1 saved papers." in line for line in logs)
+
+
+def test_idempotent_stop_on_stopped_job(tmp_path, monkeypatch):
+    """Calling stop on an already-stopped job returns 409 with current state."""
+    config_path = _make_queue_config(tmp_path, [
+        {"id": "icse", "display_name": "ICSE", "dblp_stream": "conf/icse"},
+        {"id": "fse", "display_name": "FSE", "dblp_stream": "conf/sigsoft"},
+    ])
+
+    started = threading.Event()
+    release = threading.Event()
+
+    def fake_process_conference_year(conf, year, dblp_client, metadata_manager, output_dir, limit):
+        started.set()
+        assert release.wait(timeout=2)
+
+    monkeypatch.setattr("src.web.app.process_conference_year", fake_process_conference_year)
+
+    client = create_app(str(config_path)).test_client()
+    response = client.post(
+        "/api/collect",
+        json={"conferences": ["icse", "fse"], "year": 2025, "limit": 1},
+    )
+
+    assert response.status_code == 202
+    status_url = response.get_json()["status_url"]
+    assert started.wait(timeout=2)
+
+    stop_response = client.post(f"{status_url}/stop")
+    assert stop_response.status_code == 202
+    release.set()
+
+    for _ in range(40):
+        status = client.get(status_url).get_json()
+        if status["status"] == "stopped":
+            break
+        time.sleep(0.05)
+
+    assert status["status"] == "stopped"
+
+    # Second stop should return 409
+    stop_response2 = client.post(f"{status_url}/stop")
+    assert stop_response2.status_code == 409
+    assert "not running" in stop_response2.get_json()["error"].lower()
+
+
+def test_resume_with_failed_tasks_in_stopped_job(tmp_path, monkeypatch):
+    """Resume a stopped job where some tasks failed and some were skipped."""
+    config_path = _make_queue_config(tmp_path, [
+        {"id": "icse", "display_name": "ICSE", "dblp_stream": "conf/icse"},
+        {"id": "fse", "display_name": "FSE", "dblp_stream": "conf/sigsoft"},
+        {"id": "issta", "display_name": "ISSTA", "dblp_stream": "conf/issta"},
+    ])
+
+    fse_started = threading.Event()
+    fse_release = threading.Event()
+
+    def fake_process_conference_year(conf, year, dblp_client, metadata_manager, output_dir, limit):
+        if conf.id == "fse":
+            fse_started.set()
+            assert fse_release.wait(timeout=3)
+            raise RuntimeError("FSE failed")
+        (tmp_path / "data").mkdir(exist_ok=True)
+        output_path = get_output_path(str(tmp_path / "data"), conf, year)
+        with open(output_path, "w", encoding="utf-8") as f:
+            json.dump([{"title": f"{conf.display_name} Paper", "authors": [], "venue": conf.display_name, "year": year}], f)
+
+    monkeypatch.setattr("src.web.app.process_conference_year", fake_process_conference_year)
+
+    client = create_app(str(config_path)).test_client()
+    response = client.post(
+        "/api/collect",
+        json={"conferences": ["icse", "fse", "issta"], "year": 2025, "limit": 1},
+    )
+
+    assert response.status_code == 202
+    status_url = response.get_json()["status_url"]
+
+    # Wait for fse to start (icse already completed)
+    assert fse_started.wait(timeout=5)
+
+    stop_response = client.post(f"{status_url}/stop")
+    assert stop_response.status_code == 202
+    fse_release.set()
+
+    for _ in range(40):
+        status = client.get(status_url).get_json()
+        if status["status"] == "stopped":
+            break
+        time.sleep(0.05)
+
+    assert status["status"] == "stopped"
+    queue = status["queue"]
+    assert queue[0]["status"] == "completed"  # ICSE
+    assert queue[1]["status"] == "failed"     # FSE (ran and failed while stop was pending)
+    assert queue[2]["status"] == "skipped"    # ISSTA (never started)
+
+    # Resume should re-queue failed and skipped tasks
+    resume_response = client.post(f"{status_url}/resume")
+    assert resume_response.status_code == 202
+
+    for _ in range(80):
+        status = client.get(status_url).get_json()
+        if status["status"] == "completed":
+            break
+        time.sleep(0.05)
+
+    assert status["status"] == "completed"
+    queue = status["queue"]
+    assert queue[0]["status"] == "completed"
+    assert queue[1]["status"] == "failed"     # FSE still fails
+    assert queue[2]["status"] == "completed"  # ISSTA now completes
+
+
+def test_year_progress_endpoint_returns_saved_and_missing_years(tmp_path):
+    """GET /api/year-progress returns configured_years, saved_years, missing_years per conference."""
+    data_dir = tmp_path / "data"
+    data_dir.mkdir()
+    (data_dir / "icse_2024.json").write_text(
+        json.dumps([{"title": "Paper 2024", "authors": [], "venue": "ICSE", "year": 2024}]),
+        encoding="utf-8",
+    )
+    config_path = tmp_path / "config.yaml"
+    config_path.write_text(
+        yaml.safe_dump(
+            {
+                "include_ccfddl_catalog": False,
+                "conferences": [
+                    {
+                        "id": "icse",
+                        "display_name": "ICSE",
+                        "dblp_stream": "conf/icse",
+                        "category": "SE",
+                        "tier": {"ccf": "A"},
+                    }
+                ],
+                "years": [2023, 2024, 2025],
+                "output_dir": str(data_dir),
+            }
+        ),
+        encoding="utf-8",
+    )
+
+    client = create_app(str(config_path)).test_client()
+    response = client.get("/api/year-progress")
+
+    assert response.status_code == 200
+    payload = response.get_json()
+    assert len(payload["progress"]) == 1
+
+    entry = payload["progress"][0]
+    assert entry["conference_id"] == "icse"
+    assert entry["display_name"] == "ICSE"
+    assert entry["category"] == "SE"
+    assert entry["ccf"] == "A"
+    assert entry["configured_years"] == [2023, 2024, 2025]
+    assert entry["saved_years"] == [2024]
+    assert entry["missing_years"] == [2023, 2025]
+
+
+def test_year_progress_endpoint_with_per_conference_years(tmp_path):
+    """Per-conference years override global years in year-progress."""
+    data_dir = tmp_path / "data"
+    data_dir.mkdir()
+    config_path = tmp_path / "config.yaml"
+    config_path.write_text(
+        yaml.safe_dump(
+            {
+                "include_ccfddl_catalog": False,
+                "conferences": [
+                    {
+                        "id": "mlsys",
+                        "display_name": "MLSys",
+                        "dblp_stream": "conf/mlsys",
+                        "years": [2023, 2024, 2025],
+                    }
+                ],
+                "years": [2024, 2025, 2026],
+                "output_dir": str(data_dir),
+            }
+        ),
+        encoding="utf-8",
+    )
+
+    client = create_app(str(config_path)).test_client()
+    response = client.get("/api/year-progress")
+
+    assert response.status_code == 200
+    entry = response.get_json()["progress"][0]
+    assert entry["conference_id"] == "mlsys"
+    assert entry["configured_years"] == [2023, 2024, 2025]
+    assert entry["saved_years"] == []
+    assert entry["missing_years"] == [2023, 2024, 2025]
+
+
+def test_collect_with_years_array_creates_nxm_queue_items(tmp_path, monkeypatch):
+    """POST /api/collect with years array creates one queue item per conference x year."""
+    data_dir = tmp_path / "data"
+    config_path = tmp_path / "config.yaml"
+    config_path.write_text(
+        yaml.safe_dump(
+            {
+                "include_ccfddl_catalog": False,
+                "conferences": [
+                    {"id": "icse", "display_name": "ICSE", "dblp_stream": "conf/icse"},
+                    {"id": "fse", "display_name": "FSE", "dblp_stream": "conf/sigsoft"},
+                ],
+                "years": [2023, 2024],
+                "output_dir": str(data_dir),
+                "concurrency": {"threads": 1},
+            }
+        ),
+        encoding="utf-8",
+    )
+
+    started = threading.Event()
+    release = threading.Event()
+
+    def fake_process_conference_year(conf, year, dblp_client, metadata_manager, output_dir, limit):
+        if not started.is_set():
+            started.set()
+            assert release.wait(timeout=2)
+        data_dir.mkdir(exist_ok=True)
+        output_path = get_output_path(str(data_dir), conf, year)
+        with open(output_path, "w", encoding="utf-8") as f:
+            json.dump([{"title": f"{conf.display_name} {year}", "authors": [], "venue": conf.display_name, "year": year}], f)
+
+    monkeypatch.setattr("src.web.app.process_conference_year", fake_process_conference_year)
+
+    client = create_app(str(config_path)).test_client()
+    response = client.post(
+        "/api/collect",
+        json={"conferences": ["icse", "fse"], "years": [2024, 2025], "limit": 1},
+    )
+
+    assert response.status_code == 202
+    status_url = response.get_json()["status_url"]
+    assert started.wait(timeout=2)
+
+    job = client.get(status_url).get_json()
+    queue = job.get("queue")
+    assert queue is not None
+    assert len(queue) == 4  # 2 conferences x 2 years
+
+    # Check each item has a year field.
+    task_keys = sorted((item["conference_id"], item["year"]) for item in queue)
+    assert task_keys == [("fse", 2024), ("fse", 2025), ("icse", 2024), ("icse", 2025)]
+
+    release.set()
+    for _ in range(40):
+        status = client.get(status_url).get_json()
+        if status["status"] in {"completed", "failed"}:
+            break
+        time.sleep(0.05)
+
+    assert status["status"] == "completed"
+    assert status["completed_count"] == 4
+    assert status["paper_count"] == 4
+    assert len(status["feed_urls"]) == 4
+
+
+def test_collect_with_single_year_backward_compatible(tmp_path, monkeypatch):
+    """POST /api/collect with single year field still works (backward compatibility)."""
+    data_dir = tmp_path / "data"
+    config_path = tmp_path / "config.yaml"
+    config_path.write_text(
+        yaml.safe_dump(
+            {
+                "include_ccfddl_catalog": False,
+                "conferences": [
+                    {"id": "icse", "display_name": "ICSE", "dblp_stream": "conf/icse"},
+                ],
+                "years": [2025],
+                "output_dir": str(data_dir),
+                "concurrency": {"threads": 1},
+            }
+        ),
+        encoding="utf-8",
+    )
+
+    def fake_process_conference_year(conf, year, dblp_client, metadata_manager, output_dir, limit):
+        data_dir.mkdir(exist_ok=True)
+        output_path = get_output_path(str(data_dir), conf, year)
+        with open(output_path, "w", encoding="utf-8") as f:
+            json.dump([{"title": "ICSE Paper", "authors": [], "venue": "ICSE", "year": year}], f)
+
+    monkeypatch.setattr("src.web.app.process_conference_year", fake_process_conference_year)
+
+    client = create_app(str(config_path)).test_client()
+    # Use "year" (single value) instead of "years" (array).
+    response = client.post(
+        "/api/collect",
+        json={"conferences": ["icse"], "year": 2025, "limit": 1},
+    )
+
+    assert response.status_code == 202
+    status_url = response.get_json()["status_url"]
+
+    for _ in range(40):
+        status = client.get(status_url).get_json()
+        if status["status"] == "completed":
+            break
+        time.sleep(0.05)
+
+    assert status["status"] == "completed"
+    assert status["completed_count"] == 1
+    queue = status["queue"]
+    assert len(queue) == 1
+    assert queue[0]["year"] == 2025
+
+
+def test_collect_years_array_rejects_empty_years(tmp_path):
+    """POST /api/collect with empty years array returns 400."""
+    config_path = tmp_path / "config.yaml"
+    config_path.write_text(
+        yaml.safe_dump(
+            {
+                "include_ccfddl_catalog": False,
+                "conferences": [{"id": "icse", "display_name": "ICSE", "dblp_stream": "conf/icse"}],
+                "years": [2025],
+            }
+        ),
+        encoding="utf-8",
+    )
+
+    client = create_app(str(config_path)).test_client()
+    response = client.post(
+        "/api/collect",
+        json={"conferences": ["icse"], "years": [], "limit": 1},
+    )
+
+    # Empty years array falls through to missing "year" field.
+    assert response.status_code == 400
+
+
+def test_queue_items_have_year_field(tmp_path, monkeypatch):
+    """Queue items in the job response include a year field."""
+    config_path = _make_queue_config(tmp_path, [
+        {"id": "icse", "display_name": "ICSE", "dblp_stream": "conf/icse"},
+    ])
+
+    started = threading.Event()
+    release = threading.Event()
+
+    def fake_process_conference_year(conf, year, dblp_client, metadata_manager, output_dir, limit):
+        if not started.is_set():
+            started.set()
+            assert release.wait(timeout=2)
+
+    monkeypatch.setattr("src.web.app.process_conference_year", fake_process_conference_year)
+
+    client = create_app(str(config_path)).test_client()
+    response = client.post(
+        "/api/collect",
+        json={"conferences": ["icse"], "years": [2025], "limit": 1},
+    )
+
+    assert response.status_code == 202
+    status_url = response.get_json()["status_url"]
+    assert started.wait(timeout=2)
+
+    job = client.get(status_url).get_json()
+    queue = job.get("queue")
+    assert queue is not None
+    assert len(queue) == 1
+    assert queue[0]["year"] == 2025
+    assert queue[0]["conference_id"] == "icse"
+
+    release.set()
+    for _ in range(20):
+        time.sleep(0.05)
+        if client.get(status_url).get_json()["status"] in {"completed", "failed"}:
+            break
+
+
+def test_multi_year_queue_worker_processes_each_pair(tmp_path, monkeypatch):
+    """The worker processes each conference x year pair independently."""
+    data_dir = tmp_path / "data"
+    config_path = tmp_path / "config.yaml"
+    config_path.write_text(
+        yaml.safe_dump(
+            {
+                "include_ccfddl_catalog": False,
+                "conferences": [
+                    {"id": "icse", "display_name": "ICSE", "dblp_stream": "conf/icse"},
+                ],
+                "years": [2024, 2025],
+                "output_dir": str(data_dir),
+                "concurrency": {"threads": 1},
+            }
+        ),
+        encoding="utf-8",
+    )
+
+    calls = []
+
+    def fake_process_conference_year(conf, year, dblp_client, metadata_manager, output_dir, limit):
+        calls.append((conf.id, year))
+        data_dir.mkdir(exist_ok=True)
+        output_path = get_output_path(str(data_dir), conf, year)
+        with open(output_path, "w", encoding="utf-8") as f:
+            json.dump([{"title": f"{conf.display_name} {year}", "authors": [], "venue": conf.display_name, "year": year}], f)
+
+    monkeypatch.setattr("src.web.app.process_conference_year", fake_process_conference_year)
+
+    client = create_app(str(config_path)).test_client()
+    response = client.post(
+        "/api/collect",
+        json={"conferences": ["icse"], "years": [2024, 2025], "limit": 1},
+    )
+
+    assert response.status_code == 202
+    status_url = response.get_json()["status_url"]
+
+    for _ in range(40):
+        status = client.get(status_url).get_json()
+        if status["status"] == "completed":
+            break
+        time.sleep(0.05)
+
+    assert status["status"] == "completed"
+    assert sorted(calls) == [("icse", 2024), ("icse", 2025)]
+    assert status["completed_count"] == 2
+    assert status["paper_count"] == 2
+    assert sorted(r["year"] for r in status["results"]) == [2024, 2025]

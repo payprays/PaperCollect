@@ -139,6 +139,86 @@ class FileJobLock:
                 pass
 
 
+def build_queue_items(conferences: list, years: list[int] | None = None) -> list[dict[str, Any]]:
+    """Build queue items from a list of ConferenceEntry objects.
+
+    When *years* is provided, one queue item is created for each
+    conference x year combination.  Otherwise a single item per
+    conference is produced (legacy single-year behaviour).
+    """
+    if not years:
+        years = []
+    items: list[dict[str, Any]] = []
+    for conference in conferences:
+        for year in years:
+            items.append(
+                {
+                    "task_id": uuid.uuid4().hex[:8],
+                    "conference_id": conference.id,
+                    "display_name": conference.display_name,
+                    "year": year,
+                    "status": "pending",
+                    "paper_count": None,
+                    "output_path": None,
+                    "feed_url": None,
+                    "error": None,
+                    "started_at": None,
+                    "finished_at": None,
+                }
+            )
+    return items
+
+
+def queue_task_summary(queue: list[dict[str, Any]]) -> dict[str, int]:
+    """Count tasks by status."""
+    summary: dict[str, int] = {
+        "pending": 0,
+        "running": 0,
+        "completed": 0,
+        "failed": 0,
+        "skipped": 0,
+    }
+    for item in queue:
+        status = item.get("status", "pending")
+        if status in summary:
+            summary[status] += 1
+    return summary
+
+
+def reset_skipped_tasks(queue: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    """Reset skipped tasks to pending for resume."""
+    for item in queue:
+        if item["status"] == "skipped":
+            item["status"] = "pending"
+    return queue
+
+
+def reset_failed_and_skipped_tasks(queue: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    """Reset failed and skipped tasks to pending for retry."""
+    for item in queue:
+        if item["status"] in ("failed", "skipped"):
+            item["status"] = "pending"
+    return queue
+
+
+def mark_pending_tasks_skipped(queue: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    """Mark all pending tasks as skipped (used when stopping)."""
+    for item in queue:
+        if item["status"] == "pending":
+            item["status"] = "skipped"
+    return queue
+
+
+def has_retryable_tasks(queue: list[dict[str, Any]]) -> bool:
+    """Check if any tasks are in a retryable state."""
+    return any(item.get("status") in ("failed", "skipped") for item in queue)
+
+
+def has_resumable_tasks(queue: list[dict[str, Any]]) -> bool:
+    """Check if any tasks are in a resumable state."""
+    return any(item.get("status") in ("pending", "failed", "skipped") for item in queue)
+
+
 def _pid_alive(pid: int) -> bool:
     try:
         os.kill(pid, 0)

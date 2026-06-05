@@ -1,0 +1,47 @@
+[
+  {
+    "title": "Resource Efficient Sleep Staging via Multi-Level Masking and Prompt Learning.",
+    "authors": [
+      "Lejun Ai",
+      "Yulong Li",
+      "Haodong Yi",
+      "Jixuan Xie",
+      "Yue Wang 0092",
+      "Jia Liu 0009",
+      "Min Chen 0003",
+      "Rui Wang 0077"
+    ],
+    "venue": "AAAI",
+    "year": 2026,
+    "abstract": "Automatic sleep staging plays a vital role in assessing sleep quality and diagnosing sleep disorders. Most existing methods rely heavily on long and continuous EEG recordings, which poses significant challenges for data acquisition in resource-constrained systems, such as wearable or home-based monitoring systems. In this paper, we propose the task of resource-efficient sleep staging, which aims to reduce the amount of signal collected per sleep epoch while maintaining reliable classification performance. To solve this task, we adopt the masking and prompt learning strategy and propose a novel framework called Mask-Aware Sleep Staging (MASS). Specifically, we design a multi-level masking strategy to promote effective feature modeling under partial and irregular observations. To mitigate the loss of contextual information introduced by masking, we further propose a hierarchical prompt learning mechanism that aggregates unmasked data into a global prompt, serving as a semantic anchor for guiding both patch-level and epoch-level feature modeling. MASS is evalutaed on four datasets, demonstrating state-of-the-art performance, especially when the amount of data is very limited. This result highlights its potential for efficient and scalable deployment in real-world low-resource sleep monitoring environments.",
+    "citation_count": 0,
+    "reference_count": 0,
+    "url": "https://doi.org/10.1609/aaai.v40i1.36958",
+    "dblp_key": "conf/aaai/AiLYXWLCW26",
+    "source_id": "https://openalex.org/W7138329584",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "AutoMalDesc: Large-Scale Script Analysis for Cyber Threat Research.",
+    "authors": [
+      "Alexandru-Mihai Apostu",
+      "Andrei Preda",
+      "Alexandra Daniela Damir",
+      "Diana Bolocan",
+      "Radu Tudor Ionescu",
+      "Ioana Croitoru",
+      "Mihaela Gaman"
+    ],
+    "venue": "AAAI",
+    "year": 2026,
+    "abstract": "Data set accompanying the \"AutoMalDesc: Large-Scale Script Analysis for Cyber Threat Research\" article.",
+    "citation_count": 0,
+    "reference_count": 0,
+    "url": "https://doi.org/10.1609/aaai.v40i1.36959",
+    "dblp_key": "conf/aaai/ApostuPDBICG26",
+    "source_id": "https://openalex.org/W4416362431",
+    "source": null,
+    "source_url": null
+  }
+]

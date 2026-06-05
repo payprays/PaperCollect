@@ -32,6 +32,23 @@ def load_papers(
     ]
 
 
+def count_papers(
+    output_dir: str,
+    conference: str,
+    year: int,
+    aliases: list[str] | None = None,
+) -> int:
+    """Count saved papers without loading or filtering the full list."""
+    output_path = _find_existing_output(output_dir, conference, year, aliases or [])
+    if not os.path.exists(output_path):
+        return 0
+
+    with open(output_path, "r", encoding="utf-8") as f:
+        data = json.load(f)
+
+    return len(data) if isinstance(data, list) else 0
+
+
 def _find_existing_output(output_dir: str, conference: str, year: int, aliases: list[str]) -> str:
     candidates = []
     for value in [conference, *aliases]:

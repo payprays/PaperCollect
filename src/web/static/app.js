@@ -5,6 +5,9 @@ const state = {
   focusTags: [],
   selectedCollectConferences: new Set(),
   selectedSearchConferences: new Set(),
+  selectedYears: new Set(),
+  yearProgress: [],
+  yearFilter: null,
   currentCollectJobRef: null,
   collectPollTimer: null,
 };
@@ -52,10 +55,7 @@ async function loadOptions() {
   renderCollectConferencePicker();
   renderSearchConferencePicker();
   fillYearSuggestions($("#year-options"), data.years);
-  $("#year").value = guessDefaultYear(data.years);
   $("#limit").value = data.limit_per_conference || 0;
-
-  await loadFeeds();
 }
 
 function fillYearSuggestions(datalist, values) {
@@ -72,6 +72,113 @@ function guessDefaultYear(values) {
     return Math.max(...values.map(Number));
   }
   return new Date().getFullYear();
+}
+
+async function loadYearProgress() {
+  try {
+    const response = await fetch(appUrl("/api/year-progress"));
+    const data = await response.json();
+    state.yearProgress = data.progress || [];
+    renderYearProgress(state.yearProgress);
+  } catch (err) {
+    // year-progress is optional; ignore failures silently.
+  }
+}
+
+function renderYearProgress(progress) {
+  const container = $("#year-progress");
+  if (!container) return;
+  if (!progress.length) {
+    container.classList.add("hidden");
+    container.innerHTML = "";
+    return;
+  }
+
+  // Gather all configured years from selected conferences.
+  const selectedIds = state.selectedCollectConferences;
+  const allYears = new Set();
+  for (const entry of progress) {
+    if (selectedIds.size && !selectedIds.has(entry.conference_id)) continue;
+    for (const y of entry.configured_years) allYears.add(y);
+  }
+  const sortedYears = [...allYears].sort((a, b) => b - a);
+
+  // Build a map: year -> {saved: Set, missing: Set}
+  const yearMap = new Map();
+  for (const y of sortedYears) yearMap.set(y, { saved: new Set(), missing: new Set() });
+  for (const entry of progress) {
+    if (selectedIds.size && !selectedIds.has(entry.conference_id)) continue;
+    for (const y of entry.saved_years) {
+      if (yearMap.has(y)) yearMap.get(y).saved.add(entry.conference_id);
+    }
+    for (const y of entry.missing_years) {
+      if (yearMap.has(y)) yearMap.get(y).missing.add(entry.conference_id);
+    }
+  }
+
+  // Pre-select missing years if no selection yet.
+  if (!state.selectedYears.size) {
+    for (const y of sortedYears) {
+      const info = yearMap.get(y);
+      if (info && info.missing.size > 0) state.selectedYears.add(y);
+    }
+  }
+
+  container.classList.remove("hidden");
+  let html = '<div class="year-progress-header"><span class="year-progress-title">Year progress</span></div>';
+  if (state.yearFilter !== null) {
+    html += `<span class="year-filter-indicator">Filtering: ${state.yearFilter} <button class="year-filter-clear" id="year-filter-clear">✕</button></span>`;
+  }
+  html += '<div class="year-progress-grid">';
+  for (const y of sortedYears) {
+    const info = yearMap.get(y) || { saved: new Set(), missing: new Set() };
+    const total = info.saved.size + info.missing.size;
+    const savedCount = info.saved.size;
+    const missingCount = info.missing.size;
+    const pct = total > 0 ? Math.round((savedCount / total) * 100) : 0;
+    const checked = state.selectedYears.has(y);
+    const filtering = state.yearFilter === y;
+    html += `<label class="year-progress-chip${checked ? ' selected' : ''}${filtering ? ' filtering' : ''}" title="${savedCount}/${total} saved${missingCount ? `; ${missingCount} missing — click year to filter` : ''}">
+      <input type="checkbox" value="${y}" ${checked ? 'checked' : ''} class="year-checkbox">
+      <span class="year-chip-label" data-year="${y}">${y}</span>
+      <span class="year-chip-bar"><span class="year-chip-fill" style="width:${pct}%"></span></span>
+      <span class="year-chip-count">${savedCount}/${total}</span>
+    </label>`;
+  }
+  html += '</div>';
+  container.innerHTML = html;
+
+  // Bind checkboxes — toggle year for collection.
+  for (const cb of container.querySelectorAll(".year-checkbox")) {
+    cb.addEventListener("change", () => {
+      const val = Number(cb.value);
+      if (cb.checked) state.selectedYears.add(val);
+      else state.selectedYears.delete(val);
+      cb.closest(".year-progress-chip").classList.toggle("selected", cb.checked);
+    });
+  }
+
+  // Bind year chip labels — click to filter conferences by missing year.
+  for (const label of container.querySelectorAll(".year-chip-label")) {
+    label.addEventListener("click", (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      const year = Number(label.dataset.year);
+      state.yearFilter = state.yearFilter === year ? null : year;
+      renderYearProgress(state.yearProgress);
+      renderCollectConferencePicker();
+    });
+  }
+
+  // Bind clear filter button.
+  const clearBtn = container.querySelector("#year-filter-clear");
+  if (clearBtn) {
+    clearBtn.addEventListener("click", () => {
+      state.yearFilter = null;
+      renderYearProgress(state.yearProgress);
+      renderCollectConferencePicker();
+    });
+  }
 }
 
 function fillCategorySelect(select, categories, includeAll = false) {
@@ -151,6 +258,7 @@ function visibleCollectConferences() {
     category: $("#collect-category").value || null,
     focus: $("#collect-focus").value || null,
     ccf: $("#collect-ccf").value || null,
+    yearFilter: state.yearFilter,
   });
 }
 
@@ -176,6 +284,13 @@ function conferenceMatchesFilters(conference, filters) {
   if (filters.ccf && conferenceCcf(conference) !== filters.ccf) {
     return false;
   }
+  if (filters.yearFilter != null) {
+    const progress = state.yearProgress.find((p) => p.conference_id === conference.id);
+    if (progress && progress.missing_years && progress.missing_years.includes(filters.yearFilter)) {
+      return true;
+    }
+    return false;
+  }
   return true;
 }
 
@@ -187,6 +302,7 @@ function renderCollectConferencePicker() {
   if (!visible.length) {
     picker.innerHTML = '<p class="muted">No conferences match the current filters.</p>';
     updateCollectConferenceCount(0);
+    renderYearProgress(state.yearProgress);
     return;
   }
 
@@ -204,6 +320,7 @@ function renderCollectConferencePicker() {
       list.appendChild(
         conferenceCheckbox(conference, state.selectedCollectConferences, () => {
           updateCollectConferenceCount(visible.length);
+          renderYearProgress(state.yearProgress);
         }),
       );
     }
@@ -212,6 +329,7 @@ function renderCollectConferencePicker() {
   }
 
   updateCollectConferenceCount(visible.length);
+  renderYearProgress(state.yearProgress);
 }
 
 function selectVisibleCollectConferences() {
@@ -234,8 +352,9 @@ function clearAllCollectConferences() {
 }
 
 function updateCollectConferenceCount(visibleCount) {
+  const filter = state.yearFilter != null ? ` · missing ${state.yearFilter}` : "";
   $("#conference-count").textContent =
-    `${state.selectedCollectConferences.size} selected · ${visibleCount} visible`;
+    `${state.selectedCollectConferences.size} selected · ${visibleCount} visible${filter}`;
 }
 
 function renderSearchConferencePicker() {
@@ -412,9 +531,17 @@ async function startCollection(event) {
     return;
   }
 
+  const selectedYears = [...state.selectedYears].sort();
+  if (!selectedYears.length) {
+    setStatus("Choose at least one year to collect.", "failed");
+    setCollectRunning(false);
+    $("#logs").textContent = "";
+    return;
+  }
+
   const payload = {
     conferences: selectedConferences,
-    year: Number($("#year").value),
+    years: selectedYears,
     limit: Number($("#limit").value),
   };
 
@@ -458,6 +585,7 @@ async function stopCollection() {
   }
 
   setStatus(renderJobStatus(data), data.status);
+  renderQueuePanel(data);
   $("#logs").textContent = (data.logs || []).join("\n") || "Waiting for collection logs...";
 }
 
@@ -578,6 +706,7 @@ async function pollJob(jobId) {
   const job = await response.json();
 
   setStatus(renderJobStatus(job), job.status);
+  renderQueuePanel(job);
   $("#logs").textContent = (job.logs || []).join("\n") || "Waiting for collection logs...";
 
   if (job.status === "completed") {
@@ -585,23 +714,24 @@ async function pollJob(jobId) {
     const link = $("#rss-link");
     if (state.selectedFeedUrl) {
       link.href = state.selectedFeedUrl;
-      link.textContent = job.conference_count > 1
-        ? "Open first RSS feed; all feeds are listed on the right"
-        : `Open RSS feed for ${job.display_name || job.conference} ${job.year}`;
+      const feedUrls = job.feed_urls || [];
+      link.textContent = feedUrls.length > 1
+        ? `Open first RSS feed (${feedUrls.length} total); all feeds are listed on the right`
+        : `Open RSS feed`;
       link.classList.remove("hidden");
     }
-    await loadFeeds();
-    state.currentCollectJobRef = null;
+    await Promise.all([loadFeeds(), loadYearProgress()]);
     setCollectRunning(false);
+    renderQueuePanel(job);
     return;
   }
 
-  if (job.status === "failed" || job.status === "cancelled") {
-    state.currentCollectJobRef = null;
-    setCollectRunning(false);
-    if (job.status === "cancelled") {
-      await loadFeeds();
+  if (job.status === "failed" || job.status === "stopped") {
+    if (job.status === "stopped") {
+      await Promise.all([loadFeeds(), loadYearProgress()]);
     }
+    setCollectRunning(false);
+    renderQueuePanel(job);
     return;
   }
 
@@ -623,22 +753,28 @@ async function pollIndexJob(jobId) {
 }
 
 function renderJobStatus(job) {
+  const queue = job.queue || [];
+  const totalTasks = queue.length;
+  const yearCount = (job.years || []).length || 1;
+  const confCount = job.conference_count || 1;
   if (job.status === "completed") {
-    if (job.conference_count > 1) {
-      return `Completed: saved ${job.paper_count || 0} papers across ${job.completed_count || 0} conferences; ${job.failed_count || 0} failed.`;
+    if (totalTasks > 1) {
+      return `Completed: saved ${job.paper_count || 0} papers across ${job.completed_count || 0} tasks (${confCount} conferences x ${yearCount} years); ${job.failed_count || 0} failed.`;
     }
-    return `Completed: saved ${job.paper_count} papers for ${job.display_name || job.conference} ${job.year}.`;
+    const first = queue[0] || {};
+    return `Completed: saved ${job.paper_count} papers for ${first.display_name || job.display_name || job.conference} ${first.year || job.year}.`;
   }
   if (job.status === "failed") {
     return `Failed: ${job.error || "unknown error"}`;
   }
-  if (job.status === "cancelled") {
-    return `Stopped: saved ${job.paper_count || 0} papers across ${job.completed_count || 0} conferences; ${job.stopped_count || 0} not started.`;
+  if (job.status === "stopped") {
+    return `Stopped: saved ${job.paper_count || 0} papers across ${job.completed_count || 0} tasks; ${job.stopped_count || 0} not started.`;
   }
-  if (job.conference_count > 1) {
-    return `Running batch collection for ${job.conference_count} conferences in ${job.year}...`;
+  if (totalTasks > 1) {
+    return `Running batch collection for ${totalTasks} tasks (${confCount} conferences x ${yearCount} years)...`;
   }
-  return `Running collection for ${job.display_name || job.conference} ${job.year}...`;
+  const first = queue[0] || {};
+  return `Running collection for ${first.display_name || job.display_name || job.conference} ${first.year || job.year}...`;
 }
 
 function renderIndexJobStatus(job) {
@@ -649,6 +785,158 @@ function renderIndexJobStatus(job) {
     return `Index failed: ${job.error || "unknown error"}`;
   }
   return `Building vector index for ${job.collection || "papers"}...`;
+}
+
+function renderQueuePanel(job) {
+  const panel = $("#task-queue");
+  const queue = job.queue || [];
+  if (!queue.length) {
+    panel.classList.add("hidden");
+    panel.innerHTML = "";
+    return;
+  }
+  panel.classList.remove("hidden");
+
+  const summary = job.task_summary || {};
+  const hasRetryable = queue.some((t) => t.status === "failed" || t.status === "skipped");
+  const hasSkipped = queue.some((t) => t.status === "skipped");
+  const isTerminal = ["stopped", "failed", "completed"].includes(job.status);
+
+  let actionsHtml = "";
+  if (isTerminal && hasSkipped) {
+    actionsHtml += `<button class="task-queue-resume secondary" type="button">Resume</button>`;
+  }
+  if (isTerminal && hasRetryable) {
+    actionsHtml += `<button class="task-queue-retry secondary" type="button">Retry failed</button>`;
+  }
+
+  const jobId = job.id || "";
+  let html = `<div class="task-queue-header">`;
+  html += `<h3>Task queue (${queue.length})</h3>`;
+  if (actionsHtml) {
+    html += `<div class="task-queue-actions">${actionsHtml}</div>`;
+  }
+  html += `</div>`;
+  html += `<div class="task-list">`;
+  for (const task of queue) {
+    html += renderTaskItem(task, isTerminal, jobId);
+  }
+  html += `</div>`;
+  panel.innerHTML = html;
+
+  const resumeBtn = panel.querySelector(".task-queue-resume");
+  if (resumeBtn) {
+    resumeBtn.addEventListener("click", () => resumeJob(jobId));
+  }
+  const retryBtn = panel.querySelector(".task-queue-retry");
+  if (retryBtn) {
+    retryBtn.addEventListener("click", () => retryJob(jobId));
+  }
+  for (const btn of panel.querySelectorAll(".task-retry-btn")) {
+    btn.addEventListener("click", () => retryTask(btn.dataset.jobId, btn.dataset.taskId));
+  }
+}
+
+function renderTaskItem(task, isTerminal, jobId) {
+  const icon = taskStatusIcon(task.status);
+  const canRetry = isTerminal && (task.status === "failed" || task.status === "skipped");
+  const detail = taskDetail(task);
+  let retryBtn = "";
+  if (canRetry) {
+    retryBtn = `<button class="task-retry-btn" data-job-id="${jobId}" data-task-id="${task.task_id}">Retry</button>`;
+  }
+  const yearLabel = task.year != null ? ` ${task.year}` : "";
+  return `<div class="task-item" data-status="${task.status}">
+    <span class="task-icon">${icon}</span>
+    <span class="task-name">${escapeHtml(task.display_name)}${yearLabel}</span>
+    <span class="task-detail">${detail}${retryBtn}</span>
+  </div>`;
+}
+
+function taskStatusIcon(status) {
+  switch (status) {
+    case "pending": return '<span class="task-icon-pending">&#9711;</span>';
+    case "running": return '<span class="task-icon-running">&#9697;</span>';
+    case "completed": return '<span class="task-icon-completed">&#10003;</span>';
+    case "failed": return '<span class="task-icon-failed">&#10007;</span>';
+    case "skipped": return '<span class="task-icon-skipped">&#8211;</span>';
+    default: return '<span class="task-icon-unknown">?</span>';
+  }
+}
+
+function taskDetail(task) {
+  if (task.status === "completed" && task.paper_count != null) {
+    return `${task.paper_count} papers `;
+  }
+  if (task.status === "failed" && task.error) {
+    return `Error `;
+  }
+  if (task.status === "skipped") {
+    return "Skipped ";
+  }
+  if (task.status === "running") {
+    return "Running... ";
+  }
+  return "";
+}
+
+function escapeHtml(text) {
+  const div = document.createElement("div");
+  div.textContent = text;
+  return div.innerHTML;
+}
+
+async function resumeJob(jobId) {
+  const normalizedId = jobId || (state.currentCollectJobRef ? jobStatusUrl(state.currentCollectJobRef).split("/").pop() : "");
+  if (!normalizedId) return;
+  setStatus("Resuming collection...", "running");
+  setCollectRunning(true);
+  const response = await fetch(jobStatusUrl(normalizedId).replace(/\/?$/, "/resume"), {
+    method: "POST",
+  });
+  const data = await response.json();
+  if (!response.ok) {
+    setStatus(data.error || "Failed to resume.", "failed");
+    setCollectRunning(false);
+    return;
+  }
+  state.currentCollectJobRef = data.status_url || data.job_id;
+  pollJob(state.currentCollectJobRef);
+}
+
+async function retryJob(jobId) {
+  const normalizedId = jobId || (state.currentCollectJobRef ? jobStatusUrl(state.currentCollectJobRef).split("/").pop() : "");
+  if (!normalizedId) return;
+  setStatus("Retrying failed tasks...", "running");
+  setCollectRunning(true);
+  const response = await fetch(jobStatusUrl(normalizedId).replace(/\/?$/, "/retry"), {
+    method: "POST",
+  });
+  const data = await response.json();
+  if (!response.ok) {
+    setStatus(data.error || "Failed to retry.", "failed");
+    setCollectRunning(false);
+    return;
+  }
+  state.currentCollectJobRef = data.status_url || data.job_id;
+  pollJob(state.currentCollectJobRef);
+}
+
+async function retryTask(jobId, taskId) {
+  if (!jobId || !taskId) return;
+  setStatus("Retrying task...", "running");
+  setCollectRunning(true);
+  const response = await fetch(jobStatusUrl(jobId).replace(/\/?$/, `/queue/${taskId}/retry`), {
+    method: "POST",
+  });
+  const data = await response.json();
+  if (!response.ok) {
+    setStatus(data.error || "Failed to retry task.", "failed");
+    setCollectRunning(false);
+    return;
+  }
+  state.currentCollectJobRef = jobStatusUrl(jobId);
+  pollJob(state.currentCollectJobRef);
 }
 
 function setStatus(message, status) {
@@ -681,6 +969,94 @@ function setIndexStatus(message, status) {
   statusNode.dataset.status = status;
 }
 
+async function loadSyncStatus() {
+  try {
+    const response = await fetch(appUrl("/api/sync/status"));
+    const data = await response.json();
+    renderSyncStatus(data);
+  } catch (err) {
+    renderSyncStatus({ error: "Failed to load sync status." });
+  }
+}
+
+function renderSyncStatus(data) {
+  const container = $("#sync-status");
+  if (!container) return;
+  if (data.error) {
+    container.textContent = data.error;
+    container.dataset.status = "failed";
+    return;
+  }
+  const remoteCount = (data.remote_files || []).length;
+  const localOnly = (data.local_only || []).length;
+  const remoteOnly = (data.remote_only || []).length;
+  const both = (data.both || []).length;
+  container.textContent = `Remote: ${remoteCount} files (${both} shared, ${localOnly} local-only, ${remoteOnly} remote-only).`;
+  container.dataset.status = "idle";
+}
+
+async function startSyncUpload() {
+  setSyncRunning(true);
+  $("#sync-logs").textContent = "Starting upload...";
+  const response = await fetch(appUrl("/api/sync/upload"), { method: "POST" });
+  const data = await response.json();
+  if (!response.ok) {
+    setSyncStatus(data.error || "Failed to start upload.", "failed");
+    setSyncRunning(false);
+    $("#sync-logs").textContent = data.error || "";
+    return;
+  }
+  pollSyncJob(data.status_url || data.job_id);
+}
+
+async function startSyncDownload() {
+  if (!confirm("Download will overwrite local files. Continue?")) return;
+  setSyncRunning(true);
+  $("#sync-logs").textContent = "Starting download...";
+  const response = await fetch(appUrl("/api/sync/download"), { method: "POST" });
+  const data = await response.json();
+  if (!response.ok) {
+    setSyncStatus(data.error || "Failed to start download.", "failed");
+    setSyncRunning(false);
+    $("#sync-logs").textContent = data.error || "";
+    return;
+  }
+  pollSyncJob(data.status_url || data.job_id);
+}
+
+async function pollSyncJob(jobId) {
+  const response = await fetch(jobStatusUrl(jobId));
+  const job = await response.json();
+  $("#sync-logs").textContent = (job.logs || []).join("\n") || "Waiting...";
+
+  if (job.status === "completed") {
+    setSyncStatus("Sync completed.", "completed");
+    setSyncRunning(false);
+    await loadSyncStatus();
+    return;
+  }
+  if (job.status === "failed") {
+    setSyncStatus(`Sync failed: ${job.error || "unknown error"}`, "failed");
+    setSyncRunning(false);
+    return;
+  }
+  window.setTimeout(() => pollSyncJob(jobId), 1500);
+}
+
+function setSyncStatus(message, status) {
+  const node = $("#sync-status");
+  if (!node) return;
+  node.textContent = message;
+  node.dataset.status = status;
+}
+
+function setSyncRunning(isRunning) {
+  const uploadBtn = $("#sync-upload-button");
+  const downloadBtn = $("#sync-download-button");
+  if (uploadBtn) uploadBtn.disabled = isRunning;
+  if (downloadBtn) downloadBtn.disabled = isRunning;
+}
+
 $("#collect-form").addEventListener("submit", startCollection);
 $("#collect-stop-button").addEventListener("click", stopCollection);
 $("#search-form").addEventListener("submit", searchPapers);
@@ -697,6 +1073,20 @@ $("#collect-ccf").addEventListener("change", () => {
 $("#collect-select-visible").addEventListener("click", selectVisibleCollectConferences);
 $("#collect-clear-visible").addEventListener("click", clearVisibleCollectConferences);
 $("#collect-clear-all").addEventListener("click", clearAllCollectConferences);
+$("#year-select-all").addEventListener("click", () => {
+  for (const cb of document.querySelectorAll("#year-progress .year-checkbox")) {
+    cb.checked = true;
+    state.selectedYears.add(Number(cb.value));
+    cb.closest(".year-progress-chip").classList.add("selected");
+  }
+});
+$("#year-clear-all").addEventListener("click", () => {
+  for (const cb of document.querySelectorAll("#year-progress .year-checkbox")) {
+    cb.checked = false;
+    cb.closest(".year-progress-chip").classList.remove("selected");
+  }
+  state.selectedYears.clear();
+});
 $("#search-category").addEventListener("change", () => {
   renderSearchConferencePicker();
 });
@@ -709,6 +1099,13 @@ $("#search-ccf").addEventListener("change", () => {
 $("#search-select-visible").addEventListener("click", selectVisibleSearchConferences);
 $("#search-clear-visible").addEventListener("click", clearVisibleSearchConferences);
 $("#search-clear-all").addEventListener("click", clearAllSearchConferences);
-loadOptions().catch((error) => {
-  setStatus(`Failed to load app options: ${error}`, "failed");
-});
+$("#sync-upload-button").addEventListener("click", startSyncUpload);
+$("#sync-download-button").addEventListener("click", startSyncDownload);
+Promise.all([
+  loadOptions().catch((error) => {
+    setStatus(`Failed to load app options: ${error}`, "failed");
+  }),
+  loadFeeds().catch(() => {}),
+  loadYearProgress().catch(() => {}),
+  loadSyncStatus().catch(() => {}),
+]);

@@ -1,0 +1,80 @@
+[
+  {
+    "title": "NeuralPLexer3: Accurate Biomolecular Complex Structure Prediction with Flow Models",
+    "authors": [
+      "Jarren Zhuoran Qiao",
+      "Feizhi Ding",
+      "Thomas Dresselhaus",
+      "Mia Rosenfeld",
+      "Xiaotian Han",
+      "Owen Howell",
+      "Aniketh Iyengar",
+      "Stephen Opalenski",
+      "Anders Christensen",
+      "Sai Krishna Sirumalla",
+      "Fred Manby",
+      "Thomas K. Miller",
+      "Matthew Welborn"
+    ],
+    "venue": "NeurIPS",
+    "year": 2025,
+    "abstract": "Structure determination is essential to a mechanistic understanding of diseases and the development of novel therapeutics. Machine-learning-based structure prediction methods have made significant advancements by computationally predicting protein and bioassembly structures from sequences and molecular topology alone. Despite substantial progress in the field, challenges remain to deliver structure prediction models to real-world drug discovery. Here, we present NeuralPLexer3 -- a physics-inspired flow-based generative model that achieves state-of-the-art prediction accuracy on key biomolecular interaction types and improves training and sampling efficiency compared to its predecessors and alternative methodologies. Examined through newly developed benchmarking strategies, NeuralPLexer3 excels in vital areas that are crucial to structure-based drug design, such as physical validity and ligand-induced conformational changes.",
+    "citation_count": 8,
+    "reference_count": 0,
+    "url": "https://proceedings.neurips.cc/paper_files/paper/2025/hash/0010031a1b4910aa67edbda26a705518-Abstract-Conference.html",
+    "dblp_key": null,
+    "source_id": "official:neurips:2025:0010031a1b4910aa67edbda26a705518-Abstract-Conference",
+    "source": "official:neurips_proceedings",
+    "source_url": "https://proceedings.neurips.cc/paper_files/paper/2025"
+  },
+  {
+    "title": "The Primacy of Magnitude in Low-Rank Adaptation",
+    "authors": [
+      "Zicheng Zhang",
+      "Haoran Li",
+      "Yifeng Zhang",
+      "Guoqiang Gong",
+      "Jiaxing Wang",
+      "Junxing Hu",
+      "Pengzhang Liu",
+      "Qixia Jiang"
+    ],
+    "venue": "NeurIPS",
+    "year": 2025,
+    "abstract": "Low-Rank Adaptation (LoRA) offers a parameter-efficient paradigm for tuning large models. While recent spectral initialization methods improve convergence and performance over the naive \"Noise &amp; Zeros\" scheme, their extra computational and storage overhead undermines efficiency. In this paper, we establish update magnitude as the fundamental driver of LoRA performance and propose LoRAM, a magnitude-driven \"Basis &amp; Basis\" initialization scheme that matches spectral methods without their inefficiencies. Our key contributions are threefold: (i) Magnitude of weight updates determines convergence. We prove low-rank structures intrinsically bound update magnitudes, unifying hyperparameter tuning in learning rate, scaling factor, and initialization as mechanisms to optimize magnitude regulation. (ii) Spectral initialization succeeds via magnitude amplification. We demystify that the presumed knowledge-driven benefit of the spectral component essentially arises from the boost in the weight update magnitude. (iii) A novel and compact initialization strategy, LoRAM, scales deterministic orthogonal bases using pretrained weight magnitudes to simulate spectral gains. Extensive experiments show that LoRAM serves as a strong baseline, retaining the full efficiency of LoRA while matching or outperforming spectral initialization across benchmarks.",
+    "citation_count": 0,
+    "reference_count": 0,
+    "url": "https://proceedings.neurips.cc/paper_files/paper/2025/hash/0010665e949927b74faf6e3ada6d7f72-Abstract-Conference.html",
+    "dblp_key": null,
+    "source_id": "official:neurips:2025:0010665e949927b74faf6e3ada6d7f72-Abstract-Conference",
+    "source": "official:neurips_proceedings",
+    "source_url": "https://proceedings.neurips.cc/paper_files/paper/2025"
+  },
+  {
+    "title": "EngiBench: A Framework for Data-Driven Engineering Design Research",
+    "authors": [
+      "Florian Felten",
+      "Gabriel Apaza",
+      "Gerhard Bräunlich",
+      "Cashen Diniz",
+      "Xuliang Dong",
+      "Arthur Drake",
+      "Milad Habibi",
+      "Nathaniel Hoffman",
+      "Matthew Keeler",
+      "Soheyl Massoudi",
+      "Francis VanGessel",
+      "Mark Fuge"
+    ],
+    "venue": "NeurIPS",
+    "year": 2025,
+    "abstract": "Engineering design optimization seeks to automatically determine the shapes, topologies, or parameters of components that maximize performance under given conditions. This process often depends on physics-based simulations, which are difficult to install, computationally expensive, and require domain-specific expertise. To mitigate these challenges, we introduce EngiBench, the first open-source library and datasets spanning diverse domains for data-driven engineering design. EngiBench provides a unified API and a curated set of benchmarks -- covering aeronautics, heat conduction, photonics, and more -- that enable fair, reproducible comparisons of optimization and machine learning algorithms, such as generative or surrogate models. We also release EngiOpt, a companion library offering a collection of such algorithms compatible with the EngiBench interface. Both libraries are modular, letting users plug in novel algorithms or problems, automate end-to-end experiment workflows, and leverage built-in utilities for visualization, dataset generation, feasibility checks, and performance analysis. We demonstrate their versatility through experiments comparing state-of-the-art techniques across multiple engineering design problems, an undertaking that was previously prohibitively time-consuming to perform. Finally, we show that these problems pose significant challenges for standard machine learning methods due to highly sensitive and constrained design manifolds.",
+    "citation_count": 0,
+    "reference_count": 0,
+    "url": "https://proceedings.neurips.cc/paper_files/paper/2025/hash/0013efa1327c079e73154d4061c3a396-Abstract-Datasets_and_Benchmarks_Track.html",
+    "dblp_key": null,
+    "source_id": "official:neurips:2025:0013efa1327c079e73154d4061c3a396-Abstract-Datasets_and_Benchmarks_Track",
+    "source": "official:neurips_proceedings",
+    "source_url": "https://proceedings.neurips.cc/paper_files/paper/2025"
+  }
+]

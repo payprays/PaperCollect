@@ -34,3 +34,4 @@ test.txt
 # Local secrets
 .env
 /.codex
+.playwright-mcp/

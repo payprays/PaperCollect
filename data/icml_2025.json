@@ -1,0 +1,63 @@
+[
+  {
+    "title": "Implicit Regularization for Tubal Tensor Factorizations via Gradient Descent.",
+    "authors": [
+      "Santhosh Karnik",
+      "Anna Veselovska",
+      "Mark A. Iwen",
+      "Felix Krahmer"
+    ],
+    "venue": "ICML",
+    "year": 2025,
+    "abstract": "We provide a rigorous analysis of implicit regularization in an overparametrized tensor factorization problem beyond the lazy training regime. For matrix factorization problems, this phenomenon has been studied in a number of works. A particular challenge has been to design universal initialization strategies which provably lead to implicit regularization in gradient-descent methods. At the same time, it has been argued by Cohen et. al. 2016 that more general classes of neural networks can be captured by considering tensor factorizations. However, in the tensor case, implicit regularization has only been rigorously established for gradient flow or in the lazy training regime. In this paper, we prove the first tensor result of its kind for gradient descent rather than gradient flow. We focus on the tubal tensor product and the associated notion of low tubal rank, encouraged by the relevance of this model for image data. We establish that gradient descent in an overparametrized tensor factorization model with a small random initialization exhibits an implicit bias towards solutions of low tubal rank. Our theoretical findings are illustrated in an extensive set of numerical simulations show-casing the dynamics predicted by our theory as well as the crucial role of using a small random initialization.",
+    "citation_count": 0,
+    "reference_count": 0,
+    "url": "https://proceedings.mlr.press/v267/karnik25a.html",
+    "dblp_key": "conf/icml/KarnikVIK25",
+    "source_id": "https://openalex.org/W4404089426",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Algorithm Development in Neural Networks: Insights from the Streaming Parity Task.",
+    "authors": [
+      "Loek van Rossem",
+      "Andrew M. Saxe"
+    ],
+    "venue": "ICML",
+    "year": 2025,
+    "abstract": "Even when massively overparameterized, deep neural networks show a remarkable ability to generalize. Research on this phenomenon has focused on generalization within distribution, via smooth interpolation. Yet in some settings neural networks also learn to extrapolate to data far beyond the bounds of the original training set, sometimes even allowing for infinite generalization, implying that an algorithm capable of solving the task has been learned. Here we undertake a case study of the learning dynamics of recurrent neural networks (RNNs) trained on the streaming parity task in order to develop an effective theory of algorithm development. The streaming parity task is a simple but nonlinear task defined on sequences up to arbitrary length. We show that, with sufficient finite training experience, RNNs exhibit a phase transition to perfect infinite generalization. Using an effective theory for the representational dynamics, we find an implicit representational merger effect which can be interpreted as the construction of a finite automaton that reproduces the task. Overall, our results disclose one mechanism by which neural networks can generalize infinitely from finite training experience.",
+    "citation_count": 0,
+    "reference_count": 0,
+    "url": "https://proceedings.mlr.press/v267/van-rossem25a.html",
+    "dblp_key": "conf/icml/RossemS25",
+    "source_id": "https://openalex.org/W4414724601",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Orthogonal Subspace Decomposition for Generalizable AI-Generated Image Detection.",
+    "authors": [
+      "Zhiyuan Yan 0002",
+      "Jiangming Wang",
+      "Peng Jin 0001",
+      "Ke-Yue Zhang",
+      "Chengchun Liu",
+      "Shen Chen 0004",
+      "Taiping Yao",
+      "Shouhong Ding",
+      "Baoyuan Wu",
+      "Li Yuan 0007"
+    ],
+    "venue": "ICML",
+    "year": 2025,
+    "abstract": "AI-generated images (AIGIs), such as natural or face images, have become increasingly important yet challenging. In this paper, we start from a new perspective to excavate the reason behind the failure generalization in AIGI detection, named the \\textit{asymmetry phenomenon}, where a naively trained detector tends to favor overfitting to the limited and monotonous fake patterns, causing the feature space to become highly constrained and low-ranked, which is proved seriously limiting the expressivity and generalization. One potential remedy is incorporating the pre-trained knowledge within the vision foundation models (higher-ranked) to expand the feature space, alleviating the model's overfitting to fake. To this end, we employ Singular Value Decomposition (SVD) to decompose the original feature space into \\textit{two orthogonal subspaces}. By freezing the principal components and adapting only the remained components, we preserve the pre-trained knowledge while learning fake patterns. Compared to existing full-parameters and LoRA-based tuning methods, we explicitly ensure orthogonality, enabling the higher rank of the whole feature space, effectively minimizing overfitting and enhancing generalization. We finally identify a crucial insight: our method implicitly learns \\textit{a vital prior that fakes are actually derived from the real}, indicating a hierarchical relationship rather than independence. Modeling this prior, we believe, is essential for achieving superior generalization. Our codes are publicly available at \\href{https://github.com/YZY-stack/Effort-AIGI-Detection}{GitHub}.",
+    "citation_count": 0,
+    "reference_count": 0,
+    "url": "https://proceedings.mlr.press/v267/yan25b.html",
+    "dblp_key": "conf/icml/0002WJZLCYDW025",
+    "source_id": "https://openalex.org/W4404986693",
+    "source": null,
+    "source_url": null
+  }
+]

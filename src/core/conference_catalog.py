@@ -1,10 +1,15 @@
 import re
+import time
 from dataclasses import dataclass, field
 from datetime import date
 from pathlib import Path
 from typing import Any
 
 import yaml
+
+_CATALOG_CACHE: dict[str, tuple[float, dict]] = {}
+_NORM_CACHE: dict[str, tuple[float, list]] = {}
+_CACHE_TTL = 10  # seconds
 
 
 @dataclass(frozen=True)
@@ -45,6 +50,11 @@ class ConferenceEntry:
 
 
 def normalize_conferences(config: dict[str, Any], include_disabled: bool = False) -> list[ConferenceEntry]:
+    cache_key = f"{id(config)}:{include_disabled}"
+    now = time.time()
+    cached = _NORM_CACHE.get(cache_key)
+    if cached and now - cached[0] < _CACHE_TTL:
+        return cached[1]
     entries = []
     by_id = {}
     by_lookup = {}
@@ -77,8 +87,11 @@ def normalize_conferences(config: dict[str, Any], include_disabled: bool = False
                     by_lookup[value] = entry
 
     if include_disabled:
-        return entries
-    return [entry for entry in entries if entry.enabled]
+        result = entries
+    else:
+        result = [entry for entry in entries if entry.enabled]
+    _NORM_CACHE[cache_key] = (time.time(), result)
+    return result
 
 
 def normalize_conference(raw: str | dict[str, Any] | ConferenceEntry) -> ConferenceEntry:
@@ -194,11 +207,18 @@ def focus_tag_options(config: dict[str, Any]) -> list[dict[str, str]]:
 
 def load_ccfddl_catalog() -> dict[str, Any]:
     catalog_path = Path(__file__).resolve().parents[1] / "data" / "ccf_conferences.yaml"
+    cache_key = str(catalog_path)
+    now = time.time()
+    cached = _CATALOG_CACHE.get(cache_key)
+    if cached and now - cached[0] < _CACHE_TTL:
+        return cached[1]
     if not catalog_path.exists():
         return {"categories": {}, "conferences": []}
 
     with open(catalog_path, "r", encoding="utf-8") as f:
-        return yaml.safe_load(f) or {"categories": {}, "conferences": []}
+        result = yaml.safe_load(f) or {"categories": {}, "conferences": []}
+    _CATALOG_CACHE[cache_key] = (now, result)
+    return result
 
 
 def _slugify(value: str) -> str:

@@ -1,0 +1,65 @@
+[
+  {
+    "title": "AssetHarvester: A Static Analysis Tool for Detecting Secret-Asset Pairs in Software Artifacts.",
+    "authors": [
+      "Setu Kumar Basak",
+      "K. Virgil English",
+      "Ken Ogura",
+      "Vitesh Kambara",
+      "Bradley Reaves",
+      "Laurie A. Williams"
+    ],
+    "venue": "ICSE",
+    "year": 2025,
+    "abstract": "GitGuardian monitored secrets exposure in public GitHub repositories and reported that developers leaked over 12 million secrets (database and other credentials) in 2023, indicating a 113% surge from 2021. Despite the availability of secret detection tools, developers ignore the tools' reported warnings because of false positives (<tex xmlns:mml=\"http://www.w3.org/1998/Math/MathML\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">$\\mathbf{2 5 \\% - 9 9 \\%}$</tex>). However, each secret protects assets of different values accessible through asset identifiers (a DNS name and a public or private IP address). The asset information for a secret can aid developers in filtering false positives and prioritizing secret removal from the source code. However, existing secret detection tools do not provide the asset information, thus presenting difficulty to developers in filtering secrets only by looking at the secret value or finding the assets manually for each reported secret. The goal of our study is to aid software practitioners in prioritizing secrets removal by providing the assets information protected by the secrets through our novel static analysis tool. We present AssetHarvester, a static analysis tool to detect secret-asset pairs in a repository. Since the location of the asset can be distant from where the secret is defined, we investigated secret-asset co-location patterns and found four patterns. To identify the secret-asset pairs of the four patterns, we utilized three approaches (pattern matching, data flow analysis, and fast-approximation heuristics). We curated a benchmark of 1,791 secret-asset pairs of four database types extracted from 188 public GitHub repositories to evaluate the performance of AssetHarvester. AssetHarvester demonstrates precision of (97%), recall (90 %), and F1-score (94 %) in detecting secret-asset pairs. Our findings indicate that data flow analysis employed in AssetHarvester detects secret-asset pairs with 0 % false positives and aids in improving the recall of secret detection tools. Additionally, AssetHarvester shows 43 % increase in precision for database secret detection compared to existing detection tools through the detection of assets, thus reducing developer's alert fatigue.",
+    "citation_count": 1,
+    "reference_count": 20,
+    "url": "https://doi.org/10.1109/ICSE55347.2025.00067",
+    "dblp_key": "conf/icse/BasakEOKRW25",
+    "source_id": "https://openalex.org/W4411552264",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Repository-Level Graph Representation Learning for Enhanced Security Patch Detection.",
+    "authors": [
+      "Xin-Cheng Wen",
+      "Zirui Lin",
+      "Cuiyun Gao 0001",
+      "Hongyu Zhang 0002",
+      "Yong Wang 0008",
+      "Qing Liao 0001"
+    ],
+    "venue": "ICSE",
+    "year": 2025,
+    "abstract": "Software vendors often silently release security patches without providing sufficient advisories (e.g., Common Vulnerabilities and Exposures) or delayed updates via resources (e.g., National Vulnerability Database). Therefore, it has become crucial to detect these security patches to ensure secure software maintenance. However, existing methods face the following challenges: (1) They primarily focus on the information within the patches themselves, overlooking the complex dependencies in the repository. (2) Security patches typically involve multiple functions and files, increasing the difficulty in well learning the representations. To alleviate the above challenges, this paper proposes a Repository-level Security Patch Detection framework named RepoSPD, which comprises three key components: 1) a repository-level graph construction, RepoCPG, which represents software patches by merging pre-patch and post-patch source code at the repository level; 2) a structure-aware patch representation, which fuses the graph and sequence branch and aims at comprehending the relationship among multiple code changes; 3) progressive learning, which facilitates the model in balancing semantic and structural information. To evaluate RepoSPD, we employ two widely-used datasets in security patch detection: SPI-DB and PatchDB. We further extend these datasets to the repository level, incorporating a total of 20,238 and <tex xmlns:mml=\"http://www.w3.org/1998/Math/MathML\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">$\\mathbf{2 8, 7 8 1}$</tex> versions of repository in C/C++ programming languages, respectively, denoted as SPI-DB* and PatchDB*. We compare RepoSPD with six existing security patch detection methods and five static tools. Our experimental results demonstrate that RepoSPD outperforms the state-of-the-art baseline, with improvements of 11.90 %, and 3.10 % in terms of accuracy on the two datasets, respectively. These results underscore the effectiveness of RepoSPD in detecting security patches. Furthermore, RepoSPD can detect 151 security patches, which outperforms the best-performing baseline by <tex xmlns:mml=\"http://www.w3.org/1998/Math/MathML\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">$\\mathbf{2 1. 3 6 \\%}$</tex> with respect to accuracy.",
+    "citation_count": 1,
+    "reference_count": 54,
+    "url": "https://doi.org/10.1109/ICSE55347.2025.00121",
+    "dblp_key": "conf/icse/WenL00W025",
+    "source_id": "https://openalex.org/W4411552404",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Decictor: Towards Evaluating the Robustness of Decision-Making in Autonomous Driving Systems.",
+    "authors": [
+      "Mingfei Cheng",
+      "Xiaofei Xie",
+      "Yuan Zhou 0005",
+      "Junjie Wang 0007",
+      "Guozhu Meng",
+      "Kairui Yang"
+    ],
+    "venue": "ICSE",
+    "year": 2025,
+    "abstract": "Autonomous Driving System (ADS) testing is crucial in ADS development, with the current primary focus being on safety. However, the evaluation of non-safety-critical performance, particularly the ADS's ability to make optimal decisions and produce optimal paths for autonomous vehicles (AVs), is also vital to ensure the intelligence and reduce risks of AVs. Currently, there is little work dedicated to assessing the robustness of ADSs' path-planning decisions (PPDs), i.e., whether an ADS can maintain the optimal PPD after an insignificant change in the environment. The key challenges include the lack of clear oracles for assessing PPD optimality and the difficulty in searching for scenarios that lead to non-optimal PPDs. To fill this gap, in this paper, we focus on evaluating the robustness of ADSs' PPDs and propose the first method, Decictor, for generating nonoptimal decision scenarios (NoDSs), where the ADS does not plan optimal paths for AVs. Decictor comprises three main components: Non-invasive Mutation, Consistency Check, and Feedback. To overcome the oracle challenge, Non-invasive Mutation is devised to implement conservative modifications, ensuring the preservation of the original optimal path in the mutated scenarios. Subsequently, the Consistency Check is applied to determine the presence of nonoptimal PPDs by comparing the driving paths in the original and mutated scenarios. To deal with the challenge of large environment space, we design Feedback metrics that integrate spatial and temporal dimensions of the AV's movement. These metrics are crucial for effectively steering the generation of NoDSs. Therefore, Decictor can generate NoDSs by generating new scenarios and then identifying NoDSs in the new scenarios. We evaluate Decictor on Baidu Apollo, an open-source and production-grade ADS. The experimental results validate the effectiveness of Decictor in detecting non-optimal PPDs of ADSs. It generates 63.9 NoDSs in total, while the best-performing baseline only detects 35.4 NoDSs.",
+    "citation_count": 4,
+    "reference_count": 67,
+    "url": "https://doi.org/10.1109/ICSE55347.2025.00114",
+    "dblp_key": "conf/icse/ChengX00MY25",
+    "source_id": "https://openalex.org/W4411552134",
+    "source": null,
+    "source_url": null
+  }
+]

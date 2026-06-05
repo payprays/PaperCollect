@@ -235,3 +235,167 @@ entry = find_conference(config, conference)
 if entry is None:
     return jsonify({"error": "Choose a conference from config.yaml."}), 400
 ```
+
+---
+
+## Scenario: Collection Task Queue with Stop / Resume / Retry
+
+### 1. Scope / Trigger
+- Trigger: changes that add or modify the per-conference task queue inside a collection job, including pause/resume/retry semantics and per-task status visibility.
+- Applies to `src/services/job_store.py`, `src/web/app.py`, `src/web/static/app.js`, and `src/web/templates/index.html`.
+- Extends the existing batch collection model (one job → N conferences sequential) with per-conference queue items that track independent lifecycle states.
+
+### 2. Signatures
+- API: `POST /api/collect` — unchanged request shape; internally creates a queue of per-conference tasks.
+- API: `GET /api/jobs/<job_id>` — returns `queue` array with per-task status.
+- API: `POST /api/jobs/<job_id>/stop` — stops the job cooperatively; remaining queued tasks stay `pending`.
+- API: `POST /api/jobs/<job_id>/resume` — **new**; resumes a `stopped` or `failed` job, re-queuing `pending`/`failed` tasks.
+- API: `POST /api/jobs/<job_id>/retry` — **new**; re-queues only `failed` tasks from a `stopped`/`failed`/`completed` job.
+- API: `POST /api/jobs/<job_id>/queue/<task_id>/retry` — **new**; retries a single failed task.
+- JobStore: no new public methods; queue state is stored inside the job JSON `queue` field.
+
+### 3. Contracts
+
+#### 3.1 Queue Item Schema (stored in `job.queue[]`)
+```
+{
+  "task_id": string,           // 8-char hex, unique within the job
+  "conference_id": string,     // ConferenceEntry.id
+  "display_name": string,      // ConferenceEntry.display_name
+  "status": string,            // "pending" | "running" | "completed" | "failed" | "skipped"
+  "paper_count": int | null,   // filled on completion
+  "output_path": string | null,// filled on completion
+  "feed_url": string | null,   // filled on completion
+  "error": string | null,      // filled on failure
+  "started_at": float | null,  // epoch seconds
+  "finished_at": float | null  // epoch seconds
+}
+```
+
+#### 3.2 Job-level Status Machine
+```
+queued → running → completed
+                  → failed        (all tasks failed)
+                  → stopped       (user requested stop; some tasks remain pending/failed)
+```
+- `stopped` is a terminal state for the current run; `resume` or `retry` transitions it back to `running`.
+- A job with status `completed` may still contain `failed` tasks (partial success); `retry` can re-run those.
+
+#### 3.3 Task-level Status Machine
+```
+pending → running → completed
+                  → failed    (exception during collection)
+        → skipped            (user stopped before this task started)
+```
+- `skipped` is set on all `pending` tasks when the job is stopped.
+- `retry` resets `failed`/`skipped` tasks to `pending`.
+
+#### 3.4 `POST /api/collect` — Internal Changes
+- After validation, build `queue[]` from the resolved conference list.
+- Each item gets a unique `task_id`, initial `status: "pending"`.
+- Job JSON stores `queue` alongside existing fields.
+- Background thread iterates `queue[]` instead of the raw `conferences` list.
+- Between tasks, check `cancel_requested`; if set, mark remaining `pending` tasks as `skipped` and set job `status: "stopped"`.
+
+#### 3.5 `GET /api/jobs/<job_id>` — Extended Response
+New fields in the response:
+- `queue`: array of queue item objects (see 3.1).
+- `task_summary`: `{ "pending": int, "running": int, "completed": int, "failed": int, "skipped": int }`.
+- Existing fields (`results`, `errors`, `completed_count`, `failed_count`, `stopped_count`) are derived from `queue`.
+
+#### 3.6 `POST /api/jobs/<job_id>/stop` — Extended Behavior
+- Sets `cancel_requested: true` on the job.
+- The worker thread, after finishing the current task, marks all remaining `pending` tasks as `skipped`.
+- Job status becomes `stopped` (not `cancelled`; `cancelled` is removed in favor of `stopped`).
+- The collection lock is released so a new job can be started.
+
+#### 3.7 `POST /api/jobs/<job_id>/resume` — New Endpoint
+- **Precondition**: job `status` is `stopped` or `failed`.
+- **Precondition**: at least one task has `status` in `{ "pending", "failed", "skipped" }`.
+- Resets all `skipped` tasks to `pending`; leaves `completed` tasks untouched.
+- Sets job `status: "running"`, `cancel_requested: false`.
+- Acquires the collection lock; if another job holds it, return 409.
+- Spawns a new background thread that picks up from the first non-completed task.
+- Returns 202 with `job_id` and `status_url`.
+
+#### 3.8 `POST /api/jobs/<job_id>/retry` — New Endpoint
+- **Precondition**: job `status` is `stopped`, `failed`, or `completed`.
+- Resets only `failed` and `skipped` tasks to `pending`; leaves `completed` tasks untouched.
+- Same lock acquisition and thread spawn as `resume`.
+- Returns 202 with `job_id` and `status_url`.
+
+#### 3.9 `POST /api/jobs/<job_id>/queue/<task_id>/retry` — New Endpoint
+- **Precondition**: task exists and has `status` in `{ "failed", "skipped" }`.
+- Resets that single task to `pending`.
+- If the job is not currently running, acquires the lock and spawns a worker.
+- Returns 202 with the updated queue item.
+
+### 4. Validation & Error Matrix
+| Condition | HTTP | Error |
+|---|---|---|
+| `resume` on a `running` job | 409 | "Job is already running." |
+| `resume` on a `completed` job with no failed/skipped tasks | 400 | "No tasks to resume." |
+| `retry` when no tasks are `failed`/`skipped` | 400 | "No failed tasks to retry." |
+| `resume`/`retry` while another collection job holds the lock | 409 | "A collection job is already running." |
+| `queue/<task_id>/retry` with unknown `task_id` | 404 | "Task not found." |
+| `queue/<task_id>/retry` on a `completed` or `running` task | 400 | "Task cannot be retried in its current state." |
+| `stop` on a `completed`/`failed`/`stopped` job | 409 | "Collection job is not running." |
+
+### 5. Good/Base/Bad Cases
+- **Good**: submit 5 conferences, stop after 2 complete → job `stopped`, 2 `completed`, 3 `skipped` → resume → remaining 3 run → job `completed`.
+- **Good**: submit 3 conferences, 1 fails → job `completed` with 1 `failed` task → retry → failed task re-runs.
+- **Good**: single conference fails → `queue/<task_id>/retry` → only that conference re-runs.
+- **Base**: submit 1 conference → queue has 1 item → runs → completes.
+- **Bad**: resume a `running` job → 409.
+- **Bad**: retry when all tasks are `completed` → 400.
+- **Edge**: stop while first conference is running → current conference finishes (or fails), remaining marked `skipped`, lock released.
+
+### 6. Tests Required
+- Queue creation: `POST /api/collect` with batch conferences produces `queue[]` with correct `task_id`, `conference_id`, `status: "pending"`.
+- Queue progression: mocked collection processes tasks sequentially; each task transitions `pending → running → completed` with `paper_count` filled.
+- Stop mid-batch: mock slow collection; stop after first task completes; assert second task is `running` (finishes), remaining are `skipped`, job `status: "stopped"`.
+- Resume: from `stopped` state, resume re-queues `skipped` tasks; assert `completed` tasks are not re-run.
+- Retry failed: from `completed` state with 1 failed task, retry re-queues only that task.
+- Single task retry: `POST /api/jobs/<id>/queue/<task_id>/retry` resets only the target task.
+- Lock contention: resume/retry while another job holds the lock → 409.
+- Task summary: `GET /api/jobs/<id>` returns correct `task_summary` counts at each state.
+- Log streaming: per-task logs appear in `job.logs` during execution.
+- Idempotent stop: calling stop on an already-stopped job returns 409 with current state.
+- Frontend: job status panel renders per-task progress (pending/running/completed/failed/skipped icons).
+- Frontend: resume/retry buttons appear when job is `stopped`/`failed`/`completed` with retryable tasks.
+- Frontend: clicking resume/retry sends the correct POST and re-starts polling.
+
+### 7. Wrong vs Correct
+
+#### Wrong
+```python
+# Storing queue state only in memory — lost on process restart.
+self._task_queue = {task_id: "pending" for task_id in task_ids}
+
+# Or: treating stop the same as cancel — no way to resume.
+def stop_job(job_id):
+    job_store.update(job_id, status="cancelled")
+    # All progress lost; must re-submit the entire batch.
+```
+
+#### Correct
+```python
+# Queue state persisted in job JSON; survives restarts and multi-worker reads.
+queue = [
+    {"task_id": uuid.uuid4().hex[:8], "conference_id": c.id,
+     "display_name": c.display_name, "status": "pending",
+     "paper_count": None, "output_path": None, "feed_url": None,
+     "error": None, "started_at": None, "finished_at": None}
+    for c in conferences
+]
+job = job_store.create({..., "queue": queue})
+
+# Stop marks remaining tasks as skipped; lock is released; resume can pick up.
+def stop_job(job_id):
+    job = job_store.get(job_id)
+    for item in job["queue"]:
+        if item["status"] == "pending":
+            item["status"] = "skipped"
+    job_store.update(job_id, status="stopped", queue=job["queue"])
+    collection_lock.release()
+```
