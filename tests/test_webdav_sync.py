@@ -378,6 +378,11 @@ def test_sync_status_endpoint_returns_status(tmp_path, monkeypatch):
 
     monkeypatch.setattr(WebDAVClient, "list_files", mock_list_files)
 
+    # Mock HEAD request for connectivity check
+    class MockResponse:
+        status_code = 200
+    monkeypatch.setattr("requests.Session.head", lambda self, url, **kw: MockResponse())
+
     client = create_app(str(config_path)).test_client()
     response = client.get("/api/sync/status")
     assert response.status_code == 200

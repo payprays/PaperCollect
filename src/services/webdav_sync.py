@@ -9,6 +9,9 @@ import requests
 from requests.auth import HTTPBasicAuth
 
 
+CONNECT_TIMEOUT = 5  # seconds — fast fail when server is unreachable
+
+
 class WebDAVClient:
     """Simple WebDAV client using requests."""
 
@@ -30,7 +33,7 @@ class WebDAVClient:
             current = f"{current}/{part}"
             target = self.url + current.strip("/") + "/"
             try:
-                resp = self.session.request("MKCOL", target, timeout=30)
+                resp = self.session.request("MKCOL", target, timeout=(CONNECT_TIMEOUT, 30))
                 # 201 = created, 405 = already exists, 301/409 = parent missing (continue)
                 if resp.status_code not in (201, 405, 301, 409):
                     resp.raise_for_status()
@@ -44,7 +47,7 @@ class WebDAVClient:
         body = '<?xml version="1.0" encoding="utf-8"?><D:propfind xmlns:D="DAV:"><D:allprop/></D:propfind>'
         try:
             resp = self.session.request(
-                "PROPFIND", target, headers=headers, data=body, timeout=timeout
+                "PROPFIND", target, headers=headers, data=body, timeout=(CONNECT_TIMEOUT, timeout)
             )
         except requests.RequestException:
             return []
@@ -85,13 +88,13 @@ class WebDAVClient:
         with open(local_path, "rb") as f:
             data = f.read()
         target = self.url + remote_path.strip("/")
-        resp = self.session.put(target, data=data, timeout=60)
+        resp = self.session.put(target, data=data, timeout=(CONNECT_TIMEOUT, 60))
         resp.raise_for_status()
 
     def download_file(self, remote_path: str, local_path: str) -> None:
         """GET download a single file."""
         target = self.url + remote_path.strip("/")
-        resp = self.session.get(target, timeout=60, stream=True)
+        resp = self.session.get(target, timeout=(CONNECT_TIMEOUT, 60), stream=True)
         resp.raise_for_status()
         os.makedirs(os.path.dirname(local_path) or ".", exist_ok=True)
         temp_path = local_path + ".tmp"
@@ -104,7 +107,7 @@ class WebDAVClient:
         """HEAD check if remote file exists."""
         target = self.url + remote_path.strip("/")
         try:
-            resp = self.session.head(target, timeout=15)
+            resp = self.session.head(target, timeout=(CONNECT_TIMEOUT, 10))
             return resp.status_code == 200
         except requests.RequestException:
             return False
@@ -112,7 +115,7 @@ class WebDAVClient:
     def delete_file(self, remote_path: str) -> None:
         """DELETE a remote file."""
         target = self.url + remote_path.strip("/")
-        resp = self.session.delete(target, timeout=30)
+        resp = self.session.delete(target, timeout=(CONNECT_TIMEOUT, 30))
         resp.raise_for_status()
 
 

@@ -3,6 +3,8 @@ import subprocess
 import sys
 import threading
 import time
+
+import requests
 from contextlib import redirect_stdout
 from typing import Any, Callable
 from urllib.parse import quote
@@ -565,6 +567,22 @@ def create_app(config_path: str = "config.yaml") -> Flask:
             verify_ssl=webdav_config.get("verify_ssl", True),
         )
         remote_path = webdav_config.get("remote_path", "/")
+        # Quick connectivity check — fail fast if server is unreachable.
+        try:
+            client.session.head(
+                webdav_config["url"],
+                timeout=(5, 5),
+            )
+        except requests.RequestException:
+            return jsonify({
+                "error": f"Cannot reach WebDAV server at {webdav_config['url']}",
+                "remote_path": remote_path,
+                "remote_url": webdav_config["url"],
+                "local_only": [],
+                "remote_only": [],
+                "both": [],
+                "remote_files": [],
+            }), 502
         try:
             result = sync_status(client, output_dir, remote_path, timeout=10)
         except Exception as exc:
