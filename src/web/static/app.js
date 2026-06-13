@@ -10,7 +10,23 @@ const state = {
   yearFilter: null,
   currentCollectJobRef: null,
   collectPollTimer: null,
+  jobHistory: [],
+  customYears: new Set(),
 };
+
+// Restore current job from localStorage on load
+try {
+  const savedJob = localStorage.getItem("pc_current_job");
+  if (savedJob) state.currentCollectJobRef = savedJob;
+} catch (_) { /* localStorage unavailable */ }
+
+function saveCurrentJobRef(ref) {
+  state.currentCollectJobRef = ref;
+  try {
+    if (ref) localStorage.setItem("pc_current_job", ref);
+    else localStorage.removeItem("pc_current_job");
+  } catch (_) { /* localStorage unavailable */ }
+}
 
 const $ = (selector) => document.querySelector(selector);
 const urlBase = normalizeUrlBase(window.PAPERCOLLECT_URL_BASE || "");
@@ -74,15 +90,169 @@ function guessDefaultYear(values) {
   return new Date().getFullYear();
 }
 
-async function loadYearProgress() {
+async function loadYearProgress(customYears) {
   try {
-    const response = await fetch(appUrl("/api/year-progress"));
+    let url = appUrl("/api/year-progress");
+    if (customYears && customYears.length) {
+      url += `?years=${customYears.join(",")}`;
+    }
+    const response = await fetch(url);
     const data = await response.json();
     state.yearProgress = data.progress || [];
     renderYearProgress(state.yearProgress);
   } catch (err) {
     // year-progress is optional; ignore failures silently.
   }
+}
+
+async function loadJobHistory() {
+  try {
+    const response = await fetch(appUrl("/api/jobs"));
+    const data = await response.json();
+    state.jobHistory = data.jobs || [];
+    renderJobHistory();
+
+    // Auto-resume polling for running jobs, or restore view for completed jobs
+    if (state.currentCollectJobRef) {
+      const jobId = jobStatusUrl(state.currentCollectJobRef).split("/").pop();
+      const savedJob = state.jobHistory.find((j) => j.id === jobId);
+      if (savedJob) {
+        if (savedJob.status === "running" || savedJob.status === "queued") {
+          pollJob(state.currentCollectJobRef);
+        } else {
+          viewJob(jobId);
+        }
+      }
+    }
+  } catch (err) {
+    // job history is optional; ignore failures silently.
+  }
+}
+
+function renderJobHistory() {
+  const container = $("#job-history");
+  if (!container) return;
+
+  const jobs = state.jobHistory;
+  if (!jobs.length) {
+    container.innerHTML = '<div class="job-history-empty">No jobs yet.</div>';
+    return;
+  }
+
+  let html = '<div class="job-history-list">';
+  for (const job of jobs) {
+    const summary = job.task_summary || {};
+    const statusLabel = jobStatusShort(job);
+    const summaryText = jobSummaryText(job, summary);
+    const isActive = job.status === "running" || job.status === "queued";
+    const timeStr = job.created_at ? formatTimestamp(job.created_at) : "";
+    html += `<div class="job-history-item" data-status="${job.status}" data-job-id="${job.id}">
+      <span class="task-icon">${jobTypeIcon(job.type)}</span>
+      <div>
+        <div class="job-history-status">${escapeHtml(statusLabel)}</div>
+        <div class="job-history-summary">${escapeHtml(summaryText)}${timeStr ? ` · ${timeStr}` : ""}</div>
+      </div>
+      <span class="job-history-status" style="font-size:11px">${isActive ? "● Active" : ""}</span>
+      <button class="job-history-delete" data-job-id="${job.id}" title="Delete job">✕</button>
+    </div>`;
+  }
+  html += "</div>";
+  container.innerHTML = html;
+
+  // Bind click to view/restore job
+  for (const item of container.querySelectorAll(".job-history-item")) {
+    item.addEventListener("click", (e) => {
+      if (e.target.closest(".job-history-delete")) return;
+      const jobId = item.dataset.jobId;
+      viewJob(jobId);
+    });
+  }
+
+  // Bind delete buttons
+  for (const btn of container.querySelectorAll(".job-history-delete")) {
+    btn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      deleteJob(btn.dataset.jobId);
+    });
+  }
+}
+
+function jobStatusShort(job) {
+  const s = job.status;
+  if (s === "completed") return "Completed";
+  if (s === "failed") return "Failed";
+  if (s === "stopped") return "Stopped";
+  if (s === "running") return "Running";
+  if (s === "queued") return "Queued";
+  return s;
+}
+
+function jobSummaryText(job, summary) {
+  const total = job.task_count || 0;
+  if (!total) return job.type || "job";
+  const parts = [];
+  if (summary.completed) parts.push(`${summary.completed} done`);
+  if (summary.running) parts.push(`${summary.running} running`);
+  if (summary.pending) parts.push(`${summary.pending} pending`);
+  if (summary.failed) parts.push(`${summary.failed} failed`);
+  if (summary.skipped) parts.push(`${summary.skipped} skipped`);
+  return parts.join(", ") || `${total} tasks`;
+}
+
+function jobTypeIcon(type) {
+  if (type === "collection") return "📄";
+  if (type === "index") return "🔍";
+  if (type === "sync") return "☁️";
+  return "📋";
+}
+
+function formatTimestamp(ts) {
+  const d = new Date(ts * 1000);
+  const pad = (n) => String(n).padStart(2, "0");
+  return `${pad(d.getMonth() + 1)}-${pad(d.getDate())} ${pad(d.getHours())}:${pad(d.getMinutes())}`;
+}
+
+async function viewJob(jobId) {
+  try {
+    const response = await fetch(appUrl(`/api/jobs/${jobId}`));
+    const job = await response.json();
+    if (!response.ok) return;
+
+    if (job.type === "collection" && job.queue && job.queue.length) {
+      saveCurrentJobRef(appUrl(`/api/jobs/${jobId}`));
+      setStatus(renderJobStatus(job), job.status);
+      renderQueuePanel(job);
+      $("#logs").textContent = (job.logs || []).join("\n") || "";
+      if (job.status === "running" || job.status === "queued") {
+        setCollectRunning(true);
+        pollJob(state.currentCollectJobRef);
+      } else {
+        setCollectRunning(false);
+      }
+    }
+  } catch (_) { /* ignore */ }
+}
+
+async function deleteJob(jobId) {
+  try {
+    const response = await fetch(appUrl(`/api/jobs/${jobId}`), { method: "DELETE" });
+    if (response.ok) {
+      state.jobHistory = state.jobHistory.filter((j) => j.id !== jobId);
+      renderJobHistory();
+      // Clear current ref if we deleted the active job
+      if (state.currentCollectJobRef) {
+        const currentId = jobStatusUrl(state.currentCollectJobRef).split("/").pop();
+        if (currentId === jobId) {
+          saveCurrentJobRef(null);
+          setCollectRunning(false);
+          setStatus("Ready.", "idle");
+          $("#task-queue").classList.add("hidden");
+          $("#task-queue").innerHTML = "";
+          $("#logs").textContent = "";
+        }
+      }
+    }
+  } catch (_) { /* ignore */ }
 }
 
 function renderYearProgress(progress) {
@@ -125,7 +295,9 @@ function renderYearProgress(progress) {
   }
 
   container.classList.remove("hidden");
-  let html = '<div class="year-progress-header"><span class="year-progress-title">Year progress</span></div>';
+  let html = '<div class="year-progress-header"><span class="year-progress-title">Year progress</span>';
+  html += '<span class="year-custom-input"><input type="number" id="custom-year-input" min="1900" max="2099" placeholder="Year" style="width:64px"><button id="custom-year-add" class="secondary" type="button">+</button></span>';
+  html += '</div>';
   if (state.yearFilter !== null) {
     html += `<span class="year-filter-indicator">Filtering: ${state.yearFilter} <button class="year-filter-clear" id="year-filter-clear">✕</button></span>`;
   }
@@ -138,11 +310,12 @@ function renderYearProgress(progress) {
     const pct = total > 0 ? Math.round((savedCount / total) * 100) : 0;
     const checked = state.selectedYears.has(y);
     const filtering = state.yearFilter === y;
-    html += `<label class="year-progress-chip${checked ? ' selected' : ''}${filtering ? ' filtering' : ''}" title="${savedCount}/${total} saved${missingCount ? `; ${missingCount} missing — click year to filter` : ''}">
+    html += `<label class="year-progress-chip${checked ? ' selected' : ''}${filtering ? ' filtering' : ''}" title="${savedCount}/${total} saved${missingCount ? `; ${missingCount} missing` : ''}">
       <input type="checkbox" value="${y}" ${checked ? 'checked' : ''} class="year-checkbox">
-      <span class="year-chip-label" data-year="${y}">${y}</span>
+      <span class="year-chip-label">${y}</span>
       <span class="year-chip-bar"><span class="year-chip-fill" style="width:${pct}%"></span></span>
       <span class="year-chip-count">${savedCount}/${total}</span>
+      ${missingCount ? `<button class="year-filter-btn${filtering ? ' active' : ''}" data-year="${y}" title="只显示 ${y} 年有缺失的会议">🔍</button>` : ''}
     </label>`;
   }
   html += '</div>';
@@ -158,12 +331,12 @@ function renderYearProgress(progress) {
     });
   }
 
-  // Bind year chip labels — click to filter conferences by missing year.
-  for (const label of container.querySelectorAll(".year-chip-label")) {
-    label.addEventListener("click", (e) => {
+  // Bind year filter buttons — click to filter conferences by missing year.
+  for (const btn of container.querySelectorAll(".year-filter-btn")) {
+    btn.addEventListener("click", (e) => {
       e.preventDefault();
       e.stopPropagation();
-      const year = Number(label.dataset.year);
+      const year = Number(btn.dataset.year);
       state.yearFilter = state.yearFilter === year ? null : year;
       renderYearProgress(state.yearProgress);
       renderCollectConferencePicker();
@@ -177,6 +350,28 @@ function renderYearProgress(progress) {
       state.yearFilter = null;
       renderYearProgress(state.yearProgress);
       renderCollectConferencePicker();
+    });
+  }
+
+  // Bind custom year input.
+  const customInput = container.querySelector("#custom-year-input");
+  const customAdd = container.querySelector("#custom-year-add");
+  if (customInput && customAdd) {
+    const addCustomYear = () => {
+      const val = parseInt(customInput.value, 10);
+      if (val >= 1900 && val <= 2099) {
+        state.customYears.add(val);
+        state.selectedYears.add(val);
+        customInput.value = "";
+        loadYearProgress([...state.customYears]);
+      }
+    };
+    customAdd.addEventListener("click", addCustomYear);
+    customInput.addEventListener("keydown", (e) => {
+      if (e.key === "Enter") {
+        e.preventDefault();
+        addCustomYear();
+      }
     });
   }
 }
@@ -559,7 +754,7 @@ async function startCollection(event) {
     return;
   }
 
-  state.currentCollectJobRef = data.status_url || data.job_id;
+  saveCurrentJobRef(data.status_url || data.job_id);
   pollJob(state.currentCollectJobRef);
 }
 
@@ -735,7 +930,8 @@ async function pollJob(jobId) {
     return;
   }
 
-  state.collectPollTimer = window.setTimeout(() => pollJob(jobId), 1500);
+  const interval = job.status === "running" ? 1500 : 3000;
+  state.collectPollTimer = window.setTimeout(() => pollJob(jobId), interval);
 }
 
 async function pollIndexJob(jobId) {
@@ -797,10 +993,10 @@ function renderQueuePanel(job) {
   }
   panel.classList.remove("hidden");
 
-  const summary = job.task_summary || {};
   const hasRetryable = queue.some((t) => t.status === "failed" || t.status === "skipped");
   const hasSkipped = queue.some((t) => t.status === "skipped");
   const isTerminal = ["stopped", "failed", "completed"].includes(job.status);
+  const canModify = job.status !== "running";
 
   let actionsHtml = "";
   if (isTerminal && hasSkipped) {
@@ -817,11 +1013,14 @@ function renderQueuePanel(job) {
     html += `<div class="task-queue-actions">${actionsHtml}</div>`;
   }
   html += `</div>`;
-  html += `<div class="task-list">`;
+  html += `<div class="task-list" data-job-id="${jobId}">`;
   for (const task of queue) {
-    html += renderTaskItem(task, isTerminal, jobId);
+    html += renderTaskItem(task, isTerminal, jobId, canModify);
   }
   html += `</div>`;
+  if (canModify) {
+    html += `<button class="task-queue-add" type="button" data-job-id="${jobId}">+ Add task</button>`;
+  }
   panel.innerHTML = html;
 
   const resumeBtn = panel.querySelector(".task-queue-resume");
@@ -835,21 +1034,42 @@ function renderQueuePanel(job) {
   for (const btn of panel.querySelectorAll(".task-retry-btn")) {
     btn.addEventListener("click", () => retryTask(btn.dataset.jobId, btn.dataset.taskId));
   }
+  for (const btn of panel.querySelectorAll(".task-remove-btn")) {
+    btn.addEventListener("click", () => removeTask(btn.dataset.jobId, btn.dataset.taskId));
+  }
+  const addBtn = panel.querySelector(".task-queue-add");
+  if (addBtn) {
+    addBtn.addEventListener("click", () => showAddTaskForm(jobId));
+  }
+
+  // Setup drag-and-drop for reorder
+  if (canModify) {
+    setupQueueDragDrop(panel, jobId);
+  }
 }
 
-function renderTaskItem(task, isTerminal, jobId) {
+function renderTaskItem(task, isTerminal, jobId, canModify) {
   const icon = taskStatusIcon(task.status);
   const canRetry = isTerminal && (task.status === "failed" || task.status === "skipped");
+  const canRemove = canModify && (task.status === "pending" || task.status === "skipped");
   const detail = taskDetail(task);
   let retryBtn = "";
   if (canRetry) {
     retryBtn = `<button class="task-retry-btn" data-job-id="${jobId}" data-task-id="${task.task_id}">Retry</button>`;
   }
+  let removeBtn = "";
+  if (canRemove) {
+    removeBtn = `<button class="task-remove-btn" data-job-id="${jobId}" data-task-id="${task.task_id}" title="Remove task">&times;</button>`;
+  }
+  let dragHandle = "";
+  if (canModify && task.status === "pending") {
+    dragHandle = `<span class="task-drag-handle" draggable="true" data-task-id="${task.task_id}">⠿</span>`;
+  }
   const yearLabel = task.year != null ? ` ${task.year}` : "";
-  return `<div class="task-item" data-status="${task.status}">
-    <span class="task-icon">${icon}</span>
+  return `<div class="task-item" data-status="${task.status}" data-task-id="${task.task_id}">
+    ${dragHandle}<span class="task-icon">${icon}</span>
     <span class="task-name">${escapeHtml(task.display_name)}${yearLabel}</span>
-    <span class="task-detail">${detail}${retryBtn}</span>
+    <span class="task-detail">${detail}${retryBtn}${removeBtn}</span>
   </div>`;
 }
 
@@ -900,7 +1120,7 @@ async function resumeJob(jobId) {
     setCollectRunning(false);
     return;
   }
-  state.currentCollectJobRef = data.status_url || data.job_id;
+  saveCurrentJobRef(data.status_url || data.job_id);
   pollJob(state.currentCollectJobRef);
 }
 
@@ -918,7 +1138,7 @@ async function retryJob(jobId) {
     setCollectRunning(false);
     return;
   }
-  state.currentCollectJobRef = data.status_url || data.job_id;
+  saveCurrentJobRef(data.status_url || data.job_id);
   pollJob(state.currentCollectJobRef);
 }
 
@@ -935,8 +1155,147 @@ async function retryTask(jobId, taskId) {
     setCollectRunning(false);
     return;
   }
-  state.currentCollectJobRef = jobStatusUrl(jobId);
+  saveCurrentJobRef(jobStatusUrl(jobId));
   pollJob(state.currentCollectJobRef);
+}
+
+async function removeTask(jobId, taskId) {
+  if (!jobId || !taskId) return;
+  const response = await fetch(appUrl(`/api/jobs/${jobId}/queue/${taskId}`), { method: "DELETE" });
+  if (response.ok) {
+    const jobResp = await fetch(appUrl(`/api/jobs/${jobId}`));
+    if (jobResp.ok) {
+      const job = await jobResp.json();
+      renderQueuePanel(job);
+    }
+  }
+}
+
+function showAddTaskForm(jobId) {
+  const panel = $("#task-queue");
+  const existing = panel.querySelector(".add-task-form");
+  if (existing) {
+    existing.remove();
+    return;
+  }
+
+  const form = document.createElement("div");
+  form.className = "add-task-form";
+  form.style.cssText = "margin-top:8px;padding:10px;border:1px solid var(--line);border-radius:6px;background:#fbfcfe;display:grid;gap:8px;";
+
+  let confOptions = "";
+  for (const conf of state.conferences) {
+    confOptions += `<option value="${conf.id}">${escapeHtml(conf.display_name)}</option>`;
+  }
+
+  const currentYear = new Date().getFullYear();
+  form.innerHTML = `
+    <div style="display:flex;gap:8px;align-items:end;flex-wrap:wrap;">
+      <label style="flex:1;min-width:160px;">Conference
+        <select class="add-task-conf">${confOptions}</select>
+      </label>
+      <label style="width:80px;">Year
+        <input type="number" class="add-task-year" min="1900" max="2099" value="${currentYear}">
+      </label>
+      <button class="secondary add-task-confirm" type="button" style="align-self:end;">Add</button>
+      <button class="secondary add-task-cancel" type="button" style="align-self:end;">Cancel</button>
+    </div>`;
+
+  panel.appendChild(form);
+
+  form.querySelector(".add-task-confirm").addEventListener("click", async () => {
+    const confId = form.querySelector(".add-task-conf").value;
+    const year = parseInt(form.querySelector(".add-task-year").value, 10);
+    if (!confId || !year) return;
+    const resp = await fetch(appUrl(`/api/jobs/${jobId}/queue`), {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ conference_id: confId, year }),
+    });
+    if (resp.ok) {
+      form.remove();
+      const jobResp = await fetch(appUrl(`/api/jobs/${jobId}`));
+      if (jobResp.ok) {
+        const job = await jobResp.json();
+        renderQueuePanel(job);
+      }
+    }
+  });
+
+  form.querySelector(".add-task-cancel").addEventListener("click", () => form.remove());
+}
+
+function setupQueueDragDrop(panel, jobId) {
+  const taskList = panel.querySelector(".task-list");
+  if (!taskList) return;
+
+  let draggedEl = null;
+
+  taskList.addEventListener("dragstart", (e) => {
+    const handle = e.target.closest(".task-drag-handle");
+    if (!handle) return;
+    const item = handle.closest(".task-item");
+    if (!item || item.dataset.status !== "pending") return;
+    draggedEl = item;
+    item.classList.add("dragging");
+    e.dataTransfer.effectAllowed = "move";
+    e.dataTransfer.setData("text/plain", item.dataset.taskId);
+  });
+
+  taskList.addEventListener("dragend", () => {
+    if (draggedEl) {
+      draggedEl.classList.remove("dragging");
+      draggedEl = null;
+    }
+    for (const el of taskList.querySelectorAll(".drag-over")) {
+      el.classList.remove("drag-over");
+    }
+  });
+
+  taskList.addEventListener("dragover", (e) => {
+    if (!draggedEl) return;
+    e.preventDefault();
+    e.dataTransfer.dropEffect = "move";
+    const target = e.target.closest(".task-item");
+    if (target && target !== draggedEl && target.dataset.status === "pending") {
+      for (const el of taskList.querySelectorAll(".drag-over")) el.classList.remove("drag-over");
+      target.classList.add("drag-over");
+    }
+  });
+
+  taskList.addEventListener("dragleave", (e) => {
+    const target = e.target.closest(".task-item");
+    if (target) target.classList.remove("drag-over");
+  });
+
+  taskList.addEventListener("drop", async (e) => {
+    e.preventDefault();
+    if (!draggedEl) return;
+    const target = e.target.closest(".task-item");
+    if (!target || target === draggedEl || target.dataset.status !== "pending") return;
+    target.classList.remove("drag-over");
+
+    // Collect new order
+    const items = [...taskList.querySelectorAll(".task-item")];
+    const ids = items.map((el) => el.dataset.taskId);
+    const fromIdx = ids.indexOf(draggedEl.dataset.taskId);
+    const toIdx = ids.indexOf(target.dataset.taskId);
+    if (fromIdx === -1 || toIdx === -1) return;
+    ids.splice(fromIdx, 1);
+    ids.splice(toIdx, 0, draggedEl.dataset.taskId);
+
+    await fetch(appUrl(`/api/jobs/${jobId}/queue/reorder`), {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ task_ids: ids }),
+    });
+
+    const jobResp = await fetch(appUrl(`/api/jobs/${jobId}`));
+    if (jobResp.ok) {
+      const job = await jobResp.json();
+      renderQueuePanel(job);
+    }
+  });
 }
 
 function setStatus(message, status) {
@@ -1108,4 +1467,5 @@ Promise.all([
   loadFeeds().catch(() => {}),
   loadYearProgress().catch(() => {}),
   loadSyncStatus().catch(() => {}),
+  loadJobHistory().catch(() => {}),
 ]);

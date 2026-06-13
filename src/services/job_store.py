@@ -68,6 +68,40 @@ class JobStore:
             self._write(job)
             return job
 
+    def list(self, *, summary: bool = False) -> list[dict[str, Any]]:
+        """List all jobs, sorted by created_at descending.
+
+        When *summary* is True, omit large fields (queue, logs, results, errors).
+        """
+        jobs: list[dict[str, Any]] = []
+        try:
+            entries = os.listdir(self.path)
+        except OSError:
+            return jobs
+        for name in entries:
+            if not name.endswith(".json"):
+                continue
+            job_id = name[:-5]
+            job = self.get(job_id)
+            if not isinstance(job, dict):
+                continue
+            if summary:
+                job = _extract_summary(job)
+            jobs.append(job)
+        jobs.sort(key=lambda j: j.get("created_at", 0), reverse=True)
+        return jobs
+
+    def delete(self, job_id: str) -> bool:
+        """Delete a job file. Returns True if deleted, False if not found."""
+        path = self._job_path(job_id)
+        lock = _path_lock(path)
+        with lock:
+            try:
+                os.unlink(path)
+                return True
+            except FileNotFoundError:
+                return False
+
     def _job_path(self, job_id: str) -> str:
         normalized = "".join(char for char in str(job_id) if char.isalnum() or char in {"-", "_"})
         if not normalized:
@@ -137,6 +171,25 @@ class FileJobLock:
                 os.unlink(self.path)
             except FileNotFoundError:
                 pass
+
+
+def _extract_summary(job: dict[str, Any]) -> dict[str, Any]:
+    """Return a lightweight summary of a job, omitting queue/logs/results/errors."""
+    summary: dict[str, Any] = {
+        "id": job.get("id"),
+        "type": job.get("type"),
+        "status": job.get("status"),
+        "created_at": job.get("created_at"),
+        "updated_at": job.get("updated_at"),
+        "conference_ids": job.get("conference_ids"),
+        "years": job.get("years"),
+        "paper_count": job.get("paper_count"),
+    }
+    queue = job.get("queue")
+    if queue:
+        summary["task_summary"] = queue_task_summary(queue)
+        summary["task_count"] = len(queue)
+    return summary
 
 
 def build_queue_items(conferences: list, years: list[int] | None = None) -> list[dict[str, Any]]:

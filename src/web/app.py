@@ -26,6 +26,7 @@ from src.core.conference_catalog import (
 from src.services.job_store import (
     FileJobLock,
     JobStore,
+    _extract_summary,
     build_queue_items,
     has_resumable_tasks,
     has_retryable_tasks,
@@ -136,7 +137,18 @@ def create_app(config_path: str = "config.yaml") -> Flask:
     def year_progress() -> Response:
         config = _load_config(config_path)
         output_dir = str(config.get("output_dir", "data"))
-        cache_key = f"yp:{output_dir}"
+
+        # Support custom years via ?years=2020,2021,2023
+        custom_years_param = request.args.get("years")
+        if custom_years_param:
+            try:
+                custom_years = sorted(set(int(y.strip()) for y in custom_years_param.split(",") if y.strip()))
+            except (ValueError, TypeError):
+                custom_years = []
+        else:
+            custom_years = []
+
+        cache_key = f"yp:{output_dir}" + (f":{','.join(str(y) for y in custom_years)}" if custom_years else "")
         now = time.time()
         cached = _FEEDS_CACHE.get(cache_key)
         if cached and now - cached[0] < _CACHE_TTL:
@@ -145,6 +157,8 @@ def create_app(config_path: str = "config.yaml") -> Flask:
         progress = []
         for conference in normalize_conferences(config):
             conf_years = list(conference.years) if conference.years else default_years
+            if custom_years:
+                conf_years = sorted(set(int(y) for y in conf_years) | set(custom_years))
             saved = _saved_years_for_conference(output_dir, conference)
             conf_years_int = [int(y) for y in conf_years]
             saved_int = sorted(saved)
@@ -243,6 +257,11 @@ def create_app(config_path: str = "config.yaml") -> Flask:
                 ),
             }
         ), 202
+
+    @route("/api/jobs", methods=["GET"])
+    def list_jobs() -> Response:
+        jobs = job_store.list(summary=True)
+        return jsonify({"jobs": jobs})
 
     @route("/api/jobs/<job_id>", methods=["GET"])
     def job_status(job_id: str) -> tuple[Response, int] | Response:
@@ -408,6 +427,119 @@ def create_app(config_path: str = "config.yaml") -> Flask:
         if queue:
             updated["task_summary"] = queue_task_summary(queue)
         return jsonify(updated), 202
+
+    @route("/api/jobs/<job_id>", methods=["DELETE"])
+    def job_delete(job_id: str) -> tuple[Response, int] | Response:
+        job = job_store.get(job_id)
+        if not job:
+            return jsonify({"error": "Job not found."}), 404
+        if job.get("status") in {"running", "queued"}:
+            return jsonify({"error": "Cannot delete a running job. Stop it first."}), 409
+        job_store.delete(job_id)
+        return jsonify({"deleted": job_id}), 200
+
+    @route("/api/jobs/<job_id>/queue", methods=["POST"])
+    def queue_add_task(job_id: str) -> tuple[Response, int] | Response:
+        job = job_store.get(job_id)
+        if not job:
+            return jsonify({"error": "Job not found."}), 404
+        if job.get("type") != "collection":
+            return jsonify({"error": "Only collection jobs support queue operations."}), 400
+        if job.get("status") not in {"queued", "stopped", "failed", "completed"}:
+            return jsonify({"error": "Cannot modify queue while job is running."}), 409
+
+        payload = request.get_json(silent=True) or {}
+        conference_id = payload.get("conference_id")
+        year = payload.get("year")
+        if not conference_id or not year:
+            return jsonify({"error": "conference_id and year are required."}), 400
+
+        config = _load_config(config_path)
+        conference = find_conference(config, str(conference_id))
+        if not conference:
+            return jsonify({"error": f"Unknown conference: {conference_id}"}), 400
+
+        import uuid as _uuid
+        task = {
+            "task_id": _uuid.uuid4().hex[:8],
+            "conference_id": conference.id,
+            "display_name": conference.display_name,
+            "year": int(year),
+            "status": "pending",
+            "paper_count": None,
+            "output_path": None,
+            "feed_url": None,
+            "error": None,
+            "started_at": None,
+            "finished_at": None,
+        }
+        queue = job.get("queue") or []
+        queue.append(task)
+        job_store.update(job_id, queue=queue)
+        job_store.append_log(
+            job_id,
+            f"Added task: {conference.display_name} {year}",
+            max_lines=MAX_JOB_LOG_LINES,
+        )
+        updated = job_store.get(job_id) or job
+        updated["task_summary"] = queue_task_summary(updated.get("queue") or [])
+        return jsonify(updated), 201
+
+    @route("/api/jobs/<job_id>/queue/<task_id>", methods=["DELETE"])
+    def queue_remove_task(job_id: str, task_id: str) -> tuple[Response, int] | Response:
+        job = job_store.get(job_id)
+        if not job:
+            return jsonify({"error": "Job not found."}), 404
+        if job.get("status") in {"running"}:
+            return jsonify({"error": "Cannot modify queue while job is running."}), 409
+
+        queue = job.get("queue") or []
+        target = None
+        for item in queue:
+            if item.get("task_id") == task_id:
+                target = item
+                break
+        if target is None:
+            return jsonify({"error": "Task not found."}), 404
+        if target["status"] not in {"pending", "skipped"}:
+            return jsonify({"error": "Only pending or skipped tasks can be removed."}), 400
+
+        queue = [item for item in queue if item.get("task_id") != task_id]
+        job_store.update(job_id, queue=queue)
+        job_store.append_log(
+            job_id,
+            f"Removed task: {target['display_name']} {target['year']}",
+            max_lines=MAX_JOB_LOG_LINES,
+        )
+        updated = job_store.get(job_id) or job
+        updated["task_summary"] = queue_task_summary(updated.get("queue") or [])
+        return jsonify(updated), 200
+
+    @route("/api/jobs/<job_id>/queue/reorder", methods=["POST"])
+    def queue_reorder(job_id: str) -> tuple[Response, int] | Response:
+        job = job_store.get(job_id)
+        if not job:
+            return jsonify({"error": "Job not found."}), 404
+        if job.get("status") in {"running"}:
+            return jsonify({"error": "Cannot reorder queue while job is running."}), 409
+
+        payload = request.get_json(silent=True) or {}
+        new_order = payload.get("task_ids")
+        if not isinstance(new_order, list):
+            return jsonify({"error": "task_ids array is required."}), 400
+
+        queue = job.get("queue") or []
+        queue_by_id = {item["task_id"]: item for item in queue}
+        reordered: list[dict[str, Any]] = []
+        for tid in new_order:
+            if tid in queue_by_id:
+                reordered.append(queue_by_id.pop(tid))
+        # append any remaining items not in the reorder list
+        reordered.extend(queue_by_id.values())
+        job_store.update(job_id, queue=reordered)
+        updated = job_store.get(job_id) or job
+        updated["task_summary"] = queue_task_summary(updated.get("queue") or [])
+        return jsonify(updated), 200
 
     @route("/api/feeds", methods=["GET"])
     def feeds() -> Response:

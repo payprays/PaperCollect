@@ -35,3 +35,4 @@ test.txt
 .env
 /.codex
 .playwright-mcp/
+/.mindfs/sessions
