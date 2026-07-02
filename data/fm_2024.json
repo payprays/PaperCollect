@@ -1,0 +1,1282 @@
+[
+  {
+    "title": "Reusable Specification Patterns for Verification of Resilience in Autonomous Hybrid Systems.",
+    "authors": [
+      "Julius Adelt",
+      "Robert Mensing",
+      "Paula Herber"
+    ],
+    "venue": "FM",
+    "year": 2024,
+    "abstract": "Abstract Autonomous hybrid systems are systems that combine discrete and continuous behavior with autonomous decision-making, e.g., using reinforcement learning. Such systems are increasingly used in safety-critical applications such as self-driving cars, autonomous robots or water supply systems. Thus, it is crucial to ensure their safety and resilience, i.e., that they function correctly even in the presence of dynamic changes and disruptions. In this paper, we present an approach to obtain formal resilience guarantees for autonomous hybrid systems using the interactive theorem prover KeYmaera X. Our key ideas are threefold: First, we derive a formalization of resilience that is tailored to autonomous hybrid systems. Second, we present reusable patterns for modeling stressors, detecting disruptions, and specifying resilience as a service level response in the differential dynamic logic (d $$\\mathcal {L}$$ <mml:math xmlns:mml=\"http://www.w3.org/1998/Math/MathML\"> <mml:mi>L</mml:mi> </mml:math> ). Third, we combine these concepts with an existing approach for the safe integration of learning components using hybrid contracts, and extend it towards dynamic adaptations to stressors. By combining reusable patterns for stressors, observers, and adaptation contracts for learning components, we provide a systematic approach for the deductive verification of resilience of autonomous hybrid systems with reduced specification effort. We demonstrate the applicability of our approach with two case studies, an autonomous robot and an intelligent water distribution system.",
+    "citation_count": 2,
+    "reference_count": 62,
+    "url": "https://dblp.org/rec/conf/fm/AdeltMH24",
+    "dblp_key": "conf/fm/AdeltMH24",
+    "source_id": "https://openalex.org/W4402496631",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Practical Approximate Quantifier Elimination for Non-linear Real Arithmetic.",
+    "authors": [
+      "S. Akshay 0001",
+      "Supratik Chakraborty",
+      "Amir Kafshdar Goharshady",
+      "R. Govind 0001",
+      "Harshit J. Motwani",
+      "Sai Teja Varanasi"
+    ],
+    "venue": "FM",
+    "year": 2024,
+    "abstract": "Abstract Quantifier Elimination (QE) concerns finding a quantifier-free formula that is semantically equivalent to a quantified formula in a given logic. For the theory of non-linear arithmetic over reals (NRA), QE is known to be computationally challenging. In this paper, we show how QE over NRA can be solved approximately and efficiently in practice using a Boolean combination of constraints in the linear arithmetic over reals (LRA). Our approach works by approximating the solution space of a set of NRA constraints when all real variables are bounded. It combines adaptive dynamic gridding with application of Handelman’s Theorem to obtain the approximation efficiently via a sequence of linear programs (LP). We provide rigorous approximation guarantees, and also proofs of soundness and completeness (under mild assumptions) of our algorithm. Interestingly, our work allows us to bootstrap on earlier work (viz. [38]) and solve quantified SMT problems over a combination of NRA and other theories, that are beyond the reach of state-of-the-art solvers. We have implemented our approach in a preprocessor for Z3 called POQER. Our experiments show that POQER+Z3EG outperforms state-of-the-art SMT solvers on non-trivial problems, adapted from a suite of benchmarks.",
+    "citation_count": 2,
+    "reference_count": 72,
+    "url": "https://dblp.org/rec/conf/fm/AkshayCGGMV24",
+    "dblp_key": "conf/fm/AkshayCGGMV24",
+    "source_id": "https://openalex.org/W4402425289",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "The Opacity of Timed Automata.",
+    "authors": [
+      "Jie An 0001",
+      "Qiang Gao",
+      "Lingtai Wang",
+      "Naijun Zhan",
+      "Ichiro Hasuo"
+    ],
+    "venue": "FM",
+    "year": 2024,
+    "abstract": "Abstract Opacity serves as a critical security and confidentiality property, which concerns whether an intruder can unveil a system’s secret based on structural knowledge and observed behaviors. Opacity in timed systems presents greater complexity compared to untimed systems, and it has been established that opacity for timed automata is undecidable. However, the original proof cannot be applied to decide the opacity of one-clock timed automata directly. In this paper, we explore three types of opacity within timed automata: language-based timed opacity, initial-location timed opacity, and current-location timed opacity. We begin by formalizing these concepts and establishing transformation relations among them. Subsequently, we demonstrate the undecidability of the opacity problem for one-clock timed automata. Furthermore, we offer a constructive proof for the conjecture regarding the decidability of opacity for timed automata in discrete-time semantics. Additionally, we present a sufficient condition and a necessary condition for the decidability of opacity in specific subclasses of timed automata.",
+    "citation_count": 6,
+    "reference_count": 31,
+    "url": "https://dblp.org/rec/conf/fm/AnGWZH24",
+    "dblp_key": "conf/fm/AnGWZH24",
+    "source_id": "https://openalex.org/W4402425151",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Software Verification with CPAchecker 3.0: Tutorial and User Guide.",
+    "authors": [
+      "Daniel Baier",
+      "Dirk Beyer 0001",
+      "Po-Chun Chien",
+      "Marie-Christine Jakobs",
+      "Marek Jankola",
+      "Matthias Kettl",
+      "Nian-Ze Lee",
+      "Thomas Lemberger 0002",
+      "Marian Lingsch Rosenfeld",
+      "Henrik Wachowitz",
+      "Philipp Wendler"
+    ],
+    "venue": "FM",
+    "year": 2024,
+    "abstract": "Abstract This tutorial provides an introduction to CPAchecker for users. CPAchecker is a flexible and configurable framework for software verification and testing. The framework provides many abstract domains, such as BDDs, explicit values, intervals, memory graphs, and predicates, and many program-analysis and model-checking algorithms, such as abstract interpretation, bounded model checking, Impact , interpolation-based model checking, k -induction, PDR, predicate abstraction, and symbolic execution. This tutorial presents basic use cases for CPAchecker in formal software verification, focusing on its main verification techniques with their strengths and weaknesses. An extended version also shows further use cases of CPAchecker for test-case generation and witness-based result validation. The envisioned readers are assumed to possess a background in automatic formal verification and program analysis, but prior knowledge of CPAchecker is not required. This tutorial and user guide is based on CPAchecker in version 3.0. This user guide’s latest version and other documentation are available at https://cpachecker.sosy-lab.org/doc.php .",
+    "citation_count": 9,
+    "reference_count": 79,
+    "url": "https://dblp.org/rec/conf/fm/BaierBCJJKLLRWW24",
+    "dblp_key": "conf/fm/BaierBCJJKLLRWW24",
+    "source_id": "https://openalex.org/W4402496461",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Unifying Weak Memory Verification Using Potentials.",
+    "authors": [
+      "Lara Bargmann",
+      "Brijesh Dongol",
+      "Heike Wehrheim"
+    ],
+    "venue": "FM",
+    "year": 2024,
+    "abstract": "The character of a cell is defined by its constituent proteins, which are the result of specific patterns of gene expression. Crucial determinants of gene expression patterns are DNA-binding transcription factors that choose genes for transcriptional activation or repression by recognizing the sequence of DNA bases in their promoter regions. Interaction of these factors with their cognate sequences triggers a chain of events, often involving changes in the structure of chromatin, that leads to the assembly of an active transcription complex (e.g., Cosma et al. 1999). But the types of transcription factors present in a cell are not alone sufficient to define its spectrum of gene activity, as the transcriptional potential of a genome can become restricted in a stable manner during development. The constraints imposed by developmental history probably account for the very low efficiency of cloning animals from the nuclei of differentiated cells (Rideout et al. 2001; Wakayama and Yanagimachi 2001). A “transcription factors only” model would predict that the gene expression pattern of a differentiated nucleus would be completely reversible upon exposure to a new spectrum of factors. Although many aspects of expression can be reprogrammed in this way (Gurdon 1999), some marks of differentiation are evidently so stable that immersion in an alien cytoplasm cannot erase the memory. The genomic sequence of a differentiated cell is thought to be identical in most cases to that of the zygote from which it is descended (mammalian B and T cells being an obvious exception). This means that the marks of developmental history are unlikely to be caused by widespread somatic mutation. Processes less irrevocable than mutation fall under the umbrella term “epigenetic” mechanisms. A current definition of epigenetics is: “The study of mitotically and/or meiotically heritable changes in gene function that cannot be explained by changes in DNA sequence” (Russo et al. 1996). There are two epigenetic systems that affect animal development and fulfill the criterion of heritability: DNA methylation and the Polycomb-trithorax group (Pc-G/trx) protein complexes. (Histone modification has some attributes of an epigenetic process, but the issue of heritability has yet to be resolved.) This review concerns DNA methylation, focusing on the generation, inheritance, and biological significance of genomic methylation patterns in the development of mammals. Data will be discussed favoring the notion that DNA methylation may only affect genes that are already silenced by other mechanisms in the embryo. Embryonic transcription, on the other hand, may cause the exclusion of the DNA methylation machinery. The heritability of methylation states and the secondary nature of the decision to invite or exclude methylation support the idea that DNA methylation is adapted for a specific cellular memory function in development. Indeed, the possibility will be discussed that DNA methylation and Pc-G/trx may represent alternative systems of epigenetic memory that have been interchanged over evolutionary time. Animal DNA methylation has been the subject of several recent reviews (Bird and Wolffe 1999; Bestor 2000; Hsieh 2000; Costello and Plass 2001; Jones and Takai 2001). For recent reviews of plant and fungal DNA methylation, see Finnegan et al. (2000), Martienssen and Colot (2001), and Matzke et al. (2001).",
+    "citation_count": 7098,
+    "reference_count": 213,
+    "url": "https://dblp.org/rec/conf/fm/BargmannDW24",
+    "dblp_key": "conf/fm/BargmannDW24",
+    "source_id": "https://openalex.org/W2121417064",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Satisfiability Modulo Theories: A Beginner&apos;s Tutorial.",
+    "authors": [
+      "Clark W. Barrett",
+      "Cesare Tinelli",
+      "Haniel Barbosa",
+      "Aina Niemetz",
+      "Mathias Preiner",
+      "Andrew Reynolds 0001",
+      "Yoni Zohar"
+    ],
+    "venue": "FM",
+    "year": 2024,
+    "abstract": null,
+    "citation_count": null,
+    "reference_count": null,
+    "url": "https://dblp.org/rec/conf/fm/BarrettTBNPRZ24",
+    "dblp_key": "conf/fm/BarrettTBNPRZ24",
+    "source_id": null,
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Alloy Repair Hint Generation Based on Historical Data.",
+    "authors": [
+      "Ana Barros",
+      "Henrique Neto",
+      "Alcino Cunha",
+      "Nuno Macedo 0001",
+      "Ana C. R. Paiva"
+    ],
+    "venue": "FM",
+    "year": 2024,
+    "abstract": "Abstract Platforms to support novices learning to program are often accompanied by automated next-step hints that guide them towards correct solutions. Many of those approaches are data-driven, building on historical data to generate higher quality hints. Formal specifications are increasingly relevant in software engineering activities, but very little support exists to help novices while learning. Alloy is a formal specification language often used in courses on formal software development methods, and a platform—Alloy4Fun—has been proposed to support autonomous learning. While non-data-driven specification repair techniques have been proposed for Alloy that could be leveraged to generate next-step hints, no data-driven hint generation approach has been proposed so far. This paper presents the first data-driven hint generation technique for Alloy and its implementation as an extension to Alloy4Fun, being based on the data collected by that platform. This historical data is processed into graphs that capture past students’ progress while solving specification challenges. Hint generation can be customized with policies that take into consideration diverse factors, such as the popularity of paths in those graphs successfully traversed by previous students. Our evaluation shows that the performance of this new technique is competitive with non-data-driven repair techniques. To assess the quality of the hints, and help select the most appropriate hint generation policy, we conducted a survey with experienced Alloy instructors.",
+    "citation_count": 2,
+    "reference_count": 28,
+    "url": "https://dblp.org/rec/conf/fm/BarrosNCMP24",
+    "dblp_key": "conf/fm/BarrosNCMP24",
+    "source_id": "https://openalex.org/W4402496270",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Getting Chip Card Payments Right.",
+    "authors": [
+      "David A. Basin",
+      "Xenia Hofmeier",
+      "Ralf Sasse",
+      "Jorge Toro-Pozo"
+    ],
+    "venue": "FM",
+    "year": 2024,
+    "abstract": "Abstract EMV is the international protocol standard for smart card payments and is used in billions of payment cards worldwide. Despite the standard’s advertised security, various issues have been previously uncovered, deriving from logical flaws that are hard to spot in EMV’s lengthy and complex specification. We have formalized various models of EMV in Tamarin, a symbolic model checker for cryptographic protocols. Tamarin was extremely effective in finding critical flaws, both known and new, and in many cases exploitable on actual cards. We report on these past problems as well as followup work where we verified the latest, improved version of the protocol, the EMV kernel C8. This work puts C8’s correctness on a firm, formal basis, and clarifies which guarantees hold for C8 and under which assumptions. Overall our work supports the thesis that cryptographic protocol model checkers like Tamarin have an essential role to play in improving the security of real-world payment protocols and that they are up to this challenge.",
+    "citation_count": 2,
+    "reference_count": 9,
+    "url": "https://dblp.org/rec/conf/fm/BasinHST24",
+    "dblp_key": "conf/fm/BasinHST24",
+    "source_id": "https://openalex.org/W4402425169",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Parameterized Verification of Round-Based Distributed Algorithms via Extended Threshold Automata.",
+    "authors": [
+      "Tom Baumeister",
+      "Paul Eichler 0001",
+      "Swen Jacobs",
+      "Mouhammad Sakr",
+      "Marcus Völp"
+    ],
+    "venue": "FM",
+    "year": 2024,
+    "abstract": "Abstract Threshold automata are a computational model that has proven to be versatile in modeling threshold-based distributed algorithms and enabling their completely automatic parameterized verification. We present novel techniques for the verification of threshold automata, based on well-structured transition systems, that allow us to extend the expressiveness of both the computational model and the specifications that can be verified. In particular, we extend the model to allow decrements and resets of shared variables, possibly on cycles, and the specifications to general coverability. While these extensions of the model in general lead to undecidability, our algorithms provide a semi-decision procedure. We demonstrate the benefit of our extensions by showing that we can model complex round-based algorithms such as the phase king consensus algorithm and the Red Belly Blockchain protocol (published in 2019), and verify them fully automatically for the first time.",
+    "citation_count": 3,
+    "reference_count": 54,
+    "url": "https://dblp.org/rec/conf/fm/BaumeisterEJSV24",
+    "dblp_key": "conf/fm/BaumeisterEJSV24",
+    "source_id": "https://openalex.org/W4402425146",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "A Tutorial on Stream-Based Monitoring.",
+    "authors": [
+      "Jan Baumeister",
+      "Bernd Finkbeiner",
+      "Florian Kohn",
+      "Frederik Scheerer"
+    ],
+    "venue": "FM",
+    "year": 2024,
+    "abstract": "Gradient boosting machines are a family of powerful machine-learning techniques that have shown considerable success in a wide range of practical applications. They are highly customizable to the particular needs of the application, like being learned with respect to different loss functions. This article gives a tutorial introduction into the methodology of gradient boosting methods with a strong focus on machine learning aspects of modeling. A theoretical information is complemented with descriptive examples and illustrations which cover all the stages of the gradient boosting model design. Considerations on handling the model complexity are discussed. Three practical examples of gradient boosting applications are presented and comprehensively analyzed.",
+    "citation_count": 3738,
+    "reference_count": 68,
+    "url": "https://dblp.org/rec/conf/fm/BaumeisterFKS24",
+    "dblp_key": "conf/fm/BaumeisterFKS24",
+    "source_id": "https://openalex.org/W2088794999",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "The Java Verification Tool KeY:A Tutorial.",
+    "authors": [
+      "Bernhard Beckert",
+      "Richard Bubel",
+      "Daniel Drodt",
+      "Reiner Hähnle",
+      "Florian Lanzinger",
+      "Wolfram Pfeifer",
+      "Mattias Ulbrich",
+      "Alexander Weigl"
+    ],
+    "venue": "FM",
+    "year": 2024,
+    "abstract": "Abstract The KeY tool is a state-of-the-art deductive program verifier for the Java language. Its verification engine is based on a sequent calculus for dynamic logic, realizing forward symbolic execution of the target program, whereby all symbolic paths through a program are explored. Method contracts make verification scalable. KeY combines auto-active and fine-grained proof interaction, which is possible both at the level of the verification target and its specification, as well as at the level of proof rules and program logic. This makes KeY well-suited for teaching program verification, but also permits proof debugging at the source code level. The latter made it possible to verify some of the most complex Java code to date. The article provides a self-contained introduction to the working principles and the practical usage of KeY for anyone with basic knowledge in logic and formal methods.",
+    "citation_count": 6,
+    "reference_count": 57,
+    "url": "https://dblp.org/rec/conf/fm/BeckertBDHLPUW24",
+    "dblp_key": "conf/fm/BeckertBDHLPUW24",
+    "source_id": "https://openalex.org/W4402496566",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Visualizing Game-Based Certificates for Hyperproperty Verification.",
+    "authors": [
+      "Raven Beutner",
+      "Bernd Finkbeiner",
+      "Angelina Göbl"
+    ],
+    "venue": "FM",
+    "year": 2024,
+    "abstract": "Abstract Hyperproperties relate multiple executions of a system and are commonly used to specify security and information-flow policies. While many verification approaches for hyperproperties exist, providing a convincing certificate that the system satisfies a given property is still a major challenge. In this paper, we propose strategies as a suitable form of certificate for hyperproperties specified in a fragment of the temporal logic HyperLTL. Concretely, we interpret the verification of a HyperLTL property as a game between universal and existential quantification, allowing us to leverage strategies for the existential quantifiers as certificates. We present , a browser-based visualization tool that lets users interactively explore an (automatically synthesized) witness strategy by taking control over universally quantified executions.",
+    "citation_count": 2,
+    "reference_count": 37,
+    "url": "https://dblp.org/rec/conf/fm/BeutnerFG24",
+    "dblp_key": "conf/fm/BeutnerFG24",
+    "source_id": "https://openalex.org/W4402496334",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "FM-Weck: Containerized Execution of Formal-Methods Tools.",
+    "authors": [
+      "Dirk Beyer 0001",
+      "Henrik Wachowitz"
+    ],
+    "venue": "FM",
+    "year": 2024,
+    "abstract": "Abstract Software is ubiquitous in the digital world, and the correct function of software systems is critical for our society, industry, and infrastructure. While testing and static analysis are long-established techniques in software-development processes, it became widely acknowledged only in the past two decades that formal methods are required for giving guarantees of functional correctness. Both academia and industry worked hard to develop tools for formal verification of software during the past two decades, with the result that many software verifiers are available now (for example, 59 freely available verifiers for C and Java programs). However, most software verifiers are challenging to find, install, and use for both external researchers and potential users. FM-Weck changes this: It provides a fully automatic, zero-configuration container-based setup and execution for more than 50 software verifiers for C and Java. Both the setup requirements and execution parameters of every supported verifier are provided by the tool developers themselves as part of the FM-Tools metadata format that was established recently and was already used by the international competitions SV-COMP and Test-Comp. With our solution FM-Weck , anyone gets fast and easy access to state-of-the-art formal verifiers, no expertise required, fully reproducible.",
+    "citation_count": 8,
+    "reference_count": 22,
+    "url": "https://dblp.org/rec/conf/fm/BeyerW24",
+    "dblp_key": "conf/fm/BeyerW24",
+    "source_id": "https://openalex.org/W4402496202",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "ASMETA Tool Set for Rigorous System Design.",
+    "authors": [
+      "Andrea Bombarda",
+      "Silvia Bonfanti",
+      "Angelo Gargantini",
+      "Elvinia Riccobene",
+      "Patrizia Scandurra"
+    ],
+    "venue": "FM",
+    "year": 2024,
+    "abstract": "Abstract This tutorial paper introduces ASMETA, a comprehensive suite of integrated tools around the formal method Abstract State Machines to specify and analyze the executable behavior of discrete event systems. ASMETA supports the entire system development life-cycle, from the specification of the functional requirements to the implementation of the code, in a systematic and incremental way. This tutorial provides an overview of ASMETA through an illustrative case study, the Pill-Box, related to the design of a smart pillbox device. It illustrates the practical use of the range of modeling and V&amp;V techniques available in ASMETA and C++ code generation from models, to increase the quality and reliability of behavioral system models and source code.",
+    "citation_count": 13,
+    "reference_count": 23,
+    "url": "https://dblp.org/rec/conf/fm/BombardaBGRS24",
+    "dblp_key": "conf/fm/BombardaBGRS24",
+    "source_id": "https://openalex.org/W4402496352",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Learning Branching-Time Properties in CTL and ATL via Constraint Solving.",
+    "authors": [
+      "Benjamin Bordais",
+      "Daniel Neider",
+      "Rajarshi Roy 0002"
+    ],
+    "venue": "FM",
+    "year": 2024,
+    "abstract": "Abstract We address the problem of learning temporal properties from the branching-time behavior of systems. Existing research in this field has mostly focused on learning linear temporal properties specified using popular logics, such as Linear Temporal Logic (LTL) and Signal Temporal Logic (STL). Branching-time logics such as Computation Tree Logic (CTL) and Alternating-time Temporal Logic (ATL), despite being extensively used in specifying and verifying distributed and multi-agent systems, have not received adequate attention. Thus, in this paper, we investigate the problem of learning CTL and ATL formulas from examples of system behavior. As input to the learning problems, we rely on the typical representations of branching behavior as Kripke structures and concurrent game structures, respectively. Given a sample of structures, we learn concise formulas by encoding the learning problem into a satisfiability problem, most notably by symbolically encoding both the search for prospective formulas and their fixed-point based model checking algorithms. We also study the decision problem of checking the existence of prospective ATL formulas for a given sample. We implement our algorithms in a Python prototype and have evaluated them to extract several common CTL and ATL formulas used in practical applications.",
+    "citation_count": 3,
+    "reference_count": 45,
+    "url": "https://dblp.org/rec/conf/fm/BordaisNR24",
+    "dblp_key": "conf/fm/BordaisNR24",
+    "source_id": "https://openalex.org/W4402425246",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Free Facts: An Alternative to Inefficient Axioms in Dafny.",
+    "authors": [
+      "Tabea Bordis",
+      "K. Rustan M. Leino"
+    ],
+    "venue": "FM",
+    "year": 2024,
+    "abstract": "Abstract Formal software verification relies on properties of functions and built-in operators. Unless these properties are handled directly by decision procedures, an automated verifier includes them in verification conditions by supplying them as universally quantified axioms or theorems. The use of quantifiers sometimes leads to bad performance, especially if automation causes the quantifiers to be instantiated many times. This paper proposes free facts as an alternative to some axioms. A free fact is a pre-instantiated axiom that is generated alongside the formulas in a verification condition that can benefit from the facts. Replacing an axiom with free facts thus reduces the number of quantifiers in verification conditions. Free facts are statically triggered by syntactic occurrences of certain patterns in the proof terms. This is less powerful than the dynamically triggered patterns used during proof construction. However, the paper shows that free facts perform well in practice.",
+    "citation_count": 2,
+    "reference_count": 29,
+    "url": "https://dblp.org/rec/conf/fm/BordisL24",
+    "dblp_key": "conf/fm/BordisL24",
+    "source_id": "https://openalex.org/W4402425465",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "A Pyramid Of (Formal) Software Verification.",
+    "authors": [
+      "Martin Brain",
+      "Elizabeth Polgreen"
+    ],
+    "venue": "FM",
+    "year": 2024,
+    "abstract": "Abstract Over the past few years there has been significant progress in the various fields of software verification resulting in many useful tools and successful deployments, both academic and commercial. However much of the work describing these tools and ideas is written by and for the research community. The scale, diversity and focus of the literature can act as a barrier, separating industrial users and the wider academic community from the tools that could make their work more efficient, more certain and more productive. This tutorial gives a simple classification of verification techniques in terms of a pyramid and uses it to describe the six main schools of verification technologies. We have found this approach valuable for building collaborations with industry as it allows us to explain the intrinsic strengths and weaknesses of techniques and pick the right tool for any given industrial application. The model also highlights some of the cultural differences and unspoken assumptions of different areas of verification and illuminates future directions.",
+    "citation_count": 1,
+    "reference_count": 67,
+    "url": "https://dblp.org/rec/conf/fm/BrainP24",
+    "dblp_key": "conf/fm/BrainP24",
+    "source_id": "https://openalex.org/W4402496209",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Reachability Analysis for Multiloop Programs Using Transition Power Abstraction.",
+    "authors": [
+      "Konstantin Britikov",
+      "Martin Blicha",
+      "Natasha Sharygina",
+      "Grigory Fedyukovich"
+    ],
+    "venue": "FM",
+    "year": 2024,
+    "abstract": "Abstract A wide variety of algorithms is employed for the reachability analysis of programs with loops but most of them are restricted to single loop programs. Recently a new technique called Transition Power Abstraction (TPA) showed promising results for safety checks of software. In contrast to many other techniques TPA efficiently handles loops with a large number of iterations. This paper introduces an algorithm that enables the effective use of TPA for analysis of multiloop programs. The TPA-enabled loop analysis reduces the dependency on the number of possible iterations. Our approach analyses loops in a modular manner and both computes and uses transition invariants incrementally, making program analysis efficient. The new algorithm is implemented in the Golem solver. Conducted experiments demonstrate that this approach outperforms the previous implementation of TPA and other competing tools on a wide range of multiloop benchmarks.",
+    "citation_count": 3,
+    "reference_count": 31,
+    "url": "https://dblp.org/rec/conf/fm/BritikovBSF24",
+    "dblp_key": "conf/fm/BritikovBSF24",
+    "source_id": "https://openalex.org/W4402425150",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Fast Attack Graph Defense Localization via Bisimulation.",
+    "authors": [
+      "Nimrod Busany",
+      "Rafi Shalom",
+      "Dan Klein 0003",
+      "Shahar Maoz"
+    ],
+    "venue": "FM",
+    "year": 2024,
+    "abstract": "Abstract System administrators, network engineers, and IT managers can learn much about the vulnerabilities of an organization’s cyber system by constructing and analyzing analytical attack graphs (AAGs). An AAG consists of logical rule nodes, fact nodes, and derived fact nodes. It provides a graph-based representation that describes ways by which an attacker can achieve progress towards a desired goal, a.k.a. a crown jewel. Given an AAG, different types of analyses can be performed to identify attacks on a target goal, measure the vulnerability of the network, and gain insights on how to make it more secure. However, as the size of the AAGs representing real-world systems may be very large, existing analyses are slow or practically impossible. In this paper, we introduce and show how to compute an AAG’s defense core : a locally minimal subset of the AAG’s rules whose removal will prevent an attacker from reaching a crown jewel. Most importantly, in order to scale-up the performance of the detection of a defense core, we introduce a novel application of the well-known notion of bisimulation to AAGs. Our experiments show that the use of bisimulation results in significantly smaller graphs and in faster detection of defense cores, making them practical.",
+    "citation_count": 0,
+    "reference_count": 43,
+    "url": "https://dblp.org/rec/conf/fm/BusanySKM24",
+    "dblp_key": "conf/fm/BusanySKM24",
+    "source_id": "https://openalex.org/W4402397323",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Sound and Complete Witnesses for Template-Based Verification of LTL Properties on Polynomial Programs.",
+    "authors": [
+      "Krishnendu Chatterjee",
+      "Amir Kafshdar Goharshady",
+      "Ehsan Kafshdar Goharshady",
+      "Mehrdad Karrabi",
+      "Dorde Zikelic"
+    ],
+    "venue": "FM",
+    "year": 2024,
+    "abstract": "Abstract We study the classical problem of verifying programs with respect to formal specifications given in the linear temporal logic (LTL). We first present novel sound and complete witnesses for LTL verification over imperative programs. Our witnesses are applicable to both verification (proving) and refutation (finding bugs) settings. We then consider LTL formulas in which atomic propositions can be polynomial constraints and turn our focus to polynomial arithmetic programs, i.e. programs in which every assignment and guard consists only of polynomial expressions. For this setting, we provide an efficient algorithm to automatically synthesize such LTL witnesses. Our synthesis procedure is both sound and semi-complete. Finally, we present experimental results demonstrating the effectiveness of our approach and that it can handle programs which were beyond the reach of previous state-of-the-art tools.",
+    "citation_count": 10,
+    "reference_count": 66,
+    "url": "https://dblp.org/rec/conf/fm/ChatterjeeGGKZ24",
+    "dblp_key": "conf/fm/ChatterjeeGGKZ24",
+    "source_id": "https://openalex.org/W4402425134",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Introducing SWIRL: An Intermediate Representation Language for Scientific Workflows.",
+    "authors": [
+      "Iacopo Colonnelli",
+      "Doriana Medic",
+      "Alberto Mulone",
+      "Viviana Bono",
+      "Luca Padovani",
+      "Marco Aldinucci"
+    ],
+    "venue": "FM",
+    "year": 2024,
+    "abstract": "Abstract In the ever-evolving landscape of scientific computing, properly supporting the modularity and complexity of modern scientific applications requires new approaches to workflow execution, like seamless interoperability between different workflow systems, distributed-by-design workflow models, and automatic optimisation of data movements. In order to address this need, this article introduces SWIRL, an intermediate representation language for scientific workflows. In contrast with other product-agnostic workflow languages, SWIRL is not designed for human interaction but to serve as a low-level compilation target for distributed workflow execution plans. The main advantages of SWIRL semantics are low-level primitives based on the send/receive programming model and a formal framework ensuring the consistency of the semantics and the specification of translating workflow models represented by Directed Acyclic Graphs (DAGs) into SWIRL workflow descriptions. Additionally, SWIRL offers rewriting rules designed to optimise execution traces, accompanied by corresponding equivalence. An open-source SWIRL compiler toolchain has been developed using the ANTLR Python3 bindings.",
+    "citation_count": 3,
+    "reference_count": 39,
+    "url": "https://dblp.org/rec/conf/fm/ColonnelliMMBPA24",
+    "dblp_key": "conf/fm/ColonnelliMMBPA24",
+    "source_id": "https://openalex.org/W4402425242",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Detecting Speculative Execution Vulnerabilities on Weak Memory Models.",
+    "authors": [
+      "Nicholas Coughlin",
+      "Kait Lam",
+      "Graeme Smith 0001",
+      "Kirsten Winter"
+    ],
+    "venue": "FM",
+    "year": 2024,
+    "abstract": "Abstract Speculative execution attacks affect all modern processors and much work has been done to develop techniques for detection of associated vulnerabilities. Modern processors also operate on weak memory models which allow out-of-order execution of code. Despite this, there is little work on looking at the interplay between speculative execution and weak memory models. In this paper, we provide an information flow logic for detecting speculative execution vulnerabilities on weak memory models. The logic is general enough to be used with any modern processor, and designed to be extensible to allow detection of vulnerabilities to specific attacks. The logic has been proven sound with respect to an abstract model of speculative execution in Isabelle/HOL.",
+    "citation_count": 2,
+    "reference_count": 42,
+    "url": "https://dblp.org/rec/conf/fm/CoughlinLSW24",
+    "dblp_key": "conf/fm/CoughlinLSW24",
+    "source_id": "https://openalex.org/W4402397382",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "DFAMiner: Mining Minimal Separating DFAs from Labelled Samples.",
+    "authors": [
+      "Daniele Dell&apos;Erba",
+      "Yong Li 0031",
+      "Sven Schewe"
+    ],
+    "venue": "FM",
+    "year": 2024,
+    "abstract": "Abstract We propose , a passive learning tool for learning minimal separating deterministic finite automata (DFA) from a set of labelled samples. Separating automata are an interesting class of automata that occurs generally in regular model checking and has raised interest in foundational questions of parity game solving. We first propose a simple and linear-time algorithm that incrementally constructs a three-valued DFA (3DFA) from a set of labelled samples given in the usual lexicographical order. This 3DFA has accepting and rejecting states as well as don’t-care states, so that it can exactly recognise the labelled examples. We then apply our tool to mining a minimal separating DFA for the labelled samples by minimising the constructed automata via a reduction to SAT solving. Empirical evaluation shows that our tool outperforms current state-of-the-art tools significantly on standard benchmarks for learning minimal separating DFAs from samples. Progress in the efficient construction of separating DFAs can also lead to finding the lower bound of parity game solving, where we show that can create optimal separating automata for simple languages with up to 7 colours. Future improvements might offer inroads to better data structures.",
+    "citation_count": 4,
+    "reference_count": 30,
+    "url": "https://dblp.org/rec/conf/fm/DellErbaLS24",
+    "dblp_key": "conf/fm/DellErbaLS24",
+    "source_id": "https://openalex.org/W4402496207",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "PyBDR: Set-Boundary Based Reachability Analysis Toolkit in Python.",
+    "authors": [
+      "Jianqiang Ding",
+      "Taoran Wu",
+      "Zhen Liang",
+      "Bai Xue 0001"
+    ],
+    "venue": "FM",
+    "year": 2024,
+    "abstract": "Abstract We present PyBDR, a Python reachability analysis toolkit based on set-boundary analysis, which centralizes on widely-adopted set propagation techniques for formal verification, controller synthesis, state estimation, etc. It employs boundary analysis of initial sets to mitigate the wrapping effect during computations, thus improving the performance of reachability analysis algorithms without significantly increasing computational costs. Beyond offering various set representations such as polytopes and zonotopes, our toolkit particularly excels in interval arithmetic by extending operations to the tensor level, enabling efficient parallel interval arithmetic computation and unifying vector and matrix intervals into a single framework. Furthermore, it features symbolic computation of derivatives of arbitrary order and evaluates them as real or interval-valued functions, which is essential for approximating behaviours of nonlinear systems at specific time instants. Its modular architecture design offers a series of building blocks that facilitate the prototype development of reachability analysis algorithms. Comparative studies showcase its strengths in handling verification tasks with large initial sets or long time horizons. The toolkit is available at https://github.com/ASAG-ISCAS/PyBDR .",
+    "citation_count": 0,
+    "reference_count": 38,
+    "url": "https://dblp.org/rec/conf/fm/DingWLX24",
+    "dblp_key": "conf/fm/DingWLX24",
+    "source_id": "https://openalex.org/W4402496633",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Understanding Synthesized Reactive Systems Through Invariants.",
+    "authors": [
+      "Rüdiger Ehlers"
+    ],
+    "venue": "FM",
+    "year": 2024,
+    "abstract": "The production of ROS (reactive oxygen species) by mammalian mitochondria is important because it underlies oxidative damage in many pathologies and contributes to retrograde redox signalling from the organelle to the cytosol and nucleus. Superoxide (O2(*-)) is the proximal mitochondrial ROS, and in the present review I outline the principles that govern O2(*-) production within the matrix of mammalian mitochondria. The flux of O2(*-) is related to the concentration of potential electron donors, the local concentration of O2 and the second-order rate constants for the reactions between them. Two modes of operation by isolated mitochondria result in significant O2(*-) production, predominantly from complex I: (i) when the mitochondria are not making ATP and consequently have a high Deltap (protonmotive force) and a reduced CoQ (coenzyme Q) pool; and (ii) when there is a high NADH/NAD+ ratio in the mitochondrial matrix. For mitochondria that are actively making ATP, and consequently have a lower Deltap and NADH/NAD+ ratio, the extent of O2(*-) production is far lower. The generation of O2(*-) within the mitochondrial matrix depends critically on Deltap, the NADH/NAD+ and CoQH2/CoQ ratios and the local O2 concentration, which are all highly variable and difficult to measure in vivo. Consequently, it is not possible to estimate O2(*-) generation by mitochondria in vivo from O2(*-)-production rates by isolated mitochondria, and such extrapolations in the literature are misleading. Even so, the description outlined here facilitates the understanding of factors that favour mitochondrial ROS production. There is a clear need to develop better methods to measure mitochondrial O2(*-) and H2O2 formation in vivo, as uncertainty about these values hampers studies on the role of mitochondrial ROS in pathological oxidative damage and redox signalling.",
+    "citation_count": 8006,
+    "reference_count": 139,
+    "url": "https://dblp.org/rec/conf/fm/Ehlers24",
+    "dblp_key": "conf/fm/Ehlers24",
+    "source_id": "https://openalex.org/W2122341467",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Staged Specification Logic for Verifying Higher-Order Imperative Programs.",
+    "authors": [
+      "Darius Foo",
+      "Yahui Song",
+      "Wei-Ngan Chin"
+    ],
+    "venue": "FM",
+    "year": 2024,
+    "abstract": "Abstract Higher-order functions and imperative states are language features supported by many mainstream languages. Their combination is expressive and useful, but complicates specification and reasoning, due to the use of yet-to-be-instantiated function parameters. One inherent limitation of existing specification mechanisms is its reliance on only two stages : an initial stage to denote the precondition at the start of the method and a final stage to capture the postcondition. Such two-stage specifications force abstract properties to be imposed on unknown function parameters, leading to less precise specifications for higher-order methods. To overcome this limitation, we introduce a novel extension to Hoare logic that supports multiple stages for a call-by-value higher-order language with ML-like local references. Multiple stages allow the behavior of unknown function-type parameters to be captured abstractly as uninterpreted relations; and can also model the repetitive behavior of each recursion as a separate stage. In this paper, we define our staged logic with its semantics, prove its soundness and develop a new automated higher-order verifier, called H eifer, for a core ML-like language.",
+    "citation_count": 1,
+    "reference_count": 26,
+    "url": "https://dblp.org/rec/conf/fm/FooSC24",
+    "dblp_key": "conf/fm/FooSC24",
+    "source_id": "https://openalex.org/W4402425213",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Integrating Loop Acceleration Into Bounded Model Checking.",
+    "authors": [
+      "Florian Frohn",
+      "Jürgen Giesl"
+    ],
+    "venue": "FM",
+    "year": 2024,
+    "abstract": "Abstract Bounded Model Checking (BMC) is a powerful technique for proving unsafety. However, finding deep counterexamples that require a large bound is challenging for BMC. On the other hand, acceleration techniques compute “shortcuts” that “compress” many execution steps into a single one. In this paper, we tightly integrate acceleration techniques into SMT-based bounded model checking. By adding suitable “shortcuts” on the fly, our approach can quickly detect deep counterexamples. Moreover, using so-called blocking clauses , our approach can prove safety of examples where BMC diverges. An empirical comparison with other state-of-the-art techniques shows that our approach is highly competitive for proving unsafety, and orthogonal to existing techniques for proving safety.",
+    "citation_count": 4,
+    "reference_count": 35,
+    "url": "https://dblp.org/rec/conf/fm/FrohnG24",
+    "dblp_key": "conf/fm/FrohnG24",
+    "source_id": "https://openalex.org/W4402425191",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Bridging Dimensions: Confident Reachability for High-Dimensional Controllers.",
+    "authors": [
+      "Yuang Geng",
+      "Jake Brandon Baldauf",
+      "Souradeep Dutta",
+      "Chao Huang 0015",
+      "Ivan Ruchkin"
+    ],
+    "venue": "FM",
+    "year": 2024,
+    "abstract": "Abstract Autonomous systems are increasingly implemented using end-to-end learning-based controllers. Such controllers make decisions that are executed on the real system, with images as one of the primary sensing modalities. Deep neural networks form a fundamental building block of such controllers. Unfortunately, the existing neural-network verification tools do not scale to inputs with thousands of dimensions—especially when the individual inputs (such as pixels) are devoid of clear physical meaning. This paper takes a step towards connecting exhaustive closed-loop verification with high-dimensional controllers. Our key insight is that the behavior of a high-dimensional vision-based controller can be approximated with several low-dimensional controllers. To balance the approximation accuracy and verifiability of our low-dimensional controllers, we leverage the latest verification-aware knowledge distillation. Then, we inflate low-dimensional reachability results with statistical approximation errors, yielding a high-confidence reachability guarantee for the high-dimensional controller. We investigate two inflation techniques—based on trajectories and control actions—both of which show convincing performance in three OpenAI gym benchmarks.",
+    "citation_count": 1,
+    "reference_count": 56,
+    "url": "https://dblp.org/rec/conf/fm/GengBDHR24",
+    "dblp_key": "conf/fm/GengBDHR24",
+    "source_id": "https://openalex.org/W4402425283",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "A Zonotopic Dempster-Shafer Approach to the Quantitative Verification of Neural Networks.",
+    "authors": [
+      "Eric Goubault",
+      "Sylvie Putot"
+    ],
+    "venue": "FM",
+    "year": 2024,
+    "abstract": "Abstract The reliability and usefulness of verification depend on the ability to represent appropriately the uncertainty. Most existing work on neural network verification relies on the hypothesis of either set-based or probabilistic information on the inputs. In this work, we rely on the framework of imprecise probabilities, specifically p-boxes, to propose a quantitative verification of ReLU neural networks, which can account for both probabilistic information and epistemic uncertainty on inputs. On classical benchmarks, including the ACAS Xu examples, we demonstrate that our approach improves the tradeoff between tightness and efficiency compared to related work on probabilistic network verification, while handling much more general classes of uncertainties on the inputs and providing fully guaranteed results.",
+    "citation_count": 4,
+    "reference_count": 25,
+    "url": "https://dblp.org/rec/conf/fm/GoubaultP24",
+    "dblp_key": "conf/fm/GoubaultP24",
+    "source_id": "https://openalex.org/W4394862442",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Misconceptions in Finite-Trace and Infinite-Trace Linear Temporal Logic.",
+    "authors": [
+      "Ben Greenman",
+      "Siddhartha Prasad",
+      "Antonio Di Stasio 0001",
+      "Shufang Zhu 0001",
+      "Giuseppe De Giacomo",
+      "Shriram Krishnamurthi",
+      "Marco Montali",
+      "Tim Nelson",
+      "Milda Zizyte"
+    ],
+    "venue": "FM",
+    "year": 2024,
+    "abstract": "Abstract With the growing use of temporal logics in areas ranging from robot planning to runtime verification, it is critical that users have a clear understanding of what a specification means. Toward this end, we have been developing a catalog of semantic errors and a suite of test instruments targeting various user-groups. The catalog is of interest to educators, to logic designers, to formula authors, and to tool builders, e.g., to identify mistakes. The test instruments are suitable for classroom teaching or self-study. This paper reports on five sets of survey data collected over a three-year span. We study misconceptions about finite-trace $$\\textsc {ltl}_{f}$$ <mml:math xmlns:mml=\"http://www.w3.org/1998/Math/MathML\"> <mml:msub> <mml:mstyle> <mml:mi>L</mml:mi> <mml:mi>T</mml:mi> <mml:mi>L</mml:mi> </mml:mstyle> <mml:mi>f</mml:mi> </mml:msub> </mml:math> in three ltl -aware audiences, and misconceptions about standard ltl in novices. We find several mistakes, even among experts. In addition, the data supports several categories of errors in both $$\\textsc {ltl}_{f}$$ <mml:math xmlns:mml=\"http://www.w3.org/1998/Math/MathML\"> <mml:msub> <mml:mstyle> <mml:mi>L</mml:mi> <mml:mi>T</mml:mi> <mml:mi>L</mml:mi> </mml:mstyle> <mml:mi>f</mml:mi> </mml:msub> </mml:math> and ltl that have not been identified in prior work. These findings, based on data from actual users, offer insights into what specific ways temporal logics are tricky and provide a groundwork for future interventions.",
+    "citation_count": 5,
+    "reference_count": 64,
+    "url": "https://dblp.org/rec/conf/fm/GreenmanPSZGKMNZ24",
+    "dblp_key": "conf/fm/GreenmanPSZGKMNZ24",
+    "source_id": "https://openalex.org/W4402397383",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Efficient Formally Verified Maximal End Component Decomposition for MDPs.",
+    "authors": [
+      "Arnd Hartmanns",
+      "Bram Kohlen",
+      "Peter Lammich"
+    ],
+    "venue": "FM",
+    "year": 2024,
+    "abstract": "Abstract Identifying a Markov decision process’s maximal end components is a prerequisite for applying sound probabilistic model checking algorithms. In this paper, we present the first mechanized correctness proof of a maximal end component decomposition algorithm, which is an important algorithm in model checking, using the Isabelle/HOL theorem prover. We iteratively refine the high-level algorithm and proof into an imperative LLVM bytecode implementation that we integrate into the Modest Toolset ’s existing model checker. We bring the benefits of interactive theorem proving into practice by reducing the trusted code base of a popular probabilistic model checker and we experimentally show that our new verified maximal end component decomposition in performs on par with the tool’s previous unverified implementation.",
+    "citation_count": 2,
+    "reference_count": 53,
+    "url": "https://dblp.org/rec/conf/fm/HartmannsKL24",
+    "dblp_key": "conf/fm/HartmannsKL24",
+    "source_id": "https://openalex.org/W4402425486",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "A Local Search Algorithm for MaxSMT(LIA).",
+    "authors": [
+      "Xiang He 0005",
+      "Bohan Li 0002",
+      "Mengyu Zhao",
+      "Shaowei Cai 0001"
+    ],
+    "venue": "FM",
+    "year": 2024,
+    "abstract": "MaxSAT modulo theories (MaxSMT) is an important generalization of Satisfiability modulo theories (SMT) with various applications. In this paper, we focus on MaxSMT with the background theory of Linear Integer Arithmetic, denoted as MaxSMT(LIA). We design the first local search algorithm for MaxSMT(LIA) called PairLS, based on the following novel ideas. A novel operator called pairwise operator is proposed for integer variables. It extends the original local search operator by simultaneously operating on two variables, enriching the search space. Moreover, a compensation-based picking heuristic is proposed to determine and distinguish the pairwise operations. Experiments are conducted to evaluate our algorithm on massive benchmarks. The results show that our solver is competitive with state-of-the-art MaxSMT solvers. Furthermore, we also apply the pairwise operation to enhance the local search algorithm of SMT, which shows its extensibility.",
+    "citation_count": 0,
+    "reference_count": 0,
+    "url": "https://dblp.org/rec/conf/fm/HeLZC24",
+    "dblp_key": "conf/fm/HeLZC24",
+    "source_id": "https://openalex.org/W4400022843",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Beyond the Bottleneck: Enhancing High-Concurrency Systems with Lock Tuning.",
+    "authors": [
+      "Juntao Ji",
+      "Yinyou Gu",
+      "Yubao Fu",
+      "Qingshan Lin"
+    ],
+    "venue": "FM",
+    "year": 2024,
+    "abstract": "Multilisp is a version of the Lisp dialect Scheme extended with constructs for parallel execution. Like Scheme, Multilisp is oriented toward symbolic computation. Unlike some parallel programming languages, Multilisp incorporates constructs for causing side effects and for explicitly introducing parallelism. The potential complexity of dealing with side effects in a parallel context is mitigated by the nature of the parallelism constructs and by support for abstract data types: a recommended Multilisp programming style is presented which, if followed, should lead to highly parallel, easily understandable programs. Multilisp is being implemented on the 32-processor Concert multiprocessor; however, it is ultimately intended for use on larger multiprocessors. The current implementation, called Concert Multilisp , is complete enough to run the Multilisp compiler itself and has been run on Concert prototypes including up to eight processors. Concert Multilisp uses novel techniques for task scheduling and garbage collection. The task scheduler helps control excessive resource utilization by means of an unfair scheduling policy; the garbage collector uses a multiprocessor algorithm based on the incremental garbage collector of Baker.",
+    "citation_count": 1072,
+    "reference_count": 53,
+    "url": "https://dblp.org/rec/conf/fm/JiGFL24",
+    "dblp_key": "conf/fm/JiGFL24",
+    "source_id": "https://openalex.org/W1983587324",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Discourje: Run-Time Verification of Communication Protocols in Clojure - Live at Last.",
+    "authors": [
+      "Sung-Shik Jongmans"
+    ],
+    "venue": "FM",
+    "year": 2024,
+    "abstract": "Abstract Multiparty session typing (MPST) is a formal method to make concurrent programming simpler. The idea is to use type checking to automatically prove safety (protocol compliance) and liveness (communication deadlock freedom) of implementations relative to specifications. Discourje is an existing run-time verification library for communication protocols in Clojure, based on dynamic MPST. The original version of Discourje can detect only safety violations. In this paper, we present an extension of Discourje to detect also liveness violations.",
+    "citation_count": 1,
+    "reference_count": 31,
+    "url": "https://dblp.org/rec/conf/fm/Jongmans24",
+    "dblp_key": "conf/fm/Jongmans24",
+    "source_id": "https://openalex.org/W4402496261",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Stochastic Games for User Journeys.",
+    "authors": [
+      "Paul Kobialka",
+      "Andrea Pferscher",
+      "Gunnar R. Bergersen",
+      "Einar Broch Johnsen",
+      "Silvia Lizeth Tapia Tarifa"
+    ],
+    "venue": "FM",
+    "year": 2024,
+    "abstract": "Abstract Industry is shifting towards service-based business models, for which user satisfaction is crucial. User satisfaction can be analyzed with user journeys, which model services from the user’s perspective. Today, these models are created manually and lack both formalization and tool-supported analysis. This limits their applicability to complex services with many users. Our goal is to overcome these limitations by automated model generation and formal analyses, enabling the analysis of user journeys for complex services and thousands of users. In this paper, we use stochastic games to model and analyze user journeys. Stochastic games can be automatically constructed from event logs and model checked to, e.g., identify interactions that most effectively help users reach their goal. Since the learned models may get large, we use property-preserving model reduction to visualize users’ pain points to convey information to business stakeholders. The applicability of the proposed method is here demonstrated on two complementary case studies.",
+    "citation_count": 6,
+    "reference_count": 40,
+    "url": "https://dblp.org/rec/conf/fm/KobialkaPBJT24",
+    "dblp_key": "conf/fm/KobialkaPBJT24",
+    "source_id": "https://openalex.org/W4402496621",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "State Matching and Multiple References in Adaptive Active Automata Learning.",
+    "authors": [
+      "Loes Kruger",
+      "Sebastian Junges",
+      "Jurriaan Rot"
+    ],
+    "venue": "FM",
+    "year": 2024,
+    "abstract": "Abstract Active automata learning (AAL) is a method to infer state machines by interacting with black-box systems. Adaptive AAL aims to reduce the sample complexity of AAL by incorporating domain specific knowledge in the form of (similar) reference models. Such reference models appear naturally when learning multiple versions or variants of a software system. In this paper, we present state matching, which allows flexible use of the structure of these reference models by the learner. State matching is the main ingredient of adaptive $$L^{\\#}$$ <mml:math xmlns:mml=\"http://www.w3.org/1998/Math/MathML\"> <mml:msup> <mml:mi>L</mml:mi> <mml:mo>#</mml:mo> </mml:msup> </mml:math> , a novel framework for adaptive learning, built on top of $$L^{\\#}$$ <mml:math xmlns:mml=\"http://www.w3.org/1998/Math/MathML\"> <mml:msup> <mml:mi>L</mml:mi> <mml:mo>#</mml:mo> </mml:msup> </mml:math> . Our empirical evaluation shows that adaptive $$L^{\\#}$$ <mml:math xmlns:mml=\"http://www.w3.org/1998/Math/MathML\"> <mml:msup> <mml:mi>L</mml:mi> <mml:mo>#</mml:mo> </mml:msup> </mml:math> improves the state of the art by up to two orders of magnitude.",
+    "citation_count": 3,
+    "reference_count": 24,
+    "url": "https://dblp.org/rec/conf/fm/KrugerJR24",
+    "dblp_key": "conf/fm/KrugerJR24",
+    "source_id": "https://openalex.org/W4402425464",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Formal Semantics and Analysis of Multitask PLC ST Programs with Preemption.",
+    "authors": [
+      "Jaeseo Lee",
+      "Kyungmin Bae"
+    ],
+    "venue": "FM",
+    "year": 2024,
+    "abstract": "Abstract Programmable logic controllers (PLCs) are widely used in industrial applications. Ensuring the correctness of PLC programs is important due to their safety-critical nature. Structured text (ST) is an imperative programming language for PLC. Despite recent advances in executable semantics of PLC ST, existing methods neglect complex multitasking and preemption features. This paper presents an executable semantics of PLC ST with preemptive multitasking. Formal analysis of multitasking programs experiences the state explosion problem. To mitigate this problem, this paper also proposes state space reduction techniques for model checking multitask PLC ST programs.",
+    "citation_count": 6,
+    "reference_count": 31,
+    "url": "https://dblp.org/rec/conf/fm/LeeB24",
+    "dblp_key": "conf/fm/LeeB24",
+    "source_id": "https://openalex.org/W4402425202",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "B2SAT: A Bare-Metal Reduction of B to SAT.",
+    "authors": [
+      "Michael Leuschel"
+    ],
+    "venue": "FM",
+    "year": 2024,
+    "abstract": "Abstract We present a new SAT backend for the B-Method to enable new applications of formal methods. The new backend interleaves low-level SAT solving with high-level constraint solving. It provides a “bare metal” access to SAT solving, while pre- and post-calculations can be done in the full B language, with access to higher-order or even infinite data values. The backend is integrated into ProB, not as a general purpose backend, but as a dedicated backend for solving hard constraint satisfaction and optimisation problems on complex data. In the article we present the approach, its origin in the proof of Cook’s theorem, and illustrate and evaluate it on a few novel applications of formal methods, ranging from biology to railway applications.",
+    "citation_count": 2,
+    "reference_count": 35,
+    "url": "https://dblp.org/rec/conf/fm/Leuschel24",
+    "dblp_key": "conf/fm/Leuschel24",
+    "source_id": "https://openalex.org/W4402496264",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "VeriQR: A Robustness Verification Tool for quantum Machine Learning Models.",
+    "authors": [
+      "Yanling Lin",
+      "Ji Guan 0001",
+      "Wang Fang 0001",
+      "Mingsheng Ying",
+      "Zhaofeng Su 0001"
+    ],
+    "venue": "FM",
+    "year": 2024,
+    "abstract": "Adversarial noise attacks present a significant threat to quantum machine learning (QML) models, similar to their classical counterparts. This is especially true in the current Noisy Intermediate-Scale Quantum era, where noise is unavoidable. Therefore, it is essential to ensure the robustness of QML models before their deployment. To address this challenge, we introduce \\textit{VeriQR}, the first tool designed specifically for formally verifying and improving the robustness of QML models, to the best of our knowledge. This tool mimics real-world quantum hardware's noisy impacts by incorporating random noise to formally validate a QML model's robustness. \\textit{VeriQR} supports exact (sound and complete) algorithms for both local and global robustness verification. For enhanced efficiency, it implements an under-approximate (complete) algorithm and a tensor network-based algorithm to verify local and global robustness, respectively. As a formal verification tool, \\textit{VeriQR} can detect adversarial examples and utilize them for further analysis and to enhance the local robustness through adversarial training, as demonstrated by experiments on real-world quantum machine learning models. Moreover, it permits users to incorporate customized noise. Based on this feature, we assess \\textit{VeriQR} using various real-world examples, and experimental outcomes confirm that the addition of specific quantum noise can enhance the global robustness of QML models. These processes are made accessible through a user-friendly graphical interface provided by \\textit{VeriQR}, catering to general users without requiring a deep understanding of the counter-intuitive probabilistic nature of quantum computing.",
+    "citation_count": 0,
+    "reference_count": 0,
+    "url": "https://dblp.org/rec/conf/fm/LinGFYS24",
+    "dblp_key": "conf/fm/LinGFYS24",
+    "source_id": "https://openalex.org/W4406059442",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Code-Level Safety Verification for Automated Driving: A Case Study.",
+    "authors": [
+      "Vladislav Nenchev",
+      "Calum Imrie",
+      "Simos Gerasimou",
+      "Radu Calinescu"
+    ],
+    "venue": "FM",
+    "year": 2024,
+    "abstract": "Abstract The formal safety analysis of automated driving vehicles poses unique challenges due to their dynamic operating conditions and significant complexity. This paper presents a case study of applying formal safety verification to adaptive cruise controllers. Unlike the majority of existing verification approaches in the automotive domain, which only analyze (potentially imperfect) controller models, employ simulation to find counter-examples or use online monitors for runtime verification, our method verifies controllers at code level by utilizing bounded model checking. Verification is performed against an invariant set derived from formal specifications and an analytical model of the required behavior. For neural network controllers, we propose a scalable three-step decomposition, which additionally uses a neural network verifier. We show that both traditionally implemented as well as neural network controllers are verified within minutes. The dual focus on formal safety and implementation verification provides a comprehensive framework applicable to similar cyber-physical systems.",
+    "citation_count": 3,
+    "reference_count": 50,
+    "url": "https://dblp.org/rec/conf/fm/NenchevIGC24",
+    "dblp_key": "conf/fm/NenchevIGC24",
+    "source_id": "https://openalex.org/W4402496124",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "cfaults: Model-Based Diagnosis for Fault Localization in C with Multiple Test Cases.",
+    "authors": [
+      "Pedro Orvalho",
+      "Mikolás Janota",
+      "Vasco M. Manquinho"
+    ],
+    "venue": "FM",
+    "year": 2024,
+    "abstract": "Abstract Debugging is one of the most time-consuming and expensive tasks in software development. Several formula-based fault localization (FBFL) methods have been proposed, but they fail to guarantee a set of diagnoses across all failing tests or may produce redundant diagnoses that are not subset-minimal, particularly for programs with multiple faults. This paper introduces a novel fault localization approach for C programs with multiple faults. CFaults leverages Model-Based Diagnosis (MBD) with multiple observations and aggregates all failing test cases into a unified MaxSAT formula. Consequently, our method guarantees consistency across observations and simplifies the fault localization procedure. Experimental results on two benchmark sets of C programs, TCAS and C-Pack-IPAs , show that CFaults is faster than other FBFL approaches like BugAssist and SNIPER . Moreover, CFaults only generates subset-minimal diagnoses of faulty statements, whereas the other approaches tend to enumerate redundant diagnoses.",
+    "citation_count": 3,
+    "reference_count": 37,
+    "url": "https://dblp.org/rec/conf/fm/OrvalhoJM24",
+    "dblp_key": "conf/fm/OrvalhoJM24",
+    "source_id": "https://openalex.org/W4402397363",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Practical Deductive Verification of OCaml Programs.",
+    "authors": [
+      "Mário Pereira"
+    ],
+    "venue": "FM",
+    "year": 2024,
+    "abstract": "Abstract In this paper, we provide a comprehensive, hands-on tutorial on how to apply deductive verification to programs written in . In particular, we show how one can use the specification language and the tool to conduct mostly-automated verification on code. In our presentation, we focus on two main classes of programs: first, purely functional programs with no mutable state; then on imperative programs, where one can mix mutable state with subtle control-flow primitives, such as locally-defined exceptions.",
+    "citation_count": 2,
+    "reference_count": 25,
+    "url": "https://dblp.org/rec/conf/fm/Pereira24",
+    "dblp_key": "conf/fm/Pereira24",
+    "source_id": "https://openalex.org/W4402496137",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Runtime Verification in Real-Time with the Copilot Language: A Tutorial.",
+    "authors": [
+      "Ivan Perez 0001",
+      "Alwyn E. Goodloe",
+      "Frank Dedden"
+    ],
+    "venue": "FM",
+    "year": 2024,
+    "abstract": "Abstract Ultra-critical systems require high-level assurance, which cannot always be guaranteed at compile time. The use of runtime verification (RV) enables monitoring of these systems during runtime, to detect illegal states early and limit their potential consequences. This paper is a tutorial on RV using Copilot, an open-source runtime verification framework actively used by NASA to carry out experiments with robots and unmanned aerial vehicles. Copilot monitors are written in a compositional, stream-based language, which the framework automatically translates into real-time C code that satisfies static memory requirements suitable to run on embedded hardware. Copilot includes multiple libraries that extend the core functionality with higher-level constructs, Boyer-Moore majority voting, and a variety of Temporal Logics (TL), resulting in robust, high-level specifications that are easier to understand than their traditional counterparts.",
+    "citation_count": 3,
+    "reference_count": 19,
+    "url": "https://dblp.org/rec/conf/fm/PerezGD24",
+    "dblp_key": "conf/fm/PerezGD24",
+    "source_id": "https://openalex.org/W4402496175",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Automated Static Analysis of Quality of Service Properties of Communicating Systems.",
+    "authors": [
+      "Carlos Gustavo López Pombo",
+      "Agustín Eloy Martinez Suñé",
+      "Emilio Tuosto"
+    ],
+    "venue": "FM",
+    "year": 2024,
+    "abstract": "Abstract We present \"Image missing\", a bounded \"Image missing\"\"Image missing\"to statically analyse Quality of Service ( \"Image missing\") properties of message-passing systems. We consider QoS properties on measurable application-level attributes as well as resource consumption metrics, for example, those relating monetary cost to memory usage. The applicability of \"Image missing\"is evaluated through case studies and experiments. A first case study is based on the AWS cloud while a second one analyses a communicating system automatically extracted from code. Additionally, we consider synthetically generated experiments to assess the scalability of \"Image missing\". These experiments showed that our model can faithfully capture and effectively analyse QoS properties in industrial-strength scenarios.",
+    "citation_count": 3,
+    "reference_count": 37,
+    "url": "https://dblp.org/rec/conf/fm/PomboST24",
+    "dblp_key": "conf/fm/PomboST24",
+    "source_id": "https://openalex.org/W4402496605",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "A Divide-and-Conquer Approach to Variable Elimination in Linear Real Arithmetic.",
+    "authors": [
+      "Valentin Promies",
+      "Erika Ábrahám"
+    ],
+    "venue": "FM",
+    "year": 2024,
+    "abstract": "Abstract We introduce a novel variable elimination method for conjunctions of linear real arithmetic constraints. In prior work, we derived a variant of the Fourier-Motzkin elimination, which uses case splitting to reduce the procedure’s complexity from doubly to singly exponential. This variant, which we call FMplex, was originally developed for satisfiability checking, and it essentially performs a depth-first search in a tree of sub-problems. It can be adapted straightforwardly for the task of quantifier elimination, but it returns disjunctions of conjunctions, even though the solution space can always be defined by a single conjunction. Our main contribution is to show how to efficiently extract an equivalent conjunction from the search tree. Besides the theoretical foundations, we explain how the procedure relates to other methods for quantifier elimination and polyhedron projection. An experimental evaluation demonstrates that our implementation is competitive with established tools.",
+    "citation_count": 3,
+    "reference_count": 25,
+    "url": "https://dblp.org/rec/conf/fm/PromiesA24",
+    "dblp_key": "conf/fm/PromiesA24",
+    "source_id": "https://openalex.org/W4402425209",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "The Nonexistence of Unicorns and Many-Sorted Löwenheim-Skolem Theorems.",
+    "authors": [
+      "Benjamin Przybocki",
+      "Guilherme Vicentin de Toledo",
+      "Yoni Zohar",
+      "Clark W. Barrett"
+    ],
+    "venue": "FM",
+    "year": 2024,
+    "abstract": "Abstract Stable infiniteness, strong finite witnessability, and smoothness are model-theoretic properties relevant to theory combination in satisfiability modulo theories. Theories that are strongly finitely witnessable and smooth are called strongly polite and can be effectively combined with other theories. Toledo, Zohar, and Barrett conjectured that stably infinite and strongly finitely witnessable theories are smooth and therefore strongly polite. They called counterexamples to this conjecture unicorn theories , as their existence seemed unlikely. We prove that, indeed, unicorns do not exist. We also prove versions of the Löwenheim–Skolem theorem and the Łoś–Vaught test for many-sorted logic.",
+    "citation_count": 4,
+    "reference_count": 22,
+    "url": "https://dblp.org/rec/conf/fm/PrzybockiTZB24",
+    "dblp_key": "conf/fm/PrzybockiTZB24",
+    "source_id": "https://openalex.org/W4402396704",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Advancing Quantum Computing with Formal Methods.",
+    "authors": [
+      "Arend-Jan Quist",
+      "Jingyi Mei",
+      "Tim Coopmans",
+      "Alfons Laarman"
+    ],
+    "venue": "FM",
+    "year": 2024,
+    "abstract": "Noisy Intermediate-Scale Quantum (NISQ) technology will be available in the near future. Quantum computers with 50-100 qubits may be able to perform tasks which surpass the capabilities of today's classical digital computers, but noise in quantum gates will limit the size of quantum circuits that can be executed reliably. NISQ devices will be useful tools for exploring many-body quantum physics, and may have other useful applications, but the 100-qubit quantum computer will not change the world right away - we should regard it as a significant step toward the more powerful quantum technologies of the future. Quantum technologists should continue to strive for more accurate quantum gates and, eventually, fully fault-tolerant quantum computing.",
+    "citation_count": 8195,
+    "reference_count": 82,
+    "url": "https://dblp.org/rec/conf/fm/QuistMCL24",
+    "dblp_key": "conf/fm/QuistMCL24",
+    "source_id": "https://openalex.org/W2781738013",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "A Case Study on Formal Equivalence Verification Between a C/C++ Model and Its RTL Design.",
+    "authors": [
+      "Gaetano Raia",
+      "Gianluca Rigano",
+      "David Vincenzoni",
+      "Maurizio Martina"
+    ],
+    "venue": "FM",
+    "year": 2024,
+    "abstract": "Modern microscopic techniques following the stochastic motion of labelled tracer particles have uncovered significant deviations from the laws of Brownian motion in a variety of animate and inanimate systems. Such anomalous diffusion can have different physical origins, which can be identified from careful data analysis. In particular, single particle tracking provides the entire trajectory of the traced particle, which allows one to evaluate different observables to quantify the dynamics of the system under observation. We here provide an extensive overview over different popular anomalous diffusion models and their properties. We pay special attention to their ergodic properties, highlighting the fact that in several of these models the long time averaged mean squared displacement shows a distinct disparity to the regular, ensemble averaged mean squared displacement. In these cases, data obtained from time averages cannot be interpreted by the standard theoretical results for the ensemble averages. Here we therefore provide a comparison of the main properties of the time averaged mean squared displacement and its statistical behaviour in terms of the scatter of the amplitudes between the time averages obtained from different trajectories. We especially demonstrate how anomalous dynamics may be identified for systems, which, on first sight, appear to be Brownian. Moreover, we discuss the ergodicity breaking parameters for the different anomalous stochastic processes and showcase the physical origins for the various behaviours. This Perspective is intended as a guidebook for both experimentalists and theorists working on systems, which exhibit anomalous diffusion.",
+    "citation_count": 1805,
+    "reference_count": 385,
+    "url": "https://dblp.org/rec/conf/fm/RaiaRVM24",
+    "dblp_key": "conf/fm/RaiaRVM24",
+    "source_id": "https://openalex.org/W2016533177",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Accurate Static Data Race Detection for C.",
+    "authors": [
+      "Emerson Sales",
+      "Omar Inverso",
+      "Emilio Tuosto"
+    ],
+    "venue": "FM",
+    "year": 2024,
+    "abstract": null,
+    "citation_count": 107,
+    "reference_count": 42,
+    "url": "https://dblp.org/rec/conf/fm/SalesIT24",
+    "dblp_key": "conf/fm/SalesIT24",
+    "source_id": "https://openalex.org/W2152777241",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "No Risk, No Fun - A Tutorial on Risk Management.",
+    "authors": [
+      "Mariëlle Stoelinga"
+    ],
+    "venue": "FM",
+    "year": 2024,
+    "abstract": "A pproximately 79 400 000 American adults, or 1 in 3, have cardiovascular disease (CVD). 1 CVD accounts for 36.3% or 1 of every 2.8 deaths in the United States and is the leading cause of death among both men and women in the United States, killing an average of 1 American every 37 seconds. 1 Older adults, some ethnic minority populations, and socioeconomically disadvantaged individuals have an increased prevalence of CVD and vascular/metabolic risk factors such as hypertension, dyslipidemia, and diabetes; are more likely to have 2 risk factors; and are at increased risk of being sedentary, overweight or obese, and having unhealthy dietary habits. 2-10 Black and Hispanic immigrants are initially at lower risk for vascular/metabolic risk factors and CVD than US-born black and Hispanic individuals, 2 but as they adapt to the diet and activity habits of this country, the prevalence of vascular/metabolic risk factors increases. Each of these issues emphasizes the importance of interventions to promote physical activity (PA) and healthy diets in all American adults.",
+    "citation_count": 924,
+    "reference_count": 244,
+    "url": "https://dblp.org/rec/conf/fm/Stoelinga24",
+    "dblp_key": "conf/fm/Stoelinga24",
+    "source_id": "https://openalex.org/W2159524775",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Extending Isabelle/HOL&apos;s Code Generator with Support for the Go Programming Language.",
+    "authors": [
+      "Terru Stübinger",
+      "Lars Hupel"
+    ],
+    "venue": "FM",
+    "year": 2024,
+    "abstract": "This document reports the current development status of xMECH. It is&#13;\\nan implementation of the so-called skin or hybrid embedding approach [1] for&#13;\\nHOL. Its purpose is to enhance HOL's power and interaction to do software&#13;\\nverification. xMECH features languages and logics to describe and verify&#13;\\nsequential and distributed programs, a reasonably rich expression language&#13;\\nto write specifications, and optimized verification condition generators. It&#13;\\nis available for public use, but it is still in a prototype phase, with limited&#13;\\nfeatures and user support. It comes with some simple demos, but doing a&#13;\\nserious project with xMECH is not (yet) recommended for an inexperienced&#13;\\nuser.",
+    "citation_count": 2,
+    "reference_count": 3,
+    "url": "https://dblp.org/rec/conf/fm/StubingerH24",
+    "dblp_key": "conf/fm/StubingerH24",
+    "source_id": "https://openalex.org/W2166192426",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Switching Controller Synthesis for Hybrid Systems Against STL Formulas.",
+    "authors": [
+      "Han Su 0003",
+      "Shenghua Feng",
+      "Sinong Zhan",
+      "Naijun Zhan"
+    ],
+    "venue": "FM",
+    "year": 2024,
+    "abstract": "Abstract Switching controllers play a pivotal role in directing hybrid systems (HSs) towards the desired objective, embodying a “correct-by-construction” approach to HS design. Identifying these objectives is thus crucial for the synthesis of effective switching controllers. While most of existing works focus on safety and liveness, few of them consider timing constraints. In this paper, we delves into the synthesis of switching controllers for HSs that meet system objectives given by a fragment of STL, which essentially corresponds to a reach-avoid problem with timing constraints. Our approach involves iteratively computing the state sets that can be driven to satisfy the reach-avoid specification with timing constraints. This technique supports to create switching controllers for both constant and non-constant HSs. We validate our method’s soundness, and confirm its relative completeness for a certain subclass of HSs. Experiment results affirms the efficacy of our approach.",
+    "citation_count": 3,
+    "reference_count": 50,
+    "url": "https://dblp.org/rec/conf/fm/SuFZZ24",
+    "dblp_key": "conf/fm/SuFZZ24",
+    "source_id": "https://openalex.org/W4402496627",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Proving Functional Program Equivalence via Directed Lemma Synthesis.",
+    "authors": [
+      "Yican Sun",
+      "Ruyi Ji",
+      "Jian Fang",
+      "Xuanlin Jiang",
+      "Mingshuai Chen",
+      "Yingfei Xiong 0001"
+    ],
+    "venue": "FM",
+    "year": 2024,
+    "abstract": "Abstract Proving equivalence between functional programs is a fundamental problem in program verification, which often amounts to reasoning about algebraic data types (ADTs) and compositions of structural recursions . Modern theorem provers provide structural induction for such reasoning, but a structural induction on the original theorem is often insufficient for many equivalence theorems. In such cases, one has to invent a set of lemmas, prove these lemmas by additional induction, and use these lemmas to prove the original theorem. There is, however, a lack of systematic understanding of what lemmas are needed for inductive proofs and how these lemmas can be synthesized automatically. This paper presents directed lemma synthesis , an effective approach to automating equivalence proofs by discovering critical lemmas using program synthesis techniques. We first identify two induction-friendly forms of propositions that give formal guarantees to the progress of the proof. We then propose two tactics that synthesize and apply lemmas, thereby transforming the proof goal into induction-friendly forms. Both tactics reduce lemma synthesis to a set of independent and typically small program synthesis problems that can be efficiently solved. Experimental results demonstrate the effectiveness of our approach: Compared to state-of-the-art equivalence checkers employing heuristic-based lemma enumeration, directed lemma synthesis saves 95.47% runtime on average and solves 38 more tasks over an extended version of the standard benchmark set.",
+    "citation_count": 2,
+    "reference_count": 34,
+    "url": "https://dblp.org/rec/conf/fm/SunJFJCX24",
+    "dblp_key": "conf/fm/SunJFJCX24",
+    "source_id": "https://openalex.org/W4402425258",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Compositional Verification of Cryptographic Circuits Against Fault Injection Attacks.",
+    "authors": [
+      "Huiyu Tan",
+      "Xi Yang",
+      "Fu Song",
+      "Taolue Chen 0001",
+      "Zhilin Wu"
+    ],
+    "venue": "FM",
+    "year": 2024,
+    "abstract": "This paper gives the main definitions relating to dependability, a generic concept including a special case of such attributes as reliability, availability, safety, integrity, maintainability, etc. Security brings in concerns for confidentiality, in addition to availability and integrity. Basic definitions are given first. They are then commented upon, and supplemented by additional definitions, which address the threats to dependability and security (faults, errors, failures), their attributes, and the means for their achievement (fault prevention, fault tolerance, fault removal, fault forecasting). The aim is to explicate a set of general concepts, of relevance across a wide range of situations and, therefore, helping communication and cooperation among a number of scientific and technical communities, including ones that are concentrating on particular types of system, of system failures, or of causes of system failures.",
+    "citation_count": 5128,
+    "reference_count": 71,
+    "url": "https://dblp.org/rec/conf/fm/TanYSCW24",
+    "dblp_key": "conf/fm/TanYSCW24",
+    "source_id": "https://openalex.org/W2145071552",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Rigorous Floating-Point Round-Off Error Analysis in PRECiSA 4.0.",
+    "authors": [
+      "Laura Titolo",
+      "Mariano M. Moscato",
+      "Marco A. Feliú",
+      "Paolo Masci 0001",
+      "César A. Muñoz"
+    ],
+    "venue": "FM",
+    "year": 2024,
+    "abstract": "Abstract Small round-off errors in safety-critical systems can lead to catastrophic consequences. In this context, determining if the result computed by a floating-point program is accurate enough with respect to its ideal real-number counterpart is essential. This paper presents PRECiSA 4.0, a tool that rigorously estimates the accumulated round-off error of a floating-point program. PRECiSA 4.0 combines static analysis, optimization techniques, and theorem proving to provide a modular approach for computing a provably correct round-off error estimation. PRECiSA 4.0 adds several features to previous versions of the tool that enhance its applicability and performance. These features include support for data collections such as lists, records, and tuples; support for recursion schemas; an updated floating-point formalization that closely characterizes the IEEE-754 standard; an efficient and modular analysis of function calls that improves the performances for large programs; and a new user interface integrated into Visual Studio Code.",
+    "citation_count": 1,
+    "reference_count": 41,
+    "url": "https://dblp.org/rec/conf/fm/TitoloMFMM24",
+    "dblp_key": "conf/fm/TitoloMFMM24",
+    "source_id": "https://openalex.org/W4402497238",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Automated Repair of Information Flow Security in Android Implicit Inter-App Communication.",
+    "authors": [
+      "Abhishek Tiwari 0001",
+      "Jyoti Prakash",
+      "Zhen Dong",
+      "Carlo A. Furia"
+    ],
+    "venue": "FM",
+    "year": 2024,
+    "abstract": "With the integration of mobile devices into daily life, smartphones are privy to increasing amounts of sensitive information. Sophisticated mobile malware, particularly Android malware, acquire or utilize such data without user consent. It is therefore essential to devise effective techniques to analyze and detect these threats. This article presents a comprehensive survey on leading Android malware analysis and detection techniques, and their effectiveness against evolving malware. This article categorizes systems by methodology and date to evaluate progression and weaknesses. This article also discusses evaluations of industry solutions, malware statistics, and malware evasion techniques and concludes by supporting future research paths.",
+    "citation_count": 352,
+    "reference_count": 145,
+    "url": "https://dblp.org/rec/conf/fm/TiwariPDF24",
+    "dblp_key": "conf/fm/TiwariPDF24",
+    "source_id": "https://openalex.org/W2575599800",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Chamelon : A Delta-Debugger for OCaml.",
+    "authors": [
+      "Milla Valnet",
+      "Nathanaëlle Courant",
+      "Guillaume Bury",
+      "Pierre Chambart",
+      "Vincent Laviron"
+    ],
+    "venue": "FM",
+    "year": 2024,
+    "abstract": "Abstract Tools that manipulate OCaml code can sometimes fail even on correct programs. Identifying and understanding the cause of the error usually involves manually reducing the size of the program, so as to obtain a shorter program causing the same error—a long, sometimes complex and rarely interesting task. Our work consists in automating this task using a minimiser, or delta-debugger . To do so, we propose a list of unitary heuristics, i.e. small-scale reductions, applied through a dichotomy-based state-of-the-art algorithm. These proposals are implemented in the free Chamelon tool. Although designed to assist the development of an OCaml compiler, Chamelon can be adapted to all kinds of projects that manipulate OCaml code. It can analyse multifile projects and efficiently minimise real-world programs, reducing their size by one to several orders of magnitude. It is currently used to assist the industrial development of the flambda2 optimising compiler.",
+    "citation_count": 0,
+    "reference_count": 8,
+    "url": "https://dblp.org/rec/conf/fm/ValnetCBCL24",
+    "dblp_key": "conf/fm/ValnetCBCL24",
+    "source_id": "https://openalex.org/W4402496273",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "UnsafeCop: Towards Memory Safety for Real-World Unsafe Rust Code with Practical Bounded Model Checking.",
+    "authors": [
+      "Minghua Wang",
+      "Jingling Xue",
+      "Lin Huang 0005",
+      "Yuan Zi",
+      "Tao Wei 0002"
+    ],
+    "venue": "FM",
+    "year": 2024,
+    "abstract": "Abstract Rust has gained popularity as a safer alternative to C/C++ for low-level programming due to its memory-safety features and minimal runtime overhead. However, the use of the “unsafe” keyword allows developers to bypass safety guarantees, posing memory-safety risks. Bounded Model Checking (BMC) is commonly used to detect memory-safety problems, but it has limitations for large-scale programs, as it can only detect bugs within a bounded number of executions. In this paper, we introduce UnsafeCop that utilizes and enhances BMC for analyzing memory safety in real-world unsafe Rust code. Our methodology incorporates harness design, loop bound inference, and both loop and function stubbing for comprehensive analysis. We optimize verification efficiency through a strategic function verification order, leveraging both types of stubbing. We conducted a case study on TECC (Trusted-Environment-based Cryptographic Computing), a proprietary framework consisting of 30,174 lines of Rust code, including 3,019 lines of unsafe Rust code, developed by Ant Group. Experimental results demonstrate that UnsafeCop effectively detects and verifies dozens of memory safety issues, reducing verification time by 73.71% compared to the traditional non-stubbing approach, highlighting its practical effectiveness.",
+    "citation_count": 0,
+    "reference_count": 21,
+    "url": "https://dblp.org/rec/conf/fm/WangXHZW24",
+    "dblp_key": "conf/fm/WangXHZW24",
+    "source_id": "https://openalex.org/W4402496138",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "AGVTS: Automated Generation and Verification of Temporal Specifications for Aeronautics SCADE Models.",
+    "authors": [
+      "Hanfeng Wang",
+      "Zhibin Yang",
+      "Yong Zhou",
+      "Xilong Wang",
+      "Weilin Deng",
+      "Wei Li"
+    ],
+    "venue": "FM",
+    "year": 2024,
+    "abstract": "Abstract SCADE is both a formal language and a model-based development environment, widely used to build and verify the models of safety-critical system (SCS). The SCADE Design Verifier (DV) provides SAT-based verification. However, DV cannot adequately express complex temporal specifications, and it may fail due to complexity problems such as floating numbers which are often used in the aeronautics domain. In addition, manually writing temporal specifications is not only time-consuming but also error-prone. To address these challenges, we propose an AGVTS method that can automate the task of generating temporal specifications and verifying aeronautics SCADE models. At first, we define a modular pattern language for precisely expressing Chinese natural language requirements. Then, we present a rule-based translation augmented with BERT, which translates restricted requirements into LTL and CTL. In addition, SCADE model verification is achieved by transforming it into nuXmv which supports both SMT-based and SAT-based verification. Finally, we illustrate a successful application of our methodology with an ejection seat control system, and convince our industrial partners of the usefulness of formal methods for industrial systems.",
+    "citation_count": 2,
+    "reference_count": 23,
+    "url": "https://dblp.org/rec/conf/fm/WangYZWDL24",
+    "dblp_key": "conf/fm/WangYZWDL24",
+    "source_id": "https://openalex.org/W4402496219",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Adversarial Robustness Certification for Bayesian Neural Networks.",
+    "authors": [
+      "Matthew Wicker",
+      "Andrea Patane",
+      "Luca Laurenti",
+      "Marta Kwiatkowska"
+    ],
+    "venue": "FM",
+    "year": 2024,
+    "abstract": "With the broader and highly successful usage of machine learning (ML) in industry and the sciences, there has been a growing demand for explainable artificial intelligence (XAI). Interpretability and explanation methods for gaining a better understanding of the problem-solving abilities and strategies of nonlinear ML, in particular, deep neural networks, are, therefore, receiving increased attention. In this work, we aim to: 1) provide a timely overview of this active emerging field, with a focus on “post hoc” explanations, and explain its theoretical foundations; 2) put interpretability algorithms to a test both from a theory and comparative evaluation perspective using extensive simulations; 3) outline best practice aspects, i.e., how to best include interpretation methods into the standard usage of ML; and 4) demonstrate successful usage of XAI in a representative selection of application scenarios. Finally, we discuss challenges and possible future directions of this exciting foundational field of ML.",
+    "citation_count": 1315,
+    "reference_count": 320,
+    "url": "https://dblp.org/rec/conf/fm/WickerPLK24",
+    "dblp_key": "conf/fm/WickerPLK24",
+    "source_id": "https://openalex.org/W3132191748",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "On Completeness of SDP-Based Barrier Certificate Synthesis over Unbounded Domains.",
+    "authors": [
+      "Hao Wu 0085",
+      "Shenghua Feng",
+      "Ting Gan",
+      "Jie Wang 0037",
+      "Bican Xia",
+      "Naijun Zhan"
+    ],
+    "venue": "FM",
+    "year": 2024,
+    "abstract": "Abstract Barrier certificates, serving as differential invariants that witness system safety, play a crucial role in the verification of cyber-physical systems (CPS). Prevailing computational methods for synthesizing barrier certificates are based on semidefinite programming (SDP) by exploiting Putinar Positivstellensatz . Consequently, these approaches are limited by the Archimedean condition , which requires all variables to be bounded, i.e., systems are defined over bounded domains. For systems over unbounded domains, unfortunately, existing methods become incomplete and may fail to identify potential barrier certificates. In this paper, we address this limitation for the unbounded cases. We first give a complete characterization of polynomial barrier certificates by using homogenization , a recent technique in the optimization community to reduce an unbounded optimization problem to a bounded one. Furthermore, motivated by this formulation, we introduce the definition of homogenized systems and propose a complete characterization of a family of non-polynomial barrier certificates with more expressive power. Experimental results demonstrate that our two approaches are more effective while maintaining a comparable level of efficiency.",
+    "citation_count": 3,
+    "reference_count": 45,
+    "url": "https://dblp.org/rec/conf/fm/WuFGWXZ24",
+    "dblp_key": "conf/fm/WuFGWXZ24",
+    "source_id": "https://openalex.org/W4402496158",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Nonlinear Craig Interpolant Generation Over Unbounded Domains by Separating Semialgebraic Sets.",
+    "authors": [
+      "Hao Wu 0085",
+      "Jie Wang 0037",
+      "Bican Xia",
+      "Xiakun Li",
+      "Naijun Zhan",
+      "Ting Gan"
+    ],
+    "venue": "FM",
+    "year": 2024,
+    "abstract": "Abstract Interpolation-based techniques become popular in recent years, as they can improve the scalability of existing verification techniques due to their inherent modularity and local reasoning capabilities. Synthesizing Craig interpolants is the cornerstone of these techniques. In this paper, we investigate nonlinear Craig interpolant synthesis for two polynomial formulas of the general form, essentially corresponding to the underlying mathematical problem to separate two disjoint semialgebraic sets. By combining the homogenization approach with existing techniques, we prove the existence of a novel class of non-polynomial interpolants called semialgebraic interpolants. These semialgebraic interpolants subsume polynomial interpolants as a special case. To the best of our knowledge, this is the first existence result of this kind. Furthermore, we provide complete sum-of-squares characterizations for both polynomial and semialgebraic interpolants, which can be efficiently solved as semidefinite programs. Examples are provided to demonstrate the effectiveness and efficiency of our approach.",
+    "citation_count": 2,
+    "reference_count": 45,
+    "url": "https://dblp.org/rec/conf/fm/WuWXLZG24",
+    "dblp_key": "conf/fm/WuWXLZG24",
+    "source_id": "https://openalex.org/W4402425164",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Combining Classical and Probabilistic Independence Reasoning to Verify the Security of Oblivious Algorithms.",
+    "authors": [
+      "Pengbo Yan 0001",
+      "Toby Murray",
+      "Olga Ohrimenko",
+      "Van-Thuan Pham",
+      "Robert Sison"
+    ],
+    "venue": "FM",
+    "year": 2024,
+    "abstract": "Abstract We consider the problem of how to verify the security of probabilistic oblivious algorithms formally and systematically. Unfortunately, prior program logics fail to support a number of complexities that feature in the semantics and invariants needed to verify the security of many practical probabilistic oblivious algorithms. We propose an approach based on reasoning over perfectly oblivious approximations, using a program logic that combines both classical Hoare logic reasoning and probabilistic independence reasoning to support all the needed features. We formalise and prove our new logic sound in Isabelle/HOL and apply our approach to formally verify the security of several challenging case studies beyond the reach of prior methods for proving obliviousness.",
+    "citation_count": 2,
+    "reference_count": 29,
+    "url": "https://dblp.org/rec/conf/fm/YanMOPS24",
+    "dblp_key": "conf/fm/YanMOPS24",
+    "source_id": "https://openalex.org/W4402425165",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Partially Observable Stochastic Games with Neural Perception Mechanisms.",
+    "authors": [
+      "Rui Yan 0002",
+      "Gabriel Santos",
+      "Gethin Norman",
+      "David Parker 0001",
+      "Marta Kwiatkowska"
+    ],
+    "venue": "FM",
+    "year": 2024,
+    "abstract": "Abstract Stochastic games are a well established model for multi-agent sequential decision making under uncertainty. In practical applications, though, agents often have only partial observability of their environment. Furthermore, agents increasingly perceive their environment using data-driven approaches such as neural networks trained on continuous data. We propose the model of neuro-symbolic partially-observable stochastic games (NS-POSGs), a variant of continuous-space concurrent stochastic games that explicitly incorporates neural perception mechanisms. We focus on a one-sided setting with a partially-informed agent using discrete, data-driven observations and another, fully-informed agent. We present a new method, called one-sided NS-HSVI, for approximate solution of one-sided NS-POSGs, which exploits the piecewise constant structure of the model. Using neural network pre-image analysis to construct finite polyhedral representations and particle-based representations for beliefs, we implement our approach and illustrate its practical applicability to the analysis of pedestrian-vehicle and pursuit-evasion scenarios.",
+    "citation_count": 2,
+    "reference_count": 23,
+    "url": "https://dblp.org/rec/conf/fm/YanSNPK24",
+    "dblp_key": "conf/fm/YanSNPK24",
+    "source_id": "https://openalex.org/W4402425266",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "CauMon: An Informative Online Monitor for Signal Temporal Logic.",
+    "authors": [
+      "Zhenya Zhang 0001",
+      "Jie An 0001",
+      "Paolo Arcaini",
+      "Ichiro Hasuo"
+    ],
+    "venue": "FM",
+    "year": 2024,
+    "abstract": "Abstract In this paper, we present a tool for monitoring the traces of cyber-physical systems (CPS) at runtime, with respect to Signal Temporal Logic (STL) specifications. Our tool is based on the recent advances of causation monitoring , which reports not only whether an executing trace violates the specification, but also how relevant the increment of the trace at each instant is to the specification violation. In this way, it can deliver more information about system evolution than classic online robust monitors. Moreover, by adapting two dynamic programming strategies, our implementation significantly improves the efficiency of causation monitoring, allowing its deployment in practice. The tool is implemented as a executable and can be easily adapted to monitor CPS in different formalisms. We evaluate the efficiency of the proposed monitoring tool, and demonstrate its superiority over existing robust monitors in terms of the information it can deliver about system evolution.",
+    "citation_count": 3,
+    "reference_count": 28,
+    "url": "https://dblp.org/rec/conf/fm/ZhangAAH24",
+    "dblp_key": "conf/fm/ZhangAAH24",
+    "source_id": "https://openalex.org/W4402496155",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Certified Quantization Strategy Synthesis for Neural Networks.",
+    "authors": [
+      "Yedi Zhang",
+      "Guangke Chen",
+      "Fu Song",
+      "Jun Sun 0001",
+      "Jin Song Dong 0001"
+    ],
+    "venue": "FM",
+    "year": 2024,
+    "abstract": "Abstract Quantization plays an important role in deploying neural networks on embedded, real-time systems with limited computing and storage resources (e.g., edge devices). It significantly reduces the model storage cost and improves inference efficiency by using fewer bits to represent the parameters. However, it was recently shown that critical properties may be broken after quantization, such as robustness and backdoor-freeness. In this work, we introduce the first method for synthesizing quantization strategies that verifiably maintain desired properties after quantization, leveraging a key insight that quantization leads to a data distribution shift in each layer. We propose to compute the preimage for each layer based on which the preceding layer is quantized, ensuring that the quantized reachable region of the preceding layer remains within the preimage. To tackle the challenge of computing the exact preimage, we propose an MILP-based method to compute its under-approximation. We implement our method into a tool and demonstrate its effectiveness and efficiency by providing certified quantization that successfully preserves model robustness and backdoor-freeness.",
+    "citation_count": 4,
+    "reference_count": 45,
+    "url": "https://dblp.org/rec/conf/fm/ZhangCSSD24",
+    "dblp_key": "conf/fm/ZhangCSSD24",
+    "source_id": "https://openalex.org/W4402397315",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Tolerance of Reinforcement Learning Controllers Against Deviations in Cyber Physical Systems.",
+    "authors": [
+      "Changjian Zhang",
+      "Parv Kapoor",
+      "Rômulo Meira-Góes",
+      "David Garlan",
+      "Eunsuk Kang",
+      "Akila Ganlath",
+      "Shatadal Mishra",
+      "Nejib Ammar"
+    ],
+    "venue": "FM",
+    "year": 2024,
+    "abstract": "Abstract Cyber-physical systems (CPS) with reinforcement learning (RL)-based controllers are increasingly being deployed in complex physical environments such as autonomous vehicles, the Internet-of-Things (IoT), and smart cities. An important property of a CPS is tolerance ; i.e., its ability to function safely under possible disturbances and uncertainties in the actual operation. In this paper, we introduce a new, expressive notion of tolerance that describes how well a controller is capable of satisfying a desired system requirement, specified using Signal Temporal Logic (STL) , under possible deviations in the system. Based on this definition, we propose a novel analysis problem, called the tolerance falsification problem , which involves finding small deviations that result in a violation of the given requirement. We present a novel, two-layer simulation-based analysis framework and a novel search heuristic for finding small tolerance violations. To evaluate our approach, we construct a set of benchmark problems where system parameters can be configured to represent different types of uncertainties and disturbances in the system. Our evaluation shows that our falsification approach and heuristic can effectively find small tolerance violations.",
+    "citation_count": 1,
+    "reference_count": 35,
+    "url": "https://dblp.org/rec/conf/fm/ZhangKMGKGMA24",
+    "dblp_key": "conf/fm/ZhangKMGKGMA24",
+    "source_id": "https://openalex.org/W4402496127",
+    "source": null,
+    "source_url": null
+  }
+]

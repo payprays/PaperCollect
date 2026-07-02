@@ -222,6 +222,28 @@ def build_queue_items(conferences: list, years: list[int] | None = None) -> list
     return items
 
 
+def build_queue_items_for_tasks(conference_years: list[tuple[Any, int]]) -> list[dict[str, Any]]:
+    """Build queue items from explicit conference/year pairs."""
+    items: list[dict[str, Any]] = []
+    for conference, year in conference_years:
+        items.append(
+            {
+                "task_id": uuid.uuid4().hex[:8],
+                "conference_id": conference.id,
+                "display_name": conference.display_name,
+                "year": int(year),
+                "status": "pending",
+                "paper_count": None,
+                "output_path": None,
+                "feed_url": None,
+                "error": None,
+                "started_at": None,
+                "finished_at": None,
+            }
+        )
+    return items
+
+
 def queue_task_summary(queue: list[dict[str, Any]]) -> dict[str, int]:
     """Count tasks by status."""
     summary: dict[str, int] = {

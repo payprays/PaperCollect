@@ -130,27 +130,88 @@ class TestDBLPClientSP(unittest.TestCase):
         self.assertEqual(papers[0].title, "NeurIPS Fallback Paper.")
         self.assertEqual(mock_get.call_args_list[0].args[0], "https://dblp.org/db/conf/nips/neurips2025.xml")
         self.assertEqual(mock_get.call_args_list[1].args[0], "https://dblp.org/search/publ/api")
-        self.assertEqual(mock_get.call_args_list[1].kwargs["params"]["q"], "venue:NeurIPS year:2025")
+        self.assertEqual(mock_get.call_args_list[1].kwargs["params"]["q"], "stream:conf/nips: year:2025")
+
+    @patch('src.clients.dblp_client.requests.Session.get')
+    def test_fetch_papers_fallback_passes_dblp_stream_to_search(self, mock_get):
+        """When TOC returns 404, the search fallback should use stream query, not venue query."""
+        mock_get.side_effect = [
+            _mock_text_response("", status_code=404),
+            _mock_json_response(
+                {
+                    "result": {
+                        "hits": {
+                            "hit": [
+                                {
+                                    "info": {
+                                        "title": "OOPSLA Paper.",
+                                        "authors": {"author": [{"text": "A. Researcher"}]},
+                                        "year": "2023",
+                                        "venue": "Proc. ACM Program. Lang.",
+                                        "key": "conf/oopsla/example23",
+                                        "url": "https://dblp.org/rec/conf/oopsla/example23",
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                }
+            ),
+        ]
+
+        papers = self.client.fetch_papers(
+            "OOPSLA", 2023,
+            dblp_stream="conf/oopsla",
+            venue_aliases=["OOPSLA", "Proc. ACM Program. Lang."],
+        )
+
+        self.assertEqual(len(papers), 1)
+        self.assertEqual(papers[0].venue, "Proc. ACM Program. Lang.")
+        # Fallback must use stream query, not venue query
+        self.assertEqual(mock_get.call_args_list[1].kwargs["params"]["q"], "stream:conf/oopsla: year:2023")
+
+    @patch('src.clients.dblp_client.requests.Session.get')
+    def test_stream_search_trusts_stream_scope_over_venue_label(self, mock_get):
+        """Stream queries should not drop valid stream records with non-exact venue labels."""
+        mock_get.return_value = _mock_json_response(
+            {
+                "result": {
+                    "hits": {
+                        "hit": [
+                            _search_hit(1, venue="Findings of ACL"),
+                            _search_hit(2, venue="ACL (1)"),
+                        ]
+                    }
+                }
+            }
+        )
+
+        papers = self.client._fetch_from_search("ACL", 2022, dblp_query="stream:conf/acl: year:{year}")
+
+        self.assertEqual(len(papers), 2)
 
     @patch('src.clients.dblp_client.requests.Session.get')
     def test_search_paginates_beyond_dblp_page_size(self, mock_get):
+        requested_page_size = 100
+        sent_page_size = 100
+        total = 101
         first_page = {
             "result": {
                 "hits": {
-                    "@total": "1001",
-                    "@sent": "1000",
+                    "@total": str(total),
+                    "@sent": str(sent_page_size),
                     "@first": "0",
-                    "hit": [_search_hit(index) for index in range(1000)],
+                    "hit": [_search_hit(index) for index in range(sent_page_size)],
                 }
             }
         }
         second_page = {
             "result": {
                 "hits": {
-                    "@total": "1001",
+                    "@total": str(total),
                     "@sent": "1",
-                    "@first": "1000",
-                    "hit": [_search_hit(1000)],
+                    "@first": str(sent_page_size),
+                    "hit": [_search_hit(sent_page_size)],
                 }
             }
         }
@@ -161,9 +222,31 @@ class TestDBLPClientSP(unittest.TestCase):
 
         papers = self.client._fetch_from_search("ICSE", 2025, dblp_stream="conf/icse", venue_aliases=["ICSE"])
 
-        self.assertEqual(len(papers), 1001)
-        self.assertEqual([call.kwargs["params"]["f"] for call in mock_get.call_args_list], [0, 1000])
-        self.assertTrue(all(call.kwargs["params"]["h"] == 1000 for call in mock_get.call_args_list))
+        self.assertEqual(len(papers), 101)
+        self.assertEqual([call.kwargs["params"]["f"] for call in mock_get.call_args_list], [0, 100])
+        self.assertTrue(all(call.kwargs["params"]["h"] == requested_page_size for call in mock_get.call_args_list))
+
+    @patch('src.clients.dblp_client.requests.Session.get')
+    def test_search_raises_when_later_page_fails_instead_of_returning_partial_results(self, mock_get):
+        first_page = {
+            "result": {
+                "hits": {
+                    "@total": "101",
+                    "@sent": "100",
+                    "@first": "0",
+                    "hit": [_search_hit(index) for index in range(100)],
+                }
+            }
+        }
+        mock_get.side_effect = [
+            _mock_json_response(first_page),
+            requests.Timeout("read timed out"),
+        ]
+
+        with self.assertRaisesRegex(DBLPFetchError, "Could not fetch DBLP search data"):
+            self.client._fetch_from_search("ICSE", 2025, dblp_stream="conf/icse", venue_aliases=["ICSE"])
+
+        self.assertEqual([call.kwargs["params"]["f"] for call in mock_get.call_args_list], [0, 100])
 
     @patch('src.clients.dblp_client.requests.Session.get')
     def test_fetch_papers_raises_when_search_request_fails(self, mock_get):

@@ -20,17 +20,21 @@ papercollect-collect = "main:main"
 papercollect-index = "index_papers:main"
 papercollect-search = "search_papers:main"
 papercollect-web = "web:main"
+papercollect-backfill-limited = "backfill_limited_papers:main"
+papercollect-backfill-metadata = "backfill_metadata:main"
 pc-collect = "main:main"
 pc-index = "index_papers:main"
 pc-search = "search_papers:main"
 pc-web = "web:main"
+pc-backfill-limited = "backfill_limited_papers:main"
+pc-backfill-metadata = "backfill_metadata:main"
 
 [build-system]
 requires = ["setuptools>=69"]
 build-backend = "setuptools.build_meta"
 
 [tool.setuptools]
-py-modules = ["index_papers", "main", "search_papers", "web"]
+py-modules = ["backfill_limited_papers", "backfill_metadata", "index_papers", "main", "search_papers", "web"]
 packages = [
     "src",
     "src.clients",
@@ -50,6 +54,7 @@ include-package-data = true
 
 [dependency-groups]
 dev = [
+    "playwright>=1.60.0",
     "pytest>=9.0.3",
 ]
 

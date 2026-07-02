@@ -52,10 +52,9 @@ class MetadataManager:
             except Exception as e:
                 print(f"Error in source {source.__class__.__name__}: {e}")
 
-        # Only if all sources were tried and all of them were rate limited, sleep 5min
+        # All sources rate limited — skip this paper instead of sleeping
         if sources_tried > 0 and sources_rate_limited == sources_tried:
-             print(f"All sources rate limited for paper {paper.title[:30]}. Sleeping for 5 minutes...")
-             time.sleep(300)
+             print(f"All sources rate limited for paper {paper.title[:30]}, skipping.")
 
         return paper
 

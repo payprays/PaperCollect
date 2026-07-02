@@ -1,0 +1,1048 @@
+[
+  {
+    "title": "Virtualization So Light, it Floats! Accelerating Floating Point Virtualization.",
+    "authors": [
+      "Nick Wanninger",
+      "Nadharm Dhiantravan",
+      "Peter A. Dinda"
+    ],
+    "venue": "HPDC",
+    "year": 2025,
+    "abstract": "Profile hidden Markov models (profile HMMs) and probabilistic inference methods have made important contributions to the theory of sequence database homology search. However, practical use of profile HMM methods has been hindered by the computational expense of existing software implementations. Here I describe an acceleration heuristic for profile HMMs, the \"multiple segment Viterbi\" (MSV) algorithm. The MSV algorithm computes an optimal sum of multiple ungapped local alignment segments using a striped vector-parallel approach previously described for fast Smith/Waterman alignment. MSV scores follow the same statistical distribution as gapped optimal local alignment scores, allowing rapid evaluation of significance of an MSV score and thus facilitating its use as a heuristic filter. I also describe a 20-fold acceleration of the standard profile HMM Forward/Backward algorithms using a method I call \"sparse rescaling\". These methods are assembled in a pipeline in which high-scoring MSV hits are passed on for reanalysis with the full HMM Forward/Backward algorithm. This accelerated pipeline is implemented in the freely available HMMER3 software package. Performance benchmarks show that the use of the heuristic MSV filter sacrifices negligible sensitivity compared to unaccelerated profile HMM searches. HMMER3 is substantially more sensitive and 100- to 1000-fold faster than HMMER2. HMMER3 is now about as fast as BLAST for protein searches.",
+    "citation_count": 7448,
+    "reference_count": 46,
+    "url": "https://doi.org/10.1145/3731545.3731584",
+    "dblp_key": "conf/hpdc/WanningerDD25",
+    "source_id": "https://openalex.org/W2138122982",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "FloatGuard: Efficient Whole-Program Detection of Floating-Point Exceptions in AMD GPUs.",
+    "authors": [
+      "Dolores Miao",
+      "Ignacio Laguna",
+      "Cindy Rubio-González"
+    ],
+    "venue": "HPDC",
+    "year": 2025,
+    "abstract": "Porting scientific applications across different GPU architectures introduces floating-point arithmetic variations that can affect reproducibility, making efficient detection and mitigation of exceptions like NaNs and infinities crucial. While NVIDIA has dominated the GPU market, AMD GPUs are increasingly used in HPC systems as well, yet existing floating-point exception detection frameworks focus on NVIDIA, leaving a gap for AMD GPUs. We present FloatGuard, the first framework for efficiently detecting floating-point exceptions in HIP programs running on AMD GPUs. FloatGuard leverages AMD GPU hardware registers to detect floating-point exceptions, overcoming the limitations of AMD's built-in trapping mechanisms through a novel algorithm that combines assembly- and source-level instrumentation with debugger-guided execution. We evaluate FloatGuard on 565 HIP programs, detecting floatingpoint exceptions in 507 cases with a slowdown ratio that increases at most linearly with the number of exceptions discovered. Furthermore, we analyze the impact of compiler optimizations on exceptions trapped, and compare FloatGuard with the state-of-the-art tool for detecting floating-point exceptions in CUDA programs, which further reveals key differences between AMD and NVIDIA's floating-point exception behaviors.",
+    "citation_count": 0,
+    "reference_count": 16,
+    "url": "https://doi.org/10.1145/3731545.3731586",
+    "dblp_key": "conf/hpdc/MiaoLR25",
+    "source_id": "https://openalex.org/W4414209625",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "LiteForm: Lightweight and Automatic Format Composition for Sparse Matrix-Matrix Multiplication on GPUs.",
+    "authors": [
+      "Zhen Peng",
+      "Polykarpos Thomadakis",
+      "Jacques A. Pienaar",
+      "Gokcen Kestor"
+    ],
+    "venue": "HPDC",
+    "year": 2025,
+    "abstract": "Graphics Processing Units (GPUs) have excelled in parallelism and high throughput for dense, regular computations in modern computing. However, sparse computations, such as sparse matrix-matrix multiplication (SpMM), are essential for large-scale, data-intensive applications, where much of the data is inherently sparse. The challenge lies in the sparsity and irregularity of sparse matrices or tensors, which makes achieving high performance on GPU architectures difficult. Consequently, the utilization of suitable sparse data formats is imperative for achieving computational efficiency. Traditional computational libraries often require input in specific formats, which may not accommodate the diversity of matrix characteristics or the varying sparse patterns within a single matrix. While some frameworks support composable formats, they often lack guidance on how to compose these formats effectively or require costly auto-tuning for optimal performance. In this paper, we introduce LiteForm, a novel, lightweight framework designed to automatically compose sparse formats for SpMM computation. We start by presenting CELL, a composable format featuring a three-level blockwise representation that optimizes sparse data for GPUs. LiteForm uses this format and composes it based on the input's characteristics. First, it employs a lightweight model trained to predict whether the CELL format will yield good performance for a given sparse input matrix. Then LiteForm uses a low-overhead predictor and an SpMM cost model to automatically configure the format according to the characteristics of the input matrix. Our experimental evaluation indicates that LiteForm achieves a geometric mean speedup of 2.06×, 1.81×, 1.77×, and 4.18× in comparison to cuSPARSE, Sputnik, dgSPARSE, and TACO, respectively, and demonstrates speedups of 1.26× and 1.52× over state-of-the-art SparseTIR and STile, respectively.",
+    "citation_count": 0,
+    "reference_count": 35,
+    "url": "https://doi.org/10.1145/3731545.3731574",
+    "dblp_key": "conf/hpdc/PengTPK25",
+    "source_id": "https://openalex.org/W4414210212",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Optimization of GNN Training Through Half-precision.",
+    "authors": [
+      "Arnab Kanti Tarafder",
+      "Yidong Gong",
+      "Pradeep Kumar"
+    ],
+    "venue": "HPDC",
+    "year": 2025,
+    "abstract": "Abhinav Joshi, Ashwani Bhat, Ayush Jain, Atin Singh, Ashutosh Modi. Proceedings of the 2022 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies. 2022.",
+    "citation_count": 133,
+    "reference_count": 57,
+    "url": "https://doi.org/10.1145/3731545.3731575",
+    "dblp_key": "conf/hpdc/TarafderGK25",
+    "source_id": "https://openalex.org/W4287887917",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "SAFusion: Efficient Tensor Fusion with Sparsification Ahead for High-Performance Distributed DNN Training.",
+    "authors": [
+      "Zhangqiang Ming",
+      "Yuchong Hu",
+      "Xinjue Zheng",
+      "Wenxiang Zhou",
+      "Dan Feng 0001"
+    ],
+    "venue": "HPDC",
+    "year": 2025,
+    "abstract": "Distributed deep neural networks (DNN) training systems deployed across workers have been widely used in various domains, while the communication overhead among workers for synchronizing gradient tensors often becomes the performance bottleneck. To optimize communication efficiency, state-of-the-art studies often apply both two techniques: i) gradient sparsification compression, which truncates the gradient to its largest elements to reduce the communication traffic, and ii) tensor fusion, which merges multiple gradient tensors within a fusion buffer to transmit them together to reduce the communication startup overhead. However, we find that existing studies often apply gradient sparsification after tensor fusion (we call sparsification-behind tensor fusion), which leads to a fact that a lot of fused gradient tensors are missed after the sparsification, thus impairing the convergence performance.",
+    "citation_count": 0,
+    "reference_count": 24,
+    "url": "https://doi.org/10.1145/3731545.3731581",
+    "dblp_key": "conf/hpdc/MingHZZ025",
+    "source_id": "https://openalex.org/W4414210491",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "ModelX : A Novel Transfer Learning Approach Across Heterogeneous Datasets.",
+    "authors": [
+      "Arunavo Dey",
+      "Neil Antony",
+      "Aakash Raj Dhakal",
+      "Kowshik Thopalli",
+      "Jayaraman J. Thiagarajan",
+      "Tapasya Patki",
+      "Aniruddha Marathe",
+      "Tom Scogland",
+      "Jae-Seung Yeom",
+      "Tanzima Z. Islam"
+    ],
+    "venue": "HPDC",
+    "year": 2025,
+    "abstract": "Leveraging an existing performance model to predict the runtime of a new application on a new system can save days and weeks of data collection time. However, knowledge transfer between High Performance Computing (HPC) systems can be challenging due to data heterogeneity caused by differences in data collection methods, architectural or application-specific individuality. This results in (1) sets of performance features that have significantly different names, orders, or the number of performance features that do not match between two datasets (heterogeneous domains), or (2) distribution shifts between datasets although their feature names match (homogeneous domains). While existing transfer learning techniques can handle mild distribution shifts, they fail to transfer knowledge when the source and target features do not match. This work introduces a novel transfer learning methodology-Cross Prediction Model (ModelX), which overcomes the large distribution discrepancy between homogeneous domains and enables transfer learning between heterogeneous domains. Extensive evaluations show that ModelX outperforms traditional transfer learning methods for all experiments using 11 HPC and 4 Machine Learning (ML) datasets. To the best of our knowledge, this is the first methodology to enable knowledge transfer between two heterogeneous domains with no matching features. Finally, we demonstrate an application of ModelX to an HPC job scheduling scenario using real-world job traces where it helps to reduce the job turnaround time of a set of jobs by 71%.",
+    "citation_count": 1,
+    "reference_count": 33,
+    "url": "https://doi.org/10.1145/3731545.3731593",
+    "dblp_key": "conf/hpdc/DeyADTTPMSYI25",
+    "source_id": "https://openalex.org/W4414210630",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "FT2: First-Token-Inspired Online Fault Tolerance on Critical Layers for Generative Large Language Models.",
+    "authors": [
+      "Yu Sun",
+      "Zhu Zhu",
+      "Cherish Mulpuru",
+      "Roberto Gioiosa",
+      "Zhao Zhang 0007",
+      "Bo Fang 0002",
+      "Lishan Yang 0001"
+    ],
+    "venue": "HPDC",
+    "year": 2025,
+    "abstract": "Generative Large Language Models (LLMs) are deployed on large-scale computing systems, where such tasks unavoidably suffer from soft errors, leading to quality degradation of content generated by LLMs. Enhancing LLM resilience is particularly challenging because of its complicated model architecture and tremendous size. State-of-the-art protections have limitations such as high overhead and incomplete coverage, and often require offline profiling.",
+    "citation_count": 2,
+    "reference_count": 33,
+    "url": "https://doi.org/10.1145/3731545.3731570",
+    "dblp_key": "conf/hpdc/SunZMG00Y25",
+    "source_id": "https://openalex.org/W4414210324",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Optimizing Data Distribution and Kernel Performance for Efficient Training of Chemistry Foundation Models: A Case Study with MACE.",
+    "authors": [
+      "Jesun Sahariar Firoz",
+      "Franco Pellegrini",
+      "Mario Geiger",
+      "Darren Hsu",
+      "Jenna A. Bilbrey",
+      "Han-Yi Chou",
+      "Maximilian Stadler",
+      "Markus Höhnerbach",
+      "Tingyu Wang 0001",
+      "Dejun Lin",
+      "Emine Küçükbenli",
+      "Henry W. Sprueill",
+      "Ilyes Batatia",
+      "Sotiris S. Xantheas",
+      "MalSoon Lee",
+      "Christopher J. Mundy",
+      "Gábor Csányi",
+      "Justin S. Smith",
+      "Ponnuswamy Sadayappan",
+      "Sutanay Choudhury"
+    ],
+    "venue": "HPDC",
+    "year": 2025,
+    "abstract": "Chemistry Foundation Models (CFMs) that leverage Graph Neural Networks (GNNs) operating on 3D molecular graph structures are becoming indispensable tools for computational chemists and materials scientists. These models facilitate the understanding of matter and the discovery of new molecules and materials. In contrast to GNNs operating on large homogeneous graphs, GNNs used by CFMs process a large number of geometric graphs of varying sizes, requiring different optimization strategies than those developed for large homogeneous GNNs. This paper presents optimizations for two critical phases of CFM training: data distribution and model training, targeting MACE - a state-of-the-art CFM. We address the challenge of load balancing in data distribution by formulating it as a multi-objective bin packing problem. We propose an iterative algorithm that provides a highly effective, fast, and practical solution, ensuring efficient data distribution. For the training phase, we identify symmetric tensor contraction as the key computational kernel in MACE and optimize this kernel to improve the overall performance. Our combined approach of balanced data distribution and kernel optimization significantly enhances the training process of MACE. Experimental results demonstrate a substantial speedup, reducing per-epoch execution time for training from 12 to 2 minutes on 740 GPUs with a 2.6M sample dataset.",
+    "citation_count": 1,
+    "reference_count": 25,
+    "url": "https://doi.org/10.1145/3731545.3731594",
+    "dblp_key": "conf/hpdc/FirozPGHBCSHWLK25",
+    "source_id": "https://openalex.org/W4414210525",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "TSUE: A Two-Stage Data Update Method for an Erasure Coded Cluster File System.",
+    "authors": [
+      "Zheng Wei",
+      "Jing Xing",
+      "Yida Gu",
+      "Wenjing Huang 0002",
+      "Dong Dai 0001",
+      "Guangming Tan",
+      "Dingwen Tao"
+    ],
+    "venue": "HPDC",
+    "year": 2025,
+    "abstract": "Compared to replication-based storage systems, erasure-coded storage incurs significantly higher overhead during data updates. To address this issue, various parity logging methods have been proposed. Nevertheless, due to the long update path and substantial amount of random I/O involved in erasure code update processes, the resulting long latency and low throughput often fail to meet the requirements of high performance applications. To this end, we propose a two-stage data update method called TSUE. TSUE divides the update process into a synchronous stage that records updates in a data log, and an asynchronous stage that recycles the log in real-time. TSUE effectively reduces update latency by transforming random I/O into sequential I/O, and it significantly reduces recycle overhead by utilizing a three-layer log and the spatio-temporal locality of access patterns. In SSDs cluster, TSUE significantly improves update performance, achieving improvements of 7.6× under Ali-Cloud trace, 5× under Ten-Cloud trace, while it also extends the SSD's lifespan by up to 13× through reducing the frequencies of reads/writes and of erase operations.",
+    "citation_count": 0,
+    "reference_count": 24,
+    "url": "https://doi.org/10.1145/3731545.3731577",
+    "dblp_key": "conf/hpdc/WeiXGHDTT25",
+    "source_id": "https://openalex.org/W4414210458",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "AutoSSD: CXL-Enhanced Autonomous SSDs for Low Tail Latency.",
+    "authors": [
+      "Mingyao Shen",
+      "Suyash Mahar",
+      "Heewoo Kim",
+      "Joseph Izraelevitz",
+      "Steven Swanson"
+    ],
+    "venue": "HPDC",
+    "year": 2025,
+    "abstract": "All-SSD RAID arrays offer high performance but suffer from long tail latencies due to background processes like garbage collection. Globally scheduling accesses to avoid busy SSDs may mitigate this problem, but such a solution presents challenges in collecting realtime data about SSD performance and tracking the location of redirected blocks.",
+    "citation_count": 1,
+    "reference_count": 15,
+    "url": "https://doi.org/10.1145/3731545.3731579",
+    "dblp_key": "conf/hpdc/ShenMKIS25",
+    "source_id": "https://openalex.org/W4414210437",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "DPU-KV: On the Benefits of DPU Offloading for In-Memory Key-Value Stores at the Edge.",
+    "authors": [
+      "Arjun Kashyap",
+      "Yuke Li 0003",
+      "Xiaoyi Lu 0001"
+    ],
+    "venue": "HPDC",
+    "year": 2025,
+    "abstract": "In-memory key-value stores (KVS) are widely used for edge data storage, where low latency and high throughput are essential. Data Processing Units (DPUs), with their low power use and offloading capabilities, suit resource-constrained edge computing. While DPUs offer a new design point for KVS, their offloading in edge environments remains underexplored and challenging. In this paper, we unveil the potential of offloading in-memory CPU-based KVS to SoC-based DPUs, specifically NVIDIA's BlueField-2 (BF-2) and BlueField-3 (BF-3), with the aim of enhancing KVS performance. We propose a principled exploration methodology of dividing a KVS (i.e., MICA) into its logical components and identifying the CPU-intensive KVS component (i.e., communication engine). Next, we perform fine-grained offloading analysis and explorations on DPUs. To maximize benefits in terms of latency and throughput from fine-grained KVS offloading on DPUs, we propose a series of significant performance optimizations, including a key-value-based queue-pair model, overlapped KV request/response processing, reduced DMA operations per KV batch, dual-communication engine, and a sharding-based design. Our key finding is that our proposed fine-grained KVS offloading designs on modern DPU architectures (i.e., BF-2 and BF-3) can provide much lower latency (up to 68%) and higher throughput (up to 36%) than MICA (CPU-only) and coarse-grained DPU offloading schemes at the edge. To our knowledge, this paper is the first to explore the performance benefits of fine-grained KVS offloading to DPUs at the edge.",
+    "citation_count": 2,
+    "reference_count": 46,
+    "url": "https://doi.org/10.1145/3731545.3731571",
+    "dblp_key": "conf/hpdc/KashyapLL25",
+    "source_id": "https://openalex.org/W4414210755",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "CarbonEdge: Leveraging Mesoscale Spatial Carbon-Intensity Variations for Low Carbon Edge Computing.",
+    "authors": [
+      "Li Wu",
+      "Walid A. Hanafy",
+      "Abel Souza",
+      "Khai Nguyen",
+      "Jan Harkes",
+      "David Irwin 0001",
+      "Mahadev Satyanarayanan",
+      "Prashant J. Shenoy"
+    ],
+    "venue": "HPDC",
+    "year": 2025,
+    "abstract": "The proliferation of latency-critical and compute-intensive edge applications is driving increases in computing demand and carbon emissions at the edge. To better understand carbon emissions at the edge, we analyze granular carbon intensity traces at intermediate \"mesoscales,\" such as within a single US state or among neighboring countries in Europe, and observe significant variations in carbon intensity at these spatial scales. Importantly, our analysis shows that carbon intensity variations, which are known to occur at large continental scales (e.g., cloud regions), also occur at much finer spatial scales, making it feasible to exploit geographic workload shifting in the edge computing context. Motivated by these findings, we propose CarbonEdge, a carbon-aware framework for edge computing that optimizes the placement of edge workloads across mesoscale edge data centers to reduce carbon emissions while meeting latency SLOs. We implement CarbonEdge and evaluate it on a real edge computing testbed and through large-scale simulations for multiple edge workloads and settings. Our experimental results on a real testbed demonstrate that CarbonEdge can reduce emissions by up to 78.7% for a regional edge deployment in central Europe. Moreover, our CDN-scale experiments show potential savings of 49.5% and 67.8% in the US and Europe, respectively, while limiting the one-way latency increase to less than 5.5 ms.",
+    "citation_count": 5,
+    "reference_count": 27,
+    "url": "https://doi.org/10.1145/3731545.3731576",
+    "dblp_key": "conf/hpdc/WuHSNHISS25",
+    "source_id": "https://openalex.org/W4414210815",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Advancing Scientific Data Compression via Cross-Field Prediction.",
+    "authors": [
+      "Youyuan Liu",
+      "Wenqi Jia 0003",
+      "Taolue Yang",
+      "Bo Jiang",
+      "Miao Yin",
+      "Sian Jin"
+    ],
+    "venue": "HPDC",
+    "year": 2025,
+    "abstract": "Scientific applications generate massive amounts of data, leading to significant storage and I/O bottlenecks. Lossy compression is a crucial technique for reducing data volume in scientific computing, balancing storage efficiency and data fidelity. Such scientific data often consists of multiple fields representing various physical metrics, which exhibit inherent correlations. However, existing compression solutions predominantly rely on local information within a single field, overlooking cross-field correlations that could enhance compression efficiency. In this paper, we introduce a novel compression framework that integrates both local and cross-field information to enhance predictive accuracy. With the help of a carefully designed neural network, our approach effectively captures complex correlations across fields, significantly improving compression ratios. Additionally, our method can rely solely on cross-field prediction to reconstruct fields, achieving extremely high compression ratios under relaxed accuracy constraints. We evaluate our approach on two real-world scientific applications across 85 data fields, demonstrating compression ratio improvements of up to 103.4% for a single field and up to 19.3% overall.",
+    "citation_count": 1,
+    "reference_count": 23,
+    "url": "https://doi.org/10.1145/3731545.3731592",
+    "dblp_key": "conf/hpdc/Liu0YJYJ25",
+    "source_id": "https://openalex.org/W4414210399",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Parameterized Algorithms for Non-uniform All-to-all.",
+    "authors": [
+      "Ke Fan",
+      "Jens Domke",
+      "Seydou Ba",
+      "Sidharth Kumar"
+    ],
+    "venue": "HPDC",
+    "year": 2025,
+    "abstract": null,
+    "citation_count": 13887,
+    "reference_count": 33,
+    "url": "https://doi.org/10.1145/3731545.3731590",
+    "dblp_key": "conf/hpdc/FanDBK25",
+    "source_id": "https://openalex.org/W1991113069",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Top-Down SBP: Turning Graph Clustering Upside Down.",
+    "authors": [
+      "Frank Wanye",
+      "Vitaliy Gleyzer",
+      "Edward K. Kao",
+      "Wu-chun Feng"
+    ],
+    "venue": "HPDC",
+    "year": 2025,
+    "abstract": "Stochastic block partitioning (SBP) is a statistical inference-based algorithm for clustering vertices within a graph. It has been shown to be statistically robust and highly accurate even on graphs with a complex structure, but its poor scalability limits its usability to smaller-sized graphs. In this manuscript we argue that one reason for its poor scalability is the agglomerative, or bottom-up, nature of SBP's algorithmic design; the agglomerative computations cause high memory usage and create a large search space that slows down statistical inference, particularly in the algorithm's initial iterations. To address this bottleneck, we propose Top-Down SBP, a novel algorithm that replaces the agglomerative (bottom-up) block merges in SBP with a block-splitting operation. This enables the algorithm to start with all vertices in one cluster and subdivide them over time into smaller clusters. We show that Top-Down SBP is up to 7.7× faster than Bottom-Up SBP without sacrificing accuracy and can process larger graphs than Bottom-Up SBP on the same hardware due to an up to 4.1× decrease in memory usage. Additionally, we adapt existing methods for accelerating Bottom-Up SBP to the Top-Down approach, leading to up to 13.2× speedup over accelerated Bottom-Up SBP and up to 403× speedup over sequential Bottom-Up SBP on 64 compute nodes. Thus, Top-Down SBP represents substantial improvements to the scalability of SBP, enabling the analysis of larger datasets on the same hardware.",
+    "citation_count": 0,
+    "reference_count": 37,
+    "url": "https://doi.org/10.1145/3731545.3731589",
+    "dblp_key": "conf/hpdc/WanyeGKF25",
+    "source_id": "https://openalex.org/W4414210300",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "F3: An FPGA-accelerated FaaS Framework.",
+    "authors": [
+      "Charalampos Mainas",
+      "Martin Lambeck",
+      "Bruno Scheufler",
+      "Laurent Bindschaedler",
+      "Atsushi Koshiba",
+      "Pramod Bhatotia"
+    ],
+    "venue": "HPDC",
+    "year": 2025,
+    "abstract": "FPGAs provide a programmable, energy-efficient, and compute-intensive acceleration substrate; thus, on the one hand, they offer a compelling solution for optimizing serverless workloads in cloud environments. On the other hand, FPGAs also introduce significant challenges that directly contradict the serverless model in the cloud, including their low-level and complex programming APIs, lack of virtualization and isolation mechanisms, high reconfiguration and communication overheads, and absence of orchestration mechanisms.",
+    "citation_count": 0,
+    "reference_count": 79,
+    "url": "https://doi.org/10.1145/3731545.3731582",
+    "dblp_key": "conf/hpdc/MainasLSBKB25",
+    "source_id": "https://openalex.org/W4414209701",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "PathFence: Reducing Cross-Path Dependencies in Microservices.",
+    "authors": [
+      "Xuhang Gu",
+      "Qingyang Wang 0001"
+    ],
+    "venue": "HPDC",
+    "year": 2025,
+    "abstract": "Maintaining low and consistent response times is crucial for mission-critical, user-facing applications (e.g., e-commerce sites and social media platforms) that are built on microservices architectures. However, through extensive benchmarking of microservice applications in cloud environments, we find that response time stability in microservices applications is fragile, with delays ranging from milliseconds to seconds, even under moderate CPU utilization level (e.g., 60%). An important cause of this instability is cross-path dependency, where multiple execution paths, triggered by different user requests, share certain common component microservices. As a result, a slowdown in one execution path (e.g., due to a transient bottleneck) can propagate and degrade the performance of other execution paths that share the same microservices. To address this challenge, we propose PathFence, a novel approach that reduces the impact of cross-path dependencies in microservices applications by isolating workloads from different execution paths at shared microservices. By dynamically allocating software resources (e.g., thread and connection pools) with the awareness of execution path and optimizing concurrency level on shared microservices, PathFence significantly improves response time stability. Based on three real-world workload traces and three representative microservices benchmarks, we show that PathFence reduces the 99th percentile response time by up to 80% and decreases the number of dropped requests by over 90%.",
+    "citation_count": 0,
+    "reference_count": 20,
+    "url": "https://doi.org/10.1145/3731545.3731583",
+    "dblp_key": "conf/hpdc/Gu025",
+    "source_id": "https://openalex.org/W4414210495",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "FluidFaaS: A Dynamic Pipelined Solution for Serverless Computing with Strong Isolation-based GPU Sharing.",
+    "authors": [
+      "Xinning Hui",
+      "Yuanchao Xu 0001",
+      "Xipeng Shen"
+    ],
+    "venue": "HPDC",
+    "year": 2025,
+    "abstract": "Prompted by the rise of artificial intelligence (AI) or machine learning (ML), more serverless workloads demand efficient GPU support. Recent years have witnessed a shift of interest from weak isolation-based methods, such as Multi-Process Service (MPS), to strong isolation-based methods, such as Multi-Instance GPU (MIG), for GPU support on serverless platforms, thanks to concerns about performance interference and security. The current MIG-based solution for serverless computing is, however, subject to severe GPU resource fragmentation and under-utilization. This paper identifies the reason as the gap between current MIG supports in serverless computing and the rigid constraints in MIG (re)configurations. It proposes FluidFaaS, a solution that enables flexible MIG management for serverless computing. Through a novel programming system support, FluidFaaS enables fine-grained resource assignment to the components within a serverless function, based on which, it equips the invokers with runtime support that constructs pipelines on MIGs on the fly for a serverless function. The innovations, along with a hotness-aware eviction-based time sharing of MIG slices, significantly reduce GPU resource fragmentation and enhance system throughput. Evaluations demonstrate that FluidFaaS outperforms the state-of-the-art solutions by 25%-75% in throughput while achieving up to 90% higher SLO hit rates in various workloads.",
+    "citation_count": 0,
+    "reference_count": 24,
+    "url": "https://doi.org/10.1145/3731545.3731580",
+    "dblp_key": "conf/hpdc/Hui0S25",
+    "source_id": "https://openalex.org/W4414210351",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Grudon: A System for Deploying Graph Workloads on Disaggregated Architectures with Near-Data Processing.",
+    "authors": [
+      "Vishal Rao",
+      "Nikhil Ram Shashidhar",
+      "Suyeon Lee",
+      "Ada Gavrilovska"
+    ],
+    "venue": "HPDC",
+    "year": 2025,
+    "abstract": "Emerging memory disaggregation and near-data processing (NDP) technologies have shown promise in addressing performance, scaling and efficiency challenges for data-intensive workloads such as graph analytics. However, they expose new tradeoffs related to data movement, runtime, and cost. This paper introduces Grudon, a novel system for deploying graph workloads on Disaggregated NDP (DiNDP) platforms. Grudon combines the benefits of memory disaggregation and NDP to tackle bandwidth limitations, improve resource flexibility, and reduce energy demands to improve overall workload performance. To achieve this, Grudon provides support for dynamic configuration of graph workload deployments on DiNDP platforms via new control plane functionality that enables lightweight evaluation of the tradeoff space and dynamic reconfiguration of operations executed on the different DiNDP elements. Evaluation on an emulated DiNDP testbed demonstrates that Grudon achieves a geomean speedup of 2.12× while reducing energy consumption by 3.3× compared to state-of-the-art distributed runtimes. These results show the potential to unlock the full capabilities of DiNDP platforms for efficient distributed graph analytics.",
+    "citation_count": 0,
+    "reference_count": 25,
+    "url": "https://doi.org/10.1145/3731545.3731585",
+    "dblp_key": "conf/hpdc/RaoSLG25",
+    "source_id": "https://openalex.org/W4414210160",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "HYPERF: End-to-End Autotuning Framework for High-Performance Computing.",
+    "authors": [
+      "Juseong Park",
+      "Yongwon Shin",
+      "Junghyun Lee",
+      "Junseo Lee",
+      "Juyeon Kim",
+      "Oh-Kyoung Kwon",
+      "Hyojin Sung"
+    ],
+    "venue": "HPDC",
+    "year": 2025,
+    "abstract": null,
+    "citation_count": 1,
+    "reference_count": 43,
+    "url": "https://doi.org/10.1145/3731545.3731588",
+    "dblp_key": "conf/hpdc/ParkSLLKKS25",
+    "source_id": "https://openalex.org/W4414210253",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Bringing Differential Privacy to HPC: Privacy-Preserving Transformations of HPC Traces.",
+    "authors": [
+      "Ana Luisa Veroneze Solórzano",
+      "Rohan Basu Roy",
+      "Benjamin Schwaller",
+      "Sara Petra Walton",
+      "Jim M. Brandt",
+      "Devesh Tiwari"
+    ],
+    "venue": "HPDC",
+    "year": 2025,
+    "abstract": "Monitoring HPC systems yields valuable insights into user behavior, aiding resource management, collaborative research, and software design. However, privacy concerns raise the barrier for real-world HPC trace sharing between HPC facilities and researchers. Traditional anonymization methods fall short as user behavior remains identifiable. To address this, we propose a robust toolset for privacy protection of HPC traces using Differential Privacy (DP). Our toolset offers a set of DP algorithms, metrics, and visualizations to empower HPC operators to protect users' sensitive information under a privacy protection guarantee. We evaluated our toolset over real HPC systems traces for different parameters and data aggregations. Moreover, we show that machine learning models trained on privacy-preserved logs maintain accuracy compared to real data, which supports data publishing and sharing across different computing facilities.",
+    "citation_count": 0,
+    "reference_count": 50,
+    "url": "https://doi.org/10.1145/3731545.3731573",
+    "dblp_key": "conf/hpdc/SolorzanoRSWBT25",
+    "source_id": "https://openalex.org/W4414210085",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Weight-Sharing NAS with Architecture-Agnostic Intermediate Representation.",
+    "authors": [
+      "Sixing Yu",
+      "Arya Mazaheri",
+      "Ali Jannesari"
+    ],
+    "venue": "HPDC",
+    "year": 2025,
+    "abstract": "Weight-sharing supernet has been widely adopted in Neural Architecture Search (NAS) as a promising strategy to obtain smaller and more efficient high-performance models. However, constructing supernets requires domain expertise to design architecture-specific rules (e.g., rules for CNNs and Transformers) for generating subnets, and training a supernet demands joint optimization over a vast sample space of subnets, which is computationally expensive. This paper presents OSF (Optimized Supernet Formation), an automated and architecture-agnostic approach that transforms predefined/pretrained models into weight-sharing supernets. Specifically, we propose representing neural architectures using a high-level computational graph intermediate representation (IR) that enables both the conversion of different types of models into supernets and the extraction of executable subnets via graph traversal. To improve supernet training efficiency, we introduce a sampling strategy that prioritizes the most promising subnet candidates during training, and propose a fork-join parallel training approach with gradient accumulation that resolves write-after-write dependencies, enabling concurrent training of multiple subnet architectures with shared weights. Our empirical evaluations demonstrate that OSF successfully builds supernets from various architectures (CNNs, Transformers, SSMs, and MLPs) while achieving superior performance across language and vision benchmarks. Notably, for Vision Transformers (ViT), OSF reduces FLOPs by 49% while maintaining the accuracy, resulting in a 155% increase in throughput and 35% latency reduction. Code Open-sourced at: https://github.com/yusx-swapp/OSF",
+    "citation_count": 0,
+    "reference_count": 16,
+    "url": "https://doi.org/10.1145/3731545.3731587",
+    "dblp_key": "conf/hpdc/YuMJ25",
+    "source_id": "https://openalex.org/W4414209643",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Out-of-Core Parallel Spatial Join Outperforming In-Memory Systems: A BFS-DFS Hybrid Approach.",
+    "authors": [
+      "Lyuheng Yuan",
+      "Da Yan 0001",
+      "Akhlaque Ahmad",
+      "Jiao Han",
+      "Saugat Adhikari",
+      "Yang Zhou 0001"
+    ],
+    "venue": "HPDC",
+    "year": 2025,
+    "abstract": "Spatial join is a fundamental operation in many applications such as geographic information system (GIS) and simulation sciences. Recent works advocate in-memory spatial join for efficiency, but they require entire datasets to be loaded into memory, and they were only tested on small to medium-sized datasets. In this paper, we target out-of-core parallel spatial join to handle massive data, and surprisingly, we find that our solution can be orders of magnitude faster than the state-of-the-art in-memory solutions. Our system, called T-Spatial, decomposes a spatial-join job into tasks to expose massive parallelism opportunities. A BFS-DFS hybrid execution model is designed to enable memory-bounded high-throughput task processing, which exploits spatial locality to reuse cached data as much as possible to reduce disk IOs. T-Spatial also effectively overlaps computations with disk IOs by prefetching, and integrates a few optimization techniques including work stealing to avoid stragglers, write contention mitigation under multithreading, and a NUMA-aware design. Extensive experiments show that T-Spatial significantly outperforms state-of-the-art in-memory approaches (e.g., PBSM, TOUCH) and cloud-based parallel spatial systems (e.g., Apache Sedona) with 2–3 orders of magnitude of speedup ratio, and it is the first in the literature to test spatial joins on billion-scale datasets.",
+    "citation_count": 0,
+    "reference_count": 29,
+    "url": "https://doi.org/10.1145/3731545.3731572",
+    "dblp_key": "conf/hpdc/Yuan0AHAZ25",
+    "source_id": "https://openalex.org/W4414209975",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "IPComp: Interpolation Based Progressive Lossy Compression for Scientific Applications.",
+    "authors": [
+      "Zhuoxun Yang",
+      "Sheng Di",
+      "Longtao Zhang",
+      "Ruoyu Li",
+      "Ximiao Li",
+      "Jiajun Huang 0001",
+      "Jinyang Liu 0003",
+      "Franck Cappello",
+      "Kai Zhao 0008"
+    ],
+    "venue": "HPDC",
+    "year": 2025,
+    "abstract": "Compression is a crucial solution for data reduction in modern scientific applications due to the exponential growth of data from simulations, experiments, and observations. Compression with progressive retrieval capability allows users to quickly access coarse approximations of data and then incrementally refine these approximations to higher fidelity. Existing progressive compression solutions suffer from low reduction ratios or high operation costs, effectively undermining the approach's benefits. In this paper, we propose our interpolation-based progressive lossy compression solution that has both high reduction ratios and low operation costs. The interpolation-based algorithm has been verified as one of the best for scientific data reduction, but previously, no effort exists to make it support progressive retrieval. Our contributions are threefold: (1) We thoroughly analyze the error characteristics of the interpolation algorithm and propose our solution, IPComp, with multi-level bitplane and predictive coding. (2) We derive optimized strategies toward minimum data retrieval under different fidelity levels indicated by users through error bounds and bitrates. (3) We evaluate the proposed solution using six real-world datasets from four diverse domains. Experimental results demonstrate our solution archives up to 487% higher compression ratios and 698% faster speed than other state-of-the-art progressive compressors, and reduces the data volume for retrieval by up to 83% compared to baselines under the same error bound, and reduces the error by up to 99% under the same bitrate.",
+    "citation_count": 3,
+    "reference_count": 30,
+    "url": "https://doi.org/10.1145/3731545.3731578",
+    "dblp_key": "conf/hpdc/YangDZLL00C025",
+    "source_id": "https://openalex.org/W4414210246",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "LegoIndex: A Scalable and Modular Indexing Framework for Efficient Analysis of Extreme-Scale Particle Data.",
+    "authors": [
+      "Chang Guo",
+      "Ning Yan 0002",
+      "Lipeng Wan 0001",
+      "Zhichao Cao 0002"
+    ],
+    "venue": "HPDC",
+    "year": 2025,
+    "abstract": "Particle-in-Cell (PIC) simulations play a critical role in various scientific domains, including plasma physics, astrophysics, and fusion energy research, by enabling the modeling of complex interactions between charged particles and electromagnetic fields. As PIC simulations scale up in size and complexity, they generate massive volumes of particle data at enormous speeds (TBs/hour). This enormous amount of data presents significant challenges for post-simulation analysis, as existing analysis tools (typically designed for smaller datasets) struggle with low query performance and high resource utilization. While incorporating indexes for PIC data can alleviate some of these inefficiencies, current indexing solutions often fall short of addressing the diverse analysis needs of scientists, substantial index construction overhead during simulation runs, and inefficient small I/O operations.",
+    "citation_count": 2,
+    "reference_count": 54,
+    "url": "https://doi.org/10.1145/3731545.3731591",
+    "dblp_key": "conf/hpdc/GuoYW025",
+    "source_id": "https://openalex.org/W4414210354",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "SpeedLLM: An FPGA Co-design of Large Language Model Inference Accelerator.",
+    "authors": [
+      "Peipei Wang",
+      "Wu Guan",
+      "Liping Liang",
+      "Zhijun Wang",
+      "Hanqing Luo",
+      "Zhibin Zhang"
+    ],
+    "venue": "HPDC",
+    "year": 2025,
+    "abstract": "This paper introduces SpeedLLM, a neural network accelerator designed on the Xilinx Alevo U280 platform and optimized for the Tinyllama framework to enhance edge computing performance. Key innovations include data stream parallelism, a memory reuse strategy, and Llama2 operator fusion, which collectively reduce latency and energy consumption. SpeedLLM's data pipeline architecture optimizes the read-compute-write cycle, while the memory strategy minimizes FPGA resource demands. The operator fusion boosts computational density and throughput. Results show SpeedLLM outperforms traditional Tinyllama implementations, achieving up to 4.8× faster performance and 1.18× lower energy consumption, offering improvements in edge devices.",
+    "citation_count": 0,
+    "reference_count": 3,
+    "url": "https://doi.org/10.1145/3731545.3735115",
+    "dblp_key": "conf/hpdc/WangGLWLZ25",
+    "source_id": "https://openalex.org/W4414210453",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "On Optimizing Checkpoint Restoration for HPC Applications: Leveraging Merkle Trees and Asynchronous I/O.",
+    "authors": [
+      "Zackary Malkmus",
+      "Nigel Tan",
+      "Ian Lumsden",
+      "Kevin Assogba",
+      "M. Mustafa Rafique",
+      "Bogdan Nicolae",
+      "Michela Taufer"
+    ],
+    "venue": "HPDC",
+    "year": 2025,
+    "abstract": "Efficient checkpoint restoration is critical in high-performance computing (HPC) and AI applications, where slow recovery times disrupt workflows, waste resources, and hinder reproducibility. This work introduces a Merkle tree checkpoint restoration method to accelerate failure recovery and improve explainability. Our method integrates asynchronous I/O via the Liburing library to optimize scattered reads in HPC applications. Tested on the Polaris system at Argonne National Laboratory, it exhibits lower restoration time and memory consumption than state-of-the-art checkpoint restoration methods, reaching near-full efficiency with duplicated data. Our work advances scalable and efficient checkpointing solutions for HPC, ensuring reliable and fast failure recovery for large-scale simulations.",
+    "citation_count": 0,
+    "reference_count": 1,
+    "url": "https://doi.org/10.1145/3731545.3735116",
+    "dblp_key": "conf/hpdc/MalkmusTLARNT25",
+    "source_id": "https://openalex.org/W4414210053",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Advancing the GEOtiled Framework Through Scalable Terrain Parameter Computation.",
+    "authors": [
+      "Gabriel Laboy",
+      "Paula Olaya",
+      "Jack D. Marquez",
+      "Michael Sutherlin",
+      "Rodrigo Vargas",
+      "Michela Taufer"
+    ],
+    "venue": "HPDC",
+    "year": 2025,
+    "abstract": "The GEOtiled framework facilitates the scalable and efficient computation of high-resolution terrain parameters using Digital Elevation Models (DEMs) across the Continental United States (CONUS). These parameters are essential in Earth Science applications. This paper presents significant advances to optimizing GEOtiled's performance. In GEOtiled 2.0, we introduce three key optimizations to speed up GEOtiled's overall runtime: concurrent cropping, efficient mosaic operation, and unified parallel processing. These optimizations improve data distribution and handling, reducing computation times while maintaining accuracy. We evaluate performance using DEM data at 30-meter resolution over a region covering the state of Tennessee. Our results demonstrate that the optimized framework provides substantial performance improvements for generating terrain parameters. GEOtiled 2.0 software, openly available on GitHub, advances reproducible, data-driven scientific discovery in Earth Science.",
+    "citation_count": 0,
+    "reference_count": 6,
+    "url": "https://doi.org/10.1145/3731545.3735117",
+    "dblp_key": "conf/hpdc/LaboyOMSVT25",
+    "source_id": "https://openalex.org/W4414210274",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Understanding Error Sensitivity in Checkpointing for Linear System Solvers.",
+    "authors": [
+      "Bohan Zhang",
+      "Yafan Huang",
+      "Jerry Li",
+      "Guanpeng Li"
+    ],
+    "venue": "HPDC",
+    "year": 2025,
+    "abstract": "Cancer cells can leverage several cell-intrinsic and -extrinsic mechanisms to escape immune system recognition. The inherent complexity of the tumor microenvironment, with its multicellular and dynamic nature, poses great challenges for the extraction of biomarkers of immune response and immunotherapy efficacy. Here, we use RNA-sequencing (RNA-seq) data combined with different sources of prior knowledge to derive system-based signatures of the tumor microenvironment, quantifying immune-cell composition and intra- and intercellular communications. We applied multi-task learning to these signatures to predict different hallmarks of immune responses and derive cancer-type-specific models based on interpretable systems biomarkers. By applying our models to independent RNA-seq data from cancer patients treated with PD-1/PD-L1 inhibitors, we demonstrated that our method to Estimate Systems Immune Response (EaSIeR) accurately predicts therapeutic outcome. We anticipate that EaSIeR will be a valuable tool to provide a holistic description of immune responses in complex and dynamic systems such as tumors using available RNA-seq data.",
+    "citation_count": 137,
+    "reference_count": 134,
+    "url": "https://doi.org/10.1145/3731545.3735118",
+    "dblp_key": "conf/hpdc/ZhangHLL25",
+    "source_id": "https://openalex.org/W3175295347",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Adaptive GPU Power Capping: Balancing Energy Efficiency, Thermal Control and Performance.",
+    "authors": [
+      "Tanish Desai",
+      "Jainam Shah",
+      "Gargi Alavani",
+      "Snehanshu Saha",
+      "Santonu Sarkar"
+    ],
+    "venue": "HPDC",
+    "year": 2025,
+    "abstract": "High-performance computing (HPC), according to its name, is traditionally oriented toward performance, especially the execution time and scalability of the computations. However, due to the high cost and environmental issues, energy consumption has already become a very important factor that needs to be considered. The paper presents a survey of energy-aware scheduling methods used in a modern HPC environment, starting with the problem definition, tackling various goals set up for this challenge, including a bi-objective approach, power and energy constraints, and a pure energy solution, as well as metrics related to the subject. Then, considered types of HPC systems and related energy-saving mechanisms are described, from multicore-processors/graphical processing units (GPU) to more complex solutions, such as compute clusters supporting dynamic voltage and frequency scaling (DVFS), power capping, and other functionalities. The main section presents a collection of carefully selected algorithms, classified by the programming method, e.g., machine learning or fuzzy logic. Moreover, other surveys published on this subject are summarized and commented on, and finally, an overview of the current state-of-the-art with open problems and further research areas is presented.",
+    "citation_count": 78,
+    "reference_count": 153,
+    "url": "https://doi.org/10.1145/3731545.3735119",
+    "dblp_key": "conf/hpdc/DesaiSASS25",
+    "source_id": "https://openalex.org/W4316020004",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Refactoring TEZip: Integrating Python-Based Predictive Compression into an HPC C++/LibTorch Environment.",
+    "authors": [
+      "Mina Yousef",
+      "Amarjit Singh",
+      "Kento Sato"
+    ],
+    "venue": "HPDC",
+    "year": 2025,
+    "abstract": "TEZip is a framework for compressing time-evolving image data using predictive deep neural networks. Until now, TEZip primarily relied on Python libraries (TensorFlow or PyTorch). This work presents a new TEZip pipeline built with C++/LibTorch for improved speed and High preformance Computer(HPC) compatibility.",
+    "citation_count": 0,
+    "reference_count": 4,
+    "url": "https://doi.org/10.1145/3731545.3735120",
+    "dblp_key": "conf/hpdc/YousefSS25",
+    "source_id": "https://openalex.org/W4414210811",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Flux Emulator: First Insights into Optimizing Scheduling for Exascale HPC.",
+    "authors": [
+      "W. Jay Ashworth",
+      "Ian Lumsden",
+      "Jim Garlick",
+      "Mark Grondona",
+      "Olga Pearce",
+      "Stephanie Brink",
+      "Dewi Yokelson",
+      "Daniel Milroy",
+      "Tapasya Patki",
+      "Thomas Scogland",
+      "Michela Taufer"
+    ],
+    "venue": "HPDC",
+    "year": 2025,
+    "abstract": "El Capitan, currently the world's largest supercomputer at 1.742 Ex-aflop/s, introduces challenges in scheduling due to its scale and innovative rabbit nodes, which traditional schedulers cannot efficiently handle. Flux, a resource and job management system, handles dynamic resource allocation tailored for exascale systems through its graph-based scheduler, Fluxion. This work introduces the Flux Emulator, a tool designed to test scheduling policies in Fluxion without impacting production systems. The emulator plugs into the real components of Flux and Fluxion to mimic job execution, emulate resource usage, and collect information on how the job behaves. Preliminary tests show negligible overhead introduced by the emulator and demonstrate its effectiveness in evaluating scheduli ng policies, like conservative backfilling, in a fraction of the time required with a real system.",
+    "citation_count": 0,
+    "reference_count": 2,
+    "url": "https://doi.org/10.1145/3731545.3735121",
+    "dblp_key": "conf/hpdc/AshworthLGGPBYM25",
+    "source_id": "https://openalex.org/W4414210424",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Multi-Node Spot Instances Availability Score Collection System.",
+    "authors": [
+      "Sungkyu Cheon",
+      "Kyumin Kim",
+      "Kyunghwan Kim",
+      "Moohyun Song",
+      "Kyungyong Lee"
+    ],
+    "venue": "HPDC",
+    "year": 2025,
+    "abstract": "In this paper we report the set-up and results of the Multimodal Brain Tumor Image Segmentation Benchmark (BRATS) organized in conjunction with the MICCAI 2012 and 2013 conferences. Twenty state-of-the-art tumor segmentation algorithms were applied to a set of 65 multi-contrast MR scans of low- and high-grade glioma patients-manually annotated by up to four raters-and to 65 comparable scans generated using tumor image simulation software. Quantitative evaluations revealed considerable disagreement between the human raters in segmenting various tumor sub-regions (Dice scores in the range 74%-85%), illustrating the difficulty of this task. We found that different algorithms worked best for different sub-regions (reaching performance comparable to human inter-rater variability), but that no single algorithm ranked in the top for all sub-regions simultaneously. Fusing several good algorithms using a hierarchical majority vote yielded segmentations that consistently ranked above all individual algorithms, indicating remaining opportunities for further methodological improvements. The BRATS image data and manual annotations continue to be publicly available through an online evaluation system as an ongoing benchmarking resource.",
+    "citation_count": 6495,
+    "reference_count": 156,
+    "url": "https://doi.org/10.1145/3731545.3735122",
+    "dblp_key": "conf/hpdc/CheonKKSL25",
+    "source_id": "https://openalex.org/W1641498739",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "SibylOpt: Managing Green Data Centers Using Off-Online Deep Reinforcement Learning.",
+    "authors": [
+      "Ning Gu 0004",
+      "Kuo Zhang",
+      "Thu D. Nguyen",
+      "Peijian Wang",
+      "Tania Lorido-Botran"
+    ],
+    "venue": "HPDC",
+    "year": 2025,
+    "abstract": "We introduce SibylOpt, a system that applies deep reinforcement learning (DRL) to optimize the operation of a green data center (DC). SibylOpt uses an offline reinforcement learning algorithm, Advantage-Weighted Actor-Critic (AWAC), that requires historical data for training but does not depend on a DC simulator, which is effort intensive to build and keep updated as the DC evolves. SibylOpt then augments the offline training with online learning for refinement and adaptation to changes. We apply SibylOpt to the management of a small green DC that has onsite solar energy generation and a hybrid cooling system that includes \"free-cooling.\" Evaluation results (using simulation) show that the offline trained SibylOpt achieves higher rewards trading off job wait time, cooling, and grid electricity consumption compared to two baseline policies. It is also competitive with PPO, a DRL approach that requires an accurate DC simulator for training.",
+    "citation_count": 0,
+    "reference_count": 3,
+    "url": "https://doi.org/10.1145/3731545.3735123",
+    "dblp_key": "conf/hpdc/GuZNWL25",
+    "source_id": "https://openalex.org/W4414210138",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Assigning Cartesian grid area to processes.",
+    "authors": [
+      "Candice Astier",
+      "Devan Sohier",
+      "Antoine Capra"
+    ],
+    "venue": "HPDC",
+    "year": 2025,
+    "abstract": "Abstract. We present and discuss a new dataset of gridded emissions covering the historical period (1850–2000) in decadal increments at a horizontal resolution of 0.5° in latitude and longitude. The primary purpose of this inventory is to provide consistent gridded emissions of reactive gases and aerosols for use in chemistry model simulations needed by climate models for the Climate Model Intercomparison Program #5 (CMIP5) in support of the Intergovernmental Panel on Climate Change (IPCC) Fifth Assessment report (AR5). Our best estimate for the year 2000 inventory represents a combination of existing regional and global inventories to capture the best information available at this point; 40 regions and 12 sectors are used to combine the various sources. The historical reconstruction of each emitted compound, for each region and sector, is then forced to agree with our 2000 estimate, ensuring continuity between past and 2000 emissions. Simulations from two chemistry-climate models are used to test the ability of the emission dataset described here to capture long-term changes in atmospheric ozone, carbon monoxide and aerosol distributions. The simulated long-term change in the Northern mid-latitudes surface and mid-troposphere ozone is not quite as rapid as observed. However, stations outside this latitude band show much better agreement in both present-day and long-term trend. The model simulations indicate that the concentration of carbon monoxide is underestimated at the Mace Head station; however, the long-term trend over the limited observational period seems to be reasonably well captured. The simulated sulfate and black carbon deposition over Greenland is in very good agreement with the ice-core observations spanning the simulation period. Finally, aerosol optical depth and additional aerosol diagnostics are shown to be in good agreement with previously published estimates and observations.",
+    "citation_count": 2405,
+    "reference_count": 114,
+    "url": "https://doi.org/10.1145/3731545.3736816",
+    "dblp_key": "conf/hpdc/AstierSC25",
+    "source_id": "https://openalex.org/W2106963750",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Performance Evaluation of Machine Learning Applications Using WebAssembly Across Different Programming Languages.",
+    "authors": [
+      "Sallar Khan",
+      "Tania Malik",
+      "Khalid Hasanov"
+    ],
+    "venue": "HPDC",
+    "year": 2025,
+    "abstract": "WebAssembly (WASM) has emerged as a promising compilation target for languages traditionally not executed on the web and enable the cross-platform deployment of high-performance applications. While its general use cases have been well studied, the performance implications of executing Machine Learning (ML) workloads via WASM across different programming languages and runtime environments remain relatively unexplored. This paper presents a systematic evaluation of two representative ML models, K-Means and Logistic Regression, implemented in Python, Rust, and C++ and compiled to WASM. These models are executed in two distinct environments: a web browser and the WebAssembly System Interface (WASI), and their execution time and accuracy is compared against each programming language across both environments. This study aims to provide insight into the trade-offs and practical considerations involved in deploying ML workloads using WebAssembly across different language ecosystems and runtime configurations.",
+    "citation_count": 0,
+    "reference_count": 5,
+    "url": "https://doi.org/10.1145/3731545.3736817",
+    "dblp_key": "conf/hpdc/KhanMH25",
+    "source_id": "https://openalex.org/W4414210095",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Factors Impacting I/O Time Proportion in AI Workloads.",
+    "authors": [
+      "Zoya Masih",
+      "Radita Liem",
+      "Julian M. Kunkel"
+    ],
+    "venue": "HPDC",
+    "year": 2025,
+    "abstract": "Abstract This study explores university students’ perceptions of generative AI (GenAI) technologies, such as ChatGPT, in higher education, focusing on familiarity, their willingness to engage, potential benefits and challenges, and effective integration. A survey of 399 undergraduate and postgraduate students from various disciplines in Hong Kong revealed a generally positive attitude towards GenAI in teaching and learning. Students recognized the potential for personalized learning support, writing and brainstorming assistance, and research and analysis capabilities. However, concerns about accuracy, privacy, ethical issues, and the impact on personal development, career prospects, and societal values were also expressed. According to John Biggs’ 3P model, student perceptions significantly influence learning approaches and outcomes. By understanding students’ perceptions, educators and policymakers can tailor GenAI technologies to address needs and concerns while promoting effective learning outcomes. Insights from this study can inform policy development around the integration of GenAI technologies into higher education. By understanding students’ perceptions and addressing their concerns, policymakers can create well-informed guidelines and strategies for the responsible and effective implementation of GenAI tools, ultimately enhancing teaching and learning experiences in higher education.",
+    "citation_count": 1754,
+    "reference_count": 46,
+    "url": "https://doi.org/10.1145/3731545.3736815",
+    "dblp_key": "conf/hpdc/MasihLK25",
+    "source_id": "https://openalex.org/W4384464487",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Thicket Workflow for Classifying Parallel Sorting Algorithms.",
+    "authors": [
+      "Michael McKinsey",
+      "Stephanie Brink",
+      "Stephanie Lam",
+      "Dewi Yokelson",
+      "Olga Pearce"
+    ],
+    "venue": "HPDC",
+    "year": 2025,
+    "abstract": "Understanding parallel algorithms is crucial for accelerating scientific simulations on complex, distributed memory, high-performance computers. Modern algorithm classification approaches learn semantics directly from source code to differentiate between algorithms, however, accessing source code is not always possible. We can learn about parallel algorithms from observing their performance, as programs running the same algorithms and using the same hardware should exhibit similar performance characteristics. We develop an approach to learn parallel sorting algorithm classes from performance data directly in order to classify parallel sorting algorithms without using the source code. In this paper, we focus on the workflow and interfaces we developed for collecting, processing, and modeling performance data using Caliper, Thicket, PyTorch, and Scikit-learn. Our workflow results in classification accuracy of our machine learning models up to 95.3% across five different algorithm classes.",
+    "citation_count": 0,
+    "reference_count": 5,
+    "url": "https://doi.org/10.1145/3731545.3736814",
+    "dblp_key": "conf/hpdc/McKinseyBLYP25",
+    "source_id": "https://openalex.org/W4414210485",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "XPF: Agentic AI System for Business Workflow Automation.",
+    "authors": [
+      "Kunal Rao",
+      "Giuseppe Coviello",
+      "Gennaro Mellone",
+      "Ciro Giuseppe De Vita",
+      "Srimat Chakradhar"
+    ],
+    "venue": "HPDC",
+    "year": 2025,
+    "abstract": "In this paper, we propose a novel agentic AI system called XPF, which enables users to create \"agents\" using just natural language, where each agent is capable of executing complex, real-world business workflows in an accurate and reliable manner. XPF provides an interface to develop and iterate over the agent creation process and then deploy the agent in production when satisfactory results are produced consistently. The key components of XPF include: (a) planner, which leverages LLM to generate a step-by-step plan, which can further be edited by a human (b) compiler, which leverages LLM to compile the plan into a flow graph (c) executor, which handles distributed execution of the flow graph (using LLM, tools, RAG, etc.) on an underlying cluster and (d) verifier, which helps in verification of the output (through human generated tests or auto-generated tests using LLM). We develop five different agents using XPF and conduct experiments to evaluate one particular aspect i.e. difference in accuracy and reliability of the five agents with \"human-generated\" vs \"auto-generated\" plans. Our experiments show that we can get much more accurate and reliable response for a business workflow when step-by-step instructions (in natural language) are given by a human familiar with the workflow, rather than letting the LLM figure out the execution plan steps. In particular, we observe that \"human-generated\" plan almost always gives 100% accuracy whereas \"auto-generated\" plan almost never gives 100% accuracy. In terms of reliability, we observe through Rouge-L, Blue and Meteor scores, that the output from \"human-generated\" plan is much more reliable than \"auto-generated\" plan.",
+    "citation_count": 3,
+    "reference_count": 6,
+    "url": "https://doi.org/10.1145/3731545.3743644",
+    "dblp_key": "conf/hpdc/RaoCMVC25",
+    "source_id": "https://openalex.org/W4414210243",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "BanditWare: A Contextual Bandit-based Framework for Hardware Prediction.",
+    "authors": [
+      "Tainã Coleman",
+      "Hena Ahmed",
+      "Ravi Shende",
+      "Ismael Pérez",
+      "Ilkay Altintas"
+    ],
+    "venue": "HPDC",
+    "year": 2025,
+    "abstract": "Distributed computing systems are essential for meeting the demands of modern HPC applications, yet transitioning from single-system to distributed environments presents significant challenges. Resource misallocation in shared systems can lead to resource contention, system instability, degraded performance, priority inversion, inefficient utilization, increased latency, and environmental impact. We present BanditWare, an online recommendation system that dynamically selects the most suitable hardware for applications using a contextual multi-armed bandit algorithm. We evaluated BanditWare on two workflow applications: BurnPro3D (a web-based platform for fire science), and a matrix multiplication application. Designed for seamless integration with the National Data Platform (NDP), BanditWare enables users of all experience levels to optimize resource allocation efficiently.",
+    "citation_count": 1,
+    "reference_count": 19,
+    "url": "https://doi.org/10.1145/3731545.3743643",
+    "dblp_key": "conf/hpdc/ColemanASPA25",
+    "source_id": "https://openalex.org/W4414210460",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Can Large Language Models Predict Parallel Code Performance?",
+    "authors": [
+      "Gregory Bolet",
+      "Giorgis Georgakoudis",
+      "Harshitha Menon",
+      "Konstantinos Parasyris",
+      "Niranjan Hasabnis",
+      "Hayden Estes",
+      "Kirk W. Cameron",
+      "Gal Oren 0001"
+    ],
+    "venue": "HPDC",
+    "year": 2025,
+    "abstract": "Accurate determination of the performance of parallel GPU code typically requires execution-time profiling on target hardware -- an increasingly prohibitive step due to limited access to high-end GPUs. This paper explores whether Large Language Models (LLMs) can offer an alternative approach for GPU performance prediction without relying on hardware. We frame the problem as a roofline classification task: given the source code of a GPU kernel and the hardware specifications of a target GPU, can an LLM predict whether the GPU kernel is compute-bound or bandwidth-bound?   For this study, we build a balanced dataset of 340 GPU kernels, obtained from HeCBench benchmark and written in CUDA and OpenMP, along with their ground-truth labels obtained via empirical GPU profiling. We evaluate LLMs across four scenarios: (1) with access to profiling data of the kernel source, (2) zero-shot with source code only, (3) few-shot with code and label pairs, and (4) fine-tuned on a small custom dataset.   Our results show that state-of-the-art LLMs have a strong understanding of the Roofline model, achieving 100% classification accuracy when provided with explicit profiling data. We also find that reasoning-capable LLMs significantly outperform standard LLMs in zero- and few-shot settings, achieving up to 64% accuracy on GPU source codes, without profiling information. Lastly, we find that LLM fine-tuning will require much more data than what we currently have available.   This work is among the first to use LLMs for source-level roofline performance prediction via classification, and illustrates their potential to guide optimization efforts when runtime profiling is infeasible. Our findings suggest that with better datasets and prompt strategies, LLMs could become practical tools for HPC performance analysis and performance portability.",
+    "citation_count": null,
+    "reference_count": null,
+    "url": "https://doi.org/10.1145/3731545.3743645",
+    "dblp_key": "conf/hpdc/BoletGMPHEC025",
+    "source_id": "2505.03988v1",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "On Matching in Multipartite Quantum Routers.",
+    "authors": [
+      "Dagmar Bruß",
+      "Luis Gindorf",
+      "Julia Kunzelmann",
+      "Christian Laußmann",
+      "Jörg Rothe"
+    ],
+    "venue": "HPDC",
+    "year": 2025,
+    "abstract": "Twisted photons can be used as alphabets to encode information beyond one bit per single photon. This ability offers great potential for quantum information tasks, as well as for the investigation of fundamental questions. In this review article, we give a brief overview of the theoretical differences between qubits and higher dimensional systems, qudits, in different quantum information scenarios. We then describe recent experimental developments in this field over the past three years. Finally, we summarize some important experimental and theoretical questions that might be beneficial to understand better in the near future.",
+    "citation_count": 581,
+    "reference_count": 139,
+    "url": "https://doi.org/10.1145/3731545.3744148",
+    "dblp_key": "conf/hpdc/BrussGKLR25",
+    "source_id": "https://openalex.org/W2749109634",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Scaling Grover's Search for Large Solution Spaces.",
+    "authors": [
+      "Simone Faro",
+      "Francesco Pio Marino"
+    ],
+    "venue": "HPDC",
+    "year": 2025,
+    "abstract": null,
+    "citation_count": 185,
+    "reference_count": 102,
+    "url": "https://doi.org/10.1145/3731545.3744149",
+    "dblp_key": "conf/hpdc/FaroM25",
+    "source_id": "https://openalex.org/W2982469373",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "A Quantum Virtual Machine for Execution of Oracles.",
+    "authors": [
+      "Ulrik de Muelenaere"
+    ],
+    "venue": "HPDC",
+    "year": 2025,
+    "abstract": "Quantum information technologies, on the one hand, and intelligent learning systems, on the other, are both emergent technologies that are likely to have a transformative impact on our society in the future. The respective underlying fields of basic research-quantum information versus machine learning (ML) and artificial intelligence (AI)-have their own specific questions and challenges, which have hitherto been investigated largely independently. However, in a growing body of recent work, researchers have been probing the question of the extent to which these fields can indeed learn and benefit from each other. Quantum ML explores the interaction between quantum computing and ML, investigating how results and techniques from one field can be used to solve the problems of the other. Recently we have witnessed significant breakthroughs in both directions of influence. For instance, quantum computing is finding a vital application in providing speed-ups for ML problems, critical in our 'big data' world. Conversely, ML already permeates many cutting-edge technologies and may become instrumental in advanced quantum technologies. Aside from quantum speed-up in data analysis, or classical ML optimization used in quantum experiments, quantum enhancements have also been (theoretically) demonstrated for interactive learning tasks, highlighting the potential of quantum-enhanced learning agents. Finally, works exploring the use of AI for the very design of quantum experiments and for performing parts of genuine research autonomously, have reported their first successes. Beyond the topics of mutual enhancement-exploring what ML/AI can do for quantum physics and vice versa-researchers have also broached the fundamental issue of quantum generalizations of learning and AI concepts. This deals with questions of the very meaning of learning and intelligence in a world that is fully described by quantum mechanics. In this review, we describe the main ideas, recent developments and progress in a broad spectrum of research investigating ML and AI in the quantum domain.",
+    "citation_count": 1026,
+    "reference_count": 397,
+    "url": "https://doi.org/10.1145/3731545.3744150",
+    "dblp_key": "conf/hpdc/Muelenaere25",
+    "source_id": "https://openalex.org/W2792315573",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Quantum-Based SMT Solving for String Theory.",
+    "authors": [
+      "Beatrice Casey",
+      "Joanna C. S. Santos",
+      "Andrew Hennessee"
+    ],
+    "venue": "HPDC",
+    "year": 2025,
+    "abstract": "A bstract Non-relativistic string theories promise to provide simpler theories of quantum gravity as well as tractable limits of the AdS/CFT correspondence. However, several apparently distinct non-relativistic string theories have been constructed. In particular, one approach is to reduce a relativistic string along a null isometry in target space. Another method is to perform an appropriate large speed of light expansion of a relativistic string. Both of the resulting non-relativistic string theories only have a well-defined spectrum if they have nonzero winding along a longitudinal spatial direction. In the presence of a Kalb-Ramond field, we show that these theories are equivalent provided the latter direction is an isometry. Finally, we consider a further limit of non-relativistic string theory that has proven useful in the context of AdS/CFT (related to Spin Matrix Theory). In that case, the worldsheet theory itself becomes non-relativistic and the dilaton coupling vanishes.",
+    "citation_count": 87,
+    "reference_count": 58,
+    "url": "https://doi.org/10.1145/3731545.3744151",
+    "dblp_key": "conf/hpdc/CaseySH25",
+    "source_id": "https://openalex.org/W2956140789",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "High-level quantum algorithm programming using Silq.",
+    "authors": [
+      "Viktorija Bezganovic",
+      "Marco Lewis",
+      "Sadegh Soudjani",
+      "Paolo Zuliani"
+    ],
+    "venue": "HPDC",
+    "year": 2025,
+    "abstract": "Quantum computing, with its vast potential, is fundamentally shaped by the intricacies of quantum mechanics, which both empower and constrain its capabilities. The development of a universal, robust quantum programming language has emerged as a key research focus in this rapidly evolving field. This paper explores Silq, a recent high-level quantum programming language, highlighting its strengths and unique features. We aim to share our insights on designing and implementing high-level quantum algorithms using Silq, demonstrating its practical applications and advantages for quantum programming.",
+    "citation_count": 1,
+    "reference_count": 19,
+    "url": "https://doi.org/10.1145/3731545.3744152",
+    "dblp_key": "conf/hpdc/BezganovicLSZ25",
+    "source_id": "https://openalex.org/W4414210389",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Qutes: A High-Level Quantum Programming Language for Simplified Quantum Computing.",
+    "authors": [
+      "Simone Faro",
+      "Francesco Pio Marino",
+      "Gabriele Messina 0002"
+    ],
+    "venue": "HPDC",
+    "year": 2025,
+    "abstract": "Quantum computing leverages the principles of quantum mechanics to perform computations far beyond the capabilities of classical systems, particularly in fields such as cryptography and optimization. However, current quantum programming languages often require low-level implementation, posing significant barriers for many developers due to their steep learning curve and limited abstraction. In response, we introduce \\textbf{Qutes}, a high-level quantum programming language designed to simplify quantum algorithm development while maintaining the flexibility required for advanced applications. By abstracting complex quantum operations and allowing intuitive expressions through high-level constructs, Qutes enables users to write efficient quantum programs without extensive knowledge of quantum mechanics or circuit design. Built upon Qiskit, Qutes translates its syntax directly into executable quantum code, facilitating seamless integration with quantum hardware. This paper provides an overview of the language's architecture, core functionalities, and its ability to unify classical and quantum operations within a single framework. Additionally, we demonstrate Qutes' application in key quantum algorithms, showcasing its potential to make quantum programming more accessible and practical for a wider range of developers and researchers.",
+    "citation_count": 2943,
+    "reference_count": 187,
+    "url": "https://doi.org/10.1145/3731545.3744153",
+    "dblp_key": "conf/hpdc/FaroM025",
+    "source_id": "https://openalex.org/W3111162498",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Rusty-Cracker: A Multi-core Connected Components Library in Rust.",
+    "authors": [
+      "Davide Rucci",
+      "Daniele Sampietro",
+      "Emanuele Carlini 0001",
+      "Matteo Mordacchini",
+      "Patrizio Dazzi"
+    ],
+    "venue": "HPDC",
+    "year": 2025,
+    "abstract": "We present Rusty-Cracker, a high-performance Rust library that implements a parallel version of the Cracker algorithm for efficiently identifying connected components in large-scale graphs. Designed to address the growing demands of graph analytics in fields such as social network analysis, bioinformatics, and infrastructure modeling, Rusty-Cracker leverages Rust's concurrency and memory safety features to ensure both speed and reliability. The adapted Cracker algorithm capitalizes on modern multi-core architectures through parallel processing, effectively minimizing synchronization overhead and optimizing workload distribution. This design significantly reduces computational time while maintaining accuracy. We present the implementation details and evaluate its performance on a real-world dataset of undirected graphs.",
+    "citation_count": 0,
+    "reference_count": 22,
+    "url": "https://doi.org/10.1145/3731545.3744334",
+    "dblp_key": "conf/hpdc/RucciSCMD25",
+    "source_id": "https://openalex.org/W4414210505",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Towards a Federated Approach to Complex Digital Twins.",
+    "authors": [
+      "Hena Ahmed",
+      "Daniel Crawl",
+      "Ilkay Altintas"
+    ],
+    "venue": "HPDC",
+    "year": 2025,
+    "abstract": "Digital Twin technology is an emerging concept that has become the centre of attention for industry and, in more recent years, academia. The advancements in industry 4.0 concepts have facilitated its growth, particularly in the manufacturing industry. The Digital Twin is defined extensively but is best described as the effortless integration of data between a physical and virtual machine in either direction. The challenges, applications, and enabling technologies for Artificial Intelligence, Internet of Things (IoT) and Digital Twins are presented. A review of publications relating to Digital Twins is performed, producing a categorical review of recent papers. The review has categorised them by research areas: manufacturing, healthcare and smart cities, discussing a range of papers that reflect these areas and the current state of research. The paper provides an assessment of the enabling technologies, challenges and open research for Digital Twins.",
+    "citation_count": 2464,
+    "reference_count": 94,
+    "url": "https://doi.org/10.1145/3731545.3744664",
+    "dblp_key": "conf/hpdc/AhmedCA25",
+    "source_id": "https://openalex.org/W2982936646",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "RAPTOR: Reconfigurable Advanced Platform for Transdisciplinary Open Research.",
+    "authors": [
+      "Hamed Najafi",
+      "Pratik Poudel",
+      "Kiavash Bahreini",
+      "Julio Ibarra",
+      "Fahad Saeed",
+      "Yuepeng Li",
+      "Jayantha Obeysekera",
+      "Jason Liu 0001"
+    ],
+    "venue": "HPDC",
+    "year": 2025,
+    "abstract": "Scientific research is increasingly relying on complex workflows that span multiple computing paradigms, including high-performance computing (HPC), high-throughput computing (HTC), and machine learning/artificial intelligence (ML/AI). Traditional monolithic computing infrastructures often struggle to accommodate these diverse and evolving demands. The Reconfigurable Advanced Platform for Transdisciplinary Open Research (RAPTOR) addresses this challenge by providing a dynamically reconfigurable computing environment that integrates with federated resources. RAPTOR's architecture enables dynamic provisioning between an HPC cluster and the Chameleon Cloud platform based on workload requirements, supporting bare-metal customization for specialized applications. This paper focuses on RAPTOR's reconfigurability features and demonstrates their effectiveness through quantitative performance evaluations across four scientific domains: computational proteomics, climate modeling, weather research, and hurricane risk assessment. Our results demonstrate that RAPTOR's reconfigurable design significantly enhances research productivity by providing an appropriate computing environment for diverse computational needs.",
+    "citation_count": 0,
+    "reference_count": 9,
+    "url": "https://doi.org/10.1145/3731545.3744665",
+    "dblp_key": "conf/hpdc/NajafiPBISLO025",
+    "source_id": "https://openalex.org/W4414210070",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Building Flexible Physics-Informed Neural Networks with Fast Fourier Transform Analysis.",
+    "authors": [
+      "Reem Shehayib",
+      "Jayden Parker Vap",
+      "Peter M. Kogge"
+    ],
+    "venue": "HPDC",
+    "year": 2025,
+    "abstract": null,
+    "citation_count": 6503,
+    "reference_count": 228,
+    "url": "https://doi.org/10.1145/3731545.3744666",
+    "dblp_key": "conf/hpdc/ShehayibVK25",
+    "source_id": "https://openalex.org/W3163993681",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Efficient and Cost-Effective HPC on the Cloud.",
+    "authors": [
+      "Aditya Bhosale",
+      "Laxmikant V. Kalé",
+      "Sara Kokkila Schumacher"
+    ],
+    "venue": "HPDC",
+    "year": 2025,
+    "abstract": "Clearing the clouds away from the true potential and obstacles posed by this computing capability.",
+    "citation_count": 8984,
+    "reference_count": 4,
+    "url": "https://doi.org/10.1145/3731545.3744667",
+    "dblp_key": "conf/hpdc/BhosaleKS25",
+    "source_id": "https://openalex.org/W2114296561",
+    "source": null,
+    "source_url": null
+  }
+]

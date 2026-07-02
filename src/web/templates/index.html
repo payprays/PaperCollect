@@ -13,11 +13,17 @@
           <h1>PaperCollect</h1>
           <p class="subtitle">Collect papers by conference and year, then publish the saved result as RSS.</p>
         </div>
+        <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle theme"></button>
       </header>
 
       <section class="layout">
         <div class="workbench">
-          <div class="panel">
+          <nav class="tab-nav">
+            <button class="tab-btn active" data-tab="collect" type="button">Collect</button>
+            <button class="tab-btn" data-tab="search" type="button">Search</button>
+            <button class="tab-btn" data-tab="sync" type="button">Sync</button>
+          </nav>
+          <div class="panel active" data-tab-content="collect">
             <form id="collect-form">
               <div class="form-grid">
                 <label>
@@ -40,19 +46,12 @@
               <div id="year-progress" class="year-progress hidden"></div>
               <div class="conference-tools">
                 <span id="conference-count">0 selected</span>
-                <button id="collect-select-visible" type="button" class="secondary">Select visible</button>
-                <button id="collect-clear-visible" type="button" class="secondary">Clear visible</button>
-                <button id="collect-clear-all" type="button" class="secondary">Clear all</button>
+                <button id="collect-select-missing-years" type="button" class="secondary">Missing only</button>
+                <button id="collect-select-visible" type="button" class="secondary">Select shown</button>
+                <button id="collect-clear-visible" type="button" class="secondary">Clear shown</button>
               </div>
               <div id="conference-picker" class="conference-picker" aria-label="Conferences to collect"></div>
-              <div id="year-picker-section" class="year-picker-section hidden">
-                <div class="year-picker-header">
-                  <span class="year-picker-title">Years</span>
-                  <button id="year-select-all" type="button" class="secondary">Select all</button>
-                  <button id="year-clear-all" type="button" class="secondary">Clear all</button>
-                </div>
-                <div id="year-picker" class="year-picker"></div>
-              </div>
+              <div id="collect-preview" class="collect-preview hidden"></div>
               <div class="actions">
                 <button id="collect-button" type="submit">Collect</button>
                 <button id="collect-stop-button" type="button" class="secondary danger hidden">Stop</button>
@@ -65,7 +64,7 @@
             <pre id="logs" aria-live="polite"></pre>
           </div>
 
-          <div class="panel">
+          <div class="panel" data-tab-content="search">
             <form id="search-form">
               <div class="search-grid">
                 <label class="wide">
@@ -100,8 +99,8 @@
               </div>
               <div class="conference-tools">
                 <span id="search-conference-count">All conferences</span>
-                <button id="search-select-visible" type="button" class="secondary">Select visible</button>
-                <button id="search-clear-visible" type="button" class="secondary">Clear visible</button>
+                <button id="search-select-visible" type="button" class="secondary">Select all shown</button>
+                <button id="search-clear-visible" type="button" class="secondary">Clear all shown</button>
                 <button id="search-clear-all" type="button" class="secondary">Search all</button>
               </div>
               <div id="search-conference-picker" class="conference-picker compact" aria-label="Conferences to search"></div>
@@ -116,7 +115,7 @@
             <pre id="index-logs" class="compact-log" aria-live="polite"></pre>
           </div>
 
-          <div class="panel" id="sync-section">
+          <div class="panel" id="sync-section" data-tab-content="sync">
             <h2>WebDAV Sync</h2>
             <div id="sync-status">Loading...</div>
             <div class="sync-actions">
@@ -133,14 +132,15 @@
         </aside>
 
         <aside class="panel job-history-panel">
-          <h2>Job History</h2>
-          <div id="job-history"></div>
+          <h2><button class="job-history-toggle" type="button" aria-label="Toggle job history">&#9660;</button>Job History</h2>
+          <div id="job-history" class="job-history-list"></div>
         </aside>
       </section>
     </main>
     <script>
       window.PAPERCOLLECT_URL_BASE = {{ url_base|tojson }};
     </script>
-    <script src="{{ asset_url('app.js') }}"></script>
+    <script type="module" src="{{ asset_url('app.js') }}"></script>
+    <div id="toast-container" class="toast-container"></div>
   </body>
 </html>

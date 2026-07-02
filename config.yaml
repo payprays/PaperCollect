@@ -31,12 +31,16 @@ conferences:
     display_name: ACL
     full_name: Annual Meeting of the Association for Computational Linguistics
     dblp_stream: conf/acl
+    dblp_query: "stream:conf/acl: year:{year}"
+    aliases: [ACL, "Findings of ACL", "Findings of the Association for Computational Linguistics: ACL"]
     category: AI
     enabled: true
   - id: emnlp
     display_name: EMNLP
     full_name: Conference on Empirical Methods in Natural Language Processing
     dblp_stream: conf/emnlp
+    dblp_query: "stream:conf/emnlp: year:{year}"
+    aliases: [EMNLP, "Findings of EMNLP", "Findings of the Association for Computational Linguistics: EMNLP"]
     category: AI
     enabled: true
   - id: naacl
@@ -143,6 +147,36 @@ conferences:
     official_source:
       type: researchr_accepted
       page_url: https://conf.researchr.org/track/ase-{year}/ase-{year}-research-track
+    enabled: true
+  - id: oopsla
+    display_name: OOPSLA
+    full_name: Conference on Object-Oriented Programming Systems, Languages, and Applications
+    dblp_stream: conf/oopsla
+    aliases: [Proc. ACM Program. Lang.]
+    category: SE
+    focus_tags: [software_engineering]
+    tier:
+      ccf: A
+    enabled: true
+  - id: pldi
+    display_name: PLDI
+    full_name: ACM SIGPLAN Conference on Programming Language Design & Implementation
+    dblp_stream: conf/pldi
+    aliases: [Proc. ACM Program. Lang.]
+    category: SE
+    focus_tags: [software_engineering]
+    tier:
+      ccf: A
+    enabled: true
+  - id: popl
+    display_name: POPL
+    full_name: ACM SIGPLAN-SIGACT Symposium on Principles of Programming Languages
+    dblp_stream: conf/popl
+    aliases: [Proc. ACM Program. Lang.]
+    category: SE
+    focus_tags: [software_engineering]
+    tier:
+      ccf: A
     enabled: true
   - id: esorics
     display_name: ESORICS

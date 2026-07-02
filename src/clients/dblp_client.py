@@ -1,3 +1,4 @@
+import time
 from typing import List
 from xml.etree import ElementTree
 
@@ -20,21 +21,29 @@ class DBLPClient(PaperSource):
     BASE_URL = "https://dblp.org/search/publ/api"
     DB_URL = "https://dblp.org/db"
     DEFAULT_TIMEOUT = (10, 30)
-    SEARCH_PAGE_SIZE = 1000
+    SEARCH_PAGE_SIZE = 100
+    SEARCH_PAGE_DELAY_SECONDS = 1.5
 
-    def __init__(self, timeout: float | tuple[float, float] = DEFAULT_TIMEOUT):
+    def __init__(
+        self,
+        timeout: float | tuple[float, float] = DEFAULT_TIMEOUT,
+        search_page_delay: float = SEARCH_PAGE_DELAY_SECONDS,
+    ):
         # Configure retry strategy for robustness
         self.timeout = timeout
+        self.search_page_delay = search_page_delay
         self.session = requests.Session()
         retries = Retry(
-            total=2,
+            total=4,
             connect=2,
-            read=0,
-            backoff_factor=1,
-            status_forcelist=[500, 502, 503, 504],
+            read=2,
+            backoff_factor=2,
+            status_forcelist=[429, 500, 502, 503, 504],
             allowed_methods=frozenset(["GET"]),
+            respect_retry_after_header=True,
         )
         self.session.mount("https://", HTTPAdapter(max_retries=retries))
+        self.session.headers.update({"User-Agent": "PaperCollect/0.1 research crawler"})
 
     # Fallback aliases for legacy string-only configs. New code should pass
     # venue_aliases from src.core.conference_catalog.
@@ -50,8 +59,9 @@ class DBLPClient(PaperSource):
         "esorics": ["ESORICS"],
         "dsn": ["DSN", "Dependable Systems and Networks"],
         "dimva": ["DIMVA"],
-        "pldi": ["PLDI"],
-        "popl": ["POPL"],
+        "pldi": ["PLDI", "Proc. ACM Program. Lang."],
+        "popl": ["POPL", "Proc. ACM Program. Lang."],
+        "oopsla": ["OOPSLA", "Proc. ACM Program. Lang."],
         "osdi": ["OSDI", "USENIX Symposium on Operating Systems Design and Implementation"],
         "sosp": ["SOSP", "ACM Symposium on Operating Systems Principles"],
         "fm": ["FM", "International Symposium on Formal Methods"],
@@ -130,7 +140,7 @@ class DBLPClient(PaperSource):
                     return papers
 
             try:
-                return self._fetch_from_search(conference, year, venue_aliases=venue_aliases)
+                return self._fetch_from_search(conference, year, dblp_stream=dblp_stream, venue_aliases=venue_aliases)
             except DBLPFetchError as exc:
                 if toc_error is not None:
                     raise DBLPFetchError(f"{toc_error}; venue-search fallback also failed: {exc}") from exc
@@ -158,19 +168,27 @@ class DBLPClient(PaperSource):
             query = f"stream:{dblp_stream}: year:{year}"
         else:
             query = f"venue:{conference} year:{year}"
+        trust_query_scope = query.startswith("stream:")
 
         try:
             papers = []
             first = 0
+            page_count = 0
             while True:
+                if page_count > 0:
+                    time.sleep(self.search_page_delay)
+                page_count += 1
                 params = {
                     "q": query,
                     "h": self.SEARCH_PAGE_SIZE,
                     "f": first,
                     "format": "json",
                 }
-                response = self.session.get(self.BASE_URL, params=params, timeout=self.timeout)
-                response.raise_for_status()
+                try:
+                    response = self.session.get(self.BASE_URL, params=params, timeout=self.timeout)
+                    response.raise_for_status()
+                except requests.RequestException:
+                    raise
                 data = response.json()
                 hits_root = data.get("result", {}).get("hits", {})
                 hits = self._as_hit_list(hits_root.get("hit", []))
@@ -180,7 +198,7 @@ class DBLPClient(PaperSource):
                     paper = self._paper_from_search_info(info, conference)
 
                     # Filter out workshops and other pollution
-                    if self._is_valid_venue(paper.venue, conference, venue_aliases):
+                    if trust_query_scope or self._is_valid_venue(paper.venue, conference, venue_aliases):
                         papers.append(paper)
 
                 if not hits:
@@ -191,9 +209,12 @@ class DBLPClient(PaperSource):
                 total = self._safe_int(hits_root.get("@total"), None)
                 next_first = page_first + sent
 
-                if sent <= 0 or (total is not None and next_first >= total):
+                if sent <= 0:
                     break
-                if sent < self.SEARCH_PAGE_SIZE:
+                if total is not None:
+                    if next_first >= total:
+                        break
+                elif sent < self.SEARCH_PAGE_SIZE:
                     break
                 first = next_first
 

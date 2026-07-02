@@ -85,6 +85,7 @@ Questions to answer:
   - `conference`: string id or alias, must resolve through `find_conference`; keep this legacy single-conference field working.
   - `conferences`: optional array of string ids or aliases for batch collection; when present, validate every item through `find_conference`, ignore duplicates by normalized conference id, and reject an empty resulting selection.
   - `year`: integer, must pass `valid_collection_year`; it does not need to be present in `config.yaml` `years`.
+  - `tasks`: optional array of explicit `{conference|conference_id, year}` objects for non-rectangular queues such as per-conference missing-year collection. When present, validate every conference through `find_conference`, validate every year through `valid_collection_year`, de-duplicate by normalized `(conference_id, year)`, and build exactly those queue items instead of the `conferences x years` cross product.
   - `limit`: optional non-negative integer; empty means `limit_per_conference`.
 - Conference catalog fields:
   - `id`: lowercase stable slug for filenames, RSS paths, and API values.
@@ -137,9 +138,19 @@ Questions to answer:
   - Validation failure: HTTP 400 with `error`.
   - Existing running job: HTTP 409 with `error`.
   - Stop: `POST /api/jobs/<job_id>/stop` marks a queued/running collection job with `cancel_requested=true`; the worker stops cooperatively before starting the next conference and marks the job `cancelled`.
+- Collect UI selection controls:
+  - `Select shown` replaces the current collect-conference selection with exactly the conferences visible under the current category/focus/CCF filters, then selects all configured years for those visible conferences.
+  - `Missing only` does not filter the conference list. It changes the selected year chips to years reported as missing for the currently selected conferences, or for the currently visible conferences if no conference is selected, and it submits explicit `{conference, year}` tasks for each missing conference/year pair.
+  - Collect preview must describe the exact conference x year queue that will be submitted to `/api/collect`; do not label the preview as "missing tasks" unless the submitted payload is also restricted to those exact missing conference/year pairs.
+  - Async `/api/year-progress` refreshes must not overwrite a year selection made by a user action such as `Select shown`, `Missing only`, manual year chip toggles, or custom year add.
 - DBLP search collection:
-  - DBLP search requests use `h=1000` as the page size and must paginate with `f` until all hits are read.
+  - DBLP search requests must paginate with `f` until all hits are read according to DBLP `@total`, `@sent`, and `@first`; do not treat a single page as the full result set.
+  - Use a conservative DBLP search page size that the service reliably accepts; large `h` values may be capped or disconnected by DBLP and must not be confused with completion.
+  - If any DBLP search page after the first page fails, raise a collection error instead of returning the already-fetched partial page set. A partial DBLP search result must not be written as a successful complete conference/year file.
   - Do not treat the DBLP single-page size as the total per-conference paper limit.
+  - Command alias: `uv run pc-backfill-limited --config config.yaml --metadata none --search-page-delay 5` backfills known previously-limited conference/year files with `limit=0`, preserves existing entries, writes `backfill_limited_status.json`, and uses a slower DBLP page delay by default to avoid rate-limit truncation.
+  - Command alias: `uv run pc-backfill-metadata --config config.yaml --source-set openalex --max-papers 500` backfills missing `abstract` and `citation_count` fields in already-saved paper JSON files. It must process only incomplete records, save after each chunk, preserve existing paper rows, append status to `backfill_metadata_status.json`, and support repeated runs until the remaining missing count reaches zero.
+  - Use `uv run python backfill_limited_papers.py ...` when validating local source edits before the console script has been rebuilt.
   - If a configured DBLP stream has no TOC XML yet or the TOC request fails, collection should try a venue-name DBLP search fallback before giving up.
   - DBLP `conf/nips` TOC volumes use `neurips<year>.xml` for modern NeurIPS years; do not derive `nips<year>.xml` blindly.
   - NeurIPS should use the official proceedings page as a fallback source because DBLP can lag or omit current-year main-conference TOC data.
@@ -157,6 +168,7 @@ Questions to answer:
 - Feeds response:
   - `GET /api/feeds` must only include saved conference/year JSON files that contain at least one paper.
   - Empty saved JSON files (`[]`) must not appear as RSS feeds with `paper_count: 0`.
+  - Any web collection path that writes or changes saved paper JSON must invalidate the feeds and year-progress caches for that `output_dir` before the UI refreshes `/api/feeds` or `/api/year-progress`.
 - URL base response/link behavior:
   - Empty or `/` `url_base` means root-path behavior.
   - Non-empty `url_base` must be a path prefix, not a full URL.
@@ -205,6 +217,9 @@ Questions to answer:
 - Collection endpoint failure path is tested with the collection function mocked to raise; assert `/api/jobs/<job_id>` becomes `failed` and includes the captured DBLP-stage log.
 - Feed endpoint serves saved JSON as RSS and returns 404 for missing saved data.
 - Feeds endpoint skips saved empty JSON files and never returns `paper_count: 0` entries.
+- Browser UI tests cover a completed collection refreshing the task queue, RSS feed list, year progress, and job history without waiting for cache TTL expiry.
+- Browser UI tests cover `Select shown` replacing stale/default conference selections, selecting all configured years for the visible conferences, and rendering a preview that matches the actual submitted conference x year queue.
+- Browser UI tests cover `Missing only` changing only the selected year chips while keeping the selected conference set unchanged, and submitting exact missing conference/year tasks rather than the cross product of selected conferences and selected year chips.
 - URL-base tests cover prefixed index, static assets, API routes, collect `status_url`, and RSS `feed_url`.
 - Catalog tests cover object configs, aliases, and legacy string defaults.
 - Search tests cover keyword scoring and category filters without network calls.

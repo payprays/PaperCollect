@@ -1,0 +1,26 @@
+[
+  {
+    "conference": "neurips",
+    "display_name": "NeurIPS",
+    "year": 2023,
+    "status": "completed",
+    "source_set": "openalex",
+    "total_count": 3540,
+    "missing_before": 2702,
+    "attempted_count": 1000,
+    "completed_count": 679,
+    "remaining_missing": 2023
+  },
+  {
+    "conference": "neurips",
+    "display_name": "NeurIPS",
+    "year": 2023,
+    "status": "completed",
+    "source_set": "openalex",
+    "total_count": 3540,
+    "missing_before": 2023,
+    "attempted_count": 1,
+    "completed_count": 0,
+    "remaining_missing": 2023
+  }
+]

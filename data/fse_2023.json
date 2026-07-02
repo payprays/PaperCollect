@@ -1,0 +1,1253 @@
+[
+  {
+    "title": "Automatically Resolving Dependency-Conflict Building Failures via Behavior-Consistent Loosening of Library Version Constraints.",
+    "authors": [
+      "Huiyan Wang 0001",
+      "Shuguan Liu",
+      "Lingyu Zhang 0005",
+      "Chang Xu 0001"
+    ],
+    "venue": "ESEC/SIGSOFT FSE",
+    "year": 2023,
+    "abstract": "Python projects grow quickly by code reuse and building automation based on third-party libraries. However, the version constraints associated with these libraries are prone to mal-configuration, and this forms a major obstacle to correct project building (known as dependency-conflict (DC) building failure). Our empirical findings suggest that such mal-configured version constraints were mainly prepared manually, and could essentially be refined for better quality to improve the chance of successful project building. We propose a LooCo approach to refining Python projects’ library version constraints by automatically loosening them to maximize their solutions, while keeping the libraries to observe their original behaviors. Our experimental results with real-life Python projects report that LooCo could efficiently refine library version constraints (0.4s per version loosening) by effective loosening (5.5 new versions expanded on average) automatically, and transform 54.8% originally unsolvable cases into solvable ones (i.e., successful building) and significantly increase solutions (21 more on average) for originally solvable cases.",
+    "citation_count": 6,
+    "reference_count": 30,
+    "url": "https://dblp.org/rec/conf/sigsoft/0001LZX23",
+    "dblp_key": "conf/sigsoft/0001LZX23",
+    "source_id": "https://openalex.org/W4389158952",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "The Most Agile Teams Are the Most Disciplined: On Scaling out Agile Development.",
+    "authors": [
+      "Zheng Li 0001",
+      "Austen Rainer"
+    ],
+    "venue": "ESEC/SIGSOFT FSE",
+    "year": 2023,
+    "abstract": "As one of the next frontiers of software engineering, agile development at scale has attracted more and more research interests and efforts. When following the existing autonomy-focused and goal-driven lessons and guidelines to scale agile development for a large astronomy project, however, we encountered surprising tech stack sprawl and spreading team coordination issues. By revisiting the unique features of our project (e.g., the data processing-intensive nature and the frequent team member changes), and by identifying a fractal pattern from various data processing logic and processes, we defined disciplined agile teams to clone the best practices of pioneer agile teams, and to work on similar system modules with similar user stories. Such a targeted strategy effectively relieved the tech stack sprawl and facilitated teamwork handover, at least for refactoring and growing the data processing modules in our project. Based on this emerging result and our reflections, we distinguish this targeted strategy as scaling out agile development from the existing agile scaling approaches that are generally in a scaling-up fashion. Considering the popularity of data processing-intensive projects, and also considering the pervasive fractal patterns in modern businesses and organisations, we claim that this targeted strategy still has broad application opportunities. Therefore, developing a well-defined methodology for scaling out agility, and combining both scaling up and scaling out agility, will deserve attentions and new research efforts in the future.",
+    "citation_count": 3,
+    "reference_count": 20,
+    "url": "https://dblp.org/rec/conf/sigsoft/0001R23",
+    "dblp_key": "conf/sigsoft/0001R23",
+    "source_id": "https://openalex.org/W4389162053",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Distinguishing Look-Alike Innocent and Vulnerable Code by Subtle Semantic Representation Learning and Explanation.",
+    "authors": [
+      "Chao Ni 0001",
+      "Xin Yin",
+      "Kaiwen Yang",
+      "Dehai Zhao",
+      "Zhenchang Xing",
+      "Xin Xia 0001"
+    ],
+    "venue": "ESEC/SIGSOFT FSE",
+    "year": 2023,
+    "abstract": "Though many deep learning (DL)-based vulnerability detection approaches have been proposed and indeed achieved remarkable performance, they still have limitations in the generalization as well as the practical usage. More precisely, existing DL-based approaches (1) perform negatively on prediction tasks among functions that are lexically similar but have contrary semantics; (2) provide no intuitive developer-oriented explanations to the detected results.",
+    "citation_count": 33,
+    "reference_count": 28,
+    "url": "https://dblp.org/rec/conf/sigsoft/0001YYZX023",
+    "dblp_key": "conf/sigsoft/0001YYZX023",
+    "source_id": "https://openalex.org/W4389161980",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Understanding the Topics and Challenges of GPU Programming by Classifying and Analyzing Stack Overflow Posts.",
+    "authors": [
+      "Wenhua Yang 0001",
+      "Chong Zhang",
+      "Minxue Pan"
+    ],
+    "venue": "ESEC/SIGSOFT FSE",
+    "year": 2023,
+    "abstract": "GPUs have cemented their position in computer systems, not restricted to graphics but also extensively used for general-purpose computing. With this comes a rapidly expanding population of developers using GPUs for programming. However, programming with GPUs is notoriously difficult due to their unique architecture and constant evolution. A large number of developers have encountered problems of one kind or another, and many of them have turned to Q&A sites for help. Unfortunately, there has been no prior work to comprehensively study the topics discussed and challenges encountered by developers in GPU programming. To fill this knowledge gap, we conduct a comprehensive study to understand the topics and challenges of GPU programming using Stack Overflow. We collect 25,269 relevant posts from Stack Overflow, propose a novel approach that combines automatic techniques and manual thematic analysis to extract topics, and build a taxonomy of topics with detailed discussions of the popularity, difficulty, and changing trends of these topics. In addition, we analyzed relevant posts through extensive manual efforts to understand the challenges of each topic and to summarize them for future research.",
+    "citation_count": 2,
+    "reference_count": 56,
+    "url": "https://dblp.org/rec/conf/sigsoft/0001ZP23",
+    "dblp_key": "conf/sigsoft/0001ZP23",
+    "source_id": "https://openalex.org/W4389158527",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "FunProbe: Probing Functions from Binary Code through Probabilistic Analysis.",
+    "authors": [
+      "Soomin Kim 0002",
+      "Hyungseok Kim 0002",
+      "Sang Kil Cha"
+    ],
+    "venue": "ESEC/SIGSOFT FSE",
+    "year": 2023,
+    "abstract": "Current function identification techniques have been mostly focused on a specific set of binaries compiled for a specific CPU architecture. While recent deep-learning-based approaches theoretically can handle binaries from different architectures, they require significant computation resources for training and inference, making their use less practical. Furthermore, due to the lack of interpretability of such models, it is fundamentally difficult to gain insight from them. Hence, in this paper, we propose FunProbe, an efficient system for identifying functions from binaries using probabilistic inference. In particular, we identify 16 architecture-neutral hints for function identification, and devise an effective method to combine them in a probabilistic framework. We evaluate our tool on a large dataset consisting of 19,872 real-world binaries compiled for six major CPU architectures. The results are promising. FunProbe shows the best accuracy compared to five state-of-the-art tools we tested, while it takes only 6 seconds on average to analyze a single binary. Notably, FunProbe is 6× faster on average in identifying functions than XDA, a state-of-the-art deep-learning tool that leverages GPU in its inference phase.",
+    "citation_count": 7,
+    "reference_count": 30,
+    "url": "https://dblp.org/rec/conf/sigsoft/00020C23",
+    "dblp_key": "conf/sigsoft/00020C23",
+    "source_id": "https://openalex.org/W4389158449",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "LazyCow: A Lightweight Crowdsourced Testing Tool for Taming Android Fragmentation.",
+    "authors": [
+      "Xiaoyu Sun 0002",
+      "Xiao Chen 0002",
+      "Yonghui Liu 0001",
+      "John C. Grundy",
+      "Li Li 0029"
+    ],
+    "venue": "ESEC/SIGSOFT FSE",
+    "year": 2023,
+    "abstract": "Android fragmentation refers to the increasing variety of Android devices and operating system versions. Their number make it impossible to test an app on every supported device, resulting in many device compatibility issues and leading to poor user experiences. To mitigate this, a number of works that automatically detect compatibility issues have been proposed. However, current state-of-the-art techniques can only be used to detect specific types of compatibility issues (i.e., compatibility issues caused by API signature evolution), i.e., many other essential categories of compatibility issues are still unknown. For instance, customised OS versions on real devices and semantic OS modifications could result in severe compatibility issues that are difficult to detect statically. In order to address this research gap and facilitate the prospect of taming Android frag- mentation through crowdsourced efforts, we propose LazyCow, a novel, lightweight, crowdsourced testing tool. Our experimental results involving thousands of test cases on real Android devices demonstrate that LazyCow is effective at autonomously identifying and validating API-induced compatibility issues. The source code of both client side and server side are all made publicly available in our artifact package. A demo video of our tool is available at https://www.youtube.com/watch?v=_xzWv_mo5xQ.",
+    "citation_count": 3,
+    "reference_count": 19,
+    "url": "https://dblp.org/rec/conf/sigsoft/0002CLG023",
+    "dblp_key": "conf/sigsoft/0002CLG023",
+    "source_id": "https://openalex.org/W4389159906",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "IoPV: On Inconsistent Option Performance Variations.",
+    "authors": [
+      "Jinfu Chen 0002",
+      "Zishuo Ding",
+      "Yiming Tang 0002",
+      "Mohammed Sayagh",
+      "Heng Li 0007",
+      "Bram Adams",
+      "Weiyi Shang"
+    ],
+    "venue": "ESEC/SIGSOFT FSE",
+    "year": 2023,
+    "abstract": "Maintaining a good performance of a software system is a primordial task when evolving a software system. The performance regression issues are among the dominant problems that large software systems face. In addition, these large systems tend to be highly configurable, which allows users to change the behaviour of these systems by simply altering the values of certain configuration options. However, such flexibility comes with a cost. Such software systems suffer throughout their evolution from what we refer to as “Inconsistent Option Performance Variation” (IoPV ). An IoPV indicates, for a given commit, that the performance regression or improvement of different values of the same configuration option is inconsistent compared to the prior commit. For instance, a new change might not suffer from any performance regression under the default configuration (i.e., when all the options are set to their default values), while altering one option’s value manifests a regression, which we refer to as a hidden regression as it is not manifested under the default configuration. Similarly, when developers improve the performance of their systems, performance regression might be manifested under a subset of the existing configurations. Unfortunately, such hidden regressions are harmful as they can go unseen to the production environment. In this paper, we first quantify how prevalent (in)consistent performance regression or improvement is among the values of an option. In particular, we study over 803 Hadoop and 502 Cassandra commits, for which we execute a total of 4,902 and 4,197 tests, respectively, amounting to 12,536 machine hours of testing. We observe that IoPV is a common problem that is difficult to manually predict. 69% and 93% of the Hadoop and Cassandra commits have at least one configuration that hides a performance regression. Worse, most of the commits have different options or tests leading to IoPV and hiding performance regressions. Therefore, we propose a prediction model that identifies whether a given combination of commit, test, and option (CTO) manifests an IoPV. Our evaluation for different models shows that random forest is the best performing classifier, with a median AUC of 0.91 and 0.82 for Hadoop and Cassandra, respectively. Our paper defines and provides scientific evidence about the IoPV problem and its prevalence, which can be explored by future work. In addition, we provide an initial machine learning model for predicting IoPV.",
+    "citation_count": 5,
+    "reference_count": 19,
+    "url": "https://dblp.org/rec/conf/sigsoft/0002DTS0AS23",
+    "dblp_key": "conf/sigsoft/0002DTS0AS23",
+    "source_id": "https://openalex.org/W4389208894",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Recommending Analogical APIs via Knowledge Graph Embedding.",
+    "authors": [
+      "Mingwei Liu 0002",
+      "Yanjun Yang",
+      "Yiling Lou",
+      "Xin Peng 0001",
+      "Zhong Zhou",
+      "Xueying Du",
+      "Tianyong Yang"
+    ],
+    "venue": "ESEC/SIGSOFT FSE",
+    "year": 2023,
+    "abstract": "Library migration, which replaces the current library with a different one to retain the same software behavior, is common in software evolution. An essential part of this is finding an analogous API for the desired functionality. However, due to the multitude of libraries/APIs, manually finding such an API is time-consuming and error-prone. Researchers created automated analogical API recommendation techniques, notably documentation-based methods. Despite potential, these methods have limitations, e.g., incomplete semantic understanding in documentation and scalability issues. In this study, we present KGE4AR, a novel documentation-based approach using knowledge graph (KG) embedding for recommending analogical APIs during library migration. KGE4AR introduces a unified API KG to comprehensively represent documentation knowledge, capturing high-level semantics. It further embeds this unified API KG into vectors for efficient, scalable similarity calculation. We assess KGE4AR with 35,773 Java libraries in two scenarios, with and without target libraries. KGE4AR notably outperforms state-of-the-art techniques (e.g., 47.1%-143.0% and 11.7%-80.6% MRR improvements), showcasing scalability with growing library counts.",
+    "citation_count": 8,
+    "reference_count": 47,
+    "url": "https://dblp.org/rec/conf/sigsoft/0002YL0ZDY23",
+    "dblp_key": "conf/sigsoft/0002YL0ZDY23",
+    "source_id": "https://openalex.org/W4389209091",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Multilingual Code Co-evolution using Large Language Models.",
+    "authors": [
+      "Jiyang Zhang 0003",
+      "Pengyu Nie 0001",
+      "Junyi Jessy Li",
+      "Milos Gligoric 0001"
+    ],
+    "venue": "ESEC/SIGSOFT FSE",
+    "year": 2023,
+    "abstract": "Many software projects implement APIs and algorithms in multiple programming languages. Maintaining such projects is tiresome, as developers have to ensure that any change (e.g., a bug fix or a new feature) is being propagated, timely and without errors, to implementations in other programming languages. In the world of ever-changing software, using rule-based translation tools (i.e., transpilers) or machine learning models for translating code from one language to another provides limited value. Translating each time the entire codebase from one language to another is not the way developers work. In this paper, we target a novel task: translating code changes from one programming language to another using large language models (LLMs). We design and implement the first LLM, dubbed Codeditor, to tackle this task. Codeditor explicitly models code changes as edit sequences and learns to correlate changes across programming languages. To evaluate Codeditor, we collect a corpus of 6,613 aligned code changes from 8 pairs of open-source software projects implementing similar functionalities in two programming languages (Java and C#). Results show that Codeditor outperforms the state-of-the-art approaches by a large margin on all commonly used automatic metrics. Our work also reveals that Codeditor is complementary to the existing generation-based models, and their combination ensures even greater performance.",
+    "citation_count": 30,
+    "reference_count": 26,
+    "url": "https://dblp.org/rec/conf/sigsoft/00030L023",
+    "dblp_key": "conf/sigsoft/00030L023",
+    "source_id": "https://openalex.org/W4389159862",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Copiloting the Copilots: Fusing Large Language Models with Completion Engines for Automated Program Repair.",
+    "authors": [
+      "Yuxiang Wei 0003",
+      "Chunqiu Steven Xia",
+      "Lingming Zhang 0001"
+    ],
+    "venue": "ESEC/SIGSOFT FSE",
+    "year": 2023,
+    "abstract": "During Automated Program Repair (APR), it can be challenging to synthesize correct patches for real-world systems in general-purpose programming languages. Recent Large Language Models (LLMs) have been shown to be helpful “copilots” in assisting developers with various coding tasks, and have also been directly applied for patch synthesis. However, most LLMs treat programs as sequences of tokens, meaning that they are ignorant of the underlying semantics constraints of the target programming language. This results in plenty of statically invalid generated patches, impeding the practicality of the technique. Therefore, we propose Repilot, a framework to further copilot the AI “copilots” (i.e., LLMs) by synthesizing more valid patches during the repair process. Our key insight is that many LLMs produce outputs autoregressively (i.e., token by token), resembling human writing programs, which can be significantly boosted and guided through a Completion Engine. Repilot synergistically synthesizes a candidate patch through the interaction between an LLM and a Completion Engine, which 1) prunes away infeasible tokens suggested by the LLM and 2) proactively completes the token based on the suggestions provided by the Completion Engine. Our evaluation on a subset of the widely-used Defects4j 1.2 and 2.0 datasets shows that Repilot fixes 66 and 50 bugs, respectively, surpassing the best-performing baseline by 14 and 16 bugs fixed. More importantly, Repilot is capable of producing more valid and correct patches than the base LLM when given the same generation budget.",
+    "citation_count": 96,
+    "reference_count": 46,
+    "url": "https://dblp.org/rec/conf/sigsoft/0003X023",
+    "dblp_key": "conf/sigsoft/0003X023",
+    "source_id": "https://openalex.org/W4386436496",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "NeuRI: Diversifying DNN Generation via Inductive Rule Inference.",
+    "authors": [
+      "Jiawei Liu 0004",
+      "Jinjun Peng",
+      "Yuyao Wang",
+      "Lingming Zhang 0001"
+    ],
+    "venue": "ESEC/SIGSOFT FSE",
+    "year": 2023,
+    "abstract": "Deep Learning (DL) is prevalently used in various industries to improve decision-making and automate processes, driven by the ever-evolving DL libraries and compilers. The correctness of DL systems is crucial for trust in DL applications. As such, the recent wave of research has been studying the automated synthesis of test-cases (i.e., DNN models and their inputs) for fuzzing DL systems. However, existing model generators only subsume a limited number of operators, lacking the ability to pervasively model operator constraints. To address this challenge, we propose NeuRI, a fully automated approach for generating valid and diverse DL models composed of hundreds of types of operators. NeuRI adopts a three-step process: (i) collecting valid and invalid API traces from various sources; (ii) applying inductive program synthesis over the traces to infer the constraints for constructing valid models; and (iii) using hybrid model generation which incorporates both symbolic and concrete operators. Our evaluation shows that NeuRI improves branch coverage of TensorFlow and PyTorch by 24% and 15% over the state-of-the-art model-level fuzzers. NeuRI finds 100 new bugs for PyTorch and TensorFlow in four months, with 81 already fixed or confirmed. Of these, 9 bugs are labelled as high priority or security vulnerability, constituting 10% of all high-priority bugs of the period. Open-source developers regard error-inducing tests reported by us as \"high-quality\" and \"common in practice\".",
+    "citation_count": 19,
+    "reference_count": 34,
+    "url": "https://dblp.org/rec/conf/sigsoft/0004PW023",
+    "dblp_key": "conf/sigsoft/0004PW023",
+    "source_id": "https://openalex.org/W4389158362",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "ViaLin: Path-Aware Dynamic Taint Analysis for Android.",
+    "authors": [
+      "Khaled Ahmed 0004",
+      "Yingying Wang",
+      "Mieszko Lis",
+      "Julia Rubin"
+    ],
+    "venue": "ESEC/SIGSOFT FSE",
+    "year": 2023,
+    "abstract": "Dynamic taint analysis - a program analysis technique that checks whether information flows between particular source and sink locations in the program, has numerous applications in security, program comprehension, and software testing. Specifically, in mobile software, taint analysis is often used to determine whether mobile apps contain stealthy behaviors that leak user-sensitive information to unauthorized third-party servers. While a number of dynamic taint analysis techniques for Android software have been recently proposed, none of them are able to report the complete information propagation path, only reporting flow endpoints, i.e., sources and sinks of the detected information flows. This design optimizes for runtime performance and allows the techniques to run efficiently on a mobile device. Yet, it impedes the applicability and usefulness of the techniques: an analyst using the tool would need to manually identify information propagation paths, e.g., to determine whether information was properly handled before being released, which is a challenging task in large real-world applications.",
+    "citation_count": 4,
+    "reference_count": 33,
+    "url": "https://dblp.org/rec/conf/sigsoft/0004WLR23",
+    "dblp_key": "conf/sigsoft/0004WLR23",
+    "source_id": "https://openalex.org/W4389208992",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Pre-training Code Representation with Semantic Flow Graph for Effective Bug Localization.",
+    "authors": [
+      "Yali Du 0002",
+      "Zhongxing Yu"
+    ],
+    "venue": "ESEC/SIGSOFT FSE",
+    "year": 2023,
+    "abstract": "Enlightened by the big success of pre-training in natural language processing, pre-trained models for programming languages have been widely used to promote code intelligence in recent years. In particular, BERT has been used for bug localization tasks and impressive results have been obtained. However, these BERT-based bug localization techniques suffer from two issues. First, the pre-trained BERT model on source code does not adequately capture the deep semantics of program code. Second, the overall bug localization models neglect the necessity of large-scale negative samples in contrastive learning for representations of changesets and ignore the lexical similarity between bug reports and changesets during similarity estimation. We address these two issues by 1) proposing a novel directed, multiple-label code graph representation named Semantic Flow Graph (SFG), which compactly and adequately captures code semantics, 2) designing and training SemanticCodeBERT based on SFG, and 3) designing a novel Hierarchical Momentum Contrastive Bug Localization technique (HMCBL). Evaluation results show that our method achieves state-of-the-art performance in bug localization.",
+    "citation_count": 15,
+    "reference_count": 68,
+    "url": "https://dblp.org/rec/conf/sigsoft/0008Y23",
+    "dblp_key": "conf/sigsoft/0008Y23",
+    "source_id": "https://openalex.org/W4389160736",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Statistical Reachability Analysis.",
+    "authors": [
+      "Seongmin Lee 0001",
+      "Marcel Böhme"
+    ],
+    "venue": "ESEC/SIGSOFT FSE",
+    "year": 2023,
+    "abstract": "&lt;b&gt;&lt;i&gt;Background and Objectives:&lt;/i&gt;&lt;/b&gt; There is a substantial body of evidence assessing the effects of equine-assisted therapy on physiological and psychological aspects of individuals with disabilities. This study aimed to evaluate the physiological benefits of this alternative therapy for children with cerebral palsy (CP) by means of a systematic review and meta-analysis. &lt;b&gt;&lt;i&gt;Methods:&lt;/i&gt;&lt;/b&gt; This systematic review included all randomized and nonrandomized clinical trials of hippotherapy (HT), therapeutic horse riding (THR), and artificial saddle (AS) for the treatment of children with CP by a systematic search in Medline, Embase, Cochrane Library, and other databases up to November 2012. Articles were assessed for inclusion eligibility and quality by two independent reviewers. Any discordant case was re-reviewed and consensus was obtained after sufficient discussion. A random effects model of meta-analysis was applied to provide summary statistics for each outcome. &lt;b&gt;&lt;i&gt;Results:&lt;/i&gt;&lt;/b&gt; Seven randomized controlled trials (RCTs), 4 non-RCTs, and 7 self-controlled studies were included for quality assessment. Ten studies assessed the effect of HT, 5 evaluated THR, and 3 evaluated AS. The sample size differed from 3 to 72, and the quality ranged from low to moderate. Six studies were included in the meta-analysis, and there was a significant improvement in the 66-item Gross Motor Function Measure (GMFM-66), the GMFM-66/88 total score, and the dimension E of the GMFM. Although the asymmetry score tended to be reduced, it failed to reach statistical significance. &lt;b&gt;&lt;i&gt;Conclusions:&lt;/i&gt;&lt;/b&gt; HT, THR, and AS seem to improve the total score of the gross motor function via improvement of the walking, running, and jumping dimension. However, they are not likely to be of benefit to the symmetry of postural muscle activity. Studies included in this review lack high-quality RCTs with a sufficient number of subjects, which thus warrants further evaluations of these modalities using large-scale well-designed RCTs.",
+    "citation_count": 18696,
+    "reference_count": 80,
+    "url": "https://dblp.org/rec/conf/sigsoft/0009B23",
+    "dblp_key": "conf/sigsoft/0009B23",
+    "source_id": "https://openalex.org/W246286872",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Outage-Watch: Early Prediction of Outages using Extreme Event Regularizer.",
+    "authors": [
+      "Shubham Agarwal 0007",
+      "Sarthak Chakraborty",
+      "Shaddy Garg",
+      "Sumit Bisht",
+      "Chahat Jain",
+      "Ashritha Gonuguntla",
+      "Shiv Kumar Saini"
+    ],
+    "venue": "ESEC/SIGSOFT FSE",
+    "year": 2023,
+    "abstract": "Cloud services are omnipresent and critical cloud service failure is a fact of life. In order to retain customers and prevent revenue loss, it is important to provide high reliability guarantees for these services. One way to do this is by predicting outages in advance, which can help in reducing the severity as well as time to recovery. It is difficult to forecast critical failures due to the rarity of these events. Moreover, critical failures are ill-defined in terms of observable data. Our proposed method, Outage-Watch, defines critical service outages as deteriorations in the Quality of Service (QoS) captured by a set of metrics. Outage-Watch detects such outages in advance by using current system state to predict whether the QoS metrics will cross a threshold and initiate an extreme event. A mixture of Gaussian is used to model the distribution of the QoS metrics for flexibility and an extreme event regularizer helps in improving learning in tail of the distribution. An outage is predicted if the probability of any one of the QoS metrics crossing threshold changes significantly. Our evaluation on a real-world SaaS company dataset shows that Outage-Watch significantly outperforms traditional methods with an average AUC of 0.98. Additionally, Outage-Watch detects all the outages exhibiting a change in service metrics and reduces the Mean Time To Detection (MTTD) of outages by up to 88% when deployed in an enterprise cloud-service system, demonstrating efficacy of our proposed method.",
+    "citation_count": 4,
+    "reference_count": 70,
+    "url": "https://dblp.org/rec/conf/sigsoft/AgarwalCGBJGS23",
+    "dblp_key": "conf/sigsoft/AgarwalCGBJGS23",
+    "source_id": "https://openalex.org/W4387294396",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Design by Contract for Deep Learning APIs.",
+    "authors": [
+      "Shibbir Ahmed",
+      "Sayem Mohammad Imtiaz",
+      "Syeda Khairunnesa Samantha",
+      "Breno Dantas Cruz",
+      "Hridesh Rajan"
+    ],
+    "venue": "ESEC/SIGSOFT FSE",
+    "year": 2023,
+    "abstract": "Deep Learning (DL) techniques are increasingly being incorporated in critical software systems today. DL software is buggy too. Recent work in SE has characterized these bugs, studied fix patterns, and proposed detection and localization strategies. In this work, we introduce a preventative measure. We propose design by contract for DL libraries, DL Contract for short, to document the properties of DL libraries and provide developers with a mechanism to identify bugs during development. While DL Contract builds on the traditional design by contract techniques, we need to address unique challenges. In particular, we need to document properties of the training process that are not visible at the functional interface of the DL libraries. To solve these problems, we have introduced mechanisms that allow developers to specify properties of the model architecture, data, and training process. We have designed and implemented DL Contract for Python-based DL libraries and used it to document the properties of Keras, a well-known DL library. We evaluate DL Contract in terms of effectiveness, runtime overhead, and usability. To evaluate the utility of DL Contract, we have developed 15 sample contracts specifically for training problems and structural bugs. We have adopted four well-vetted benchmarks from prior works on DL bug detection and repair. For the effectiveness, DL Contract correctly detects 259 bugs in 272 real-world buggy programs, from well-vetted benchmarks provided in prior work on DL bug detection and repair. We found that the DL Contract overhead is fairly minimal for the used benchmarks. Lastly, to evaluate the usability, we conducted a survey of twenty participants who have used DL Contract to find and fix bugs. The results reveal that DL Contract can be very helpful to DL application developers when debugging their code.",
+    "citation_count": 9,
+    "reference_count": 45,
+    "url": "https://dblp.org/rec/conf/sigsoft/AhmedISCR23",
+    "dblp_key": "conf/sigsoft/AhmedISCR23",
+    "source_id": "https://openalex.org/W4389165146",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Issue Report Validation in an Industrial Context.",
+    "authors": [
+      "Ethem Utku Aktas",
+      "Ebru Cakmak",
+      "Mete Inan",
+      "Cemal Yilmaz 0001"
+    ],
+    "venue": "ESEC/SIGSOFT FSE",
+    "year": 2023,
+    "abstract": "Effective issue triaging is crucial for software development teams to improve software quality, and thus customer satisfaction. Validating issue reports manually can be time-consuming, hindering the overall efficiency of the triaging process. This paper presents an approach on automating the validation of issue reports to accelerate the issue triaging process in an industrial set-up. We work on 1,200 randomly selected issue reports in banking domain, written in Turkish, an agglutinative language, meaning that new words can be formed with linear concatenation of suffixes to express entire sentences. We manually label these reports for validity, and extract the relevant patterns indicating that they are invalid. Since the issue reports we work on are written in an agglutinative language, we use morphological analysis to extract the features. Using the proposed feature extractors, we utilize a machine learning based approach to predict the issue reports’ validity, performing a 0.77 F1-score.",
+    "citation_count": 3,
+    "reference_count": 39,
+    "url": "https://dblp.org/rec/conf/sigsoft/AktasCIY23",
+    "dblp_key": "conf/sigsoft/AktasCIY23",
+    "source_id": "https://openalex.org/W4389158533",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "MASC: A Tool for Mutation-Based Evaluation of Static Crypto-API Misuse Detectors.",
+    "authors": [
+      "Amit Seal Ami",
+      "Syed Yusuf Ahmed",
+      "Radowan Mahmud Redoy",
+      "Nathan Cooper",
+      "Kaushal Kafle",
+      "Kevin Moran",
+      "Denys Poshyvanyk",
+      "Adwait Nadkarni"
+    ],
+    "venue": "ESEC/SIGSOFT FSE",
+    "year": 2023,
+    "abstract": "While software engineers are optimistically adopting crypto-API misuse detectors (or crypto-detectors) in their software development cycles, this momentum must be accompanied by a rigorous understanding of crypto-detectors’ effectiveness at finding crypto-API misuses in practice. This demo paper presents the technical details and usage scenarios of our tool, namely Mutation Analysis for evaluating Static Crypto-API misuse detectors (MASC). We developed 12 generalizable, usage based mutation operators and three mutation scopes, namely Main Scope, Similarity Scope, and Exhaustive Scope, which can be used to expressively instantiate compilable variants of the crypto-API misuse cases. Using MASC, we evaluated nine major crypto-detectors, and discovered 19 unique, undocumented flaws. We designed MASC to be configurable and user-friendly; a user can configure the parameters to change the nature of generated mutations. Furthermore, MASC comes with both Command Line Interface and Web-based front-end, making it practical for users of different levels of expertise.",
+    "citation_count": 5,
+    "reference_count": 7,
+    "url": "https://dblp.org/rec/conf/sigsoft/AmiARCKMPN23",
+    "dblp_key": "conf/sigsoft/AmiARCKMPN23",
+    "source_id": "https://openalex.org/W4385644434",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "A Case Study of Developer Bots: Motivations, Perceptions, and Challenges.",
+    "authors": [
+      "Sumit Asthana",
+      "Hitesh Sajnani",
+      "Elena Voyloshnikova",
+      "Birendra Acharya",
+      "Kim Herzig"
+    ],
+    "venue": "ESEC/SIGSOFT FSE",
+    "year": 2023,
+    "abstract": "Continuous integration and deployment (CI/CD) is now a widely adopted development model in practice as it reduces the time from ideas to customers. This adoption has also revived the idea of \"shifting left\" during software development -- a practice intended to find and prevent defects early in the software delivery process. To assist with that, engineering systems integrate developer bots in the development workflow to improve developer productivity and help them identify issues early in the software delivery process.",
+    "citation_count": 6,
+    "reference_count": 57,
+    "url": "https://dblp.org/rec/conf/sigsoft/AsthanaSVAH23",
+    "dblp_key": "conf/sigsoft/AsthanaSVAH23",
+    "source_id": "https://openalex.org/W4389162342",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Compositional Taint Analysis for Enforcing Security Policies at Scale.",
+    "authors": [
+      "Subarno Banerjee",
+      "Siwei Cui",
+      "Michael Emmi",
+      "Antonio Filieri",
+      "Liana Hadarean",
+      "Peixuan Li",
+      "Linghui Luo",
+      "Goran Piskachev",
+      "Nicolás Rosner",
+      "Aritra Sengupta",
+      "Omer Tripp",
+      "Jingbo Wang 0006"
+    ],
+    "venue": "ESEC/SIGSOFT FSE",
+    "year": 2023,
+    "abstract": "Automated static dataflow analysis is an effective technique for detecting security critical issues like sensitive data leak, and vulnerability to injection attacks. Ensuring high precision and recall requires an analysis that is context, field and object sensitive. However, it is challenging to attain high precision and recall and scale to large industrial code bases. Compositional style analyses in which individual software components are analyzed separately, independent from their usage contexts, compute reusable summaries of components. This is an essential feature when deploying such analyses in CI/CD at code-review time or when scanning deployed container images. In both these settings the majority of software components stay the same between subsequent scans. However, it is not obvious how to extend such analyses to check the kind of contextual taint specifications that arise in practice, while maintaining compositionality.",
+    "citation_count": 5,
+    "reference_count": 25,
+    "url": "https://dblp.org/rec/conf/sigsoft/BanerjeeCEFHLLP23",
+    "dblp_key": "conf/sigsoft/BanerjeeCEFHLLP23",
+    "source_id": "https://openalex.org/W4389164865",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "On-Premise AIOps Infrastructure for a Software Editor SME: An Experience Report.",
+    "authors": [
+      "Anes Bendimerad",
+      "Youcef Remil",
+      "Romain Mathonat",
+      "Mehdi Kaytoue"
+    ],
+    "venue": "ESEC/SIGSOFT FSE",
+    "year": 2023,
+    "abstract": "Information Technology has become a critical component in various industries, leading to an increased focus on software maintenance and monitoring. With the complexities of modern software systems, traditional maintenance approaches have become insufficient. The concept of AIOps has emerged to enhance predictive maintenance using Big Data and Machine Learning capabilities. However, exploiting AIOps requires addressing several challenges related to the complexity of data and incident management. Commercial solutions exist, but they may not be suitable for certain companies due to high costs, data governance issues, and limitations in covering private software. This paper investigates the feasibility of implementing on-premise AIOps solutions by leveraging open-source tools. We introduce a comprehensive AIOps infrastructure that we have successfully deployed in our company, and we provide the rationale behind different choices that we made to build its various components. Particularly, we provide insights into our approach and criteria for selecting a data management system and we explain its integration. Our experience can be beneficial for companies seeking to internally manage their software maintenance processes with a modern AIOps approach.",
+    "citation_count": 5,
+    "reference_count": 25,
+    "url": "https://dblp.org/rec/conf/sigsoft/BendimeradRMK23",
+    "dblp_key": "conf/sigsoft/BendimeradRMK23",
+    "source_id": "https://openalex.org/W4389162213",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Scalable Program Clone Search through Spectral Analysis.",
+    "authors": [
+      "Tristan Benoit",
+      "Jean-Yves Marion",
+      "Sébastien Bardin"
+    ],
+    "venue": "ESEC/SIGSOFT FSE",
+    "year": 2023,
+    "abstract": "We consider the problem of program clone search, i.e. given a target program and a repository of known programs (all in executable format), the goal is to find the program in the repository most similar to the target program -- with potential applications in terms of reverse engineering, program clustering, malware lineage and software theft detection. Recent years have witnessed a blooming in code similarity techniques, yet most of them focus on function-level similarity and function clone search, while we are interested in program-level similarity and program clone search. Actually, our study shows that prior similarity approaches are either too slow to handle large program repositories, or not precise enough, or yet not robust against slight variations introduced by compilers, source code versions or light obfuscations. We propose a novel spectral analysis method for program-level similarity and program clone search called Programs Spectral Similarity (PSS). In a nutshell, PSS one-time spectral feature extraction is tailored for large repositories, making it a perfect fit for program clone search. We have compared the different approaches with extensive benchmarks, showing that PSS reaches a sweet spot in terms of precision, speed and robustness.",
+    "citation_count": 5,
+    "reference_count": 64,
+    "url": "https://dblp.org/rec/conf/sigsoft/BenoitMB23",
+    "dblp_key": "conf/sigsoft/BenoitMB23",
+    "source_id": "https://openalex.org/W4307185542",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "The Call Graph Chronicles: Unleashing the Power Within.",
+    "authors": [
+      "Masudul Hasan Masud Bhuiyan"
+    ],
+    "venue": "ESEC/SIGSOFT FSE",
+    "year": 2023,
+    "abstract": null,
+    "citation_count": 1761,
+    "reference_count": 1064,
+    "url": "https://dblp.org/rec/conf/sigsoft/Bhuiyan23",
+    "dblp_key": "conf/sigsoft/Bhuiyan23",
+    "source_id": "https://openalex.org/W2169127494",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Analyzing Microservice Connectivity with Kubesonde.",
+    "authors": [
+      "Jacopo Bufalino",
+      "Mario Di Francesco",
+      "Tuomas Aura"
+    ],
+    "venue": "ESEC/SIGSOFT FSE",
+    "year": 2023,
+    "abstract": "Modern cloud-based applications are composed of several microservices that interact over a network. They are complex distributed systems, to the point that developers may not even be aware of how microservices connect to each other and to the Internet. As a consequence, the security of these applications can be greatly compromised. This work explicitly targets this context by providing a methodology to assess microservice connectivity, a software tool that implements it, and findings from analyzing real cloud applications. Specifically, it introduces Kubesonde, a cloud-native software that instruments live applications running on a Kubernetes cluster to analyze microservice connectivity, with minimal impact on performance. An assessment of microservices in 200 popular cloud applications with Kubesonde revealed significant issues in terms of network isolation: more than 60% of them had discrepancies between their declared and actual connectivity, and none restricted outbound connections towards the Internet. Our analysis shows that Kubesonde offers valuable insights on the connectivity between microservices, beyond what is possible with existing tools.",
+    "citation_count": 5,
+    "reference_count": 17,
+    "url": "https://dblp.org/rec/conf/sigsoft/BufalinoFA23",
+    "dblp_key": "conf/sigsoft/BufalinoFA23",
+    "source_id": "https://openalex.org/W4389158442",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Getting Outside the Bug Boxes (Keynote).",
+    "authors": [
+      "Margaret Burnett"
+    ],
+    "venue": "ESEC/SIGSOFT FSE",
+    "year": 2023,
+    "abstract": "Sometimes, we humans find ourselves a bit slow to abandon the comfort of sitting “inside the box”, and this can detract from our ability to innovate. In this talk, I’ll share some outside-the-box perspectives, gleaned from decades of software engineering work, on boxes I’ve seen when thinking about bugs — from failures to faults, from finding to fixing, and from traditional to very non-traditional notions of “what counts” as a bug. I’ll consider the intellectually freeing perspectives that can come from moving outside the “mechanisms” box to policies; the enhancement to applicability from moving outside sub-sub-area boxes to the whole software lifecycle; the differences revealed when moving outside the “typical developer” box to diverse humans; and the plethora of possibilities arising from moving outside the “buggy code” box to a wide range of bug types.",
+    "citation_count": 1,
+    "reference_count": 0,
+    "url": "https://dblp.org/rec/conf/sigsoft/Burnett23",
+    "dblp_key": "conf/sigsoft/Burnett23",
+    "source_id": "https://openalex.org/W4389162017",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "On Using Information Retrieval to Recommend Machine Learning Good Practices for Software Engineers.",
+    "authors": [
+      "Laura Cabra-Acela",
+      "Anamaria Mojica-Hanke",
+      "Mario Linares-Vásquez",
+      "Steffen Herbold"
+    ],
+    "venue": "ESEC/SIGSOFT FSE",
+    "year": 2023,
+    "abstract": "Machine learning (ML) is nowadays widely used for different purposes and in several disciplines. From self-driving cars to automated medical diagnosis, machine learning models extensively support users' daily activities, and software engineering tasks are no exception. Not embracing good ML practices may lead to pitfalls that hinder the performance of an ML system and potentially lead to unexpected results. Despite the existence of documentation and literature about ML best practices, many non-ML experts turn towards gray literature like blogs and Q&A systems when looking for help and guidance when implementing ML systems. To better aid users in distilling relevant knowledge from such sources, we propose a recommender system that recommends ML practices based on the user's context. As a first step in creating a recommender system for machine learning practices, we implemented Idaka. A tool that provides two different approaches for retrieving/generating ML best practices: i) an information retrieval (IR) engine and ii) a large language model. The IR-engine uses BM25 as the algorithm for retrieving the practices, and a large language model, in our case Alpaca. The platform has been designed to allow comparative studies of best practices retrieval tools. Idaka is publicly available at GitHub: https://bit.ly/idaka. Video: https://youtu.be/cEb-AhIPxnM.",
+    "citation_count": 6503,
+    "reference_count": 228,
+    "url": "https://dblp.org/rec/conf/sigsoft/Cabra-AcelaMLH23",
+    "dblp_key": "conf/sigsoft/Cabra-AcelaMLH23",
+    "source_id": "https://openalex.org/W3163993681",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Testing Coreference Resolution Systems without Labeled Test Sets.",
+    "authors": [
+      "Jialun Cao",
+      "Yaojie Lu 0001",
+      "Ming Wen 0001",
+      "Shing-Chi Cheung"
+    ],
+    "venue": "ESEC/SIGSOFT FSE",
+    "year": 2023,
+    "abstract": "Coreference resolution (CR) is a task to resolve different expressions (e.g., named entities, pronouns) that refer to the same real-world en- tity/event. It is a core natural language processing (NLP) component that underlies and empowers major downstream NLP applications such as machine translation, chatbots, and question-answering. De- spite its broad impact, the problem of testing CR systems has rarely been studied. A major difficulty is the shortage of a labeled dataset for testing. While it is possible to feed arbitrary sentences as test inputs to a CR system, a test oracle that captures their expected test outputs (coreference relations) is hard to define automatically. To address the challenge, we propose Crest, an automated testing methodology for CR systems. Crest uses constituency and depen- dency relations to construct pairs of test inputs subject to the same coreference. These relations can be leveraged to define the meta- morphic relation for metamorphic testing. We compare Crest with five state-of-the-art test generation baselines on two popular CR systems, and apply them to generate tests from 1,000 sentences randomly sampled from CoNLL-2012, a popular dataset for corefer- ence resolution. Experimental results show that Crest outperforms baselines significantly. The issues reported by Crest are all true positives (i.e., 100% precision), compared with 63% to 75% achieved by the baselines.",
+    "citation_count": 3,
+    "reference_count": 29,
+    "url": "https://dblp.org/rec/conf/sigsoft/CaoL0C23",
+    "dblp_key": "conf/sigsoft/CaoL0C23",
+    "source_id": "https://openalex.org/W4389159637",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "llvm2CryptoLine: Verifying Arithmetic in Cryptographic C Programs.",
+    "authors": [
+      "Ruiling Chen",
+      "Jiaxiang Liu 0001",
+      "Xiaomu Shi",
+      "Ming-Hsien Tsai 0001",
+      "Bow-Yaw Wang",
+      "Bo-Yin Yang"
+    ],
+    "venue": "ESEC/SIGSOFT FSE",
+    "year": 2023,
+    "abstract": "Correct implementations of cryptographic primitives are essential for modern security. These implementations often contain arithmetic operations involving non-linear computations that are infamously hard to verify. We present llvm2CryptoLine, an automated formal verification tool for arithmetic operations in cryptographic C programs. llvm2CryptoLine successfully verifies 51 arithmetic C programs from industrial cryptographic libraries OpenSSL, wolfSSL and NaCl. Most of the programs are verified fully automatically and efficiently. A screencast that showcases llvm2CryptoLine can be found at https://youtu.be/QXuSmja45VA. Source code is available at https://github.com/fmlab-iis/llvm2cryptoline.",
+    "citation_count": 2,
+    "reference_count": 17,
+    "url": "https://dblp.org/rec/conf/sigsoft/Chen0S0WY23",
+    "dblp_key": "conf/sigsoft/Chen0S0WY23",
+    "source_id": "https://openalex.org/W4389158839",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "DiagConfig: Configuration Diagnosis of Performance Violations in Configurable Software Systems.",
+    "authors": [
+      "Zhiming Chen",
+      "Pengfei Chen 0002",
+      "Peipei Wang",
+      "Guangba Yu",
+      "Zilong He",
+      "Genting Mai"
+    ],
+    "venue": "ESEC/SIGSOFT FSE",
+    "year": 2023,
+    "abstract": "Performance degradation due to misconfiguration in software systems that violates SLOs (service-level objectives) is commonplace. Diagnosing and explaining the root causes of such performance violations in configurable software systems is often challenging due to their increasing complexity. Although there are many tools and techniques for diagnosing performance violations, they provide limited evidence to attribute causes of observed performance violations to specific configurations. This is because the configuration is not originally considered in those tools. This paper proposes DiagConfig, specifically designed to conduct configuration diagnosis of performance violations. It leverages static code analysis to track configuration option propagation, identifies performance-sensitive options, detects performance violations, and constructs cause-effect chains that help stakeholders better understand the relationship between configuration and performance violations. Experimental evaluations with eight real-world software demonstrate that DiagConfig produces fewer false positives than a state-of-the-art documentation analysis-based tool (i.e., 5 vs 41) in the identification of performance-sensitive options, and outperforms a statistics-based debugging tool in the diagnosis of performance violations caused by configuration changes, offering more comprehensive results (recall: 0.892 vs 0.289). Moreover, we also show that DiagConfig can accelerate auto-tuning by compressing configuration space.",
+    "citation_count": 9,
+    "reference_count": 70,
+    "url": "https://dblp.org/rec/conf/sigsoft/ChenCWYHM23",
+    "dblp_key": "conf/sigsoft/ChenCWYHM23",
+    "source_id": "https://openalex.org/W4389209048",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "MuRS: Mutant Ranking and Suppression using Identifier Templates.",
+    "authors": [
+      "Zimin Chen",
+      "Malgorzata Salawa",
+      "Manushree Vijayvergiya",
+      "Goran Petrovic",
+      "Marko Ivankovic",
+      "René Just"
+    ],
+    "venue": "ESEC/SIGSOFT FSE",
+    "year": 2023,
+    "abstract": "Diff-based mutation testing is a mutation testing approach that only mutates lines affected by a code change under review. This approach scales independently of the code-base size and introduces test goals (mutants) that are directly relevant to an engineer’s goal such as fixing a bug, adding a new feature, or refactoring existing functionality. Google’s mutation testing service integrates diff-based mutation testing into the code review process and continuously gathers developer feedback on mutants surfaced during code review. To enhance the developer experience, the mutation testing service uses a number of manually-written rules that suppress not-useful mutants—mutants that have consistently received negative developer feedback. However, while effective, manually implementing suppression rules requires significant engineering time.",
+    "citation_count": 1,
+    "reference_count": 23,
+    "url": "https://dblp.org/rec/conf/sigsoft/ChenSVPIJ23",
+    "dblp_key": "conf/sigsoft/ChenSVPIJ23",
+    "source_id": "https://openalex.org/W4389162559",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "OOM-Guard: Towards Improving the Ergonomics of Rust OOM Handling via a Reservation-Based Approach.",
+    "authors": [
+      "Chengjun Chen",
+      "Zhicong Zhang",
+      "Hongliang Tian",
+      "Shoumeng Yan",
+      "Hui Xu 0009"
+    ],
+    "venue": "ESEC/SIGSOFT FSE",
+    "year": 2023,
+    "abstract": "Out of memory (OOM) is an exceptional system state where any further memory allocation requests may fail. Such allocation failures would crash the process or system if not handled properly, and they may also lead to an inconsistent program state that cannot be recovered easily. Current mechanisms for preventing such hazards highly rely on the manual effort of the programmers themselves. This paper studies the OOM issues of Rust, which is an emerging system programming language that stresses the importance of memory safety but still lacks handy mechanisms to handle OOM well. Even worse, Rust employs an infallible mode of memory allocations by default. As a result, the program written by Rust would simply abort itself when OOM occurs. Such crashes would lead to critical robustness issues for services or modules of operating systems. We propose OOM-Guard, a handy approach for Rust programmers to handle OOM. OOM-Guard is by nature a reservation-based approach that aims to convert the handlings for many possible failed memory allocations into handlings for a smaller number of reservations. In order to achieve efficient reservation, OOM-Guard incorporates a subtle cost analysis algorithm based on static analysis and a proxy allocator. We then apply OOM-Guard to two well-known Rust projects, Bento and rCore. Results show that OOM-Guard can largely reduce developers' efforts for handling OOM and incurs trivial overhead in both memory space and execution time.",
+    "citation_count": 1,
+    "reference_count": 37,
+    "url": "https://dblp.org/rec/conf/sigsoft/ChenZTY023",
+    "dblp_key": "conf/sigsoft/ChenZTY023",
+    "source_id": "https://openalex.org/W4389208898",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "An Automated Approach to Extracting Local Variables.",
+    "authors": [
+      "Xiaye Chi",
+      "Hui Liu 0003",
+      "Guangjie Li",
+      "Weixiao Wang",
+      "Yunni Xia",
+      "Yanjie Jiang",
+      "Yuxia Zhang",
+      "Weixing Ji"
+    ],
+    "venue": "ESEC/SIGSOFT FSE",
+    "year": 2023,
+    "abstract": null,
+    "citation_count": 16790,
+    "reference_count": 46,
+    "url": "https://dblp.org/rec/conf/sigsoft/ChiLLWXJZJ23",
+    "dblp_key": "conf/sigsoft/ChiLLWXJZJ23",
+    "source_id": "https://openalex.org/W2058046532",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Towards Strengthening Formal Specifications with Mutation Model Checking.",
+    "authors": [
+      "Maxime Cordy",
+      "Sami Lazreg",
+      "Axel Legay",
+      "Pierre-Yves Schobbens"
+    ],
+    "venue": "ESEC/SIGSOFT FSE",
+    "year": 2023,
+    "abstract": "Much medical research is observational. The reporting of observational studies is often of insufficient quality. Poor reporting hampers the assessment of the strengths and weaknesses of a study and the generalisability of its results. Taking into account empirical evidence and theoretical considerations, a group of methodologists, researchers, and editors developed the Strengthening the Reporting of Observational Studies in Epidemiology (STROBE) recommendations to improve the quality of reporting of observational studies. The STROBE Statement consists of a checklist of 22 items, which relate to the title, abstract, introduction, methods, results and discussion sections of articles. Eighteen items are common to cohort studies, case-control studies and cross-sectional studies and four are specific to each of the three study designs. The STROBE Statement provides guidance to authors about how to improve the reporting of observational studies and facilitates critical appraisal and interpretation of studies by reviewers, journal editors and readers. This explanatory and elaboration document is intended to enhance the use, understanding, and dissemination of the STROBE Statement. The meaning and rationale for each checklist item are presented. For each item, one or several published examples and, where possible, references to relevant empirical studies and methodological literature are provided. Examples of useful flow diagrams are also included. The STROBE Statement, this document, and the associated Web site (http://www.strobe-statement.org/) should be helpful resources to improve reporting of observational research.",
+    "citation_count": 8382,
+    "reference_count": 264,
+    "url": "https://dblp.org/rec/conf/sigsoft/CordyLLS23",
+    "dblp_key": "conf/sigsoft/CordyLLS23",
+    "source_id": "https://openalex.org/W2116810060",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Engineering a Formally Verified Automated Bug Finder.",
+    "authors": [
+      "Arthur Correnson",
+      "Dominic Steinhöfel"
+    ],
+    "venue": "ESEC/SIGSOFT FSE",
+    "year": 2023,
+    "abstract": "Symbolic execution is a program analysis technique executing programs with symbolic instead of concrete inputs. This principle allows for exploring many program paths at once. Despite its wide adoption—in particular for program testing–little effort was dedicated to studying the semantic foundations of symbolic execution. Without these foundations, critical questions regarding the correctness of symbolic executors cannot be satisfyingly answered: Can a reported bug be reproduced, or is it a false positive (soundness)? Can we be sure to find all bugs if we let the testing tool run long enough (completeness)? This paper presents a systematic approach for engineering provably sound and complete symbolic execution-based bug finders by relating a programming language’s operational semantics with a symbolic semantics. In contrast to prior work on symbolic execution semantics, we address the correctness of critical implementation details of symbolic bug finders, including the search strategy and the role of constraint solvers to prune the search space. We showcase our approach by implementing WiSE, a prototype of a verified bug finder for an imperative language, in the Coq proof assistant and proving it sound and complete. We demonstrate that the design principles of WiSE survive outside the ecosystem of interactive proof assistants by (1) automatically extracting an OCaml implementation and (2) transforming WiSE to PyWiSE, a functionally equivalent Python version.",
+    "citation_count": 6,
+    "reference_count": 25,
+    "url": "https://dblp.org/rec/conf/sigsoft/CorrensonS23",
+    "dblp_key": "conf/sigsoft/CorrensonS23",
+    "source_id": "https://openalex.org/W4389164816",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Building and Sustaining Ethnically, Racially, and Gender Diverse Software Engineering Teams: A Study at Google.",
+    "authors": [
+      "Ella Dagan",
+      "Anita Sarma",
+      "Alison Chang",
+      "Sarah D&apos;Angelo",
+      "Jill Dicker",
+      "Emerson R. Murphy-Hill"
+    ],
+    "venue": "ESEC/SIGSOFT FSE",
+    "year": 2023,
+    "abstract": "Teams that build software are largely demographically homogeneous. Without diversity, homogeneous perspectives dominate how, why, and for whom software is designed. To understand how teams can successfully build and sustain diversity, we interviewed 11 engineers and 9 managers from some of the most gender and racially diverse teams at Google, a large software company. Qualitatively analyzing the interviews, we found shared approaches to recruiting, hiring, and promoting an inclusive environment, all of which create a positive feedback loop. Our findings produce actionable practices that every member of the team can take to increase diversity by fostering a more inclusive software engineering environment.",
+    "citation_count": 18,
+    "reference_count": 43,
+    "url": "https://dblp.org/rec/conf/sigsoft/DaganSCDDM23",
+    "dblp_key": "conf/sigsoft/DaganSCDDM23",
+    "source_id": "https://openalex.org/W4389162369",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Triggering Modes in Spectrum-Based Multi-location Fault Localization.",
+    "authors": [
+      "Tung Dao",
+      "Na Meng 0001",
+      "ThanhVu Nguyen"
+    ],
+    "venue": "ESEC/SIGSOFT FSE",
+    "year": 2023,
+    "abstract": "Spectrum-based fault localization (SBFL) techniques can aid in debugging, but their practicality in industrial settings has been limited due to the large number of tests needed to execute before applying SBFL. Previous research has explored different trigger modes for SBFL and found that applying it immediately after the first test failure is also effective. However, this study only considered single-location bugs, while multi-location bugs are prevalent in real-world scenarios and especially at our company Cvent, which is interested in integrating SBFL to its CI/CD workflow.",
+    "citation_count": 2,
+    "reference_count": 44,
+    "url": "https://dblp.org/rec/conf/sigsoft/Dao0N23",
+    "dblp_key": "conf/sigsoft/Dao0N23",
+    "source_id": "https://openalex.org/W4389161942",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "NaNofuzz: A Usable Tool for Automatic Test Generation.",
+    "authors": [
+      "Matthew C. Davis",
+      "Sangheon Choi",
+      "Sam Estep",
+      "Brad A. Myers",
+      "Joshua Sunshine"
+    ],
+    "venue": "ESEC/SIGSOFT FSE",
+    "year": 2023,
+    "abstract": "In the United States alone, software testing labor is estimated to cost $48 billion USD per year. Despite widespread test execution automation and automation in other areas of software engineering, test suites continue to be created manually by software engineers. We have built a test generation tool, called NaNofuzz, that helps users find bugs in their code by suggesting tests where the output is likely indicative of a bug, e.g., that return NaN (not-a-number) values. NaNofuzz is an interactive tool embedded in a development environment to fit into the programmer's workflow. NaNofuzz tests a function with as little as one button press, analyses the program to determine inputs it should evaluate, executes the program on those inputs, and categorizes outputs to prioritize likely bugs. We conducted a randomized controlled trial with 28 professional software engineers using NaNofuzz as the intervention treatment and the popular manual testing tool, Jest, as the control treatment. Participants using NaNofuzz on average identified bugs more accurately (p < .05, by 30%), were more confident in their tests (p < .03, by 20%), and finished their tasks more quickly (p < .007, by 30%).",
+    "citation_count": 8,
+    "reference_count": 53,
+    "url": "https://dblp.org/rec/conf/sigsoft/DavisCEMS23",
+    "dblp_key": "conf/sigsoft/DavisCEMS23",
+    "source_id": "https://openalex.org/W4389162022",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "A Data Set of Extracted Rationale from Linux Kernel Commit Messages.",
+    "authors": [
+      "Mouna Dhaouadi"
+    ],
+    "venue": "ESEC/SIGSOFT FSE",
+    "year": 2023,
+    "abstract": "Developer’s commit messages contain information about decisions taken and their rationale. Extracting this information is challenging since we lack a detailed understanding of how developers express these concepts. Our work-in-progress targets this challenge by producing a labelled data set of commit messages for a Linux Kernel component. We report preliminary analyses which suggest that larger commit messages and more experienced developers commits tend towards having 40% of sentences containing rationale. This may indicate a guideline for developers to target.",
+    "citation_count": 1,
+    "reference_count": 3,
+    "url": "https://dblp.org/rec/conf/sigsoft/Dhaouadi23",
+    "dblp_key": "conf/sigsoft/Dhaouadi23",
+    "source_id": "https://openalex.org/W4389208648",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "HyperDiff: Computing Source Code Diffs at Scale.",
+    "authors": [
+      "Quentin Le Dilavrec",
+      "Djamel Eddine Khelladi",
+      "Arnaud Blouin",
+      "Jean-Marc Jézéquel"
+    ],
+    "venue": "ESEC/SIGSOFT FSE",
+    "year": 2023,
+    "abstract": "With the advent of fast software evolution and multistage releases, temporal code analysis is becoming useful for various purposes, such as bug cause identification, bug prediction or code evolution analysis. Temporal code analyses can consist in analyzing multiple Abstract Syntax Trees (ASTs) extracted from code evolutions, e.g. one AST for each commit or release. Core feature to temporal analysis is code differencing: the computation of the so-called Diff or edit script between two given versions of the code. However, jointly analyzing and computing the difference on thousands versions of code faces scalability issues. Mainly because of the cost of: 1) parsing the original and evolved code in two source and target ASTs; 2) wasting resources by not reusing intermediate computation results that can be shared between versions. This paper details a novel approach based on time-oriented data structures that makes code differencing scale up to large software codebases. In particular, we leverage on the HyperAST, a novel representation of code histories, to propose an incremental and memory efficient approach by lazifying the well known GumTree diffing algorithms, a mainstream code differencing algorithm and tool. We evaluated our approach on a curated list of 19 large software projects and compared it to GumTree. Our approach outperforms it in scalability both in time and memory. We observed an order-of-magnitude difference: 1) in CPU time from x1.2 to x12.7 for the total time of diff computation and up to x226 in intermediate phases of the diff computation, and 2) in memory footprint of x4.5 per AST node. The approach produced 99.3% of identical diffs with respect to GumTree.",
+    "citation_count": 3,
+    "reference_count": 34,
+    "url": "https://dblp.org/rec/conf/sigsoft/DilavrecKBJ23",
+    "dblp_key": "conf/sigsoft/DilavrecKBJ23",
+    "source_id": "https://openalex.org/W4389208689",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "TraceDiag: Adaptive, Interpretable, and Efficient Root Cause Analysis on Large-Scale Microservice Systems.",
+    "authors": [
+      "Ruomeng Ding",
+      "Chaoyun Zhang",
+      "Lu Wang 0029",
+      "Yong Xu 0010",
+      "Minghua Ma",
+      "Xiaomin Wu",
+      "Meng Zhang 0025",
+      "Qingjun Chen",
+      "Xin Gao 0017",
+      "Xuedong Gao",
+      "Hao Fan",
+      "Saravan Rajmohan",
+      "Qingwei Lin",
+      "Dongmei Zhang 0001"
+    ],
+    "venue": "ESEC/SIGSOFT FSE",
+    "year": 2023,
+    "abstract": "Root Cause Analysis (RCA) is becoming increasingly crucial for ensuring the reliability of microservice systems. However, performing RCA on modern microservice systems can be challenging due to their large scale, as they usually comprise hundreds of components, leading significant human effort. This paper proposes TraceDiag, an end-to-end RCA framework that addresses the challenges for large-scale microservice systems. It leverages reinforcement learning to learn a pruning policy for the service dependency graph to automatically eliminates redundant components, thereby significantly improving the RCA efficiency. The learned pruning policy is interpretable and fully adaptive to new RCA instances. With the pruned graph, a causal-based method can be executed with high accuracy and efficiency. The proposed TraceDiag framework is evaluated on real data traces collected from the Microsoft Exchange system, and demonstrates superior performance compared to state-of-the-art RCA approaches. Notably, TraceDiag has been integrated as a critical component in the Microsoft M365 Exchange, resulting in a significant improvement in the system's reliability and a considerable reduction in the human effort required for RCA.",
+    "citation_count": 19,
+    "reference_count": 54,
+    "url": "https://dblp.org/rec/conf/sigsoft/DingZWXMWZCGGFR23",
+    "dblp_key": "conf/sigsoft/DingZWXMWZCGGFR23",
+    "source_id": "https://openalex.org/W4389209173",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "LibKit: Detecting Third-Party Libraries in iOS Apps.",
+    "authors": [
+      "Daniel Domínguez-Álvarez",
+      "Alejandro de la Cruz",
+      "Alessandra Gorla",
+      "Juan Caballero"
+    ],
+    "venue": "ESEC/SIGSOFT FSE",
+    "year": 2023,
+    "abstract": "We present LibKit, the first approach and tool for detecting the name and version of third-party libraries (TPLs) present in iOS apps. LibKit automatically builds fingerprints for 86K library versions available through the CocoaPods dependency manager and matches them on the decrypted app executables to identify the TPLs (name and version) an iOS app uses. LibKit supports apps written in Swift and Objective-C, detects statically and dynamically linked libraries, and addresses challenges such as partially included libraries and different compiler versions and configurations producing variants of the same library version. On a ground truth of 95 open-source apps, LibKit identifies libraries with a precision of 0.911 and a recall of 0.839. LibKit also significantly outperforms the state-of-the-art CRiOS tool for identifying TPL boundaries. When applied to 1,500 apps from the iTunes Store, LibKit detects 47,015 library versions, identifying popular apps that contain old library versions.",
+    "citation_count": 4,
+    "reference_count": 27,
+    "url": "https://dblp.org/rec/conf/sigsoft/Dominguez-Alvarez23",
+    "dblp_key": "conf/sigsoft/Dominguez-Alvarez23",
+    "source_id": "https://openalex.org/W4389165107",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "LightF3: A Lightweight Fully-Process Formal Framework for Automated Verifying Railway Interlocking Systems.",
+    "authors": [
+      "Yibo Dong 0001",
+      "Xiaoyu Zhang",
+      "Yicong Xu",
+      "Chang Cai",
+      "Yu Chen",
+      "Weikai Miao",
+      "Jianwen Li",
+      "Geguang Pu"
+    ],
+    "venue": "ESEC/SIGSOFT FSE",
+    "year": 2023,
+    "abstract": "Interlocking has long played a crucial role in railway systems. Its functional correctness, particularly concerning safety, forms the foundation of the entire signaling system. To date, numerous efforts have been made to formally model and verify interlocking systems. However, two main problems persist in most prior work: (1) The formal description of the interlocking system heavily depends on reusing existing models, which often results in overgeneralization and failing to fully utilize the intrinsic characteristics of interlocking systems. (2) The verification techniques of current approaches may quickly become outdated, and there is no adaptable method to integrate state-of-the-art verification algorithms or tools.",
+    "citation_count": 2,
+    "reference_count": 31,
+    "url": "https://dblp.org/rec/conf/sigsoft/DongZXCCMLP23",
+    "dblp_key": "conf/sigsoft/DongZXCCMLP23",
+    "source_id": "https://openalex.org/W4389162192",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "An Extensive Study on Adversarial Attack against Pre-trained Models of Code.",
+    "authors": [
+      "Xiaohu Du",
+      "Ming Wen 0001",
+      "Zichao Wei",
+      "Shangwen Wang",
+      "Hai Jin 0001"
+    ],
+    "venue": "ESEC/SIGSOFT FSE",
+    "year": 2023,
+    "abstract": "Transformer-based pre-trained models of code (PTMC) have been widely utilized and have achieved state-of-the-art performance in many mission-critical applications. However, they can be vulnerable to adversarial attacks through identifier substitution or coding style transformation, which can significantly degrade accuracy and may further incur security concerns. Although several approaches have been proposed to generate adversarial examples for PTMC, the effectiveness and efficiency of such approaches, especially on different code intelligence tasks, has not been well understood. To bridge this gap, this study systematically analyzes five state-of-the-art adversarial attack approaches from three perspectives: effectiveness, efficiency, and the quality of generated examples. The results show that none of the five approaches balances all these perspectives. Particularly, approaches with a high attack success rate tend to be time-consuming; the adversarial code they generate often lack naturalness, and vice versa. To address this limitation, we explore the impact of perturbing identifiers under different contexts and find that identifier substitution within for and if statements is the most effective. Based on these findings, we propose a new approach that prioritizes different types of statements for various tasks and further utilizes beam search to generate adversarial examples. Evaluation results show that it outperforms the state-of-the-art ALERT in terms of both effectiveness and efficiency while preserving the naturalness of the generated adversarial examples.",
+    "citation_count": 19,
+    "reference_count": 32,
+    "url": "https://dblp.org/rec/conf/sigsoft/Du0WW023",
+    "dblp_key": "conf/sigsoft/Du0WW023",
+    "source_id": "https://openalex.org/W4389158416",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Understanding the Bug Characteristics and Fix Strategies of Federated Learning Systems.",
+    "authors": [
+      "Xiaohu Du",
+      "Xiao Chen 0026",
+      "Jialun Cao",
+      "Ming Wen 0001",
+      "Shing-Chi Cheung",
+      "Hai Jin 0001"
+    ],
+    "venue": "ESEC/SIGSOFT FSE",
+    "year": 2023,
+    "abstract": "Federated learning (FL) is a machine learning setting where many clients (e.g., mobile devices or whole organizations) collaboratively train a model under the orchestration of a central server (e.g., service provider), while keeping the training data decentralized. FL embodies the principles of focused data collection and minimization, and can mitigate many of the systemic privacy risks and costs resulting from traditional, centralized machine learning and data science approaches. Motivated by the explosive growth in FL research, this monograph discusses recent advances and presents an extensive collection of open problems and challenges.",
+    "citation_count": 4700,
+    "reference_count": 451,
+    "url": "https://dblp.org/rec/conf/sigsoft/DuCC0C023",
+    "dblp_key": "conf/sigsoft/DuCC0C023",
+    "source_id": "https://openalex.org/W2995022099",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "KG4CraSolver: Recommending Crash Solutions via Knowledge Graph.",
+    "authors": [
+      "Xueying Du",
+      "Yiling Lou",
+      "Mingwei Liu 0002",
+      "Xin Peng 0001",
+      "Tianyong Yang"
+    ],
+    "venue": "ESEC/SIGSOFT FSE",
+    "year": 2023,
+    "abstract": "Fixing crashes is challenging, and developers often discuss their encountered crashes and refer to similar crashes and solutions on online Q&A forums (e.g., Stack Overflow). However, a crash often involves very complex contexts, which includes different contextual elements, e.g., purposes, environments, code, and crash traces. Existing crash solution recommendation or general solution recommendation techniques only use an incomplete context or treat the entire context as pure texts to search relevant solutions for a given crash, resulting in inaccurate recommendation results. In this work, we propose a novel crash solution knowledge graph (KG) to summarize the complete crash context and its solution with a graph-structured representation. To construct the crash solution KG automatically, we propose to leverage prompt learning to construct the KG from SO threads with a small set of labeled data. Based on the constructed KG, we further propose a novel KG-based crash solution recommendation technique KG4CraSolver, which precisely finds the relevant SO thread for an encountered crash by finely analyzing and matching the complete crash context based on the crash solution KG. The evaluation results show that the constructed KG is of high quality and KG4CraSolver outperforms baselines in terms of all metrics (e.g., 13.4%-113.4% MRR improvements). Moreover, we perform a user study and find that KG4CraSolver helps participants find crash solutions 34.4% faster and 63.3% more accurately.",
+    "citation_count": 4,
+    "reference_count": 44,
+    "url": "https://dblp.org/rec/conf/sigsoft/DuLL0Y23",
+    "dblp_key": "conf/sigsoft/DuLL0Y23",
+    "source_id": "https://openalex.org/W4389208936",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Semantic Debugging.",
+    "authors": [
+      "Martin Eberlein",
+      "Marius Smytzek",
+      "Dominic Steinhöfel",
+      "Lars Grunske",
+      "Andreas Zeller"
+    ],
+    "venue": "ESEC/SIGSOFT FSE",
+    "year": 2023,
+    "abstract": "Complex machine learning models for NLP are often brittle, making different predictions for input instances that are extremely similar semantically. To automatically detect this behavior for individual instances, we present semantically equivalent adversaries (SEAs) -semantic-preserving perturbations that induce changes in the model's predictions. We generalize these adversaries into semantically equivalent adversarial rules (SEARs) -simple, universal replacement rules that induce adversaries on many instances. We demonstrate the usefulness and flexibility of SEAs and SEARs by detecting bugs in black-box state-of-the-art models for three domains: machine comprehension, visual questionanswering, and sentiment analysis. Via user studies, we demonstrate that we generate high-quality local adversaries for more instances than humans, and that SEARs induce four times as many mistakes as the bugs discovered by human experts. SEARs are also actionable: retraining models using data augmentation significantly reduces bugs, while maintaining accuracy.",
+    "citation_count": 469,
+    "reference_count": 32,
+    "url": "https://dblp.org/rec/conf/sigsoft/EberleinSSGZ23",
+    "dblp_key": "conf/sigsoft/EberleinSSGZ23",
+    "source_id": "https://openalex.org/W2799007037",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Exploring Moral Principles Exhibited in OSS: A Case Study on GitHub Heated Issues.",
+    "authors": [
+      "Ramtin Ehsani",
+      "Rezvaneh Rezapour",
+      "Preetha Chatterjee"
+    ],
+    "venue": "ESEC/SIGSOFT FSE",
+    "year": 2023,
+    "abstract": "To foster collaboration and inclusivity in Open Source Software (OSS) projects, it is crucial to understand and detect patterns of toxic language that may drive contributors away, especially those from underrepresented communities. Although machine learning-based toxicity detection tools trained on domain-specific data have shown promise, their design lacks an understanding of the unique nature and triggers of toxicity in OSS discussions, highlighting the need for further investigation. In this study, we employ Moral Foundations Theory to examine the relationship between moral principles and toxicity in OSS. Specifically, we analyze toxic communications in GitHub issue threads to identify and understand five types of moral principles exhibited in text, and explore their potential association with toxic behavior. Our preliminary findings suggest a possible link between moral principles and toxic comments in OSS communications, with each moral principle associated with at least one type of toxicity. The potential of MFT in toxicity detection warrants further investigation.",
+    "citation_count": 5,
+    "reference_count": 34,
+    "url": "https://dblp.org/rec/conf/sigsoft/EhsaniRC23",
+    "dblp_key": "conf/sigsoft/EhsaniRC23",
+    "source_id": "https://openalex.org/W4389158531",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Accelerating Continuous Integration with Parallel Batch Testing.",
+    "authors": [
+      "Emad Fallahzadeh",
+      "Amir Hossein Bavand",
+      "Peter C. Rigby"
+    ],
+    "venue": "ESEC/SIGSOFT FSE",
+    "year": 2023,
+    "abstract": "Profile hidden Markov models (profile HMMs) and probabilistic inference methods have made important contributions to the theory of sequence database homology search. However, practical use of profile HMM methods has been hindered by the computational expense of existing software implementations. Here I describe an acceleration heuristic for profile HMMs, the \"multiple segment Viterbi\" (MSV) algorithm. The MSV algorithm computes an optimal sum of multiple ungapped local alignment segments using a striped vector-parallel approach previously described for fast Smith/Waterman alignment. MSV scores follow the same statistical distribution as gapped optimal local alignment scores, allowing rapid evaluation of significance of an MSV score and thus facilitating its use as a heuristic filter. I also describe a 20-fold acceleration of the standard profile HMM Forward/Backward algorithms using a method I call \"sparse rescaling\". These methods are assembled in a pipeline in which high-scoring MSV hits are passed on for reanalysis with the full HMM Forward/Backward algorithm. This accelerated pipeline is implemented in the freely available HMMER3 software package. Performance benchmarks show that the use of the heuristic MSV filter sacrifices negligible sensitivity compared to unaccelerated profile HMM searches. HMMER3 is substantially more sensitive and 100- to 1000-fold faster than HMMER2. HMMER3 is now about as fast as BLAST for protein searches.",
+    "citation_count": 7448,
+    "reference_count": 46,
+    "url": "https://dblp.org/rec/conf/sigsoft/FallahzadehBR23",
+    "dblp_key": "conf/sigsoft/FallahzadehBR23",
+    "source_id": "https://openalex.org/W2138122982",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "A Four-Year Study of Student Contributions to OSS vs. OSS4SG with a Lightweight Intervention.",
+    "authors": [
+      "Zihan Fang",
+      "Madeline Endres",
+      "Thomas Zimmermann 0001",
+      "Denae Ford",
+      "Westley Weimer",
+      "Kevin Leach",
+      "Yu Huang 0015"
+    ],
+    "venue": "ESEC/SIGSOFT FSE",
+    "year": 2023,
+    "abstract": "Modern software engineering practice and training increasingly rely on Open Source Software (OSS). The recent growth in demand for professional software engineers has led to increased contributions to, and usage of, OSS. However, there is limited understanding of the factors affecting how developers, and how new or student developers in particular, decide which OSS projects to contribute to, a process critical to OSS sustainability, access, adoption, and growth. To better understand OSS contributions from the developers of tomorrow, we conducted a four-year study with 1,361 students investigating the life cycle of their contributions (from project selection to pull request acceptance). During the study, we also delivered a lightweight intervention to promote the awareness of open source projects for social good (OSS4SG), OSS projects that have positive impacts in other domains. Using both quantitative and qualitative methods, we analyze student experience reports and the pull requests they submit. Compared to general OSS projects, we find significant differences in project selection (𝑝 < 0.0001, effect size = 0.84), student motivation (𝑝 < 0.01, effect size = 0.13), and increased pull-request acceptance rates for OSS4SG contributions. We also find that our intervention correlates with increased student contributions to OSS4SG (𝑝 < 0.0001, effect size = 0.38). Finally, we analyze correlations of factors such as gender or working with a partner. Our findings may help improve the experience for new developers participating in OSS4SG and the quality of their contributions. We also hope our work helps educators, project leaders, and contributors to build a mutually-beneficial framework for the future growth of OSS4SG.",
+    "citation_count": 6,
+    "reference_count": 45,
+    "url": "https://dblp.org/rec/conf/sigsoft/FangE0FWL023",
+    "dblp_key": "conf/sigsoft/FangE0FWL023",
+    "source_id": "https://openalex.org/W4385850093",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Matching Skills, Past Collaboration, and Limited Competition: Modeling When Open-Source Projects Attract Contributors.",
+    "authors": [
+      "Hongbo Fang",
+      "James D. Herbsleb",
+      "Bogdan Vasilescu"
+    ],
+    "venue": "ESEC/SIGSOFT FSE",
+    "year": 2023,
+    "abstract": "Attracting and retaining new developers is often at the heart of open-source project sustainability and success. Previous research found many intrinsic (or endogenous) project characteristics associated with the attractiveness of projects to new developers, but the impact of factors external to the project itself have largely been overlooked. In this work, we focus on one such external factor, a project's labor pool, which is defined as the set of contributors active in the overall open-source ecosystem that the project could plausibly attempt to recruit from at a given time. How are the size and characteristics of the labor pool associated with a project's attractiveness to new contributors? Through an empirical study of over 516,893 Python projects, we found that the size of the project's labor pool, the technical skill match, and the social connection between the project's labor pool and members of the focal project all significantly influence the number of new developers that the focal project attracts, with the competition between projects with overlapping labor pools also playing a role. Overall, the labor pool factors add considerable explanatory power compared to models with only project-level characteristics.",
+    "citation_count": 4,
+    "reference_count": 76,
+    "url": "https://dblp.org/rec/conf/sigsoft/FangHV23",
+    "dblp_key": "conf/sigsoft/FangHV23",
+    "source_id": "https://openalex.org/W4389158573",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "On the Relationship between Code Verifiability and Understandability.",
+    "authors": [
+      "Kobi Feldman",
+      "Martin Kellogg",
+      "Oscar Chaparro"
+    ],
+    "venue": "ESEC/SIGSOFT FSE",
+    "year": 2023,
+    "abstract": "Cloud computing sparked interest in Verifiable Computation protocols, which allow a weak client to securely outsource computations to remote parties. Recent work has dramatically reduced the client's cost to verify the correctness of their results, but the overhead to produce proofs remains largely impractical. Geppetto introduces complementary techniques for reducing prover overhead and increasing prover flexibility. With Multi QAPs, Geppetto reduces the cost of sharing state between computations (e.g, For MapReduce) or within a single computation by up to two orders of magnitude. Via a careful choice of cryptographic primitives, Geppetto's instantiation of bounded proof bootstrapping improves on prior bootstrapped systems by up to five orders of magnitude, albeit at some cost in universality. Geppetto also efficiently verifies the correct execution of proprietary (i.e, Secret) algorithms. Finally, Geppetto's use of energy-saving circuits brings the prover's costs more in line with the program's actual (rather than worst-case) execution time. Geppetto is implemented in a full-fledged, scalable compiler and runtime that consume LLVM code generated from a variety of source C programs and cryptographic libraries.",
+    "citation_count": 184,
+    "reference_count": 76,
+    "url": "https://dblp.org/rec/conf/sigsoft/FeldmanKC23",
+    "dblp_key": "conf/sigsoft/FeldmanKC23",
+    "source_id": "https://openalex.org/W1563556756",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "The State of Survival in OSS: The Impact of Diversity.",
+    "authors": [
+      "Zixuan Feng"
+    ],
+    "venue": "ESEC/SIGSOFT FSE",
+    "year": 2023,
+    "abstract": "Maintaining and retaining contributors is crucial for Open Source (OSS) projects. However, there is often a high turnover among contributors (in some projects as high as 80%). The survivability of contributors is influenced by various factors, including their demographics. Research on contributors’ survivability must, therefore, consider diversity factors. This study longitudinally analyzed the impact of demographic attributes on survivability in the Flutter community through the lens of gender, region, and compensation. The preliminary analysis reveals that affiliated or Western contributors have a higher survival probability than volunteer or Non-Western contributors. However, no significant difference was found in the survival probability between men and women.",
+    "citation_count": 3,
+    "reference_count": 21,
+    "url": "https://dblp.org/rec/conf/sigsoft/Feng23",
+    "dblp_key": "conf/sigsoft/Feng23",
+    "source_id": "https://openalex.org/W4389162340",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Towards Efficient Record and Replay: A Case Study in WeChat.",
+    "authors": [
+      "Sidong Feng",
+      "Haochuan Lu",
+      "Ting Xiong",
+      "Yuetang Deng",
+      "Chunyang Chen 0001"
+    ],
+    "venue": "ESEC/SIGSOFT FSE",
+    "year": 2023,
+    "abstract": "WeChat, a widely-used messenger app boasting over 1 billion monthly active users, requires effective app quality assurance for its complex features. Record-and-replay tools are crucial in achieving this goal. Despite the extensive development of these tools, the impact of waiting time between replay events has been largely overlooked. On one hand, a long waiting time for executing replay events on fully-rendered GUIs slows down the process. On the other hand, a short waiting time can lead to events executing on partially-rendered GUIs, negatively affecting replay effectiveness. An optimal waiting time should strike a balance between effectiveness and efficiency. We introduce WeReplay, a lightweight image-based approach that dynamically adjusts inter-event time based on the GUI rendering state. Given the real-time streaming on the GUI, WeReplay employs a deep learning model to infer the rendering state and synchronize with the replaying tool, scheduling the next event when the GUI is fully rendered. Our evaluation shows that our model achieves 92.1% precision and 93.3% recall in discerning GUI rendering states in the WeChat app. Through assessing the performance in replaying 23 common WeChat usage scenarios, WeReplay successfully replays all scenarios on the same and different devices more efficiently than the state-of-the-practice baselines.",
+    "citation_count": 4,
+    "reference_count": 43,
+    "url": "https://dblp.org/rec/conf/sigsoft/FengLXDC23",
+    "dblp_key": "conf/sigsoft/FengLXDC23",
+    "source_id": "https://openalex.org/W4389162032",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Baldur: Whole-Proof Generation and Repair with Large Language Models.",
+    "authors": [
+      "Emily First",
+      "Markus N. Rabe",
+      "Talia Ringer",
+      "Yuriy Brun"
+    ],
+    "venue": "ESEC/SIGSOFT FSE",
+    "year": 2023,
+    "abstract": "Formally verifying software is a highly desirable but labor-intensive task. Recent work has developed methods to automate formal verification using proof assistants, such as Coq and Isabelle/HOL, e.g., by training a model to predict one proof step at a time and using that model to search through the space of possible proofs. This paper introduces a new method to automate formal verification: We use large language models, trained on natural language and code and fine-tuned on proofs, to generate whole proofs at once. We then demonstrate that a model fine-tuned to repair generated proofs further increasing proving power. This paper: (1) Demonstrates that whole-proof generation using transformers is possible and is as effective but more efficient than search-based techniques. (2) Demonstrates that giving the learned model additional context, such as a prior failed proof attempt and the ensuing error message, results in proof repair that further improves automated proof generation. (3) Establishes, together with prior work, a new state of the art for fully automated proof synthesis. We reify our method in a prototype, Baldur, and evaluate it on a benchmark of 6,336 Isabelle/HOL theorems and their proofs, empirically showing the effectiveness of whole-proof generation, repair, and added context. We also show that Baldur complements the state-of-the-art tool, Thor, by automatically generating proofs for an additional 8.7% of the theorems. Together, Baldur and Thor can prove 65.7% of the theorems fully automatically. This paper paves the way for new research into using large language models for automating formal verification.",
+    "citation_count": 76,
+    "reference_count": 81,
+    "url": "https://dblp.org/rec/conf/sigsoft/FirstRRB23",
+    "dblp_key": "conf/sigsoft/FirstRRB23",
+    "source_id": "https://openalex.org/W4389158536",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Test Case Generation for Drivability Requirements of an Automotive Cruise Controller: An Experience with an Industrial Simulator.",
+    "authors": [
+      "Federico Formica",
+      "Nicholas Petrunti",
+      "Lucas Bruck",
+      "Vera Pantelic",
+      "Mark Lawford",
+      "Claudio Menghi"
+    ],
+    "venue": "ESEC/SIGSOFT FSE",
+    "year": 2023,
+    "abstract": "Automotive software development requires engineers to test their systems to detect violations of both functional and drivability requirements. Functional requirements define the functionality of the automotive software. Drivability requirements refer to the driver's perception of the interactions with the vehicle; for example, they typically require limiting the acceleration and jerk perceived by the driver within given thresholds. While functional requirements are extensively considered by the research literature, drivability requirements garner less attention. This industrial paper describes our experience assessing the usefulness of an automated search-based software testing (SBST) framework in generating failure-revealing test cases for functional and drivability requirements. We report on our experience with the VI-CarRealTime simulator, an industrial virtual modeling and simulation environment widely used in the automotive domain. We designed a Cruise Control system in Simulink for a four-wheel vehicle, in an iterative fashion, by producing 21 model versions. We used the SBST framework for each version of the model to search for failure-revealing test cases revealing requirement violations. Our results show that the SBST framework successfully identified a failure-revealing test case for 66.7% of our model versions, requiring, on average, 245.9s and 3.8 iterations. We present lessons learned, reflect on the generality of our results, and discuss how our results improve the state of practice.",
+    "citation_count": 1,
+    "reference_count": 53,
+    "url": "https://dblp.org/rec/conf/sigsoft/FormicaPBPLM23",
+    "dblp_key": "conf/sigsoft/FormicaPBPLM23",
+    "source_id": "https://openalex.org/W4389164977",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Do CONTRIBUTING Files Provide Information about OSS Newcomers&apos; Onboarding Barriers?",
+    "authors": [
+      "Felipe Fronchetti",
+      "David C. Shepherd",
+      "Igor Wiese",
+      "Christoph Treude",
+      "Marco Aurélio Gerosa",
+      "Igor Steinmacher"
+    ],
+    "venue": "ESEC/SIGSOFT FSE",
+    "year": 2023,
+    "abstract": null,
+    "citation_count": null,
+    "reference_count": null,
+    "url": "https://dblp.org/rec/conf/sigsoft/FronchettiSWTGS23",
+    "dblp_key": "conf/sigsoft/FronchettiSWTGS23",
+    "source_id": null,
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Detection Is Better Than Cure: A Cloud Incidents Perspective.",
+    "authors": [
+      "Vaibhav Ganatra",
+      "Anjaly Parayil",
+      "Supriyo Ghosh",
+      "Yu Kang 0006",
+      "Minghua Ma",
+      "Chetan Bansal",
+      "Suman Nath",
+      "Jonathan Mace"
+    ],
+    "venue": "ESEC/SIGSOFT FSE",
+    "year": 2023,
+    "abstract": "Cloud providers use automated watchdogs or monitors to continuously observe service availability and to proactively report incidents when system performance degrades. Improper monitoring can lead to delays in the detection and mitigation of production incidents, which can be extremely expensive in terms of customer impacts and manual toil from engineering resources. Therefore, a systematic understanding of the pitfalls in current monitoring practices and how they can lead to production incidents is crucial for ensuring continuous reliability of cloud services.",
+    "citation_count": 20,
+    "reference_count": 39,
+    "url": "https://dblp.org/rec/conf/sigsoft/GanatraPGKMBNM23",
+    "dblp_key": "conf/sigsoft/GanatraPGKMBNM23",
+    "source_id": "https://openalex.org/W4389158499",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Code Coverage Criteria for Asynchronous Programs.",
+    "authors": [
+      "Mohammad Ganji",
+      "Saba Alimadadi",
+      "Frank Tip"
+    ],
+    "venue": "ESEC/SIGSOFT FSE",
+    "year": 2023,
+    "abstract": "Asynchronous software often exhibits complex and error-prone behaviors that should be tested thoroughly. Code coverage has been the most popular metric to assess test suite quality. However, traditional code coverage criteria do not adequately reflect completion, interactions, and error handling of asynchronous operations. This paper proposes novel test adequacy criteria for measuring: (i) completion of asynchronous operations in terms of both successful and exceptional execution, (ii) registration of reactions for handling both possible outcomes, and (iii) execution of said reactions through tests. We implement JScope, a tool for automatically measuring coverage according to these criteria in JavaScript applications, as an interactive plug-in for Visual Studio Code. An evaluation of JScope on 20 JavaScript applications shows that the proposed criteria can help improve assessment of test adequacy, complementing traditional criteria. According to our investigation of 15 real GitHub issues concerned with asynchrony, the new criteria can help reveal faulty asynchronous behaviors that are untested yet are deemed covered by traditional coverage criteria. We also report on a controlled experiment with 12 participants to investigate the usefulness of JScope in realistic settings, demonstrating its effectiveness in improving programmers’ ability to assess test adequacy and detect untested behavior of asynchronous code.",
+    "citation_count": 2,
+    "reference_count": 56,
+    "url": "https://dblp.org/rec/conf/sigsoft/GanjiAT23",
+    "dblp_key": "conf/sigsoft/GanjiAT23",
+    "source_id": "https://openalex.org/W4389159649",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Evaluating Transfer Learning for Simplifying GitHub READMEs.",
+    "authors": [
+      "Haoyu Gao",
+      "Christoph Treude",
+      "Mansooreh Zahedi"
+    ],
+    "venue": "ESEC/SIGSOFT FSE",
+    "year": 2023,
+    "abstract": "Software documentation captures detailed knowledge about a software product, e.g., code, technologies, and design. It plays an important role in the coordination of development teams and in conveying ideas to various stakeholders. However, software documentation can be hard to comprehend if it is written with jargon and complicated sentence structure. In this study, we explored the potential of text simplification techniques in the domain of software engineering to automatically simplify GitHub README files. We collected software-related pairs of GitHub README files consisting of 14,588 entries, aligned difficult sentences with their simplified counterparts, and trained a Transformer-based model to automatically simplify difficult versions. To mitigate the sparse and noisy nature of the software-related simplification dataset, we applied general text simplification knowledge to this field. Since many general-domain difficult-to-simple Wikipedia document pairs are already publicly available, we explored the potential of transfer learning by first training the model on the Wikipedia data and then fine-tuning it on the README data. Using automated BLEU scores and human evaluation, we compared the performance of different transfer learning schemes and the baseline models without transfer learning. The transfer learning model using the best checkpoint trained on a general topic corpus achieved the best performance of 34.68 BLEU score and statistically significantly higher human annotation scores compared to the rest of the schemes and baselines. We conclude that using transfer learning is a promising direction to circumvent the lack of data and drift style problem in software README files simplification and achieved a better trade-off between simplification and preservation of meaning.",
+    "citation_count": 9,
+    "reference_count": 60,
+    "url": "https://dblp.org/rec/conf/sigsoft/GaoTZ23",
+    "dblp_key": "conf/sigsoft/GaoTZ23",
+    "source_id": "https://openalex.org/W4386080933",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Benchmarking Robustness of AI-Enabled Multi-sensor Fusion Systems: Challenges and Opportunities.",
+    "authors": [
+      "Xinyu Gao",
+      "Zhijie Wang 0014",
+      "Yang Feng 0003",
+      "Lei Ma 0003",
+      "Zhenyu Chen 0001",
+      "Baowen Xu"
+    ],
+    "venue": "ESEC/SIGSOFT FSE",
+    "year": 2023,
+    "abstract": "Multi-Sensor Fusion (MSF) based perception systems have been the foundation in supporting many industrial applications and domains, such as self-driving cars, robotic arms, and unmanned aerial vehicles. Over the past few years, the fast progress in datadriven artificial intelligence (AI) has brought a fast-increasing trend to empower MSF systems by deep learning techniques to further improve performance, especially on intelligent systems and their perception systems. Although quite a few AI-enabled MSF perception systems and techniques have been proposed, up to the present, limited benchmarks that focus on MSF perception are publicly available. Given that many intelligent systems such as self-driving cars are operated in safety-critical contexts where perception systems play an important role, there comes an urgent need for a more in-depth understanding of the performance and reliability of these MSF systems.",
+    "citation_count": 25,
+    "reference_count": 48,
+    "url": "https://dblp.org/rec/conf/sigsoft/GaoWF00X23",
+    "dblp_key": "conf/sigsoft/GaoWF00X23",
+    "source_id": "https://openalex.org/W4379924413",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Predicting Software Performance with Divide-and-Learn.",
+    "authors": [
+      "Jingzhi Gong",
+      "Tao Chen 0001"
+    ],
+    "venue": "ESEC/SIGSOFT FSE",
+    "year": 2023,
+    "abstract": "Predicting the performance of highly configurable software systems is the foundation for performance testing and quality assurance. To that end, recent work has been relying on machine/deep learning to model software performance. However, a crucial yet unaddressed challenge is how to cater for the sparsity inherited from the configuration landscape: the influence of configuration options (features) and the distribution of data samples are highly sparse.",
+    "citation_count": 14,
+    "reference_count": 55,
+    "url": "https://dblp.org/rec/conf/sigsoft/Gong023",
+    "dblp_key": "conf/sigsoft/Gong023",
+    "source_id": "https://openalex.org/W4389209124",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Efficient Text-to-Code Retrieval with Cascaded Fast and Slow Transformer Models.",
+    "authors": [
+      "Akhilesh Deepak Gotmare",
+      "Junnan Li 0001",
+      "Shafiq Joty",
+      "Steven C. H. Hoi"
+    ],
+    "venue": "ESEC/SIGSOFT FSE",
+    "year": 2023,
+    "abstract": "The goal of semantic code search or text-to-code search is to retrieve a semantically relevant code snippet from an existing code database using a natural language query. When constructing a practical semantic code search system, existing approaches fail to provide an optimal balance between retrieval speed and the relevance of the retrieved results. We propose an efficient and effective text-to-code search framework with cascaded fast and slow models, in which a fast transformer encoder model is learned to optimize a scalable index for fast retrieval followed by learning a slow classification-based re-ranking model to improve the accuracy of the top K results from the fast retrieval. To further reduce the high memory cost of deploying two separate models in practice, we propose to jointly train the fast and slow model based on a single transformer encoder with shared parameters. Empirically our cascaded method is not only efficient and scalable, but also achieves state-of-the-art results with an average mean reciprocal ranking (MRR) score of 0.7795 (across 6 programming languages) on the CodeSearchNet benchmark as opposed to the prior state-of-the-art result of 0.744 MRR. Our codebase can be found at this link.",
+    "citation_count": 3,
+    "reference_count": 46,
+    "url": "https://dblp.org/rec/conf/sigsoft/Gotmare0JH23",
+    "dblp_key": "conf/sigsoft/Gotmare0JH23",
+    "source_id": "https://openalex.org/W4389158487",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "The EarlyBIRD Catches the Bug: On Exploiting Early Layers of Encoder Models for More Efficient Code Classification.",
+    "authors": [
+      "Anastasiia Grishina",
+      "Max Hort",
+      "Leon Moonen"
+    ],
+    "venue": "ESEC/SIGSOFT FSE",
+    "year": 2023,
+    "abstract": "The use of modern Natural Language Processing (NLP) techniques has shown to be beneficial for software engineering tasks, such as vulnerability detection and type inference. However, training deep NLP models requires significant computational resources. This paper explores techniques that aim at achieving the best usage of resources and available information in these models.",
+    "citation_count": 13,
+    "reference_count": 51,
+    "url": "https://dblp.org/rec/conf/sigsoft/GrishinaHM23",
+    "dblp_key": "conf/sigsoft/GrishinaHM23",
+    "source_id": "https://openalex.org/W4376122476",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "LLM-Based Code Generation Method for Golang Compiler Testing.",
+    "authors": [
+      "Qiuhan Gu"
+    ],
+    "venue": "ESEC/SIGSOFT FSE",
+    "year": 2023,
+    "abstract": "Modern optimizing compilers are among the most complex software systems humans build. One way to identify subtle compiler bugs is fuzzing. Both the quantity and the quality of testcases are crucial to the performance of fuzzing. Traditional testcase-generation methods, such as Csmith and YARPGen, have been proven successful at discovering compiler bugs. However, such generated testcases have limited coverage and quantity. In this paper, we present a code generation method for compiler testing based on LLM to maximize the quality and quantity of the generated code. In particular, to avoid undefined behavior and syntax errors in generated testcases, we design a filter strategy to clean the source code, preparing a high-quality dataset for the model training. Besides, we present a seed schedule strategy to improve code generation. We apply the method to test the Golang compiler and the result shows that our pipeline outperforms previous methods both qualitatively and quantitatively. It produces testcases with an average coverage of 3.38%, in contrast to the testcases generated by GoFuzz, which have an average coverage of 0.44%. Moreover, among all the generated testcases, only 2.79% exhibited syntax errors, and none displayed undefined behavior.",
+    "citation_count": 58,
+    "reference_count": 6,
+    "url": "https://dblp.org/rec/conf/sigsoft/Gu23",
+    "dblp_key": "conf/sigsoft/Gu23",
+    "source_id": "https://openalex.org/W4389209096",
+    "source": null,
+    "source_url": null
+  }
+]

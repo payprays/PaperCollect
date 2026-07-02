@@ -259,6 +259,7 @@ def search_saved_papers(
     year: int | None = None,
     limit: int = 25,
     mode: str = "keyword",
+    offset: int = 0,
 ) -> list[dict[str, Any]]:
     """Search saved JSON paper files without requiring embeddings or API keys."""
     if mode not in SEARCH_MODES:
@@ -382,7 +383,7 @@ def search_saved_papers(
         results.append(result)
 
     results.sort(key=lambda item: (item["score"], item.get("year") or 0), reverse=True)
-    return results[:limit]
+    return results[offset:offset + limit]
 
 
 def _search_agentic_or_fallback(

@@ -1,0 +1,715 @@
+[
+  {
+    "title": "Symbolic Computation in Automated Program Reasoning.",
+    "authors": [
+      "Laura Kovács"
+    ],
+    "venue": "FM",
+    "year": 2023,
+    "abstract": "As a present to Mizar on its 50th anniversary, we develop an AI/TP system that automatically proves about 60% of the Mizar theorems in the hammer setting. We also automatically prove 75% of the Mizar theorems when the automated provers are helped by using only the premises used in the human-written Mizar proofs. We describe the methods and large-scale experiments leading to these results. This includes in particular the E and Vampire provers, their ENIGMA and Deepire learning modifications, a number of learning-based premise selection methods, and the incremental loop that interleaves growing a corpus of millions of ATP proofs with training increasingly strong AI/TP systems on them. We also present a selection of Mizar problems that were proved automatically.",
+    "citation_count": 76227,
+    "reference_count": 0,
+    "url": "https://doi.org/10.1007/978-3-031-27481-7_1",
+    "dblp_key": "conf/fm/Kovacs23",
+    "source_id": "https://openalex.org/W4385245566",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "The Next Big Thing: From Embedded Systems to Embodied Actors.",
+    "authors": [
+      "Harald Ruess"
+    ],
+    "venue": "FM",
+    "year": 2023,
+    "abstract": null,
+    "citation_count": 1360,
+    "reference_count": 135,
+    "url": "https://doi.org/10.1007/978-3-031-27481-7_2",
+    "dblp_key": "conf/fm/Ruess23",
+    "source_id": "https://openalex.org/W2517745273",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Intelligent and Dependable Decision-Making Under Uncertainty.",
+    "authors": [
+      "Nils Jansen 0001"
+    ],
+    "venue": "FM",
+    "year": 2023,
+    "abstract": "Interest in autonomous driving (AD) and intelligent vehicles (IVs) is growing at a rapid pace due to the convenience, safety, and economic benefits. Although a number of surveys have reviewed research achievements in this field, they are still limited in specific tasks, lack of systematic summary and research directions in the future. Here we propose a Survey of Surveys (SoS) for total technologies of AD and IVs that reviews the history, summarizes the milestones, and provides the perspectives, ethics, and future research directions. To our knowledge, this article is the first SoS with milestones in AD and IVs, which constitutes our complete research work together with two other technical surveys. We anticipate that this article will bring novel and diverse insights to researchers and abecedarians, and serve as a bridge between past and future.",
+    "citation_count": 484,
+    "reference_count": 190,
+    "url": "https://doi.org/10.1007/978-3-031-27481-7_3",
+    "dblp_key": "conf/fm/Jansen23",
+    "source_id": "https://openalex.org/W4312550876",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "A Coq Formalization of Lebesgue Induction Principle and Tonelli's Theorem.",
+    "authors": [
+      "Sylvie Boldo",
+      "François Clément",
+      "Vincent Martin",
+      "Micaela Mayero",
+      "Houda Mouhcine"
+    ],
+    "venue": "FM",
+    "year": 2023,
+    "abstract": null,
+    "citation_count": 3,
+    "reference_count": 13,
+    "url": "https://doi.org/10.1007/978-3-031-27481-7_4",
+    "dblp_key": "conf/fm/BoldoCMMM23",
+    "source_id": "https://openalex.org/W4310894270",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Railway Scheduling Using Boolean Satisfiability Modulo Simulations.",
+    "authors": [
+      "Tomás Kolárik",
+      "Stefan Ratschan"
+    ],
+    "venue": "FM",
+    "year": 2023,
+    "abstract": "Railway scheduling is a problem that exhibits both non-trivial discrete and continuous behavior. In this paper, we simulate train networks at a low level, where a number of timing and ordering constraints can appear. We model this problem using a combination of SAT and ordinary differential equations (SAT modulo ODE). In addition, we adapt our existing method for solving such problems in such a way that the resulting solver is competitive with methods based on dedicated railway simulators while being more general and extensible.",
+    "citation_count": 3,
+    "reference_count": 14,
+    "url": "https://doi.org/10.1007/978-3-031-27481-7_5",
+    "dblp_key": "conf/fm/KolarikR23",
+    "source_id": "https://openalex.org/W4323026929",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "SMT Sampling via Model-Guided Approximation.",
+    "authors": [
+      "Matan Peled",
+      "Bat-Chen Rothenberg",
+      "Shachar Itzhaky"
+    ],
+    "venue": "FM",
+    "year": 2023,
+    "abstract": "We investigate the domain of satisfiable formulas in satisfiability modulo theories (SMT), in particular, automatic generation of a multitude of satisfying assignments to such formulas. Despite the long and successful history of SMT in model checking and formal verification, this aspect is relatively under-explored. Prior work exists for generating such assignments, or samples, for Boolean formulas and for quantifier-free first-order formulas involving bit-vectors, arrays, and uninterpreted functions (QF_AUFBV). We propose a new approach that is suitable for a theory T of integer arithmetic and to T with arrays and uninterpreted functions. The approach involves reducing the general sampling problem to a simpler instance of sampling from a set of independent intervals, which can be done efficiently. Such reduction is carried out by expanding a single model - a seed - using top-down propagation of constraints along the original first-order formula.",
+    "citation_count": 7,
+    "reference_count": 35,
+    "url": "https://doi.org/10.1007/978-3-031-27481-7_6",
+    "dblp_key": "conf/fm/PeledRI23",
+    "source_id": "https://openalex.org/W4323026751",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Efficient SMT-Based Network Fault Tolerance Verification.",
+    "authors": [
+      "Yu Liu 0130",
+      "Pavle Subotic",
+      "Emmanuel Letier",
+      "Sergey Mechtaev",
+      "Abhik Roychoudhury"
+    ],
+    "venue": "FM",
+    "year": 2023,
+    "abstract": null,
+    "citation_count": 2,
+    "reference_count": 15,
+    "url": "https://doi.org/10.1007/978-3-031-27481-7_7",
+    "dblp_key": "conf/fm/LiuSLMR23",
+    "source_id": "https://openalex.org/W4323026487",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Formalising the Prevention of Microarchitectural Timing Channels by Operating Systems.",
+    "authors": [
+      "Robert Sison",
+      "Scott Buckley",
+      "Toby Murray",
+      "Gerwin Klein",
+      "Gernot Heiser"
+    ],
+    "venue": "FM",
+    "year": 2023,
+    "abstract": null,
+    "citation_count": 2,
+    "reference_count": 30,
+    "url": "https://doi.org/10.1007/978-3-031-27481-7_8",
+    "dblp_key": "conf/fm/SisonBMKH23",
+    "source_id": "https://openalex.org/W4323026390",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Can We Communicate? Using Dynamic Logic to Verify Team Automata.",
+    "authors": [
+      "Maurice H. ter Beek",
+      "Guillermina Cledou",
+      "Rolf Hennicker",
+      "José Proença"
+    ],
+    "venue": "FM",
+    "year": 2023,
+    "abstract": null,
+    "citation_count": null,
+    "reference_count": null,
+    "url": "https://doi.org/10.1007/978-3-031-27481-7_9",
+    "dblp_key": "conf/fm/BeekCHP23",
+    "source_id": null,
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "The ScalaFix Equation Solver.",
+    "authors": [
+      "Gianluca Amato",
+      "Francesca Scozzari"
+    ],
+    "venue": "FM",
+    "year": 2023,
+    "abstract": null,
+    "citation_count": 1,
+    "reference_count": 20,
+    "url": "https://doi.org/10.1007/978-3-031-27481-7_10",
+    "dblp_key": "conf/fm/AmatoS23",
+    "source_id": "https://openalex.org/W4323026394",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "HHLPy: Practical Verification of Hybrid Systems Using Hoare Logic.",
+    "authors": [
+      "Huanhuan Sheng",
+      "Alexander Bentkamp",
+      "Bohua Zhan"
+    ],
+    "venue": "FM",
+    "year": 2023,
+    "abstract": "We present a tool for verification of hybrid systems expressed in the sequential fragment of HCSP (Hybrid Communicating Sequential Processes). The tool permits annotating HCSP programs with pre- and postconditions, invariants, and proof rules for reasoning about ordinary differential equations. Verification conditions are generated from the annotations following the rules of hybrid Hoare logic. We designed labeling and highlighting mechanisms to distinguish and visualize different verification conditions. The tool is implemented in Python and has a web-based user interface. We evaluated the effectiveness of the tool on translations of Simulink/Stateflow models and on KeYmaera X benchmarks.",
+    "citation_count": 13,
+    "reference_count": 33,
+    "url": "https://doi.org/10.1007/978-3-031-27481-7_11",
+    "dblp_key": "conf/fm/ShengBZ23",
+    "source_id": "https://openalex.org/W4323026740",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "symQV: Automated Symbolic Verification of Quantum Programs.",
+    "authors": [
+      "Fabian Bauer-Marquart",
+      "Stefan Leue",
+      "Christian Schilling 0001"
+    ],
+    "venue": "FM",
+    "year": 2023,
+    "abstract": "We present symQV, a symbolic execution framework for writing and verifying quantum computations in the quantum circuit model. symQV can automatically verify that a quantum program complies with a first-order specification. We formally introduce a symbolic quantum program model. This allows to encode the verification problem in an SMT formula, which can then be checked with a delta-complete decision procedure. We also propose an abstraction technique to speed up the verification process. Experimental results show that the abstraction improves symQV's scalability by an order of magnitude to quantum programs with 24 qubits (a 2^24-dimensional state space).",
+    "citation_count": 30,
+    "reference_count": 34,
+    "url": "https://doi.org/10.1007/978-3-031-27481-7_12",
+    "dblp_key": "conf/fm/BauerMarquartLS23",
+    "source_id": "https://openalex.org/W4323026405",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "sfPFL: A Probabilistic Logic for Fault Trees.",
+    "authors": [
+      "Stefano M. Nicoletti",
+      "Milan Lopuhaä-Zwakenberg",
+      "Ernst Moritz Hahn",
+      "Mariëlle Stoelinga"
+    ],
+    "venue": "FM",
+    "year": 2023,
+    "abstract": null,
+    "citation_count": null,
+    "reference_count": null,
+    "url": "https://doi.org/10.1007/978-3-031-27481-7_13",
+    "dblp_key": "conf/fm/NicolettiLHS23",
+    "source_id": null,
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Energy Büchi Problems.",
+    "authors": [
+      "Sven Dziadek",
+      "Uli Fahrenberg",
+      "Philipp Schlehuber-Caissier"
+    ],
+    "venue": "FM",
+    "year": 2023,
+    "abstract": null,
+    "citation_count": 1,
+    "reference_count": 26,
+    "url": "https://doi.org/10.1007/978-3-031-27481-7_14",
+    "dblp_key": "conf/fm/DziadekFS23",
+    "source_id": "https://openalex.org/W4323026617",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "QMaude: Quantitative Specification and Verification in Rewriting Logic.",
+    "authors": [
+      "Rubén Rubio",
+      "Narciso Martí-Oliet",
+      "Isabel Pita",
+      "Alberto Verdejo"
+    ],
+    "venue": "FM",
+    "year": 2023,
+    "abstract": null,
+    "citation_count": 11,
+    "reference_count": 44,
+    "url": "https://doi.org/10.1007/978-3-031-27481-7_15",
+    "dblp_key": "conf/fm/RubioMPV23",
+    "source_id": "https://openalex.org/W4323026591",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Minimisation of Spatial Models Using Branching Bisimilarity.",
+    "authors": [
+      "Vincenzo Ciancia",
+      "Jan Friso Groote",
+      "Diego Latella",
+      "Mieke Massink",
+      "Erik P. de Vink"
+    ],
+    "venue": "FM",
+    "year": 2023,
+    "abstract": null,
+    "citation_count": 7,
+    "reference_count": 29,
+    "url": "https://doi.org/10.1007/978-3-031-27481-7_16",
+    "dblp_key": "conf/fm/CianciaGLMV23",
+    "source_id": "https://openalex.org/W4323026818",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Reasoning About Promises in Weak Memory Models with Event Structures.",
+    "authors": [
+      "Heike Wehrheim",
+      "Lara Bargmann",
+      "Brijesh Dongol"
+    ],
+    "venue": "FM",
+    "year": 2023,
+    "abstract": "Miller (1956) summarized evidence that people can remember about seven chunks in short-term memory (STM) tasks. However, that number was meant more as a rough estimate and a rhetorical device than as a real capacity limit. Others have since suggested that there is a more precise capacity limit, but that it is only three to five chunks. The present target article brings together a wide variety of data on capacity limits suggesting that the smaller capacity limit is real. Capacity limits will be useful in analyses of information processing only if the boundary conditions for observing them can be carefully described. Four basic conditions in which chunks can be identified and capacity limits can accordingly be observed are: (1) when information overload limits chunks to individual stimulus items, (2) when other steps are taken specifically to block the recording of stimulus items into larger chunks, (3) in performance discontinuities caused by the capacity limit, and (4) in various indirect effects of the capacity limit. Under these conditions, rehearsal and long-term memory cannot be used to combine stimulus items into chunks of an unknown size; nor can storage mechanisms that are not capacity-limited, such as sensory memory, allow the capacity-limited storage mechanism to be refilled during recall. A single, central capacity limit averaging about four chunks is implicated along with other, noncapacity-limited sources. The pure STM capacity limit expressed in chunks is distinguished from compound STM limits obtained when the number of separately held chunks is unclear. Reasons why pure capacity estimates fall within a narrow range are discussed and a capacity limit for the focus of attention is proposed.",
+    "citation_count": 6785,
+    "reference_count": 574,
+    "url": "https://doi.org/10.1007/978-3-031-27481-7_17",
+    "dblp_key": "conf/fm/WehrheimBD23",
+    "source_id": "https://openalex.org/W2166667242",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "A Fine-Grained Semantics for Arrays and Pointers Under Weak Memory Models.",
+    "authors": [
+      "Robert J. Colvin"
+    ],
+    "venue": "FM",
+    "year": 2023,
+    "abstract": null,
+    "citation_count": 4,
+    "reference_count": 50,
+    "url": "https://doi.org/10.1007/978-3-031-27481-7_18",
+    "dblp_key": "conf/fm/Colvin23",
+    "source_id": "https://openalex.org/W4323026489",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "VeyMont: Parallelising Verified Programs Instead of Verifying Parallel Programs.",
+    "authors": [
+      "Petra van den Bos",
+      "Sung-Shik Jongmans"
+    ],
+    "venue": "FM",
+    "year": 2023,
+    "abstract": null,
+    "citation_count": 6,
+    "reference_count": 49,
+    "url": "https://doi.org/10.1007/978-3-031-27481-7_19",
+    "dblp_key": "conf/fm/BosJ23",
+    "source_id": "https://openalex.org/W4323026933",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Verifying Functional Correctness Properties at the Level of Java Bytecode.",
+    "authors": [
+      "Marco Paganoni",
+      "Carlo A. Furia"
+    ],
+    "venue": "FM",
+    "year": 2023,
+    "abstract": "The breakneck evolution of modern programming languages aggravates the development of deductive verification tools, which struggle to timely and fully support all new language features. To address this challenge, we present ByteBack: a verification technique that works on Java bytecode. Compared to high-level languages, intermediate representations such as bytecode offer a much more limited and stable set of features; hence, they may help decouple the verification process from changes in the source-level language.   ByteBack offers a library to specify functional correctness properties at the level of the source code, so that the bytecode is only used as an intermediate representation that the end user does not need to work with. Then, ByteBack reconstructs some of the information about types and expressions that is erased during compilation into bytecode but is necessary to correctly perform verification. Our experiments with an implementation of ByteBack demonstrate that it can successfully verify bytecode compiled from different versions of Java, and including several modern language features that even state-of-the-art Java verifiers (such as KeY and OpenJML) do not directly support$\\unicode{x2013}$thus revealing how ByteBack's approach can help keep up verification technology with language evolution.",
+    "citation_count": 9,
+    "reference_count": 50,
+    "url": "https://doi.org/10.1007/978-3-031-27481-7_20",
+    "dblp_key": "conf/fm/PaganoniF23",
+    "source_id": "https://openalex.org/W4323026556",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Abstract Alloy Instances.",
+    "authors": [
+      "Jan Oliver Ringert",
+      "Allison Sullivan"
+    ],
+    "venue": "FM",
+    "year": 2023,
+    "abstract": null,
+    "citation_count": 7,
+    "reference_count": 28,
+    "url": "https://doi.org/10.1007/978-3-031-27481-7_21",
+    "dblp_key": "conf/fm/RingertS23",
+    "source_id": "https://openalex.org/W4323027020",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Monitoring the Internet Computer.",
+    "authors": [
+      "David A. Basin",
+      "Daniel Stefan Dietiker",
+      "Srdan Krstic",
+      "Yvonne-Anne Pignolet",
+      "Martin Raszyk",
+      "Joshua Schneider 0001",
+      "Arshavir Ter-Gabrielyan"
+    ],
+    "venue": "FM",
+    "year": 2023,
+    "abstract": null,
+    "citation_count": 11960,
+    "reference_count": 77,
+    "url": "https://doi.org/10.1007/978-3-031-27481-7_22",
+    "dblp_key": "conf/fm/BasinDKPRST23",
+    "source_id": "https://openalex.org/W2111619626",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Word Equations in Synergy with Regular Constraints.",
+    "authors": [
+      "Frantisek Blahoudek",
+      "Yu-Fang Chen 0001",
+      "David Chocholatý",
+      "Vojtech Havlena",
+      "Lukás Holík",
+      "Ondrej Lengál",
+      "Juraj Síc"
+    ],
+    "venue": "FM",
+    "year": 2023,
+    "abstract": "When eating spaghetti, one should have the sauce and noodles mixed instead of eating them separately. We argue that also in string solving, word equations and regular constraints are better mixed together than approached separately as in most current string solvers. We propose a fast algorithm, complete for the fragment of chain-free constraints, in which word equations and regular constraints are tightly integrated and exchange information, efficiently pruning the cases generated by each other and limiting possible combinatorial explosion. The algorithm is based on a novel language-based characterisation of satisfiability of word equations with regular constraints. We experimentally show that our prototype implementation is competitive with the best string solvers and even superior in that it is the fastest on difficult examples and has the least number of timeouts.",
+    "citation_count": 14,
+    "reference_count": 53,
+    "url": "https://doi.org/10.1007/978-3-031-27481-7_23",
+    "dblp_key": "conf/fm/BlahoudekCCHHLS23",
+    "source_id": "https://openalex.org/W4323026879",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Verifying Feedforward Neural Networks for Classification in Isabelle/HOL.",
+    "authors": [
+      "Achim D. Brucker",
+      "Amy Stell"
+    ],
+    "venue": "FM",
+    "year": 2023,
+    "abstract": null,
+    "citation_count": 14,
+    "reference_count": 27,
+    "url": "https://doi.org/10.1007/978-3-031-27481-7_24",
+    "dblp_key": "conf/fm/BruckerS23",
+    "source_id": "https://openalex.org/W4323026396",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "SMPT: A Testbed for Reachability Methods in Generalized Petri Nets.",
+    "authors": [
+      "Nicolas Amat",
+      "Silvano Dal-Zilio"
+    ],
+    "venue": "FM",
+    "year": 2023,
+    "abstract": "SMPT (for Satisfiability Modulo Petri Net) is a model checker for reachability problems in Petri nets. It started as a portfolio of methods to experiment with symbolic model checking, and was designed to be easily extended. Some distinctive features are its ability to benefit from structural reductions and to generate verdict certificates. Our tool is quite mature and performed well compared to other state-of-the-art tools in the Model Checking Contest.",
+    "citation_count": 6,
+    "reference_count": 30,
+    "url": "https://doi.org/10.1007/978-3-031-27481-7_25",
+    "dblp_key": "conf/fm/AmatD23",
+    "source_id": "https://openalex.org/W4322616387",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "The Octatope Abstract Domain for Verification of Neural Networks.",
+    "authors": [
+      "Stanley Bak",
+      "Taylor Dohmen",
+      "K. Subramani 0001",
+      "Ashutosh Trivedi 0001",
+      "Alvaro Velasquez",
+      "Piotr Wojciechowski 0002"
+    ],
+    "venue": "FM",
+    "year": 2023,
+    "abstract": null,
+    "citation_count": 4,
+    "reference_count": 27,
+    "url": "https://doi.org/10.1007/978-3-031-27481-7_26",
+    "dblp_key": "conf/fm/BakDSTVW23",
+    "source_id": "https://openalex.org/W4323026442",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Program Semantics and Verification Technique for AI-Centred Programs.",
+    "authors": [
+      "Solofomampionona Fortunat Rajaona",
+      "Ioana Boureanu",
+      "Vadim Malvone",
+      "Francesco Belardinelli"
+    ],
+    "venue": "FM",
+    "year": 2023,
+    "abstract": null,
+    "citation_count": 8936,
+    "reference_count": 668,
+    "url": "https://doi.org/10.1007/978-3-031-27481-7_27",
+    "dblp_key": "conf/fm/RajaonaBMB23",
+    "source_id": "https://openalex.org/W2981731882",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Tableaux for Realizability of Safety Specifications.",
+    "authors": [
+      "Montserrat Hermo",
+      "Paqui Lucio",
+      "César Sánchez 0001"
+    ],
+    "venue": "FM",
+    "year": 2023,
+    "abstract": null,
+    "citation_count": 3,
+    "reference_count": 34,
+    "url": "https://doi.org/10.1007/978-3-031-27481-7_28",
+    "dblp_key": "conf/fm/HermoLS23",
+    "source_id": "https://openalex.org/W4323026598",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "A Decision Diagram Operation for Reachability.",
+    "authors": [
+      "Sebastiaan Brand",
+      "Thomas Bäck",
+      "Alfons Laarman"
+    ],
+    "venue": "FM",
+    "year": 2023,
+    "abstract": "By decision-making in a fuzzy environment is meant a decision process in which the goals and/or the constraints, but not necessarily the system under control, are fuzzy in nature. This means that the goals and/or the constraints constitute classes of alternatives whose boundaries are not sharply defined. An example of a fuzzy constraint is: “The cost of A should not be substantially higher than α,” where α is a specified constant. Similarly, an example of a fuzzy goal is: “x should be in the vicinity of x 0 ,” where x 0 is a constant. The italicized words are the sources of fuzziness in these examples. Fuzzy goals and fuzzy constraints can be defined precisely as fuzzy sets in the space of alternatives. A fuzzy decision, then, may be viewed as an intersection of the given goals and constraints. A maximizing decision is defined as a point in the space of alternatives at which the membership function of a fuzzy decision attains its maximum value. The use of these concepts is illustrated by examples involving multistage decision processes in which the system under control is either deterministic or stochastic. By using dynamic programming, the determination of a maximizing decision is reduced to the solution of a system of functional equations. A reverse-flow technique is described for the solution of a functional equation arising in connection with a decision process in which the termination time is defined implicitly by the condition that the process stops when the system under control enters a specified set of states in its state space.",
+    "citation_count": 6756,
+    "reference_count": 0,
+    "url": "https://doi.org/10.1007/978-3-031-27481-7_29",
+    "dblp_key": "conf/fm/BrandBL23",
+    "source_id": "https://openalex.org/W4292158025",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Formal Modelling of Safety Architecture for Responsibility-Aware Autonomous Vehicle via Event-B Refinement.",
+    "authors": [
+      "Tsutomu Kobayashi",
+      "Martin Bondu",
+      "Fuyuki Ishikawa"
+    ],
+    "venue": "FM",
+    "year": 2023,
+    "abstract": "Ensuring the safety of autonomous vehicles (AVs) is the key requisite for their acceptance in society. This complexity is the core challenge in formally proving their safety conditions with AI-based black-box controllers and surrounding objects under various traffic scenarios. This paper describes our strategy and experience in modelling, deriving, and proving the safety conditions of AVs with the Event-B refinement mechanism to reduce complexity. Our case study targets the state-of-the-art model of goal-aware responsibility-sensitive safety to argue over interactions with surrounding vehicles. We also employ the Simplex architecture to involve advanced black-box AI controllers. Our experience has demonstrated that the refinement mechanism can be effectively used to gradually develop the complex system over scenario variations.",
+    "citation_count": 6,
+    "reference_count": 16,
+    "url": "https://doi.org/10.1007/978-3-031-27481-7_30",
+    "dblp_key": "conf/fm/KobayashiBI23",
+    "source_id": "https://openalex.org/W4323029857",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "A Runtime Environment for Contract Automata.",
+    "authors": [
+      "Davide Basile 0001",
+      "Maurice H. ter Beek"
+    ],
+    "venue": "FM",
+    "year": 2023,
+    "abstract": "Contract automata have been introduced for specifying applications through behavioural contracts and for synthesising their orchestrations as finite state automata. This paper addresses the realisation of applications from contract automata specifications. We present CARE, a new runtime environment to coordinate services implementing contracts that guarantees the adherence of the implementation to its contract. We discuss how CARE can be adopted to realise contract-based applications, its formal guarantees, and we identify the responsibilities of the involved business actors. Experiments show the benefits of adopting CARE with respect to manual implementations.",
+    "citation_count": 11,
+    "reference_count": 31,
+    "url": "https://doi.org/10.1007/978-3-031-27481-7_31",
+    "dblp_key": "conf/fm/BasileB23",
+    "source_id": "https://openalex.org/W4323026795",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Formal and Executable Semantics of the Ethereum Virtual Machine in Dafny.",
+    "authors": [
+      "Franck Cassez",
+      "Joanne Fuller",
+      "Milad K. Ghale",
+      "David J. Pearce 0001",
+      "Horacio Mijail Anton Quiles"
+    ],
+    "venue": "FM",
+    "year": 2023,
+    "abstract": "The Ethereum protocol implements a replicated state machine. The network participants keep track of the system state by: 1) agreeing on the sequence of transactions to be processed and 2) computing the state transitions that correspond to the sequence of transactions. Ethereum transactions are programs, called smart contracts, and computing a state transition requires executing some code. The Ethereum Virtual Machine (EVM) provides this capability and can execute programs written in EVM bytecode. We present a formal and executable semantics of the EVM written in the verification-friendly language Dafny: it provides (i) a readable, formal and verified specification of the semantics of the EVM; (ii) a framework to formally reason about bytecode.",
+    "citation_count": 13,
+    "reference_count": 25,
+    "url": "https://doi.org/10.1007/978-3-031-27481-7_32",
+    "dblp_key": "conf/fm/CassezFGPQ23",
+    "source_id": "https://openalex.org/W4323027107",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Shifting Left for Early Detection of Machine-Learning Bugs.",
+    "authors": [
+      "Ben Liblit",
+      "Linghui Luo",
+      "Alejandro Molina 0002",
+      "Rajdeep Mukherjee",
+      "Zachary Patterson",
+      "Goran Piskachev",
+      "Martin Schäf",
+      "Omer Tripp",
+      "Willem Visser"
+    ],
+    "venue": "FM",
+    "year": 2023,
+    "abstract": "Machine learning and data mining techniques have been used in numerous real-world applications. An assumption of traditional machine learning methodologies is the training data and testing data are taken from the same domain, such that the input feature space and data distribution characteristics are the same. However, in some real-world machine learning scenarios, this assumption does not hold. There are cases where training data is expensive or difficult to collect. Therefore, there is a need to create high-performance learners trained with more easily obtained data from different domains. This methodology is referred to as transfer learning. This survey paper formally defines transfer learning, presents information on current solutions, and reviews applications applied to transfer learning. Lastly, there is information listed on software downloads for various transfer learning solutions and a discussion of possible future research work. The transfer learning solutions surveyed are independent of data size and can be applied to big data environments.",
+    "citation_count": 6146,
+    "reference_count": 143,
+    "url": "https://doi.org/10.1007/978-3-031-27481-7_33",
+    "dblp_key": "conf/fm/LiblitLMMPPSTV23",
+    "source_id": "https://openalex.org/W2395579298",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "A Systematic Approach to Automotive Security.",
+    "authors": [
+      "Masoud Ebrahimi 0002",
+      "Stefan Marksteiner",
+      "Dejan Nickovic",
+      "Roderick Bloem",
+      "David Schögler",
+      "Philipp Eisner",
+      "Samuel Sprung",
+      "Thomas Schober",
+      "Sebastian Chlup",
+      "Christoph Schmittner",
+      "Sandra König"
+    ],
+    "venue": "FM",
+    "year": 2023,
+    "abstract": "We propose a holistic methodology for designing automotivesystems that consider security a central concern at every design stage.During the concept design, we model the system architecture and definethe security attributes of its components. We perform threat analysis onthe system model to identify structural security issues. From that analysis,we derive attack trees that define recipes describing steps to successfullyattack the system's assets and propose threat prevention measures.The attack tree allows us to derive a verification and validation (V&V)plan, which prioritizes the testing effort. In particular, we advocate usinglearning for testing approaches for the black-box components. It consistsof inferring a finite state model of the black-box component from its executiontraces. This model can then be used to generate new relevanttests, model check it against requirements, and compare two differentimplementations of the same protocol. We illustrate the methodologywith an automotive infotainment system example. Using the advocated approach, we could also document unexpected and potentially criticalbehavior in our example systems.",
+    "citation_count": 6,
+    "reference_count": 22,
+    "url": "https://doi.org/10.1007/978-3-031-27481-7_34",
+    "dblp_key": "conf/fm/EbrahimiMNBSESSCSK23",
+    "source_id": "https://openalex.org/W4323026468",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Specification-Guided Critical Scenario Identification for Automated Driving.",
+    "authors": [
+      "Adam Molin",
+      "Edgar A. Aguilar",
+      "Dejan Nickovic",
+      "Mengjia Zhu",
+      "Alberto Bemporad",
+      "Hasan Esen"
+    ],
+    "venue": "FM",
+    "year": 2023,
+    "abstract": "To test automated driving systems, we present a case study for finding critical scenarios in driving environments guided by formal specifications. To that aim, we devise a framework for critical scenario identification, which we base on open-source libraries that combine scenario specification, testing, formal methods, and optimization.",
+    "citation_count": 7,
+    "reference_count": 25,
+    "url": "https://doi.org/10.1007/978-3-031-27481-7_35",
+    "dblp_key": "conf/fm/MolinANZBE23",
+    "source_id": "https://openalex.org/W4323026588",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Runtime Monitoring for Out-of-Distribution Detection in Object Detection Neural Networks.",
+    "authors": [
+      "Vahid Hashemi",
+      "Jan Kretínský",
+      "Sabine Rieder",
+      "Jessica Schmidt"
+    ],
+    "venue": "FM",
+    "year": 2023,
+    "abstract": "Runtime monitoring provides a more realistic and applicable alternative to verification in the setting of real neural networks used in industry. It is particularly useful for detecting out-of-distribution (OOD) inputs, for which the network was not trained and can yield erroneous results. We extend a runtime-monitoring approach previously proposed for classification networks to perception systems capable of identification and localization of multiple objects. Furthermore, we analyze its adequacy experimentally on different kinds of OOD settings, documenting the overall efficacy of our approach.",
+    "citation_count": 10,
+    "reference_count": 27,
+    "url": "https://doi.org/10.1007/978-3-031-27481-7_36",
+    "dblp_key": "conf/fm/HashemiKRS23",
+    "source_id": "https://openalex.org/W4323026694",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Backdoor Mitigation in Deep Neural Networks via Strategic Retraining.",
+    "authors": [
+      "Akshay Dhonthi",
+      "Ernst Moritz Hahn",
+      "Vahid Hashemi"
+    ],
+    "venue": "FM",
+    "year": 2023,
+    "abstract": "Deep Neural Networks (DNN) are becoming increasingly more important in assisted and automated driving. Using such entities which are obtained using machine learning is inevitable: tasks such as recognizing traffic signs cannot be developed reasonably using traditional software development methods. DNN however do have the problem that they are mostly black boxes and therefore hard to understand and debug. One particular problem is that they are prone to hidden backdoors. This means that the DNN misclassifies its input, because it considers properties that should not be decisive for the output. Backdoors may either be introduced by malicious attackers or by inappropriate training. In any case, detecting and removing them is important in the automotive area, as they might lead to safety violations with potentially severe consequences. In this paper, we introduce a novel method to remove backdoors. Our method works for both intentional as well as unintentional backdoors. We also do not require prior knowledge about the shape or distribution of backdoors. Experimental evidence shows that our method performs well on several medium-sized examples.",
+    "citation_count": 1,
+    "reference_count": 19,
+    "url": "https://doi.org/10.1007/978-3-031-27481-7_37",
+    "dblp_key": "conf/fm/DhonthiHH23",
+    "source_id": "https://openalex.org/W4323026810",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "veriFIRE: Verifying an Industrial, Learning-Based Wildfire Detection System.",
+    "authors": [
+      "Guy Amir",
+      "Ziv Freund",
+      "Guy Katz",
+      "Elad Mandelbaum",
+      "Idan Refaeli"
+    ],
+    "venue": "FM",
+    "year": 2023,
+    "abstract": "In this short paper, we present our ongoing work on the veriFIRE project -- a collaboration between industry and academia, aimed at using verification for increasing the reliability of a real-world, safety-critical system. The system we target is an airborne platform for wildfire detection, which incorporates two deep neural networks. We describe the system and its properties of interest, and discuss our attempts to verify the system's consistency, i.e., its ability to continue and correctly classify a given input, even if the wildfire it describes increases in intensity. We regard this work as a step towards the incorporation of academic-oriented verification tools into real-world systems of interest.",
+    "citation_count": 5,
+    "reference_count": 33,
+    "url": "https://doi.org/10.1007/978-3-031-27481-7_38",
+    "dblp_key": "conf/fm/AmirFKMR23",
+    "source_id": "https://openalex.org/W4323026894",
+    "source": null,
+    "source_url": null
+  }
+]

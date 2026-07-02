@@ -1,0 +1,1836 @@
+[
+  {
+    "title": "Toward Individual Fairness Testing with Data Validity.",
+    "authors": [
+      "Takashi Kitamura 0001",
+      "Sousuke Amasaki",
+      "Jun Inoue 0001",
+      "Yoshinao Isobe",
+      "Takahisa Toda"
+    ],
+    "venue": "ASE",
+    "year": 2024,
+    "abstract": "Individual fairness testing (Ift) is a framework to find discriminatory instances within a given classifier. In this paper, we show our idea of a Ift framework, that integrates the notion of data validity, termed \"Individual Fairness Testing with Data Validity (Ift-v)\". We develop a solid foundation of Ift-v and demonstrate the feasibility of Ift-v. Our preliminary evaluation with Ift-v reveals the possibility that many of discriminatory instances detected by state-of-the-art Ift algorithms are considered invalid. These findings prompt a re-think of the current Ift framework, suggesting a transition from solely focusing on the discovery of discriminatory instances to the consideration of valid ones.",
+    "citation_count": 1,
+    "reference_count": 25,
+    "url": "https://dblp.org/rec/conf/kbse/0001A0IT24",
+    "dblp_key": "conf/kbse/0001A0IT24",
+    "source_id": "https://openalex.org/W4403536039",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Seeding and Mocking in White-Box Fuzzing Enterprise RPC APIs: An Industrial Case Study.",
+    "authors": [
+      "Man Zhang 0001",
+      "Andrea Arcuri",
+      "Piyun Teng",
+      "Kaiming Xue",
+      "Wenhao Wang"
+    ],
+    "venue": "ASE",
+    "year": 2024,
+    "abstract": "Microservices is now becoming a promising architecture to build large-scale web services in industry. Due to the high complexity of enterprise microservices, industry has an urgent need to have a solution to enable automated testing of such systems. EvoMaster is an open-source fuzzer, equipped with the state-of-the-art techniques for supporting automated system-level testing of Web APIs. It has been assessed as the most performant tool in two recent empirical studies in terms of line coverage and fault detection. In this paper, we carried out an empirical experiment to investigate how to better apply the state-of-the-art academic prototype (i.e., EvoMaster) in industrial context. We extended the tool to handle seeding of existing industrial tests, and mocking of external services with their data handled as part of the input fuzzing. We studied two configurations of EvoMaster, using two time budgets, on 40 enterprise RPC-based APIs (involving 5.6 million lines of code for their core business logic) at Meituan. Results show that, compared to existing practice of manual system-level testing and tests produced by record and replay of online traffic, EvoMaster demonstrates clear additional benefits. EvoMaster with the best configuration is capable of covering up to 32.4% line coverage, covering more than 10% line coverage on 36 out of 40 (90%) case studies, and identifying on average 3520 potential faults in these 40 APIs. In addition, we also identified and discussed important challenges in fuzzing enterprise microservices that must be addressed in the future.",
+    "citation_count": 2,
+    "reference_count": 31,
+    "url": "https://dblp.org/rec/conf/kbse/0001ATXW24",
+    "dblp_key": "conf/kbse/0001ATXW24",
+    "source_id": "https://openalex.org/W4403536746",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "BenchCloud: A Platform for Scalable Performance Benchmarking.",
+    "authors": [
+      "Dirk Beyer 0001",
+      "Po-Chun Chien",
+      "Marek Jankola"
+    ],
+    "venue": "ASE",
+    "year": 2024,
+    "abstract": "Performance evaluation is a crucial method for assessing automated-reasoning tools. Evaluating automated tools requires rigorous benchmarking to accurately measure resource consumption, including time and memory, which are essential for understanding the tools' capabilities. BenchExec, a widely used benchmarking framework, reliably measures resource usage for tools executed locally on a single node. This paper describes BenchCloud, a solution for elastic and scalable job distribution across hundreds of nodes, enabling large-scale experiments on distributed and heterogeneous computing environments. BenchCloud seamlessly integrates with BenchExec, allowing BenchExec to delegate the actual execution to BenchCloud. The system has been employed in several prominent international competitions in automated reasoning, including SMT-COMP, SV-COMP, and Test-Comp, underscoring its importance in rigorous tool evaluation across various research domains. It helps to ensure both internal and external validity of the experimental results. This paper presents an overview of BenchCloud's architecture and highlights its primary use cases in facilitating scalable benchmarking.",
+    "citation_count": 7,
+    "reference_count": 13,
+    "url": "https://dblp.org/rec/conf/kbse/0001CJ24",
+    "dblp_key": "conf/kbse/0001CJ24",
+    "source_id": "https://openalex.org/W4403536910",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "1+1&gt;2: Integrating Deep Code Behaviors with Metadata Features for Malicious PyPI Package Detection.",
+    "authors": [
+      "Xiaobing Sun 0001",
+      "Xingan Gao",
+      "Sicong Cao",
+      "Lili Bo",
+      "Xiaoxue Wu 0001",
+      "Kaifeng Huang 0001"
+    ],
+    "venue": "ASE",
+    "year": 2024,
+    "abstract": "PyPI, the official package registry for Python, has seen a surge in the number of malicious package uploads in recent years. Prior studies have demonstrated the effectiveness of learning-based solutions in malicious package detection. However, manually-crafted expert rules are expensive and struggle to keep pace with the rapidly evolving malicious behaviors, while deep features automatically extracted from code are still inaccurate in certain cases. To mitigate these issues, in this paper, we propose Ea4mp, a novel approach which integrates deep code behaviors with metadata features to detect malicious PyPI packages. Specifically, Ea4mp extracts code behavior sequences from all script files and fine-tunes a BERT model to learn deep semantic features of malicious code. In addition, we realize the value of metadata information and construct an ensemble classifier to combine the strengths of deep code behavior features and metadata features for more effective detection. We evaluated Ea4mp against three state-of-the-art baselines on a newly constructed dataset. The experimental results show that Ea4mp improves precision by 6.9%-24.6% and recall by 10.5%-18.4%. With Ea4mp, we successfully identified 119 previously unknown malicious packages from a pool of 46,573 newly-uploaded packages over a three-week period, and 82 out of them have been removed by the PyPI official.",
+    "citation_count": 3,
+    "reference_count": 21,
+    "url": "https://dblp.org/rec/conf/kbse/0001GCB0024",
+    "dblp_key": "conf/kbse/0001GCB0024",
+    "source_id": "https://openalex.org/W4403536782",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "The Software Genome Project: Unraveling Software Through Genetic Principles.",
+    "authors": [
+      "Yueming Wu 0001",
+      "Chengwei Liu",
+      "Zhengzi Xu",
+      "Lyuye Zhang",
+      "Yiran Zhang",
+      "Zhiling Zhu",
+      "Yang Liu 0003"
+    ],
+    "venue": "ASE",
+    "year": 2024,
+    "abstract": "Open-source software is crucial to modern development, but its complexity creates challenges in quality, security, and management. Current governance approaches excel at collaboration but struggle with decentralized management and security. With the rise of large language models (LLM)-based software engineering, the need for a finer-grained understanding of software composition is more urgent than ever. To address these challenges, inspired by the Human Genome Project, we treat the software source code as software DNA and propose the Software Genome Project (SGP), which is geared towards the secure monitoring and exploitation of open-source software. By identifying and labeling integrated and classified code features at a fine-grained level, and effectively identifying safeguards for functional implementations and nonfunctional requirements at different levels of granularity, the SGP could build a comprehensive set of software genome maps to help developers and managers gain a deeper understanding of software complexity and diversity. By dissecting and summarizing functional and undesirable genes, SGP could help facilitate targeted software optimization, provide valuable insight and understanding of the entire software ecosystem, and support critical development tasks such as open source governance. SGP could also serve as a comprehensive dataset with abundant semantic labeling to enhance the training of LLMs for code. Based on these, we expect SGP to drive the evolution of software development towards more efficient, reliable, and sustainable software solutions.",
+    "citation_count": 1,
+    "reference_count": 11,
+    "url": "https://dblp.org/rec/conf/kbse/0001LXZZZ024",
+    "dblp_key": "conf/kbse/0001LXZZZ024",
+    "source_id": "https://openalex.org/W4403536041",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Android Malware Family Labeling: Perspectives from the Industry.",
+    "authors": [
+      "Liu Wang 0002",
+      "Haoyu Wang 0001",
+      "Tao Zhang 0001",
+      "Haitao Xu 0002",
+      "Guozhu Meng",
+      "Peiming Gao",
+      "Chen Wei",
+      "Yi Wang 0013"
+    ],
+    "venue": "ASE",
+    "year": 2024,
+    "abstract": "With the integration of mobile devices into daily life, smartphones are privy to increasing amounts of sensitive information. Sophisticated mobile malware, particularly Android malware, acquire or utilize such data without user consent. It is therefore essential to devise effective techniques to analyze and detect these threats. This article presents a comprehensive survey on leading Android malware analysis and detection techniques, and their effectiveness against evolving malware. This article categorizes systems by methodology and date to evaluate progression and weaknesses. This article also discusses evaluations of industry solutions, malware statistics, and malware evasion techniques and concludes by supporting future research paths.",
+    "citation_count": 352,
+    "reference_count": 145,
+    "url": "https://dblp.org/rec/conf/kbse/0002000MGW024",
+    "dblp_key": "conf/kbse/0002000MGW024",
+    "source_id": "https://openalex.org/W2575599800",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "A Joint Learning Model with Variational Interaction for Multilingual Program Translation.",
+    "authors": [
+      "Yali Du 0002",
+      "Hui Sun 0003",
+      "Ming Li 0005"
+    ],
+    "venue": "ASE",
+    "year": 2024,
+    "abstract": "Computers understand very little of the meaning of human language. This profoundly limits our ability to give instructions to computers, the ability of computers to explain their actions to us, and the ability of computers to analyse and process text. Vector space models (VSMs) of semantics are beginning to address these limits. This paper surveys the use of VSMs for semantic processing of text. We organize the literature on VSMs according to the structure of the matrix in a VSM. There are currently three broad classes of VSMs, based on term-document, word-context, and pair-pattern matrices, yielding three classes of applications. We survey a broad range of applications in these three categories and we take a detailed look at a specific open source project in each category. Our goal in this survey is to show the breadth of applications of VSMs for semantics, to provide a new perspective on VSMs for those who are already familiar with the area, and to provide pointers into the literature for those who are less familiar with the field.",
+    "citation_count": 2880,
+    "reference_count": 287,
+    "url": "https://dblp.org/rec/conf/kbse/00020024",
+    "dblp_key": "conf/kbse/00020024",
+    "source_id": "https://openalex.org/W1662133657",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "SoVAR: Build Generalizable Scenarios from Accident Reports for Autonomous Driving Testing.",
+    "authors": [
+      "An Guo 0002",
+      "Yuan Zhou 0005",
+      "Haoxiang Tian 0001",
+      "Chunrong Fang",
+      "Yunjian Sun",
+      "Weisong Sun",
+      "Xinyu Gao",
+      "Anh Tuan Luu",
+      "Yang Liu 0003",
+      "Zhenyu Chen 0001"
+    ],
+    "venue": "ASE",
+    "year": 2024,
+    "abstract": "Autonomous driving systems (ADSs) have undergone remarkable development and are increasingly employed in safety-critical applications. However, recently reported data on fatal accidents involving ADSs suggests that the desired level of safety has not yet been fully achieved. Consequently, there is a growing need for more comprehensive and targeted testing approaches to ensure safe driving. Scenarios from real-world accident reports provide valuable resources for ADS testing, including critical scenarios and high-quality seeds. However, existing scenario reconstruction methods from accident reports often exhibit limited accuracy in information extraction. Moreover, due to the diversity and complexity of road environments, matching current accident information with the simulation map data for reconstruction poses significant challenges.",
+    "citation_count": 12,
+    "reference_count": 39,
+    "url": "https://dblp.org/rec/conf/kbse/00020TFSSGL0024",
+    "dblp_key": "conf/kbse/00020TFSSGL0024",
+    "source_id": "https://openalex.org/W4403520158",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "What Is Wrong with My Model? Identifying Systematic Problems with Semantic Data Slicing.",
+    "authors": [
+      "Chenyang Yang 0002",
+      "Yining Hong",
+      "Grace A. Lewis",
+      "Tongshuang Wu",
+      "Christian Kästner"
+    ],
+    "venue": "ASE",
+    "year": 2024,
+    "abstract": "Machine learning models make mistakes, yet sometimes it is difficult to identify the systematic problems behind the mistakes. Practitioners engage in various activities, including error analysis, testing, auditing, and red-teaming, to form hypotheses of what can go (or has gone) wrong with their models. To validate these hypotheses, practitioners employ data slicing to identify relevant examples. However, traditional data slicing is limited by available features and programmatic slicing functions. In this work, we propose SemSlicer, a framework that supports semantic data slicing, which identifies a semantically coherent slice, without the need for existing features. SemSlicer uses Large Language Models to annotate datasets and generate slices from any user-defined slicing criteria. We show that SemSlicer generates accurate slices with low cost, allows flexible trade-offs between different design dimensions, reliably identifies under-performing data slices, and helps practitioners identify useful data slices that reflect systematic problems.",
+    "citation_count": null,
+    "reference_count": null,
+    "url": "https://dblp.org/rec/conf/kbse/0002HLWK24",
+    "dblp_key": "conf/kbse/0002HLWK24",
+    "source_id": "2409.09261v1",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Giving without Notifying: Assessing Compliance of Data Transmission in Android Apps.",
+    "authors": [
+      "Ming Fan 0002",
+      "Jifei Shi",
+      "Yin Wang",
+      "Le Yu 0002",
+      "Xicheng Zhang",
+      "Haijun Wang 0002",
+      "Wuxia Jin",
+      "Ting Liu 0002"
+    ],
+    "venue": "ASE",
+    "year": 2024,
+    "abstract": "This paper provides an overview of the Internet of Things (IoT) with emphasis on enabling technologies, protocols, and application issues. The IoT is enabled by the latest developments in RFID, smart sensors, communication technologies, and Internet protocols. The basic premise is to have smart sensors collaborate directly without human involvement to deliver a new class of applications. The current revolution in Internet, mobile, and machine-to-machine (M2M) technologies can be seen as the first phase of the IoT. In the coming years, the IoT is expected to bridge diverse technologies to enable new applications by connecting physical objects together in support of intelligent decision making. This paper starts by providing a horizontal overview of the IoT. Then, we give an overview of some technical details that pertain to the IoT enabling technologies, protocols, and applications. Compared to other survey papers in the field, our objective is to provide a more thorough summary of the most relevant protocols and application issues to enable researchers and application developers to get up to speed quickly on how the different protocols fit together to deliver desired functionalities without having to go through RFCs and the standards specifications. We also provide an overview of some of the key IoT challenges presented in the recent literature and provide a summary of related research work. Moreover, we explore the relation between the IoT and other emerging technologies including big data analytics and cloud and fog computing. We also present the need for better horizontal integration among IoT services. Finally, we present detailed service use-cases to illustrate how the different protocols presented in the paper fit together to deliver desired IoT services.",
+    "citation_count": 8304,
+    "reference_count": 178,
+    "url": "https://dblp.org/rec/conf/kbse/0002SW0ZWJ024",
+    "dblp_key": "conf/kbse/0002SW0ZWJ024",
+    "source_id": "https://openalex.org/W2134295053",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Automated Validation of COBOL to Java Transformation.",
+    "authors": [
+      "Atul Kumar 0002",
+      "Diptikalyan Saha",
+      "Toshiaki Yasue",
+      "Kohichi Ono",
+      "Saravanan Krishnan",
+      "Sandeep Hans",
+      "Fumiko Satoh",
+      "Gerald Mitchell",
+      "Sachin Kumar 0011"
+    ],
+    "venue": "ASE",
+    "year": 2024,
+    "abstract": "Recent advances in Large Language Model (LLM) based Generative AI techniques have made it feasible to translate enterpriselevel code from legacy languages such as COBOL to modern languages such as Java or Python. While the results of LLM-based automatic transformation are encouraging, the resulting code cannot be trusted to correctly translate the original code. We propose a framework and a tool to help validate the equivalence of COBOL and translated Java. The results can also help repair the code if there are some issues and provide feedback to the AI model to improve. We have developed a symbolic-execution-based test generation to automatically generate unit tests for the source COBOL programs which also mocks the external resource calls. We generate equivalent JUnit test cases with equivalent mocking as COBOL and run them to check semantic equivalence between original and translated programs. Demo Video: https://youtu.be/aqF_agNP-lU",
+    "citation_count": 1,
+    "reference_count": 4,
+    "url": "https://dblp.org/rec/conf/kbse/0002SYOKHSMK24",
+    "dblp_key": "conf/kbse/0002SYOKHSMK24",
+    "source_id": "https://openalex.org/W4403536897",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "CoVeriTeam GUI: A No-Code Approach to Cooperative Software Verification.",
+    "authors": [
+      "Thomas Lemberger 0002",
+      "Henrik Wachowitz"
+    ],
+    "venue": "ASE",
+    "year": 2024,
+    "abstract": "We present CoVeriTeam GUI, a No-Code web frontend to compose new software-verification workflows from existing analysis techniques. Verification approaches stopped relying on single techniques years ago, and instead combine selections that complement each other well. So far, such combinations were---under high implementation and maintenance cost---glued together with proprietary code. Now, CoVeriTeam GUI enables users to build new verification workflows without programming. Verification techniques can be combined through various composition operators in a drag-and-drop fashion directly in the browser, and an integration with a remote service allows to execute the built workflows with the click of a button. CoVeriTeam GUI is available open source under Apache 2.0: https://gitlab.com/sosy-lab/software/coveriteam-gui",
+    "citation_count": 0,
+    "reference_count": 16,
+    "url": "https://dblp.org/rec/conf/kbse/0002W24",
+    "dblp_key": "conf/kbse/0002W24",
+    "source_id": "https://openalex.org/W4403537100",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "RepoSim: Evaluating Prompt Strategies for Code Completion via User Behavior Simulation.",
+    "authors": [
+      "Chao Peng 0002",
+      "Qinyun Wu",
+      "Jiangchao Liu",
+      "Jierui Liu",
+      "Bo Jiang",
+      "Mengqian Xu",
+      "Yinghao Wang",
+      "Xia Liu",
+      "Ping Yang"
+    ],
+    "venue": "ASE",
+    "year": 2024,
+    "abstract": "Large language models (LLMs) have revolutionized code completion tasks. IDE plugins such as MarsCode can generate code recommendations, saving developers significant time and effort. However, current evaluation methods for code completion are limited by their reliance on static code benchmarks, which do not consider human interactions and evolving repositories. This paper proposes RepoSim, a novel benchmark designed to evaluate code completion tasks by simulating the evolving process of repositories and incorporating user behaviors. RepoSim leverages data from an IDE plugin, by recording and replaying user behaviors to provide a realistic programming context for evaluation. This allows for the assessment of more complex prompt strategies, such as utilizing recently visited files and incorporating user editing history. Additionally, RepoSim proposes a new metric based on users' acceptance or rejection of predictions, offering a user-centric evaluation criterion. Our preliminary evaluation demonstrates that incorporating users' recent edit history into prompts significantly improves the quality of LLM-generated code, highlighting the importance of temporal context in code completion. RepoSim represents a significant advancement in benchmarking tools, offering a realistic and user-focused framework for evaluating code completion performance.",
+    "citation_count": 1,
+    "reference_count": 4,
+    "url": "https://dblp.org/rec/conf/kbse/0002WLLJXWLY24",
+    "dblp_key": "conf/kbse/0002WLLJXWLY24",
+    "source_id": "https://openalex.org/W4403536492",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "ROCAS: Root Cause Analysis of Autonomous Driving Accidents via Cyber-Physical Co-mutation.",
+    "authors": [
+      "Shiwei Feng 0002",
+      "Yapeng Ye",
+      "Qingkai Shi",
+      "Zhiyuan Cheng 0010",
+      "Xiangzhe Xu",
+      "Siyuan Cheng 0005",
+      "Hongjun Choi",
+      "Xiangyu Zhang 0001"
+    ],
+    "venue": "ASE",
+    "year": 2024,
+    "abstract": "As Autonomous driving systems (ADS) have transformed our daily life, safety of ADS is of growing significance. While various testing approaches have emerged to enhance the ADS reliability, a crucial gap remains in understanding the accidents causes. Such post-accident analysis is paramount and beneficial for enhancing ADS safety and reliability. Existing cyber-physical system (CPS) root cause analysis techniques are mainly designed for drones and cannot handle the unique challenges introduced by more complex physical environments and deep learning models deployed in ADS. In this paper, we address the gap by offering a formal definition of ADS root cause analysis problem and introducing Rocas, a novel ADS root cause analysis framework featuring cyber-physical co-mutation. Our technique uniquely leverages both physical and cyber mutation that can precisely identify the accident-trigger entity and pinpoint the misconfiguration of the target ADS responsible for an accident. We further design a differential analysis to identify the responsible module to reduce search space for the misconfiguration. We study 12 categories of ADS accidents and demonstrate the effectiveness and efficiency of Rocas in narrowing down search space and pinpointing the misconfiguration. We also show detailed case studies on how the identified misconfiguration helps understand rationale behind accidents.",
+    "citation_count": 4,
+    "reference_count": 57,
+    "url": "https://dblp.org/rec/conf/kbse/0002YS0X0C024",
+    "dblp_key": "conf/kbse/0002YS0X0C024",
+    "source_id": "https://openalex.org/W4403536261",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "IdeoRate: Towards a Semi-automated Assessment Methodology for OSS Ideologies.",
+    "authors": [
+      "Yang Yue 0003",
+      "Yi Wang 0013",
+      "David F. Redmiles"
+    ],
+    "venue": "ASE",
+    "year": 2024,
+    "abstract": "Open source software (OSS) development, as any social movement, is driven by its ideologies, namely OSS ideologies [6]. Understanding OSS ideologies could provide significant insights into open source development, since OSS ideologies determine and influence the dynamics and outcomes of open source development [1, 2]. Assessing OSS ideologies within open source projects could bring various benefits to OSS practitioners, e.g., the owners and the maintainers of open source projects could identify important ideological elements that were previously ignored, and could improve open source development accordingly. Therefore, with such an assessment of OSS ideologies, institutional and individual stakeholders who are interested in open source development could make informed decisions when interacting with open source projects.",
+    "citation_count": 0,
+    "reference_count": 3,
+    "url": "https://dblp.org/rec/conf/kbse/00030R24",
+    "dblp_key": "conf/kbse/00030R24",
+    "source_id": "https://openalex.org/W4403536999",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Semantic Sleuth: Identifying Ponzi Contracts via Large Language Models.",
+    "authors": [
+      "Cong Wu 0003",
+      "Jing Chen 0003",
+      "Ziwei Wang",
+      "Ruichao Liang",
+      "Ruiying Du"
+    ],
+    "venue": "ASE",
+    "year": 2024,
+    "abstract": "Smart contracts, self-executing agreements directly encoded in code, are fundamental to blockchain technology, especially in decentralized finance (DeFi) and Web3. However, the rise of Ponzi schemes in smart contracts poses significant risks, leading to substantial financial losses and eroding trust in blockchain systems. Existing detection methods, such as PonziGuard, depend on large amounts of labeled data and struggle to identify unseen Ponzi schemes, limiting their reliability and generalizability. In contrast, we introduce PonziSleuth, the first LLM-driven approach for detecting Ponzi smart contracts, which requires no labeled training data. PonziSleuth utilizes advanced language understanding capabilities of LLMs to analyze smart contract source code through a novel two-step zero-shot chain-of-thought prompting technique. Our extensive evaluation on benchmark datasets and real-world contracts demonstrates that PonziSleuth delivers comparable, and often superior, performance without the extensive data requirements, achieving a balanced detection accuracy of 96.06% with GPT-3.5-turbo, 93.91% with LLAMA3, and 94.27% with Mistral. In real-world detection, PonziSleuth successfully identified 15 new Ponzi schemes from 4,597 contracts verified by Etherscan in March 2024, with a false negative rate of 0% and a false positive rate of 0.29%. These results highlight PonziSleuth's capability to detect diverse and novel Ponzi schemes, marking a significant advancement in leveraging LLMs for enhancing blockchain security and mitigating financial scams.",
+    "citation_count": 30,
+    "reference_count": 29,
+    "url": "https://dblp.org/rec/conf/kbse/00030WLD24",
+    "dblp_key": "conf/kbse/00030WLD24",
+    "source_id": "https://openalex.org/W4403536404",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "OpenTracer: A Dynamic Transaction Trace Analyzer for Smart Contract Invariant Generation and Beyond.",
+    "authors": [
+      "Zhiyang Chen 0004",
+      "Ye Liu 0012",
+      "Sidi Mohamed Beillahi",
+      "Yi Li 0008",
+      "Fan Long"
+    ],
+    "venue": "ASE",
+    "year": 2024,
+    "abstract": "Smart contracts, self-executing programs on the blockchain, facilitate reliable value exchanges without centralized oversight. Despite the recent focus on dynamic analysis of their transaction histories in both industry and academia, no open-source tool currently offers comprehensive tracking of complete transaction information to extract user-desired data such as invariant-related data. This paper introduces OpenTracer, designed to address this gap. OpenTracer guarantees comprehensive tracking of every execution step, providing complete transaction information. OpenTracer has been employed to analyze 350,800 Ethereum transactions, successfully inferring 23 different types of invariant from predefined templates. The tool is fully open-sourced, serving as a valuable resource for developers and researchers aiming to extract or validate new invariants from transaction traces. A demonstration video of OpenTracer is available at https://youtu.be/vTdmjWdYd30. The source code of OpenTracer is available at https://github.com/jeffchen006/OpenTracer.",
+    "citation_count": 2,
+    "reference_count": 4,
+    "url": "https://dblp.org/rec/conf/kbse/00040B0L24",
+    "dblp_key": "conf/kbse/00040B0L24",
+    "source_id": "https://openalex.org/W4403537075",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Hybrid Regression Test Selection by Integrating File and Method Dependences.",
+    "authors": [
+      "Guofeng Zhang 0005",
+      "Luyao Liu",
+      "Zhenbang Chen 0001",
+      "Ji Wang 0001"
+    ],
+    "venue": "ASE",
+    "year": 2024,
+    "abstract": "Regression Testing Selection (RTS) reduces the cost of regression testing by only running test cases affected by code changes. Due to the bottleneck of single granularity analyses, the latest RTS techniques tend to analyze with mixed granularities. However, a better synergy of the existing RTS techniques is still challenging. Besides, we have found that once existing RTS approaches use static method-level analysis, handling external library callbacks is difficult, leading to the missed selection of affected test cases.",
+    "citation_count": 2,
+    "reference_count": 48,
+    "url": "https://dblp.org/rec/conf/kbse/0005LC024",
+    "dblp_key": "conf/kbse/0005LC024",
+    "source_id": "https://openalex.org/W4403536335",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Test Case Generation for Simulink Models using Model Fuzzing and State Solving.",
+    "authors": [
+      "Zhuo Su 0005",
+      "Zehong Yu",
+      "Dongyan Wang",
+      "Wanli Chang 0001",
+      "Bin Gu 0006",
+      "Yu Jiang 0001"
+    ],
+    "venue": "ASE",
+    "year": 2024,
+    "abstract": "Testing involves examining the behaviour of a system in order to discover potential faults. Given an input for a system, the challenge of distinguishing the corresponding desired, correct behaviour from potentially incorrect behavior is called the “test oracle problem”. Test oracle automation is important to remove a current bottleneck that inhibits greater overall test automation. Without test oracle automation, the human has to determine whether observed behaviour is correct. The literature on test oracles has introduced techniques for oracle automation, including modelling, specifications, contract-driven development and metamorphic testing. When none of these is completely adequate, the final source of test oracle information remains the human, who may be aware of informal specifications, expectations, norms and domain specific information that provide informal oracle guidance. All forms of test oracles, even the humble human, involve challenges of reducing cost and increasing benefit. This paper provides a comprehensive survey of current approaches to the test oracle problem and an analysis of trends in this important area of software testing research and practice.",
+    "citation_count": 1033,
+    "reference_count": 270,
+    "url": "https://dblp.org/rec/conf/kbse/0005YW00024",
+    "dblp_key": "conf/kbse/0005YW00024",
+    "source_id": "https://openalex.org/W2041713059",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Contextualized Data-Wrangling Code Generation in Computational Notebooks.",
+    "authors": [
+      "Junjie Huang 0008",
+      "Daya Guo",
+      "Chenglong Wang 0005",
+      "Jiazhen Gu",
+      "Shuai Lu",
+      "Jeevana Priya Inala",
+      "Cong Yan",
+      "Jianfeng Gao 0001",
+      "Nan Duan 0001",
+      "Michael R. Lyu"
+    ],
+    "venue": "ASE",
+    "year": 2024,
+    "abstract": "Data wrangling, the process of preparing raw data for further analysis in computational notebooks, is a crucial yet time-consuming step in data science. Code generation has the potential to automate the data wrangling process to reduce analysts' overhead by translating user intents into executable code. Precisely generating data wrangling code necessitates a comprehensive consideration of the rich context present in notebooks, including textual context, code context and data context. However, notebooks often interleave multiple non-linear analysis tasks into linear sequence of code blocks, where the contextual dependencies are not clearly reflected. Directly training models with source code blocks fails to fully exploit the contexts for accurate wrangling code generation.",
+    "citation_count": 5,
+    "reference_count": 41,
+    "url": "https://dblp.org/rec/conf/kbse/0008GWGLIY0DL24",
+    "dblp_key": "conf/kbse/0008GWGLIY0DL24",
+    "source_id": "https://openalex.org/W4403536355",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "What Makes a High-Quality Training Dataset for Large Language Models: A Practitioners&apos; Perspective.",
+    "authors": [
+      "Xiao Yu 0008",
+      "Zexian Zhang",
+      "Feifei Niu",
+      "Xing Hu 0008",
+      "Xin Xia 0001",
+      "John Grundy 0001"
+    ],
+    "venue": "ASE",
+    "year": 2024,
+    "abstract": null,
+    "citation_count": 1709,
+    "reference_count": 121,
+    "url": "https://dblp.org/rec/conf/kbse/0008ZN00024",
+    "dblp_key": "conf/kbse/0008ZN00024",
+    "source_id": "https://openalex.org/W2890892752",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "LLM4Workflow: An LLM-based Automated Workflow Model Generation Tool.",
+    "authors": [
+      "Jia Xu 0010",
+      "Weilin Du",
+      "Xiao Liu 0004",
+      "Xuejun Li 0001"
+    ],
+    "venue": "ASE",
+    "year": 2024,
+    "abstract": "Workflows are pervasive in software systems where business processes and scientific methods are implemented as workflow models to achieve automated process execution. However, despite the benefit of no/low-code workflow automation, creating workflow models requires in-depth domain knowledge and nontrivial workflow modeling skills, which becomes a hurdle for the proliferation of workflow applications. Recently, Large language models (LLMs) have been widely applied in software code generation given their outstanding ability to understand complex instructions and generate accurate, context-aware code. Inspired by the success of LLMs in code generation, this paper aims to investigate how to use LLMs to automate workflow model generation. We present LLM4Workflow, an LLM-based automated workflow model generation tool. Using workflow descriptions as the input, LLM4Workflow can automatically embed relevant API knowledge and leverage LLM's powerful contextual learning abilities to generate correct and executable workflow models. Its effectiveness was validated through functional verification and simulation tests on a real-world workflow system. LLM4Workflow is open sourced at https://github.com/ISEC-AHU/LLM4Workflow, and the demo video is provided at https://youtu.be/XRQ0saKkuxY.",
+    "citation_count": 9,
+    "reference_count": 11,
+    "url": "https://dblp.org/rec/conf/kbse/0010D0024",
+    "dblp_key": "conf/kbse/0010D0024",
+    "source_id": "https://openalex.org/W4403537101",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Semi-Supervised Code Translation Overcoming the Scarcity of Parallel Code Data.",
+    "authors": [
+      "Ming Zhu 0015",
+      "Mohimenul Karim",
+      "Ismini Lourentzou",
+      "Daphne Yao"
+    ],
+    "venue": "ASE",
+    "year": 2024,
+    "abstract": "Neural code translation is the task of converting source code from one programming language to another. One of the main challenges is the scarcity of parallel code data, which hinders the ability of translation models to learn accurate cross-language alignments. In this paper, we introduce MIRACLE, a semi-supervised approach that improves code translation through synthesizing high-quality parallel code data and curriculum learning on code data with ascending alignment levels. MIRACLE leverages static analysis and compilation to generate synthetic parallel code datasets with enhanced quality and alignment to address the challenge of data scarcity. We evaluate the proposed method along with strong baselines including instruction-tuned Large Language Models (LLMs) for code. Our analysis reveals that LLMs pre-trained on open-source code data, regardless of their size, suffer from the \"shallow translation\" problem. This issue arises when translated code copies keywords, statements, and even code blocks from the source language, leading to compilation and runtime errors. Extensive experiments demonstrate that our method significantly mitigates this issue, enhancing code translation performance across multiple models in C++, Java, Python, and C. Remarkably, MIRACLE outperforms code LLMs that are ten times larger in size. MIRACLE also achieves up to a 43% improvement in C code translation with fewer than 150 annotated examples.",
+    "citation_count": 2,
+    "reference_count": 17,
+    "url": "https://dblp.org/rec/conf/kbse/0015KLY24",
+    "dblp_key": "conf/kbse/0015KLY24",
+    "source_id": "https://openalex.org/W4403536514",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "FastFixer: An Efficient and Effective Approach for Repairing Programming Assignments.",
+    "authors": [
+      "Fang Liu 0032",
+      "Zhenwei Liu",
+      "Qianhui Zhao",
+      "Jing Jiang 0005",
+      "Li Zhang 0029",
+      "Zian Sun",
+      "Ge Li 0001",
+      "Zhongqi Li",
+      "Yuchi Ma"
+    ],
+    "venue": "ASE",
+    "year": 2024,
+    "abstract": "Providing personalized and timely feedback for student's programming assignments is useful for programming education. Automated program repair (APR) techniques have been used to fix the bugs in programming assignments, where the Large Language Models (LLMs) based approaches have shown promising results. Given the growing complexity of identifying and fixing bugs in advanced programming assignments, current fine-tuning strategies for APR are inadequate in guiding the LLM to identify bugs and make accurate edits during the generative repair process. Furthermore, the autoregressive decoding approach employed by the LLM could potentially impede the efficiency of the repair, thereby hindering the ability to provide timely feedback. To tackle these challenges, we propose FastFixer, an efficient and effective approach for programming assignment repair. To assist the LLM in accurately identifying and repairing bugs, we first propose a novel repair-oriented fine-tuning strategy, aiming to enhance the LLM's attention towards learning how to generate the necessary patch and its associated context. Furthermore, to speed up the patch generation, we propose an inference acceleration approach that is specifically tailored for the program repair task. The evaluation results demonstrate that FastFixer obtains an overall improvement of 20.46% in assignment fixing when compared to the state-of-the-art baseline. Considering the repair efficiency, FastFixer achieves a remarkable inference speedup of 16.67× compared to the autoregressive decoding algorithm.",
+    "citation_count": 4,
+    "reference_count": 17,
+    "url": "https://dblp.org/rec/conf/kbse/0032LZ00S0LM24",
+    "dblp_key": "conf/kbse/0032LZ00S0LM24",
+    "source_id": "https://openalex.org/W4403536419",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "An Empirical Study to Evaluate AIGC Detectors on Code Content.",
+    "authors": [
+      "Jian Wang 0067",
+      "Shangqing Liu",
+      "Xiaofei Xie",
+      "Yi Li 0008"
+    ],
+    "venue": "ASE",
+    "year": 2024,
+    "abstract": null,
+    "citation_count": 5,
+    "reference_count": 14,
+    "url": "https://dblp.org/rec/conf/kbse/0067LX024",
+    "dblp_key": "conf/kbse/0067LX024",
+    "source_id": "https://openalex.org/W4403536967",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Efficient Detection of Toxic Prompts in Large Language Models.",
+    "authors": [
+      "Yi Liu 0069",
+      "Junzhe Yu",
+      "Huijia Sun",
+      "Ling Shi 0002",
+      "Gelei Deng",
+      "Yuqi Chen 0001",
+      "Yang Liu 0003"
+    ],
+    "venue": "ASE",
+    "year": 2024,
+    "abstract": "Large language models (LLMs) like ChatGPT and Gemini have significantly advanced natural language processing, enabling various applications such as chatbots and automated content generation. However, these models can be exploited by malicious individuals who craft toxic prompts to elicit harmful or unethical responses. These individuals often employ jailbreaking techniques to bypass safety mechanisms, highlighting the need for robust toxic prompt detection methods. Existing detection techniques, both blackbox and whitebox, face challenges related to the diversity of toxic prompts, scalability, and computational efficiency. In response, we propose ToxicDetector, a lightweight greybox method designed to efficiently detect toxic prompts in LLMs. ToxicDetector leverages LLMs to create toxic concept prompts, uses embedding vectors to form feature vectors, and employs a Multi-Layer Perceptron (MLP) classifier for prompt classification. Our evaluation on various versions of the LLama models, Gemma-2, and multiple datasets demonstrates that ToxicDetector achieves a high accuracy of 96.39% and a low false positive rate of 2.00%, outperforming state-of-the-art methods. Additionally, ToxicDetector's processing time of 0.0780 seconds per prompt makes it highly suitable for real-time applications. ToxicDetector achieves high accuracy, efficiency, and scalability, making it a practical method for toxic prompt detection in LLMs.",
+    "citation_count": 6,
+    "reference_count": 27,
+    "url": "https://dblp.org/rec/conf/kbse/0069YSSD0024",
+    "dblp_key": "conf/kbse/0069YSSD0024",
+    "source_id": "https://openalex.org/W4403536772",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Towards Robust ML-enabled Software Systems: Detecting Out-of-Distribution data using Gini Coefficients.",
+    "authors": [
+      "Hala Abdelkader",
+      "Jean-Guy Schneider",
+      "Mohamed Abdelrazek 0001",
+      "Priya Rani",
+      "Rajesh Vasa"
+    ],
+    "venue": "ASE",
+    "year": 2024,
+    "abstract": null,
+    "citation_count": 5105,
+    "reference_count": 160,
+    "url": "https://dblp.org/rec/conf/kbse/AbdelkaderS0RV24",
+    "dblp_key": "conf/kbse/AbdelkaderS0RV24",
+    "source_id": "https://openalex.org/W3135028703",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Towards Leveraging LLMs for Reducing Open Source Onboarding Information Overload.",
+    "authors": [
+      "Elijah Kayode Adejumo",
+      "Brittany Johnson"
+    ],
+    "venue": "ASE",
+    "year": 2024,
+    "abstract": "Consistent, diverse, and quality contributions are essential to the sustainability of the open source community. Therefore, it is important that there is infrastructure for effectively onboarding and retaining diverse newcomers to open source software projects. Most often, open source projects rely on onboarding documentation to support newcomers in making their first contributions. Unfortunately, prior studies suggest that information overload from available documentation, along with the predominantly monolingual nature of repositories, can have negative effects on the newcomer experiences and onboarding process. This, coupled with the effort involved in creating and maintaining onboarding documentation, suggest a need for support in creating more accessible documentation. Large language models (LLMs) have shown great potential in providing text transformation support in other domains, and even shown promise in simplifying or generating other kinds of computing artifacts, such as source code and technical documentation. We contend that LLMs can also help make software onboarding documentation more accessible, thereby reducing the potential for information overload. Using ChatGPT (GPT-3.5 Turbo) and Gemini Pro as case studies, we assessed the effectiveness of LLMs for simplifying software onboarding documentation, one method for reducing information overload. We discuss a broader vision for using LLMs to support the creation of more accessible documentation and outline future research directions toward this vision.",
+    "citation_count": 1,
+    "reference_count": 42,
+    "url": "https://dblp.org/rec/conf/kbse/AdejumoJ24",
+    "dblp_key": "conf/kbse/AdejumoJ24",
+    "source_id": "https://openalex.org/W4403520119",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Experience Report on Applying Program Analysis Techniques for Mainframe Application Understanding.",
+    "authors": [
+      "Shivali Agarwal",
+      "Hiroaki Nakamura",
+      "Rami Katan"
+    ],
+    "venue": "ASE",
+    "year": 2024,
+    "abstract": "In the preceding article (Tellis, 1997), the goals and objectives were presented and explained in detail. In this article, the methodology to accomplish those goals and objectives will be examined. The reader will become familiar with the specific techniques that are used in the current study, and supported by the literature that was reviewed in the previous article. That methodology will follow the recommendation of Yin (1994) and has four stages: Design the case study, Conduct the case study, Analyze the case study evidence, and Develop the conclusions, recommendations and implications. The article begins with an introduction, that includes some of the background information that is intended to inform the reader. Following that section, each step of the methodology will be explored in detail. Finally a summary will connect all the information in a concise manner.",
+    "citation_count": 930,
+    "reference_count": 27,
+    "url": "https://dblp.org/rec/conf/kbse/AgarwalNK24",
+    "dblp_key": "conf/kbse/AgarwalNK24",
+    "source_id": "https://openalex.org/W176279103",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Towards Automated Configuration Documentation.",
+    "authors": [
+      "Jobayer Ahmmed",
+      "Myra B. Cohen",
+      "Paul Gazzillo"
+    ],
+    "venue": "ASE",
+    "year": 2024,
+    "abstract": "Homology modelling has matured into an important technique in structural biology, significantly contributing to narrowing the gap between known protein sequences and experimentally determined structures. Fully automated workflows and servers simplify and streamline the homology modelling process, also allowing users without a specific computational expertise to generate reliable protein models and have easy access to modelling results, their visualization and interpretation. Here, we present an update to the SWISS-MODEL server, which pioneered the field of automated modelling 25 years ago and been continuously further developed. Recently, its functionality has been extended to the modelling of homo- and heteromeric complexes. Starting from the amino acid sequences of the interacting proteins, both the stoichiometry and the overall structure of the complex are inferred by homology modelling. Other major improvements include the implementation of a new modelling engine, ProMod3 and the introduction a new local model quality estimation method, QMEANDisCo. SWISS-MODEL is freely available at https://swissmodel.expasy.org.",
+    "citation_count": 13538,
+    "reference_count": 74,
+    "url": "https://dblp.org/rec/conf/kbse/AhmmedCG24",
+    "dblp_key": "conf/kbse/AhmmedCG24",
+    "source_id": "https://openalex.org/W2804822363",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Automated Repair of Multi-fault Programs: Obstacles, Approaches, and Prospects.",
+    "authors": [
+      "Omar I. Al-Bataineh"
+    ],
+    "venue": "ASE",
+    "year": 2024,
+    "abstract": "Modern automated program repair (APR) tools are well-tuned at repairing single fault programs (i.e., programs in which only one fault can occur at time). However, real-world software projects typically contain multiple bugs at the same time, which can interact with and mask each other in a variety of ways. The complex interaction of faults in multi-fault programs makes the automated repair problem more challenging than the traditional practice of presuming that a program contains a single fault. This paper studies the repair problem of multi-fault programs and identifies the main obstacles that arise when handling such programs using current repair approaches. The paper also describes three repair approaches for multi-fault programs, namely iterative, parallel, and simultaneous. While the simultaneous repair strategy depends on using cutting-edge fault localization techniques that enable the APR approaches to locate many faults at once, the iterative and parallel repair approaches rely on adapting the existing repair techniques for single-fault programs to handle multi-fault programs. Finally, the paper discusses each approach's advantages and drawbacks as well as the conditions in which the approach can be used successfully. To our knowledge, this is the first paper to specifically study and address the repair problem of multi-fault programs.",
+    "citation_count": 2,
+    "reference_count": 27,
+    "url": "https://dblp.org/rec/conf/kbse/Al-Bataineh24",
+    "dblp_key": "conf/kbse/Al-Bataineh24",
+    "source_id": "https://openalex.org/W4403520133",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "A Formal Treatment of Performance Bugs.",
+    "authors": [
+      "Omar I. Al-Bataineh"
+    ],
+    "venue": "ASE",
+    "year": 2024,
+    "abstract": "BACKGROUND: Major depressive disorder is one of the most common, burdensome, and costly psychiatric disorders worldwide in adults. Pharmacological and non-pharmacological treatments are available; however, because of inadequate resources, antidepressants are used more frequently than psychological interventions. Prescription of these agents should be informed by the best available evidence. Therefore, we aimed to update and expand our previous work to compare and rank antidepressants for the acute treatment of adults with unipolar major depressive disorder. METHODS: We did a systematic review and network meta-analysis. We searched Cochrane Central Register of Controlled Trials, CINAHL, Embase, LILACS database, MEDLINE, MEDLINE In-Process, PsycINFO, the websites of regulatory agencies, and international registers for published and unpublished, double-blind, randomised controlled trials from their inception to Jan 8, 2016. We included placebo-controlled and head-to-head trials of 21 antidepressants used for the acute treatment of adults (≥18 years old and of both sexes) with major depressive disorder diagnosed according to standard operationalised criteria. We excluded quasi-randomised trials and trials that were incomplete or included 20% or more of participants with bipolar disorder, psychotic depression, or treatment-resistant depression; or patients with a serious concomitant medical illness. We extracted data following a predefined hierarchy. In network meta-analysis, we used group-level data. We assessed the studies' risk of bias in accordance to the Cochrane Handbook for Systematic Reviews of Interventions, and certainty of evidence using the Grading of Recommendations Assessment, Development and Evaluation framework. Primary outcomes were efficacy (response rate) and acceptability (treatment discontinuations due to any cause). We estimated summary odds ratios (ORs) using pairwise and network meta-analysis with random effects. This study is registered with PROSPERO, number CRD42012002291. FINDINGS: We identified 28 552 citations and of these included 522 trials comprising 116 477 participants. In terms of efficacy, all antidepressants were more effective than placebo, with ORs ranging between 2·13 (95% credible interval [CrI] 1·89-2·41) for amitriptyline and 1·37 (1·16-1·63) for reboxetine. For acceptability, only agomelatine (OR 0·84, 95% CrI 0·72-0·97) and fluoxetine (0·88, 0·80-0·96) were associated with fewer dropouts than placebo, whereas clomipramine was worse than placebo (1·30, 1·01-1·68). When all trials were considered, differences in ORs between antidepressants ranged from 1·15 to 1·55 for efficacy and from 0·64 to 0·83 for acceptability, with wide CrIs on most of the comparative analyses. In head-to-head studies, agomelatine, amitriptyline, escitalopram, mirtazapine, paroxetine, venlafaxine, and vortioxetine were more effective than other antidepressants (range of ORs 1·19-1·96), whereas fluoxetine, fluvoxamine, reboxetine, and trazodone were the least efficacious drugs (0·51-0·84). For acceptability, agomelatine, citalopram, escitalopram, fluoxetine, sertraline, and vortioxetine were more tolerable than other antidepressants (range of ORs 0·43-0·77), whereas amitriptyline, clomipramine, duloxetine, fluvoxamine, reboxetine, trazodone, and venlafaxine had the highest dropout rates (1·30-2·32). 46 (9%) of 522 trials were rated as high risk of bias, 380 (73%) trials as moderate, and 96 (18%) as low; and the certainty of evidence was moderate to very low. INTERPRETATION: All antidepressants were more efficacious than placebo in adults with major depressive disorder. Smaller differences between active drugs were found when placebo-controlled trials were included in the analysis, whereas there was more variability in efficacy and acceptability in head-to-head trials. These results should serve evidence-based practice and inform patients, physicians, guideline developers, and policy makers on the relative merits of the different antidepressants. FUNDING: National Institute for Health Research Oxford Health Biomedical Research Centre and the Japan Society for the Promotion of Science.",
+    "citation_count": 3446,
+    "reference_count": 33,
+    "url": "https://dblp.org/rec/conf/kbse/Al-Bataineh24a",
+    "dblp_key": "conf/kbse/Al-Bataineh24a",
+    "source_id": "https://openalex.org/W2788337440",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "A Data-driven Approach for Mining Software Features based on Similar App Descriptions and User Reviews Analysis.",
+    "authors": [
+      "Khubaib Amjad Alam",
+      "Ramsha Ali",
+      "Zyena Kamran",
+      "Sabeen Fatima",
+      "Irum Inayat"
+    ],
+    "venue": "ASE",
+    "year": 2024,
+    "abstract": "Mobile app development necessitates extracting domain-specific, essential, and innovative features that align with user needs and market trends. Determining which features provide a competitive advantage is a complex task, often managed manually by product managers. This study addresses the challenge of automating feature mining and recommendation by identifying similar apps based on user-provided descriptions. The proposed approach integrates Named Entity Recognition (NER) for feature extraction from mined Google Play app data with BERT (Bidirectional Encoder Representations from Transformers) and Topic Modeling to find comparable apps. Our top-performing model, which uses Non-negative Matrix Factorization (NMF) for Topic Modeling with Sentence-BERT (SBERT) embeddings, achieves an F1 score of 87.38%.",
+    "citation_count": 3,
+    "reference_count": 5,
+    "url": "https://dblp.org/rec/conf/kbse/AlamAKFI24",
+    "dblp_key": "conf/kbse/AlamAKFI24",
+    "source_id": "https://openalex.org/W4403536995",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Mining and Recommending Mobile App Features using Data-driven Analytics.",
+    "authors": [
+      "Ramsha Ali"
+    ],
+    "venue": "ASE",
+    "year": 2024,
+    "abstract": "Mobile app development necessitates the extraction of domain specific, essential and innovative features, aligning with user needs and market dynamics. Identifying features to provide competitive edge to the app developers, is a non-trivial task that is often performed manually by product managers. This study addresses the challenge of mining and recommending app features by automatically identifying similar apps corresponding to the description of apps provided by the user. The proposed approach, APPFIRE, integrates Named Entity Recognition (NER) for feature extraction and BERT (Bidirectional Encoder Representations from Transformers) coupled with Topic Modeling for identifying similar apps. Our top-performing model, utilizing Non-negative Matrix Factorization (NMF) for Topic Modeling with SBERT embeddings, achieves an F1 score of 87.38%.",
+    "citation_count": 1,
+    "reference_count": 14,
+    "url": "https://dblp.org/rec/conf/kbse/Ali24",
+    "dblp_key": "conf/kbse/Ali24",
+    "source_id": "https://openalex.org/W4403536724",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Bridging the Gap between Real-world and Synthetic Images for Testing Autonomous Driving Systems.",
+    "authors": [
+      "Mohammad Hossein Amini",
+      "Shiva Nejati 0001"
+    ],
+    "venue": "ASE",
+    "year": 2024,
+    "abstract": "Automated driving systems (ADSs) promise a safe, comfortable and efficient driving experience. However, fatalities involving vehicles equipped with ADSs are on the rise. The full potential of ADSs cannot be realized unless the robustness of state-of-the-art is improved further. This paper discusses unsolved problems and surveys the technical aspect of automated driving. Studies regarding present challenges, high-level system architectures, emerging methodologies and core functions including localization, mapping, perception, planning, and human machine interfaces, were thoroughly reviewed. Furthermore, many state-of-the-art algorithms were implemented and compared on our own platform in a real-world driving setting. The paper concludes with an overview of available datasets and tools for ADS development.",
+    "citation_count": 1717,
+    "reference_count": 356,
+    "url": "https://dblp.org/rec/conf/kbse/AminiN24",
+    "dblp_key": "conf/kbse/AminiN24",
+    "source_id": "https://openalex.org/W2953303875",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "FAIL: Analyzing Software Failures from the News Using LLMs.",
+    "authors": [
+      "Dharun Anandayuvaraj",
+      "Matthew Campbell",
+      "Arav Tewari",
+      "James C. Davis 0001"
+    ],
+    "venue": "ASE",
+    "year": 2024,
+    "abstract": "Software failures inform engineering work, standards, regulations. For example, the Log4J vulnerability brought government and industry attention to evaluating and securing software supply chains. Retrospective failure analysis is thus a valuable line of software engineering research. Accessing private engineering records is difficult, so such analyses tend to use information reported by the news media. However, prior works in this direction have relied on manual analysis. That has limited the scale of their analyses. The community lacks automated support to enable such analyses to consider a wide range of news sources and incidents.",
+    "citation_count": 3,
+    "reference_count": 46,
+    "url": "https://dblp.org/rec/conf/kbse/AnandayuvarajCT24",
+    "dblp_key": "conf/kbse/AnandayuvarajCT24",
+    "source_id": "https://openalex.org/W4403536712",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Slicer4D: A Slicing-based Debugger for Java.",
+    "authors": [
+      "Sahar Badihi",
+      "Sami Nourji",
+      "Julia Rubin"
+    ],
+    "venue": "ASE",
+    "year": 2024,
+    "abstract": "Debugging software failures often demands significant time and effort. Program slicing is a technique that can help developers fast track the debugging process by allowing them to focus only on the code relevant to the failure. However, despite the effectiveness of slicing, these techniques are not integrated into modern IDEs. Instead, most, if not all, current slicing tools are launched from the command line and produce log files as output. Developers thus have to switch between the IDE and command line tools, manually correlating the log file results with their source code, which hinders the adoption of the slicing-based debugging approaches in practice.",
+    "citation_count": 0,
+    "reference_count": 10,
+    "url": "https://dblp.org/rec/conf/kbse/BadihiNR24",
+    "dblp_key": "conf/kbse/BadihiNR24",
+    "source_id": "https://openalex.org/W4403537012",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "UFront: Toward A Unified MLIR Frontend for Deep Learning.",
+    "authors": [
+      "Guoqing Bao",
+      "Heng Shi 0005",
+      "Chengyi Cui",
+      "Yalin Zhang 0004",
+      "Jianguo Yao 0002"
+    ],
+    "venue": "ASE",
+    "year": 2024,
+    "abstract": "Automatic code generation for ML systems has gained popularity with the advent of compiler techniques like Multi-Level Intermediate Representation (Multi-Level IR, or MLIR). State-of-the-art MLIR frontends, including IREE-TF, Torch-MLIR, and ONNX-MLIR, aim to bridge the gap between ML frameworks and low-level hardware architectures through MLIR's progressive lowering pipeline. However, existing MLIR frontends encounter challenges such as inflexible high-level IR conversion, limited higher-level optimization opportunities, and reduced compatibility and efficiency, leading to software fragmentation and restricting their practical applications within the MLIR ecosystem. To address these challenges, we introduce UFront, a unified MLIR frontend employing a two-stage operator-to-operator compilation workflow. Unlike traditional frontends that compile model source code into binaries step by step with different MLIR transform passes, UFront decouples the process into two distinct stages. It first performs instantaneous model tracing, delegates traced computing nodes as standard Deep Neural Network (DNN) operators and transforms models written in different frameworks into unified high-level IR without relying on MLIR passes, enhancing conversion flexibility. Meanwhile, it performs high-level graph optimizations such as constant folding and operator fusion to produce more efficient high-level IR. In the second stage, UFront directly converts high-level IR into standard TOSA IR using proposed lowering patterns, eliminating transform redundancies and ensuring lower-level compatibility with existing ML compiler backends. This two-stage compilation approach enables consistent end-to-end code generation and optimization of various DNN models written in different formats within a single workflow. Extensive experiments on popular DNN models written in various frameworks demonstrate that UFront exhibits higher compatibility, faster end-to-end compilation, and is capable of producing more efficient binary execution compared to SOTA works.",
+    "citation_count": 0,
+    "reference_count": 24,
+    "url": "https://dblp.org/rec/conf/kbse/BaoSCZY24",
+    "dblp_key": "conf/kbse/BaoSCZY24",
+    "source_id": "https://openalex.org/W4403536902",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "A Conceptual Framework for Quality Assurance of LLM-based Socio-critical Systems.",
+    "authors": [
+      "Luciano Baresi",
+      "Matteo Camilli",
+      "Tommaso Dolci",
+      "Giovanni Quattrocchi"
+    ],
+    "venue": "ASE",
+    "year": 2024,
+    "abstract": "Recent breakthroughs in Artificial Intelligence (AI) obfuscate the boundaries between digital, physical, and social spaces, a trend expected to continue in the foreseeable future. Traditionally, software engineering has prioritized technical aspects, focusing on functional correctness and reliability while often neglecting broader societal implications. With the rise of software agents enabled by Large Language Models (LLMs) and capable of emulating human intelligence and perception, there is a growing recognition of the need for addressing socio-critical issues. Unlike technical challenges, these issues cannot be resolved through traditional, deterministic approaches due to their subjective nature and dependence on evolving factors such as culture and demographics. This paper dives into this problem and advocates the need for revising existing engineering principles and methodologies. We propose a conceptual framework for quality assurance where AI is not only the driver of socio-critical systems but also a fundamental tool in their engineering process. Such framework encapsulates pre-production and runtime workflows where LLM-based agents, so-called artificial doppelgängers, continuously assess and refine socio-critical systems ensuring their alignment with established societal standards.",
+    "citation_count": 5,
+    "reference_count": 22,
+    "url": "https://dblp.org/rec/conf/kbse/BaresiCDQ24",
+    "dblp_key": "conf/kbse/BaresiCDQ24",
+    "source_id": "https://openalex.org/W4403536032",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Prioritizing Tests for Improved Runtime.",
+    "authors": [
+      "Abdelrahman Baz",
+      "Minchao Huang",
+      "August Shi"
+    ],
+    "venue": "ASE",
+    "year": 2024,
+    "abstract": "The Ensembl Variant Effect Predictor is a powerful toolset for the analysis, annotation, and prioritization of genomic variants in coding and non-coding regions. It provides access to an extensive collection of genomic annotation, with a variety of interfaces to suit different requirements, and simple options for configuring and extending analysis. It is open source, free to use, and supports full reproducibility of results. The Ensembl Variant Effect Predictor can simplify and accelerate variant interpretation in a wide range of study designs.",
+    "citation_count": 8701,
+    "reference_count": 75,
+    "url": "https://dblp.org/rec/conf/kbse/BazHS24",
+    "dblp_key": "conf/kbse/BazHS24",
+    "source_id": "https://openalex.org/W2417483443",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Syntactic Resilience in Greybox Fuzzing: Automated Error Recovery.",
+    "authors": [
+      "Bachir Bendrissou"
+    ],
+    "venue": "ASE",
+    "year": 2024,
+    "abstract": "Fuzz testing, an automated technique that introduces random data inputs to systems, has demonstrated remarkable effectiveness in identifying vulnerabilities. Its scalability and automation have made it a focal point of interest in both academic and industrial settings. However, traditional fuzzing techniques often struggle to generate diverse, rare inputs that conform to a program's input specifications, thereby limiting their full potential. To address these challenges, I propose AFLRepair, a novel approach that applies random mutations to program inputs and subsequently repairs the syntax of any resulting invalid inputs. AFLRepair leverages bytelevel mutations to create a wide array of test cases while ensuring their validity, facilitating the exploration of diverse execution paths within critical program regions. This significantly increases the likelihood of uncovering hidden bugs. Preliminary experiments have revealed a crash on the Lua interpreter. The plan is to continue to validate AFLRepair through comprehensive fuzzing experiments on several open-source software, reporting any vulnerabilities discovered.",
+    "citation_count": 0,
+    "reference_count": 4,
+    "url": "https://dblp.org/rec/conf/kbse/Bendrissou24",
+    "dblp_key": "conf/kbse/Bendrissou24",
+    "source_id": "https://openalex.org/W4403519943",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "ChatBR: Automated assessment and improvement of bug report quality using ChatGPT.",
+    "authors": [
+      "Lili Bo",
+      "Wangjie Ji",
+      "Xiaobing Sun 0001",
+      "Ting Zhang 0011",
+      "Xiaoxue Wu 0001",
+      "Ying Wei 0012"
+    ],
+    "venue": "ASE",
+    "year": 2024,
+    "abstract": "Bug reports, containing crucial information such as the Observed Behavior (OB), the Expected Behavior (EB), and the Steps to Reproduce (S2R), can help developers localize and fix bugs efficiently. However, due to the increasing complexity of some bugs and the limited experience of some reporters, large numbers of bug reports miss this crucial information. Although machine learning (ML)-based and information retrieval (IR)-based approaches are proposed to detect and supplement the missing information in bug reports, the performance of these approaches depends heavily on the size and quality of bug report datasets.",
+    "citation_count": 5,
+    "reference_count": 21,
+    "url": "https://dblp.org/rec/conf/kbse/BoJ000024",
+    "dblp_key": "conf/kbse/BoJ000024",
+    "source_id": "https://openalex.org/W4403536436",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Language-Agnostic Static Analysis of Probabilistic Programs.",
+    "authors": [
+      "Markus Böck",
+      "Michael Schröder 0005",
+      "Jürgen Cito"
+    ],
+    "venue": "ASE",
+    "year": 2024,
+    "abstract": "This article surveys and organizes research works in a new paradigm in natural language processing, which we dub “prompt-based learning.” Unlike traditional supervised learning, which trains a model to take in an input x and predict an output y as P ( y|x ), prompt-based learning is based on language models that model the probability of text directly. To use these models to perform prediction tasks, the original input x is modified using a template into a textual string prompt x′ that has some unfilled slots, and then the language model is used to probabilistically fill the unfilled information to obtain a final string x̂ , from which the final output y can be derived. This framework is powerful and attractive for a number of reasons: It allows the language model to be pre-trained on massive amounts of raw text, and by defining a new prompting function the model is able to perform few-shot or even zero-shot learning, adapting to new scenarios with few or no labeled data. In this article, we introduce the basics of this promising paradigm, describe a unified set of mathematical notations that can cover a wide variety of existing work, and organize existing work along several dimensions, e.g., the choice of pre-trained language models, prompts, and tuning strategies. To make the field more accessible to interested beginners, we not only make a systematic review of existing works and a highly structured typology of prompt-based concepts but also release other resources, e.g., a website NLPedia–Pretrain including constantly updated survey and paperlist.",
+    "citation_count": 3599,
+    "reference_count": 120,
+    "url": "https://dblp.org/rec/conf/kbse/Bock0C24",
+    "dblp_key": "conf/kbse/Bock0C24",
+    "source_id": "https://openalex.org/W3185341429",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Software Supply Chain Risk: Characterization, Measurement &amp; Attenuation.",
+    "authors": [
+      "Alexis Butler"
+    ],
+    "venue": "ASE",
+    "year": 2024,
+    "abstract": "Despite widespread use of statins to reduce low-density lipoprotein cholesterol (LDL-C) and associated atherosclerotic cardiovascular risk, many patients do not achieve sufficient LDL-C lowering due to muscle-related side effects, indicating novel treatment strategies are required. Bempedoic acid (ETC-1002) is a small molecule intended to lower LDL-C in hypercholesterolemic patients, and has been previously shown to modulate both ATP-citrate lyase (ACL) and AMP-activated protein kinase (AMPK) activity in rodents. However, its mechanism for LDL-C lowering, efficacy in models of atherosclerosis and relevance in humans are unknown. Here we show that ETC-1002 is a prodrug that requires activation by very long-chain acyl-CoA synthetase-1 (ACSVL1) to modulate both targets, and that inhibition of ACL leads to LDL receptor upregulation, decreased LDL-C and attenuation of atherosclerosis, independently of AMPK. Furthermore, we demonstrate that the absence of ACSVL1 in skeletal muscle provides a mechanistic basis for ETC-1002 to potentially avoid the myotoxicity associated with statin therapy.",
+    "citation_count": 481,
+    "reference_count": 74,
+    "url": "https://dblp.org/rec/conf/kbse/Butler24",
+    "dblp_key": "conf/kbse/Butler24",
+    "source_id": "https://openalex.org/W2558991743",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Snopy: Bridging Sample Denoising with Causal Graph Learning for Effective Vulnerability Detection.",
+    "authors": [
+      "Sicong Cao",
+      "Xiaobing Sun 0001",
+      "Xiaoxue Wu 0001",
+      "David Lo 0001",
+      "Lili Bo",
+      "Bin Li 0006",
+      "Xiaolei Liu 0001",
+      "Xingwei Lin",
+      "Wei Liu 0010"
+    ],
+    "venue": "ASE",
+    "year": 2024,
+    "abstract": "Deep Learning (DL) has emerged as a promising means for vulnerability detection due to its ability to automatically derive features from vulnerable code. Unfortunately, current solutions struggle to focus on vulnerability-related parts of vulnerable functions, and tend to exploit spurious correlations for prediction, thus undermining their effectiveness in practice. In this paper, we propose Snopy, a novel DL-based approach, which bridges sample denoising with causal graph learning to capture real vulnerability patterns from vulnerable samples with numerous noise for effective detection. Specifically, Snopy adopts a change-based sample denoising approach to automatically weed out vulnerability-irrelevant code elements in the vulnerable functions without sacrificing the label accuracy. Then, Snopy constructs a novel Causality-Aware Graph Attention Network (CA-GAT) with Feature Caching Scheme (FCS) to learn causal vulnerability features while maintaining efficiency. Experiments on the three public benchmark datasets show that Snopy outperforms the state-of-the-art baselines by an average of 27.22%, 85.89%, and 75.50% in terms of F1-score, respectively.",
+    "citation_count": 2,
+    "reference_count": 48,
+    "url": "https://dblp.org/rec/conf/kbse/Cao000B00L024",
+    "dblp_key": "conf/kbse/Cao000B00L024",
+    "source_id": "https://openalex.org/W4403536399",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Beyond Manual Modeling: Automating GUI Model Generation Using Design Documents.",
+    "authors": [
+      "Shaoheng Cao",
+      "Renyi Chen",
+      "Minxue Pan",
+      "Wenhua Yang 0001",
+      "Xuandong Li"
+    ],
+    "venue": "ASE",
+    "year": 2024,
+    "abstract": "GUI models encapsulate the desired visual appearance and interactive behaviors of applications, facilitating various downstream tasks like model-based testing (MBT). Manually constructing high-quality GUI models is not only labor-intensive and costly but also prone to errors, particularly as applications evolve and require frequent model updates. Existing automated approaches for GUI model generation heavily rely on reverse engineering, where the models are abstractions of the code. As a result, they are not suitable for MBT to test functional issues because they are consistent with the code. Meanwhile, valuable development artifacts such as UI/UX design documents, which reflect design intentions, are often overlooked. In this paper, a novel approach named DemGen is proposed to seek a unique pathway for GUI model generation. Leveraging design documents, DemGen employs computer vision pre-trained models in conjunction with a rule-based correction mechanism to identify GUI elements and their intended behaviors as defined in those documents. Subsequently, the identified content is transformed into a formal GUI model adhering to the IFML modeling language. Our evaluation, conducted in collaboration with an industry partner on commercial applications, demonstrates the effectiveness and efficiency of DemGen in GUI element recognition and GUI model generation. Moreover, we conducted a comparative analysis of manual, automated, and hybrid modeling techniques, assessing the usefulness of generated models on MBT tasks.",
+    "citation_count": 1,
+    "reference_count": 35,
+    "url": "https://dblp.org/rec/conf/kbse/CaoCP0L24",
+    "dblp_key": "conf/kbse/CaoCP0L24",
+    "source_id": "https://openalex.org/W4403536601",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "JavaBench: A Benchmark of Object-Oriented Code Generation for Evaluating Large Language Models.",
+    "authors": [
+      "Jialun Cao",
+      "Zhiyong Chen",
+      "Jiarong Wu",
+      "Shing-Chi Cheung",
+      "Chang Xu 0001"
+    ],
+    "venue": "ASE",
+    "year": 2024,
+    "abstract": "Code generation benchmarks such as HumanEval are widely adopted to evaluate LLMs' capabilities. However, after consolidating the latest 24 benchmarks, we noticed three significant imbalances. First, imbalanced programming language. 95.8% of benchmarks involve Python, while only 5 benchmarks involve Java, resulting in an insufficient understanding of LLMs' capability to generate Java code. Second, imbalanced code granularity. Function-/statement-level benchmarks account for over 83.3% of benchmarks. Only a mere handful extends to class-/project-levels, and all are limited to Python. Third, lacking advanced features. Existing benchmarks primarily assess basic coding skills (e.g., variables, operators, and control structures), while overlooking advanced Object-Oriented Programming (OOP) features (i.e., encapsulation, inheritance, and polymorphism). Considering the prevalence of these advanced features in real-world Java project development, constructing benchmarks to test LLMs on handling OOP features is necessary.",
+    "citation_count": 9,
+    "reference_count": 27,
+    "url": "https://dblp.org/rec/conf/kbse/CaoCWC024",
+    "dblp_key": "conf/kbse/CaoCWC024",
+    "source_id": "https://openalex.org/W4403536900",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Assessing the feasibility of Micro frontend architecture in native mobile app development.",
+    "authors": [
+      "Quentin Capdepon",
+      "Nicolas Hlad",
+      "Benoît Verhaeghe",
+      "Abdelhak-Djamel Seriai"
+    ],
+    "venue": "ASE",
+    "year": 2024,
+    "abstract": "Since their introduction, mobile application development has become complex and now rivals web app development. The primary factor contributing to this complexity is their monolithic architecture: a mobile application is still deployed as a single unit. In contrast, web applications have adopted modular architectures such as Microservice or Micro FrontEnd (MFE). This last approach divides development into teams, each responsible for an MFE corresponding to a specific software feature. Our study examines the adoption of the MFE architecture on native mobile platforms. This paper discusses: i) how MFE can be adapted to current native mobile platforms; ii) the limitations of adapting MFE architecture on mobile; and iii) the challenges MFE introduces to mobile application development. Despite challenges in composing mobile MFEs post-deployment, our research highlighted maintaining a static development-side composite is feasible, albeit with a loss of flexibility. This allows team separation and independent feature development, though technological agnosticism isn't achieved.",
+    "citation_count": 0,
+    "reference_count": 11,
+    "url": "https://dblp.org/rec/conf/kbse/CapdeponHVS24",
+    "dblp_key": "conf/kbse/CapdeponHVS24",
+    "source_id": "https://openalex.org/W4403536081",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Semistructured Merge with Language-Specific Syntactic Separators.",
+    "authors": [
+      "Guilherme Cavalcanti",
+      "Paulo Borba",
+      "Leonardo dos Anjos",
+      "Jônatas Clementino"
+    ],
+    "venue": "ASE",
+    "year": 2024,
+    "abstract": "Structured merge tools exploit programming language syntactic structure to enhance merge accuracy by reducing spurious conflicts reported by unstructured tools. By creating and handling full ASTs, structured tools are language-specific and harder to implement. They can also be computationally expensive when merging large files. To reduce these drawbacks, semistructured merge tools work with partial ASTs that use strings to represent lower level syntactic structures such as method bodies, and rely on unstructured tools to merge them. This, however, results in merge accuracy loss. To improve accuracy without compromising semistructured merge benefits, we propose a tool that leverages language-specific syntactic separators to infer structure without parsing. We still resort to an unstructured tool to merge lower level structures, but only after preprocessing the code so that text in between separators such as curly braces appear in separate lines. This way we emulate the capabilities of structured merge tools while avoiding their drawbacks. By comparing our tool with a robust implementation of semistructured merge, we find that our tool substantially reduces the number of spurious conflicts. We also observe significant but less substantial reductions on the overall number of reported conflicts, and of files with conflicts. However, similar to structured tools, our tool lets more merge conflicts go undetected. Our tool shows significant improvements over unstructured tools widely used in practice. Finally we observe that exploiting language-specific syntactic separators introduces unique textual alignment challenges.",
+    "citation_count": 1,
+    "reference_count": 29,
+    "url": "https://dblp.org/rec/conf/kbse/CavalcantiBAC24",
+    "dblp_key": "conf/kbse/CavalcantiBAC24",
+    "source_id": "https://openalex.org/W4403537018",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "CompAi: A Tool for GDPR Completeness Checking of Privacy Policies using Artificial Intelligence.",
+    "authors": [
+      "Orlando Amaral Cejas",
+      "Sallam Abualhaija",
+      "Lionel C. Briand"
+    ],
+    "venue": "ASE",
+    "year": 2024,
+    "abstract": "We introduce CompAı - a tool for checking the completeness of privacy policies against the general data protection regulation (GDPR). CompAı facilitates the analysis of privacy policies to check their compliance to GDPR requirements. Since privacy policies serve as an agreement between a software system and its prospective users, the policy must fully capture such requirements to ensure that collected personal data of individuals (or users) remains protected as specified by the GDPR. For a given privacy policy, CompAı semantically analyzes its textual content against a comprehensive conceptual model which captures all information types that might appear in any policy. Based on this analysis, alongside some input from the end user, CompAı can determine the potential incompleteness violations in the input policy with an accuracy of ≈96%. CompAı generates a detailed report that can be easily reviewed and validated by experts. The source code of CompAı is publicly available on https://figshare.com/articles/online_resource/CompAI/23676069, and a demo of the tool is available on https://youtu.be/zwa_tM3fXHU.",
+    "citation_count": 5,
+    "reference_count": 5,
+    "url": "https://dblp.org/rec/conf/kbse/CejasAB24",
+    "dblp_key": "conf/kbse/CejasAB24",
+    "source_id": "https://openalex.org/W4403536936",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Olympia: Fuzzer Benchmarking for Solidity.",
+    "authors": [
+      "Jana Chadt",
+      "Christoph Hochrainer",
+      "Valentin Wüstholz",
+      "Maria Christakis"
+    ],
+    "venue": "ASE",
+    "year": 2024,
+    "abstract": "Over the last few years, smart-contract hacks have resulted in the loss of billions of assets. To efficiently identify such vulnerabilities, academic and industrial researchers have developed several popular smart-contract fuzzers. However, it has been challenging to objectively compare their bug-finding effectiveness. In this paper, we present Olympia, the first benchmark-generation tool that is designed for smart-contract, rather than general-purpose, fuzzers. We have used Olympia to evaluate the effectiveness of four well known, open-source fuzzers for Solidity smart contracts.",
+    "citation_count": 0,
+    "reference_count": 12,
+    "url": "https://dblp.org/rec/conf/kbse/ChadtHWC24",
+    "dblp_key": "conf/kbse/ChadtHWC24",
+    "source_id": "https://openalex.org/W4403537043",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "FAST: Boosting Uncertainty-based Test Prioritization Methods for Neural Networks via Feature Selection.",
+    "authors": [
+      "Jialuo Chen",
+      "Jingyi Wang 0004",
+      "Xiyue Zhang 0001",
+      "Youcheng Sun",
+      "Marta Kwiatkowska",
+      "Jiming Chen 0001",
+      "Peng Cheng 0001"
+    ],
+    "venue": "ASE",
+    "year": 2024,
+    "abstract": "Large, labeled datasets have driven deep learning methods to achieve expert-level performance on a variety of medical imaging tasks. We present CheXpert, a large dataset that contains 224,316 chest radiographs of 65,240 patients. We design a labeler to automatically detect the presence of 14 observations in radiology reports, capturing uncertainties inherent in radiograph interpretation. We investigate different approaches to using the uncertainty labels for training convolutional neural networks that output the probability of these observations given the available frontal and lateral radiographs. On a validation set of 200 chest radiographic studies which were manually annotated by 3 board-certified radiologists, we find that different uncertainty approaches are useful for different pathologies. We then evaluate our best model on a test set composed of 500 chest radiographic studies annotated by a consensus of 5 board-certified radiologists, and compare the performance of our model to that of 3 additional radiologists in the detection of 5 selected pathologies. On Cardiomegaly, Edema, and Pleural Effusion, the model ROC and PR curves lie above all 3 radiologist operating points. We release the dataset to the public as a standard benchmark to evaluate performance of chest radiograph interpretation models.",
+    "citation_count": 2552,
+    "reference_count": 32,
+    "url": "https://dblp.org/rec/conf/kbse/Chen0ZSK0024",
+    "dblp_key": "conf/kbse/Chen0ZSK0024",
+    "source_id": "https://openalex.org/W2963466845",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Efficient Code Causes Inefficiency in Compiler Optimizations.",
+    "authors": [
+      "Hongyu Chen"
+    ],
+    "venue": "ASE",
+    "year": 2024,
+    "abstract": "SciPy is an open-source scientific computing library for the Python programming language. Since its initial release in 2001, SciPy has become a de facto standard for leveraging scientific algorithms in Python, with over 600 unique code contributors, thousands of dependent packages, over 100,000 dependent repositories and millions of downloads per year. In this work, we provide an overview of the capabilities and development practices of SciPy 1.0 and highlight some recent technical developments.",
+    "citation_count": 37665,
+    "reference_count": 70,
+    "url": "https://dblp.org/rec/conf/kbse/Chen24",
+    "dblp_key": "conf/kbse/Chen24",
+    "source_id": "https://openalex.org/W3003257820",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "A Comprehensive Study of Privacy Leakage Vulnerability in Android App Logs.",
+    "authors": [
+      "Zhiyuan Chen"
+    ],
+    "venue": "ASE",
+    "year": 2024,
+    "abstract": "Android is the most popular mobile operating system, which attracts countless users. However, Android app logs, which record Android runtime information, are often overlooked in privacy leakage vulnerability research. Existing studies on privacy leakage vulnerabilities in Android apps primarily focus on static and dynamic analysis, with a lack of comprehensive studies specifically addressing privacy leakage vulnerabilities in Android app logs. In this paper, we propose to conduct a comprehensive study to fill this research gap. Our study includes two aspects: (1) gathering real-world developers' views on privacy leakage vulnerabilities in Android app logs and (2) exploring the status of privacy leakage vulnerabilities in the latest Android app logs. Our preliminary results indicate the potential of this study.",
+    "citation_count": 2,
+    "reference_count": 27,
+    "url": "https://dblp.org/rec/conf/kbse/Chen24a",
+    "dblp_key": "conf/kbse/Chen24a",
+    "source_id": "https://openalex.org/W4403519947",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Studying Versioning in Stack Overflow.",
+    "authors": [
+      "Yiyun Chen",
+      "Fuxiang Chen",
+      "Mijung Kim",
+      "Fatemeh H. Fard"
+    ],
+    "venue": "ASE",
+    "year": 2024,
+    "abstract": "This paper presents a systematic solution to the per-sistent problem of buffer overflow attacks. Buffer over-flow attacks gained notoriety in 1988 as part of the Morris Worm incident on the Internet. While it is fairly simple to fix individual buffer overflow vulnerabilities, buffer overflow attacks continue to this day. Hundreds of at-tacks have been discovered, and while most of the obvi-ous vulnerabilities have now been patched, more sophis-ticated buffer overflow attacks continue to emerge. We describe StackGuard: a simple compiler technique that virtually eliminates buffer overflow vulnerabilities with only modest performance penalties. Privileged pro-grams that are recompiled with the StackGuard com-piler extension no longer yield control to the attacker, but rather enter a fail-safe state. These programs require no source code changes at all, and are binary-compatible with existing operating systems and libraries. We de-scribe the compiler technique (a simple patch to gcc), as well as a set of variations on the technique that trade-off between penetration resistance and performance. We present experimental results of both the penetration resis-tance and the performance impact of this technique.",
+    "citation_count": 1264,
+    "reference_count": 14,
+    "url": "https://dblp.org/rec/conf/kbse/ChenCKF24",
+    "dblp_key": "conf/kbse/ChenCKF24",
+    "source_id": "https://openalex.org/W1655226010",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "From Logging to Leakage: A Study of Privacy Leakage in Android App Logs.",
+    "authors": [
+      "Zhiyuan Chen",
+      "Soham Sanjay Deo",
+      "Poorna Chander Reddy Puttaparthi",
+      "Yiming Tang 0002",
+      "Xueling Zhang",
+      "Weiyi Shang"
+    ],
+    "venue": "ASE",
+    "year": 2024,
+    "abstract": "Android phones are among the most popular mobile devices today, providing users with a wide array of convenient services through various apps. These apps generate software logs during their runtime, which record their behavior, status, and error information. However, these logs can also inadvertently capture sensitive information and user privacy data, often without the developer's awareness. In this study, we constructed a dataset comprising 67,702 log records from 83 Android apps. Our analysis of this dataset identified 610 instances of privacy leakage, which indicates the prevalence of such issues in Android app logs. Additionally, our analysis identified characteristics of Android app logs with exposed sensitive information and revealed a gap between developers' awareness of privacy protection and privacy leakage in real-world scenarios.",
+    "citation_count": 1,
+    "reference_count": 7,
+    "url": "https://dblp.org/rec/conf/kbse/ChenDP0ZS24",
+    "dblp_key": "conf/kbse/ChenDP0ZS24",
+    "source_id": "https://openalex.org/W4403536981",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Promise and Peril of Collaborative Code Generation Models: Balancing Effectiveness and Memorization.",
+    "authors": [
+      "Zhi Chen",
+      "Lingxiao Jiang"
+    ],
+    "venue": "ASE",
+    "year": 2024,
+    "abstract": "In the rapidly evolving field of machine learning, training models with datasets from various locations and organizations presents significant challenges due to privacy and legal concerns. The exploration of effective collaborative training settings, which are capable of leveraging valuable knowledge from distributed and isolated datasets, is increasingly crucial. This study investigates key factors that impact the effectiveness of collaborative training methods in code next-token prediction, as well as the correctness and utility of the generated code, showing the promise of such methods. Additionally, we evaluate the memorization of different participant training data across various collaborative training settings, including centralized, federated, and incremental training, showing their potential risks in leaking data.",
+    "citation_count": 4,
+    "reference_count": 39,
+    "url": "https://dblp.org/rec/conf/kbse/ChenJ24",
+    "dblp_key": "conf/kbse/ChenJ24",
+    "source_id": "https://openalex.org/W4403536789",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "A Position-Aware Approach to Decomposing God Classes.",
+    "authors": [
+      "Tianyi Chen",
+      "Yanjie Jiang",
+      "Fu Fan",
+      "Bo Liu 0094",
+      "Hui Liu 0003"
+    ],
+    "venue": "ASE",
+    "year": 2024,
+    "abstract": "God classes are widely recognized as code smells, significantly impairing the maintainability and readability of source code. However, resolving the identified God classes remains a formidable challenge, and we still lack automated and accurate tools to resolve God classes automatically. To this end, in this paper, we propose a novel approach (called ClassSplitter) to decompose God classes. The key observation behind the proposed approach is that software entities (i.e., methods and fields) that are physically adjacent often have strong semantic correlations and thus have a great chance of being classified into the same class during God class deposition. We validate this hypothesis by analyzing 54 God class decomposition refactorings actually conducted in the wild. According to the observation, we measure the similarity between software entities by exploiting not only traditional code metrics but also their relative physical positions. Based on the similarity, we customize a clustering algorithm to classify the methods within a given God class, and each of the resulting clusters is taken as a new class. Finally, ClassSplitter allocates the fields of the God class to the new classes according to the field-access-based coupling between fields and classes. We evaluate ClassSplitter using 133 real-world God classes from open-source applications. Our evaluation results suggest that ClassSplitter could substantially improve the state of the art in God class decomposition, improving the average MoJoFM by 47%. Manual evaluation also confirmed that in most cases (77%) the solutions suggested by ClassSplitter were preferred by developers to alternatives suggested by the state-of-the-art baseline approach.",
+    "citation_count": 2,
+    "reference_count": 36,
+    "url": "https://dblp.org/rec/conf/kbse/ChenJFL024",
+    "dblp_key": "conf/kbse/ChenJFL024",
+    "source_id": "https://openalex.org/W4403520087",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "B4: Towards Optimal Assessment of Plausible Code Solutions with Plausible Tests.",
+    "authors": [
+      "Mouxiang Chen",
+      "Zhongxin Liu 0002",
+      "He Tao",
+      "Yusu Hong",
+      "David Lo 0001",
+      "Xin Xia 0001",
+      "Jianling Sun"
+    ],
+    "venue": "ASE",
+    "year": 2024,
+    "abstract": "Selecting the best code solution from multiple generated ones is an essential task in code generation, which can be achieved by using some reliable validators (e.g., developer-written test cases) for assistance. Since reliable test cases are not always available and can be expensive to build in practice, researchers propose to automatically generate test cases to assess code solutions. However, when both code solutions and test cases are plausible and not reliable, selecting the best solution becomes challenging. Although some heuristic strategies have been proposed to tackle this problem, they lack a strong theoretical guarantee and it is still an open question whether an optimal selection strategy exists. Our work contributes in two ways. First, we show that within a Bayesian framework, the optimal selection strategy can be defined based on the posterior probability of the observed passing states between solutions and tests. The problem of identifying the best solution is then framed as an integer programming problem. Second, we propose an efficient approach for approximating this optimal (yet uncomputable) strategy, where the approximation error is bounded by the correctness of prior knowledge. We then incorporate effective prior knowledge to tailor code generation tasks. Both theoretical and empirical studies confirm that existing heuristics are limited in selecting the best solutions with plausible test cases. Our proposed approximated optimal strategy ℬ4 significantly surpasses existing heuristics in selecting code solutions generated by large language models (LLMs) with LLM-generated tests, achieving a relative performance improvement by up to 50% over the strongest heuristic and 246% over the random selection in the most challenging scenarios. Our code is publicly available at https://github.com/ZJU-CTAG/B4.",
+    "citation_count": 2,
+    "reference_count": 32,
+    "url": "https://dblp.org/rec/conf/kbse/ChenLTH00S24",
+    "dblp_key": "conf/kbse/ChenLTH00S24",
+    "source_id": "https://openalex.org/W4403536273",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Model-based GUI Testing For HarmonyOS Apps.",
+    "authors": [
+      "Yige Chen",
+      "Sinan Wang",
+      "Yida Tao",
+      "Yepang Liu 0001"
+    ],
+    "venue": "ASE",
+    "year": 2024,
+    "abstract": "HarmonyOS is a new all-scenario operating system. As its software ecosystem rapidly expands, how to conduct automated testing of HarmonyOS apps to ensure app quality has become a crucial task. Model-based testing has been shown to be an effective method for automatic Android app GUI testing. Inspired by previous work, we in this work explore how to perform model-based testing for HarmonyOS apps. To characterize app behaviors, we first propose the page transition graph model, which is a directed graph describing transitions between various UI pages in a HarmonyOS app. We then devise a static analysis method to build page transition graphs from the source code of HarmonyOS apps. Leveraging the model, we implement a testing tool which can effectively perform systematic GUI exploration in HarmonyOS apps. We have evaluated our tool using 10 popular open-source HarmonyOS apps from GitHub and Gitee. Experimental results show that the extracted models are highly precise. Moreover, within the same time budget, model-based testing significantly improves the test coverage of HarmonyOS apps over a random baseline method. Our tool is open-sourced at https://github.com/sqlab-sustech/HarmonyOS-App-Test and a video demo is at https://youtu.be/dgZWkHiBYbA.",
+    "citation_count": 4,
+    "reference_count": 5,
+    "url": "https://dblp.org/rec/conf/kbse/ChenWT024",
+    "dblp_key": "conf/kbse/ChenWT024",
+    "source_id": "https://openalex.org/W4403537014",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "RMCBench: Benchmarking Large Language Models&apos; Resistance to Malicious Code.",
+    "authors": [
+      "Jiachi Chen",
+      "Qingyuan Zhong",
+      "Yanlin Wang 0001",
+      "Kaiwen Ning",
+      "Yongkun Liu",
+      "Zenan Xu",
+      "Zhe Zhao 0006",
+      "Ting Chen 0002",
+      "Zibin Zheng"
+    ],
+    "venue": "ASE",
+    "year": 2024,
+    "abstract": "The emergence of Large Language Models (LLMs) has significantly influenced various aspects of software development activities. Despite their benefits, LLMs also pose notable risks, including the potential to generate harmful content and being abused by malicious developers to create malicious code. Several previous studies have focused on the ability of LLMs to resist the generation of harmful content that violates human ethical standards, such as biased or offensive content. However, there is no research evaluating the ability of LLMs to resist malicious code generation. To fill this gap, we propose RMCBench, the first benchmark comprising 473 prompts designed to assess the ability of LLMs to resist malicious code generation. This benchmark employs two scenarios: a text-to-code scenario, where LLMs are prompted with descriptions to generate code, and a code-to-code scenario, where LLMs translate or complete existing malicious code. Based on RMCBench, we conduct an empirical study on 11 representative LLMs to assess their ability to resist malicious code generation. Our findings indicate that current LLMs have a limited ability to resist malicious code generation with an average refusal rate of 40.36% in text-to-code scenario and 11.52% in code-to-code scenario. The average refusal rate of all LLMs in RMCBench is only 28.71%; ChatGPT-4 has a refusal rate of only 35.73%. We also analyze the factors that affect LLMs' ability to resist malicious code generation and provide implications for developers to enhance model robustness.",
+    "citation_count": 44,
+    "reference_count": 66,
+    "url": "https://dblp.org/rec/conf/kbse/ChenZ0NLX00Z24",
+    "dblp_key": "conf/kbse/ChenZ0NLX00Z24",
+    "source_id": "2409.15154v1",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "FIPSER: Improving Fairness Testing of DNN by Seed Prioritization.",
+    "authors": [
+      "Junwei Chen",
+      "Yueling Zhang",
+      "Lingfeng Zhang",
+      "Min Zhang 0007",
+      "Chengcheng Wan 0001",
+      "Ting Su 0001",
+      "Geguang Pu"
+    ],
+    "venue": "ASE",
+    "year": 2024,
+    "abstract": "As a rapidly evolving AI technology, deep neural networks are becoming increasingly integrated into human society, yet raising concerns about fairness issues. Previous studies have proposed a metric called causal fairness to measure the fairness of machine learning models and proposed some search algorithms to mine individual discrimination instance pairs (IDIPs). Fairness issues can be alleviated by retraining models with corrected IDIPs. However, the number of samples that are used as seeds for these methods is often limited due to the pursuit of efficiency. In addition, the quantity of IDIPs generated on different seeds varies, so it makes sense to select appropriate samples as seeds, which has not been sufficiently considered in past studies. In this paper, we study the imbalance in IDIP quantities for various datasets and sensitive attributes, highlighting the need for selecting and ranking seed samples. Then, we proposed FIPSER, a feature importance and perturbation potential-based seed prioritization method. Our experimental results show that, on average, when applied to the current state-of-the-art method of IDIP mining, FIPSER can improve its effectiveness by 45% and efficiency by 11%.",
+    "citation_count": 2,
+    "reference_count": 42,
+    "url": "https://dblp.org/rec/conf/kbse/ChenZZZ00P24",
+    "dblp_key": "conf/kbse/ChenZZZ00P24",
+    "source_id": "https://openalex.org/W4403537029",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Semantic-Enhanced Indirect Call Analysis with Large Language Models.",
+    "authors": [
+      "Baijun Cheng",
+      "Cen Zhang",
+      "Kailong Wang 0001",
+      "Ling Shi 0002",
+      "Yang Liu 0003",
+      "Haoyu Wang 0001",
+      "Yao Guo 0001",
+      "Ding Li 0001",
+      "Xiangqun Chen"
+    ],
+    "venue": "ASE",
+    "year": 2024,
+    "abstract": "Semantic memory refers to knowledge about people, objects, actions, relations, self, and culture acquired through experience. The neural systems that store and retrieve this information have been studied for many years, but a consensus regarding their identity has not been reached. Using strict inclusion criteria, we analyzed 120 functional neuroimaging studies focusing on semantic processing. Reliable areas of activation in these studies were identified using the activation likelihood estimate (ALE) technique. These activations formed a distinct, left-lateralized network comprised of 7 regions: posterior inferior parietal lobe, middle temporal gyrus, fusiform and parahippocampal gyri, dorsomedial prefrontal cortex, inferior frontal gyrus, ventromedial prefrontal cortex, and posterior cingulate gyrus. Secondary analyses showed specific subregions of this network associated with knowledge of actions, manipulable artifacts, abstract concepts, and concrete concepts. The cortical regions involved in semantic processing can be grouped into 3 broad categories: posterior multimodal and heteromodal association cortex, heteromodal prefrontal cortex, and medial limbic regions. The expansion of these regions in the human relative to the nonhuman primate brain may explain uniquely human capacities to use language productively, plan, solve problems, and create cultural and technological artifacts, all of which depend on the fluid and efficient retrieval and manipulation of semantic knowledge.",
+    "citation_count": 4163,
+    "reference_count": 459,
+    "url": "https://dblp.org/rec/conf/kbse/ChengZWS0000C24",
+    "dblp_key": "conf/kbse/ChengZWS0000C24",
+    "source_id": "https://openalex.org/W2112891119",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Repairing Regex-Dependent String Functions.",
+    "authors": [
+      "Nariyoshi Chida",
+      "Tachio Terauchi"
+    ],
+    "venue": "ASE",
+    "year": 2024,
+    "abstract": "Regex-dependent string functions are string functions that take regular expressions (regexes) as parameters and are popular means of manipulating strings. They are frequently used for, e.g., string transformation and substring search. Despite the importance, writing these functions is far from easy. To rectify this situation, recent research made significant progress by proposing automated methods for synthesizing regexes based on Programming by Examples (PBE). However, there still is a gap between these methods and the goal of synthesizing regex-dependent string functions. First, the existing methods focus on whole-string matching, whereas most regex-dependent string functions adopt substring matching. Second, the existing methods focus only on the regex, but many commonly used regex-dependent string functions, such as replace and replaceAll, also take as parameter a replacement to specify how the substrings matched to the regex will be replaced.",
+    "citation_count": 3,
+    "reference_count": 32,
+    "url": "https://dblp.org/rec/conf/kbse/ChidaT24",
+    "dblp_key": "conf/kbse/ChidaT24",
+    "source_id": "https://openalex.org/W4403536768",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Towards LLM-augmented multiagent systems for agile software engineering.",
+    "authors": [
+      "Konrad Cinkusz",
+      "Jaroslaw A. Chudziak"
+    ],
+    "venue": "ASE",
+    "year": 2024,
+    "abstract": "A cognitive multi-agent ecosystem designed for efficient software engineering using Agile methodologies can significantly improve software development processes. Key components include the integration of Multi-Agent Systems (MAS) and Large Language Models (LLMs), utilizing Dynamic Context techniques for agent profiling, and Theory of Mind to enhance collaboration. The CogniSim Ecosystem analyzes problems, proposes solutions, constructs and validates plans, and coordinates specialized agents playing roles such as developers, executors, quality checkers, and methodology reviewers. These agents produce documentation, models, and diagrams (e.g., UML) while adhering to predefined quality and performance measures. The ecosystem also simulates the impact of various team configurations on problem-solving effectiveness, helping organizations identify optimal team structures. Case studies and simulations demonstrate its practical applications.",
+    "citation_count": 13,
+    "reference_count": 5,
+    "url": "https://dblp.org/rec/conf/kbse/CinkuszC24",
+    "dblp_key": "conf/kbse/CinkuszC24",
+    "source_id": "https://openalex.org/W4403536979",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "DeepREST: Automated Test Case Generation for REST APIs Exploiting Deep Reinforcement Learning.",
+    "authors": [
+      "Davide Corradini",
+      "Zeno Montolli",
+      "Michele Pasqua",
+      "Mariano Ceccato"
+    ],
+    "venue": "ASE",
+    "year": 2024,
+    "abstract": "Automatically crafting test scenarios for REST APIs helps deliver more reliable and trustworthy web-oriented systems. However, current black-box testing approaches rely heavily on the information available in the API's formal documentation, i.e., the Open API Specification (OAS for short). While useful, the OAS mostly covers syntactic aspects of the API (e.g., producer-consumer relations between operations, input value properties, and additional constraints in natural language), and it lacks a deeper understanding of the API business logic. Missing semantics include implicit ordering (logic dependency) between operations and implicit input-value constraints. These limitations hinder the ability of black-box testing tools to generate truly effective test cases automatically.",
+    "citation_count": 13,
+    "reference_count": 34,
+    "url": "https://dblp.org/rec/conf/kbse/CorradiniMPC24",
+    "dblp_key": "conf/kbse/CorradiniMPC24",
+    "source_id": "https://openalex.org/W4403536511",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Finding Performance Issues in Rust Projects.",
+    "authors": [
+      "Chenhao Cui"
+    ],
+    "venue": "ASE",
+    "year": 2024,
+    "abstract": "For forty years, there has been a widely held belief that over 2,000 years ago the Chinese Qin developed an advanced chromate conversion coating technology (CCC) to prevent metal corrosion. This belief was based on the detection of chromium traces on the surface of bronze weapons buried with the Chinese Terracotta Army, and the same weapons' very good preservation. We analysed weapons, lacquer and soils from the site, and conducted experimental replications of CCC and accelerated ageing. Our results show that surface chromium presence is correlated with artefact typology and uncorrelated with bronze preservation. Furthermore we show that the lacquer used to cover warriors and certain parts of weapons is rich in chromium, and we demonstrate that chromium on the metals is contamination from nearby lacquer after burial. The chromium anti-rust treatment theory should therefore be abandoned. The good metal preservation probably results from the moderately alkaline pH and very small particle size of the burial soil, in addition to bronze composition.",
+    "citation_count": 1091,
+    "reference_count": 27,
+    "url": "https://dblp.org/rec/conf/kbse/Cui24",
+    "dblp_key": "conf/kbse/Cui24",
+    "source_id": "https://openalex.org/W2928125163",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Three Heads Are Better Than One: Suggesting Move Method Refactoring Opportunities with Inter-class Code Entity Dependency Enhanced Hybrid Hypergraph Neural Network.",
+    "authors": [
+      "Di Cui",
+      "Jiaqi Wang",
+      "Qiangqiang Wang",
+      "Peng Ji",
+      "Minglang Qiao",
+      "Yutong Zhao",
+      "Jingzhao Hu",
+      "Luqiao Wang",
+      "Qingshan Li"
+    ],
+    "venue": "ASE",
+    "year": 2024,
+    "abstract": "Methods implemented in incorrect classes will cause excessive reliance on other classes than their own, known as a typical code smell symptom: feature envy, which makes it difficult to maintain increased coupling between classes. Addressing this issue, several Move Method refactoring tools have been proposed, employing a two-phase process: identifying misplaced methods to move and appropriate classes to receive, and implementing the mechanics of refactoring. These tools traditionally use hard-coded metrics to measure correlations between movable methods and target classes and apply heuristic thresholds or trained classifiers to unearth refactoring opportunities. Yet, these approaches predominantly illuminate pairwise correlations between methods and classes while overlooking the complex and complicated dependencies binding multiple code entities within these methods/classes that are prevalent in real-world cases. This narrow focus can lead to refactoring suggestions that may diverge from developers' actual needs. To bridge this gap, our paper leverages the concept of inter-class code entity dependency hypergraph to model complicated dependency relationships involving multiple code entities within various methods/classes and proposes a hypergraph learning-based approach to suggest Move Method refactoring opportunities named HMove. We first construct inter-class code entity dependency hypergraphs from training samples and assign attributes to entities with a pre-trained code model. All the attributed hypergraphs are fed into a hybrid hypergraph neural network for training. Utilizing this trained neural network alongside a large language model, we construct a refactoring suggestion system. We trained HMove on a large-scale dataset and evaluated it on two real-world datasets. The results show that demonstrates an increase of 27.8% in precision, 2.5% in recall, and 18.5% in f1-measure compared to 9 state-of-the-art refactoring tools, which is more useful for 68% of participants. The results also unveil practical suggestions and new insights that benefit existing feature envy-related refactoring techniques.",
+    "citation_count": 3,
+    "reference_count": 30,
+    "url": "https://dblp.org/rec/conf/kbse/CuiWWJQZHWL24",
+    "dblp_key": "conf/kbse/CuiWWJQZHWL24",
+    "source_id": "https://openalex.org/W4403536544",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Semantic-aware Source Code Modeling.",
+    "authors": [
+      "Yangruibo Ding"
+    ],
+    "venue": "ASE",
+    "year": 2024,
+    "abstract": "BACKGROUND: The Avogadro project has developed an advanced molecule editor and visualizer designed for cross-platform use in computational chemistry, molecular modeling, bioinformatics, materials science, and related areas. It offers flexible, high quality rendering, and a powerful plugin architecture. Typical uses include building molecular structures, formatting input files, and analyzing output of a wide variety of computational chemistry packages. By using the CML file format as its native document type, Avogadro seeks to enhance the semantic accessibility of chemical data types. RESULTS: The work presented here details the Avogadro library, which is a framework providing a code library and application programming interface (API) with three-dimensional visualization capabilities; and has direct applications to research and education in the fields of chemistry, physics, materials science, and biology. The Avogadro application provides a rich graphical interface using dynamically loaded plugins through the library itself. The application and library can each be extended by implementing a plugin module in C++ or Python to explore different visualization techniques, build/manipulate molecular structures, and interact with other programs. We describe some example extensions, one which uses a genetic algorithm to find stable crystal structures, and one which interfaces with the PackMol program to create packed, solvated structures for molecular dynamics simulations. The 1.0 release series of Avogadro is the main focus of the results discussed here. CONCLUSIONS: Avogadro offers a semantic chemical builder and platform for visualization and analysis. For users, it offers an easy-to-use builder, integrated support for downloading from common databases such as PubChem and the Protein Data Bank, extracting chemical data from a wide variety of formats, including computational chemistry output, and native, semantic support for the CML file format. For developers, it can be easily extended via a powerful plugin mechanism to support new features in organic chemistry, inorganic complexes, drug design, materials, biomolecules, and simulations. Avogadro is freely available under an open-source license from http://avogadro.openmolecules.net.",
+    "citation_count": 10319,
+    "reference_count": 44,
+    "url": "https://dblp.org/rec/conf/kbse/Ding24",
+    "dblp_key": "conf/kbse/Ding24",
+    "source_id": "https://openalex.org/W2028046413",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Can Large Language Models Comprehend Code Stylometry?",
+    "authors": [
+      "Atish Kumar Dipongkor"
+    ],
+    "venue": "ASE",
+    "year": 2024,
+    "abstract": null,
+    "citation_count": null,
+    "reference_count": null,
+    "url": "https://dblp.org/rec/conf/kbse/Dipongkor24",
+    "dblp_key": "conf/kbse/Dipongkor24",
+    "source_id": null,
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Enhancing Compositional Static Analysis with Dynamic Analysis.",
+    "authors": [
+      "Dino Distefano",
+      "Matteo Marescotti",
+      "Cons T. Åhs",
+      "Sopot Cela",
+      "Gabriela Cunha Sampaio",
+      "Radu Grigore",
+      "Ákos Hajdu",
+      "Timotej Kapus",
+      "Ke Mao",
+      "Thibault Suzanne"
+    ],
+    "venue": "ASE",
+    "year": 2024,
+    "abstract": null,
+    "citation_count": 10228,
+    "reference_count": 36,
+    "url": "https://dblp.org/rec/conf/kbse/DistefanoMACSGH24",
+    "dblp_key": "conf/kbse/DistefanoMACSGH24",
+    "source_id": "https://openalex.org/W1803102843",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Revisiting the Conflict-Resolving Problem from a Semantic Perspective.",
+    "authors": [
+      "Jinhao Dong",
+      "Jun Sun 0001",
+      "Yun Lin 0001",
+      "Yedi Zhang",
+      "Murong Ma",
+      "Jin Song Dong 0001",
+      "Dan Hao 0001"
+    ],
+    "venue": "ASE",
+    "year": 2024,
+    "abstract": "Semantic memory refers to knowledge about people, objects, actions, relations, self, and culture acquired through experience. The neural systems that store and retrieve this information have been studied for many years, but a consensus regarding their identity has not been reached. Using strict inclusion criteria, we analyzed 120 functional neuroimaging studies focusing on semantic processing. Reliable areas of activation in these studies were identified using the activation likelihood estimate (ALE) technique. These activations formed a distinct, left-lateralized network comprised of 7 regions: posterior inferior parietal lobe, middle temporal gyrus, fusiform and parahippocampal gyri, dorsomedial prefrontal cortex, inferior frontal gyrus, ventromedial prefrontal cortex, and posterior cingulate gyrus. Secondary analyses showed specific subregions of this network associated with knowledge of actions, manipulable artifacts, abstract concepts, and concrete concepts. The cortical regions involved in semantic processing can be grouped into 3 broad categories: posterior multimodal and heteromodal association cortex, heteromodal prefrontal cortex, and medial limbic regions. The expansion of these regions in the human relative to the nonhuman primate brain may explain uniquely human capacities to use language productively, plan, solve problems, and create cultural and technological artifacts, all of which depend on the fluid and efficient retrieval and manipulation of semantic knowledge.",
+    "citation_count": 4163,
+    "reference_count": 459,
+    "url": "https://dblp.org/rec/conf/kbse/Dong00ZMD024",
+    "dblp_key": "conf/kbse/Dong00ZMD024",
+    "source_id": "https://openalex.org/W2112891119",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Same App, Different Behaviors: Uncovering Device-specific Behaviors in Android Apps.",
+    "authors": [
+      "Zikan Dong",
+      "Yanjie Zhao 0001",
+      "Tianming Liu 0002",
+      "Chao Wang 0097",
+      "Guosheng Xu 0001",
+      "Guoai Xu",
+      "Lin Zhang 0062",
+      "Haoyu Wang 0001"
+    ],
+    "venue": "ASE",
+    "year": 2024,
+    "abstract": "The Android ecosystem is significantly challenged by fragmentation, arising from diverse system versions, device specifications, and manufacturer customizations. The growing divergence among devices leads to marked variations in how a given app behaves across diverse devices. This is referred to as device-specific behaviors. Fragmentation not only complicates development processes but also impacts the overall industry by increasing maintenance costs and potentially harming user experience due to inconsistent app performance. In this work, we present the first large-scale empirical study of device-specific behaviors in real-world Android apps. We have designed a three-phase static analysis framework to accurately detect and understand the device-specific behaviors. Upon employing our tool on a dataset comprising more than 20,000 apps, we detected device-specific behaviors in 2,357 of them. By examining the distribution of device-specific behaviors, our analysis revealed that apps within the Chinese third-party app market exhibit more such behaviors compared to their counterparts in Google Play. Additionally, these behaviors are more likely to feature dominant brands that hold larger market shares. Reflecting this, we have classified these device-specific behaviors into 29 categories based on the functionalities implemented, providing a structured insight that is crucial for developers and stakeholders in the industry. Beyond the common behaviors, such as issue fixes and feature adaptations, we have observed 33 aggressive apps, including popular ones with millions of downloads. These apps abuse system properties of customized ROMs to obtain user-unresettable identifiers without requiring any permissions, posing significant privacy risks. Finally, we investigated the origins of device-specific behaviors, highlighting the significant challenges developers encounter in implementing them comprehensively. Our research aims to inform and equip industry practitioners with knowledge to enhance user experience and user privacy, marking a critical step toward addressing the less touched yet vital aspect of device-specific behaviors in the Android ecosystem.",
+    "citation_count": 3,
+    "reference_count": 18,
+    "url": "https://dblp.org/rec/conf/kbse/DongZ0W0XZ024",
+    "dblp_key": "conf/kbse/DongZ0W0XZ024",
+    "source_id": "https://openalex.org/W4403520149",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Efficient Detection of Test Interference in C Projects.",
+    "authors": [
+      "Florian Eder",
+      "Stefan Winter 0001"
+    ],
+    "venue": "ASE",
+    "year": 2024,
+    "abstract": "Networks of small, densely distributed wireless sensor nodes are being envisioned and developed for a variety of applications involving monitoring and the physical world in a tetherless fashion. Typically, each individual node can sense in multiple modalities but has limited communication and computation capabilities. Many challenges must be overcome before the concept of sensor networks In particular, there are two critical problems underlying successful operation of sensor networks: (1) efficient methods for exchanging information between the nodes and (2) collaborative signal processing (CSP) between the nodes to gather useful information about the physical world. This article describes the key ideas behind the CSP algorithms for distributed sensor networks being developed at the University of Wisconsin (UW). We also describe the basic ideas on how the CSP algorithms interface with the networking/routing algorithms being developed at Wisconsin (UW-API). We motivate the framework via the problem of detecting and tracking a single maneuvering target. This example illustrates the essential ideas behind the integration between UW-API and UW-CSP algorithms and also highlights the key aspects of detection and localization algorithms. We then build on these ideas to present our approach to tracking multiple targets that necessarily requires classification techniques becomes a reality.",
+    "citation_count": 933,
+    "reference_count": 27,
+    "url": "https://dblp.org/rec/conf/kbse/Eder024",
+    "dblp_key": "conf/kbse/Eder024",
+    "source_id": "https://openalex.org/W2097380742",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Oracle-Guided Vulnerability Diversity and Exploit Synthesis of Smart Contracts Using LLMs.",
+    "authors": [
+      "Mojtaba Eshghie",
+      "Cyrille Artho"
+    ],
+    "venue": "ASE",
+    "year": 2024,
+    "abstract": "Many smart contracts are prone to exploits, which has given rise to analysis tools that try to detect and fix vulnerabilities. Such analysis tools are often trained and evaluated on limited data sets, which has the following drawbacks: 1. The ground truth is often based on the verdict of related tools rather than an actual verification result; 2. Data sets focus on low-level vulnerabilities like reentrancy and overflow; 3. Data sets lack concrete exploit examples. To address these shortcomings, we introduce XploGen, which uses a model-based oracle specification of the business logic of the smart contracts to synthesize valid exploits using LLMs. Our experiments, involving 104 synthesized vulnerability-exploit pairs, demonstrated a 57% success rate in exploiting targeted aspects of the contract. They achieved exploit efficiency with an average of only 3.5 transactions per exploit, highlighting the effectiveness of our methodology.",
+    "citation_count": 1,
+    "reference_count": 24,
+    "url": "https://dblp.org/rec/conf/kbse/EshghieA24",
+    "dblp_key": "conf/kbse/EshghieA24",
+    "source_id": "https://openalex.org/W4403536541",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "HighGuard: Cross-Chain Business Logic Monitoring of Smart Contracts.",
+    "authors": [
+      "Mojtaba Eshghie",
+      "Cyrille Artho",
+      "Hans Stammler",
+      "Wolfgang Ahrendt",
+      "Thomas T. Hildebrandt",
+      "Gerardo Schneider"
+    ],
+    "venue": "ASE",
+    "year": 2024,
+    "abstract": "Logical flaws in smart contracts are often exploited, leading to significant financial losses. Our tool, HighGuard, detects transactions that violate business logic specifications of smart contracts. HighGuard employs dynamic condition response (DCR) graph models as formal specifications to verify contract execution against these models. It is capable of operating in a cross-chain environment for detecting business logic flaws across different blockchain platforms. We demonstrate HighGuard's effectiveness in identifying deviations from specified behaviors in smart contracts without requiring code instrumentation or incurring additional gas costs. By using precise specifications in the monitor, HighGuard achieves detection without false positives. Our evaluation, involving 54 exploits, confirms HighGuard's effectiveness in detecting business logic vulnerabilities.",
+    "citation_count": 4,
+    "reference_count": 17,
+    "url": "https://dblp.org/rec/conf/kbse/EshghieASAHS24",
+    "dblp_key": "conf/kbse/EshghieASAHS24",
+    "source_id": "https://openalex.org/W4403536895",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Detect Hidden Dependency to Untangle Commits.",
+    "authors": [
+      "Mengdan Fan",
+      "Wei Zhang 0004",
+      "Haiyan Zhao 0001",
+      "Guangtai Liang",
+      "Zhi Jin 0001"
+    ],
+    "venue": "ASE",
+    "year": 2024,
+    "abstract": "In collaborative software development, developers generally make code changes and commit the changes to the repositories. Among others, \"making small, single-purpose commits\" is considered the best practice for making commits, allowing the team to quickly understand the code changes. Rather than following best practices, developers often make tangled commits, which wrap code changes that implement different purposes. Such commits make it difficult for other developers to understand the code changes when conducting subsequent development. Early works on untangling code changes rely on human-specified heuristic rules or features, do not consider context, and are labor intensive. Recent works model the local context of code changes as a graph at the statement level, with statements as nodes and code dependencies as edges, and then cluster the changed statements. However, recent works ignore the hidden dependencies in the global context, e.g. a pair of tangled code changes may have no code dependency, and a pair of untangled code changes may have obvious code dependency. To solve this problem, we focus on detecting hidden dependencies among code changes. We model the global context of code changes as graphs at finer-grained, hierarchical levels, i.e., at both entity and statement levels. Then we propose a Heterogeneous Directed Graph Neural Network (HD-GNN) to detect hidden dependencies among code changes by aggregating the global context in both connected or disconnected entity-level subgraphs that intersected with the code changes. Evaluation of common C # and Java datasets with 1,612 and 14k tangled commits and manually validated datasets (MVD) with 600 commits shows that HD-GNN achieves an average enhancement of effectiveness of 25% and 19.2% compared to existing approaches and far superior to existing approaches in MVD, without sacrificing time efficiency.",
+    "citation_count": 0,
+    "reference_count": 15,
+    "url": "https://dblp.org/rec/conf/kbse/Fan00LJ24",
+    "dblp_key": "conf/kbse/Fan00LJ24",
+    "source_id": "https://openalex.org/W4403520022",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Can Cooperative Multi-Agent Reinforcement Learning Boost Automatic Web Testing? An Exploratory Study.",
+    "authors": [
+      "Yujia Fan",
+      "Sinan Wang",
+      "Zebang Fei",
+      "Yao Qin",
+      "Huaxuan Li",
+      "Yepang Liu 0001"
+    ],
+    "venue": "ASE",
+    "year": 2024,
+    "abstract": null,
+    "citation_count": null,
+    "reference_count": null,
+    "url": "https://dblp.org/rec/conf/kbse/FanWFQL024",
+    "dblp_key": "conf/kbse/FanWFQL024",
+    "source_id": null,
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Translation Titans, Reasoning Challenges: Satisfiability-Aided Language Models for Detecting Conflicting Requirements.",
+    "authors": [
+      "Mohamad Fazelnia",
+      "Mehdi Mirakhorli",
+      "Hamid Bagheri"
+    ],
+    "venue": "ASE",
+    "year": 2024,
+    "abstract": "Detecting conflicting requirements early in the software development lifecycle is crucial to mitigating risks of system failures and enhancing overall reliability. While Large Language Models (LLMs) have demonstrated proficiency in natural language understanding tasks, they often struggle with the nuanced reasoning required for identifying complex requirement conflicts. This paper introduces a novel framework, SAT-LLM, which integrates Satisfiability Modulo Theories (SMT) solvers with LLMs to enhance the detection of conflicting software requirements. SMT solvers provide rigorous formal reasoning capabilities, complementing LLMs' proficiency in natural language understanding. By synergizing these strengths, SAT-LLM aims to overcome the limitations of standalone LLMs in handling intricate requirement interactions. The early experiments provide empirical evidence supporting the effectiveness of our SAT-LLM over pure LLM-based methods like ChatGPT in identifying and resolving conflicting requirements. These findings lay a foundation for further exploration and refinement of hybrid approaches that integrate NLP techniques with formal reasoning methodologies to address complex challenges in software development.",
+    "citation_count": 1,
+    "reference_count": 28,
+    "url": "https://dblp.org/rec/conf/kbse/FazelniaMB24",
+    "dblp_key": "conf/kbse/FazelniaMB24",
+    "source_id": "https://openalex.org/W4403536043",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "ComplexCodeEval: A Benchmark for Evaluating Large Code Models on More Complex Code.",
+    "authors": [
+      "Jia Feng",
+      "Jiachen Liu",
+      "Cuiyun Gao 0001",
+      "Chun Yong Chong",
+      "Chaozheng Wang",
+      "Shan Gao 0009",
+      "Xin Xia 0001"
+    ],
+    "venue": "ASE",
+    "year": 2024,
+    "abstract": "In recent years, with the widespread attention of academia and industry on the application of large language models (LLMs) to code-related tasks, an increasing number of large code models (LCMs) have been proposed and corresponding evaluation benchmarks have continually emerged. Although existing evaluation benchmarks are helpful for comparing different LCMs, they may not reflect the performance of LCMs in various development scenarios. Specifically, they might evaluate model performance in only one type of scenario (e.g., code generation or code completion), whereas real development contexts are diverse and may involve multiple tasks such as code generation, code completion, API recommendation, and test function generation. Additionally, the questions may not originate from actual development practices, failing to capture the programming challenges faced by developers during the development process.",
+    "citation_count": 7,
+    "reference_count": 5,
+    "url": "https://dblp.org/rec/conf/kbse/FengLGCWG024",
+    "dblp_key": "conf/kbse/FengLGCWG024",
+    "source_id": "https://openalex.org/W4403536057",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Enabling Cost-Effective UI Automation Testing with Retrieval-Based LLMs: A Case Study in WeChat.",
+    "authors": [
+      "Sidong Feng",
+      "Haochuan Lu",
+      "Jianqin Jiang",
+      "Ting Xiong",
+      "Likun Huang",
+      "Yinglin Liang",
+      "Xiaoqin Li",
+      "Yuetang Deng",
+      "Aldeida Aleti"
+    ],
+    "venue": "ASE",
+    "year": 2024,
+    "abstract": "UI automation tests play a crucial role in ensuring the quality of mobile applications. Despite the growing popularity of machine learning techniques to generate these tests, they still face several challenges, such as the mismatch of UI elements. The recent advances in Large Language Models (LLMs) have addressed these issues by leveraging their semantic understanding capabilities. However, a significant gap remains in applying these models to industrial-level app testing, particularly in terms of cost optimization and knowledge limitation. To address this, we introduce CAT to create cost-effective UI automation tests for industry apps by combining machine learning and LLMs with best practices. Given the task description, CAT employs Retrieval Augmented Generation (RAG) to source examples of industrial app usage as the few-shot learning context, assisting LLMs in generating the specific sequence of actions. CAT then employs machine learning techniques, with LLMs serving as a complementary optimizer, to map the target element on the UI screen. Our evaluations on the WeChat testing dataset demonstrate the CAT's performance and cost-effectiveness, achieving 90% UI automation with $0.34 cost, outperforming the state-of-the-art. We have also integrated our approach into the real-world WeChat testing platform, demonstrating its usefulness in detecting 141 bugs and enhancing the developers' testing process.",
+    "citation_count": 3,
+    "reference_count": 25,
+    "url": "https://dblp.org/rec/conf/kbse/FengLJXHLLDA24",
+    "dblp_key": "conf/kbse/FengLJXHLLDA24",
+    "source_id": "https://openalex.org/W4403536558",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Diagnosis via Proofs of Unsatisfiability for First-Order Logic with Relational Objects.",
+    "authors": [
+      "Nick Feng",
+      "Lina Marsso",
+      "Marsha Chechik"
+    ],
+    "venue": "ASE",
+    "year": 2024,
+    "abstract": "Satisfiability-based automated reasoning is an approach that is being successfully used in software engineering to validate complex software, including for safety-critical systems. Such reasoning underlies many validation activities, from requirements analysis to design consistency to test coverage. While generally effective, the back-end constraint solvers are often complex and inevitably error-prone, which threatens the soundness of their application. Thus, such solvers need to be validated, which includes checking correctness and explaining (un)satisfiability results returned by them. In this work, we consider satisfiability analysis based on First-Order Logic with relational objects (FOL*) which has been shown to be effective for reasoning about time- and data-sensitive early system designs. We tackle the challenge of validating the correctness of FOL* unsatisfiability results and deriving diagnoses to explain the causes of the unsatisfiability. Inspired by the concept of proofs of UNSAT from SAT/SMT solvers, we define a proof format and proof rules to track the solvers' reasoning steps as sequences of derivations towards UNSAT. We also propose an algorithm to verify the correctness of FOL* proofs while filtering unnecessary derivations and develop a proof-based diagnosis to explain the cause of unsatisfiability. We implemented the proposed proof support on top of the state-of-the-art FOL* satisfiability checker to generate proofs of UNSAT and validated our approach by applying the proof-based diagnoses to explain the causes of well-formedness issues of normative requirements of software systems.",
+    "citation_count": 1,
+    "reference_count": 25,
+    "url": "https://dblp.org/rec/conf/kbse/FengMC24",
+    "dblp_key": "conf/kbse/FengMC24",
+    "source_id": "https://openalex.org/W4403536217",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Depends-Kotlin: A Cross-Language Kotlin Dependency Extractor.",
+    "authors": [
+      "Qiong Feng",
+      "Xiaotian Ma",
+      "Huan Ji",
+      "Wei Song 0003",
+      "Peng Liang 0001"
+    ],
+    "venue": "ASE",
+    "year": 2024,
+    "abstract": "Since Google introduced Kotlin as an official programming language for developing Android apps in 2017, Kotlin has gained widespread adoption in Android development. However, compared to Java, there is limited support for Kotlin code dependency analysis, which is the foundation to software analysis. To bridge this gap, we develop Depends-Kotlin to extract entities and their dependencies in Kotlin source code. Not only does Depends-Kotlin support extracting entities' dependencies in Kotlin code, but it can also extract dependency relations between Kotlin and Java. Using three open-source Kotlin-Java mixing projects as our subjects, Depends-Kotlin demonstrates high accuracy and performance in resolving Kotlin-Kotlin and Kotlin-Java dependencies relations. The source code of Depends-Kotlin and the dataset used have been made available at https://github.com/XYZboom/depends-kotlin. We also provide a screen-cast presenting Depends-Kotlin at https://youtu.be/ZPq8SRhgXzM.",
+    "citation_count": 2,
+    "reference_count": 9,
+    "url": "https://dblp.org/rec/conf/kbse/FengMJ0024",
+    "dblp_key": "conf/kbse/FengMJ0024",
+    "source_id": "https://openalex.org/W4403536915",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Constraint-Based Test Oracles for Program Analyzers.",
+    "authors": [
+      "Markus Fleischmann",
+      "David Kaindlstorfer",
+      "Anastasia Isychev",
+      "Valentin Wüstholz",
+      "Maria Christakis"
+    ],
+    "venue": "ASE",
+    "year": 2024,
+    "abstract": "Program analyzers implement complex algorithms and, as any software, can contain bugs. Bugs in their implementation may lead to analyzers being imprecise and failing to verify safe programs, i.e., programs with no reachable error locations; or worse, analyzer bugs may lead to reporting unsound results by verifying unsafe programs, i.e., programs with reachable error locations.",
+    "citation_count": 3,
+    "reference_count": 32,
+    "url": "https://dblp.org/rec/conf/kbse/FleischmannKIWC24",
+    "dblp_key": "conf/kbse/FleischmannKIWC24",
+    "source_id": "https://openalex.org/W4403536596",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Shoot Yourself in the Foot - Efficient Code Causes Inefficiency in Compiler Optimizations.",
+    "authors": [
+      "Fengjuan Gao",
+      "Hongyu Chen",
+      "Yuewei Zhou",
+      "Ke Wang 0022"
+    ],
+    "venue": "ASE",
+    "year": 2024,
+    "abstract": "In this paper, we take a different angle to evaluate compiler optimizations than all existing works in compiler testing literature. In particular, we consider a specific scenario in software development, that is, when developers manually optimize a program to improve its performance, do compilers actually generate more efficient code with the help of developers' optimizations?",
+    "citation_count": 2,
+    "reference_count": 30,
+    "url": "https://dblp.org/rec/conf/kbse/GaoCZW24",
+    "dblp_key": "conf/kbse/GaoCZW24",
+    "source_id": "https://openalex.org/W4403536257",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Preference-Guided Refactored Tuning for Retrieval Augmented Code Generation.",
+    "authors": [
+      "Xinyu Gao",
+      "Yun Xiong",
+      "Deze Wang",
+      "Zhenhan Guan",
+      "Zejian Shi",
+      "Haofen Wang",
+      "Shanshan Li 0001"
+    ],
+    "venue": "ASE",
+    "year": 2024,
+    "abstract": "Retrieval-augmented code generation utilizes Large Language Models as the generator and significantly expands their code generation capabilities by providing relevant code, documentation, and more via the retriever. The current approach suffers from two primary limitations: 1) information redundancy. The indiscriminate inclusion of redundant information can result in resource wastage and may misguide generators, affecting their effectiveness and efficiency. 2) preference gap. Due to different optimization objectives, the retriever strives to procure code with higher ground truth similarity, yet this effort does not substantially benefit the generator. The retriever and the generator may prefer different golden code, and this gap in preference results in a suboptimal design. Additionally, differences in parameterization knowledge acquired during pre-training result in varying preferences among different generators.",
+    "citation_count": 1,
+    "reference_count": 25,
+    "url": "https://dblp.org/rec/conf/kbse/GaoXWGSW024",
+    "dblp_key": "conf/kbse/GaoXWGSW024",
+    "source_id": "https://openalex.org/W4403520277",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Can Code Metrics Enhance Documentation Generation for Computational Notebooks?",
+    "authors": [
+      "Mojtaba Mostafavi Ghahfarokhi",
+      "Hamed Jahantigh",
+      "Sepehr Kianiangolafshani",
+      "Ashkan Khademian",
+      "Alireza Asadi",
+      "Abbas Heydarnoori"
+    ],
+    "venue": "ASE",
+    "year": 2024,
+    "abstract": null,
+    "citation_count": null,
+    "reference_count": null,
+    "url": "https://dblp.org/rec/conf/kbse/GhahfarokhiJKKA24",
+    "dblp_key": "conf/kbse/GhahfarokhiJKKA24",
+    "source_id": null,
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Towards Long-Term Scientific Model Sustainment at Sandia National Laboratories.",
+    "authors": [
+      "Christian Gilbertson",
+      "Reed Milewicz",
+      "Eric Berquist",
+      "Aaron Brundage",
+      "John Engelmann",
+      "Brian Evans",
+      "Nicholas Francis",
+      "Ernest Friedman-Hill",
+      "Samuel Grayson",
+      "Evan Harvey",
+      "Eric Ho",
+      "Edward Hoffman",
+      "Kevin Irick",
+      "Anagha Krishna",
+      "Aaron Moreno",
+      "Joshua B. Teves"
+    ],
+    "venue": "ASE",
+    "year": 2024,
+    "abstract": "An increasing global demand for natural resources and the inherent challenges accompanying this demand pose a great task for manufacturing companies. Apart from this, new technologies and a demographic change of the workforce as well as the desire for new individualized products make manufacturing more challenging than ever. To succeed in this new setting manifold perspectives of a factory have been proposed in order to enhance the understanding of the complex interdependencies between the factory elements. Against this background, this paper starts with a short overview regarding the paradigm change in manufacturing including contemporary trends triggering the requirements for factories of the future. Subsequent to that, a selection of factory perspectives is revised indicating the demand for a new holistic perspective of a factory that is more suitable with respect to the new trends. For that reason a new holistic perspective on the factory of the future is presented.",
+    "citation_count": 331,
+    "reference_count": 71,
+    "url": "https://dblp.org/rec/conf/kbse/GilbertsonMBBEE24",
+    "dblp_key": "conf/kbse/GilbertsonMBBEE24",
+    "source_id": "https://openalex.org/W2017068814",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "A vision on a methodology for the application of an Intrusion Detection System for satellites.",
+    "authors": [
+      "Sébastien Gios",
+      "Charles-Henry Bertrand Van Ouytsel",
+      "Mark Diamantino Caribé",
+      "Axel Legay"
+    ],
+    "venue": "ASE",
+    "year": 2024,
+    "abstract": null,
+    "citation_count": 3346,
+    "reference_count": 87,
+    "url": "https://dblp.org/rec/conf/kbse/GiosOCL24",
+    "dblp_key": "conf/kbse/GiosOCL24",
+    "source_id": "https://openalex.org/W2137130182",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "CoDefeater: Using LLMs To Find Defeaters in Assurance Cases.",
+    "authors": [
+      "Usman Gohar",
+      "Michael C. Hunter",
+      "Robyn R. Lutz",
+      "Myra B. Cohen"
+    ],
+    "venue": "ASE",
+    "year": 2024,
+    "abstract": "Constructing assurance cases is a widely used and sometimes required process toward demonstrating that safety-critical systems will operate safely in their planned environment. To mitigate the risk of errors and missing edge cases, the concept of defeaters - challenges to claims in an assurance case - has been introduced. Defeaters can detect weaknesses in the arguments, prompting further investigation and timely mitigations. However, capturing defeaters relies on expert judgment, experience, and creativity and must be done iteratively due to evolving requirements and regulations. In this paper, we propose CoDefeater, an automated process to leverage large language models (LLMs) for finding defeaters. Initial results on two systems show that LLMs can efficiently find known and unforeseen feasible defeaters to support safety analysts in enhancing the completeness and confidence of assurance cases.",
+    "citation_count": 8,
+    "reference_count": 30,
+    "url": "https://dblp.org/rec/conf/kbse/GoharHLC24",
+    "dblp_key": "conf/kbse/GoharHLC24",
+    "source_id": "https://openalex.org/W4403536413",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Feature Model Slicing for Real-time Selection of Mission-critical Edge Applicaiton.",
+    "authors": [
+      "Uwe Gropengießer",
+      "Julian Liphardt",
+      "Michael Matthé",
+      "Max Mühlhäuser"
+    ],
+    "venue": "ASE",
+    "year": 2024,
+    "abstract": "Social distancing has been regarded as a key method by the authorities worldwide to manage the pandemic of COVID-19. Digital technologies play a crucial role to support the social, professional and economic activities when people are forced to stay locked-down in their homes. Internet of things (IoT) technologies have a track of providing high quality remote health care and automation services which could guarantee social distancing while maintaining health and well-being of populations. In this paper, we propose an end-to-end IoT architecture to support the social distancing in the event of pandemic. The architecture comprises of the major use cases of IoT in relevance with the COVID-19. Furthermore, we also present a short-term and long-term strategy to mange the social distancing methodology using the proposed IoT architecture. The challenges associated with each layer of architecture have been highlighted and design guidelines have been presented to deal with them.",
+    "citation_count": 24,
+    "reference_count": 170,
+    "url": "https://dblp.org/rec/conf/kbse/GropengiesserLM24",
+    "dblp_key": "conf/kbse/GropengiesserLM24",
+    "source_id": "https://openalex.org/W3131657469",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "The Importance of Accounting for Execution Failures when Predicting Test Flakiness.",
+    "authors": [
+      "Guillaume Haben",
+      "Sarra Habchi",
+      "John Micco",
+      "Mark Harman",
+      "Mike Papadakis",
+      "Maxime Cordy",
+      "Yves Le Traon"
+    ],
+    "venue": "ASE",
+    "year": 2024,
+    "abstract": "Flaky tests are tests that pass and fail on different executions of the same version of a program under test. They waste valuable developer time by making developers investigate false alerts (flaky test failures). To deal with this issue, many prediction methods have been proposed. However, the utility of these methods remains unclear since they are typically evaluated based on single-release data, ignoring that in many cases tests that fail flakily in one release also correctly fail (indicating the presence of bugs) in some other, meaning that it is possible for subsequent correctly-failing cases to pass unnoticed. In this paper, we show that this situation is prevalent and can raise significant concerns for both researchers and practitioners. In particular, we show that flaky tests, tests that exhibit flaky behaviour at some point in time, have a strong fault-revealing capability, i.e., they reveal more than 1/3 of all encountered regression faults. We also show that 76.2%, of all test executions that reveal faults in the codebase under test are made by tests that are classified as flaky by existing prediction methods. Overall, our findings motivate the need for future research to focus on predicting flaky test executions instead of flaky tests.",
+    "citation_count": 2,
+    "reference_count": 26,
+    "url": "https://dblp.org/rec/conf/kbse/HabenHMHPCT24",
+    "dblp_key": "conf/kbse/HabenHMHPCT24",
+    "source_id": "https://openalex.org/W4403536618",
+    "source": null,
+    "source_url": null
+  }
+]

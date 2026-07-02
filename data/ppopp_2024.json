@@ -1,0 +1,915 @@
+[
+  {
+    "title": "Sparsity in Deep Neural Nets (Keynote).",
+    "authors": [
+      "Nir Shavit"
+    ],
+    "venue": "PPoPP",
+    "year": 2024,
+    "abstract": "Abstract Big Data Analytics and Deep Learning are two high-focus of data science. Big Data has become important as many organizations both public and private have been collecting massive amounts of domain-specific information, which can contain useful information about problems such as national intelligence, cyber security, fraud detection, marketing, and medical informatics. Companies such as Google and Microsoft are analyzing large volumes of data for business analysis and decisions, impacting existing and future technology. Deep Learning algorithms extract high-level, complex abstractions as data representations through a hierarchical learning process. Complex abstractions are learnt at a given level based on relatively simpler abstractions formulated in the preceding level in the hierarchy. A key benefit of Deep Learning is the analysis and learning of massive amounts of unsupervised data, making it a valuable tool for Big Data Analytics where raw data is largely unlabeled and un-categorized. In the present study, we explore how Deep Learning can be utilized for addressing some important problems in Big Data Analytics, including extracting complex patterns from massive volumes of data, semantic indexing, data tagging, fast information retrieval, and simplifying discriminative tasks. We also investigate some aspects of Deep Learning research that need further exploration to incorporate specific challenges introduced by Big Data Analytics, including streaming data, high-dimensional data, scalability of models, and distributed computing. We conclude by presenting insights into relevant future works by posing some questions, including defining data sampling criteria, domain adaptation modeling, defining criteria for obtaining useful data abstractions, improving semantic indexing, semi-supervised learning, and active learning.",
+    "citation_count": 2579,
+    "reference_count": 70,
+    "url": "https://doi.org/10.1145/3627535.3638568",
+    "dblp_key": "conf/ppopp/Shavit24",
+    "source_id": "https://openalex.org/W2118023920",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Scaling Up Transactions with Slower Clocks.",
+    "authors": [
+      "Pedro Ramalhete",
+      "Andreia Correia"
+    ],
+    "venue": "PPoPP",
+    "year": 2024,
+    "abstract": "Although geospatial question answering systems have received increasing attention in recent years, existing prototype systems struggle to properly answer qualitative spatial questions. In this work, we propose a unique framework for answering qualitative spatial questions, which comprises three main components: a geoparser that takes the input questions and extracts place semantic information from text, a reasoning system which is embedded with a crisp reasoner, and finally, answer extraction, which refines the solution space and generates final answers. We present an experimental design to evaluate our framework for point-based cardinal direction calculus (CDC) relations by developing an automated approach for generating three types of synthetic qualitative spatial questions. The initial evaluations of generated answers in our system are promising because a high proportion of answers were labelled correct.",
+    "citation_count": 45665,
+    "reference_count": 55,
+    "url": "https://doi.org/10.1145/3627535.3638472",
+    "dblp_key": "conf/ppopp/RamalheteC24",
+    "source_id": "https://openalex.org/W2896457183",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Locks as a Resource: Fairly Scheduling Lock Occupation with CFL.",
+    "authors": [
+      "Jonggyu Park",
+      "Young Ik Eom"
+    ],
+    "venue": "PPoPP",
+    "year": 2024,
+    "abstract": "In multi-container environments, applications oftentimes experience unexpected performance fluctuations due to undesirable interference among applications. Synchronization such as locks has been targeted as one of the reasons but still remains an uncontrolled resource while a large set of locks are still shared across applications. In this paper, we demonstrate that this lack of lock scheduling incurs significant real-world problems including performance unfairness and interference among applications. To address this problem, we propose a new synchronization design with an embedded scheduling capability, called CFL (Completely Fair Locking). CFL fairly distributes a fair amount of lock occupation time to applications considering their priorities and cgroup information. For scalability, CFL also considers the NUMA topology in the case of NUMA machines. Experimental results demonstrate that CFL significantly improves performance fairness while achieving comparable or sometimes even superior performance to state-of-the-art locks.",
+    "citation_count": 0,
+    "reference_count": 21,
+    "url": "https://doi.org/10.1145/3627535.3638477",
+    "dblp_key": "conf/ppopp/ParkE24",
+    "source_id": "https://openalex.org/W4391952002",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Are Your Epochs Too Epic? Batch Free Can Be Harmful.",
+    "authors": [
+      "Daewoo Kim",
+      "Trevor Brown 0001",
+      "Ajay Singh 0002"
+    ],
+    "venue": "PPoPP",
+    "year": 2024,
+    "abstract": "Epoch based memory reclamation (EBR) is one of the most popular techniques for reclaiming memory in lock-free and optimistic locking data structures, due to its ease of use and good performance in practice. However, EBR is known to be sensitive to thread delays, which can result in performance degradation. Moreover, the exact mechanism for this performance degradation is not well understood. This paper illustrates this performance degradation in a popular data structure benchmark, and does a deep dive to uncover its root cause-a subtle interaction between EBR and state of the art memory allocators. In essence, modern allocators attempt to reduce the overhead of freeing by maintaining bounded thread caches of objects for local reuse, actually freeing them (a very high latency operation) only when thread caches become too large. EBR immediately bypasses these mechanisms whenever a particularly large batch of objects is freed, substantially increasing overheads and latencies. Beyond EBR, many memory reclamation algorithms, and data structures, that reclaim objects in large batches suffer similar deleterious interactions with popular allocators. We propose a simple algorithmic fix for such algorithms to amortize the freeing of large object batches over time, and apply this technique to ten existing memory reclamation algorithms, observing performance improvements for nine out of ten, and over 50% improvement for six out of ten in experiments on a high performance lock-free ABtree. We also present an extremely simple token passing variant of EBR and show that, with our fix, it performs 1.5-2.6x faster than the fastest known memory reclamation algorithm, and 1.2-1.5x faster than not reclaiming at all, on a 192 thread four socket Intel system.",
+    "citation_count": null,
+    "reference_count": null,
+    "url": "https://doi.org/10.1145/3627535.3638491",
+    "dblp_key": "conf/ppopp/Kim0S24",
+    "source_id": "2401.11347v1",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Liger: Interleaving Intra- and Inter-Operator Parallelism for Distributed Large Model Inference.",
+    "authors": [
+      "Jiangsu Du",
+      "Jinhui Wei",
+      "Jiazhi Jiang",
+      "Shenggan Cheng",
+      "Dan Huang 0001",
+      "Zhiguang Chen 0001",
+      "Yutong Lu"
+    ],
+    "venue": "PPoPP",
+    "year": 2024,
+    "abstract": "Distributed large model inference is still in a dilemma where balancing cost and effect. The online scenarios demand intraoperator parallelism to achieve low latency and intensive communications makes it costly. Conversely, the inter-operator parallelism can achieve high throughput with much fewer communications, but it fails to enhance the effectiveness.",
+    "citation_count": 10,
+    "reference_count": 11,
+    "url": "https://doi.org/10.1145/3627535.3638466",
+    "dblp_key": "conf/ppopp/DuWJCHCL24",
+    "source_id": "https://openalex.org/W4391971727",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "A Holistic Approach to Automatic Mixed-Precision Code Generation and Tuning for Affine Programs.",
+    "authors": [
+      "Jinchen Xu",
+      "Guanghui Song",
+      "Bei Zhou 0004",
+      "Fei Li 0045",
+      "Jiangwei Hao",
+      "Jie Zhao 0002"
+    ],
+    "venue": "PPoPP",
+    "year": 2024,
+    "abstract": "Reducing floating-point (FP) precision is used to trade the quality degradation of a numerical program's output for performance, but this optimization coincides with type casting, whose overhead is undisclosed until a mixed-precision code version is generated. This uncertainty enforces the decoupled implementation of mixed-precision code generation and autotuning in prior work. In this paper, we present a holistic approach called PrecTuner that consolidates the mixed-precision code generator and the autotuner by defining one parameter. This parameter is first initialized by some automatically sampled values and used to generate several code variants, with various loop transformations also taken into account. The generated code variants are next profiled to solve a performance model formulated using the aforementioned parameter, possibly under a pre-defined quality degradation budget. The best-performing value of the defined parameter is finally predicted without evaluating all code variants. Experimental results of the PolyBench benchmarks on CPU demonstrate that PrecTuner outperforms LuIs by 3.28× while achieving smaller errors, and we also validate its effectiveness in optimizing a real-life large-scale application. In addition, PrecTuner also obtains a mean speedup of 1.81× and 1.52×-1.73× over Pluto on single- and multi-core CPU, respectively, and 1.71× over PPCG on GPU.",
+    "citation_count": 14,
+    "reference_count": 41,
+    "url": "https://doi.org/10.1145/3627535.3638484",
+    "dblp_key": "conf/ppopp/XuSZLH024",
+    "source_id": "https://openalex.org/W4391952402",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Language-Agnostic Static Deadlock Detection for Futures.",
+    "authors": [
+      "Stefan K. Muller"
+    ],
+    "venue": "PPoPP",
+    "year": 2024,
+    "abstract": "Deadlocks, in which threads wait on each other in a cyclic fashion and can't make progress, have plagued parallel programs for decades. In recent years, as the parallel programming mechanism known as futures has gained popularity, interest in preventing deadlocks in programs with futures has increased as well. Various static and dynamic algorithms exist to detect and prevent deadlock in programs with futures, generally by constructing some approximation of the dependency graph of the program but, as far as we are aware, all are specialized to a particular programming language.",
+    "citation_count": 1,
+    "reference_count": 23,
+    "url": "https://doi.org/10.1145/3627535.3638487",
+    "dblp_key": "conf/ppopp/Muller24",
+    "source_id": "https://openalex.org/W4391952003",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Recurrence Analysis for Automatic Parallelization of Subscripted Subscripts.",
+    "authors": [
+      "Akshay Bhosale",
+      "Rudolf Eigenmann"
+    ],
+    "venue": "PPoPP",
+    "year": 2024,
+    "abstract": "The recent success of vector computers such as the Cray-1 and array processors such as those manufactured by Floating Point Systems has increased interest in making vector operations available to the FORTRAN programmer. The FORTRAN standards committee is currently considering a successor to FORTRAN 77, usually called FORTRAN 8x, that will permit the programmer to explicitly specify vector and array operations. Although FORTRAN 8x will make it convenient to specify explicit vector operations in new programs, it does little for existing code. In order to benefit from the power of vector hardware, existing programs will need to be rewritten in some language (presumably FORTRAN 8x) that permits the explicit specification of vector operations. One way to avoid a massive manual recoding effort is to provide a translator that discovers the parallelism implicit in a FORTRAN program and automatically rewrites that program in FORTRAN 8x. Such a translation from FORTRAN to FORTRAN 8x is not straightforward because FORTRAN DO loops are not always semantically equivalent to the corresponding FORTRAN 8x parallel operation. The semantic difference between these two constructs is precisely captured by the concept of dependence . A translation from FORTRAN to FORTRAN 8x preserves the semantics of the original program if it preserves the dependences in that program. The theoretical background is developed here for employing data dependence to convert FORTRAN programs to parallel form. Dependence is defined and characterized in terms of the conditions that give rise to it; accurate tests to determine dependence are presented; and transformations that use dependence to uncover additional parallelism are discussed.",
+    "citation_count": 735,
+    "reference_count": 17,
+    "url": "https://doi.org/10.1145/3627535.3638493",
+    "dblp_key": "conf/ppopp/BhosaleE24",
+    "source_id": "https://openalex.org/W2135736783",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "OsirisBFT: Say No to Task Replication for Scalable Byzantine Fault Tolerant Analytics.",
+    "authors": [
+      "Kasra Jamshidi",
+      "Keval Vora"
+    ],
+    "venue": "PPoPP",
+    "year": 2024,
+    "abstract": "We present a verification-based Byzantine Fault Tolerant processing system, called OsirisBFT, for distributed task-parallel applications. OsirisBFT treats computation tasks differently from state update tasks, allowing the application to scale independently from number of expected failures. OsirisBFT captures application-specific verification semantics via generic verification operators and employs lightweight verification strategies with little coordination during graceful execution. Evaluation across multiple applications and workloads shows that OsirisBFT delivers high processing throughput and scalability compared to replicated processing. Importantly, the scalable nature of OsirisBFT enables it to reduce the performance gap compared to baseline with no fault tolerance by simply scaling out.",
+    "citation_count": 0,
+    "reference_count": 77,
+    "url": "https://doi.org/10.1145/3627535.3638468",
+    "dblp_key": "conf/ppopp/JamshidiV24",
+    "source_id": "https://openalex.org/W4391952977",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Towards Scalable Unstructured Mesh Computations on Shared Memory Many-Cores.",
+    "authors": [
+      "Haozhong Qiu",
+      "Chuanfu Xu",
+      "Jianbin Fang",
+      "Liang Deng",
+      "Jian Zhang 0115",
+      "Qingsong Wang",
+      "Yue Ding 0001",
+      "Zhe Dai",
+      "Yonggang Che",
+      "Shizhao Chen",
+      "Jie Liu 0002"
+    ],
+    "venue": "PPoPP",
+    "year": 2024,
+    "abstract": "Due to data conflicts or data dependences, exploiting shared memory parallelism on unstructured mesh applications is highly challenging. The prior approaches are neither general nor scalable on emerging many-core processors. This paper presents a general and scalable shared memory approach for unstructured mesh computations. We recursively divide and reorder an unstructured mesh to construct a task dependency tree (TDT), where massive parallelism is exposed and data conflicts as well as data dependences are respected. We propose two recursion strategies to support popular programming models on both CPUs and GPUs for TDT. We evaluate our approach by applying it to an industrial unstructured Computational Fluid Dynamics (CFD) software. Experimental results show that our approach significantly outperforms the prior shared memory approaches, delivering up to 8.1× performance improvement over the engineer-tuned implementations.",
+    "citation_count": 8,
+    "reference_count": 25,
+    "url": "https://doi.org/10.1145/3627535.3638473",
+    "dblp_key": "conf/ppopp/QiuXFDZW0DCCL24",
+    "source_id": "https://openalex.org/W4391985182",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Extreme-scale Direct Numerical Simulation of Incompressible Turbulence on the Heterogeneous Many-core System.",
+    "authors": [
+      "Jiabin Xie",
+      "Guangnan Feng",
+      "Han Huang",
+      "Junxuan Feng",
+      "Zhiguang Chen 0001",
+      "Yutong Lu"
+    ],
+    "venue": "PPoPP",
+    "year": 2024,
+    "abstract": "Direct numerical simulation (DNS) is a technique that directly solves the fluid Navier-Stokes equations with high spatial and temporal resolutions, which has driven much research regarding the nature of turbulence. For high-Reynolds number (Re) incompressible turbulence of particular interest, where the nondimensional Re characterizes the flow regime, the application of DNS is hindered by the fact that the numerical grid size (i.e., the memory requirement) scales with Re3, while the overall computational cost scales with Re4. Recent studies have shown that developing efficient parallel methods for heterogeneous many-core systems is promising to solve this computational challenge.",
+    "citation_count": 6,
+    "reference_count": 31,
+    "url": "https://doi.org/10.1145/3627535.3638479",
+    "dblp_key": "conf/ppopp/XieFHFCL24",
+    "source_id": "https://openalex.org/W4391971595",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Pure: Evolving Message Passing To Better Leverage Shared Memory Within Nodes.",
+    "authors": [
+      "James Psota",
+      "Armando Solar-Lezama"
+    ],
+    "venue": "PPoPP",
+    "year": 2024,
+    "abstract": "Pure is a new programming model and runtime system explicitly designed to take advantage of shared memory within nodes in the context of a mostly message passing interface enhanced with the ability to use tasks to make use of idle cores. Pure leverages shared memory in two ways: (a) by allowing cores to steal work from each other while waiting on messages to arrive, and, (b) by leveraging efficient lock-free data structures in shared memory to achieve high-performance messaging and collective operations between the ranks within nodes. We use microbenchmarks to evaluate Pure's key messaging and collective features and also show application speedups up to 2.1× on the CoMD molecular dynamics and the miniAMR adaptive mesh refinement applications scaling up to 4,096 cores.",
+    "citation_count": 1,
+    "reference_count": 33,
+    "url": "https://doi.org/10.1145/3627535.3638503",
+    "dblp_key": "conf/ppopp/PsotaS24",
+    "source_id": "https://openalex.org/W4391952910",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "INFINEL: An efficient GPU-based processing method for unpredictable large output graph queries.",
+    "authors": [
+      "Sungwoo Park",
+      "Seyeon Oh",
+      "Min-Soo Kim 0002"
+    ],
+    "venue": "PPoPP",
+    "year": 2024,
+    "abstract": "With the introduction of GPUs, which are specialized for iterative parallel computations, the execution of computation-intensive graph queries using a GPU has seen significant performance improvements. However, due to the memory constraints of GPUs, there has been limited research on handling large-scale output graph queries with unpredictable output sizes on a GPU. Traditionally, two-phase methods have been used, where the query is re-executed after splitting it into sub-tasks while only considering the size of the output in a static manner. However, two-phase methods become highly inefficient when used with graph data with extreme skew, failing to maximize the GPU performance. This paper proposes INFINEL, which handles unpredictable large output graph queries in a one-phase method through chunk allocation per thread and kernel stop/restart methods. We also propose applicable optimization techniques due to the corresponding unique characteristics of operating with low time/space overhead and not heavily relying on the GPU output buffer size. Through extensive experiments, we demonstrate that our one-phase method of INFINEL improves the performance by up to 31.5 times over the conventional two-phase methods for triangle listing ULO query.",
+    "citation_count": 3,
+    "reference_count": 23,
+    "url": "https://doi.org/10.1145/3627535.3638490",
+    "dblp_key": "conf/ppopp/ParkOK24",
+    "source_id": "https://openalex.org/W4391952163",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "GraphCube: Interconnection Hierarchy-aware Graph Processing.",
+    "authors": [
+      "Xinbiao Gan",
+      "Guang Wu",
+      "Shenghao Qiu",
+      "Feng Xiong",
+      "Jiaqi Si",
+      "Jianbin Fang",
+      "Dezun Dong",
+      "Chunye Gong",
+      "Tiejun Li",
+      "Zheng Wang 0001"
+    ],
+    "venue": "PPoPP",
+    "year": 2024,
+    "abstract": "Processing large-scale graphs with billions to trillions of edges requires efficiently utilizing parallel systems. However, current graph processing engines do not scale well beyond a few tens of computing nodes because they are oblivious to the communication cost variations across the interconnection hierarchy. We introduce GraphCube, a better approach to optimizing graph processing on large-scale parallel systems with complex interconnections. GraphCube features a new graph partitioning approach to achieve better load balancing and minimize communication overhead across multiple levels of the interconnection hierarchy. We evaluate GraphCube by applying it to fundamental graph operations performed on synthetic and real-world graph datasets. Our evaluation used up to 79,024 computing nodes and 1.2+ million processor cores. Our large-scale experiments show that GraphCube outperforms state-of-the-art parallel graph processing methods in throughput and scalability. Furthermore, GraphCube outperformed the top-ranked systems on the Graph 500 list.",
+    "citation_count": 14,
+    "reference_count": 58,
+    "url": "https://doi.org/10.1145/3627535.3638498",
+    "dblp_key": "conf/ppopp/GanWQXSFDGLW24",
+    "source_id": "https://openalex.org/W4391986935",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Exploiting Fine-Grained Redundancy in Set-Centric Graph Pattern Mining.",
+    "authors": [
+      "Zhiheng Lin",
+      "Ke Meng",
+      "Chaoyang Shui",
+      "Kewei Zhang",
+      "Junmin Xiao",
+      "Guangming Tan"
+    ],
+    "venue": "PPoPP",
+    "year": 2024,
+    "abstract": "Graph Pattern Mining (GPM) applications are memory intensive as they require a tremendous amount of edge checks. In recent years, the \"set-centric\" abstraction has gained attention for its powerful expressive abilities. By leveraging relational algebra, they optimized algorithms with methods like matching orders, early termination, automorphism-breaking, and result reuse to reduce redundancy. However, these approaches primarily address coarse-grained redundancy from exactly the same set formulas, neglecting that the data graph's inherent locality may lead to fine-grained duplicated edge checks. In fact, even unrelated set operations may check the same pair of vertices. This paper introduces the set union operation to the set-centric abstraction to fuse duplicated edge checks into one. It maintains the expressive power of relational algebra and previous optimizations while effectively avoids fine-grained redundancy in GPM tasks. Compared to state-of-the-art methods, our method achieves significant speedup on a V100 GPU cluster, demonstrating up to 305 × faster performance than the state-of-the-art GPM system G2Miner.",
+    "citation_count": 10,
+    "reference_count": 24,
+    "url": "https://doi.org/10.1145/3627535.3638507",
+    "dblp_key": "conf/ppopp/LinMSZXT24",
+    "source_id": "https://openalex.org/W4391957920",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Memory Bounds for Concurrent Bounded Queues.",
+    "authors": [
+      "Vitaly Aksenov",
+      "Nikita Koval",
+      "Petr Kuznetsov",
+      "Anton Paramonov"
+    ],
+    "venue": "PPoPP",
+    "year": 2024,
+    "abstract": "Concurrent data structures often require additional memory for handling synchronization issues in addition to memory for storing elements. Depending on the amount of this additional memory, implementations can be more or less memory-friendly. A memory-optimal implementation enjoys the minimal possible memory overhead, which, in practice, reduces cache misses and unnecessary memory reclamation.",
+    "citation_count": 1,
+    "reference_count": 17,
+    "url": "https://doi.org/10.1145/3627535.3638497",
+    "dblp_key": "conf/ppopp/AksenovKKP24",
+    "source_id": "https://openalex.org/W4391959065",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "VERLIB: Concurrent Versioned Pointers.",
+    "authors": [
+      "Guy E. Blelloch",
+      "Yuanhao Wei"
+    ],
+    "venue": "PPoPP",
+    "year": 2024,
+    "abstract": "Recent work has shown how to augment any CAS-based concurrent data structure to support taking a snapshot of the current memory state. Taking the snapshot, as well as loads and CAS (Compare and Swap) operations, take constant time. Importantly, such snapshotting can be used to easily implement linearizable queries, such as range queries, over any part of a data structure.",
+    "citation_count": 6,
+    "reference_count": 44,
+    "url": "https://doi.org/10.1145/3627535.3638501",
+    "dblp_key": "conf/ppopp/BlellochW24",
+    "source_id": "https://openalex.org/W4391957984",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Practical Hardware Transactional vEB Trees.",
+    "authors": [
+      "Mohammad Khalaji",
+      "Trevor Brown 0001",
+      "Khuzaima Daudjee",
+      "Vitaly Aksenov"
+    ],
+    "venue": "PPoPP",
+    "year": 2024,
+    "abstract": "van Emde Boas (vEB) trees are sequential data structures optimized for extremely fast predecessor and successor queries. Such queries are an important incentive to use ordered sets or maps such as vEB trees. All operations in a vEB tree are doubly logarithmic in the universe size. Attempts to implement concurrent vEB trees have either simplified their structure in a way that eliminated their ability to perform fast predecessor and successor queries, or have otherwise compromised on doubly logarithmic complexity. In this work, we leverage Hardware Transactional Memory (HTM) to implement vEB tree-based sets and maps in which operations are doubly logarithmic in the absence of contention. Our proposed concurrent vEB tree is the first to implement recursive summaries, the key algorithmic component of fast predecessor and successor operations. Through extensive experiments, we demonstrate that our algorithm outperforms state-of-the-art concurrent maps by an average of 5× in a moderately skewed workload, and the single-threaded C++ standard ordered map and its unordered map by 70% and 14%, respectively. And, it does so while using two orders of magnitude less memory than traditional vEB trees.",
+    "citation_count": 2,
+    "reference_count": 43,
+    "url": "https://doi.org/10.1145/3627535.3638504",
+    "dblp_key": "conf/ppopp/Khalaji0DA24",
+    "source_id": "https://openalex.org/W4391957918",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Tetris: Accelerating Sparse Convolution by Exploiting Memory Reuse on GPU.",
+    "authors": [
+      "Xiaoyan Liu",
+      "Xuegui Zheng",
+      "Hailong Yang 0002",
+      "Zhongzhi Luan",
+      "Depei Qian 0002"
+    ],
+    "venue": "PPoPP",
+    "year": 2024,
+    "abstract": "Convolutional neural networks (CNNs) have achieved remarkable success in various application fields. Although model compression techniques mitigate the ever-increasing resource demands of large CNN models, the compressed models usually exhibit irregular memory access and unstructured sparsity, which are difficult for dominant operators such as sparse convolution to achieve expected performance speedup on popular inference platforms such as GPU. In this paper, we propose Tetris, an efficient sparse convolution approach optimized for GPU. Tetris first fully exploits the input reuse opportunity of sparse convolution to reduce the memory accesses to global memory. It then adopts a stride packed filter (SPF) format and a bank-sensing reorganization scheme to eliminate the irregular memory accesses caused by unstructured sparsity. It also leverages a filter group reorder technique to address load imbalance among threads, and a parameter tuning method to determine the optimal parameters of the sparse convolution implementation. The experiment results show that Tetris outperforms dense/sparse convolution libraries and cutting-edge implementations with promising performance speedup.",
+    "citation_count": 2,
+    "reference_count": 34,
+    "url": "https://doi.org/10.1145/3627535.3638471",
+    "dblp_key": "conf/ppopp/LiuZYLQ24",
+    "source_id": "https://openalex.org/W4391958657",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Shared Memory-contention-aware Concurrent DNN Execution for Diversely Heterogeneous System-on-Chips.",
+    "authors": [
+      "Ismet Dagli",
+      "Mehmet E. Belviranli"
+    ],
+    "venue": "PPoPP",
+    "year": 2024,
+    "abstract": "Two distinguishing features of state-of-the-art mobile and autonomous systems are: 1) There are often multiple workloads, mainly deep neural network (DNN) inference, running concurrently and continuously. 2) They operate on shared memory System-on-Chips (SoC) that embed heterogeneous accelerators tailored for specific operations. State-of-the-art systems lack efficient performance and resource management techniques necessary to either maximize total system throughput or minimize end-to-end workload latency. In this work, we propose HaX-CoNN, a novel scheme that characterizes and maps layers in concurrently executing DNN inference workloads to a diverse set of accelerators within an SoC. Our scheme uniquely takes per-layer execution characteristics, shared memory (SM) contention, and inter-accelerator transitions into account to find optimal schedules. We evaluate HaX-CoNN on NVIDIA Orin, NVIDIA Xavier, and Qualcomm Snapdragon 865 SoCs. Our experimental results indicate that HaX-CoNN can minimize memory contention by up to 45% and improve total latency and throughput by up to 32% and 29%, respectively, compared to the state-of-the-art.",
+    "citation_count": 15,
+    "reference_count": 46,
+    "url": "https://doi.org/10.1145/3627535.3638502",
+    "dblp_key": "conf/ppopp/DagliB24",
+    "source_id": "https://openalex.org/W4391985770",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Training one DeePMD Model in Minutes: a Step towards Online Learning.",
+    "authors": [
+      "Siyu Hu",
+      "Tong Zhao",
+      "Qiuchen Sha",
+      "Enji Li",
+      "Xiangyu Meng 0005",
+      "Liping Liu",
+      "Lin-Wang Wang",
+      "Guangming Tan",
+      "Weile Jia"
+    ],
+    "venue": "PPoPP",
+    "year": 2024,
+    "abstract": "Neural Network Molecular Dynamics (NNMD) has become a major approach in material simulations, which can speedup the molecular dynamics (MD) simulation for thousands of times, while maintaining ab initio accuracy, thus has a potential to fundamentally change the paradigm of material simulations. However, there are two time-consuming bottlenecks of the NNMD developments. One is the data access of ab initio calculation results. The other, which is the focus of the current work, is reducing the training time of NNMD model. The training of NNMD model is different from most other neural network training because the atomic force (which is related to the gradient of the network) is an important physical property to be fit. Tests show the traditional stochastic gradient methods, like the Adam algorithms, cannot efficiently deploy the multisample minibatch algorithm. As a result, a typical training (taking the Deep Potential Molecular Dynamics (DeePMD) as an example) can take many hours. In this work, we designed a heuristic minibatch quasi-Newtonian optimizer based on Extended Kalman Filter method. An early reduction of gradient and error is adopted to reduce memory footprint and communication. The memory footprint, communication and settings of hyper-parameters of this new method are analyzed in detail. Computational innovations such as customized kernels of the symmetry-preserving descriptor are applied to exploit the computing power of the heterogeneous architecture. Experiments are performed on 8 different datasets representing different real case situations, and numerical results show that our new method has an average speedup of 32.2 compared to the Reorganized Layer-wised Extended Kalman Filter with 1 GPU, reducing the absolute training time of one DeePMD model from hours to several minutes, making it one step toward online training.",
+    "citation_count": 3,
+    "reference_count": 31,
+    "url": "https://doi.org/10.1145/3627535.3638505",
+    "dblp_key": "conf/ppopp/HuZSLMLWTJ24",
+    "source_id": "https://openalex.org/W4391952949",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "ParlayANN: Scalable and Deterministic Parallel Graph-Based Approximate Nearest Neighbor Search Algorithms.",
+    "authors": [
+      "Magdalen Dobson Manohar",
+      "Zheqi Shen",
+      "Guy E. Blelloch",
+      "Laxman Dhulipala",
+      "Yan Gu 0001",
+      "Harsha Vardhan Simhadri",
+      "Yihan Sun 0001"
+    ],
+    "venue": "PPoPP",
+    "year": 2024,
+    "abstract": "Approximate nearest-neighbor search (ANNS) algorithms are a key part of the modern deep learning stack due to enabling efficient similarity search over high-dimensional vector space representations (i.e., embeddings) of data. Among various ANNS algorithms, graph-based algorithms are known to achieve the best throughput-recall tradeoffs. Despite the large scale of modern ANNS datasets, existing parallel graph-based implementations suffer from significant challenges to scale to large datasets due to heavy use of locks and other sequential bottlenecks, which 1) prevents them from efficiently scaling to a large number of processors, and 2) results in non-determinism that is undesirable in certain applications.",
+    "citation_count": 27,
+    "reference_count": 35,
+    "url": "https://doi.org/10.1145/3627535.3638475",
+    "dblp_key": "conf/ppopp/ManoharSBD0S024",
+    "source_id": "https://openalex.org/W4391971774",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Parallel k-Core Decomposition with Batched Updates and Asynchronous Reads.",
+    "authors": [
+      "Quanquan C. Liu",
+      "Julian Shun",
+      "Igor Zablotchi"
+    ],
+    "venue": "PPoPP",
+    "year": 2024,
+    "abstract": "Maintaining a dynamic k-core decomposition is an important problem that identifies dense subgraphs in dynamically changing graphs. Recent work by Liu et al. [SPAA 2022] presents a parallel batch-dynamic algorithm for maintaining an approximate k-core decomposition. In their solution, both reads and updates need to be batched, and therefore each type of operation can incur high latency waiting for the other type to finish. To tackle most real-world workloads, which are dominated by reads, this paper presents a novel hybrid concurrent-parallel dynamic k-core data structure where asynchronous reads can proceed concurrently with batches of updates, leading to significantly lower read latencies. Our approach is based on tracking causal dependencies between updates, so that causally related groups of updates appear atomic to concurrent readers. Our data structure guarantees linearizability and liveness for both reads and updates, and maintains the same approximation guarantees as prior work. Our experimental evaluation on a 30-core machine shows that our approach reduces read latency by orders of magnitude compared to the batch-dynamic algorithm, up to a (4.05 · 105)-factor. Compared to an unsynchronized (non-linearizable) baseline, our read latency overhead is only up to a 3.21-factor greater, while improving accuracy of coreness estimates by up to a factor of 52.7.",
+    "citation_count": 3,
+    "reference_count": 55,
+    "url": "https://doi.org/10.1145/3627535.3638508",
+    "dblp_key": "conf/ppopp/LiuSZ24",
+    "source_id": "https://openalex.org/W4391985083",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Parallel Integer Sort: Theory and Practice.",
+    "authors": [
+      "Xiaojun Dong 0001",
+      "Laxman Dhulipala",
+      "Yan Gu 0001",
+      "Yihan Sun 0001"
+    ],
+    "venue": "PPoPP",
+    "year": 2024,
+    "abstract": "Integer sorting is a fundamental problem in computer science. This paper studies parallel integer sort both in theory and in practice. In theory, we show tighter bounds for a class of existing practical integer sort algorithms, which provides a solid theoretical foundation for their widespread usage in practice and strong performance. In practice, we design a new integer sorting algorithm, DovetailSort, that is theoretically-efficient and has good practical performance.",
+    "citation_count": 7,
+    "reference_count": 41,
+    "url": "https://doi.org/10.1145/3627535.3638483",
+    "dblp_key": "conf/ppopp/DongDGS24",
+    "source_id": "https://openalex.org/W4391987074",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Fast American Option Pricing using Nonlinear Stencils.",
+    "authors": [
+      "Zafar Ahmad",
+      "Reilly Browne",
+      "Rezaul Chowdhury",
+      "Rathish Das",
+      "Yushen Huang",
+      "Yimin Zhu 0003"
+    ],
+    "venue": "PPoPP",
+    "year": 2024,
+    "abstract": "We study the binomial, trinomial, and Black-Scholes-Merton models of option pricing. We present fast parallel discrete-time finite-difference algorithms for American call option pricing under the binomial and trinomial models and American put option pricing under the Black-Scholes-Merton model. For T-step finite differences, each algorithm runs in O (T log2 T)/p + T) time under a greedy scheduler on p processing cores, which is a significant improvement over the Θ (T2/p) + Ω (T log T) time taken by the corresponding state-of-the-art parallel algorithm. Even when run on a single core, the O (T log2 T) time taken by our algorithms is asymptotically much smaller than the Θ (T2) running time of the fastest known serial algorithms. Implementations of our algorithms significantly outperform the fastest implementations of existing algorithms in practice, e.g., when run for T ≈ 1000 steps on a 48-core machine, our algorithm for the binomial model runs at least 15× faster than the fastest existing parallel program for the same model with the speedup factor gradually reaching beyond 500× for T ≈ 0.5 × 106. It saves more than 80% energy when T ≈ 4000, and more than 99% energy for T > 60,000.",
+    "citation_count": 2,
+    "reference_count": 103,
+    "url": "https://doi.org/10.1145/3627535.3638506",
+    "dblp_key": "conf/ppopp/AhmadBCDHZ24",
+    "source_id": "https://openalex.org/W4391958460",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "ConvStencil: Transform Stencil Computation to Matrix Multiplication on Tensor Cores.",
+    "authors": [
+      "Yuetao Chen",
+      "Kun Li 0016",
+      "Yuhao Wang",
+      "Donglin Bai",
+      "Lei Wang 0222",
+      "Lingxiao Ma",
+      "Liang Yuan",
+      "Yunquan Zhang",
+      "Ting Cao 0003",
+      "Mao Yang 0004"
+    ],
+    "venue": "PPoPP",
+    "year": 2024,
+    "abstract": "Tensor Core Unit (TCU) is increasingly integrated into modern high-performance processors to enhance matrix multiplication performance. However, constrained to its over-specification, its potential for improving other critical scientific operations like stencil computations remains untapped.",
+    "citation_count": 19,
+    "reference_count": 45,
+    "url": "https://doi.org/10.1145/3627535.3638476",
+    "dblp_key": "conf/ppopp/ChenLWBWMYZCY24",
+    "source_id": "https://openalex.org/W4391987273",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "CPMA: An Efficient Batch-Parallel Compressed Set Without Pointers.",
+    "authors": [
+      "Brian Wheatman",
+      "Randal C. Burns",
+      "Aydin Buluç",
+      "Helen Xu 0001"
+    ],
+    "venue": "PPoPP",
+    "year": 2024,
+    "abstract": "This paper introduces the batch-parallel Compressed Packed Memory Array (CPMA), a compressed, dynamic, ordered set data structure based on the Packed Memory Array (PMA). Traditionally, batch-parallel sets are built on pointer-based data structures such as trees because pointer-based structures enable fast parallel unions via pointer manipulation. When compared with cache-optimized trees, PMAs were slower to update but faster to scan.",
+    "citation_count": 6,
+    "reference_count": 65,
+    "url": "https://doi.org/10.1145/3627535.3638492",
+    "dblp_key": "conf/ppopp/WheatmanBB024",
+    "source_id": "https://openalex.org/W4391952029",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Gallatin: A General-Purpose GPU Memory Manager.",
+    "authors": [
+      "Hunter McCoy",
+      "Prashant Pandey 0001"
+    ],
+    "venue": "PPoPP",
+    "year": 2024,
+    "abstract": "Dynamic memory management is critical for efficiently porting modern data processing pipelines to GPUs. However, building a general-purpose dynamic memory manager on GPUs is challenging due to the massive parallelism and weak memory coherence. Existing state-of-the-art GPU memory managers, Ouroboros and Reg-Eff, employ traditional data structures such as arrays and linked lists to manage memory objects. They build specialized pipelines to achieve performance for a fixed set of allocation sizes and fall back to the CUDA allocator for allocating large sizes. In the process, they lose general-purpose usability and fail to support critical applications such as streaming graph processing.",
+    "citation_count": 5,
+    "reference_count": 18,
+    "url": "https://doi.org/10.1145/3627535.3638499",
+    "dblp_key": "conf/ppopp/McCoyP24",
+    "source_id": "https://openalex.org/W4391952820",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "A Row Decomposition-based Approach for Sparse Matrix Multiplication on GPUs.",
+    "authors": [
+      "Meng Pang",
+      "Xiang Fei",
+      "Peng Qu 0001",
+      "Youhui Zhang",
+      "Zhaolin Li"
+    ],
+    "venue": "PPoPP",
+    "year": 2024,
+    "abstract": "Sparse-Matrix Dense-Matrix Multiplication (SpMM) and Sampled Dense Dense Matrix Multiplication (SDDMM) are important sparse kernels in various computation domains. The uneven distribution of nonzeros in the sparse matrix and the tight data dependence between sparse and dense matrices make it a challenge to run sparse matrix multiplication efficiently on GPUs. By analyzing the aforementioned problems, we propose a row decomposition (RoDe)-based approach to optimize the two kernels on GPUs, using the standard Compressed Sparse Row (CSR) format. Specifically, RoDe divides the sparse matrix rows into regular parts and residual parts, to fully optimize their computations separately. We also devise the corresponding load balancing and finegrained pipelining technologies. Profiling results show that RoDe can achieve more efficient memory access and reduce warp stall cycles significantly. Compared to the state-of-the-art (SOTA) alternatives, RoDe achieves a speedup of up to 7.86× with a geometric mean of 1.45× for SpMM, and a speedup of up to 8.99× with a geometric mean of 1.49× for SDDMM; the dataset is SuiteSparse. RoDe also outperforms its counterpart in the deep learning dataset. Furthermore, its preprocessing overhead is significantly smaller, averaging only 16% of the SOTA.",
+    "citation_count": 20,
+    "reference_count": 22,
+    "url": "https://doi.org/10.1145/3627535.3638470",
+    "dblp_key": "conf/ppopp/PangFQZL24",
+    "source_id": "https://openalex.org/W4391986945",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Fast Kronecker Matrix-Matrix Multiplication on GPUs.",
+    "authors": [
+      "Abhinav Jangda",
+      "Mohit Yadav"
+    ],
+    "venue": "PPoPP",
+    "year": 2024,
+    "abstract": "Kronecker Matrix-Matrix Multiplication (Kron-Matmul) is the multiplication of a matrix with the Kronecker Product of several smaller matrices. Kron-Matmul is a core operation for many scientific and machine learning computations. State-of-the-art Kron-Matmul implementations utilize existing tensor algebra operations, such as matrix multiplication, transpose, and tensor matrix multiplication. However, this design choice prevents several Kron-Matmul specific optimizations, thus, leaving significant performance on the table.",
+    "citation_count": 2,
+    "reference_count": 51,
+    "url": "https://doi.org/10.1145/3627535.3638489",
+    "dblp_key": "conf/ppopp/JangdaY24",
+    "source_id": "https://openalex.org/W4391047420",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Arrow Matrix Decomposition: A Novel Approach for Communication-Efficient Sparse Matrix Multiplication.",
+    "authors": [
+      "Lukas Gianinazzi",
+      "Alexandros Nikolaos Ziogas",
+      "Langwen Huang",
+      "Piotr Luczynski",
+      "Saleh Ashkboosh",
+      "Florian Scheidl",
+      "Armon Carigiet",
+      "Chio Ge",
+      "Nabil Abubaker",
+      "Maciej Besta",
+      "Tal Ben-Nun",
+      "Torsten Hoefler"
+    ],
+    "venue": "PPoPP",
+    "year": 2024,
+    "abstract": "We propose a novel approach to iterated sparse matrix dense matrix multiplication, a fundamental computational kernel in scientific computing and graph neural network training. In cases where matrix sizes exceed the memory of a single compute node, data transfer becomes a bottleneck. An approach based on dense matrix multiplication algorithms leads to sub-optimal scalability and fails to exploit the sparsity in the problem. To address these challenges, we propose decomposing the sparse matrix into a small number of highly structured matrices called arrow matrices, which are connected by permutations. Our approach enables communication-avoiding multiplications, achieving a polynomial reduction in communication volume per iteration for matrices corresponding to planar graphs and other minor-excluded families of graphs. Our evaluation demonstrates that our approach outperforms a state-of-the-art method for sparse matrix multiplication on matrices with hundreds of millions of rows, offering near-linear strong and weak scaling.",
+    "citation_count": 4,
+    "reference_count": 48,
+    "url": "https://doi.org/10.1145/3627535.3638496",
+    "dblp_key": "conf/ppopp/GianinazziZHLAS24",
+    "source_id": "https://openalex.org/W4391952904",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "FastFold: Optimizing AlphaFold Training and Inference on GPU Clusters.",
+    "authors": [
+      "Shenggan Cheng",
+      "Xuanlei Zhao",
+      "Guangyang Lu",
+      "Jiarui Fang",
+      "Tian Zheng",
+      "Ruidong Wu",
+      "Xiwen Zhang",
+      "Jian Peng 0001",
+      "Yang You 0001"
+    ],
+    "venue": "PPoPP",
+    "year": 2024,
+    "abstract": "Protein structure prediction helps to understand gene translation and protein function, which is of growing interest and importance in structural biology. The AlphaFold model, which used transformer architecture to achieve atomic-level accuracy in protein structure prediction, was a significant breakthrough. However, training and inference of AlphaFold model are challenging due to its high computation and memory cost. In this work, we present FastFold, an efficient implementation of AlphaFold for both training and inference. We propose Dynamic Axial Parallelism (DAP) as a novel model parallelism method. Additionally, we have implemented a series of low-level optimizations aimed at reducing communication, computation, and memory costs. These optimizations include Duality Async Operations, highly optimized kernels, and AutoChunk (an automated search algorithm finds the best chunk strategy to reduce memory peaks). Experimental results show that FastFold can efficiently scale to more GPUs using DAP and reduces overall training time from 11 days to 67 hours and achieves 7.5 ~ 9.5× speedup for long-sequence inference. Furthermore, AutoChunk can reduce memory cost by over 80% during inference by automatically partitioning the intermediate tensors during the computation.",
+    "citation_count": 9,
+    "reference_count": 20,
+    "url": "https://doi.org/10.1145/3627535.3638465",
+    "dblp_key": "conf/ppopp/ChengZLFZWZ0024",
+    "source_id": "https://openalex.org/W4391952907",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "AGAThA: Fast and Efficient GPU Acceleration of Guided Sequence Alignment for Long Read Mapping.",
+    "authors": [
+      "Seongyeon Park",
+      "Junguk Hong",
+      "Jaeyong Song 0002",
+      "Hajin Kim",
+      "Youngsok Kim",
+      "Jinho Lee 0001"
+    ],
+    "venue": "PPoPP",
+    "year": 2024,
+    "abstract": "With the advance in genome sequencing technology, the lengths of deoxyribonucleic acid (DNA) sequencing results are rapidly increasing at lower prices than ever. However, the longer lengths come at the cost of a heavy computational burden on aligning them. For example, aligning sequences to a human reference genome can take tens or even hundreds of hours. The current de facto standard approach for alignment is based on the guided dynamic programming method. Although this takes a long time and could potentially benefit from high-throughput graphic processing units (GPUs), the existing GPU-accelerated approaches often compromise the algorithm's structure, due to the GPU-unfriendly nature of the computational pattern. Unfortunately, such compromise in the algorithm is not tolerable in the field, because sequence alignment is a part of complicated bioinformatics analysis pipelines. In such circumstances, we propose AGAThA, an exact and efficient GPU-based acceleration of guided sequence alignment. We diagnose and address the problems of the algorithm being unfriendly to GPUs, which comprises strided/redundant memory accesses and workload imbalances that are difficult to predict. According to the experiments on modern GPUs, AGAThA achieves 18.8× speedup against the CPU-based baseline, 9.6× against the best GPU-based baseline, and 3.6× against GPU-based algorithms with different heuristics.",
+    "citation_count": 6,
+    "reference_count": 30,
+    "url": "https://doi.org/10.1145/3627535.3638474",
+    "dblp_key": "conf/ppopp/ParkHSKKL24",
+    "source_id": "https://openalex.org/W4391983713",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "POSTER: Accelerating High-Precision Integer Multiplication used in Cryptosystems with GPUs.",
+    "authors": [
+      "Zhuoran Ji",
+      "Zhaorui Zhang",
+      "Jiming Xu",
+      "Lei Ju 0001"
+    ],
+    "venue": "PPoPP",
+    "year": 2024,
+    "abstract": "High-precision integer multiplication is crucial in privacy-preserving computational techniques but poses acceleration challenges on GPUs due to its complexity and the diverse bit lengths in cryptosystems. This paper introduces GIM, an efficient high-precision integer multiplication algorithm accelerated with GPUs. It employs a novel segmented integer multiplication algorithm that separates implementation details from bit length, facilitating code optimizations. We also present a computation diagram to analyze parallelization strategies, leading to a series of enhancements. Experiments demonstrate that this approach achieves a 4.47× speedup over the commonly used baseline.",
+    "citation_count": 0,
+    "reference_count": 5,
+    "url": "https://doi.org/10.1145/3627535.3638495",
+    "dblp_key": "conf/ppopp/JiZXJ24",
+    "source_id": "https://openalex.org/W4391985080",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "POSTER: Enabling Extreme-Scale Phase Field Simulation with In-situ Feature Extraction.",
+    "authors": [
+      "Zhichen Feng",
+      "Jialin Li",
+      "Yaqian Gao",
+      "Shaobo Tian",
+      "Huang Ye",
+      "Jian Zhang 0070"
+    ],
+    "venue": "PPoPP",
+    "year": 2024,
+    "abstract": "In this paper, we present an integrated framework composed of a highly efficient phase field simulator and an in-situ feature extraction library. This novel framework enables us to conduct extreme-scale micro-structure evolution simulations while the characteristic features of each individual grain are extracted on the fly. After systematic design and optimization on the new generation Sunway supercomputer, the code scales up to 39 million cores and achieves 582 PFlops in double precision and 637 POps in mixed precision.",
+    "citation_count": 0,
+    "reference_count": 3,
+    "url": "https://doi.org/10.1145/3627535.3638486",
+    "dblp_key": "conf/ppopp/FengLGTYZ24",
+    "source_id": "https://openalex.org/W4391958795",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "POSTER: FineCo: Fine-grained Heterogeneous Resource Management for Concurrent DNN Inferences.",
+    "authors": [
+      "Lixian Ma",
+      "Haoruo Chen",
+      "En Shao",
+      "Leping Wang",
+      "Quan Chen 0002",
+      "Guangming Tan"
+    ],
+    "venue": "PPoPP",
+    "year": 2024,
+    "abstract": "Co-locating multiple DNN servings to share GPU resource is widely used to improve resource utilization while guaranteeing user QoS. Existing GPU sharing mechanism is restricted to model level, and fluctuations in kernel-level resource demands highlight a suboptimal utilization of the current sharing mechanism. We design a multi-DNN serving system, FineCo, that leverages a novel fine-grained resource sharing mechanism to optimize concurrent inference without modifications to the hardware or operating system. Our prototype implementation demonstrates that FineCo achieves up to 40% throughput improvement over the state-of-the-art work.",
+    "citation_count": 1,
+    "reference_count": 14,
+    "url": "https://doi.org/10.1145/3627535.3638485",
+    "dblp_key": "conf/ppopp/MaCSWCT24",
+    "source_id": "https://openalex.org/W4391952397",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "POSTER: Optimizing Collective Communications with Error-bounded Lossy Compression for GPU Clusters.",
+    "authors": [
+      "Jiajun Huang 0001",
+      "Sheng Di",
+      "Xiaodong Yu 0001",
+      "Yujia Zhai",
+      "Jinyang Liu 0003",
+      "Yafan Huang",
+      "Ken Raffenetti",
+      "Hui Zhou 0012",
+      "Kai Zhao 0008",
+      "Zizhong Chen",
+      "Franck Cappello",
+      "Yanfei Guo",
+      "Rajeev Thakur"
+    ],
+    "venue": "PPoPP",
+    "year": 2024,
+    "abstract": "GPU-aware collective communication has become a major bottleneck for modern computing platforms as GPU computing power rapidly rises. To address this issue, traditional approaches integrate lossy compression directly into GPU-aware collectives, which still suffer from serious issues such as underutilized GPU devices and uncontrolled data distortion. In this paper, we propose GPU-LCC, a general framework that designs and optimizes GPU-aware, compression-enabled collectives with well-controlled error propagation. To validate our framework, we evaluate the performance on up to 64 NVIDIA A100 GPUs with real-world applications and datasets. Experimental results demonstrate that our GPU-LCC-accelerated collective computation (Allreduce), can outperform NCCL as well as Cray MPI by up to 3.4× and 18.7×, respectively. Furthermore, our accuracy evaluation with an image-stacking application confirms the high reconstructed data quality of our accuracy-aware framework.",
+    "citation_count": 5,
+    "reference_count": 13,
+    "url": "https://doi.org/10.1145/3627535.3638467",
+    "dblp_key": "conf/ppopp/HuangD0ZLHRZ0CC24",
+    "source_id": "https://openalex.org/W4391986756",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "POSTER: Optimizing Sparse Tensor Contraction with Revisiting Hash Table Design.",
+    "authors": [
+      "Guofeng Feng",
+      "Weile Jia",
+      "Ninghui Sun",
+      "Guangming Tan",
+      "Jiajia Li 0001"
+    ],
+    "venue": "PPoPP",
+    "year": 2024,
+    "abstract": "Sparse tensor contraction (SpTC) serves as an essential operation in high-performance applications. The high dimensionality of sparse tensors makes SpTC fundamentally challenging in aspects such as costly multidimensional index search, extensive intermediate output data, and indirect addressing. Previous state-of-the-art work addresses some of these challenges through hash-table implementation. In this paper, we propose a hash-table based and fully optimized SpTC by providing a more carefully designed customized hash table design, proposing an architecture-aware algorithm for hash table selection with size prediction, applying cross-stage optimizations to exploit shared information and avoid redundant operations. Evaluating on a set of tensors extracted from the real world, our method can achieve superior speedup and reduce the memory footprint substantially compared to the current state-of-the-art work.",
+    "citation_count": 2,
+    "reference_count": 22,
+    "url": "https://doi.org/10.1145/3627535.3638500",
+    "dblp_key": "conf/ppopp/FengJST024",
+    "source_id": "https://openalex.org/W4391983395",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "POSTER: LLM-PQ: Serving LLM on Heterogeneous Clusters with Phase-Aware Partition and Adaptive Quantization.",
+    "authors": [
+      "Juntao Zhao 0002",
+      "Borui Wan",
+      "Chuan Wu 0001",
+      "Yanghua Peng",
+      "Haibin Lin"
+    ],
+    "venue": "PPoPP",
+    "year": 2024,
+    "abstract": "The immense sizes of Large-scale language models (LLMs) have led to high resource demand and cost for running the models. Though the models are largely served using uniform high-caliber GPUs nowadays, utilizing a heterogeneous cluster with a mix of available high- and low-capacity GPUs can potentially substantially reduce the serving cost. This paper proposes LLM-PQ, a system that advocates adaptive model quantization and phase-aware partition to improve LLM serving efficiency on heterogeneous GPU clusters. Extensive experiments on production inference workloads demonstrate throughput improvement in inference, showing great advantages over state-of-the-art works.",
+    "citation_count": 8,
+    "reference_count": 3,
+    "url": "https://doi.org/10.1145/3627535.3638480",
+    "dblp_key": "conf/ppopp/ZhaoWWPL24",
+    "source_id": "https://openalex.org/W4391986993",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "POSTER: OCToPus: Semantic-aware Concurrency Control for Blockchain Transactions.",
+    "authors": [
+      "dePaul Miller",
+      "Henry F. Korth",
+      "Roberto Palmieri"
+    ],
+    "venue": "PPoPP",
+    "year": 2024,
+    "abstract": "Many blockchain implementations offer APIs to send and receive money between accounts exclusively. In this paper, we introduce OCToPus, a deterministic concurrency control scheme that uses a semantic-aware fast path and a GPU-accelerated directed acyclic graph-based fallback path to parallelize the execution of a block aggressively.",
+    "citation_count": 2,
+    "reference_count": 8,
+    "url": "https://doi.org/10.1145/3627535.3638494",
+    "dblp_key": "conf/ppopp/MillerKP24",
+    "source_id": "https://openalex.org/W4391958928",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "POSTER: Pattern-Aware Sparse Communication for Scalable Recommendation Model Training.",
+    "authors": [
+      "Jiaao He",
+      "Shengqi Chen 0001",
+      "Jidong Zhai"
+    ],
+    "venue": "PPoPP",
+    "year": 2024,
+    "abstract": "Recommendation models are an important category of deep learning models whose size is growing enormous. They consist of a sparse part with TBs of memory footprint and a dense part that demands PFLOPs of computing capability to train. Unfortunately, the high sparse communication cost to re-organize data for different parallel strategies of the two parts impedes the scalability in training.",
+    "citation_count": 1,
+    "reference_count": 6,
+    "url": "https://doi.org/10.1145/3627535.3638481",
+    "dblp_key": "conf/ppopp/He0Z24",
+    "source_id": "https://openalex.org/W4391952836",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "POSTER: ParGNN: Efficient Training for Large-Scale Graph Neural Network on GPU Clusters.",
+    "authors": [
+      "Shunde Li",
+      "Junyu Gu",
+      "Jue Wang 0013",
+      "Tiechui Yao",
+      "Zhiqiang Liang",
+      "Yumeng Shi",
+      "Shigang Li 0002",
+      "Weiting Xi",
+      "Shushen Li",
+      "Chunbao Zhou",
+      "Yangang Wang 0002",
+      "Xuebin Chi"
+    ],
+    "venue": "PPoPP",
+    "year": 2024,
+    "abstract": "Full-batch graph neural network (GNN) training is essential for interdisciplinary applications. Large-scale graph data is usually divided into subgraphs and distributed across multiple compute units to train GNN. The state-of-the-art load balancing method based on direct graph partition is too rough to effectively achieve true load balancing on GPU clusters. We propose ParGNN, which employs a profiler-guided load balance workflow in conjunction with graph repartition to alleviate load imbalance and minimize communication traffic. Experiments have verified that ParGNN has the capability to scale to larger clusters.",
+    "citation_count": 1,
+    "reference_count": 5,
+    "url": "https://doi.org/10.1145/3627535.3638488",
+    "dblp_key": "conf/ppopp/LiGWYLSLXLZWC24",
+    "source_id": "https://openalex.org/W4391952159",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "POSTER: RadiK: Scalable Radix Top-K Selection on GPUs.",
+    "authors": [
+      "Yifei Li",
+      "Bole Zhou",
+      "Jiejing Zhang",
+      "Xuechao Wei",
+      "Yinghan Li 0002",
+      "Yingda Chen"
+    ],
+    "venue": "PPoPP",
+    "year": 2024,
+    "abstract": "By identifying the k largest or smallest elements in a set of data, top-k selection is critical for modern high-performance databases and machine learning systems, especially with large data volumes. However, previous studies on its GPU implementation are mostly merge-based and rely heavily on the high-speed but size-limited on-chip memory, thereby resulting in a restricted upper bound on k. This paper introduces RadiK, a highly optimized GPU-parallel radix top-k selection that is scalable with k, input length, and batch size. With a carefully designed optimization framework targeting high memory bandwidth and resource utilization, RadiK supports far larger k than the prior art, achieving up to 2.5× speedup for non-batch queries and up to 4.8× speedup for batch queries. We also propose a lightweight refinement that strengthens the robustness of RadiK against skewed distributions by adaptively scaling the input elements.",
+    "citation_count": 2,
+    "reference_count": 2,
+    "url": "https://doi.org/10.1145/3627535.3638478",
+    "dblp_key": "conf/ppopp/LiZZWLC24",
+    "source_id": "https://openalex.org/W4391959512",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "POSTER: RELAX: Durable Data Structures with Swift Recovery.",
+    "authors": [
+      "Almog Zur",
+      "Nachshon Cohen",
+      "Michal Friedman 0001",
+      "Erez Petrank"
+    ],
+    "venue": "PPoPP",
+    "year": 2024,
+    "abstract": "Recent non-volatile main memory technology gave rise to an abundance of research on building persistent data structures, whose content can be recovered after a system crash. While there has been significant progress in making durable data structures efficient, shortening the length of the recovery phase after a crash has not received much attention. In this paper we present the RELAX general transformation. RELAX generates lock-free durable data structures that provide the best of both worlds: almost zero recovery time and high performance.",
+    "citation_count": 0,
+    "reference_count": 11,
+    "url": "https://doi.org/10.1145/3627535.3638469",
+    "dblp_key": "conf/ppopp/ZurC0P24",
+    "source_id": "https://openalex.org/W4391957921",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "POSTER: StructMG: A Fast and Scalable Structured Multigrid.",
+    "authors": [
+      "Yi Zong",
+      "Xinliang Wang",
+      "Haopeng Huang",
+      "Chensong Zhang",
+      "Xiaowen Xu",
+      "Jian Sun",
+      "Bowen Yan",
+      "Qin Wang",
+      "Sicong Li",
+      "Zhaohui Ding",
+      "Wei Xue 0003"
+    ],
+    "venue": "PPoPP",
+    "year": 2024,
+    "abstract": "Parallel multigrid is widely used as preconditioners in solving large-scale sparse linear systems. However, the current multigrid library still needs more satisfactory performance for structured grid problems regarding speed and scalability. To this end, we design and implement StructMG, a fast and scalable multigrid that constructs hierarchical grids automatically based on the original matrix. As a preconditioner, StructMG can achieve both low cost per iteration and good convergence. Two idealized and five real-world problems from four application fields, including radiation hydrodynamics, petroleum reservoir simulation, numerical weather prediction, and solid mechanics, are evaluated on ARM and X86 platforms. In comparison to hypre's multigrid preconditioners, StructMG achieves the fastest time-to-solutions in all cases with average speedups of 17.6x, 5.7x, 4.6x, 8.5x over SMG, PFMG, SysPFMG, and BoomerAMG, respectively. Additionally, StructMG significantly improves strong and weak scaling efficiencies in most tests.",
+    "citation_count": 4,
+    "reference_count": 2,
+    "url": "https://doi.org/10.1145/3627535.3638482",
+    "dblp_key": "conf/ppopp/ZongWHZXSYWLDX24",
+    "source_id": "https://openalex.org/W4391952019",
+    "source": null,
+    "source_url": null
+  }
+]

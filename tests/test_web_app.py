@@ -228,7 +228,7 @@ def test_url_base_prefixes_routes_assets_and_generated_urls(tmp_path, monkeypatc
         with open(output_path, "w", encoding="utf-8") as f:
             json.dump([{"title": "Collected Paper", "authors": [], "venue": "ICSE", "year": year}], f)
 
-    monkeypatch.setattr("src.web.app.process_conference_year", fake_process_conference_year)
+    monkeypatch.setattr("src.web.workers.collection.process_conference_year", fake_process_conference_year)
 
     client = create_app(str(config_path)).test_client()
     index_response = client.get("/papercollect/")
@@ -340,7 +340,7 @@ def test_collect_accepts_year_not_listed_in_config(tmp_path, monkeypatch):
         with open(output_path, "w", encoding="utf-8") as f:
             json.dump([{"title": "Future Paper", "authors": [], "venue": "ICSE", "year": year}], f)
 
-    monkeypatch.setattr("src.web.app.process_conference_year", fake_process_conference_year)
+    monkeypatch.setattr("src.web.workers.collection.process_conference_year", fake_process_conference_year)
 
     client = create_app(str(config_path)).test_client()
     response = client.post("/api/collect", json={"conference": "icse", "year": 2026, "limit": 1})
@@ -393,7 +393,7 @@ def test_collect_endpoint_runs_batch_and_records_partial_failures(tmp_path, monk
         with open(output_path, "w", encoding="utf-8") as f:
             json.dump([{"title": "Collected ICSE Paper", "authors": [], "venue": "ICSE", "year": year}], f)
 
-    monkeypatch.setattr("src.web.app.process_conference_year", fake_process_conference_year)
+    monkeypatch.setattr("src.web.workers.collection.process_conference_year", fake_process_conference_year)
 
     client = create_app(str(config_path)).test_client()
     response = client.post(
@@ -465,7 +465,7 @@ def test_collect_stop_endpoint_cancels_batch_before_next_conference(tmp_path, mo
                 f,
             )
 
-    monkeypatch.setattr("src.web.app.process_conference_year", fake_process_conference_year)
+    monkeypatch.setattr("src.web.workers.collection.process_conference_year", fake_process_conference_year)
 
     client = create_app(str(config_path)).test_client()
     response = client.post(
@@ -750,8 +750,8 @@ def test_index_endpoint_runs_background_job_and_rejects_duplicate(tmp_path, monk
             "index_path": None,
         }
 
-    monkeypatch.setattr("src.web.app._run_index_subprocess", fake_run_index_subprocess)
-    monkeypatch.setattr("src.web.app.vector_index_status", fake_vector_index_status)
+    monkeypatch.setattr("src.web.workers.index_worker.run_index_subprocess", fake_run_index_subprocess)
+    monkeypatch.setattr("src.web.workers.index_worker.vector_index_status", fake_vector_index_status)
 
     client = create_app(str(config_path)).test_client()
     response = client.post("/api/index", json={"force": True})
@@ -820,7 +820,7 @@ def test_collect_endpoint_runs_job_and_exposes_feed(tmp_path, monkeypatch):
                 f,
             )
 
-    monkeypatch.setattr("src.web.app.process_conference_year", fake_process_conference_year)
+    monkeypatch.setattr("src.web.workers.collection.process_conference_year", fake_process_conference_year)
 
     client = create_app(str(config_path)).test_client()
     response = client.post("/api/collect", json={"conference": "icse", "year": 2025, "limit": 1})
@@ -881,7 +881,7 @@ def test_collect_endpoint_streams_logs_while_job_runs(tmp_path, monkeypatch):
         with open(output_path, "w", encoding="utf-8") as f:
             json.dump([{"title": "Collected Paper", "authors": [], "venue": "ICSE", "year": year}], f)
 
-    monkeypatch.setattr("src.web.app.process_conference_year", fake_process_conference_year)
+    monkeypatch.setattr("src.web.workers.collection.process_conference_year", fake_process_conference_year)
 
     client = create_app(str(config_path)).test_client()
     response = client.post("/api/collect", json={"conference": "icse", "year": 2025, "limit": 1})
@@ -927,7 +927,7 @@ def test_collect_endpoint_marks_job_failed_when_collection_raises(tmp_path, monk
         print("Fetching from DBLP...")
         raise RuntimeError("DBLP timed out")
 
-    monkeypatch.setattr("src.web.app.process_conference_year", fake_process_conference_year)
+    monkeypatch.setattr("src.web.workers.collection.process_conference_year", fake_process_conference_year)
 
     client = create_app(str(config_path)).test_client()
     response = client.post("/api/collect", json={"conference": "ndss", "year": 2026, "limit": 1})
@@ -982,7 +982,7 @@ def test_collect_creates_queue_items(tmp_path, monkeypatch):
             started.set()
             assert release.wait(timeout=2)
 
-    monkeypatch.setattr("src.web.app.process_conference_year", fake_process_conference_year)
+    monkeypatch.setattr("src.web.workers.collection.process_conference_year", fake_process_conference_year)
 
     client = create_app(str(config_path)).test_client()
     response = client.post(
@@ -1032,7 +1032,7 @@ def test_queue_progression(tmp_path, monkeypatch):
         with open(output_path, "w", encoding="utf-8") as f:
             json.dump([{"title": f"{conf.display_name} Paper", "authors": [], "venue": conf.display_name, "year": year}], f)
 
-    monkeypatch.setattr("src.web.app.process_conference_year", fake_process_conference_year)
+    monkeypatch.setattr("src.web.workers.collection.process_conference_year", fake_process_conference_year)
 
     client = create_app(str(config_path)).test_client()
     response = client.post(
@@ -1095,7 +1095,7 @@ def test_stop_mid_batch_stops_job(tmp_path, monkeypatch):
             with open(output_path, "w", encoding="utf-8") as f:
                 json.dump([{"title": "FSE Paper", "authors": [], "venue": "FSE", "year": year}], f)
 
-    monkeypatch.setattr("src.web.app.process_conference_year", fake_process_conference_year)
+    monkeypatch.setattr("src.web.workers.collection.process_conference_year", fake_process_conference_year)
 
     client = create_app(str(config_path)).test_client()
     response = client.post(
@@ -1157,7 +1157,7 @@ def test_resume_from_stopped_state(tmp_path, monkeypatch):
             with open(output_path, "w", encoding="utf-8") as f:
                 json.dump([{"title": f"{conf.display_name} Paper", "authors": [], "venue": conf.display_name, "year": year}], f)
 
-    monkeypatch.setattr("src.web.app.process_conference_year", fake_process_conference_year)
+    monkeypatch.setattr("src.web.workers.collection.process_conference_year", fake_process_conference_year)
 
     client = create_app(str(config_path)).test_client()
     response = client.post(
@@ -1221,7 +1221,7 @@ def test_retry_failed_tasks(tmp_path, monkeypatch):
         with open(output_path, "w", encoding="utf-8") as f:
             json.dump([{"title": f"{conf.display_name} Paper", "authors": [], "venue": conf.display_name, "year": year}], f)
 
-    monkeypatch.setattr("src.web.app.process_conference_year", fake_process_conference_year)
+    monkeypatch.setattr("src.web.workers.collection.process_conference_year", fake_process_conference_year)
 
     client = create_app(str(config_path)).test_client()
     response = client.post(
@@ -1284,7 +1284,7 @@ def test_single_task_retry(tmp_path, monkeypatch):
         with open(output_path, "w", encoding="utf-8") as f:
             json.dump([{"title": f"{conf.display_name} Paper", "authors": [], "venue": conf.display_name, "year": year}], f)
 
-    monkeypatch.setattr("src.web.app.process_conference_year", fake_process_conference_year)
+    monkeypatch.setattr("src.web.workers.collection.process_conference_year", fake_process_conference_year)
 
     client = create_app(str(config_path)).test_client()
     response = client.post(
@@ -1332,7 +1332,7 @@ def test_single_task_retry_unknown_task_id(tmp_path, monkeypatch):
         with open(output_path, "w", encoding="utf-8") as f:
             json.dump([{"title": "ICSE Paper", "authors": [], "venue": "ICSE", "year": year}], f)
 
-    monkeypatch.setattr("src.web.app.process_conference_year", fake_process_conference_year)
+    monkeypatch.setattr("src.web.workers.collection.process_conference_year", fake_process_conference_year)
 
     client = create_app(str(config_path)).test_client()
     response = client.post(
@@ -1366,7 +1366,7 @@ def test_single_task_retry_on_completed_task_returns_400(tmp_path, monkeypatch):
         with open(output_path, "w", encoding="utf-8") as f:
             json.dump([{"title": "ICSE Paper", "authors": [], "venue": "ICSE", "year": year}], f)
 
-    monkeypatch.setattr("src.web.app.process_conference_year", fake_process_conference_year)
+    monkeypatch.setattr("src.web.workers.collection.process_conference_year", fake_process_conference_year)
 
     client = create_app(str(config_path)).test_client()
     response = client.post(
@@ -1410,7 +1410,7 @@ def test_resume_returns_409_when_another_job_holds_lock(tmp_path, monkeypatch):
         with open(output_path, "w", encoding="utf-8") as f:
             json.dump([{"title": f"{conf.display_name} Paper", "authors": [], "venue": conf.display_name, "year": year}], f)
 
-    monkeypatch.setattr("src.web.app.process_conference_year", fake_process_conference_year)
+    monkeypatch.setattr("src.web.workers.collection.process_conference_year", fake_process_conference_year)
 
     client = create_app(str(config_path)).test_client()
 
@@ -1472,7 +1472,7 @@ def test_resume_returns_409_on_running_job(tmp_path, monkeypatch):
         started.set()
         assert release.wait(timeout=2)
 
-    monkeypatch.setattr("src.web.app.process_conference_year", fake_process_conference_year)
+    monkeypatch.setattr("src.web.workers.collection.process_conference_year", fake_process_conference_year)
 
     client = create_app(str(config_path)).test_client()
     response = client.post(
@@ -1507,7 +1507,7 @@ def test_retry_returns_400_when_no_failed_tasks(tmp_path, monkeypatch):
         with open(output_path, "w", encoding="utf-8") as f:
             json.dump([{"title": "ICSE Paper", "authors": [], "venue": "ICSE", "year": year}], f)
 
-    monkeypatch.setattr("src.web.app.process_conference_year", fake_process_conference_year)
+    monkeypatch.setattr("src.web.workers.collection.process_conference_year", fake_process_conference_year)
 
     client = create_app(str(config_path)).test_client()
     response = client.post(
@@ -1545,7 +1545,7 @@ def test_task_summary_reflects_queue_state(tmp_path, monkeypatch):
         with open(output_path, "w", encoding="utf-8") as f:
             json.dump([{"title": f"{conf.display_name} Paper", "authors": [], "venue": conf.display_name, "year": year}], f)
 
-    monkeypatch.setattr("src.web.app.process_conference_year", fake_process_conference_year)
+    monkeypatch.setattr("src.web.workers.collection.process_conference_year", fake_process_conference_year)
 
     client = create_app(str(config_path)).test_client()
     response = client.post(
@@ -1584,7 +1584,7 @@ def test_queue_logs_appear_in_job_logs(tmp_path, monkeypatch):
         with open(output_path, "w", encoding="utf-8") as f:
             json.dump([{"title": "ICSE Paper", "authors": [], "venue": "ICSE", "year": year}], f)
 
-    monkeypatch.setattr("src.web.app.process_conference_year", fake_process_conference_year)
+    monkeypatch.setattr("src.web.workers.collection.process_conference_year", fake_process_conference_year)
 
     client = create_app(str(config_path)).test_client()
     response = client.post(
@@ -1622,7 +1622,7 @@ def test_idempotent_stop_on_stopped_job(tmp_path, monkeypatch):
         started.set()
         assert release.wait(timeout=2)
 
-    monkeypatch.setattr("src.web.app.process_conference_year", fake_process_conference_year)
+    monkeypatch.setattr("src.web.workers.collection.process_conference_year", fake_process_conference_year)
 
     client = create_app(str(config_path)).test_client()
     response = client.post(
@@ -1673,7 +1673,7 @@ def test_resume_with_failed_tasks_in_stopped_job(tmp_path, monkeypatch):
         with open(output_path, "w", encoding="utf-8") as f:
             json.dump([{"title": f"{conf.display_name} Paper", "authors": [], "venue": conf.display_name, "year": year}], f)
 
-    monkeypatch.setattr("src.web.app.process_conference_year", fake_process_conference_year)
+    monkeypatch.setattr("src.web.workers.collection.process_conference_year", fake_process_conference_year)
 
     client = create_app(str(config_path)).test_client()
     response = client.post(
@@ -1833,7 +1833,7 @@ def test_collect_with_years_array_creates_nxm_queue_items(tmp_path, monkeypatch)
         with open(output_path, "w", encoding="utf-8") as f:
             json.dump([{"title": f"{conf.display_name} {year}", "authors": [], "venue": conf.display_name, "year": year}], f)
 
-    monkeypatch.setattr("src.web.app.process_conference_year", fake_process_conference_year)
+    monkeypatch.setattr("src.web.workers.collection.process_conference_year", fake_process_conference_year)
 
     client = create_app(str(config_path)).test_client()
     response = client.post(
@@ -1867,6 +1867,78 @@ def test_collect_with_years_array_creates_nxm_queue_items(tmp_path, monkeypatch)
     assert len(status["feed_urls"]) == 4
 
 
+def test_collect_with_explicit_tasks_creates_exact_queue_items(tmp_path, monkeypatch):
+    """POST /api/collect with tasks creates only the requested conference/year pairs."""
+    data_dir = tmp_path / "data"
+    config_path = tmp_path / "config.yaml"
+    config_path.write_text(
+        yaml.safe_dump(
+            {
+                "include_ccfddl_catalog": False,
+                "conferences": [
+                    {"id": "icse", "display_name": "ICSE", "dblp_stream": "conf/icse"},
+                    {"id": "fse", "display_name": "FSE", "dblp_stream": "conf/sigsoft"},
+                ],
+                "years": [2024, 2025],
+                "output_dir": str(data_dir),
+                "concurrency": {"threads": 1},
+            }
+        ),
+        encoding="utf-8",
+    )
+
+    started = threading.Event()
+    release = threading.Event()
+
+    def fake_process_conference_year(conf, year, dblp_client, metadata_manager, output_dir, limit):
+        if not started.is_set():
+            started.set()
+            assert release.wait(timeout=2)
+        data_dir.mkdir(exist_ok=True)
+        output_path = get_output_path(str(data_dir), conf, year)
+        with open(output_path, "w", encoding="utf-8") as f:
+            json.dump([{"title": f"{conf.display_name} {year}", "authors": [], "venue": conf.display_name, "year": year}], f)
+
+    monkeypatch.setattr("src.web.workers.collection.process_conference_year", fake_process_conference_year)
+
+    client = create_app(str(config_path)).test_client()
+    response = client.post(
+        "/api/collect",
+        json={
+            "tasks": [
+                {"conference": "icse", "year": 2024},
+                {"conference": "fse", "year": 2025},
+            ],
+            "limit": 1,
+        },
+    )
+
+    assert response.status_code == 202
+    status_url = response.get_json()["status_url"]
+    assert started.wait(timeout=2)
+
+    job = client.get(status_url).get_json()
+    queue = job.get("queue")
+    assert queue is not None
+    assert len(queue) == 2
+    assert [(item["conference_id"], item["year"]) for item in queue] == [
+        ("icse", 2024),
+        ("fse", 2025),
+    ]
+
+    release.set()
+    for _ in range(40):
+        status = client.get(status_url).get_json()
+        if status["status"] in {"completed", "failed"}:
+            break
+        time.sleep(0.05)
+
+    assert status["status"] == "completed"
+    assert status["completed_count"] == 2
+    assert status["paper_count"] == 2
+    assert len(status["feed_urls"]) == 2
+
+
 def test_collect_with_single_year_backward_compatible(tmp_path, monkeypatch):
     """POST /api/collect with single year field still works (backward compatibility)."""
     data_dir = tmp_path / "data"
@@ -1892,7 +1964,7 @@ def test_collect_with_single_year_backward_compatible(tmp_path, monkeypatch):
         with open(output_path, "w", encoding="utf-8") as f:
             json.dump([{"title": "ICSE Paper", "authors": [], "venue": "ICSE", "year": year}], f)
 
-    monkeypatch.setattr("src.web.app.process_conference_year", fake_process_conference_year)
+    monkeypatch.setattr("src.web.workers.collection.process_conference_year", fake_process_conference_year)
 
     client = create_app(str(config_path)).test_client()
     # Use "year" (single value) instead of "years" (array).
@@ -1955,7 +2027,7 @@ def test_queue_items_have_year_field(tmp_path, monkeypatch):
             started.set()
             assert release.wait(timeout=2)
 
-    monkeypatch.setattr("src.web.app.process_conference_year", fake_process_conference_year)
+    monkeypatch.setattr("src.web.workers.collection.process_conference_year", fake_process_conference_year)
 
     client = create_app(str(config_path)).test_client()
     response = client.post(
@@ -2009,7 +2081,7 @@ def test_multi_year_queue_worker_processes_each_pair(tmp_path, monkeypatch):
         with open(output_path, "w", encoding="utf-8") as f:
             json.dump([{"title": f"{conf.display_name} {year}", "authors": [], "venue": conf.display_name, "year": year}], f)
 
-    monkeypatch.setattr("src.web.app.process_conference_year", fake_process_conference_year)
+    monkeypatch.setattr("src.web.workers.collection.process_conference_year", fake_process_conference_year)
 
     client = create_app(str(config_path)).test_client()
     response = client.post(
@@ -2031,3 +2103,113 @@ def test_multi_year_queue_worker_processes_each_pair(tmp_path, monkeypatch):
     assert status["completed_count"] == 2
     assert status["paper_count"] == 2
     assert sorted(r["year"] for r in status["results"]) == [2024, 2025]
+
+
+def test_sync_endpoints_return_503_when_webdav_not_configured(tmp_path):
+    config_path = tmp_path / "config.yaml"
+    config_path.write_text(
+        yaml.safe_dump(
+            {
+                "include_ccfddl_catalog": False,
+                "conferences": [{"id": "icse", "display_name": "ICSE"}],
+                "years": [2025],
+                "output_dir": str(tmp_path / "data"),
+            }
+        ),
+        encoding="utf-8",
+    )
+
+    client = create_app(str(config_path)).test_client()
+
+    status_response = client.get("/api/sync/status")
+    assert status_response.status_code == 503
+    assert "WebDAV" in status_response.get_json()["error"]
+
+    upload_response = client.post("/api/sync/upload")
+    assert upload_response.status_code == 503
+    assert "WebDAV" in upload_response.get_json()["error"]
+
+
+def test_sync_status_and_upload_job_with_mocked_webdav(tmp_path, monkeypatch):
+    data_dir = tmp_path / "data"
+    data_dir.mkdir()
+    (data_dir / "icse_2025.json").write_text("[]", encoding="utf-8")
+    config_path = tmp_path / "config.yaml"
+    config_path.write_text(
+        yaml.safe_dump(
+            {
+                "include_ccfddl_catalog": False,
+                "conferences": [{"id": "icse", "display_name": "ICSE"}],
+                "years": [2025],
+                "output_dir": str(data_dir),
+                "webdav": {
+                    "url": "https://webdav.example.test/",
+                    "username": "tester",
+                    "password": "secret",
+                    "remote_path": "/papers",
+                },
+            }
+        ),
+        encoding="utf-8",
+    )
+
+    class DummySession:
+        def head(self, url, timeout):
+            class Response:
+                status_code = 200
+
+            return Response()
+
+    class DummyWebDAVClient:
+        def __init__(self, url, username, password, verify_ssl=True):
+            self.session = DummySession()
+
+    def fake_sync_status(client, output_dir, remote_path, timeout=10):
+        return {
+            "local_only": ["icse_2025.json"],
+            "remote_only": ["ndss_2025.json"],
+            "both": ["fse_2025.json"],
+            "remote_files": [{"name": "ndss_2025.json", "size": 42, "modified": "today"}],
+        }
+
+    def fake_run_sync_upload_job(job_id, webdav_config, output_dir, remote_path, active_lock, app=None):
+        store = app.config["PAPERCOLLECT_JOB_STORE"]
+        try:
+            store.update(job_id, status="running")
+            store.append_log(job_id, "mock sync upload completed", max_lines=500)
+            store.update(
+                job_id,
+                status="completed",
+                result={"uploaded": ["icse_2025.json"], "skipped": [], "errors": []},
+            )
+        finally:
+            active_lock.release()
+
+    monkeypatch.setattr("src.web.blueprints.sync.WebDAVClient", DummyWebDAVClient)
+    monkeypatch.setattr("src.web.blueprints.sync.sync_status", fake_sync_status)
+    monkeypatch.setattr("src.web.blueprints.sync.run_sync_upload_job", fake_run_sync_upload_job)
+
+    client = create_app(str(config_path)).test_client()
+
+    status_response = client.get("/api/sync/status")
+    assert status_response.status_code == 200
+    status_payload = status_response.get_json()
+    assert status_payload["remote_path"] == "/papers"
+    assert status_payload["local_only"] == ["icse_2025.json"]
+    assert status_payload["remote_only"] == ["ndss_2025.json"]
+    assert status_payload["both"] == ["fse_2025.json"]
+
+    upload_response = client.post("/api/sync/upload")
+    assert upload_response.status_code == 202
+    status_url = upload_response.get_json()["status_url"]
+
+    job = None
+    for _ in range(20):
+        job = client.get(status_url).get_json()
+        if job["status"] == "completed":
+            break
+        time.sleep(0.05)
+
+    assert job["status"] == "completed"
+    assert job["result"]["uploaded"] == ["icse_2025.json"]
+    assert "mock sync upload completed" in job["logs"]

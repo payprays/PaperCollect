@@ -1,0 +1,1737 @@
+[
+  {
+    "title": "Government Mobile Apps: Analysing Citizen Feedback via App Reviews.",
+    "authors": [
+      "Tooba Aamir",
+      "Mohan Baruwal Chhetri",
+      "M. A. P. Chamikara",
+      "Marthie Grobler"
+    ],
+    "venue": "ASE",
+    "year": 2023,
+    "abstract": "Governments worldwide are increasingly embracing digital transformation initiatives to enhance service delivery, engage citizens, and achieve better outcomes. However, obtaining continuous feedback on these initiatives poses a substantial challenge. This paper investigates the feasibility of leveraging mobile app reviews as a valuable source of citizen feedback on government digital services. We analyse 100,146 app reviews from 129 government mobile apps in Australia and identify several functional and usability issues. These include issues such as app instability, complexity, integration problems, navigation difficulties, inaccuracies, and challenges with ID verification and authentication processes. Furthermore, we uncover several factors that influence user satisfaction, including accuracy and reliability, convenience, dependability, user-centric design, and overall user-friendliness. These findings demonstrate a strong correlation between user feedback and the government's digital transformation strategy, underscoring the viability of mobile app reviews as a cost-effective avenue for collecting citizen feedback.",
+    "citation_count": 3,
+    "reference_count": 18,
+    "url": "https://dblp.org/rec/conf/kbse/AamirCCG23",
+    "dblp_key": "conf/kbse/AamirCCG23",
+    "source_id": "https://openalex.org/W4388483579",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Better Patching Using LLM Prompting, via Self-Consistency.",
+    "authors": [
+      "Toufique Ahmed",
+      "Premkumar T. Devanbu"
+    ],
+    "venue": "ASE",
+    "year": 2023,
+    "abstract": "Large Language models (LLMs) can be induced to solve non-trivial problems with “few-shot” prompts including illustrative problem-solution examples. Now if the few-shots also include “chain of thought” ( <tex xmlns:mml=\"http://www.w3.org/1998/Math/MathML\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">$\\mathcal{C}oT$</tex> ) explanations, which are of the form problem-explanation-solution, LLMs will generate a “explained” solution, and perform even better. Recently an exciting, substantially better technique, self-consistency [1] ( <tex xmlns:mml=\"http://www.w3.org/1998/Math/MathML\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">$\\mathcal{S}-C$</tex> ) has emerged, based on the intuition that there are many plausible explanations for the right solution; when the LLM is sampled repeatedly to generate a pool of explanation-solution pairs, for a given problem, the most frequently occurring solutions in the pool (ignoring the explanations) tend to be even more likely to be correct! Unfortunately, the use of this highly-performant <tex xmlns:mml=\"http://www.w3.org/1998/Math/MathML\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">$\\mathcal{S}-C$</tex> (or even <tex xmlns:mml=\"http://www.w3.org/1998/Math/MathML\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">$\\mathcal{C}oT$</tex> ) approach in software engineering settings is hampered by the lack of explanations; most software datasets lack explanations. In this paper, we describe an application of the <tex xmlns:mml=\"http://www.w3.org/1998/Math/MathML\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">$\\mathcal{S}-C$</tex> approach to program repair, using the commit log on the fix as the explanation, only in the illustrative few-shots. We achieve state-of-the art results, beating previous approaches to prompting-based program repair, on the MODIT dataset; we also find evidence suggesting that the correct commit messages are helping the LLM learn to produce better patches.",
+    "citation_count": 36,
+    "reference_count": 36,
+    "url": "https://dblp.org/rec/conf/kbse/AhmedD23",
+    "dblp_key": "conf/kbse/AhmedD23",
+    "source_id": "https://openalex.org/W4388483039",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Systematically Detecting Packet Validation Vulnerabilities in Embedded Network Stacks.",
+    "authors": [
+      "Paschal C. Amusuo",
+      "Ricardo Andrés Calvo Méndez",
+      "Zhongwei Xu",
+      "Aravind Machiry",
+      "James C. Davis 0001"
+    ],
+    "venue": "ASE",
+    "year": 2023,
+    "abstract": "Embedded Network Stacks (ENS) enable low-resource devices to communicate with the outside world, facilitating the development of Internet of Things and Cyber-Physical Systems. Some defects in ENS are thus high-severity cybersecurity vulnerabilities: they are remotely triggerable and can impact the physical world. While prior research has shed light on the characteristics of defects in many classes of software systems, no study has described the properties of ENS defects nor identified a systematic technique to expose them. The most common automated approach to detecting ENS defects is feedback-driven randomized dynamic analysis (“fuzzing”), a costly and unpredictable technique. This paper provides the first systematic characterization of cybersecurity vulnerabilities in ENS. We analyzed 61 vulnerabilities across 6 open-source ENS. Most of these ENS defects are concentrated in the transport and network layers of the network stack, require reaching different states in the network protocol, and can be triggered by only 1–2 modifications to a single packet. We therefore propose a novel systematic testing framework that focuses on the transport and network layers, uses seeds that cover a network protocol's states, and systematically modifies packet fields. We evaluate this framework on 4 ENS and replicated 12 of the 14 reported IP/TCP/UDP vulnerabilities. On recent versions of these ENSs, it discovered 7 novel defects (6 assigned CVES) during a bounded systematic test that covered all protocol states and made up to 3 modifications per packet. We found defects in 3 of the 4 ENS we tested that had not been found by prior fuzzing research. Our results suggest that fuzzing should be deferred until after systematic testing is employed.",
+    "citation_count": 9,
+    "reference_count": 65,
+    "url": "https://dblp.org/rec/conf/kbse/AmusuoMXMD23",
+    "dblp_key": "conf/kbse/AmusuoMXMD23",
+    "source_id": "https://openalex.org/W4388502423",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "BUGSC++: A Highly Usable Real World Defect Benchmark for C/C++.",
+    "authors": [
+      "Gabin An",
+      "Minhyuk Kwon",
+      "Kyunghwa Choi",
+      "Jooyong Yi",
+      "Shin Yoo"
+    ],
+    "venue": "ASE",
+    "year": 2023,
+    "abstract": "As software systems grow larger and more complex, debugging takes up an increasingly significant portion of developers' time and efforts during software maintenance. To aid software engineers in debugging, many automated debugging and repair techniques have been proposed. Both the development and evaluation of these automated techniques depend on benchmarks of bugs. While many different defect benchmarks have been developed, only a few benchmarks are widely used due to the origin of the collected bugs as well as the usability of the benchmarks themselves, risking a biased research landscape. This paper presents BUGSC++, a new benchmark that contains 209 real-world bugs collected from 22 open-source C/C++ projects. BugsC++ aims to provide high usability by providing a similar user interface to the widely used Defects4J. Further, BugsC++ ensures the replicability of the bugs in its collection by encapsulating each buggy program in a Docker container. By providing a highly usable real-world defect benchmark for C/C++, we hope to promote debugging research for C/C++.",
+    "citation_count": 10,
+    "reference_count": 28,
+    "url": "https://dblp.org/rec/conf/kbse/AnKCYY23",
+    "dblp_key": "conf/kbse/AnKCYY23",
+    "source_id": "https://openalex.org/W4388482952",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "SmartBugs 2.0: An Execution Framework for Weakness Detection in Ethereum Smart Contracts.",
+    "authors": [
+      "Monika Di Angelo",
+      "Thomas Durieux",
+      "João F. Ferreira 0001",
+      "Gernot Salzer"
+    ],
+    "venue": "ASE",
+    "year": 2023,
+    "abstract": "Smart contracts are blockchain programs that often handle valuable assets. Writing secure smart contracts is far from trivial, and any vulnerability may lead to significant financial losses. To support developers in identifying and eliminating vulnerabilities, methods and tools for the automated analysis of smart contracts have been proposed. However, the lack of commonly accepted benchmark suites and performance metrics makes it difficult to compare and evaluate such tools. Moreover, the tools are heterogeneous in their interfaces and reports as well as their runtime requirements, and installing several tools is time-consuming. In this paper, we present SmartBugs 2.0, a modular execution framework. It provides a uniform interface to 19 tools aimed at smart contract analysis and accepts both Solidity source code and EVM bytecode as input. After describing its architecture, we highlight the features of the framework. We evaluate the framework via its reception by the community and illustrate its scalability by describing its role in a study involving 3.25 million analyses.",
+    "citation_count": 26,
+    "reference_count": 10,
+    "url": "https://dblp.org/rec/conf/kbse/AngeloDFS23",
+    "dblp_key": "conf/kbse/AngeloDFS23",
+    "source_id": "https://openalex.org/W4388483609",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Minecraft: Automated Mining of Software Bug Fixes with Precise Code Context.",
+    "authors": [
+      "Sai Krishna Avula",
+      "Venkatesh Vobbilisetti",
+      "Shouvick Mondal"
+    ],
+    "venue": "ASE",
+    "year": 2023,
+    "abstract": "Repository mining of bug fixes from version control systems like GitHub is a challenging problem as far as the precision of the bug context is concerned, i.e., source codes immediately preceding and succeeding the fix location. Coupled with this, identification of the type of the bug fix goes a long way towards creating high quality datasets that can be used for several downstream tasks. However, existing bug fix datasets suffer from the following limitations that dilute the data quality. Firstly, they do not focus on multilingual projects in their entirety given that most open-source projects are now multilingual. Secondly, the granularity of the bug fixes are considered only at the function/method level without specifying line/statement level information. Thirdly, bug fixes lying within the scope of a source file but outside any of its constituent functions have not been examined. In this paper, we propose a solution to overcome the aforementioned limitations by introducing a novel and extensive dataset named Minecraft. With a size of 28.8GB (considering 416 GitHub projects encompassing programming languages such as C, C++, Java, and Python, 2.2M commits, 3.29M bug-fix pairs), Minecraft surpasses the existing datasets by 4-fold enlargement in terms of data availability. We believe Minecraft would serve as a valuable resource for various stakeholders in the software development and research communities, empowering them to improve software quality, develop innovative bug detection and auto-fix techniques, and advance the field of software engineering.",
+    "citation_count": 5,
+    "reference_count": 11,
+    "url": "https://dblp.org/rec/conf/kbse/AvulaVM23",
+    "dblp_key": "conf/kbse/AvulaVM23",
+    "source_id": "https://openalex.org/W4388483102",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Modeling Programmer Attention as Scanpath Prediction.",
+    "authors": [
+      "Aakash Bansal",
+      "Chia-Yi Su",
+      "Zachary Karas",
+      "Yifan Zhang 0013",
+      "Yu Huang 0015",
+      "Toby Jia-Jun Li",
+      "Collin McMillan"
+    ],
+    "venue": "ASE",
+    "year": 2023,
+    "abstract": "This paper launches a new effort at modeling programmer attention by predicting eye movement scanpaths. Programmer attention refers to what information people intake when performing programming tasks. Models of programmer attention refer to machine prediction of what information is important to people. Models of programmer attention are important because they help researchers build better interfaces, assistive technologies, and more human-like AI. For many years, researchers in SE have built these models based on features such as mouse clicks, key logging, and IDE interactions. Yet the holy grail in this area is scanpath prediction - the prediction of the sequence of eye fixations a person would take over a visual stimulus. A person's eye movements are considered the most concrete evidence that a person is taking in a piece of information. Scanpath prediction is a notoriously difficult problem, but we believe that the emergence of lower-cost, higheraccuracy eye tracking equipment and better large language models of source code brings a solution within grasp. We present an eye tracking experiment with 27 programmers and a prototype scanpath predictor to present preliminary results and obtain early community feedback.",
+    "citation_count": 7,
+    "reference_count": 37,
+    "url": "https://dblp.org/rec/conf/kbse/BansalSKZHLM23",
+    "dblp_key": "conf/kbse/BansalSKZHLM23",
+    "source_id": "https://openalex.org/W4388483413",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Provengo: A Tool Suite for Scenario Driven Model-Based Testing.",
+    "authors": [
+      "Michael Bar-Sinai",
+      "Achiya Elyasaf",
+      "Gera Weiss",
+      "Yeshayahu Weiss"
+    ],
+    "venue": "ASE",
+    "year": 2023,
+    "abstract": "We present Provengo, a comprehensive suite of tools designed to facilitate the implementation of Scenario-Driven Model-Based Testing (SDMBT), an innovative approach that utilizes scenarios to construct a model encompassing the user's perspective and the system's business value while also defining the desired outcomes. With the assistance of Provengo, testers gain the ability to effortlessly create natural user stories and seamlessly integrate them into a model capable of generating effective tests. The demonstration illustrates how SDMBT effectively addresses the bootstrapping challenge commonly encountered in model-based testing (MBT) by enabling incremental development, starting from simple models and gradually augmenting them with additional stories.",
+    "citation_count": 4,
+    "reference_count": 6,
+    "url": "https://dblp.org/rec/conf/kbse/BarSinaiEWW23",
+    "dblp_key": "conf/kbse/BarSinaiEWW23",
+    "source_id": "https://openalex.org/W4388483884",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Optimizing Continuous Development by Detecting and Preventing Unnecessary Content Generation.",
+    "authors": [
+      "Talank Baral",
+      "Shanto Rahman",
+      "Bala Naren Chanumolu",
+      "Basak Balci",
+      "Tuna Tuncer",
+      "August Shi",
+      "Wing Lam"
+    ],
+    "venue": "ASE",
+    "year": 2023,
+    "abstract": "Continuous development (CD) helps developers quickly release and update their software. To enact CD, developers customize their CD builds to perform several tasks, including compiling, testing, static analysis checks, etc. However, as developers add more tasks to their builds, the builds take longer to run, therefore slowing down the entire CD process. Furthermore, developers may unknowingly include tasks into their builds whose results are not used (e.g., generating coverage files that are never read or uploaded anywhere), therefore wasting build runtime doing unnecessary tasks. We propose OptCD, a technique to dynamically detect unnecessary work within CD builds. Our intuition is that unnecessary work can be identified by the generation of files that are not used by any other task within the build. OptCD runs alongside a CD build, tracking the generated files during the build and which files are read/written. Files that are written to but are never read from are unnecessary content from a build. Based on the names of the unnecessary files, OptCD then maps the files to the specific build tasks responsible for generating or writing to those files. Finally, OptCD leverages ChatGPT to suggest changing the build configuration to disable generating these unnecessary files. Our evaluation of OptCD on 22 open-source projects finds that 95.6% of projects generate at least one unused directory, a directory whose contents are all unnecessarily generated. OptCD identifies the correct task that generates 92.0% of the unused directories. Further, OptCD can produce a patch for the CD configuration file to prevent generating 72.0% of the unused directories. Using the patches, we reduce the runtime by 7.0% on average for the projects we studied. We submitted 26 pull requests for the unused directories that we could disable. Developers have accepted 12 of them, with five rejected, and nine still pending.",
+    "citation_count": 2,
+    "reference_count": 43,
+    "url": "https://dblp.org/rec/conf/kbse/BaralRCBTSL23",
+    "dblp_key": "conf/kbse/BaralRCBTSL23",
+    "source_id": "https://openalex.org/W4388482990",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "CPA-DF: A Tool for Configurable Interval Analysis to Boost Program Verification.",
+    "authors": [
+      "Dirk Beyer 0001",
+      "Po-Chun Chien",
+      "Nian-Ze Lee"
+    ],
+    "venue": "ASE",
+    "year": 2023,
+    "abstract": "Software verification is challenging, and auxiliary program invariants are used to improve the effectiveness of verification approaches. For instance, the k-induction implementation in CPACHECKER, an award-winning framework for program analysis, uses invariants produced by a configurable data-flow analysis to strengthen induction hypotheses. This invariant generator, CPA-DF, uses arithmetic expressions over intervals as its abstract domain and is able to prove some safe verification tasks alone. After extensively evaluating CPA-DF on SV-Benchmarks, the largest publicly available suite of C safety-verification tasks, we discover that its potential as a stand-alone analysis or a sub-analysis in a parallel portfolio for combined verification approaches has been significantly underestimated: (1) As a stand-alone analysis, CPA-DF finds almost as many proofs as the plain k-induction implementation without auxiliary invariants. (2) As a sub-analysis running in parallel to the plain k-induction implementation, CPA-DF boosts the portfolio verifier to solve a comparable amount of tasks as the heavily-optimized k-induction implementation with invariant injection. Our detailed analysis reveals that dynamic precision adjustment is crucial to the efficiency and effectiveness of CPA-DF. To generalize our results beyond CPACHECKER, we use CoVeriteam,a platform for cooperative verification, to compose three portfolio verifiers that execute CPA-DF and three other software verifiers in parallel, respectively. Surprisingly, running CPA-DF merely in parallel to these state-of-the-art tools further boosts the number of correct results up to more than 20 %. Demonstration video: https://youtu.be/l7UG-vhTL_4",
+    "citation_count": 6,
+    "reference_count": 22,
+    "url": "https://dblp.org/rec/conf/kbse/BeyerCL23",
+    "dblp_key": "conf/kbse/BeyerCL23",
+    "source_id": "https://openalex.org/W4388483269",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "cegar-pt: A Tool for Abstraction by Program Transformation.",
+    "authors": [
+      "Dirk Beyer 0001",
+      "Marian Lingsch Rosenfeld",
+      "Martin Spiessl"
+    ],
+    "venue": "ASE",
+    "year": 2023,
+    "abstract": "Abstraction is an important approach for proving the correctness of computer programs. There are many implementations of this approach available, but unfortunately, the various implementations are difficult to reuse and combine, and the successful techniques have to be re-implemented in new tools again and again. We address this problem by contributing the tool cegar-pt, which views abstraction as program transformation and integrates different verification components off-the-shelf. The idea is to use existing components without having to change their implementation, while still adjusting the precision of the abstraction using the successful CEGAR approach. The approach of cegar-pt is largely general: It only restricts the abstraction to transform, given a precision that defines the level of abstraction, one program into another program. The abstraction by program transformation can over-approximate the data flow (e.g., havoc some variables, use more abstract types) or the control flow (e.g., loop abstraction, slicing). To illustrate our tool, we provide a demonstration video, accessible at https://youtu.be/ASZ6hoq8asE.",
+    "citation_count": 3,
+    "reference_count": 21,
+    "url": "https://dblp.org/rec/conf/kbse/BeyerRS23",
+    "dblp_key": "conf/kbse/BeyerRS23",
+    "source_id": "https://openalex.org/W4388483147",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "LIV: Loop-Invariant Validation Using Straight-Line Programs.",
+    "authors": [
+      "Dirk Beyer 0001",
+      "Martin Spiessl"
+    ],
+    "venue": "ASE",
+    "year": 2023,
+    "abstract": "Validation of program invariants (a.k.a. correctness witnesses) is an established procedure in software verification. There are steady advances in verification of more and more complex software systems, but coming up with good loop invariants remains the central task of many verifiers. While it often requires large amounts of computation to construct safe and inductive invariants, they are more easy to automatically validate. We propose LIV, a new tool for loop-invariant validation, which makes it more practical to check if the invariant produced by a verifier is sufficient to establish an inductive safety proof. The main idea is to apply divide-and-conquer on the program level: We split the program into smaller, loop-free programs (a.k.a. straight-line programs) that form simpler verification tasks. Because the verification conditions are not encoded in logic syntax (such as SMT), but as programs in the language of the original program, any off-the-shelf verifier can be used to verify the generated straight-line programs. In case the validation fails, useful information can be extracted about which part of the proof failed (which straight-line programs are wrong). We show that our approach works by evaluating it on a suitable benchmark. Supplementary website: https://www.sosy-lab.org/research/liv/",
+    "citation_count": 6,
+    "reference_count": 18,
+    "url": "https://dblp.org/rec/conf/kbse/BeyerS23",
+    "dblp_key": "conf/kbse/BeyerS23",
+    "source_id": "https://openalex.org/W4388482970",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "TEASER: Simulation-Based CAN Bus Regression Testing for Self-Driving Cars Software.",
+    "authors": [
+      "Christian Birchler",
+      "Cyrill Rohrbach",
+      "Hyeongkyun Kim",
+      "Alessio Gambi",
+      "Tianhai Liu",
+      "Jens Horneber",
+      "Timo Kehrer",
+      "Sebastiano Panichella"
+    ],
+    "venue": "ASE",
+    "year": 2023,
+    "abstract": "Safety-critical systems such as self-driving cars (SDCs) must be rigorously tested. Especially electronic control units (ECUs) of SDCs should be tested with realistic input data. In this context, a communication protocol called Controller Area Network (CAN) is typically used to transfer sensor data to the SDC control units. A challenge for SDC maintainers and testers is the need to manually define the CAN inputs that realistically represent the state of the SDC in the real world. To address this challenge, we developed TEASER; a tool that generates realistic CAN signals for SDCs obtained from sensors from state-of-the-art car simulators. We evaluated TEASER based on its integration capability into a DevOps pipeline of aicas GmbH, a company in the automotive sector. Concretely, we integrated TEASER in a Continous Integration (CI) pipeline configured with Jenkins. The pipeline executes the test cases in simulation environments and sends the sensor data over the CAN bus to a physical CAN device, the test subject. Our evaluation shows the ability of TEASER to generate and execute CI test cases that expose simulation-based faults (using regression strategies); the tool produces CAN inputs that realistically represent the state of the SDC in the real world. This result is critically important for increasing the automation and effectiveness of simulation-based CAN bus regression testing for SDCs.",
+    "citation_count": 16,
+    "reference_count": 17,
+    "url": "https://dblp.org/rec/conf/kbse/BirchlerRKGLHKP23",
+    "dblp_key": "conf/kbse/BirchlerRKGLHKP23",
+    "source_id": "https://openalex.org/W4388483107",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Message from the Chairs: ASE 2023.",
+    "authors": [
+      "Tegawendé F. Bissyandé",
+      "Jacques Klein",
+      "Christian Bird",
+      "Federica Sarro"
+    ],
+    "venue": "ASE",
+    "year": 2023,
+    "abstract": "On behalf of the entire conference organizing committee, it is our great pleasure to welcome you to the 38<sup xmlns:mml=\"http://www.w3.org/1998/Math/MathML\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">th</sup> edition of the IEEE/ACM International Conference on Automated Software Engineering, ASE 2023, in the Grand Duchy of Luxembourg. The ASE conference series is the premier research forum for automated software engineering research and practice. Each year it brings together researchers and practitioners from academia and industry to discuss foundations, techniques, and tools for automated analysis, design, implementation, testing, and maintenance of large software systems.",
+    "citation_count": 0,
+    "reference_count": 0,
+    "url": "https://dblp.org/rec/conf/kbse/BissyandeKBS23",
+    "dblp_key": "conf/kbse/BissyandeKBS23",
+    "source_id": "https://openalex.org/W4388502384",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "MUT4SLX: Fast Mutant Generation for Simulink.",
+    "authors": [
+      "Halil Ibrahim Ceylan",
+      "Onur Kilinççeker",
+      "Mutlu Beyazit",
+      "Serge Demeyer"
+    ],
+    "venue": "ASE",
+    "year": 2023,
+    "abstract": "Several experience reports illustrate that mutation testing is capable of supporting a “shift-left” testing strategy for software systems coded in textual programming languages like C++. For graphical modelling languages like Simulink, such experience reports are missing, primarily because of a lack of adequate tool support. In this paper, we present a proof-of-concept (named MUT4S LX) for automatic mutant generation and test execution of Simulink models. MUT14SLX features 15 mutation operators which are modelled after realistic faults (mined from an industrial bug database) and are fast to inject (because we only replace parameter values within blocks). An experimental evaluation on a sample project (a Helicopter Control System) demonstrates that MUT4SLX is capable of injecting 70 mutants in less than a second, resulting in a total analysis time of 8.14 hours.",
+    "citation_count": 1,
+    "reference_count": 8,
+    "url": "https://dblp.org/rec/conf/kbse/CeylanKBD23",
+    "dblp_key": "conf/kbse/CeylanKBD23",
+    "source_id": "https://openalex.org/W4388483270",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "ESRO: Experience Assisted Service Reliability against Outages.",
+    "authors": [
+      "Sarthak Chakraborty",
+      "Shubham Agarwal 0007",
+      "Shaddy Garg",
+      "Abhimanyu Sethia",
+      "Udit Narayan Pandey",
+      "Videh Aggarwal",
+      "Shiv Kumar Saini"
+    ],
+    "venue": "ASE",
+    "year": 2023,
+    "abstract": "Modern cloud services are prone to failures due to their complex architecture, making diagnosis a critical process. Site Reliability Engineers (SREs) spend hours leveraging multiple sources of data, including the alerts, error logs, and domain expertise through past experiences to locate the root cause(s). These experiences are documented as natural language text in outage reports for previous outages. However, utilizing the raw yet rich semi-structured information in the reports systematically is time-consuming. Structured information, on the other hand, such as alerts that are often used during fault diagnosis, is voluminous and requires expert knowledge to discern. Several strategies have been proposed to use each source of data separately for root cause analysis. In this work, we build a diagnostic service called ESRO that recommends root causes and remediation for failures by utilizing structured as well as semi-structured sources of data systematically. ESRO constructs a causal graph using alerts and a knowledge graph using outage reports, and merges them in a novel way to form a unified graph during training. A retrieval based mechanism is then used to search the unified graph and rank the likely root causes and remediation techniques based on the alerts fired during an outage at inference time. Not only the individual alerts, but their respective importance in predicting an outage group is taken into account during recommendation. We evaluated our model on several cloud service outages of a large SaaS enterprise over the course of ~2 years, and obtained an average improvement of 27% in rouge scores after comparing the likely root causes against the ground truth over state-of-the-art baselines. We further establish the effectiveness of ESRO through qualitative analysis on multiple real outage examples.",
+    "citation_count": 3,
+    "reference_count": 40,
+    "url": "https://dblp.org/rec/conf/kbse/ChakrabortyAGSPAS23",
+    "dblp_key": "conf/kbse/ChakrabortyAGSPAS23",
+    "source_id": "https://openalex.org/W4388502422",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Characterizing Flaky Tests in Node.js Applications.",
+    "authors": [
+      "Xiaoning Chang",
+      "Zheheng Liang",
+      "Guoquan Wu",
+      "Yu Gao 0002",
+      "Wei Chen 0018",
+      "Jun Wei 0001",
+      "Zhenyue Long",
+      "Lei Cui",
+      "Tao Huang 0001"
+    ],
+    "venue": "ASE",
+    "year": 2023,
+    "abstract": "Regression testing is an important means of assessing the quality of Node.js applications. However, non-deterministic executions inside Node.js framework could make test cases intermittently pass or fail on the same version of code, which are called flaky tests. Flaky tests can cause unreliable test results, and make developers waste a significant amount of time debugging the bugs that do not belong to the target application. In this paper, we conduct an empirical study on 87 flaky tests from 7 popular Node.js applications, and analyze the non-determinism that causes these flaky tests. Through this study, there is a wide range of non-determinism to cause flaky tests, including non-deterministic event triggering order, non-deterministic function calls, non-deterministic process/thread scheduling order, non-deterministic execution of asynchronous tasks and non-deterministic event triggering data. The result reveals that, existing approaches on event race detection are not sufficient for flaky test detection. In future, researchers can design flaky test detection approaches targeted at different categories of non-determinism.",
+    "citation_count": 0,
+    "reference_count": 11,
+    "url": "https://dblp.org/rec/conf/kbse/ChangLWGCWLCH23",
+    "dblp_key": "conf/kbse/ChangLWGCWLCH23",
+    "source_id": "https://openalex.org/W4388483362",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "RJoules: An Energy Measurement Tool for R.",
+    "authors": [
+      "Rajrupa Chattaraj",
+      "Sridhar Chimalakonda"
+    ],
+    "venue": "ASE",
+    "year": 2023,
+    "abstract": "With the exponential growth of data, the demand for effective data analysis tools has increased significantly. R language, known for its statistical modeling and data analysis capabilities, has become one of the most popular programming languages among data scientists and researchers. As the importance of energy-aware software systems continues to rise, several studies investigate the impact of source code and different stages of machine learning model training on energy consumption. However, existing studies in this domain primarily focus on programming languages like Python and Java, resulting in a lack of energy measuring tools for other programming languages such as R. To address this gap, we propose “RJoules”, a tool designed to measure the energy consumption of R code snippets. We evaluate the correctness and performance of RJoules by applying it to four machine learning algorithms on three different systems. Our aim is to support developers and practitioners in building energy-aware systems in R. The demonstration of the tool is available at https://youtu.be/yMKFuvAM-DE and related artifacts at https://rishalab.github.io/RJoules/.",
+    "citation_count": 2,
+    "reference_count": 16,
+    "url": "https://dblp.org/rec/conf/kbse/ChattarajC23",
+    "dblp_key": "conf/kbse/ChattarajC23",
+    "source_id": "https://openalex.org/W4388483812",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "An Integrated Program Analysis Framework for Graduate Courses in Programming Languages and Software Engineering.",
+    "authors": [
+      "Prantik Chatterjee",
+      "Pankaj Kumar Kalita",
+      "Sumit Lahiri",
+      "Sujit Kumar Muduli",
+      "Vishal Singh",
+      "Gourav Takhar",
+      "Subhajit Roy 0001"
+    ],
+    "venue": "ASE",
+    "year": 2023,
+    "abstract": "Abstract Array programming provides a powerful, compact and expressive syntax for accessing, manipulating and operating on data in vectors, matrices and higher-dimensional arrays. NumPy is the primary array programming library for the Python language. It has an essential role in research analysis pipelines in fields as diverse as physics, chemistry, astronomy, geoscience, biology, psychology, materials science, engineering, finance and economics. For example, in astronomy, NumPy was an important part of the software stack used in the discovery of gravitational waves 1 and in the first imaging of a black hole 2 . Here we review how a few fundamental array concepts lead to a simple and powerful programming paradigm for organizing, exploring and analysing scientific data. NumPy is the foundation upon which the scientific Python ecosystem is constructed. It is so pervasive that several projects, targeting audiences with specialized needs, have developed their own NumPy-like interfaces and array objects. Owing to its central position in the ecosystem, NumPy increasingly acts as an interoperability layer between such array computation libraries and, together with its application programming interface (API), provides a flexible framework to support the next decade of scientific and industrial analysis.",
+    "citation_count": 22065,
+    "reference_count": 41,
+    "url": "https://dblp.org/rec/conf/kbse/ChatterjeeKLMSTR23",
+    "dblp_key": "conf/kbse/ChatterjeeKLMSTR23",
+    "source_id": "https://openalex.org/W3035965352",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Fast and Reliable Program Synthesis via User Interaction.",
+    "authors": [
+      "Yanju Chen",
+      "Chenglong Wang 0005",
+      "Xinyu Wang 0006",
+      "Osbert Bastani",
+      "Yu Feng 0001"
+    ],
+    "venue": "ASE",
+    "year": 2023,
+    "abstract": "The performance of programming-by-example systems varies significantly across different tasks and even across different examples in one task. The key issue is that the search space depends on the given examples in a complex way. In particular, scalable synthesizers typically rely on a combination of machine learning to prioritize search order and deduction to prune search space, making it hard to quantitatively reason about how much an example speeds up the search. We propose a novel approach for quantifying the effectiveness of an example at reducing synthesis time. Based on this technique, we devise an algorithm that actively queries the user to obtain additional examples that significantly reduce synthesis time. We evaluate our approach on 30 challenging benchmarks across two different data science domains. Even with ineffective initial user-provided examples for pruning, our approach on average achieves a 6.0× speed-up in synthesis time compared to state-of-the-art synthesizers.",
+    "citation_count": 5,
+    "reference_count": 54,
+    "url": "https://dblp.org/rec/conf/kbse/ChenWWBF23",
+    "dblp_key": "conf/kbse/ChenWWBF23",
+    "source_id": "https://openalex.org/W4388483808",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Dynamic Graph Neural Networks-Based Alert Link Prediction for Online Service Systems.",
+    "authors": [
+      "Yiru Chen",
+      "Chenxi Zhang 0003",
+      "Zhen Dong",
+      "Dingyu Yang",
+      "Xin Peng 0001",
+      "Jiayu Ou",
+      "Hong Yang",
+      "Zheshun Wu",
+      "Xiaojun Qu",
+      "Wei Li 0075"
+    ],
+    "venue": "ASE",
+    "year": 2023,
+    "abstract": "A fault in large online service systems often triggers numerous alerts due to the complex business and component dependencies among services, which is known as “alert storm”. In a short time, an online service system may generate a huge amount of alert data. This poses a challenge for on-call engineers to identify alerts that are associated with a system failure for root cause analysis. In this paper, we propose DyAlert, a dynamic graph neural networks-based approach for linking alerts that might be triggered by a same fault to reduce the burden of on-call engineers in the fault analysis. Our insight is that alerts are often triggered by alert propagation when a system failure occurs, e.g., alert <tex xmlns:mml=\"http://www.w3.org/1998/Math/MathML\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">$a$</tex> would lead to the occurrence of alert <tex xmlns:mml=\"http://www.w3.org/1998/Math/MathML\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">$b$</tex> . Whether two alerts should be linked depends on if one alert is triggered by the propagation of the other. Leveraging this insight, we design a dynamic graph (namely Alert-Metric Dynamic Graph) that describes the propagation process of alerts. Based on the dynamic graph, we train a neural networks-based model to predict alert links. We evaluate DyAlert with real-world data collected from an online service system running 85 business units and about 30,000 different services in a large enterprise. The results show that DyAlert is effective in predicting alert links and it outperforms the state-of-the-art approaches with an average increase of 0.259 in F1-score.",
+    "citation_count": 3,
+    "reference_count": 36,
+    "url": "https://dblp.org/rec/conf/kbse/ChenZDYPOYWQL23",
+    "dblp_key": "conf/kbse/ChenZDYPOYWQL23",
+    "source_id": "https://openalex.org/W4388483635",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Detection of Java Basic Thread Misuses Based on Static Event Analysis.",
+    "authors": [
+      "Baoquan Cui",
+      "Miaomiao Wang",
+      "Chi Zhang",
+      "Jiwei Yan",
+      "Jun Yan 0009",
+      "Jian Zhang 0001"
+    ],
+    "venue": "ASE",
+    "year": 2023,
+    "abstract": "The fundamental asynchronous thread (java.lang. Thread) in Java can be easily misused, due to the lack of deep understanding for garbage collection and thread interruption mechanism. For example, a careless implementation of asynchronous thread may cause no response to the interrupt mechanism in time, resulting in unexpected thread-related behaviors, especially resource leak/waste. Currently, few works aim at these misuses and related works adopt either the dynamic approach which lacks effective inputs or the static path-sensitive approach with high time consumption due to the path explosion, causing false negatives. We have found that the behavior of threads and the interaction between threads and its referencing objects can be abstracted. In this paper, we propose an event analysis approach to detect the defects in Java programs and Android apps, which focuses on the existence or the order of the events to reduce the false negatives. We extract the misuse-related events, containing the thread events and the destroy events of the object referenced by the thread. Then we analyze the events with loop identification, happens-before relationship construction and alias determination. Finally, we implement an automatic tool named Leopard and evaluate it on real world Java programs and Android apps. Experiments show that it is efficient when comparing with the existing approach (misuse: 723 vs 47, time: 60s vs 30min), which also outperforms the existing work in precision. The manual check indicates that Leopard is more efficient and effective than existing work. Besides, 66 issues reported by us have been confirmed and 21 of them have been fixed by developers.",
+    "citation_count": 4,
+    "reference_count": 39,
+    "url": "https://dblp.org/rec/conf/kbse/CuiWZYYZ23",
+    "dblp_key": "conf/kbse/CuiWZYYZ23",
+    "source_id": "https://openalex.org/W4388483168",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "COMEX: A Tool for Generating Customized Source Code Representations.",
+    "authors": [
+      "Debeshee Das",
+      "Noble Saji Mathews",
+      "Alex Mathai",
+      "Srikanth Tamilselvam",
+      "Kranthi Sedamaki",
+      "Sridhar Chimalakonda",
+      "Atul Kumar 0002"
+    ],
+    "venue": "ASE",
+    "year": 2023,
+    "abstract": "Learning effective representations of source code is critical for any Machine Learning for Software Engineering (ML4SE) system. Inspired by natural language processing, large language models (LLMs) like Codex and CodeGen treat code as generic sequences of text and are trained on huge corpora of code data, achieving state of the art performance on several software engineering (SE) tasks. However, valid source code, unlike natural language, follows a strict structure and pattern governed by the underlying grammar of the programming language. Current LLMs do not exploit this property of the source code as they treat code like a sequence of tokens and overlook key structural and semantic properties of code that can be extracted from code-views like the Control Flow Graph (CFG), Data Flow Graph (DFG), Abstract Syntax Tree (AST), etc. Unfortunately, the process of generating and integrating code-views for every programming language is cumbersome and time consuming. To overcome this barrier, we propose our tool COMEX - a framework that allows researchers and developers to create and combine multiple code-views which can be used by machine learning (ML) models for various SE tasks. Some salient features of our tool are: (i) it works directly on source code (which need not be compilable), (ii) it currently supports Java and C#, (iii) it can analyze both method-level snippets and program-level snippets by using both intra-procedural and inter-procedural analysis, and (iv) it is easily extendable to other languages as it is built on tree-sitter - a widely used incremental parser that supports over 40 languages. We believe this easy-to-use code-view generation and customization tool will give impetus to research in source code representation learning methods and ML4SE. The source code and demonstration of our tool can be found at https://github.com/IBM/tree-sitter-codeviews and https://youtu.be/GER6U87FVbU, respectively.",
+    "citation_count": 5,
+    "reference_count": 23,
+    "url": "https://dblp.org/rec/conf/kbse/DasMMTSCK23",
+    "dblp_key": "conf/kbse/DasMMTSCK23",
+    "source_id": "https://openalex.org/W4388483033",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Challenges of Accurate and Efficient AutoML.",
+    "authors": [
+      "Swarnava Dey",
+      "Avik Ghose",
+      "Soumik Das"
+    ],
+    "venue": "ASE",
+    "year": 2023,
+    "abstract": "Embedded Artificial Intelligence (AI) is becoming increasingly important in the field of healthcare where such AI enabled devices are utilized to assist physicians, clinicians, and surgeons in their diagnosis, rehabilitation and therapy planning. However, it is still a challenging task to come up with an accurate and efficient machine learning model for resource-limited devices that work <tex xmlns:mml=\"http://www.w3.org/1998/Math/MathML\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">$24\\times 7$</tex> .. It requires both intuition and experience. This dependence on human expertise and reliance on trial-and-error-based design methods create impediments to the standard processes of effort estimation, design phase planning, and generating service-level agreements for projects that involve AI-enabled MedTech devices. In this paper, we present AutoML search from an algorithmic perspective, instead of a more prevalent optimization or black-box tool view. We briefly present and point to case studies that demonstrate the efficacy of the automation approach in terms of productivity improvements. We believe that our proposed method can make AutoML more amenable to the applications of software engineering principles and also accelerate biomedical device engineering, where there is a high dependence on skilled human resources.",
+    "citation_count": 6,
+    "reference_count": 37,
+    "url": "https://dblp.org/rec/conf/kbse/DeyGD23",
+    "dblp_key": "conf/kbse/DeyGD23",
+    "source_id": "https://openalex.org/W4388502411",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "A Comparative Study of Transformer-Based Neural Text Representation Techniques on Bug Triaging.",
+    "authors": [
+      "Atish Kumar Dipongkor",
+      "Kevin Moran"
+    ],
+    "venue": "ASE",
+    "year": 2023,
+    "abstract": "Bug report management has been shown to be an important and time consuming software maintenance task. Often, the first step in managing bug reports is related to triaging a bug to the appropriate developer who is best suited to understand, localize, and fix the target bug. Additionally, assigning a given bug to a particular part of a software project can help to expedite the fixing process. However, despite the importance of these activities, they are quite challenging, where days can be spent on the manual triaging process. Past studies have attempted to leverage the limited textual data of bug reports to train text classification models that automate this process - to varying degrees of success. However, the textual representations and machine learning models used in prior work are limited by their expressiveness, often failing to capture nuanced textual patterns that might otherwise aid in the triaging process. Recently, large, transformer-based, pre-tained neural text representation techniques (i.e., large language models or LLMs) such as BERT and CodeBERT have achieved greater performance with simplified training procedures in several natural language processing tasks, including text classification. However, the potential for using these techniques to improve upon prior approaches for automated bug triaging is not well studied or understood. Therefore, in this paper we offer one of the first investigations that fine-tunes transformer-based language models for the task of bug triaging on four open source datasets, spanning a collective 53 years of development history with over 400 developers and over 150 software project components. Our study includes both a quantitative and qualitative analysis of effectiveness. Our findings illustrate that DeBERTa is the most effective technique across the triaging tasks of developer and component assignment, and the measured performance delta is statistically significant compared to other techniques. However, through our qualitative analysis, we also observe that each technique possesses unique abilities best suited to certain types of bug reports.",
+    "citation_count": 10,
+    "reference_count": 52,
+    "url": "https://dblp.org/rec/conf/kbse/DipongkorM23",
+    "dblp_key": "conf/kbse/DipongkorM23",
+    "source_id": "https://openalex.org/W4388502414",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Merge Conflict Resolution: Classification or Generation?",
+    "authors": [
+      "Jinhao Dong",
+      "Qihao Zhu",
+      "Zeyu Sun 0004",
+      "Yiling Lou",
+      "Dan Hao 0001"
+    ],
+    "venue": "ASE",
+    "year": 2023,
+    "abstract": null,
+    "citation_count": null,
+    "reference_count": null,
+    "url": "https://dblp.org/rec/conf/kbse/DongZSLH23",
+    "dblp_key": "conf/kbse/DongZSLH23",
+    "source_id": null,
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Persisting and Reusing Results of Static Program Analyses on a Large Scale.",
+    "authors": [
+      "Johannes Düsing",
+      "Ben Hermann"
+    ],
+    "venue": "ASE",
+    "year": 2023,
+    "abstract": "Static Program Analysis (SPA) has long been established as an important technique for gaining insights into software systems. Over the last years, analysis designers increasingly produced analyses that are compositional, collaborative, or incremental in nature - thus relying on some form of existing results to increase performance or even precision. However, systematic result reuse is still rare in this field even though the analyzed software is mainly composed of reusable software components. For this work, we study 40 state-of-the-art SPA implementations and find that there is a tremendous potential for reusing analysis results. We attribute this to the fact that there is no systematic process in place for persisting and sharing analysis results and propose such a process here to fill this gap. In this paper, we present SPARRI, a prototype implementation providing an HTTP API to publish, search, and reuse SPA results. Our evaluation shows that reusing existing results with SPARRI can improve analysis performance by up to 92%. Furthermore, we see potential in applying it to other research areas like empirical software studies. benchmark creation. and artifact evaluation.",
+    "citation_count": 1,
+    "reference_count": 68,
+    "url": "https://dblp.org/rec/conf/kbse/DusingH23",
+    "dblp_key": "conf/kbse/DusingH23",
+    "source_id": "https://openalex.org/W4388483239",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "From Commit Message Generation to History-Aware Commit Message Completion.",
+    "authors": [
+      "Aleksandra Eliseeva",
+      "Yaroslav Sokolov",
+      "Egor Bogomolov",
+      "Yaroslav Golubev",
+      "Danny Dig",
+      "Timofey Bryksin"
+    ],
+    "venue": "ASE",
+    "year": 2023,
+    "abstract": "Commit messages are crucial to software development, allowing developers to track changes and collaborate effectively. Despite their utility, most commit messages lack important information since writing high-quality commit messages is tedious and time-consuming. The active research on commit message generation (CMG) has not yet led to wide adoption in practice. We argue that if we could shift the focus from commit message generation to commit message completion and use previous commit history as additional context, we could significantly improve the quality and the personal nature of the resulting commit messages. In this paper, we propose and evaluate both of these novel ideas. Since the existing datasets lack historical data, we collect and share a novel dataset called CommitChronicle, containing 10.7M commits across 20 programming languages. We use this dataset to evaluate the completion setting and the usefulness of the historical context for state-of-the-art CMG models and GPT-3.5-turbo. Our results show that in some contexts, commit message completion shows better results than generation, and that while in general GPT-3.5-turbo performs worse, it shows potential for long and detailed messages. As for the history, the results show that historical information improves the performance of CMG models in the generation task, and the performance of GPT-3.5-turbo in both generation and completion.",
+    "citation_count": 22,
+    "reference_count": 72,
+    "url": "https://dblp.org/rec/conf/kbse/EliseevaSBGDB23",
+    "dblp_key": "conf/kbse/EliseevaSBGDB23",
+    "source_id": "https://openalex.org/W4388483433",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "RPCover: Recovering gRPC Dependency in Multilingual Projects.",
+    "authors": [
+      "Aoyang Fang",
+      "Ruiyu Zhou",
+      "Xiaoying Tang 0002",
+      "Pinjia He"
+    ],
+    "venue": "ASE",
+    "year": 2023,
+    "abstract": "The advent of microservice architecture has led to a significant shift in the development of service-oriented software. In particular, the use of Remote Procedure Call (RPC), a mode of Inter-Process Communication (IPC) prevalent in microservices, has noticeably increased. To figure out the relationships between services and obtain a high-level understanding of service-oriented software, a line of recent work focuses on the dynamic construction of service call graphs, which relies on the preliminary deployment of services and only captures the calling relationships within a specific time frame. Meanwhile, static methods avoid the need for pre-deployment and often provide a more stable and complete graph compared to dynamic techniques. However, research and practical applications of static call graph construction remain relatively unexplored. This paper introduces RPCover, a novel gRPC dependency recovery framework that facilitates the interconnection of services across various programming languages using their static gRPC calls. In addition, due to the lack of a multilingual microservice benchmark that uses gRPC, we build the first multilingual benchmark RPCoverBench that contains complex gRPC call relations. RPCover has been evaluated on a single language benchmark (DeathStarBench) and our multilingual benchmark (RPCoverBench). The results show that RPCover effectively recovers 99.33% of the use cases of gRPC calls with less than 200% of the overhead compared with a single-language semantic dependency analyzer.",
+    "citation_count": 2,
+    "reference_count": 30,
+    "url": "https://dblp.org/rec/conf/kbse/FangZTH23",
+    "dblp_key": "conf/kbse/FangZTH23",
+    "source_id": "https://openalex.org/W4388483180",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Towards Autonomous Testing Agents via Conversational Large Language Models.",
+    "authors": [
+      "Robert Feldt",
+      "Sungmin Kang",
+      "Juyeon Yoon",
+      "Shin Yoo"
+    ],
+    "venue": "ASE",
+    "year": 2023,
+    "abstract": "Software testing is an important part of the development cycle, yet it requires specialized expertise and substantial developer effort to adequately test software. Recent discoveries of the capabilities of large language models (LLMs) suggest that they can be used as automated testing assistants, and thus provide helpful information and even drive the testing process. To highlight the potential of this technology, we present a taxonomy of LLM-based testing agents based on their level of autonomy, and describe how a greater level of autonomy can benefit developers in practice. An example use of LLMs as a testing assistant is provided to demonstrate how a conversational framework for testing can help developers. This also highlights how the often criticized “hallucination” of LLMs can be beneficial for testing. We identify other tangible benefits that LLM-driven testing agents can bestow, and also discuss potential limitations.",
+    "citation_count": 36,
+    "reference_count": 42,
+    "url": "https://dblp.org/rec/conf/kbse/FeldtKYY23",
+    "dblp_key": "conf/kbse/FeldtKYY23",
+    "source_id": "https://openalex.org/W4388483618",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Towards a Formal Framework for Normative Requirements Elicitation.",
+    "authors": [
+      "Nick Feng",
+      "Lina Marsso",
+      "Sinem Getir Yaman",
+      "Beverley A. Townsend",
+      "Ana Cavalcanti 0001",
+      "Radu Calinescu",
+      "Marsha Chechik"
+    ],
+    "venue": "ASE",
+    "year": 2023,
+    "abstract": "As software and cyber-physical systems interacting with humans become prevalent in domains such as healthcare, education and customer service, software engineers need to consider normative (i.e., social, legal, ethical, empathetic and cultural) requirements. However, their elicitation is challenging, as they must reflect the often conflicting or redundant views of stakeholders ranging from users and operators to lawyers, ethicists and regulators. To address this challenge, we introduce a tool-supported Formal framework for normaTive requirements elicitation (FormaTive). It allows specification of normative rules for a software system in an intuitive high-level language, and automates: (i) the mapping of the rules to an internal formal representation; (ii) their analysis to identify rule conflicts, redundancies, and concerns; and (iii) the synthesis of feedback enabling users to understand and resolve problems.",
+    "citation_count": 12,
+    "reference_count": 22,
+    "url": "https://dblp.org/rec/conf/kbse/FengMYTCCC23",
+    "dblp_key": "conf/kbse/FengMYTCCC23",
+    "source_id": "https://openalex.org/W4388482993",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "What Makes Good In-Context Demonstrations for Code Intelligence Tasks with LLMs?",
+    "authors": [
+      "Shuzheng Gao",
+      "Xin-Cheng Wen",
+      "Cuiyun Gao 0001",
+      "Wenxuan Wang 0001",
+      "Hongyu Zhang 0002",
+      "Michael R. Lyu"
+    ],
+    "venue": "ASE",
+    "year": 2023,
+    "abstract": "Pre-trained models of source code have gained widespread popularity in many code intelligence tasks. Recently, with the scaling of the model and corpus size, large language models have shown the ability of in-context learning (ICL). ICL employs task instructions and a few examples as demonstrations, and then inputs the demonstrations to the language models for making predictions. This new learning paradigm is training-free and has shown impressive performance in various natural language processing and code intelligence tasks. However, the performance of ICL heavily relies on the quality of demonstrations, e.g., the selected examples. It is important to systematically investigate how to construct a good demonstration for code-related tasks. In this paper, we empirically explore the impact of three key factors on the performance of ICL in code intelligence tasks: the selection, order, and number of demonstration examples. We conduct extensive experiments on three code intelligence tasks including code summarization, bug fixing, and program synthesis. Our experimental results demonstrate that all the above three factors dramatically impact the performance of ICL in code intelligence tasks. Additionally, we summarize our findings and provide takeaway suggestions on how to construct effective demonstrations, taking into account these three perspectives. We also show that a carefully-designed demonstration based on our findings can lead to substantial improvements over widely-used demonstration construction methods, e.g., improving BLEU-4, EM, and EM by at least 9.90%, 175.96%, and 50.81% on code summarization, bug fixing, and program synthesis, respectively",
+    "citation_count": 140,
+    "reference_count": 78,
+    "url": "https://dblp.org/rec/conf/kbse/GaoWGWZL23",
+    "dblp_key": "conf/kbse/GaoWGWZL23",
+    "source_id": "2304.07575v2",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Mutation-based Fault Localization of Deep Neural Networks.",
+    "authors": [
+      "Ali Ghanbari 0001",
+      "Deepak-George Thomas",
+      "Muhammad Arbab Arshad",
+      "Hridesh Rajan"
+    ],
+    "venue": "ASE",
+    "year": 2023,
+    "abstract": "Deep neural networks (DNNs) are susceptible to bugs, just like other types of software systems. A significant uptick in using DNN, and its applications in wide-ranging areas, including safety-critical systems, warrant extensive research on software engineering tools for improving the reliability of DNN-based systems. One such tool that has gained significant attention in the recent years is DNN fault localization. This paper revisits mutation-based fault localization in the context of DNN models and proposes a novel technique, named deepmufl, applicable to a wide range of DNN models. We have implemented deepmufl and have evaluated its effectiveness using 109 bugs obtained from StackOverflow. Our results show that deepmufl detects 53/109 of the bugs by ranking the buggy layer in top-1 position, outperforming state-of-the-art static and dynamic DNN fault localization systems that are also designed to target the class of bugs supported by deepmufl. Moreover, we observed that we can halve the fault localization time for a pre-trained model using mutation selection, yet losing only 7.55% of the bugs localized in ton-1 position.",
+    "citation_count": 20,
+    "reference_count": 69,
+    "url": "https://dblp.org/rec/conf/kbse/GhanbariTAR23",
+    "dblp_key": "conf/kbse/GhanbariTAR23",
+    "source_id": "https://openalex.org/W4388483172",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Merge-Replay: Efficient IFDS-Based Taint Analysis by Consolidating Equivalent Value Flows.",
+    "authors": [
+      "Yujiang Gui",
+      "Dongjie He",
+      "Jingling Xue"
+    ],
+    "venue": "ASE",
+    "year": 2023,
+    "abstract": "The IFDS-based taint analysis employs two mutually iterative passes: a forward pass that identifies taints and a backward pass that detects aliases. This approach ensures both flow and context sensitivity, leading to remarkable precision. To preserve flow sensitivity, the IFDS-based taint analysis enhances data abstractions with activation statements that pinpoint the moment they acquire taint. Nonetheless, this mechanism can inadvertently introduce equivalent, yet redundant, value flows. This occurs when distinct activation statements are linked with the same data abstraction, resulting in unnecessary computational and memory-intensive demands on the analysis process. We introduce MergeDroid, a novel approach to improve the efficiency of IFDS-based taint analysis by consolidating equivalent value flows. This involves merging activation statements linked to the same data abstraction from various reachable data facts that are reachable at a given program point during the backward pass. This process generates a representative symbolic activation statement applicable to all equivalent data facts, reducing them to a single symbolic data fact. During the forward pass, when this symbolic data fact returns to its point of creation, the analysis reverts to the original data facts alongside their initial activation statements. This merge-and-replay strategy eliminates redundant value flow propagation, resulting in performance gains. Furthermore, we also improve analysis efficiency and precision by leveraging context-sensitive insights from activation statements. Our evaluation on 40 Android apps demonstrates that MergeDroid significantly enhances IFDS-based taint analysis performance. On average, MergeDroid accelerates analysis by 9.0× while effectively handling 6 more apps scalably. Additionally, it reduces false positives by significantly decreasing reported leak warnings, achieving an average reduction of 19.2%.",
+    "citation_count": 7,
+    "reference_count": 44,
+    "url": "https://dblp.org/rec/conf/kbse/GuiHX23",
+    "dblp_key": "conf/kbse/GuiHX23",
+    "source_id": "https://openalex.org/W4388483262",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "An Empirical Study of Malicious Code In PyPI Ecosystem.",
+    "authors": [
+      "Wenbo Guo 0011",
+      "Zhengzi Xu",
+      "Chengwei Liu",
+      "Cheng Huang 0003",
+      "Yong Fang 0002",
+      "Yang Liu 0003"
+    ],
+    "venue": "ASE",
+    "year": 2023,
+    "abstract": "PyPI provides a convenient and accessible package management platform to developers, enabling them to quickly implement specific functions and improve work efficiency. However, the rapid development of the PyPI ecosystem has led to a severe problem of malicious package propagation. Malicious developers disguise malicious packages as normal, posing a significant security risk to end-users. To this end, we conducted an empirical study to understand the characteristics and current state of the malicious code lifecycle in the PyPI ecosystem. We first built an automated data collection framework and collated a multi-source malicious code dataset containing 4,669 malicious package files. We preliminarily classified these malicious code into five categories based on malicious behaviour characteristics. Our research found that over 50 % of malicious code exhibits multiple malicious behaviours, with information stealing and command execution being particularly prevalent. In addition, we observed several novel attack vectors and anti-detection techniques. Our analysis revealed that 74.81 % of all malicious packages successfully entered end-user projects through source code installation, thereby increasing security risks. A real-world investigation showed that many reported malicious packages persist in PyPI mirror servers globally, with over 72 % remaining for an extended period after being discovered. Finally, we sketched a portrait of the malicious code lifecycle in the PyPI ecosystem, effectively reflecting the characteristics of malicious code at different stages. We also present some suggested mitigations to improve the security of the Python open-source ecosystem.",
+    "citation_count": 32,
+    "reference_count": 29,
+    "url": "https://dblp.org/rec/conf/kbse/GuoXLHFL23",
+    "dblp_key": "conf/kbse/GuoXLHFL23",
+    "source_id": "https://openalex.org/W4388502419",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Hot Patching Hot Fixes: Reflection and Perspectives.",
+    "authors": [
+      "Carol Hanna",
+      "Justyna Petke"
+    ],
+    "venue": "ASE",
+    "year": 2023,
+    "abstract": "With our reliance on software continuously increasing, it is of utmost importance that it be reliable. However, complete prevention of bugs in live systems is unfortunately an impossible task due to time constraints, incomplete testing, and developers not having knowledge of the full stack. As a result, mitigating risks for systems in production through hot patching and hot fixing has become an integral part of software development. In this paper, we first give an overview of the terminology used in the literature for research on this topic. Subsequently, we build upon these findings and present our vision for an automated framework for predicting and mitigating critical software issues at runtime. Our framework combines hot patching and hot fixing research from multiple fields, in particular: software defect and vulnerability prediction, automated test generation and repair, as well as runtime patching. We hope that our vision inspires research collaboration between the different communities.",
+    "citation_count": 4,
+    "reference_count": 75,
+    "url": "https://dblp.org/rec/conf/kbse/HannaP23",
+    "dblp_key": "conf/kbse/HannaP23",
+    "source_id": "https://openalex.org/W4388483120",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "SmartCoCo: Checking Comment-Code Inconsistency in Smart Contracts via Constraint Propagation and Binding.",
+    "authors": [
+      "Sicheng Hao 0001",
+      "Yuhong Nan",
+      "Zibin Zheng",
+      "Xiaohui Liu"
+    ],
+    "venue": "ASE",
+    "year": 2023,
+    "abstract": "Smart contracts are programs running on the blockchain. Comments in source code provide meaningful information for developers to facilitate code writing and understanding. Given various kinds of token standards in smart contracts (e.g., ERC-20, ERC-721), developers often copy&paste code from other projects as templates, and then implement their own logic as add-ons to such templates. In many cases, the consistency between code and comment is not well-aligned, leading to comment-code inconsistencies (as we call CCIs). Such inconsistencies can mislead developers and users, and even introduce vulnerabilities to the contracts. In this paper, we present SmartCoCo, a novel framework to detect comment-code inconsistencies in smart contracts. In particular, our research focuses on comments related to roles, parameters, and events that may lead to security implications. To achieve this, SmartCoCo takes the original smart contract source code as input and automatically analyzes the comment and code to find potential inconsistencies. SmartCoCo associates comment constraints and code facts via a set of propagation and binding strategies, allowing it to effectively discover inconsistencies with more contextual information. We evaluated SmartCoCo on 101,780 unique smart contracts on Ethereum. The evaluation result shows that SmartCoCo achieves good effectiveness and efficiency. In particular, SmartCoCo reports 4,732 inconsistencies from 1,745 smart contracts, with a precision of over 79% on 439 manual-labeled comment-code inconsistencies. Meanwhile, it only takes 2.64 seconds to check a smart contract on average.",
+    "citation_count": 7,
+    "reference_count": 59,
+    "url": "https://dblp.org/rec/conf/kbse/HaoNZL23",
+    "dblp_key": "conf/kbse/HaoNZL23",
+    "source_id": "https://openalex.org/W4388483860",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Understanding and Enhancing Issue Prioritization in GitHub.",
+    "authors": [
+      "Yingying He",
+      "Wenhua Yang 0001",
+      "Minxue Pan",
+      "Yasir Hussain",
+      "Yu Zhou 0010"
+    ],
+    "venue": "ASE",
+    "year": 2023,
+    "abstract": "GitHub has become a prominent platform for open source software development, facilitating collaboration and communication among a diverse group of contributors. Efficient issue tracking is a crucial aspect of managing projects on GitHub, and labels serve as one of the primary mechanisms for issue prioritization, while various other issue features are also utilized by issue handlers for the same purpose. However, in large projects, prioritizing issues remains a challenge, and the efficacy of using labels or other issue features for prioritization is not well understood. To address this knowledge gap, we conduct a comprehensive empirical study that investigates the role of labels in GitHub issue prioritization, examines the influence of various issue features on prioritization, and assesses the performance of different ranking algorithms based on these impactful features. Our study, conducted on a dataset comprising data from over 1.5 million issues across diverse GitHub projects, provides valuable insights for issue handling in open source platforms and offers guidance for future research in this domain. Specifically, the study reveals the limited effectiveness of labels in issue prioritization, highlights the significance of certain issue features in the prioritization process, and compares the performance of various ranking algorithms for issue prioritization to support issue handlers.",
+    "citation_count": 8,
+    "reference_count": 44,
+    "url": "https://dblp.org/rec/conf/kbse/HeYPHZ23",
+    "dblp_key": "conf/kbse/HeYPHZ23",
+    "source_id": "https://openalex.org/W4388483063",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "The MAP Metric in Information Retrieval Fault Localization.",
+    "authors": [
+      "Thomas Hirsch",
+      "Birgit Hofer"
+    ],
+    "venue": "ASE",
+    "year": 2023,
+    "abstract": "The MAP (Mean Average Precision) metric is one of the most popular performance metrics in the field of Information Retrieval Fault Localization (IRFL). However, there are problematic implementations of this MAP metric used in IRFL research. These implementations deviate from the text book definitions of MAP, rendering the metric sensitive to the truncation of retrieval results and inaccuracies and impurities of the used datasets. The application of such a deviating metric can lead to performance overestimation. This can pose a problem for comparability, transferability, and validity of IRFL performance results. In this paper, we discuss the definition and mathematical properties of MAP and common deviations and pitfalls in its implementation. We investigate and discuss the conditions enabling such overestimation: the truncation of retrieval results in combination with ground truths spanning multiple files and improper handling of undefined AP results. We demonstrate the overestimation effects using the Bench4BL benchmark and five well known IRFL techniques. Our results indicate that a flawed implementation of the MAP metric can lead to an overestimation of the IRFL performance, in extreme cases by up to 70 %. We argue for a strict adherence to the text book version of MAP with the extension of undefined AP values to be set to 0 for all IRFL experiments. We hope that this work will help to improve comparability and transferability in IRFL research.",
+    "citation_count": 5,
+    "reference_count": 57,
+    "url": "https://dblp.org/rec/conf/kbse/HirschH23",
+    "dblp_key": "conf/kbse/HirschH23",
+    "source_id": "https://openalex.org/W4388502408",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "MUTEN: Mutant-Based Ensembles for Boosting Gradient-Based Adversarial Attack.",
+    "authors": [
+      "Qiang Hu",
+      "Yuejun Guo 0001",
+      "Maxime Cordy",
+      "Mike Papadakis",
+      "Yves Le Traon"
+    ],
+    "venue": "ASE",
+    "year": 2023,
+    "abstract": "Mutation testing (MT) for deep learning (DL) has gained huge attention in the past few years. However, how MT can really help DL is still unclear. In this paper, we introduce one promising direction for the usage of mutants. Specifically, since mutants can be seen as one kind of ensemble model and ensemble model can be used to boost the adversarial attack, we propose MUTEN, which applies the attack on mutants to improve the success rate of well-known attacks against gradient-masking models. Experimental results on MNIST, SVHN, and CIFAR-10 show that MUTEN can increase the success rate of four attacks by up to 45%. Furthermore, experiments on four defense approaches, bit-depth reduction, JPEG compression, Defensive distillation, and Label smoothing, demonstrate that MUTEN can break the defense models effectively by enhancing the attacks with the success rate of up to 96%.",
+    "citation_count": 3,
+    "reference_count": 21,
+    "url": "https://dblp.org/rec/conf/kbse/HuGCPT23",
+    "dblp_key": "conf/kbse/HuGCPT23",
+    "source_id": "https://openalex.org/W4388483745",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Identify and Update Test Cases When Production Code Changes: A Transformer-Based Approach.",
+    "authors": [
+      "Xing Hu 0008",
+      "Zhuang Liu",
+      "Xin Xia 0001",
+      "Zhongxin Liu 0002",
+      "Tongtong Xu",
+      "Xiaohu Yang 0001"
+    ],
+    "venue": "ASE",
+    "year": 2023,
+    "abstract": "Software testing is one of the most essential parts of the software lifecycle and requires a substantial amount of time and effort. During the software evolution, test cases should co-evolve with the production code. However, the co-evolution of test cases often fails due to tight project schedules and other reasons. Obsolete test cases improve the cost of software maintenance and may fail to reveal faults and even lead to future bugs. Therefore, it is essential to detect and update these obsolete test cases in time. In this paper, we propose a novel approach Ceprot (Co-Evolution of Production-Test Code) to identify outdated test cases and update them automatically according to changes in the production code. Ceprot consists of two stages, i.e., obsolete test identification and updating. Specifically, given a production code change and a corresponding test case, Ceprot first identifies whether the test case should be updated. If the test is identified as obsolete, Ceprot will update it to a new version of test case. To evaluate the effectiveness of the two stages, we construct two datasets. Our dataset focuses on method-level production code changes and updates on their obsolete test cases. The experimental results show that Ceprot can effectively identify obsolete test cases with precision and recall of 98.3% and 90.0%, respectively. In addition, test cases generated by Ceprot are identical to the ground truth for 12.3% of samples that are identified as obsolete by Ceprot. We also conduct dynamic evaluation and human evaluation to measure the effectiveness of the updated test cases by Ceprot. 48.0% of updated test cases can be compiled and the average coverage of updated cases is 34.2% which achieves 89% coverage improvement over the obsolete tests. We believe that this study can motivate the co-evolution of production and test code.",
+    "citation_count": 15,
+    "reference_count": 44,
+    "url": "https://dblp.org/rec/conf/kbse/HuLXLXY23",
+    "dblp_key": "conf/kbse/HuLXLXY23",
+    "source_id": "https://openalex.org/W4388483507",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Predicting Compilation Resources for Adaptive Build in an Industrial Setting.",
+    "authors": [
+      "Junhao Hu",
+      "Chaozheng Wang",
+      "Hailiang Huang 0004",
+      "Huang Luo",
+      "Yu Jin",
+      "Yuetang Deng",
+      "Tao Xie 0001"
+    ],
+    "venue": "ASE",
+    "year": 2023,
+    "abstract": "Development teams in large companies often maintain a huge codebase whose build time can be painfully long in a single machine. To reduce the build time, tools such as Bazel and distcc are used to build the code base in a distributed way. However, in the process of distributed build, certain remote slave machines can crash due to two types of errors: Out Of Memory (OOM) and Deadline Exceeded (DE) errors. These crashes lead to time-consuming rebuilds, as suffered by the WeiXin Group (WXG) of Tencent Inc. (the vendor of WeChat, a highly popular mobile app in China). Aiming to prevent these two types of errors, in this paper, we propose a new approach named PCRLINEAR, which predicts the memory and time requirements of the given C++ file, allowing the underlying distributed build system to schedule compilation resources adaptively according to the prediction results. Our experiments show that PCRLINEAR reduces the number of OOM and DE errors from 5% to 0.2% and, at the same time, achieves substantial build-performance improvement of 30% on average.",
+    "citation_count": 1,
+    "reference_count": 11,
+    "url": "https://dblp.org/rec/conf/kbse/HuWHLJDX23",
+    "dblp_key": "conf/kbse/HuWHLJDX23",
+    "source_id": "https://openalex.org/W4388502413",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Fixing Privilege Escalations in Cloud Access Control with MaxSAT and Graph Neural Networks.",
+    "authors": [
+      "Yang Hu",
+      "Wenxi Wang",
+      "Sarfraz Khurshid",
+      "Kenneth L. McMillan",
+      "Mohit Tiwari"
+    ],
+    "venue": "ASE",
+    "year": 2023,
+    "abstract": "Identity and Access Management (IAM) is an access control service employed within cloud platforms. Customers must configure IAM to establish secure access control rules for their cloud organizations. However, IAM misconfigurations can be exploited to conduct Privilege Escalation (PE) attacks, resulting in significant financial losses. Consequently, addressing these PEs is crucial for improving security assurance for cloud customers. Nevertheless, the area of repairing IAM PEs due to IAM mis-configurations is relatively underexplored. To our knowledge, the only existing IAM repair tool called IAM-Deescalate focuses on a limited number of IAM PE patterns, indicating the potential for further enhancements. We propose a novel IAM Privilege Escalation Repair Engine called IAMPERE that efficiently generates an approximately minimal patch for repairing a broader range of IAM PEs. To achieve this, we first formulate the IAM repair problem into a MaxSAT problem. Despite the remarkable success of modern MaxSAT solvers, their scalability for solving complex repair problems remains a challenge due to the state explosion. To improve scalability, we employ deep learning to prune the search space. Specifically, we apply a carefully designed GNN model to generate an intermediate patch that is relatively small, but not necessarily minimal. We then apply a MaxSAT solver to search for a minimum repair within the space defined by the intermediate patch, as the final approximately minimum patch. Experimental results on both synthesized and real-world IAM misconfigurations show that, compared to IAM-Deescalate, IAMPERE repairs a significantly larger number of IAM misconfigurations with markedly smaller patch sizes.",
+    "citation_count": 4,
+    "reference_count": 30,
+    "url": "https://dblp.org/rec/conf/kbse/HuWKMT23",
+    "dblp_key": "conf/kbse/HuWKMT23",
+    "source_id": "https://openalex.org/W4388483794",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "ATOM: Automated Black-Box Testing of Multi-Label Image Classification Systems.",
+    "authors": [
+      "Shengyou Hu",
+      "Huayao Wu",
+      "Peng Wang 0125",
+      "Jing Chang",
+      "Yongjun Tu",
+      "Xiu Jiang",
+      "Xintao Niu",
+      "Changhai Nie"
+    ],
+    "venue": "ASE",
+    "year": 2023,
+    "abstract": "Multi-label Image Classification Systems (MICSs) developed based on Deep Neural Networks (DNNs) are extensively used in people's daily life. Currently, although there are a variety of approaches to test DNN-based systems, they typically rely on the internals of DNNs to design test cases, and do not take the core specification of MICS (i.e., correctly recognizing multiple objects in a given image) into account. In this paper, we propose ATOM, an automated and systematic black-box testing framework for testing MICS. Specifically, ATOM exploits the label combination as the testing adequacy criteria, hoping to systematically examine the impact of correlations between a fixed number of labels on the classification ability of MICS. Then, ATOM leverages image search engine and natural language processing to find test images that are not only common to the real-world, but also relevant to target label combinations. Finally, ATOM combines metamorphic testing and label information to realize test oracle identification, based on which the ability of MICS in classifying different label combinations is evaluated. To evaluate the effectiveness of ATOM, we have performed experiments on two popular datasets of MICS, VOC and COCO (each with five state-of-the-art DNN models), and one real-world photo tagging application from our industrial partner. The experimental results reveal that the performance of current DNN-based MICSs remains less satisfactory even in recognizing correlations between only two labels, as ATOM triggers a total number of 6,049 such label combination related errors for all MICSs studied. In particular, ATOM reports 587 error-revealing images for the industrial MICS, in which 92% of them are confirmed by the developers.",
+    "citation_count": 4,
+    "reference_count": 83,
+    "url": "https://dblp.org/rec/conf/kbse/HuWWCTJNN23",
+    "dblp_key": "conf/kbse/HuWWCTJNN23",
+    "source_id": "https://openalex.org/W4388483412",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "An Empirical Study on Fine-Tuning Large Language Models of Code for Automated Program Repair.",
+    "authors": [
+      "Kai Huang",
+      "Xiangxin Meng",
+      "Jian Zhang 0087",
+      "Yang Liu 0003",
+      "Wenjie Wang",
+      "Shuhao Li",
+      "Yuqing Zhang 0001"
+    ],
+    "venue": "ASE",
+    "year": 2023,
+    "abstract": "The advent of large language models (LLMs) has opened up new opportunities for automated program repair (APR). In particular, some recent studies have explored how to leverage large language models of code (LLMCs) for program repair tasks and show promising results. However, most of them adopt the zero/few-shot learning paradigm for APR, which directly use LLMCs to generate the possibly correct code given its surrounding context. Though effective, the repair capabilities of LLMCs based on the fine-tuning paradigm have yet to be extensively explored. Also, it remains unknown whether LLMCs have the potential to repair more complicated bugs (e.g., multi-hunk bugs). To fill the gap, in this work, we conduct a comprehensive study on the program repair capability of LLMCs in the fine-tuning paradigm. We select 5 popular LLMCs with representative pre-training architectures, including CodeBERT, GraphCode-BERT, PLBART, CodeT5, and UniX coder. We consider 3 typical program repair scenarios (i.e., bugs, vulnerabilities, and errors) involving 3 programming languages (i.e., Java, <tex xmlns:mml=\"http://www.w3.org/1998/Math/MathML\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">$\\mathrm{C}/\\mathrm{C}++$</tex> , and JavaScript). Notably, we take both single-hunk and multi-hunk bugs/vulnerabilities into account. We then fine-tune them on widely-used datasets and compare them with existing state-of-the-art APR tools. We also investigate the impact of different design choices, which include code abstractions, code representations, and model evaluation metrics. Our experimental results show that LLMCs in the fine-tuning paradigm can significantly outperform previous state-of-the-art APR tools. Through in-depth analysis, we provide insights into choosing appropriate strategies to guide LLMCs for better performance. Lastly, we reveal several limitations of LLMCs for APR and make suggestions for future research on LLMC-based APR.",
+    "citation_count": 91,
+    "reference_count": 76,
+    "url": "https://dblp.org/rec/conf/kbse/HuangMZLWLZ23",
+    "dblp_key": "conf/kbse/HuangMZLWLZ23",
+    "source_id": "https://openalex.org/W4388483128",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Let&apos;s Chat to Find the APIs: Connecting Human, LLM and Knowledge Graph through AI Chain.",
+    "authors": [
+      "Qing Huang",
+      "Zhenyu Wan",
+      "Zhenchang Xing",
+      "Changjing Wang",
+      "Jieshan Chen",
+      "Xiwei Xu 0001",
+      "Qinghua Lu 0001"
+    ],
+    "venue": "ASE",
+    "year": 2023,
+    "abstract": "This comprehensive review delves into the pivotal role of prompt engineering in unleashing the capabilities of Large Language Models (LLMs). The development of Artificial Intelligence (AI), from its inception in the 1950s to the emergence of advanced neural networks and deep learning architectures, has made a breakthrough in LLMs, with models such as GPT-4o and Claude-3, and in Vision-Language Models (VLMs), with models such as CLIP and ALIGN. Prompt engineering is the process of structuring inputs, which has emerged as a crucial technique to maximize the utility and accuracy of these models. This paper explores both foundational and advanced methodologies of prompt engineering, including techniques such as self-consistency, chain-of-thought, and generated knowledge, which significantly enhance model performance. Additionally, it examines the prompt method of VLMs through innovative approaches such as Context Optimization (CoOp), Conditional Context Optimization (CoCoOp), and Multimodal Prompt Learning (MaPLe). Critical to this discussion is the aspect of AI security, particularly adversarial attacks that exploit vulnerabilities in prompt engineering. Strategies to mitigate these risks and enhance model robustness are thoroughly reviewed. The evaluation of prompt methods is also addressed through both subjective and objective metrics, ensuring a robust analysis of their efficacy. This review also reflects the essential role of prompt engineering in advancing AI capabilities, providing a structured framework for future research and application.",
+    "citation_count": 135,
+    "reference_count": 0,
+    "url": "https://dblp.org/rec/conf/kbse/HuangWXWCXL23",
+    "dblp_key": "conf/kbse/HuangWXWCXL23",
+    "source_id": "https://openalex.org/W4387929411",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Twin Graph-Based Anomaly Detection via Attentive Multi-Modal Learning for Microservice System.",
+    "authors": [
+      "Jun Huang 0003",
+      "Yang Yang 0210",
+      "Hang Yu 0002",
+      "Jianguo Li",
+      "Xiao Zheng"
+    ],
+    "venue": "ASE",
+    "year": 2023,
+    "abstract": "Microservice architecture has sprung up over recent years for managing enterprise applications, due to its ability to independently deploy and scale services. Despite its benefits, ensuring the reliability and safety of a microservice system remains highly challenging. Existing anomaly detection algorithms based on a single data modality (i.e., metrics, logs, or traces) fail to fully account for the complex correlations and interactions between different modalities, leading to false negatives and false alarms, whereas incorporating more data modalities can offer opportunities for further performance gain. As a fresh attempt, we propose in this paper a semi-supervised graph-based anomaly detection method, MSTGAD, which seamlessly integrates all available data modalities via attentive multi-modal learning. First, we extract and normalize features from the three modalities, and further integrate them using a graph, namely MST (microservice system twin) graph, where each node represents a service instance and the edge indicates the scheduling relationship between different service instances. The MST graph provides a virtual representation of the status and scheduling relationships among service instances of a real-world microservice system. Second, we construct a transformer-based neural network with both spatial and temporal attention mechanisms to model the inter-correlations between different modalities and temporal dependencies between the data points. This enables us to detect anomalies automatically and accurately in real-time. Extensive experiments on two real-world datasets verify the effectiveness of our proposed MSTGAD method, achieving competitive performance against state-of-the-art approaches, with a 0.961 F1-score and an average increase of 4.85%. The source code of MST-GAD is publicly available at https://github.com/ant-research/microservice_system_twin_graph_based_anomaly_detection.",
+    "citation_count": 34,
+    "reference_count": 54,
+    "url": "https://dblp.org/rec/conf/kbse/HuangYYLZ23",
+    "dblp_key": "conf/kbse/HuangYYLZ23",
+    "source_id": "https://openalex.org/W4388483447",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "NaturalFuzz: Natural Input Generation for Big Data Analytics.",
+    "authors": [
+      "Ahmad Humayun",
+      "Yaoxuan Wu",
+      "Miryung Kim",
+      "Muhammad Ali Gulzar"
+    ],
+    "venue": "ASE",
+    "year": 2023,
+    "abstract": "Fuzzing applies input mutations iteratively with the only goal of finding more bugs, resulting in synthetic tests that tend to lack realism. Big data analytics are expected to ingest real-world data as input. Therefore, when synthetic test data are not easily comprehensible, they are less likely to facilitate the downstream task of fixing errors. Our position is that fuzzing in this domain must achieve both high naturalness and high code coverage. We propose a new natural synthetic test generation tool for big data analytics, called NaturalFuzz. It generates both unstructured, semi-structured, and structured data with corresponding semantics such as ‘zipcode’ and ‘age.’ The key insights behind NaturalFuzz are two-fold. First, though existing test data may be small and lack coverage, we can grow this data to increase code coverage. Second, we can strategically mix constituent parts across different rows and columns to construct new realistic synthetic data by leveraging fine-grained data provenance. On commercial big data application benchmarks, NaturalFuzz achieves an additional 19.9% coverage and detects 1.9× more faults than a machine learning-based synthetic data generator (SDV) when generating comparably sized inputs. This is because an ML-based synthetic data generator does not consider which code branches are exercised by which input rows from which tables, while NaturalFuzz is able to select input rows that have a high potential to increase code coverage and mutate the selected data towards unseen, new program behavior. NaturalFuzz's test data is more realistic than the test data generated by two baseline fuzzers (BigFuzz and Jazzer), while increasing code coverage and fault detection potential. NaturalFuzz is the first fuzzing methodology with three benefits: (1) exclusively generate natural inputs, (2) fuzz multiple input sources simultaneously, and (3) find deeper semantics faults.",
+    "citation_count": 2,
+    "reference_count": 35,
+    "url": "https://dblp.org/rec/conf/kbse/HumayunWKG23",
+    "dblp_key": "conf/kbse/HumayunWKG23",
+    "source_id": "https://openalex.org/W4388483655",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "AutoLog: A Log Sequence Synthesis Framework for Anomaly Detection.",
+    "authors": [
+      "Yintong Huo",
+      "Yichen Li 0003",
+      "Yuxin Su 0001",
+      "Pinjia He",
+      "Zifan Xie",
+      "Michael R. Lyu"
+    ],
+    "venue": "ASE",
+    "year": 2023,
+    "abstract": "The rapid progress of modern computing systems has led to a growing interest in informative run-time logs. Various log-based anomaly detection techniques have been proposed to ensure software reliability. However, their implementation in the industry has been limited due to the lack of high-quality public log resources as training datasets. While some log datasets are available for anomaly detection, they suffer from limitations in (1) comprehensiveness of log events; (2) scalability over diverse systems; and (3) flexibility of log utility. To address these limitations, we propose AUTOLOG, the first automated log generation methodology for anomaly detection. AUTOLOG uses program analysis to generate runtime log sequences without actually running the system. AUTOLOG starts with probing comprehensive logging statements associated with the call graphs of an application. Then, it constructs execution graphs for each method after pruning the call graphs to find log-related execution paths in a scalable manner. Finally, AUTOLOG propagates the anomaly label to each acquired execution path based on human knowledge. It generates flexible log sequences by walking along the log execution paths with controllable parameters. Experiments on 50 popular Java projects show that AUTOLOG acquires significantly more (9x-58x) log events than existing log datasets from the same system, and generates log messages much faster (15x) with a single machine than existing passive data collection approaches. AUTOLOG also provides hyper-parameters to adjust the data size, anomaly rate, and component indicator for simulating different real-world scenarios. We further demonstrate AUTOLOG's practicality by showing that AUTOLOG enables log-based anomaly detectors to achieve better performance (1.93%) compared to existing log datasets. We hope AUTOLOG can facilitate the benchmarking and adoption of automated log analysis techniques.",
+    "citation_count": 12,
+    "reference_count": 64,
+    "url": "https://dblp.org/rec/conf/kbse/HuoLSHXL23",
+    "dblp_key": "conf/kbse/HuoLSHXL23",
+    "source_id": "https://openalex.org/W4388483105",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "RocketHA: A High Availability Design Paradigm for Distributed Log-Based Storage System.",
+    "authors": [
+      "Juntao Ji",
+      "Rongtong Jin",
+      "Yubao Fu",
+      "Yinyou Gu",
+      "Tsung-Han Tsai",
+      "Qingshan Lin"
+    ],
+    "venue": "ASE",
+    "year": 2023,
+    "abstract": "As a team from Alibaba Cloud, we have developed and open-sourced RocketMQ, a cloud-native “messaging, eventing, streaming” real-time data processing platform that covers cloud-edge-device collaboration scenarios. During the development of RocketMQ, we also formulated RocketHA, a log-based storage high availability design theory that provides a robust solution for distributed log storage software used in industrial applications. RocketHA comprises six fundamental components that enable automatic cluster recovery from failures such as crashes and partitions. This design paradigm has been successfully implemented in the open-source RocketMQ. Our evaluation demonstrates that RocketHA ensures high availability, fast recovery, high throughput, and data loss prevention. We hope that RocketHA will inspire and guide the development of high-availability solutions for all log-based storage systems.",
+    "citation_count": 0,
+    "reference_count": 4,
+    "url": "https://dblp.org/rec/conf/kbse/JiJFGTL23",
+    "dblp_key": "conf/kbse/JiJFGTL23",
+    "source_id": "https://openalex.org/W4388483071",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Perfce: Performance Debugging on Databases with Chaos Engineering-Enhanced Causality Analysis.",
+    "authors": [
+      "Zhenlan Ji",
+      "Pingchuan Ma 0004",
+      "Shuai Wang 0011"
+    ],
+    "venue": "ASE",
+    "year": 2023,
+    "abstract": "Debugging performance anomalies in databases is challenging. Causal inference techniques enable qualitative and quantitative root cause analysis of performance downgrades. Nevertheless, causality analysis is challenging in practice, particularly due to limited observability. Recently, chaos engineering (CE) has been applied to test complex software systems. CE frameworks mutate chaos variables to inject catastrophic events (e.g., network slowdowns) to stress-test these software systems. The systems under chaos stress are then tested (e.g., via differential testing) to check if they retain normal functionality, such as returning correct SQL query outputs even under stress. To date, CE is mainly employed to aid software testing. This paper identifies the novel usage of CE in diagnosing performance anomalies in databases. Our framework, PERFCE, has two phases - offline and online. The offline phase learns statistical models of a database using both passive observations and proactive chaos experiments. The online phase diagnoses the root cause of performance anomalies from both qualitative and quantitative aspects on-the-fly. In evaluation, Perfce outperformed previous works on synthetic datasets and is highly accurate and moderately expensive when analyzing real-world (distributed) databases like MySQL and TiDB.",
+    "citation_count": 9,
+    "reference_count": 77,
+    "url": "https://dblp.org/rec/conf/kbse/JiMW23",
+    "dblp_key": "conf/kbse/JiMW23",
+    "source_id": "https://openalex.org/W4388483593",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Causality-Aided Trade-Off Analysis for Machine Learning Fairness.",
+    "authors": [
+      "Zhenlan Ji",
+      "Pingchuan Ma 0004",
+      "Shuai Wang 0011",
+      "Yanhui Li"
+    ],
+    "venue": "ASE",
+    "year": 2023,
+    "abstract": "There has been an increasing interest in enhancing the fairness of machine learning (ML). Despite the growing number of fairness-improving methods, we lack a systematic understanding of the trade-offs among factors considered in the ML pipeline when fairness-improving methods are applied. This understanding is essential for developers to make informed decisions regarding the provision of fair ML services. Nonetheless, it is extremely difficult to analyze the trade-offs when there are multiple fairness parameters and other crucial metrics involved, coupled, and even in conflict with one another. This paper uses causality analysis as a principled method for analyzing trade-offs between fairness parameters and other crucial metrics in ML pipelines. To practically and effectively conduct causality analysis, we propose a set of domain-specific optimizations to facilitate accurate causal discovery and a unified, novel interface for trade-off analysis based on well-established causal inference methods. We conduct a comprehensive empirical study using three real-world datasets on a collection of widely-used fairness-improving techniques. Our study obtains actionable suggestions for users and developers of fair ML. We further demonstrate the versatile usage of our approach in selecting the optimal fairness-improving method, paving the way for more ethical and socially responsible AI technologies.",
+    "citation_count": 6,
+    "reference_count": 98,
+    "url": "https://dblp.org/rec/conf/kbse/JiMWL23",
+    "dblp_key": "conf/kbse/JiMWL23",
+    "source_id": "https://openalex.org/W4388483792",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Vision-Based Widget Mapping for Test Migration Across Mobile Platforms: Are We There Yet?",
+    "authors": [
+      "Ruihua Ji",
+      "Tingwei Zhu",
+      "Xiaoqing Zhu",
+      "Chunyang Chen 0001",
+      "Minxue Pan",
+      "Tian Zhang 0001"
+    ],
+    "venue": "ASE",
+    "year": 2023,
+    "abstract": "Automated GUI testing through the reuse of existing tests has recently gained prominence in research. Cross-platform migration of GUI tests between different platform versions of an application offers a promising opportunity for test reuse. Widget mapping, identifying similarities between source and target application widgets and connecting semantically analogous pairs, is central to these approaches. Vision-based widget mapping approaches are supposed to provide platform-agnostic solutions more suitable for cross-platform migration, considering that different platform versions frequently display strong resemblances in the appearance of their semantically similar widgets. However, the efficacy of vision-based widget mapping for cross-platform migration remains limited and the reasons remain unclear. In this paper, we present the first comprehensive investigation of vision-based widget mapping for cross-platform GUI test migration. We devote considerable effort to constructing a dataset consisting of 6,730 bi-directional mapped widget pairs across the iOS and Android platforms, and categorize the mapped widgets into eight classifications to thoroughly assess the capabilities of various approaches. We implement 89 configurations, derived from five distinct vision-based widget mapping methodologies, and evaluate their performance utilizing our dataset. Our findings reveal valuable insights that can be employed to advance vision-based widget mapping techniques: (1) The current approach exhibits potential for improvement, as certain configurations demonstrate superior performance in comparison to existing methods; (2) Some features can adversely impact the mapping, requiring more consideration; (3) A substantial proportion of mapped widgets display varying inconsistent contents in their appearance, which require more sophisticated vision algorithms.",
+    "citation_count": 1,
+    "reference_count": 29,
+    "url": "https://dblp.org/rec/conf/kbse/JiZZCPZ23",
+    "dblp_key": "conf/kbse/JiZZCPZ23",
+    "source_id": "f885ba1c075b2b8509e044c8938acc4184ef683c",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "PSMT: Satisfiability Modulo Theories Meets Probability Distribution.",
+    "authors": [
+      "Fuqi Jia",
+      "Rui Han",
+      "Xutong Ma",
+      "Baoquan Cui",
+      "Minghao Liu 0001",
+      "Pei Huang 0002",
+      "Feifei Ma",
+      "Jian Zhang 0001"
+    ],
+    "venue": "ASE",
+    "year": 2023,
+    "abstract": "SMT (Satisfiability Modulo Theories) has been widely used in program verification, analysis, and test generation. But sometimes, SMT solver outputs incomprehensible solutions, especially for practical instances. Besides, due to the design of the deterministic algorithms, for a given formula, the result of each run is the same. In this paper, we concentrate on combining SMT solving with probability, which will instruct the SMT solver to give some plausible solutions. We define a special problem: PSMT, which allows solving an SMT instance with variables conforming to a certain distribution. We define distribution under constraint for PSMT, which is based on MCSAT (Model Constructing Satisfiability), a mainstream SMT-solving algorithm. We propose the Prob-MCSAT algorithm, which combines the MCSAT algorithm and introduces the probability to variables. The visualized examples show that the resulting assignments will form a clear trend based on Prob-SMT.",
+    "citation_count": 0,
+    "reference_count": 17,
+    "url": "https://dblp.org/rec/conf/kbse/JiaHMCLHMZ23",
+    "dblp_key": "conf/kbse/JiaHMCLHMZ23",
+    "source_id": "https://openalex.org/W4388483436",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "SCPatcher: Mining Crowd Security Discussions to Enrich Secure Coding Practices.",
+    "authors": [
+      "Ziyou Jiang",
+      "Lin Shi 0006",
+      "Guowei Yang 0001",
+      "Qing Wang 0001"
+    ],
+    "venue": "ASE",
+    "year": 2023,
+    "abstract": "Secure coding practices (SCPs) have been proposed to guide software developers to write code securely to prevent potential security vulnerabilities. Yet, they are typically one-sentence principles without detailed specifications, e.g., “Properly free allocated memory upon the completion of functions and at all exit points.”, which makes them difficult to follow in practice, especially for software developers who are not yet experienced in secure programming. To address this problem, this paper proposes SCPatcher, an automated approach to enrich secure coding practices by mining crowd security discussions on online knowledge-sharing platforms, such as Stack Overflow. In particular, for each security post, SCPatcher first extracts the area of coding examples and coding explanations with a fix-prompt tuned Large Language Model (LLM) via Prompt Learning. Then, it hierarchically slices the lengthy code into coding examples and summarizes the coding explanations with the areas. Finally, SCPatcher matches the CWE and Public SCP, integrating them with extracted coding examples and explanations to form the SCP specifications, which are the wild SCPs with details, proposed by the developers. To evaluate the performance of SCPatcher, we conduct experiments on 3,907 security posts from Stack Overflow. The experimental results show that SCPatcher outperforms all baselines in extracting the coding examples with 2.73 % MLine on average, as well as coding explanations with 3.97 % F1 on average. Moreover, we apply SCPatcher on 447 new security posts to further evaluate its practicality, and the extracted SCP specifications enrich the public SCPs with 3,074 lines of code and 1,967 sentences.",
+    "citation_count": 2,
+    "reference_count": 62,
+    "url": "https://dblp.org/rec/conf/kbse/JiangSYW23",
+    "dblp_key": "conf/kbse/JiangSYW23",
+    "source_id": "https://openalex.org/W4388483607",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Effective Concurrency Testing for Go via Directional Primitive-Constrained Interleaving Exploration.",
+    "authors": [
+      "Zongze Jiang",
+      "Ming Wen 0001",
+      "Yixin Yang 0006",
+      "Chao Peng 0002",
+      "Ping Yang",
+      "Hai Jin 0001"
+    ],
+    "venue": "ASE",
+    "year": 2023,
+    "abstract": "The Go language (Go/Golang) has been attracting increasing attention from the industry over recent years due to its strong concurrency support and ease of deployment. This programming language encourages developers to use channel-based concurrency, which simplifies the development of concurrent programs. Unfortunately, it also introduces new concurrency problems that differ from those caused by the mechanism of shared memory concurrency. However, there are only few works that aim to detect such Go-specific concurrency issues. Even state-of-the-art testing tools will miss critical concurrent bugs that require fine-grained and effective interleaving exploration. This paper presents GoPie, a novel testing approach for detecting Go concurrency bugs through primitive-constrained interleaving exploration. GoPie utilizes execution histories to identify new interleavings instead of relying on exhaustive exploration or random scheduling. To evaluate its performance, we applied GoPie to existing benchmarks and large-scale open-source projects. Results show that GoPie can effectively explore concurrent interleavings and detect significantly more bugs in the benchmark. Furthermore, it uncovered 11 unique previously unknown concurrent bugs, and 9 of which have been confirmed.",
+    "citation_count": 7,
+    "reference_count": 44,
+    "url": "https://dblp.org/rec/conf/kbse/JiangWYPYJ23",
+    "dblp_key": "conf/kbse/JiangWYPYJ23",
+    "source_id": "https://openalex.org/W4388482988",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Revealing Performance Issues in Server-Side WebAssembly Runtimes Via Differential Testing.",
+    "authors": [
+      "Shuyao Jiang",
+      "Ruiying Zeng",
+      "Zihao Rao",
+      "Jiazhen Gu",
+      "Yangfan Zhou 0002",
+      "Michael R. Lyu"
+    ],
+    "venue": "ASE",
+    "year": 2023,
+    "abstract": "WebAssembly (Wasm) is a bytecode format originally serving as a compilation target for Web applications. It has recently been used increasingly on the server side, e.g., providing a safer, faster, and more portable alternative to Linux containers. With the popularity of server-side Wasm applications, it is essential to study performance issues (i.e., abnormal latency) in Wasm runtimes, as they may cause a significant impact on server-side applications. However, there is still a lack of attention to performance issues in server-side Wasm runtimes. In this paper, we design a novel differential testing approach WarpDiff to identify performance issues in server-side Wasm runtimes. The key insight is that in normal cases, the execution time of the same test case on different Wasm runtimes should follow an oracle ratio. We identify abnormal cases where the execution time ratio significantly deviates from the oracle ratio and subsequently locate the Wasm runtimes that cause the performance issues. We apply WarpDiff to test five popular server-side Wasm runtimes using 123 test cases from the LLVM test suite and demonstrate the top 10 abnormal cases we identified. We further conduct an in-depth analysis of these abnormal cases and summarize seven performance issues, all of which have been confirmed by the developers. We hope our work can inspire future investigation on improving Wasm runtime implementation and thus promoting the development of server-side Wasm applications.",
+    "citation_count": 12,
+    "reference_count": 55,
+    "url": "https://dblp.org/rec/conf/kbse/JiangZRGZL23",
+    "dblp_key": "conf/kbse/JiangZRGZL23",
+    "source_id": "https://openalex.org/W4388483684",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "On the Evaluation of Neural Code Translation: Taxonomy and Benchmark.",
+    "authors": [
+      "Mingsheng Jiao",
+      "Tingrui Yu",
+      "Xuan Li",
+      "Guanjie Qiu",
+      "Xiaodong Gu 0002",
+      "Beijun Shen"
+    ],
+    "venue": "ASE",
+    "year": 2023,
+    "abstract": "In recent years, neural code translation has gained increasing attention. While most of the research focuses on improving model architectures and training processes, we notice that the evaluation process and benchmark for code translation models are severely limited: they primarily treat source code as natural languages and provide a holistic accuracy score while disregarding the full spectrum of model capabilities across different translation types and complexity. In this paper, we present a comprehensive investigation of four state-of-the-art models and analyze in-depth the advantages and limitations of three existing benchmarks. Based on the empirical results, we develop a taxonomy that categorizes code translation tasks into four primary types according to their complexity and knowledge dependence: token level (type 1), syntactic level (type 2), library level (type 3), and algorithm level (type 4). We then conduct a thorough analysis of how existing approaches perform across these four categories. Our findings indicate that while state-of-the-art code translation models excel in type-1 and type-2 translations, they struggle with knowledge-dependent ones such as type-3 and type-4. Existing benchmarks are biased towards trivial translations, such as keyword mapping. To overcome these limitations, we construct G-TransEval, a new benchmark by manually curating type-3 and type-4 translation pairs and unit test cases. Results on our new benchmark suggest that G-TransEval can exhibit more comprehensive and finer-grained capability of code translation models and thus provide a more rigorous evaluation. Our studies also provide more insightful findings and suggestions for future research, such as building type-3 and type-4 training data and ensembling multiple pretraining approaches.",
+    "citation_count": 13,
+    "reference_count": 50,
+    "url": "https://dblp.org/rec/conf/kbse/JiaoYLQGS23",
+    "dblp_key": "conf/kbse/JiaoYLQGS23",
+    "source_id": "https://openalex.org/W4388502443",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Pluggable Type Inference for Free.",
+    "authors": [
+      "Martin Kellogg",
+      "Daniel Daskiewicz",
+      "Loi Ngo Duc Nguyen",
+      "Muyeed Ahmed",
+      "Michael D. Ernst"
+    ],
+    "venue": "ASE",
+    "year": 2023,
+    "abstract": "A pluggable type system extends a host programming language with type qualifiers. It lets programmers write types like unsigned int, secret string, and nonnull object. Typechecking with pluggable types detects and prevents more errors than the host type system. However, programmers must write type qualifiers; this is the biggest obstacle to use of pluggable types in practice. Type inference can solve this problem. Traditional approaches to type inference are type-system-specific: for each new pluggable type system, the type inference algorithm must be extended to build and then solve a system of constraints corresponding to the rules of the underlying type system. We propose a novel type inference algorithm that can infer type qualifiers for any pluggable type system with little to no new type-system-specific code-that is, “for free”. The key insight is that extant practical pluggable type systems are flow-sensitive and therefore already implement local type inference. Using this insight, we can derive a global inference algorithm by re-using existing implementations of local inference. Our algorithm runs iteratively in rounds. Each round uses the results of local type inference to produce summaries (specifications) for procedures and fields. These summaries enable improved inference throughout the program in subsequent rounds. The algorithm terminates when the inferred summaries reach a fixed point. In practice, many pluggable type systems are built on frameworks. By implementing our algorithm once, at the framework level, it can be reused by any typechecker built using that frame-work. Using that insight, we have implemented our algorithm for the open-source Checker Framework project, which is widely used in industry and on which dozens of specialized pluggable typecheckers have been built. In experiments with 11 distinct pluggable type systems and 12 projects, our algorithm reduced, by 45 % on average, the number of warnings that developers must resolve by writing annotations.",
+    "citation_count": 4,
+    "reference_count": 64,
+    "url": "https://dblp.org/rec/conf/kbse/KelloggDNAE23",
+    "dblp_key": "conf/kbse/KelloggDNAE23",
+    "source_id": "https://openalex.org/W4388483342",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Towards Safe Automated Refactoring of Imperative Deep Learning Programs to Graph Execution.",
+    "authors": [
+      "Raffi Khatchadourian",
+      "Tatiana Castro Vélez",
+      "Mehdi Bagherzadeh 0001",
+      "Nan Jia",
+      "Anita Raja"
+    ],
+    "venue": "ASE",
+    "year": 2023,
+    "abstract": "Efficiency is essential to support responsiveness w.r.t. ever-growing datasets, especially for Deep Learning (DL) systems. DL frameworks have traditionally embraced deferred execution-style DL code-supporting symbolic, graph-based Deep Neural Network (DNN) computation. While scalable, such development is error-prone, non-intuitive, and difficult to debug. Consequently, more natural, imperative DL frameworks encouraging eager execution have emerged at the expense of run-time performance. Though hybrid approaches aim for the “best of both worlds,” using them effectively requires subtle considerations to make code amenable to safe, accurate, and efficient graph execution. We present our ongoing work on automated refactoring that assists developers in specifying whether and how their otherwise eagerly-executed imperative DL code could be reliably and efficiently executed as graphs while preserving semantics. The approach, based on a novel imperative tensor analysis, will automatically determine when it is safe and potentially advantageous to migrate imperative DL code to graph execution and modify decorator parameters or eagerly executing code already running as graphs. The approach is being implemented as a PyDev Eclipse IDE plug-in and uses the WALA Ariadne analysis framework. We discuss our ongoing work towards optimizing imperative DL code to its full potential.",
+    "citation_count": 1,
+    "reference_count": 25,
+    "url": "https://dblp.org/rec/conf/kbse/KhatchadourianVBJR23",
+    "dblp_key": "conf/kbse/KhatchadourianVBJR23",
+    "source_id": "https://openalex.org/W4388483244",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Adaptive REST API Testing with Reinforcement Learning.",
+    "authors": [
+      "Myeongsoo Kim",
+      "Saurabh Sinha 0003",
+      "Alessandro Orso"
+    ],
+    "venue": "ASE",
+    "year": 2023,
+    "abstract": "Modern web services increasingly rely on REST APIs. Effectively testing these APIs is challenging due to the vast search space to be explored, which involves selecting API operations for sequence creation, choosing parameters for each operation from a potentially large set of parameters, and sampling values from the virtually infinite parameter input space. Current testing tools lack efficient exploration mechanisms, treating all operations and parameters equally (i.e., not considering their importance or complexity) and lacking prioritization strategies. Furthermore, these tools struggle when response schemas are absent in the specification or exhibit variants. To address these limitations, we present an adaptive REST API testing technique that incorporates reinforcement learning to prioritize operations and parameters during exploration. Our approach dynamically analyzes request and response data to inform dependent parameters and adopts a sampling-based strategy for efficient processing of dynamic API feedback. We evaluated our technique on ten RESTful services, comparing it against state-of-the-art REST testing tools with respect to code coverage achieved, requests generated, operations covered, and service failures triggered. Additionally, we performed an ablation study on prioritization, dynamic feedback analysis, and sampling to assess their individual effects. Our findings demonstrate that our approach outperforms existing REST API testing tools in terms of effectiveness, efficiency, and fault-finding ability.",
+    "citation_count": 29,
+    "reference_count": 32,
+    "url": "https://dblp.org/rec/conf/kbse/KimSO23",
+    "dblp_key": "conf/kbse/KimSO23",
+    "source_id": "https://openalex.org/W4388483057",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Bus Factor Explorer.",
+    "authors": [
+      "Egor Klimov",
+      "Muhammad Umair Ahmed",
+      "Nikolai Sviridov",
+      "Pouria Derakhshanfar",
+      "Eray Tüzün",
+      "Vladimir Kovalenko"
+    ],
+    "venue": "ASE",
+    "year": 2023,
+    "abstract": "Bus factor (BF) is a metric that tracks knowledge distribution in a project. It is the minimal number of engineers that have to leave for a project to stall. Despite the fact that there are several algorithms for calculating the bus factor, only a few tools allow easy calculation of bus factor and convenient analysis of results for projects hosted on Git-based providers. We introduce Bus Factor Explorer, a web application that provides an interface and an API to compute, export, and explore the Bus Factor metric via treemap visualization, simulation mode, and chart editor. It supports repositories hosted on GitHub and enables functionality to search repositories in the interface and process many repositories at the same time. Our tool allows users to identify the files and subsystems at risk of stalling in the event of developer turnover by analyzing the VCS history. The application and its source code are publicly available on GitHub at https://github.com/JetBrains-Research/bus-factor-explorer. The demonstration video can be found on YouTube: https://youtu.be/uIoV79N14z8",
+    "citation_count": 2,
+    "reference_count": 10,
+    "url": "https://dblp.org/rec/conf/kbse/KlimovASDTK23",
+    "dblp_key": "conf/kbse/KlimovASDTK23",
+    "source_id": "https://openalex.org/W4388482967",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Towards Self-Adaptive Machine Learning-Enabled Systems Through QoS-Aware Model Switching.",
+    "authors": [
+      "Shubham Kulkarni",
+      "Arya Marda",
+      "Karthik Vaidhyanathan"
+    ],
+    "venue": "ASE",
+    "year": 2023,
+    "abstract": "Machine Learning (ML), particularly deep learning, has seen vast advancements, leading to the rise of Machine Learning-Enabled Systems (MLS). However, numerous software engineering challenges persist in propelling these MLS into production, largely due to various run-time uncertainties that impact the overall Quality of Service (QoS). These uncertainties emanate from ML models, software components, and environmental factors. Self-adaptation techniques present potential in managing run-time uncertainties, but their application in MLS remains largely unexplored. As a solution, we propose the concept of a Machine Learning Model Balancer, focusing on managing uncertainties related to ML models by using multiple models. Subsequently, we introduce AdaMLS, a novel self-adaptation approach that leverages this concept and extends the traditional MAPE-K loop for continuous MLS adaptation. AdaMLS employs lightweight unsupervised learning for dynamic model switching, thereby ensuring consistent QoS. Through a self-adaptive object detection system prototype, we demonstrate AdaMLS's effectiveness in balancing system and model performance. Preliminary results suggest AdaMLS surpasses naive and single state-of-the-art models in QoS guarantees, heralding the advancement towards self-adaptive MLS with optimal OoS in dynamic environments.",
+    "citation_count": 16,
+    "reference_count": 29,
+    "url": "https://dblp.org/rec/conf/kbse/KulkarniMV23",
+    "dblp_key": "conf/kbse/KulkarniMV23",
+    "source_id": "https://openalex.org/W4388483405",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Scalable Industrial Control System Analysis via XAI-Based Gray-Box Fuzzing.",
+    "authors": [
+      "Justin Kur",
+      "Jingshu Chen",
+      "Jun Huang 0001"
+    ],
+    "venue": "ASE",
+    "year": 2023,
+    "abstract": "Conventional approaches to analyzing industrial control systems have relied on either white-box analysis or black-box fuzzing. However, white-box methods rely on sophisticated domain expertise, while black-box methods suffers from state explosion and thus scales poorly when analyzing real ICS involving a large number of sensors and actuators. To address these limitations, we propose XAI-based gray-box fuzzing, a novel approach that leverages explainable AI and machine learning modeling of ICS to accurately identify a small set of actuators critical to ICS safety, which result in significant reduction of state space without relying on domain expertise. Experiment results show that our method accurately explains the ICS model and significantly speeds-up fuzzing by 64x when compared to conventional black-box methods.",
+    "citation_count": 1,
+    "reference_count": 14,
+    "url": "https://dblp.org/rec/conf/kbse/KurCH23",
+    "dblp_key": "conf/kbse/KurCH23",
+    "source_id": "https://openalex.org/W4388483644",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Thunderkaller: Profiling and Improving the Performance of Syzkaller.",
+    "authors": [
+      "Yang Lan",
+      "Di Jin",
+      "Zhun Wang",
+      "Wende Tan",
+      "Zheyu Ma",
+      "Chao Zhang 0008"
+    ],
+    "venue": "ASE",
+    "year": 2023,
+    "abstract": "Fuzzing is widely adopted to discover vulnerabilities in software, including the kernel. One of the most popular and state-of-the-art fuzzers for kernels is Syzkaller. However, Syzkaller has a much lower testing throughput compared to other user-space fuzzers, which affects the efficiency of both Syzkaller and other Syzkaller-based fuzzers. In this paper, we profiled the performance of Syzkaller, recognized that the major cost comes from program isolation and kernel instrumentation, and then proposed kernel image duplication and three optimization techniques to mitigate such overheads and present the solution Thunderkaller. Our solution does not change or depend on the fuzzing algorithm in any way, orthogonal to other refinements to Syzkaller. Our evaluation shows that, in 24 hours, Thunderkaller speeds up 2.8× compared to vanilla Syzkaller, achieves 25.8% more basic block coverage, detects 21 more unique bugs, and triggers the common bugs 6.3× faster. In a long time of fuzzing, we have found 6 unique Linux kernel bugs and obtained a CVE.",
+    "citation_count": 2,
+    "reference_count": 40,
+    "url": "https://dblp.org/rec/conf/kbse/LanJWTMZ23",
+    "dblp_key": "conf/kbse/LanJWTMZ23",
+    "source_id": "https://openalex.org/W4388482926",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Log Parsing: How Far Can ChatGPT Go?",
+    "authors": [
+      "Van-Hoang Le",
+      "Hongyu Zhang 0002"
+    ],
+    "venue": "ASE",
+    "year": 2023,
+    "abstract": "Software logs play an essential role in ensuring the reliability and maintainability of large-scale software systems, as they are often the sole source of runtime information. Log parsing, which converts raw log messages into structured data, is an important initial step towards downstream log analytics. In recent studies, ChatGPT, the current cutting-edge large language model (LLM), has been widely applied to a wide range of software engineering tasks. However, its performance in automated log parsing remains unclear. In this paper, we evaluate ChatGPT's ability to undertake log parsing by addressing two research questions. (1) Can ChatGPT effectively parse logs? (2) How does ChatGPT perform with different prompting methods? Our results show that ChatGPT can achieve promising results for log parsing with appropriate prompts, especially with few-shot prompting. Based on our findings, we outline several challenges and opportunities for ChatGPT-based log parsing.",
+    "citation_count": null,
+    "reference_count": null,
+    "url": "https://dblp.org/rec/conf/kbse/LeZ23",
+    "dblp_key": "conf/kbse/LeZ23",
+    "source_id": "2306.01590v2",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Fuzzing for CPS Mutation Testing.",
+    "authors": [
+      "Jaekwon Lee",
+      "Enrico Viganò",
+      "Oscar Cornejo 0001",
+      "Fabrizio Pastore",
+      "Lionel C. Briand"
+    ],
+    "venue": "ASE",
+    "year": 2023,
+    "abstract": "Mutation testing can help reduce the risks of releasing faulty software. For such reason, it is a desired practice for the development of embedded software running in safety-critical cyber-physical systems (CPS). Unfortunately, state-of-the-art test data generation techniques for mutation testing of C and C++ software, two typical languages for CPS software, rely on symbolic execution, whose limitations often prevent its application (e.g., it cannot test black-box components). We propose a mutation testing approach that leverages fuzz testing, which has proved effective with C and C++ software. Fuzz testing automatically generates diverse test inputs that exercise program branches in a varied number of ways and, therefore, exercise statements in different program states, thus maximizing the likelihood of killing mutants, our objective. We performed an empirical assessment of our approach with software components used in satellite systems currently in orbit. Our empirical evaluation shows that mutation testing based on fuzz testing kills a significantly higher proportion of live mutants than symbolic execution (i.e., up to an additional 47 percentage points). Further, when symbolic execution cannot be applied, fuzz testing provides significant benefits (i.e., up to 41% mutants killed). Our study is the first one comparing fuzz testing and symbolic execution for mutation testing; our results provide guidance towards the development of fuzz testing tools dedicated to mutation testing.",
+    "citation_count": 4,
+    "reference_count": 69,
+    "url": "https://dblp.org/rec/conf/kbse/LeeVCPB23",
+    "dblp_key": "conf/kbse/LeeVCPB23",
+    "source_id": "https://openalex.org/W4388483831",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Maat: Performance Metric Anomaly Anticipation for Cloud Services with Conditional Diffusion.",
+    "authors": [
+      "Cheryl Lee",
+      "Tianyi Yang",
+      "Zhuangbin Chen",
+      "Yuxin Su 0001",
+      "Michael R. Lyu"
+    ],
+    "venue": "ASE",
+    "year": 2023,
+    "abstract": "Ensuring the reliability and user satisfaction of cloud services necessitates prompt anomaly detection followed by diagnosis. Existing techniques for anomaly detection focus solely on real-time detection, meaning that anomaly alerts are issued as soon as anomalies occur. However, anomalies can propagate and escalate into failures, making faster-than-real-time anomaly detection highly desirable for expediting downstream analysis and intervention. This paper proposes Maat, the first work to address anomaly anticipation of performance metrics in cloud services. Maat adopts a novel two-stage paradigm for anomaly anticipation, consisting of metric forecasting and anomaly detection on forecasts. The metric forecasting stage employs a conditional denoising diffusion model to enable multi-step forecasting in an auto-regressive manner. The detection stage extracts anomaly-indicating features based on domain knowledge and applies isolation forest with incremental learning to detect upcoming anomalies. Thus, our method can uncover anomalies that better conform to human expertise. Evaluation on three publicly available datasets demonstrates that Maat can anticipate anomalies faster than real-time comparatively or more effectively compared with state-of-the-art real-time anomaly detectors. We also present cases highlighting Maat's success in forecasting abnormal metrics and discovering anomalies.",
+    "citation_count": 7,
+    "reference_count": 78,
+    "url": "https://dblp.org/rec/conf/kbse/LeeYCSL23",
+    "dblp_key": "conf/kbse/LeeYCSL23",
+    "source_id": "https://openalex.org/W4388483223",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "On Automated Assistants for Software Development: The Role of LLMs.",
+    "authors": [
+      "Mira Leung",
+      "Gail C. Murphy"
+    ],
+    "venue": "ASE",
+    "year": 2023,
+    "abstract": "Software developers handle many complex tasks that include gathering and applying domain knowledge, coordinating subtasks, designing interfaces, turning ideas into elegant code, and more. They must switch contexts between these tasks, incurring more cognitive costs. Recent advances in large language models (LLMs) open up new possibilities for moving beyond the support provided by automated assistants (AAs) available today. In this paper, we explore if a human memory model can provide a framework for the systematic investigation of AAs for software development based on LLMs and other new technologies.",
+    "citation_count": 12,
+    "reference_count": 23,
+    "url": "https://dblp.org/rec/conf/kbse/LeungM23",
+    "dblp_key": "conf/kbse/LeungM23",
+    "source_id": "https://openalex.org/W4388483079",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Are They All Good? Studying Practitioners&apos; Expectations on the Readability of Log Messages.",
+    "authors": [
+      "Zhenhao Li 0002",
+      "An Ran Chen",
+      "Xing Hu 0008",
+      "Xin Xia 0001",
+      "Tse-Hsun Chen",
+      "Weiyi Shang"
+    ],
+    "venue": "ASE",
+    "year": 2023,
+    "abstract": "Developers write logging statements to generate logs that provide run-time information for various tasks. The readability of log messages in the logging statements (i.e., the descriptive text) is rather crucial to the value of the generated logs. Immature log messages may slow down or even obstruct the process of log analysis. Despite the importance of log messages, there is still a lack of standards on what constitutes good readability in log messages and how to write them. In this paper, we conduct a series of interviews with 17 industrial practitioners to investigate their expectations on the readability of log messages. Through the interviews, we derive three aspects related to the readability of log messages, including Structure, Information, and Wording, along with several specific practices to improve each aspect. We validate our findings through a series of online questionnaire surveys and receive positive feedback from the participants. We then manually investigate the readability of log messages in large-scale open source systems and find that a large portion (38.1%) of the log messages have inadequate readability. Motivated by such observation, we further explore the potential of automatically classifying the readability of log messages using deep learning and machine learning models. We find that both deep learning and machine learning models can effectively classify the readability of log messages with a balanced accuracy above 80.0% on average. Our study provides comprehensive guidelines for composing log messages to further improve practitioners' logging practices.",
+    "citation_count": null,
+    "reference_count": null,
+    "url": "https://dblp.org/rec/conf/kbse/LiCHXCS23",
+    "dblp_key": "conf/kbse/LiCHXCS23",
+    "source_id": "2308.08836v1",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "HOBAT: Batch Verification for Homogeneous Structural Neural Networks.",
+    "authors": [
+      "Jingyang Li",
+      "Guoqiang Li 0001"
+    ],
+    "venue": "ASE",
+    "year": 2023,
+    "abstract": "The rapid development of deep learning has significantly transformed the ecology of the software engineering field. As new data continues to grow and evolve at an explosive rate, the challenge of iteratively updating software built on neural networks has become a critical issue. While the continuous learning paradigm enables networks to incorporate new data and update accordingly without losing previous memories, resulting in a batch of new networks as candidates for software updating, these approaches merely select from these networks by empirically testing their accuracy; they lack formal guarantees for such a batch of networks, especially in the presence of adversarial samples. Existing verification techniques, based on constraint solving, interval propagation, and linear approximation, provide formal guarantees but are designed to verify the properties of individual networks rather than a batch of networks. To address this issue, we analyze the batch verification problem corresponding to several non-traditional machine learning paradigms and further propose a framework named HOBAT (BATch verification for HOmogeneous structural neural networks) to enhance batch verification under reasonable assumptions about the representation of homogeneous structure neural networks, increasing scalability in practical applications. Our method involves abstracting the neurons at the same position in a batch of networks into a single neuron, followed by an iterative refinement process on the abstracted neuron to restore the precision until the desired properties for verification are met. Our method is orthogonal to boundary propagation verification on a single neural network. To assess our methodology, we integrate it with boundary propagation verification and observe significant improvements compared to the vanilla approach. Our experiments demonstrate the enormous potential for verifying large batches of networks in the era of big data.",
+    "citation_count": 0,
+    "reference_count": 40,
+    "url": "https://dblp.org/rec/conf/kbse/LiL23",
+    "dblp_key": "conf/kbse/LiL23",
+    "source_id": "https://openalex.org/W4388483298",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "ZC3: Zero-Shot Cross-Language Code Clone Detection.",
+    "authors": [
+      "Jia Li 0012",
+      "Chongyang Tao",
+      "Zhi Jin 0001",
+      "Fang Liu 0032",
+      "Jia Li 0011",
+      "Ge Li 0001"
+    ],
+    "venue": "ASE",
+    "year": 2023,
+    "abstract": "Developers introduce code clones to improve programming productivity. Many existing studies have achieved impressive performance in monolingual code clone detection. However, during software development, more and more developers write semantically equivalent programs with different languages to support different platforms and help developers translate projects from one language to another. Considering that collecting cross-language parallel data, especially for low-resource languages, is expensive and time-consuming, how designing an effective cross-language model that does not rely on any parallel data is a significant problem. In this paper, we propose a novel method named ZC3 for Zero-shot Cross-language Code Clone detection. ZC3 designs the contrastive snippet prediction to form an isomorphic representation space among different programming languages. Based on this, ZC3 exploits domain-aware learning and cycle consistency learning to further constrain the model to generate representations that are aligned among different languages meanwhile are diacritical for different types of clones. To evaluate our approach, we conduct extensive experiments on four representative cross-language clone detection datasets. Experimental results show that ZC3 outperforms the state-of-the-art baselines by 67.12%, 51.39%, 14.85%, and 53.01% on the MAP score, respectively. We further investigate the representational distribution of different languages and discuss the effectiveness of our method.",
+    "citation_count": 0,
+    "reference_count": 0,
+    "url": "https://dblp.org/rec/conf/kbse/LiTJLLL23",
+    "dblp_key": "conf/kbse/LiTJLLL23",
+    "source_id": "https://openalex.org/W4386270018",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "MalWuKong: Towards Fast, Accurate, and Multilingual Detection of Malicious Code Poisoning in OSS Supply Chains.",
+    "authors": [
+      "Ningke Li",
+      "Shenao Wang 0001",
+      "Mingxi Feng",
+      "Kailong Wang 0001",
+      "Meizhen Wang",
+      "Haoyu Wang 0001"
+    ],
+    "venue": "ASE",
+    "year": 2023,
+    "abstract": "In the face of increased threats within software registries and management systems, we address the critical need for effective malicious code detection. In this paper, we propose an innovative approach that integrates source code slicing, inter-procedural analysis, and cross-file inter-procedural analysis, thereby enhancing the detection precision and reducing false positives. This approach has been encapsulated within a multi-analysis-based framework for automatic detection of malicious code in real-world software packages. In its application to major third-party software registries like PyPI and NPM, our framework has proven effective, identifying 130 malicious packages from a total of 169,640 monitored over a continuous period of five weeks. This work advances the current state-of-the-art solution to malicious code detection, demonstrating significant practical impact in strengthening the software supply chain defense.",
+    "citation_count": 13,
+    "reference_count": 52,
+    "url": "https://dblp.org/rec/conf/kbse/LiWFWWW23",
+    "dblp_key": "conf/kbse/LiWFWWW23",
+    "source_id": "https://openalex.org/W4388502409",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "A Large-Scale Empirical Study on Semantic Versioning in Golang Ecosystem.",
+    "authors": [
+      "Wenke Li",
+      "Feng Wu",
+      "Cai Fu",
+      "Fan Zhou"
+    ],
+    "venue": "ASE",
+    "year": 2023,
+    "abstract": "Third-party libraries (TPLs) have become an essential component of software, accelerating development and reducing maintenance costs. However, breaking changes often occur during the upgrades of TPLs and prevent client programs from moving forward. Semantic versioning (SemVer) has been applied to standardize the versions of releases according to compatibility, but not all releases follow SemVer compliance. Lots of work focuses on SemVer compliance in ecosystems such as Java and JavaScript beyond Golang (Go for short). Due to the lack of tools to detect breaking changes and dataset for Go, developers of TPLs do not know if breaking changes occur and affect client programs, and developers of client programs may hesitate to upgrade dependencies in terms of breaking changes. To bridge this gap, we conduct the first large-scale empirical study in the Go ecosystem to study SemVer compliance in terms of breaking changes and their impact. In detail, we propose GoSVI (Go Semantic Versioning Insight) to detect breaking changes and analyze their impact by resolving identifiers in client programs and comparing their types with breaking changes. Moreover, we collect the first large-scale Go dataset with a dependency graph from GitHub, including 124K TPLs and 532K client programs. Based on the dataset, our results show that 86.3% of library upgrades follow SemVer compliance and 28.6% of no-major upgrades introduce breaking changes. Furthermore, the tendency to comply with SemVer has improved over time from 63.7% in 2018/09 to 92.2% in 2023/03. Finally, we find 33.3% of downstream client programs may be affected by breaking changes. These findings provide developers and users of TPLs with valuable insights to help make decisions related to SemVer.",
+    "citation_count": 7,
+    "reference_count": 30,
+    "url": "https://dblp.org/rec/conf/kbse/LiWFZ23",
+    "dblp_key": "conf/kbse/LiWFZ23",
+    "source_id": "https://openalex.org/W4388483594",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Contextuality of Code Representation Learning.",
+    "authors": [
+      "Yi Li 0048",
+      "Shaohua Wang 0002",
+      "Tien N. Nguyen"
+    ],
+    "venue": "ASE",
+    "year": 2023,
+    "abstract": "Multilayer neural networks trained with the back-propagation algorithm constitute the best example of a successful gradient based learning technique. Given an appropriate network architecture, gradient-based learning algorithms can be used to synthesize a complex decision surface that can classify high-dimensional patterns, such as handwritten characters, with minimal preprocessing. This paper reviews various methods applied to handwritten character recognition and compares them on a standard handwritten digit recognition task. Convolutional neural networks, which are specifically designed to deal with the variability of 2D shapes, are shown to outperform all other techniques. Real-life document recognition systems are composed of multiple modules including field extraction, segmentation recognition, and language modeling. A new learning paradigm, called graph transformer networks (GTN), allows such multimodule systems to be trained globally using gradient-based methods so as to minimize an overall performance measure. Two systems for online handwriting recognition are described. Experiments demonstrate the advantage of global training, and the flexibility of graph transformer networks. A graph transformer network for reading a bank cheque is also described. It uses convolutional neural network character recognizers combined with global training techniques to provide record accuracy on business and personal cheques. It is deployed commercially and reads several million cheques per day.",
+    "citation_count": 58089,
+    "reference_count": 135,
+    "url": "https://dblp.org/rec/conf/kbse/LiWN23",
+    "dblp_key": "conf/kbse/LiWN23",
+    "source_id": "https://openalex.org/W2112796928",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Generative Model-Based Testing on Decision-Making Policies.",
+    "authors": [
+      "Zhuo Li 0021",
+      "Xiongfei Wu",
+      "Derui Zhu",
+      "Mingfei Cheng",
+      "Siyuan Chen",
+      "Fuyuan Zhang",
+      "Xiaofei Xie",
+      "Lei Ma 0003",
+      "Jianjun Zhao 0001"
+    ],
+    "venue": "ASE",
+    "year": 2023,
+    "abstract": "The reliability of decision-making policies is urgently important today as they have established the fundamentals of many critical applications, such as autonomous driving and robotics. To ensure reliability, there have been a number of research efforts on testing decision-making policies that solve Markov decision processes (MDPs). However, due to the deep neural network (DNN)-based inherit and infinite state space, developing scalable and effective testing frameworks for decision-making policies still remains open and challenging. In this paper, we present an effective testing framework for decision-making policies. The framework adopts a generative diffusion model-based test case generator that can easily adapt to different search spaces, ensuring the practicality and validity of test cases. Then, we propose a termination state novelty-based guidance to diversify agent behaviors and improve the test effectiveness. Finally, we evaluate the framework on five widely used benchmarks, including autonomous driving, aircraft collision avoidance, and gaming scenarios. The results demonstrate that our approach identifies more diverse and influential failure-triggering test cases compared to current state-of-the-art techniques. Moreover, we employ the detected failure cases to repair the evaluated models, achieving better robustness enhancement compared to the baseline method.",
+    "citation_count": 14,
+    "reference_count": 99,
+    "url": "https://dblp.org/rec/conf/kbse/LiWZCCZXMZ23",
+    "dblp_key": "conf/kbse/LiWZCCZXMZ23",
+    "source_id": "https://openalex.org/W4388483582",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "LiSum: Open Source Software License Summarization with Multi-Task Learning.",
+    "authors": [
+      "Linyu Li 0002",
+      "Sihan Xu",
+      "Yang Liu 0003",
+      "Ya Gao",
+      "Xiangrui Cai",
+      "Jiarun Wu",
+      "Wenli Song",
+      "Zheli Liu"
+    ],
+    "venue": "ASE",
+    "year": 2023,
+    "abstract": "Open source software (OSS) licenses regulate the conditions under which users can reuse, modify, and distribute the software legally. However, there exist various OSS licenses in the community, written in a formal language, which are typically long and complicated to understand. In this paper, we conducted a 661-participants online survey to investigate the perspectives and practices of developers towards OSS licenses. The user study revealed an indeed need for an automated tool to facilitate license understanding. Motivated by the user study and the fast growth of licenses in the community, we propose the first study towards automated license summarization. Specifically, we released the first high quality text summarization dataset and designed two tasks, i.e., license text summarization (LTS), aiming at generating a relatively short summary for an arbitrary license, and license term classification (LTC), focusing on the attitude inference towards a predefined set of key license terms (e.g., Distribute). Aiming at the two tasks, we present LiSum, a multi-task learning method to help developers overcome the obstacles of understanding OSS licenses. Comprehensive experiments demonstrated that the proposed jointly training objective boosted the performance on both tasks, surpassing state-of-the-art baselines with gains of at least 5 points w.r.t. F1 scores of four summarization metrics and achieving 95.13% micro average F1 score for classification simultaneously. We released all the datasets, the replication package, and the questionnaires for the community.",
+    "citation_count": 5,
+    "reference_count": 47,
+    "url": "https://dblp.org/rec/conf/kbse/LiXLGCWSL23",
+    "dblp_key": "conf/kbse/LiXLGCWSL23",
+    "source_id": "https://openalex.org/W4388502416",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Nuances are the Key: Unlocking ChatGPT to Find Failure-Inducing Tests with Differential Prompting.",
+    "authors": [
+      "Tsz On Li",
+      "Wenxi Zong",
+      "Yibo Wang 0008",
+      "Haoye Tian",
+      "Ying Wang 0038",
+      "Shing-Chi Cheung",
+      "Jeff Kramer"
+    ],
+    "venue": "ASE",
+    "year": 2023,
+    "abstract": "Automated detection of software failures is an important but challenging software engineering task. It involves finding in a vast search space the failure-inducing test cases that contain an input triggering the software fault and an oracle asserting the incorrect execution. We are motivated to study how far this outstanding challenge can be solved by recent advances in large language models (LLMs) such as ChatGPT. However, our study reveals that ChatGPT has a relatively low success rate (28.8%) in finding correct failure-inducing test cases for buggy programs. A possible conjecture is that finding failure-inducing test cases requires analyzing the subtle differences (nuances) between the tokens of a program's correct version and those for its buggy version. When these two versions have similar sets of tokens and attentions, ChatGPT is weak in distinguishing their differences. We find that ChatGPT can successfully generate failure-inducing test cases when it is guided to focus on the nuances. Our solution is inspired by an interesting observation that ChatGPT could infer the intended functionality of buggy code if it is similar to the correct version. Driven by the inspiration, we develop a novel technique, called Differential Prompting, to effectively find failure-inducing test cases with the help of the compilable code synthesized by the inferred intention. Prompts are constructed based on the nuances between the given version and the synthesized code. We evaluate Differential Prompting on Quixbugs (a popular benchmark of buggy programs) and recent programs published at Codeforces (a popular programming contest portal, which is also an official benchmark of ChatGPT). We compare Differential Prompting with two baselines constructed using conventional ChatGPT prompting and Pynguin (the state-of-the-art unit test generation tool for Python programs). Our evaluation results show that for programs of Quixbugs, Differential Prompting can achieve a success rate of 75.0% in finding failure-inducing test cases, outperforming the best baseline by 2.6X. For programs of Codeforces, Differential Prompting's success rate is 66.7%, outperforming the best baseline by 4.0X.",
+    "citation_count": 51,
+    "reference_count": 60,
+    "url": "https://dblp.org/rec/conf/kbse/LiZWTWCK23",
+    "dblp_key": "conf/kbse/LiZWTWCK23",
+    "source_id": "https://openalex.org/W4388483640",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Robin: A Novel Method to Produce Robust Interpreters for Deep Learning-Based Code Classifiers.",
+    "authors": [
+      "Zhen Li 0027",
+      "Ruqian Zhang",
+      "Deqing Zou",
+      "Ning Wang 0098",
+      "Yating Li",
+      "Shouhuai Xu",
+      "Chen Chen 0001",
+      "Hai Jin 0001"
+    ],
+    "venue": "ASE",
+    "year": 2023,
+    "abstract": "Deep learning has been widely used in source code classification tasks, such as code classification according to their functionalities, code authorship attribution, and vulnerability detection. Unfortunately, the black-box nature of deep learning makes it hard to interpret and understand why a classifier (i.e., classification model) makes a particular prediction on a given example. This lack of interpretability (or explainability) might have hindered their adoption by practitioners because it is not clear when they should or should not trust a classifier's prediction. The lack of interpretability has motivated a number of studies in recent years. However, existing methods are neither robust nor able to cope with out-of-distribution examples. In this paper, we propose a novel method to produce Robust interpreters for a given deep learning-based code classifier; the method is dubbed Robin. The key idea behind Robin is a novel hybrid structure combining an interpreter and two approximators, while leveraging the ideas of adversarial training and data augmentation. Experimental results show that on average the interpreter produced by Robin achieves a 6.11% higher fidelity (evaluated on the classifier), 67.22% higher fidelity (evaluated on the approximator), and 15.87x higher robustness than that of the three existing interpreters we evaluated. Moreover, the interpreter is 47.31% less affected by out-of-distribution examples than that of LEMNA.",
+    "citation_count": 4,
+    "reference_count": 71,
+    "url": "https://dblp.org/rec/conf/kbse/LiZZWLXCJ23",
+    "dblp_key": "conf/kbse/LiZZWLXCJ23",
+    "source_id": "https://openalex.org/W4388483287",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "A Needle is an Outlier in a Haystack: Hunting Malicious PyPI Packages with Code Clustering.",
+    "authors": [
+      "Wentao Liang",
+      "Xiang Ling 0001",
+      "Jingzheng Wu",
+      "Tianyue Luo",
+      "Yanjun Wu"
+    ],
+    "venue": "ASE",
+    "year": 2023,
+    "abstract": "As the most popular Python software repository, PyPI has become an indispensable part of the Python ecosystem. Regrettably, the open nature of PyPI exposes end-users to substantial security risks stemming from malicious packages. Consequently, the timely and effective identification of malware within the vast number of newly-uploaded PyPI packages has emerged as a pressing concern. Existing detection methods are dependent on difficult-to-obtain explicit knowledge, such as taint sources, sinks, and malicious code patterns, rendering them susceptible to overlooking emergent malicious packages. In this paper, we present a lightweight and effective method, namely MPHunter, to detect malicious packages without requiring any explicit prior knowledge. MPHunter is founded upon two fundamental and insightful observations. First, malicious packages are considerably rarer than benign ones, and second, the functionality of installation scripts for malicious packages diverges significantly from those of benign packages, with the latter frequently forming clusters. Consequently, MPHunter utilizes clustering techniques to group the installation scripts of PyPI packages and identifies outliers. Subsequently, MPHunter ranks the outliers according to their outlierness and the distance between them and known malicious instances, thereby effectively highlighting potential evil packages. With MPHunter, we successfully identified 60 previously unknown malicious packages from a pool of 31,329 newly-uploaded packages over a two-month period. All of them have been confirmed by the PyPI official. Moreover, a manual analysis shows that MPHunter recognizes all potentially malicious installation scripts with a recall of 100% across all analyzed packages. We assert that MPHunter offers a valuable and advantageous supplement to existing detection techniques, augmenting the arsenal of software supply chain security analysis.",
+    "citation_count": 15,
+    "reference_count": 51,
+    "url": "https://dblp.org/rec/conf/kbse/LiangLWLW23",
+    "dblp_key": "conf/kbse/LiangLWLW23",
+    "source_id": "https://openalex.org/W4388483305",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Automated Fixing of Web UI Tests via Iterative Element Matching.",
+    "authors": [
+      "Yuanzhang Lin",
+      "Guoyao Wen",
+      "Xiang Gao 0012"
+    ],
+    "venue": "ASE",
+    "year": 2023,
+    "abstract": "Web UI test cases are used for the automatic testing of web applications. When a web application is updated, these UI tests should also be updated for regression testing of the new version of web application. With the rapid evolution, updating UI tests is a tedious and time-consuming task. To solve these problems, automatically repairing web UI tests has gained increasing attention recently. To repair web UI tests, the most important step is to match the UI elements before and after the web page update. Existing work matches UI elements according to visual information, attributes value, or Document Object Model (DOM) structures. However, they either achieve low element matching accuracy or only work on simple UI tests. To solve these problems, we proposed UITestFix, an approach based on a novel iterative matching algorithm for improving the accuracy of matching UI elements. UITestFix is designed based on two main insights: (1) beyond attribute and DOM structures, the relations between different elements can also guide the matching process, and (2) the matching results of previous iterations could guide the matching of the current iteration. Our evaluation of publicly available datasets and two industrial apps shows that UITestFix outperforms four existing approaches by achieving more accurate element matching and producing more correct fixes.",
+    "citation_count": 8,
+    "reference_count": 27,
+    "url": "https://dblp.org/rec/conf/kbse/LinWG23",
+    "dblp_key": "conf/kbse/LinWG23",
+    "source_id": "https://openalex.org/W4388483674",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "ReuNify: A Step Towards Whole Program Analysis for React Native Android Apps.",
+    "authors": [
+      "Yonghui Liu 0001",
+      "Xiao Chen 0002",
+      "Pei Liu",
+      "John Grundy 0001",
+      "Chunyang Chen 0001",
+      "Li Li 0029"
+    ],
+    "venue": "ASE",
+    "year": 2023,
+    "abstract": "React Native is a widely-used open-source frame-work that facilitates the development of cross-platform mobile apps. The framework enables JavaScript code to interact with native-side code, such as Objective-C/Swift for iOS and Java/Kotlin for Android, via a communication mechanism provided by React Native. However, previous research and tools have overlooked this mechanism, resulting in incomplete analysis of React Native app code. To address this limitation, we have developed REUNIFY, a prototype tool that integrates the JavaScript and native-side code of React Native apps into an intermediate language that can be processed by the Soot static analysis framework. By doing so, REUNIFY enables the generation of a comprehensive model of the app's behavior. Our evaluation indicates that, by leveraging REUNIFY, the Soot-based framework can improve its coverage of static analysis for the 1,007 most popular React Native Android apps, augmenting the number of lines of Jimple code by 70%. Additionally, we observed an average increase of 84% in new nodes reached in the callgraph for these apps, after integrating REUNIFY. When REUNIFY is used for taint flow analysis, an average of two additional privacy leaks were identified. Overall, our results demonstrate that REUNIFY significantly enhances the Soot-based framework's capability to analyze React Native Android apps.",
+    "citation_count": 7,
+    "reference_count": 35,
+    "url": "https://dblp.org/rec/conf/kbse/LiuCLGCL23",
+    "dblp_key": "conf/kbse/LiuCLGCL23",
+    "source_id": "https://openalex.org/W4388483605",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "VD-Guard: DMA Guided Fuzzing for Hypervisor Virtual Device.",
+    "authors": [
+      "Yuwei Liu 0001",
+      "Siqi Chen",
+      "Yuchong Xie",
+      "Yanhao Wang",
+      "Libo Chen 0001",
+      "Bin Wang",
+      "Yingming Zeng",
+      "Zhi Xue",
+      "Purui Su"
+    ],
+    "venue": "ASE",
+    "year": 2023,
+    "abstract": "Virtualization has been widely used in various scenarios, such as cloud computing. As its core technology, virtualization hypervisor brings up the efficiency of sharing the physical machine's resources via virtual devices. However, virtualization hypervisor also introduces significant security risks due to defective design or implementation schemes on virtual devices. Although several methods have been proposed to detect vulnerabilities in virtual devices, they still cannot effectively discover them because of missing critical information related to the MMIO/PIO and DMA operations to guide their dynamic methods. In this paper, we propose a hybrid method, VD-GUARD, to detect vulnerabilities in virtual devices. Specifically, it first leverages static control flow analysis to track call traces from various data entry points of virtual devices (MMIO/PIO functions) to the critical dispatcher points (DMA functions), and generate seeds that can trigger this call trace via static analysis and limited fuzzing test. And then, it takes these seeds as input and leverages DMA guided fuzzing to discover bugs. To verify the effectiveness of Vd-guard, we build a dataset, including 10 bugs in QEMU, based on previous works, and Vd-guardoutperforms the state-of-the-art hypervisor fuzzer Morphuzz. Vd-guardalso has found 4 new vulnerabilities in QEMU and VirtualBox, all of which have been confirmed and fixed (have been assigned 3 CVE IDs).",
+    "citation_count": 6,
+    "reference_count": 33,
+    "url": "https://dblp.org/rec/conf/kbse/LiuCXWCWZXS23",
+    "dblp_key": "conf/kbse/LiuCXWCWZXS23",
+    "source_id": "https://openalex.org/W4388483003",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "AutoDebloater: Automated Android App Debloating.",
+    "authors": [
+      "Jiakun Liu",
+      "Xing Hu 0008",
+      "Ferdian Thung",
+      "Shahar Maoz",
+      "Eran Toch",
+      "Debin Gao",
+      "David Lo 0001"
+    ],
+    "venue": "ASE",
+    "year": 2023,
+    "abstract": "Android applications are getting bigger with an increasing number of features. However, not all the features are needed by a specific user. The unnecessary features can increase the attack surface and cost additional resources (e.g., storage and memory). Therefore, it is important to remove unnecessary features from Android applications. However, it is difficult for the end users to fully explore the apps to identify the unnecessary features, and there is no off-the-shelf tool available to assist users to debloat the apps by themselves. In this work, we propose AutoDebloater to debloat Android applications automatically for end users. AutoDebloater is a web application that can be accessed by end-users through a web browser. In particular, AutoDebloater can automatically explore an app and identify the transitions between activities. Then, AutoDebloater will present the Activity Transition Graph to users and ask them to select the activities they do not want to keep. Finally, AutoDebloater will remove the activities that are selected by users from the app. We conducted a user study on five Android apps downloaded from three categories (i.e., Finance, Tools, and Navigation) in Google Play and F-Droid. The results show that users are satisfied with AutoDebloater in terms of the stability of the debloated apps and the ability of AutoDebloater to identify features that are never noticed before. The tool is available at http://autodebloater.club. The code is available at https://github.com/jiakun-liu/autodebloater/ and the demonstration video can be found at https://youtu.be/Gmz0-p2n9D4.",
+    "citation_count": 1,
+    "reference_count": 8,
+    "url": "https://dblp.org/rec/conf/kbse/LiuHTMTGL23",
+    "dblp_key": "conf/kbse/LiuHTMTGL23",
+    "source_id": "https://openalex.org/W4388502415",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "Prism: Revealing Hidden Functional Clusters from Massive Instances in Cloud Systems.",
+    "authors": [
+      "Jinyang Liu 0002",
+      "Zhihan Jiang",
+      "Jiazhen Gu",
+      "Junjie Huang 0008",
+      "Zhuangbin Chen",
+      "Cong Feng",
+      "Zengyin Yang",
+      "Yongqiang Yang",
+      "Michael R. Lyu"
+    ],
+    "venue": "ASE",
+    "year": 2023,
+    "abstract": "Ensuring the reliability of cloud systems is critical for both cloud vendors and customers. Cloud systems often rely on virtualization techniques to create instances of hardware resources, such as virtual machines. However, virtualization hinders the observability of cloud systems, making it challenging to diagnose platform-level issues. To improve system observability, we propose to infer functional clusters of instances, i.e., groups of instances having similar functionalities. We first conduct a pilot study on a large-scale cloud system, i.e., Huawei Cloud, demonstrating that instances having similar functionalities share similar communication and resource usage patterns. Motivated by these findings, we formulate the identification of functional clusters as a clustering problem and propose a non-intrusive solution called Prism. Prism adopts a coarse-to-fine clustering strategy. It first partitions instances into coarse-grained chunks based on communication patterns. Within each chunk, Prism further groups instances with similar resource usage patterns to produce fine-grained functional clusters. Such a design reduces noises in the data and allows Prism to process massive instances efficiently. We evaluate Prism on two datasets collected from the real-world production environment of Huawei Cloud. Our experiments show that Prism achieves a v-measure of ∼0.95, surpassing existing state-of-the-art solutions. Additionally, we illustrate the integration of Prism within monitoring systems for enhanced cloud reliability through two real-world use cases.",
+    "citation_count": 8,
+    "reference_count": 41,
+    "url": "https://dblp.org/rec/conf/kbse/LiuJGHCFYYL23",
+    "dblp_key": "conf/kbse/LiuJGHCFYYL23",
+    "source_id": "https://openalex.org/W4388483009",
+    "source": null,
+    "source_url": null
+  },
+  {
+    "title": "ASTER: Automatic Speech Recognition System Accessibility Testing for Stutterers.",
+    "authors": [
+      "Yi Liu 0069",
+      "Yuekang Li",
+      "Gelei Deng",
+      "Felix Juefei-Xu",
+      "Yao Du 0002",
+      "Cen Zhang",
+      "Chengwei Liu",
+      "Yeting Li",
+      "Lei Ma 0003",
+      "Yang Liu 0003"
+    ],
+    "venue": "ASE",
+    "year": 2023,
+    "abstract": "The popularity of automatic speech recognition (ASR) systems nowadays leads to an increasing need for improving their accessibility. Handling stuttering speech is an important feature for accessible ASR systems. To improve the accessibility of ASR systems for stutterers, we need to expose and analyze the failures of ASR systems on stuttering speech. The speech datasets recorded from stutterers are not diverse enough to expose most of the failures. Furthermore, these datasets lack ground truth information about the non-stuttered text, rendering them unsuitable as comprehensive test suites. Therefore, a methodology for generating stuttering speech as test inputs to test and analyze the performance of ASR systems is needed. However, generating valid test inputs in this scenario is challenging. The reason is that although the generated test inputs should mimic how stutterers speak, they should also be diverse enough to trigger more failures. To address the challenge, we propose Aster, a technique for automatically testing the accessibility of ASR systems. Aster can generate valid test cases by injecting five different types of stuttering. The generated test cases can both simulate realistic stuttering speech and expose failures in ASR systems. Moreover, Aster can further enhance the quality of the test cases with a multi-objective optimization-based seed updating algorithm. We implemented Aster as a framework and evaluated it on four open-source ASR models and three commercial ASR systems. We conduct a comprehensive evaluation of Aster and find that it significantly increases the word error rate, match error rate, and word information loss in the evaluated ASR systems. Additionally, our user study demonstrates that the generated stuttering audio is indistinguishable from real-world stuttering audio clips.",
+    "citation_count": 4,
+    "reference_count": 47,
+    "url": "https://dblp.org/rec/conf/kbse/LiuLDJDZLLML23",
+    "dblp_key": "conf/kbse/LiuLDJDZLLML23",
+    "source_id": "https://openalex.org/W4388483000",
+    "source": null,
+    "source_url": null
+  }
+]
